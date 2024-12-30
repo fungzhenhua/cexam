@@ -1,0 +1,851 @@
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_sep_by_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&sep&\_\verb*&by&\_\verb*&bool&}|hdclindex{3}{main}}{3}
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_sep_tl_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&sep&\_\verb*&tl&\_\verb*&bool&}|hdclindex{3}{main}}{3}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_new:N={\verbatim@font \verb*&\bool&\_\verb*&new:N&}|hdclindex{4}{}}{3}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_new:N={\verbatim@font \verb*&\bool&\_\verb*&new:N&}|hdclindex{5}{}}{4}
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_hds_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&hds&\_\verb*&bool&}|hdclindex{6}{main}}{5}
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_bys_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&bys&\_\verb*&bool&}|hdclindex{6}{main}}{5}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_new:N={\verbatim@font \verb*&\bool&\_\verb*&new:N&}|hdclindex{7}{}}{5}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_new:N={\verbatim@font \verb*&\bool&\_\verb*&new:N&}|hdclindex{8}{}}{6}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_nopic_bool={\verbatim@font \verb*&\cexam&\_\verb*&nopic&\_\verb*&bool&}|hdclindex{9}{main}}{7}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_new:N={\verbatim@font \verb*&\bool&\_\verb*&new:N&}|hdclindex{10}{}}{7}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_txtht_box={\verbatim@font \verb*&\cexam&\_\verb*&txtht&\_\verb*&box&}|hdclindex{11}{main}}{8}
+\indexentry{box commands:=\pkg{box} commands:>box_new:N={\verbatim@font \verb*&\box&\_\verb*&new:N&}|hdclindex{12}{}}{8}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picture_box={\verbatim@font \verb*&\cexam&\_\verb*&picture&\_\verb*&box&}|hdclindex{13}{main}}{9}
+\indexentry{box commands:=\pkg{box} commands:>box_new:N={\verbatim@font \verb*&\box&\_\verb*&new:N&}|hdclindex{14}{}}{9}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_option_box={\verbatim@font \verb*&\sel&\_\verb*&option&\_\verb*&box&}|hdclindex{15}{main}}{10}
+\indexentry{box commands:=\pkg{box} commands:>box_new:N={\verbatim@font \verb*&\box&\_\verb*&new:N&}|hdclindex{16}{}}{10}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_option_box={\verbatim@font \verb*&\cexam&\_\verb*&option&\_\verb*&box&}|hdclindex{17}{main}}{11}
+\indexentry{box commands:=\pkg{box} commands:>box_new:N={\verbatim@font \verb*&\box&\_\verb*&new:N&}|hdclindex{18}{}}{11}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_temp_box={\verbatim@font \verb*&\sep&\_\verb*&temp&\_\verb*&box&}|hdclindex{19}{main}}{12}
+\indexentry{box commands:=\pkg{box} commands:>box_new:N={\verbatim@font \verb*&\box&\_\verb*&new:N&}|hdclindex{20}{}}{12}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_txt_sub_dim={\verbatim@font \verb*&\cexam&\_\verb*&txt&\_\verb*&sub&\_\verb*&dim&}|hdclindex{21}{main}}{13}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_mat_sub_dim={\verbatim@font \verb*&\cexam&\_\verb*&mat&\_\verb*&sub&\_\verb*&dim&}|hdclindex{21}{main}}{13}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_new:N={\verbatim@font \verb*&\dim&\_\verb*&new:N&}|hdclindex{22}{}}{13}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_new:N={\verbatim@font \verb*&\dim&\_\verb*&new:N&}|hdclindex{23}{}}{14}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get_txtht:nnn={\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&txtht:nnn&}|hdclindex{11}{usage}}{3}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{24}{}}{15}
+\indexentry{baselineskip={\verbatim@font \verb*&\baselineskip&}|hdclindex{24}{}}{15}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{25}{}}{16}
+\indexentry{baselineskip={\verbatim@font \verb*&\baselineskip&}|hdclindex{25}{}}{16}
+\indexentry{rec commands:=\pkg{rec} commands:>rec_tempht_dim={\verbatim@font \verb*&\rec&\_\verb*&tempht&\_\verb*&dim&}|hdclindex{26}{main}}{17}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_new:N={\verbatim@font \verb*&\dim&\_\verb*&new:N&}|hdclindex{27}{}}{17}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{28}{main}}{18}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{28}{main}}{18}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{28}{main}}{18}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_new:N={\verbatim@font \verb*&\dim&\_\verb*&new:N&}|hdclindex{29}{}}{18}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_new:N={\verbatim@font \verb*&\dim&\_\verb*&new:N&}|hdclindex{30}{}}{19}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_new:N={\verbatim@font \verb*&\dim&\_\verb*&new:N&}|hdclindex{31}{}}{20}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picht_dim={\verbatim@font \verb*&\cexam&\_\verb*&picht&\_\verb*&dim&}|hdclindex{32}{main}}{21}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&picwd&\_\verb*&dim&}|hdclindex{32}{main}}{21}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_paperht_dim={\verbatim@font \verb*&\cexam&\_\verb*&paperht&\_\verb*&dim&}|hdclindex{32}{main}}{21}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_new:N={\verbatim@font \verb*&\dim&\_\verb*&new:N&}|hdclindex{33}{}}{21}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_new:N={\verbatim@font \verb*&\dim&\_\verb*&new:N&}|hdclindex{34}{}}{22}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_new:N={\verbatim@font \verb*&\dim&\_\verb*&new:N&}|hdclindex{35}{}}{23}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{36}{}}{24}
+\indexentry{textheight={\verbatim@font \verb*&\textheight&}|hdclindex{36}{}}{24}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmtwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&fmtwd&\_\verb*&dim&}|hdclindex{37}{main}}{25}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_new:N={\verbatim@font \verb*&\dim&\_\verb*&new:N&}|hdclindex{38}{}}{25}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_lmax_dim={\verbatim@font \verb*&\sel&\_\verb*&lmax&\_\verb*&dim&}|hdclindex{39}{main}}{26}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_new:N={\verbatim@font \verb*&\dim&\_\verb*&new:N&}|hdclindex{40}{}}{26}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{41}{}}{27}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_optwd_dim={\verbatim@font \verb*&\sel&\_\verb*&optwd&\_\verb*&dim&}|hdclindex{42}{main}}{28}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_new:N={\verbatim@font \verb*&\dim&\_\verb*&new:N&}|hdclindex{43}{}}{28}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{44}{}}{29}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{44}{}}{29}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_sub:Nn={\verbatim@font \verb*&\dim&\_\verb*&sub:Nn&}|hdclindex{45}{}}{30}
+\indexentry{ccwd={\verbatim@font \verb*&\ccwd&}|hdclindex{45}{}}{30}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psnum_int={\verbatim@font \verb*&\cexam&\_\verb*&psnum&\_\verb*&int&}|hdclindex{46}{main}}{31}
+\indexentry{int commands:=\pkg{int} commands:>int_new:N={\verbatim@font \verb*&\int&\_\verb*&new:N&}|hdclindex{47}{}}{31}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_equ_int={\verbatim@font \verb*&\cexam&\_\verb*&equ&\_\verb*&int&}|hdclindex{48}{main}}{32}
+\indexentry{int commands:=\pkg{int} commands:>int_new:N={\verbatim@font \verb*&\int&\_\verb*&new:N&}|hdclindex{49}{}}{32}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_hdnum_int={\verbatim@font \verb*&\cexam&\_\verb*&hdnum&\_\verb*&int&}|hdclindex{50}{main}}{33}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_bynum_int={\verbatim@font \verb*&\cexam&\_\verb*&bynum&\_\verb*&int&}|hdclindex{50}{main}}{33}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numtemp_int={\verbatim@font \verb*&\cexam&\_\verb*&numtemp&\_\verb*&int&}|hdclindex{50}{main}}{33}
+\indexentry{int commands:=\pkg{int} commands:>int_new:N={\verbatim@font \verb*&\int&\_\verb*&new:N&}|hdclindex{51}{}}{33}
+\indexentry{int commands:=\pkg{int} commands:>int_new:N={\verbatim@font \verb*&\int&\_\verb*&new:N&}|hdclindex{52}{}}{34}
+\indexentry{int commands:=\pkg{int} commands:>int_new:N={\verbatim@font \verb*&\int&\_\verb*&new:N&}|hdclindex{53}{}}{35}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font \verb*&\cexam&\_\verb*&picmath&\_\verb*&int&}|hdclindex{54}{main}}{36}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_totalnum_int={\verbatim@font \verb*&\cexam&\_\verb*&totalnum&\_\verb*&int&}|hdclindex{54}{main}}{36}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_stand_int={\verbatim@font \verb*&\cexam&\_\verb*&stand&\_\verb*&int&}|hdclindex{54}{main}}{36}
+\indexentry{int commands:=\pkg{int} commands:>int_new:N={\verbatim@font \verb*&\int&\_\verb*&new:N&}|hdclindex{55}{}}{36}
+\indexentry{int commands:=\pkg{int} commands:>int_new:N={\verbatim@font \verb*&\int&\_\verb*&new:N&}|hdclindex{56}{}}{37}
+\indexentry{int commands:=\pkg{int} commands:>int_new:N={\verbatim@font \verb*&\int&\_\verb*&new:N&}|hdclindex{57}{}}{38}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep_i:n={\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&i:n&}|hdclindex{58}{main}}{39}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep_ii:n={\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&ii:n&}|hdclindex{58}{main}}{39}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep_iii:n={\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&iii:n&}|hdclindex{58}{main}}{39}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{59}{}}{39}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font \verb*&\scan&\_\verb*&stop:&}|hdclindex{59}{}}{39}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_mat_sub_dim={\verbatim@font \verb*&\cexam&\_\verb*&mat&\_\verb*&sub&\_\verb*&dim&}|hdclindex{21}{usage}}{4}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{42}{usage}}{4}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{61}{}}{41}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_hd_data:={\verbatim@font \verb*&\sep&\_\verb*&hd&\_\verb*&data:&}|hdclindex{61}{}}{41}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{62}{}}{42}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_by_data:={\verbatim@font \verb*&\sep&\_\verb*&by&\_\verb*&data:&}|hdclindex{62}{}}{42}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{63}{}}{43}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_tl_data:={\verbatim@font \verb*&\sep&\_\verb*&tl&\_\verb*&data:&}|hdclindex{63}{}}{43}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{66}{}}{46}
+\indexentry{[={\verbatim@font \verb*&\[&}|hdclindex{66}{}}{46}
+\indexentry{]={\verbatim@font \verb*&\]&}|hdclindex{66}{}}{46}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font \verb*&\scan&\_\verb*&stop:&}|hdclindex{66}{}}{46}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{68}{}}{48}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_hd_data:={\verbatim@font \verb*&\sep&\_\verb*&hd&\_\verb*&data:&}|hdclindex{68}{}}{48}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{69}{}}{49}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_by_data:={\verbatim@font \verb*&\sep&\_\verb*&by&\_\verb*&data:&}|hdclindex{69}{}}{49}
+\indexentry{[={\verbatim@font \verb*&\[&}|hdclindex{69}{}}{49}
+\indexentry{]={\verbatim@font \verb*&\]&}|hdclindex{69}{}}{49}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{70}{}}{50}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_tl_data:={\verbatim@font \verb*&\sep&\_\verb*&tl&\_\verb*&data:&}|hdclindex{70}{}}{50}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{73}{}}{53}
+\indexentry{begin={\verbatim@font \verb*&\begin&}|hdclindex{73}{}}{53}
+\indexentry{end={\verbatim@font \verb*&\end&}|hdclindex{73}{}}{53}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font \verb*&\scan&\_\verb*&stop:&}|hdclindex{73}{}}{53}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{75}{}}{55}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_hd_data:={\verbatim@font \verb*&\sep&\_\verb*&hd&\_\verb*&data:&}|hdclindex{75}{}}{55}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{76}{}}{56}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_by_data:={\verbatim@font \verb*&\sep&\_\verb*&by&\_\verb*&data:&}|hdclindex{76}{}}{56}
+\indexentry{begin={\verbatim@font \verb*&\begin&}|hdclindex{76}{}}{56}
+\indexentry{end={\verbatim@font \verb*&\end&}|hdclindex{76}{}}{56}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{77}{}}{57}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_tl_data:={\verbatim@font \verb*&\sep&\_\verb*&tl&\_\verb*&data:&}|hdclindex{77}{}}{57}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep_mk:n={\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&mk:n&}|hdclindex{79}{main}}{59}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{80}{}}{59}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font \verb*&\scan&\_\verb*&stop:&}|hdclindex{80}{}}{59}
+\indexentry{str commands:=\pkg{str} commands:>str_if_in:nnTF={\verbatim@font \verb*&\str&\_\verb*&if&\_\verb*&in:nnTF&}|hdclindex{82}{}}{61}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep_i:n={\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&i:n&}|hdclindex{83}{}}{62}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font \verb*&\scan&\_\verb*&stop:&}|hdclindex{83}{}}{62}
+\indexentry{str commands:=\pkg{str} commands:>str_if_in:nnTF={\verbatim@font \verb*&\str&\_\verb*&if&\_\verb*&in:nnTF&}|hdclindex{85}{}}{64}
+\indexentry{[={\verbatim@font \verb*&\[&}|hdclindex{85}{}}{64}
+\indexentry{]={\verbatim@font \verb*&\]&}|hdclindex{85}{}}{64}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep_ii:n={\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&ii:n&}|hdclindex{86}{}}{65}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font \verb*&\scan&\_\verb*&stop:&}|hdclindex{86}{}}{65}
+\indexentry{str commands:=\pkg{str} commands:>str_if_in:nnTF={\verbatim@font \verb*&\str&\_\verb*&if&\_\verb*&in:nnTF&}|hdclindex{88}{}}{67}
+\indexentry{begin={\verbatim@font \verb*&\begin&}|hdclindex{88}{}}{67}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep_iii:n={\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&iii:n&}|hdclindex{89}{}}{68}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font \verb*&\scan&\_\verb*&stop:&}|hdclindex{89}{}}{68}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep_isin:nn={\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&isin:nn&}|hdclindex{94}{main}}{73}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{95}{}}{73}
+\indexentry{str commands:=\pkg{str} commands:>str_if_in:nnTF={\verbatim@font \verb*&\str&\_\verb*&if&\_\verb*&in:nnTF&}|hdclindex{97}{}}{75}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_set_true:N={\verbatim@font \verb*&\bool&\_\verb*&set&\_\verb*&true:N&}|hdclindex{99}{}}{77}
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_sep_by_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&sep&\_\verb*&by&\_\verb*&bool&}|hdclindex{99}{}}{77}
+\indexentry{str commands:=\pkg{str} commands:>str_if_in:nnTF={\verbatim@font \verb*&\str&\_\verb*&if&\_\verb*&in:nnTF&}|hdclindex{100}{}}{78}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{102}{}}{80}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_hd_data:={\verbatim@font \verb*&\sep&\_\verb*&hd&\_\verb*&data:&}|hdclindex{102}{}}{80}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{103}{}}{81}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_by_data:={\verbatim@font \verb*&\sep&\_\verb*&by&\_\verb*&data:&}|hdclindex{103}{}}{81}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{104}{}}{82}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_tl_data:={\verbatim@font \verb*&\sep&\_\verb*&tl&\_\verb*&data:&}|hdclindex{104}{}}{82}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_set_false:N={\verbatim@font \verb*&\bool&\_\verb*&set&\_\verb*&false:N&}|hdclindex{105}{}}{83}
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_sep_tl_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&sep&\_\verb*&tl&\_\verb*&bool&}|hdclindex{105}{}}{83}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep_mk:n={\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&mk:n&}|hdclindex{108}{}}{86}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font \verb*&\scan&\_\verb*&stop:&}|hdclindex{108}{}}{86}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{109}{}}{87}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_hd_data:={\verbatim@font \verb*&\sep&\_\verb*&hd&\_\verb*&data:&}|hdclindex{109}{}}{87}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_set_true:N={\verbatim@font \verb*&\bool&\_\verb*&set&\_\verb*&true:N&}|hdclindex{110}{}}{88}
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_sep_tl_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&sep&\_\verb*&tl&\_\verb*&bool&}|hdclindex{110}{}}{88}
+\indexentry{str commands:=\pkg{str} commands:>str_if_in:nnTF={\verbatim@font \verb*&\str&\_\verb*&if&\_\verb*&in:nnTF&}|hdclindex{114}{}}{92}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_set_true:N={\verbatim@font \verb*&\bool&\_\verb*&set&\_\verb*&true:N&}|hdclindex{116}{}}{94}
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_sep_by_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&sep&\_\verb*&by&\_\verb*&bool&}|hdclindex{116}{}}{94}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep_mk:n={\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&mk:n&}|hdclindex{117}{}}{95}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font \verb*&\scan&\_\verb*&stop:&}|hdclindex{117}{}}{95}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{118}{}}{96}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_tl_data:={\verbatim@font \verb*&\sep&\_\verb*&tl&\_\verb*&data:&}|hdclindex{118}{}}{96}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_set_false:N={\verbatim@font \verb*&\bool&\_\verb*&set&\_\verb*&false:N&}|hdclindex{119}{}}{97}
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_sep_tl_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&sep&\_\verb*&tl&\_\verb*&bool&}|hdclindex{119}{}}{97}
+\indexentry{str commands:=\pkg{str} commands:>str_if_in:nnTF={\verbatim@font \verb*&\str&\_\verb*&if&\_\verb*&in:nnTF&}|hdclindex{122}{}}{100}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_set_true:N={\verbatim@font \verb*&\bool&\_\verb*&set&\_\verb*&true:N&}|hdclindex{124}{}}{102}
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_sep_by_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&sep&\_\verb*&by&\_\verb*&bool&}|hdclindex{124}{}}{102}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep_mk:n={\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&mk:n&}|hdclindex{125}{}}{103}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font \verb*&\scan&\_\verb*&stop:&}|hdclindex{125}{}}{103}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_set_true:N={\verbatim@font \verb*&\bool&\_\verb*&set&\_\verb*&true:N&}|hdclindex{126}{}}{104}
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_sep_tl_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&sep&\_\verb*&tl&\_\verb*&bool&}|hdclindex{126}{}}{104}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep:n={\verbatim@font \verb*&\cexam&\_\verb*&sep:n&}|hdclindex{131}{main}}{109}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{132}{}}{109}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font \verb*&\scan&\_\verb*&stop:&}|hdclindex{132}{}}{109}
+\indexentry{str commands:=\pkg{str} commands:>str_if_in:nnTF={\verbatim@font \verb*&\str&\_\verb*&if&\_\verb*&in:nnTF&}|hdclindex{134}{}}{111}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep_isin:nn={\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&isin:nn&}|hdclindex{136}{}}{113}
+\indexentry{str commands:=\pkg{str} commands:>str_if_in:nnTF={\verbatim@font \verb*&\str&\_\verb*&if&\_\verb*&in:nnTF&}|hdclindex{139}{}}{116}
+\indexentry{[={\verbatim@font \verb*&\[&}|hdclindex{139}{}}{116}
+\indexentry{]={\verbatim@font \verb*&\]&}|hdclindex{139}{}}{116}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep_isin:nn={\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&isin:nn&}|hdclindex{141}{}}{118}
+\indexentry{[={\verbatim@font \verb*&\[&}|hdclindex{141}{}}{118}
+\indexentry{]={\verbatim@font \verb*&\]&}|hdclindex{141}{}}{118}
+\indexentry{str commands:=\pkg{str} commands:>str_if_in:nnTF={\verbatim@font \verb*&\str&\_\verb*&if&\_\verb*&in:nnTF&}|hdclindex{144}{}}{121}
+\indexentry{begin={\verbatim@font \verb*&\begin&}|hdclindex{144}{}}{121}
+\indexentry{end={\verbatim@font \verb*&\end&}|hdclindex{144}{}}{121}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep_isin:nn={\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&isin:nn&}|hdclindex{146}{}}{123}
+\indexentry{begin={\verbatim@font \verb*&\begin&}|hdclindex{146}{}}{123}
+\indexentry{end={\verbatim@font \verb*&\end&}|hdclindex{146}{}}{123}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{149}{}}{126}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_hd_data:={\verbatim@font \verb*&\sep&\_\verb*&hd&\_\verb*&data:&}|hdclindex{149}{}}{126}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{150}{}}{127}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_by_data:={\verbatim@font \verb*&\sep&\_\verb*&by&\_\verb*&data:&}|hdclindex{150}{}}{127}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{151}{}}{128}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_tl_data:={\verbatim@font \verb*&\sep&\_\verb*&tl&\_\verb*&data:&}|hdclindex{151}{}}{128}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_set_false:N={\verbatim@font \verb*&\bool&\_\verb*&set&\_\verb*&false:N&}|hdclindex{152}{}}{129}
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_sep_tl_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&sep&\_\verb*&tl&\_\verb*&bool&}|hdclindex{152}{}}{129}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_set_false:N={\verbatim@font \verb*&\bool&\_\verb*&set&\_\verb*&false:N&}|hdclindex{153}{}}{130}
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_sep_by_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&sep&\_\verb*&by&\_\verb*&bool&}|hdclindex{153}{}}{130}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get:nNnN={\verbatim@font \verb*&\cexam&\_\verb*&get:nNnN&}|hdclindex{158}{main}}{135}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{159}{}}{135}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_while_do:nNnn={\verbatim@font \verb*&\dim&\_\verb*&while&\_\verb*&do:nNnn&}|hdclindex{161}{}}{137}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_sub:Nn={\verbatim@font \verb*&\dim&\_\verb*&sub:Nn&}|hdclindex{163}{}}{139}
+\indexentry{int commands:=\pkg{int} commands:>int_add:Nn={\verbatim@font \verb*&\int&\_\verb*&add:Nn&}|hdclindex{164}{}}{140}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get_txtht:nnn={\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&txtht:nnn&}|hdclindex{167}{main}}{143}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{168}{}}{143}
+\indexentry{int commands:=\pkg{int} commands:>int_set:Nn={\verbatim@font \verb*&\int&\_\verb*&set:Nn&}|hdclindex{170}{}}{145}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_equ_int={\verbatim@font \verb*&\cexam&\_\verb*&equ&\_\verb*&int&}|hdclindex{170}{}}{145}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font \verb*&\int&\_\verb*&use:N&}|hdclindex{170}{}}{145}
+\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@equation={\verbatim@font \verb*&\c@equation&}|hdclindex{170}{}}{145}
+\indexentry{hbox commands:=\pkg{hbox} commands:>hbox_set:Nn={\verbatim@font \verb*&\hbox&\_\verb*&set:Nn&}|hdclindex{171}{}}{146}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_txtht_box={\verbatim@font \verb*&\cexam&\_\verb*&txtht&\_\verb*&box&}|hdclindex{171}{}}{146}
+\indexentry{parbox={\verbatim@font \verb*&\parbox&}|hdclindex{167}{usage}}{6}
+\indexentry{parbox={\verbatim@font \verb*&\parbox&}|hdclindex{172}{}}{147}
+\indexentry{int commands:=\pkg{int} commands:>int_set:Nn={\verbatim@font \verb*&\int&\_\verb*&set:Nn&}|hdclindex{173}{}}{148}
+\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@equation={\verbatim@font \verb*&\c@equation&}|hdclindex{173}{}}{148}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font \verb*&\int&\_\verb*&use:N&}|hdclindex{173}{}}{148}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_equ_int={\verbatim@font \verb*&\cexam&\_\verb*&equ&\_\verb*&int&}|hdclindex{173}{}}{148}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{174}{}}{149}
+\indexentry{box commands:=\pkg{box} commands:>box_dp:N={\verbatim@font \verb*&\box&\_\verb*&dp:N&}|hdclindex{174}{}}{149}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_txtht_box={\verbatim@font \verb*&\cexam&\_\verb*&txtht&\_\verb*&box&}|hdclindex{174}{}}{149}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_add:Nn={\verbatim@font \verb*&\dim&\_\verb*&add:Nn&}|hdclindex{175}{}}{150}
+\indexentry{box commands:=\pkg{box} commands:>box_ht:N={\verbatim@font \verb*&\box&\_\verb*&ht:N&}|hdclindex{175}{}}{150}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_txtht_box={\verbatim@font \verb*&\cexam&\_\verb*&txtht&\_\verb*&box&}|hdclindex{175}{}}{150}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get_rec_i:nNnNnn={\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&rec&\_\verb*&i:nNnNnn&}|hdclindex{177}{main}}{152}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{178}{}}{152}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get_rec_i:nNnNnnn={\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&rec&\_\verb*&i:nNnNnnn&}|hdclindex{178}{}}{152}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{180}{}}{154}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{180}{}}{154}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{180}{}}{154}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_sub:Nn={\verbatim@font \verb*&\dim&\_\verb*&sub:Nn&}|hdclindex{181}{}}{155}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{181}{}}{155}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_sub:Nn={\verbatim@font \verb*&\dim&\_\verb*&sub:Nn&}|hdclindex{182}{}}{156}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{182}{}}{156}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get_txtht:nnn={\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&txtht:nnn&}|hdclindex{183}{}}{157}
+\indexentry{rec commands:=\pkg{rec} commands:>rec_tempht_dim={\verbatim@font \verb*&\rec&\_\verb*&tempht&\_\verb*&dim&}|hdclindex{183}{}}{157}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{183}{}}{157}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_compare:nNnTF={\verbatim@font \verb*&\dim&\_\verb*&compare:nNnTF&}|hdclindex{184}{}}{158}
+\indexentry{rec commands:=\pkg{rec} commands:>rec_tempht_dim={\verbatim@font \verb*&\rec&\_\verb*&tempht&\_\verb*&dim&}|hdclindex{184}{}}{158}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_sub:Nn={\verbatim@font \verb*&\dim&\_\verb*&sub:Nn&}|hdclindex{186}{}}{160}
+\indexentry{rec commands:=\pkg{rec} commands:>rec_tempht_dim={\verbatim@font \verb*&\rec&\_\verb*&tempht&\_\verb*&dim&}|hdclindex{186}{}}{160}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get:nNnN={\verbatim@font \verb*&\cexam&\_\verb*&get:nNnN&}|hdclindex{187}{}}{161}
+\indexentry{rec commands:=\pkg{rec} commands:>rec_tempht_dim={\verbatim@font \verb*&\rec&\_\verb*&tempht&\_\verb*&dim&}|hdclindex{187}{}}{161}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get:nNnN={\verbatim@font \verb*&\cexam&\_\verb*&get:nNnN&}|hdclindex{189}{}}{163}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get_rec:nnnn={\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&rec:nnnn&}|hdclindex{191}{main}}{165}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{192}{}}{165}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get_rec:nnnnnn={\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&rec:nnnnnn&}|hdclindex{192}{}}{165}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{194}{}}{167}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{194}{}}{167}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{195}{}}{168}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{195}{}}{168}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_add:Nn={\verbatim@font \verb*&\dim&\_\verb*&add:Nn&}|hdclindex{196}{}}{169}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{196}{}}{169}
+\indexentry{exp commands:=\pkg{exp} commands:>exp_args:No={\verbatim@font \verb*&\exp&\_\verb*&args:No&}|hdclindex{197}{}}{170}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep:n={\verbatim@font \verb*&\cexam&\_\verb*&sep:n&}|hdclindex{197}{}}{170}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font \verb*&\scan&\_\verb*&stop:&}|hdclindex{197}{}}{170}
+\indexentry{int commands:=\pkg{int} commands:>int_set:Nn={\verbatim@font \verb*&\int&\_\verb*&set:Nn&}|hdclindex{198}{}}{171}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numtemp_int={\verbatim@font \verb*&\cexam&\_\verb*&numtemp&\_\verb*&int&}|hdclindex{198}{}}{171}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font \verb*&\int&\_\verb*&use:N&}|hdclindex{198}{}}{171}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get_rec_i:nNnNnnn={\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&rec&\_\verb*&i:nNnNnnn&}|hdclindex{199}{}}{172}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_txt_sub_dim={\verbatim@font \verb*&\cexam&\_\verb*&txt&\_\verb*&sub&\_\verb*&dim&}|hdclindex{199}{}}{172}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{200}{}}{173}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{200}{}}{173}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_hd_data:={\verbatim@font \verb*&\sep&\_\verb*&hd&\_\verb*&data:&}|hdclindex{200}{}}{173}
+\indexentry{int commands:=\pkg{int} commands:>int_set:Nn={\verbatim@font \verb*&\int&\_\verb*&set:Nn&}|hdclindex{201}{}}{174}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_hdnum_int={\verbatim@font \verb*&\cexam&\_\verb*&hdnum&\_\verb*&int&}|hdclindex{201}{}}{174}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font \verb*&\int&\_\verb*&use:N&}|hdclindex{201}{}}{174}
+\indexentry{int commands:=\pkg{int} commands:>int_sub:Nn={\verbatim@font \verb*&\int&\_\verb*&sub:Nn&}|hdclindex{202}{}}{175}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_hdnum_int={\verbatim@font \verb*&\cexam&\_\verb*&hdnum&\_\verb*&int&}|hdclindex{202}{}}{175}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numtemp_int={\verbatim@font \verb*&\cexam&\_\verb*&numtemp&\_\verb*&int&}|hdclindex{202}{}}{175}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_compare:nNnTF={\verbatim@font \verb*&\dim&\_\verb*&compare:nNnTF&}|hdclindex{203}{}}{176}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_if:NTF={\verbatim@font \verb*&\bool&\_\verb*&if:NTF&}|hdclindex{205}{}}{178}
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_sep_by_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&sep&\_\verb*&by&\_\verb*&bool&}|hdclindex{205}{}}{178}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_compare:nNnTF={\verbatim@font \verb*&\dim&\_\verb*&compare:nNnTF&}|hdclindex{207}{}}{180}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_mat_sub_dim={\verbatim@font \verb*&\cexam&\_\verb*&mat&\_\verb*&sub&\_\verb*&dim&}|hdclindex{207}{}}{180}
+\indexentry{int commands:=\pkg{int} commands:>int_add:Nn={\verbatim@font \verb*&\int&\_\verb*&add:Nn&}|hdclindex{209}{}}{182}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_sub:Nn={\verbatim@font \verb*&\dim&\_\verb*&sub:Nn&}|hdclindex{210}{}}{183}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_mat_sub_dim={\verbatim@font \verb*&\cexam&\_\verb*&mat&\_\verb*&sub&\_\verb*&dim&}|hdclindex{210}{}}{183}
+\indexentry{int commands:=\pkg{int} commands:>int_set:Nn={\verbatim@font \verb*&\int&\_\verb*&set:Nn&}|hdclindex{211}{}}{184}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_bynum_int={\verbatim@font \verb*&\cexam&\_\verb*&bynum&\_\verb*&int&}|hdclindex{211}{}}{184}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_compare:nNnTF={\verbatim@font \verb*&\dim&\_\verb*&compare:nNnTF&}|hdclindex{214}{}}{187}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_txt_sub_dim={\verbatim@font \verb*&\cexam&\_\verb*&txt&\_\verb*&sub&\_\verb*&dim&}|hdclindex{214}{}}{187}
+\indexentry{int commands:=\pkg{int} commands:>int_add:Nn={\verbatim@font \verb*&\int&\_\verb*&add:Nn&}|hdclindex{216}{}}{189}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{217}{}}{190}
+\indexentry{int commands:=\pkg{int} commands:>int_set:Nn={\verbatim@font \verb*&\int&\_\verb*&set:Nn&}|hdclindex{218}{}}{191}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_bynum_int={\verbatim@font \verb*&\cexam&\_\verb*&bynum&\_\verb*&int&}|hdclindex{218}{}}{191}
+\indexentry{int commands:=\pkg{int} commands:>int_add:Nn={\verbatim@font \verb*&\int&\_\verb*&add:Nn&}|hdclindex{221}{}}{194}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{222}{}}{195}
+\indexentry{int commands:=\pkg{int} commands:>int_set:Nn={\verbatim@font \verb*&\int&\_\verb*&set:Nn&}|hdclindex{223}{}}{196}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_bynum_int={\verbatim@font \verb*&\cexam&\_\verb*&bynum&\_\verb*&int&}|hdclindex{223}{}}{196}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_compare:nNnTF={\verbatim@font \verb*&\dim&\_\verb*&compare:nNnTF&}|hdclindex{226}{}}{199}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_set_true:N={\verbatim@font \verb*&\bool&\_\verb*&set&\_\verb*&true:N&}|hdclindex{227}{}}{200}
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_bys_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&bys&\_\verb*&bool&}|hdclindex{227}{}}{200}
+\indexentry{relax={\verbatim@font \verb*&\relax&}|hdclindex{228}{}}{201}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_set_true:N={\verbatim@font \verb*&\bool&\_\verb*&set&\_\verb*&true:N&}|hdclindex{230}{}}{203}
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_hds_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&hds&\_\verb*&bool&}|hdclindex{230}{}}{203}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_compare:nNnTF={\verbatim@font \verb*&\dim&\_\verb*&compare:nNnTF&}|hdclindex{232}{}}{205}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_if:NTF={\verbatim@font \verb*&\bool&\_\verb*&if:NTF&}|hdclindex{234}{}}{207}
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_sep_tl_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&sep&\_\verb*&tl&\_\verb*&bool&}|hdclindex{234}{}}{207}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get_rec:nnnnnn={\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&rec:nnnnnn&}|hdclindex{236}{}}{209}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_tl_data:={\verbatim@font \verb*&\sep&\_\verb*&tl&\_\verb*&data:&}|hdclindex{237}{}}{210}
+\indexentry{relax={\verbatim@font \verb*&\relax&}|hdclindex{238}{}}{211}
+\indexentry{relax={\verbatim@font \verb*&\relax&}|hdclindex{239}{}}{212}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{241}{main}}{214}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Nn={\verbatim@font \verb*&\cs&\_\verb*&new:Nn&}|hdclindex{242}{}}{214}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_cape:={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&cape:&}|hdclindex{243}{main}}{215}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new_protected:Nn={\verbatim@font \verb*&\cs&\_\verb*&new&\_\verb*&protected:Nn&}|hdclindex{244}{}}{215}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_mk_i:nnnn={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&mk&\_\verb*&i:nnnn&}|hdclindex{245}{main}}{216}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{246}{}}{216}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{248}{}}{218}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{248}{}}{218}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{249}{}}{219}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{249}{}}{219}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{250}{}}{220}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{250}{}}{220}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_sub:Nn={\verbatim@font \verb*&\dim&\_\verb*&sub:Nn&}|hdclindex{251}{}}{221}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{251}{}}{221}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_sub:Nn={\verbatim@font \verb*&\dim&\_\verb*&sub:Nn&}|hdclindex{252}{}}{222}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{252}{}}{222}
+\indexentry{int commands:=\pkg{int} commands:>int_while_do:nNnn={\verbatim@font \verb*&\int&\_\verb*&while&\_\verb*&do:nNnn&}|hdclindex{253}{}}{223}
+\indexentry{int commands:=\pkg{int} commands:>int_sub:Nn={\verbatim@font \verb*&\int&\_\verb*&sub:Nn&}|hdclindex{255}{}}{225}
+\indexentry{exp commands:=\pkg{exp} commands:>exp_args:NNx={\verbatim@font \verb*&\exp&\_\verb*&args:NNx&}|hdclindex{256}{}}{226}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{256}{}}{226}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{256}{}}{226}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{257}{}}{227}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_cape:={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&cape:&}|hdclindex{257}{}}{227}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_use:N={\verbatim@font \verb*&\dim&\_\verb*&use:N&}|hdclindex{257}{}}{227}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{257}{}}{227}
+\indexentry{exp commands:=\pkg{exp} commands:>exp_args:NNx={\verbatim@font \verb*&\exp&\_\verb*&args:NNx&}|hdclindex{258}{}}{228}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{258}{}}{228}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{258}{}}{228}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{259}{}}{229}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_cape:={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&cape:&}|hdclindex{259}{}}{229}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_use:N={\verbatim@font \verb*&\dim&\_\verb*&use:N&}|hdclindex{259}{}}{229}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{259}{}}{229}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_mk_ii:nnnnnnn={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&mk&\_\verb*&ii:nnnnnnn&}|hdclindex{262}{main}}{232}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{263}{}}{232}
+\indexentry{int commands:=\pkg{int} commands:>int_add:Nn={\verbatim@font \verb*&\int&\_\verb*&add:Nn&}|hdclindex{265}{}}{234}
+\indexentry{exp commands:=\pkg{exp} commands:>exp_args:NNx={\verbatim@font \verb*&\exp&\_\verb*&args:NNx&}|hdclindex{266}{}}{235}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{266}{}}{235}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{266}{}}{235}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_cape:={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&cape:&}|hdclindex{266}{}}{235}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font \verb*&\int&\_\verb*&use:N&}|hdclindex{266}{}}{235}
+\indexentry{int commands:=\pkg{int} commands:>int_sub:Nn={\verbatim@font \verb*&\int&\_\verb*&sub:Nn&}|hdclindex{267}{}}{236}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_mk_i:nnnn={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&mk&\_\verb*&i:nnnn&}|hdclindex{268}{}}{237}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{269}{}}{238}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{269}{}}{238}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{270}{}}{239}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{270}{}}{239}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{271}{}}{240}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{271}{}}{240}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_sub:Nn={\verbatim@font \verb*&\dim&\_\verb*&sub:Nn&}|hdclindex{272}{}}{241}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{272}{}}{241}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_sub:Nn={\verbatim@font \verb*&\dim&\_\verb*&sub:Nn&}|hdclindex{273}{}}{242}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{273}{}}{242}
+\indexentry{exp commands:=\pkg{exp} commands:>exp_args:NNx={\verbatim@font \verb*&\exp&\_\verb*&args:NNx&}|hdclindex{274}{}}{243}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{274}{}}{243}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{274}{}}{243}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{275}{}}{244}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_cape:={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&cape:&}|hdclindex{275}{}}{244}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_use:N={\verbatim@font \verb*&\dim&\_\verb*&use:N&}|hdclindex{275}{}}{244}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{275}{}}{244}
+\indexentry{exp commands:=\pkg{exp} commands:>exp_args:NNx={\verbatim@font \verb*&\exp&\_\verb*&args:NNx&}|hdclindex{276}{}}{245}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{276}{}}{245}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{276}{}}{245}
+\indexentry{pasha={\verbatim@font \verb*&\pasha&}|hdclindex{243}{usage}}{8}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{277}{}}{246}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_cape:={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&cape:&}|hdclindex{277}{}}{246}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_use:N={\verbatim@font \verb*&\dim&\_\verb*&use:N&}|hdclindex{277}{}}{246}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{277}{}}{246}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmt_fig:={\verbatim@font \verb*&\cexam&\_\verb*&fmt&\_\verb*&fig:&}|hdclindex{279}{main}}{248}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Nn={\verbatim@font \verb*&\cs&\_\verb*&new:Nn&}|hdclindex{280}{}}{248}
+\indexentry{bf={\verbatim@font \verb*&\bf&}|hdclindex{280}{}}{248}
+\indexentry{thefigure={\verbatim@font \verb*&\thefigure&}|hdclindex{280}{}}{248}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmt_pic:nn={\verbatim@font \verb*&\cexam&\_\verb*&fmt&\_\verb*&pic:nn&}|hdclindex{281}{main}}{249}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{282}{}}{249}
+\indexentry{int commands:=\pkg{int} commands:>int_add:Nn={\verbatim@font \verb*&\int&\_\verb*&add:Nn&}|hdclindex{284}{}}{251}
+\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@figure={\verbatim@font \verb*&\c@figure&}|hdclindex{284}{}}{251}
+\indexentry{hbox commands:=\pkg{hbox} commands:>hbox_set:Nn={\verbatim@font \verb*&\hbox&\_\verb*&set:Nn&}|hdclindex{285}{}}{252}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picture_box={\verbatim@font \verb*&\cexam&\_\verb*&picture&\_\verb*&box&}|hdclindex{285}{}}{252}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{286}{}}{253}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&picwd&\_\verb*&dim&}|hdclindex{286}{}}{253}
+\indexentry{box commands:=\pkg{box} commands:>box_wd:N={\verbatim@font \verb*&\box&\_\verb*&wd:N&}|hdclindex{286}{}}{253}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picture_box={\verbatim@font \verb*&\cexam&\_\verb*&picture&\_\verb*&box&}|hdclindex{286}{}}{253}
+\indexentry{str commands:=\pkg{str} commands:>str_if_in:nnTF={\verbatim@font \verb*&\str&\_\verb*&if&\_\verb*&in:nnTF&}|hdclindex{287}{}}{254}
+\indexentry{relax={\verbatim@font \verb*&\relax&}|hdclindex{288}{}}{255}
+\indexentry{hbox commands:=\pkg{hbox} commands:>hbox_set:Nn={\verbatim@font \verb*&\hbox&\_\verb*&set:Nn&}|hdclindex{290}{}}{257}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picture_box={\verbatim@font \verb*&\cexam&\_\verb*&picture&\_\verb*&box&}|hdclindex{290}{}}{257}
+\indexentry{parbox={\verbatim@font \verb*&\parbox&}|hdclindex{292}{}}{259}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&picwd&\_\verb*&dim&}|hdclindex{292}{}}{259}
+\indexentry{newline={\verbatim@font \verb*&\newline&}|hdclindex{294}{}}{261}
+\indexentry{centerline={\verbatim@font \verb*&\centerline&}|hdclindex{295}{}}{262}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmt_fig:={\verbatim@font \verb*&\cexam&\_\verb*&fmt&\_\verb*&fig:&}|hdclindex{295}{}}{262}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{299}{}}{266}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picht_dim={\verbatim@font \verb*&\cexam&\_\verb*&picht&\_\verb*&dim&}|hdclindex{299}{}}{266}
+\indexentry{box commands:=\pkg{box} commands:>box_ht:N={\verbatim@font \verb*&\box&\_\verb*&ht:N&}|hdclindex{299}{}}{266}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picture_box={\verbatim@font \verb*&\cexam&\_\verb*&picture&\_\verb*&box&}|hdclindex{299}{}}{266}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_add:Nn={\verbatim@font \verb*&\dim&\_\verb*&add:Nn&}|hdclindex{300}{}}{267}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picht_dim={\verbatim@font \verb*&\cexam&\_\verb*&picht&\_\verb*&dim&}|hdclindex{300}{}}{267}
+\indexentry{box commands:=\pkg{box} commands:>box_dp:N={\verbatim@font \verb*&\box&\_\verb*&dp:N&}|hdclindex{300}{}}{267}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picture_box={\verbatim@font \verb*&\cexam&\_\verb*&picture&\_\verb*&box&}|hdclindex{300}{}}{267}
+\indexentry{str commands:=\pkg{str} commands:>str_if_in:nnTF={\verbatim@font \verb*&\str&\_\verb*&if&\_\verb*&in:nnTF&}|hdclindex{301}{}}{268}
+\indexentry{hbox commands:=\pkg{hbox} commands:>hbox_set:Nn={\verbatim@font \verb*&\hbox&\_\verb*&set:Nn&}|hdclindex{303}{}}{270}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picture_box={\verbatim@font \verb*&\cexam&\_\verb*&picture&\_\verb*&box&}|hdclindex{303}{}}{270}
+\indexentry{raisebox={\verbatim@font \verb*&\raisebox&}|hdclindex{305}{}}{272}
+\indexentry{totalheight={\verbatim@font \verb*&\totalheight&}|hdclindex{305}{}}{272}
+\indexentry{ccwd={\verbatim@font \verb*&\ccwd&}|hdclindex{305}{}}{272}
+\indexentry{parbox={\verbatim@font \verb*&\parbox&}|hdclindex{306}{}}{273}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&picwd&\_\verb*&dim&}|hdclindex{306}{}}{273}
+\indexentry{hbox commands:=\pkg{hbox} commands:>hbox_unpack:N={\verbatim@font \verb*&\hbox&\_\verb*&unpack:N&}|hdclindex{306}{}}{273}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picture_box={\verbatim@font \verb*&\cexam&\_\verb*&picture&\_\verb*&box&}|hdclindex{306}{}}{273}
+\indexentry{hfill={\verbatim@font \verb*&\hfill&}|hdclindex{306}{}}{273}
+\indexentry{str commands:=\pkg{str} commands:>str_if_in:nnTF={\verbatim@font \verb*&\str&\_\verb*&if&\_\verb*&in:nnTF&}|hdclindex{311}{}}{278}
+\indexentry{hbox commands:=\pkg{hbox} commands:>hbox_set:Nn={\verbatim@font \verb*&\hbox&\_\verb*&set:Nn&}|hdclindex{313}{}}{280}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picture_box={\verbatim@font \verb*&\cexam&\_\verb*&picture&\_\verb*&box&}|hdclindex{313}{}}{280}
+\indexentry{raisebox={\verbatim@font \verb*&\raisebox&}|hdclindex{314}{}}{281}
+\indexentry{totalheight={\verbatim@font \verb*&\totalheight&}|hdclindex{314}{}}{281}
+\indexentry{ccwd={\verbatim@font \verb*&\ccwd&}|hdclindex{314}{}}{281}
+\indexentry{parbox={\verbatim@font \verb*&\parbox&}|hdclindex{315}{}}{282}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{315}{}}{282}
+\indexentry{hfill={\verbatim@font \verb*&\hfill&}|hdclindex{315}{}}{282}
+\indexentry{hbox commands:=\pkg{hbox} commands:>hbox_unpack:N={\verbatim@font \verb*&\hbox&\_\verb*&unpack:N&}|hdclindex{315}{}}{282}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picture_box={\verbatim@font \verb*&\cexam&\_\verb*&picture&\_\verb*&box&}|hdclindex{315}{}}{282}
+\indexentry{str commands:=\pkg{str} commands:>str_if_in:nnTF={\verbatim@font \verb*&\str&\_\verb*&if&\_\verb*&in:nnTF&}|hdclindex{320}{}}{287}
+\indexentry{hbox commands:=\pkg{hbox} commands:>hbox_set:Nn={\verbatim@font \verb*&\hbox&\_\verb*&set:Nn&}|hdclindex{322}{}}{289}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picture_box={\verbatim@font \verb*&\cexam&\_\verb*&picture&\_\verb*&box&}|hdclindex{322}{}}{289}
+\indexentry{parbox={\verbatim@font \verb*&\parbox&}|hdclindex{324}{}}{291}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmtwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&fmtwd&\_\verb*&dim&}|hdclindex{324}{}}{291}
+\indexentry{centerline={\verbatim@font \verb*&\centerline&}|hdclindex{324}{}}{291}
+\indexentry{hbox commands:=\pkg{hbox} commands:>hbox_unpack:N={\verbatim@font \verb*&\hbox&\_\verb*&unpack:N&}|hdclindex{324}{}}{291}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picture_box={\verbatim@font \verb*&\cexam&\_\verb*&picture&\_\verb*&box&}|hdclindex{324}{}}{291}
+\indexentry{relax={\verbatim@font \verb*&\relax&}|hdclindex{327}{}}{294}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_type_i:nnnnnnn={\verbatim@font \verb*&\cexam&\_\verb*&type&\_\verb*&i:nnnnnnn&}|hdclindex{331}{main}}{298}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{332}{}}{298}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmt_pic:nn={\verbatim@font \verb*&\cexam&\_\verb*&fmt&\_\verb*&pic:nn&}|hdclindex{334}{}}{300}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get_rec:nnnnnn={\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&rec:nnnnnn&}|hdclindex{335}{}}{301}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font \verb*&\cexam&\_\verb*&picmath&\_\verb*&int&}|hdclindex{336}{}}{302}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picht_dim={\verbatim@font \verb*&\cexam&\_\verb*&picht&\_\verb*&dim&}|hdclindex{337}{}}{303}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&picwd&\_\verb*&dim&}|hdclindex{337}{}}{303}
+\indexentry{str commands:=\pkg{str} commands:>str_if_in:nnTF={\verbatim@font \verb*&\str&\_\verb*&if&\_\verb*&in:nnTF&}|hdclindex{339}{}}{305}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{341}{}}{307}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{341}{}}{307}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{342}{}}{308}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{342}{}}{308}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{343}{}}{309}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{343}{}}{309}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{343}{}}{309}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_add:Nn={\verbatim@font \verb*&\dim&\_\verb*&add:Nn&}|hdclindex{344}{}}{310}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{344}{}}{310}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&picwd&\_\verb*&dim&}|hdclindex{344}{}}{310}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_mk_ii:nnnnnnn={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&mk&\_\verb*&ii:nnnnnnn&}|hdclindex{345}{}}{311}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font \verb*&\cexam&\_\verb*&picmath&\_\verb*&int&}|hdclindex{346}{}}{312}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{347}{}}{313}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{347}{}}{313}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{347}{}}{313}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{348}{}}{314}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_add:Nn={\verbatim@font \verb*&\dim&\_\verb*&add:Nn&}|hdclindex{349}{}}{315}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&picwd&\_\verb*&dim&}|hdclindex{349}{}}{315}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{352}{}}{318}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{352}{}}{318}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{353}{}}{319}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{353}{}}{319}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{354}{}}{320}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{354}{}}{320}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{354}{}}{320}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_add:Nn={\verbatim@font \verb*&\dim&\_\verb*&add:Nn&}|hdclindex{355}{}}{321}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{355}{}}{321}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&picwd&\_\verb*&dim&}|hdclindex{355}{}}{321}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_mk_ii:nnnnnnn={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&mk&\_\verb*&ii:nnnnnnn&}|hdclindex{356}{}}{322}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font \verb*&\cexam&\_\verb*&picmath&\_\verb*&int&}|hdclindex{357}{}}{323}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{358}{}}{324}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{358}{}}{324}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{358}{}}{324}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{359}{}}{325}
+\indexentry{tex commands:=\pkg{tex} commands:>tex_parshape:D={\verbatim@font \verb*&\tex&\_\verb*&parshape:D&}|hdclindex{361}{}}{327}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{361}{}}{327}
+\indexentry{box commands:=\pkg{box} commands:>box_use:N={\verbatim@font \verb*&\box&\_\verb*&use:N&}|hdclindex{362}{}}{328}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picture_box={\verbatim@font \verb*&\cexam&\_\verb*&picture&\_\verb*&box&}|hdclindex{362}{}}{328}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_type_ii:nnnnnnnnn={\verbatim@font \verb*&\cexam&\_\verb*&type&\_\verb*&ii:nnnnnnnnn&}|hdclindex{365}{main}}{331}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{366}{}}{331}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{368}{}}{333}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_paperht_dim={\verbatim@font \verb*&\cexam&\_\verb*&paperht&\_\verb*&dim&}|hdclindex{368}{}}{333}
+\indexentry{textheight={\verbatim@font \verb*&\textheight&}|hdclindex{368}{}}{333}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmt_pic:nn={\verbatim@font \verb*&\cexam&\_\verb*&fmt&\_\verb*&pic:nn&}|hdclindex{369}{}}{334}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get_rec:nnnnnn={\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&rec:nnnnnn&}|hdclindex{370}{}}{335}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font \verb*&\cexam&\_\verb*&picmath&\_\verb*&int&}|hdclindex{370}{}}{335}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picht_dim={\verbatim@font \verb*&\cexam&\_\verb*&picht&\_\verb*&dim&}|hdclindex{371}{}}{336}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&picwd&\_\verb*&dim&}|hdclindex{371}{}}{336}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_if:NTF={\verbatim@font \verb*&\bool&\_\verb*&if:NTF&}|hdclindex{373}{}}{338}
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_hds_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&hds&\_\verb*&bool&}|hdclindex{373}{}}{338}
+\indexentry{int commands:=\pkg{int} commands:>int_set:Nn={\verbatim@font \verb*&\int&\_\verb*&set:Nn&}|hdclindex{375}{}}{340}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numtemp_int={\verbatim@font \verb*&\cexam&\_\verb*&numtemp&\_\verb*&int&}|hdclindex{375}{}}{340}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font \verb*&\int&\_\verb*&use:N&}|hdclindex{375}{}}{340}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_hdnum_int={\verbatim@font \verb*&\cexam&\_\verb*&hdnum&\_\verb*&int&}|hdclindex{375}{}}{340}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{376}{}}{341}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{376}{}}{341}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{377}{}}{342}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{377}{}}{342}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&picwd&\_\verb*&dim&}|hdclindex{377}{}}{342}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_add:Nn={\verbatim@font \verb*&\dim&\_\verb*&add:Nn&}|hdclindex{378}{}}{343}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{378}{}}{343}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_mk_ii:nnnnnnn={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&mk&\_\verb*&ii:nnnnnnn&}|hdclindex{379}{}}{344}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_hdnum_int={\verbatim@font \verb*&\cexam&\_\verb*&hdnum&\_\verb*&int&}|hdclindex{379}{}}{344}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{380}{}}{345}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{380}{}}{345}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{380}{}}{345}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{381}{}}{346}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{382}{}}{347}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{382}{}}{347}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{382}{}}{347}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_sub:Nn={\verbatim@font \verb*&\dim&\_\verb*&sub:Nn&}|hdclindex{383}{}}{348}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{383}{}}{348}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_sub:Nn={\verbatim@font \verb*&\dim&\_\verb*&sub:Nn&}|hdclindex{384}{}}{349}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{384}{}}{349}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get_txtht:nnn={\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&txtht:nnn&}|hdclindex{385}{}}{350}
+\indexentry{rec commands:=\pkg{rec} commands:>rec_tempht_dim={\verbatim@font \verb*&\rec&\_\verb*&tempht&\_\verb*&dim&}|hdclindex{385}{}}{350}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{386}{}}{351}
+\indexentry{tex commands:=\pkg{tex} commands:>tex_parshape:D={\verbatim@font \verb*&\tex&\_\verb*&parshape:D&}|hdclindex{388}{}}{353}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{388}{}}{353}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_hd_data:={\verbatim@font \verb*&\sep&\_\verb*&hd&\_\verb*&data:&}|hdclindex{389}{}}{354}
+\indexentry{int commands:=\pkg{int} commands:>int_set:Nn={\verbatim@font \verb*&\int&\_\verb*&set:Nn&}|hdclindex{391}{}}{356}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_hdnum_int={\verbatim@font \verb*&\cexam&\_\verb*&hdnum&\_\verb*&int&}|hdclindex{391}{}}{356}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get:nNnN={\verbatim@font \verb*&\cexam&\_\verb*&get:nNnN&}|hdclindex{392}{}}{357}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_hdnum_int={\verbatim@font \verb*&\cexam&\_\verb*&hdnum&\_\verb*&int&}|hdclindex{392}{}}{357}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_txt_sub_dim={\verbatim@font \verb*&\cexam&\_\verb*&txt&\_\verb*&sub&\_\verb*&dim&}|hdclindex{393}{}}{358}
+\indexentry{rec commands:=\pkg{rec} commands:>rec_tempht_dim={\verbatim@font \verb*&\rec&\_\verb*&tempht&\_\verb*&dim&}|hdclindex{393}{}}{358}
+\indexentry{int commands:=\pkg{int} commands:>int_sub:Nn={\verbatim@font \verb*&\int&\_\verb*&sub:Nn&}|hdclindex{394}{}}{359}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_hdnum_int={\verbatim@font \verb*&\cexam&\_\verb*&hdnum&\_\verb*&int&}|hdclindex{394}{}}{359}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numtemp_int={\verbatim@font \verb*&\cexam&\_\verb*&numtemp&\_\verb*&int&}|hdclindex{394}{}}{359}
+\indexentry{int commands:=\pkg{int} commands:>int_set:Nn={\verbatim@font \verb*&\int&\_\verb*&set:Nn&}|hdclindex{395}{}}{360}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numtemp_int={\verbatim@font \verb*&\cexam&\_\verb*&numtemp&\_\verb*&int&}|hdclindex{395}{}}{360}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font \verb*&\int&\_\verb*&use:N&}|hdclindex{395}{}}{360}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_hdnum_int={\verbatim@font \verb*&\cexam&\_\verb*&hdnum&\_\verb*&int&}|hdclindex{395}{}}{360}
+\indexentry{int commands:=\pkg{int} commands:>int_sub:Nn={\verbatim@font \verb*&\int&\_\verb*&sub:Nn&}|hdclindex{396}{}}{361}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_hdnum_int={\verbatim@font \verb*&\cexam&\_\verb*&hdnum&\_\verb*&int&}|hdclindex{396}{}}{361}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numtemp_int={\verbatim@font \verb*&\cexam&\_\verb*&numtemp&\_\verb*&int&}|hdclindex{396}{}}{361}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_if:NTF={\verbatim@font \verb*&\bool&\_\verb*&if:NTF&}|hdclindex{397}{}}{362}
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_sep_by_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&sep&\_\verb*&by&\_\verb*&bool&}|hdclindex{397}{}}{362}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get_txtht:nnn={\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&txtht:nnn&}|hdclindex{399}{}}{364}
+\indexentry{rec commands:=\pkg{rec} commands:>rec_tempht_dim={\verbatim@font \verb*&\rec&\_\verb*&tempht&\_\verb*&dim&}|hdclindex{399}{}}{364}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{399}{}}{364}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_by_data:={\verbatim@font \verb*&\sep&\_\verb*&by&\_\verb*&data:&}|hdclindex{399}{}}{364}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get:nNnN={\verbatim@font \verb*&\cexam&\_\verb*&get:nNnN&}|hdclindex{400}{}}{365}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numtemp_int={\verbatim@font \verb*&\cexam&\_\verb*&numtemp&\_\verb*&int&}|hdclindex{400}{}}{365}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_mat_sub_dim={\verbatim@font \verb*&\cexam&\_\verb*&mat&\_\verb*&sub&\_\verb*&dim&}|hdclindex{401}{}}{366}
+\indexentry{rec commands:=\pkg{rec} commands:>rec_tempht_dim={\verbatim@font \verb*&\rec&\_\verb*&tempht&\_\verb*&dim&}|hdclindex{401}{}}{366}
+\indexentry{relax={\verbatim@font \verb*&\relax&}|hdclindex{402}{}}{367}
+\indexentry{relax={\verbatim@font \verb*&\relax&}|hdclindex{403}{}}{368}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_if:NTF={\verbatim@font \verb*&\bool&\_\verb*&if:NTF&}|hdclindex{404}{}}{369}
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_bys_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&bys&\_\verb*&bool&}|hdclindex{404}{}}{369}
+\indexentry{int commands:=\pkg{int} commands:>int_set:Nn={\verbatim@font \verb*&\int&\_\verb*&set:Nn&}|hdclindex{406}{}}{371}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numtemp_int={\verbatim@font \verb*&\cexam&\_\verb*&numtemp&\_\verb*&int&}|hdclindex{406}{}}{371}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font \verb*&\int&\_\verb*&use:N&}|hdclindex{406}{}}{371}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_bynum_int={\verbatim@font \verb*&\cexam&\_\verb*&bynum&\_\verb*&int&}|hdclindex{406}{}}{371}
+\indexentry{relax={\verbatim@font \verb*&\relax&}|hdclindex{407}{}}{372}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_if:NTF={\verbatim@font \verb*&\bool&\_\verb*&if:NTF&}|hdclindex{408}{}}{373}
+\indexentry{cexam internal commands:=\pkg{cexam} internal commands:>cexam_sep_tl_bool={\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&sep&\_\verb*&tl&\_\verb*&bool&}|hdclindex{408}{}}{373}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get_rec:nnnnnn={\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&rec:nnnnnn&}|hdclindex{410}{}}{375}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numtemp_int={\verbatim@font \verb*&\cexam&\_\verb*&numtemp&\_\verb*&int&}|hdclindex{410}{}}{375}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_paperht_dim={\verbatim@font \verb*&\cexam&\_\verb*&paperht&\_\verb*&dim&}|hdclindex{411}{}}{376}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_tl_data:={\verbatim@font \verb*&\sep&\_\verb*&tl&\_\verb*&data:&}|hdclindex{412}{}}{377}
+\indexentry{relax={\verbatim@font \verb*&\relax&}|hdclindex{414}{}}{379}
+\indexentry{int commands:=\pkg{int} commands:>int_set:Nn={\verbatim@font \verb*&\int&\_\verb*&set:Nn&}|hdclindex{415}{}}{380}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_totalnum_int={\verbatim@font \verb*&\cexam&\_\verb*&totalnum&\_\verb*&int&}|hdclindex{415}{}}{380}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font \verb*&\int&\_\verb*&use:N&}|hdclindex{415}{}}{380}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font \verb*&\cexam&\_\verb*&picmath&\_\verb*&int&}|hdclindex{415}{}}{380}
+\indexentry{int commands:=\pkg{int} commands:>int_add:Nn={\verbatim@font \verb*&\int&\_\verb*&add:Nn&}|hdclindex{416}{}}{381}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_totalnum_int={\verbatim@font \verb*&\cexam&\_\verb*&totalnum&\_\verb*&int&}|hdclindex{416}{}}{381}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font \verb*&\int&\_\verb*&use:N&}|hdclindex{416}{}}{381}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numtemp_int={\verbatim@font \verb*&\cexam&\_\verb*&numtemp&\_\verb*&int&}|hdclindex{416}{}}{381}
+\indexentry{int commands:=\pkg{int} commands:>int_add:Nn={\verbatim@font \verb*&\int&\_\verb*&add:Nn&}|hdclindex{417}{}}{382}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_totalnum_int={\verbatim@font \verb*&\cexam&\_\verb*&totalnum&\_\verb*&int&}|hdclindex{417}{}}{382}
+\indexentry{exp commands:=\pkg{exp} commands:>exp_args:NNx={\verbatim@font \verb*&\exp&\_\verb*&args:NNx&}|hdclindex{418}{}}{383}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{418}{}}{383}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{418}{}}{383}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_cape:={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&cape:&}|hdclindex{419}{}}{384}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font \verb*&\int&\_\verb*&use:N&}|hdclindex{419}{}}{384}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_totalnum_int={\verbatim@font \verb*&\cexam&\_\verb*&totalnum&\_\verb*&int&}|hdclindex{419}{}}{384}
+\indexentry{str commands:=\pkg{str} commands:>str_if_in:nnTF={\verbatim@font \verb*&\str&\_\verb*&if&\_\verb*&in:nnTF&}|hdclindex{420}{}}{385}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{422}{}}{387}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{422}{}}{387}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_add:Nn={\verbatim@font \verb*&\dim&\_\verb*&add:Nn&}|hdclindex{423}{}}{388}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{423}{}}{388}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&picwd&\_\verb*&dim&}|hdclindex{423}{}}{388}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{424}{}}{389}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{424}{}}{389}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_mk_i:nnnn={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&mk&\_\verb*&i:nnnn&}|hdclindex{425}{}}{390}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font \verb*&\cexam&\_\verb*&picmath&\_\verb*&int&}|hdclindex{425}{}}{390}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{426}{}}{391}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{426}{}}{391}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{426}{}}{391}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_add:Nn={\verbatim@font \verb*&\dim&\_\verb*&add:Nn&}|hdclindex{427}{}}{392}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&picwd&\_\verb*&dim&}|hdclindex{427}{}}{392}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{430}{}}{395}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{430}{}}{395}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{431}{}}{396}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{431}{}}{396}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_add:Nn={\verbatim@font \verb*&\dim&\_\verb*&add:Nn&}|hdclindex{432}{}}{397}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{432}{}}{397}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&picwd&\_\verb*&dim&}|hdclindex{432}{}}{397}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_mk_i:nnnn={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&mk&\_\verb*&i:nnnn&}|hdclindex{433}{}}{398}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font \verb*&\cexam&\_\verb*&picmath&\_\verb*&int&}|hdclindex{433}{}}{398}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{434}{}}{399}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{434}{}}{399}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{434}{}}{399}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_mk_i:nnnn={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&mk&\_\verb*&i:nnnn&}|hdclindex{436}{}}{401}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numtemp_int={\verbatim@font \verb*&\cexam&\_\verb*&numtemp&\_\verb*&int&}|hdclindex{436}{}}{401}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{437}{}}{402}
+\indexentry{exp commands:=\pkg{exp} commands:>exp_args:NNx={\verbatim@font \verb*&\exp&\_\verb*&args:NNx&}|hdclindex{438}{}}{403}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{438}{}}{403}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{438}{}}{403}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{439}{}}{404}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_cape:={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&cape:&}|hdclindex{439}{}}{404}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{440}{}}{405}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{440}{}}{405}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{440}{}}{405}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_sub:Nn={\verbatim@font \verb*&\dim&\_\verb*&sub:Nn&}|hdclindex{441}{}}{406}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{441}{}}{406}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_sub:Nn={\verbatim@font \verb*&\dim&\_\verb*&sub:Nn&}|hdclindex{442}{}}{407}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{442}{}}{407}
+\indexentry{exp commands:=\pkg{exp} commands:>exp_args:NNx={\verbatim@font \verb*&\exp&\_\verb*&args:NNx&}|hdclindex{443}{}}{408}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{443}{}}{408}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{443}{}}{408}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{444}{}}{409}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_cape:={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&cape:&}|hdclindex{444}{}}{409}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{444}{}}{409}
+\indexentry{tex commands:=\pkg{tex} commands:>tex_parshape:D={\verbatim@font \verb*&\tex&\_\verb*&parshape:D&}|hdclindex{445}{}}{410}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{445}{}}{410}
+\indexentry{box commands:=\pkg{box} commands:>box_use:N={\verbatim@font \verb*&\box&\_\verb*&use:N&}|hdclindex{446}{}}{411}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picture_box={\verbatim@font \verb*&\cexam&\_\verb*&picture&\_\verb*&box&}|hdclindex{446}{}}{411}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_type_iii:nnnnnnn={\verbatim@font \verb*&\cexam&\_\verb*&type&\_\verb*&iii:nnnnnnn&}|hdclindex{449}{main}}{414}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{450}{}}{414}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{452}{}}{416}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmtwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&fmtwd&\_\verb*&dim&}|hdclindex{452}{}}{416}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{452}{}}{416}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_sub:Nn={\verbatim@font \verb*&\dim&\_\verb*&sub:Nn&}|hdclindex{453}{}}{417}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmtwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&fmtwd&\_\verb*&dim&}|hdclindex{453}{}}{417}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_sub:Nn={\verbatim@font \verb*&\dim&\_\verb*&sub:Nn&}|hdclindex{454}{}}{418}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmtwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&fmtwd&\_\verb*&dim&}|hdclindex{454}{}}{418}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmt_pic:nn={\verbatim@font \verb*&\cexam&\_\verb*&fmt&\_\verb*&pic:nn&}|hdclindex{455}{}}{419}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{456}{}}{420}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_paperht_dim={\verbatim@font \verb*&\cexam&\_\verb*&paperht&\_\verb*&dim&}|hdclindex{456}{}}{420}
+\indexentry{textheight={\verbatim@font \verb*&\textheight&}|hdclindex{456}{}}{420}
+\indexentry{int commands:=\pkg{int} commands:>int_set:Nn={\verbatim@font \verb*&\int&\_\verb*&set:Nn&}|hdclindex{457}{}}{421}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numtemp_int={\verbatim@font \verb*&\cexam&\_\verb*&numtemp&\_\verb*&int&}|hdclindex{457}{}}{421}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get_rec:nnnnnn={\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&rec:nnnnnn&}|hdclindex{458}{}}{422}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font \verb*&\cexam&\_\verb*&picmath&\_\verb*&int&}|hdclindex{458}{}}{422}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_paperht_dim={\verbatim@font \verb*&\cexam&\_\verb*&paperht&\_\verb*&dim&}|hdclindex{459}{}}{423}
+\indexentry{int commands:=\pkg{int} commands:>int_add:Nn={\verbatim@font \verb*&\int&\_\verb*&add:Nn&}|hdclindex{461}{}}{425}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font \verb*&\cexam&\_\verb*&picmath&\_\verb*&int&}|hdclindex{461}{}}{425}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_mk_ii:nnnnnnn={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&mk&\_\verb*&ii:nnnnnnn&}|hdclindex{462}{}}{426}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font \verb*&\cexam&\_\verb*&picmath&\_\verb*&int&}|hdclindex{463}{}}{427}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{464}{}}{428}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{465}{}}{429}
+\indexentry{tex commands:=\pkg{tex} commands:>tex_parshape:D={\verbatim@font \verb*&\tex&\_\verb*&parshape:D&}|hdclindex{466}{}}{430}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{466}{}}{430}
+\indexentry{newline={\verbatim@font \verb*&\newline&}|hdclindex{468}{}}{432}
+\indexentry{hbox commands:=\pkg{hbox} commands:>hbox_unpack:N={\verbatim@font \verb*&\hbox&\_\verb*&unpack:N&}|hdclindex{469}{}}{433}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picture_box={\verbatim@font \verb*&\cexam&\_\verb*&picture&\_\verb*&box&}|hdclindex{469}{}}{433}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_type_iv:nnnnnnnn={\verbatim@font \verb*&\cexam&\_\verb*&type&\_\verb*&iv:nnnnnnnn&}|hdclindex{471}{main}}{435}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{472}{}}{435}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmt_pic:nn={\verbatim@font \verb*&\cexam&\_\verb*&fmt&\_\verb*&pic:nn&}|hdclindex{474}{}}{437}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get_rec:nnnnnn={\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&rec:nnnnnn&}|hdclindex{475}{}}{438}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font \verb*&\cexam&\_\verb*&picmath&\_\verb*&int&}|hdclindex{475}{}}{438}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picht_dim={\verbatim@font \verb*&\cexam&\_\verb*&picht&\_\verb*&dim&}|hdclindex{476}{}}{439}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&picwd&\_\verb*&dim&}|hdclindex{476}{}}{439}
+\indexentry{int commands:=\pkg{int} commands:>int_set:Nn={\verbatim@font \verb*&\int&\_\verb*&set:Nn&}|hdclindex{478}{}}{441}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numtemp_int={\verbatim@font \verb*&\cexam&\_\verb*&numtemp&\_\verb*&int&}|hdclindex{478}{}}{441}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get_rec:nnnnnn={\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&rec:nnnnnn&}|hdclindex{479}{}}{442}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numtemp_int={\verbatim@font \verb*&\cexam&\_\verb*&numtemp&\_\verb*&int&}|hdclindex{479}{}}{442}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picht_dim={\verbatim@font \verb*&\cexam&\_\verb*&picht&\_\verb*&dim&}|hdclindex{480}{}}{443}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&picwd&\_\verb*&dim&}|hdclindex{480}{}}{443}
+\indexentry{int commands:=\pkg{int} commands:>int_set:Nn={\verbatim@font \verb*&\int&\_\verb*&set:Nn&}|hdclindex{482}{}}{445}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_totalnum_int={\verbatim@font \verb*&\cexam&\_\verb*&totalnum&\_\verb*&int&}|hdclindex{482}{}}{445}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font \verb*&\int&\_\verb*&use:N&}|hdclindex{482}{}}{445}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font \verb*&\cexam&\_\verb*&picmath&\_\verb*&int&}|hdclindex{482}{}}{445}
+\indexentry{int commands:=\pkg{int} commands:>int_add:Nn={\verbatim@font \verb*&\int&\_\verb*&add:Nn&}|hdclindex{483}{}}{446}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_totalnum_int={\verbatim@font \verb*&\cexam&\_\verb*&totalnum&\_\verb*&int&}|hdclindex{483}{}}{446}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font \verb*&\int&\_\verb*&use:N&}|hdclindex{483}{}}{446}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numtemp_int={\verbatim@font \verb*&\cexam&\_\verb*&numtemp&\_\verb*&int&}|hdclindex{483}{}}{446}
+\indexentry{int commands:=\pkg{int} commands:>int_add:Nn={\verbatim@font \verb*&\int&\_\verb*&add:Nn&}|hdclindex{484}{}}{447}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_totalnum_int={\verbatim@font \verb*&\cexam&\_\verb*&totalnum&\_\verb*&int&}|hdclindex{484}{}}{447}
+\indexentry{exp commands:=\pkg{exp} commands:>exp_args:NNx={\verbatim@font \verb*&\exp&\_\verb*&args:NNx&}|hdclindex{485}{}}{448}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{485}{}}{448}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{485}{}}{448}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_cape:={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&cape:&}|hdclindex{486}{}}{449}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font \verb*&\int&\_\verb*&use:N&}|hdclindex{486}{}}{449}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_totalnum_int={\verbatim@font \verb*&\cexam&\_\verb*&totalnum&\_\verb*&int&}|hdclindex{486}{}}{449}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{487}{}}{450}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{487}{}}{450}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{488}{}}{451}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{488}{}}{451}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_add:Nn={\verbatim@font \verb*&\dim&\_\verb*&add:Nn&}|hdclindex{489}{}}{452}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{489}{}}{452}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picwd_dim={\verbatim@font \verb*&\cexam&\_\verb*&picwd&\_\verb*&dim&}|hdclindex{489}{}}{452}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_mk_i:nnnn={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&mk&\_\verb*&i:nnnn&}|hdclindex{490}{}}{453}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font \verb*&\cexam&\_\verb*&picmath&\_\verb*&int&}|hdclindex{490}{}}{453}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{491}{}}{454}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{491}{}}{454}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{491}{}}{454}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{492}{}}{455}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{492}{}}{455}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_mk_i:nnnn={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&mk&\_\verb*&i:nnnn&}|hdclindex{493}{}}{456}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numtemp_int={\verbatim@font \verb*&\cexam&\_\verb*&numtemp&\_\verb*&int&}|hdclindex{493}{}}{456}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{494}{}}{457}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{494}{}}{457}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_psrin_dim={\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}|hdclindex{494}{}}{457}
+\indexentry{exp commands:=\pkg{exp} commands:>exp_args:NNx={\verbatim@font \verb*&\exp&\_\verb*&args:NNx&}|hdclindex{495}{}}{458}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{495}{}}{458}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{495}{}}{458}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{496}{}}{459}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_cape:={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&cape:&}|hdclindex{496}{}}{459}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}|hdclindex{496}{}}{459}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{497}{}}{460}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{497}{}}{460}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{497}{}}{460}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_sub:Nn={\verbatim@font \verb*&\dim&\_\verb*&sub:Nn&}|hdclindex{498}{}}{461}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{498}{}}{461}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_sub:Nn={\verbatim@font \verb*&\dim&\_\verb*&sub:Nn&}|hdclindex{499}{}}{462}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{499}{}}{462}
+\indexentry{exp commands:=\pkg{exp} commands:>exp_args:NNx={\verbatim@font \verb*&\exp&\_\verb*&args:NNx&}|hdclindex{500}{}}{463}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{500}{}}{463}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{500}{}}{463}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{501}{}}{464}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_cape:={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&cape:&}|hdclindex{501}{}}{464}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}|hdclindex{501}{}}{464}
+\indexentry{tex commands:=\pkg{tex} commands:>tex_parshape:D={\verbatim@font \verb*&\tex&\_\verb*&parshape:D&}|hdclindex{502}{}}{465}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{502}{}}{465}
+\indexentry{box commands:=\pkg{box} commands:>box_use:N={\verbatim@font \verb*&\box&\_\verb*&use:N&}|hdclindex{503}{}}{466}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picture_box={\verbatim@font \verb*&\cexam&\_\verb*&picture&\_\verb*&box&}|hdclindex{503}{}}{466}
+\indexentry{newline={\verbatim@font \verb*&\newline&}|hdclindex{505}{}}{468}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_type_v:nnnnn={\verbatim@font \verb*&\cexam&\_\verb*&type&\_\verb*&v:nnnnn&}|hdclindex{508}{main}}{471}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{509}{}}{471}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{511}{}}{473}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_paperht_dim={\verbatim@font \verb*&\cexam&\_\verb*&paperht&\_\verb*&dim&}|hdclindex{511}{}}{473}
+\indexentry{textheight={\verbatim@font \verb*&\textheight&}|hdclindex{511}{}}{473}
+\indexentry{int commands:=\pkg{int} commands:>int_set:Nn={\verbatim@font \verb*&\int&\_\verb*&set:Nn&}|hdclindex{512}{}}{474}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numtemp_int={\verbatim@font \verb*&\cexam&\_\verb*&numtemp&\_\verb*&int&}|hdclindex{512}{}}{474}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get_rec:nnnnnn={\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&rec:nnnnnn&}|hdclindex{513}{}}{475}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font \verb*&\cexam&\_\verb*&picmath&\_\verb*&int&}|hdclindex{513}{}}{475}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_paperht_dim={\verbatim@font \verb*&\cexam&\_\verb*&paperht&\_\verb*&dim&}|hdclindex{514}{}}{476}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_mk_ii:nnnnnnn={\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&mk&\_\verb*&ii:nnnnnnn&}|hdclindex{516}{}}{478}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font \verb*&\cexam&\_\verb*&picmath&\_\verb*&int&}|hdclindex{517}{}}{479}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{518}{}}{480}
+\indexentry{linewidth={\verbatim@font \verb*&\linewidth&}|hdclindex{519}{}}{481}
+\indexentry{tex commands:=\pkg{tex} commands:>tex_parshape:D={\verbatim@font \verb*&\tex&\_\verb*&parshape:D&}|hdclindex{520}{}}{482}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font \verb*&\cexam&\_\verb*&shad:&}|hdclindex{520}{}}{482}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_seped_pic:={\verbatim@font \verb*&\cexam&\_\verb*&seped&\_\verb*&pic:&}|hdclindex{523}{main}}{485}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_seped_txt:={\verbatim@font \verb*&\cexam&\_\verb*&seped&\_\verb*&txt:&}|hdclindex{523}{main}}{485}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Nn={\verbatim@font \verb*&\cs&\_\verb*&new:Nn&}|hdclindex{524}{}}{485}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Nn={\verbatim@font \verb*&\cs&\_\verb*&new:Nn&}|hdclindex{525}{}}{486}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep_pictxt_i:n={\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&pictxt&\_\verb*&i:n&}|hdclindex{526}{main}}{487}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{527}{}}{487}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font \verb*&\scan&\_\verb*&stop:&}|hdclindex{527}{}}{487}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{529}{}}{489}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_seped_txt:={\verbatim@font \verb*&\cexam&\_\verb*&seped&\_\verb*&txt:&}|hdclindex{529}{}}{489}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmt_fig:={\verbatim@font \verb*&\cexam&\_\verb*&fmt&\_\verb*&fig:&}|hdclindex{529}{}}{489}
+\indexentry{hbox commands:=\pkg{hbox} commands:>hbox_set:Nn={\verbatim@font \verb*&\hbox&\_\verb*&set:Nn&}|hdclindex{530}{}}{490}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_temp_box={\verbatim@font \verb*&\sep&\_\verb*&temp&\_\verb*&box&}|hdclindex{530}{}}{490}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_compare:nNnTF={\verbatim@font \verb*&\dim&\_\verb*&compare:nNnTF&}|hdclindex{531}{}}{491}
+\indexentry{box commands:=\pkg{box} commands:>box_wd:N={\verbatim@font \verb*&\box&\_\verb*&wd:N&}|hdclindex{531}{}}{491}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_temp_box={\verbatim@font \verb*&\sep&\_\verb*&temp&\_\verb*&box&}|hdclindex{531}{}}{491}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{533}{}}{493}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_seped_pic:={\verbatim@font \verb*&\cexam&\_\verb*&seped&\_\verb*&pic:&}|hdclindex{533}{}}{493}
+\indexentry{begin={\verbatim@font \verb*&\begin&}|hdclindex{535}{}}{495}
+\indexentry{draw={\verbatim@font \verb*&\draw&}|hdclindex{536}{}}{496}
+\indexentry{draw={\verbatim@font \verb*&\draw&}|hdclindex{537}{}}{497}
+\indexentry{small={\verbatim@font \verb*&\small&}|hdclindex{537}{}}{497}
+\indexentry{textcolor={\verbatim@font \verb*&\textcolor&}|hdclindex{537}{}}{497}
+\indexentry{end={\verbatim@font \verb*&\end&}|hdclindex{538}{}}{498}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{542}{}}{502}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_seped_pic:={\verbatim@font \verb*&\cexam&\_\verb*&seped&\_\verb*&pic:&}|hdclindex{542}{}}{502}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep_pictxt_ii:n={\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&pictxt&\_\verb*&ii:n&}|hdclindex{545}{main}}{505}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{546}{}}{505}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font \verb*&\scan&\_\verb*&stop:&}|hdclindex{546}{}}{505}
+\indexentry{str commands:=\pkg{str} commands:>str_if_in:nnTF={\verbatim@font \verb*&\str&\_\verb*&if&\_\verb*&in:nnTF&}|hdclindex{548}{}}{507}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_set_false:N={\verbatim@font \verb*&\bool&\_\verb*&set&\_\verb*&false:N&}|hdclindex{550}{}}{509}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_nopic_bool={\verbatim@font \verb*&\cexam&\_\verb*&nopic&\_\verb*&bool&}|hdclindex{550}{}}{509}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep_pictxt_i:n={\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&pictxt&\_\verb*&i:n&}|hdclindex{551}{}}{510}
+\indexentry{relax={\verbatim@font \verb*&\relax&}|hdclindex{551}{}}{510}
+\indexentry{relax={\verbatim@font \verb*&\relax&}|hdclindex{551}{}}{510}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font \verb*&\scan&\_\verb*&stop:&}|hdclindex{551}{}}{510}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_set_true:N={\verbatim@font \verb*&\bool&\_\verb*&set&\_\verb*&true:N&}|hdclindex{554}{}}{513}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_nopic_bool={\verbatim@font \verb*&\cexam&\_\verb*&nopic&\_\verb*&bool&}|hdclindex{554}{}}{513}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{555}{}}{514}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_seped_pic:={\verbatim@font \verb*&\cexam&\_\verb*&seped&\_\verb*&pic:&}|hdclindex{555}{}}{514}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Nn={\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}|hdclindex{556}{}}{515}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_seped_txt:={\verbatim@font \verb*&\cexam&\_\verb*&seped&\_\verb*&txt:&}|hdclindex{556}{}}{515}
+\indexentry{relax={\verbatim@font \verb*&\relax&}|hdclindex{545}{usage}}{14}
+\indexentry{relax={\verbatim@font \verb*&\relax&}|hdclindex{545}{usage}}{14}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_ind_hat:nn={\verbatim@font \verb*&\cexam&\_\verb*&ind&\_\verb*&hat:nn&}|hdclindex{559}{main}}{518}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{560}{}}{518}
+\indexentry{makebox={\verbatim@font \verb*&\makebox&}|hdclindex{562}{}}{520}
+\indexentry{raisebox={\verbatim@font \verb*&\raisebox&}|hdclindex{562}{}}{520}
+\indexentry{ccwd={\verbatim@font \verb*&\ccwd&}|hdclindex{562}{}}{520}
+\indexentry{parbox={\verbatim@font \verb*&\parbox&}|hdclindex{562}{}}{520}
+\indexentry{hfill={\verbatim@font \verb*&\hfill&}|hdclindex{562}{}}{520}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_get_lmax:n={\verbatim@font \verb*&\sel&\_\verb*&get&\_\verb*&lmax:n&}|hdclindex{564}{main}}{522}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{565}{}}{522}
+\indexentry{hbox commands:=\pkg{hbox} commands:>hbox_set:Nn={\verbatim@font \verb*&\hbox&\_\verb*&set:Nn&}|hdclindex{567}{}}{524}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_option_box={\verbatim@font \verb*&\sel&\_\verb*&option&\_\verb*&box&}|hdclindex{567}{}}{524}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}|hdclindex{568}{}}{525}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_lmax_dim={\verbatim@font \verb*&\sel&\_\verb*&lmax&\_\verb*&dim&}|hdclindex{568}{}}{525}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_max:nn={\verbatim@font \verb*&\dim&\_\verb*&max:nn&}|hdclindex{568}{}}{525}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_lmax_dim={\verbatim@font \verb*&\sel&\_\verb*&lmax&\_\verb*&dim&}|hdclindex{568}{}}{525}
+\indexentry{box commands:=\pkg{box} commands:>box_wd:N={\verbatim@font \verb*&\box&\_\verb*&wd:N&}|hdclindex{568}{}}{525}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_option_box={\verbatim@font \verb*&\sel&\_\verb*&option&\_\verb*&box&}|hdclindex{568}{}}{525}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_opt_type_i:nnnn={\verbatim@font \verb*&\sel&\_\verb*&opt&\_\verb*&type&\_\verb*&i:nnnn&}|hdclindex{570}{main}}{527}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{571}{}}{527}
+\indexentry{makebox={\verbatim@font \verb*&\makebox&}|hdclindex{573}{}}{529}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_optwd_dim={\verbatim@font \verb*&\sel&\_\verb*&optwd&\_\verb*&dim&}|hdclindex{573}{}}{529}
+\indexentry{makebox={\verbatim@font \verb*&\makebox&}|hdclindex{574}{}}{530}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_optwd_dim={\verbatim@font \verb*&\sel&\_\verb*&optwd&\_\verb*&dim&}|hdclindex{574}{}}{530}
+\indexentry{makebox={\verbatim@font \verb*&\makebox&}|hdclindex{575}{}}{531}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_optwd_dim={\verbatim@font \verb*&\sel&\_\verb*&optwd&\_\verb*&dim&}|hdclindex{575}{}}{531}
+\indexentry{makebox={\verbatim@font \verb*&\makebox&}|hdclindex{576}{}}{532}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_optwd_dim={\verbatim@font \verb*&\sel&\_\verb*&optwd&\_\verb*&dim&}|hdclindex{576}{}}{532}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_opt_type_ii:nnnn={\verbatim@font \verb*&\sel&\_\verb*&opt&\_\verb*&type&\_\verb*&ii:nnnn&}|hdclindex{578}{main}}{534}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{579}{}}{534}
+\indexentry{makebox={\verbatim@font \verb*&\makebox&}|hdclindex{581}{}}{536}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_optwd_dim={\verbatim@font \verb*&\sel&\_\verb*&optwd&\_\verb*&dim&}|hdclindex{581}{}}{536}
+\indexentry{makebox={\verbatim@font \verb*&\makebox&}|hdclindex{582}{}}{537}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_optwd_dim={\verbatim@font \verb*&\sel&\_\verb*&optwd&\_\verb*&dim&}|hdclindex{582}{}}{537}
+\indexentry{newline={\verbatim@font \verb*&\newline&}|hdclindex{583}{}}{538}
+\indexentry{makebox={\verbatim@font \verb*&\makebox&}|hdclindex{584}{}}{539}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_optwd_dim={\verbatim@font \verb*&\sel&\_\verb*&optwd&\_\verb*&dim&}|hdclindex{584}{}}{539}
+\indexentry{makebox={\verbatim@font \verb*&\makebox&}|hdclindex{585}{}}{540}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_optwd_dim={\verbatim@font \verb*&\sel&\_\verb*&optwd&\_\verb*&dim&}|hdclindex{585}{}}{540}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_opt_type_iii:nnnn={\verbatim@font \verb*&\sel&\_\verb*&opt&\_\verb*&type&\_\verb*&iii:nnnn&}|hdclindex{587}{main}}{542}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{588}{}}{542}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_ind_hat:nn={\verbatim@font \verb*&\cexam&\_\verb*&ind&\_\verb*&hat:nn&}|hdclindex{590}{}}{544}
+\indexentry{ccwd={\verbatim@font \verb*&\ccwd&}|hdclindex{590}{}}{544}
+\indexentry{newline={\verbatim@font \verb*&\newline&}|hdclindex{591}{}}{545}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_ind_hat:nn={\verbatim@font \verb*&\cexam&\_\verb*&ind&\_\verb*&hat:nn&}|hdclindex{592}{}}{546}
+\indexentry{ccwd={\verbatim@font \verb*&\ccwd&}|hdclindex{592}{}}{546}
+\indexentry{newline={\verbatim@font \verb*&\newline&}|hdclindex{593}{}}{547}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_ind_hat:nn={\verbatim@font \verb*&\cexam&\_\verb*&ind&\_\verb*&hat:nn&}|hdclindex{594}{}}{548}
+\indexentry{ccwd={\verbatim@font \verb*&\ccwd&}|hdclindex{594}{}}{548}
+\indexentry{newline={\verbatim@font \verb*&\newline&}|hdclindex{595}{}}{549}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_ind_hat:nn={\verbatim@font \verb*&\cexam&\_\verb*&ind&\_\verb*&hat:nn&}|hdclindex{596}{}}{550}
+\indexentry{ccwd={\verbatim@font \verb*&\ccwd&}|hdclindex{596}{}}{550}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmt_opt_sel:nnnn={\verbatim@font \verb*&\cexam&\_\verb*&fmt&\_\verb*&opt&\_\verb*&sel:nnnn&}|hdclindex{598}{main}}{552}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}|hdclindex{599}{}}{552}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_get_lmax:n={\verbatim@font \verb*&\sel&\_\verb*&get&\_\verb*&lmax:n&}|hdclindex{601}{}}{554}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_get_lmax:n={\verbatim@font \verb*&\sel&\_\verb*&get&\_\verb*&lmax:n&}|hdclindex{602}{}}{555}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_get_lmax:n={\verbatim@font \verb*&\sel&\_\verb*&get&\_\verb*&lmax:n&}|hdclindex{603}{}}{556}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_get_lmax:n={\verbatim@font \verb*&\sel&\_\verb*&get&\_\verb*&lmax:n&}|hdclindex{604}{}}{557}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_compare:nNnTF={\verbatim@font \verb*&\dim&\_\verb*&compare:nNnTF&}|hdclindex{605}{}}{558}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_lmax_dim={\verbatim@font \verb*&\sel&\_\verb*&lmax&\_\verb*&dim&}|hdclindex{605}{}}{558}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_optwd_dim={\verbatim@font \verb*&\sel&\_\verb*&optwd&\_\verb*&dim&}|hdclindex{605}{}}{558}
+\indexentry{hbox commands:=\pkg{hbox} commands:>hbox_set:Nn={\verbatim@font \verb*&\hbox&\_\verb*&set:Nn&}|hdclindex{607}{}}{560}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_option_box={\verbatim@font \verb*&\cexam&\_\verb*&option&\_\verb*&box&}|hdclindex{607}{}}{560}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_opt_type_i:nnnn={\verbatim@font \verb*&\sel&\_\verb*&opt&\_\verb*&type&\_\verb*&i:nnnn&}|hdclindex{607}{}}{560}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_compare:nNnTF={\verbatim@font \verb*&\dim&\_\verb*&compare:nNnTF&}|hdclindex{610}{}}{563}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_lmax_dim={\verbatim@font \verb*&\sel&\_\verb*&lmax&\_\verb*&dim&}|hdclindex{610}{}}{563}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_optwd_dim={\verbatim@font \verb*&\sel&\_\verb*&optwd&\_\verb*&dim&}|hdclindex{610}{}}{563}
+\indexentry{hbox commands:=\pkg{hbox} commands:>hbox_set:Nn={\verbatim@font \verb*&\hbox&\_\verb*&set:Nn&}|hdclindex{612}{}}{565}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_option_box={\verbatim@font \verb*&\cexam&\_\verb*&option&\_\verb*&box&}|hdclindex{612}{}}{565}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_opt_type_ii:nnnn={\verbatim@font \verb*&\sel&\_\verb*&opt&\_\verb*&type&\_\verb*&ii:nnnn&}|hdclindex{612}{}}{565}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_max:nn={\verbatim@font \verb*&\dim&\_\verb*&max:nn&}|hdclindex{564}{usage}}{15}
+\indexentry{hbox commands:=\pkg{hbox} commands:>hbox_set:Nn={\verbatim@font \verb*&\hbox&\_\verb*&set:Nn&}|hdclindex{615}{}}{568}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_option_box={\verbatim@font \verb*&\cexam&\_\verb*&option&\_\verb*&box&}|hdclindex{615}{}}{568}
+\indexentry{sel commands:=\pkg{sel} commands:>sel_opt_type_iii:nnnn={\verbatim@font \verb*&\sel&\_\verb*&opt&\_\verb*&type&\_\verb*&iii:nnnn&}|hdclindex{615}{}}{568}

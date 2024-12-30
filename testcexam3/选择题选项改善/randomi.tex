@@ -1,0 +1,59 @@
+\documentclass[a4paper,fontset = windows]{ctexbook}
+\usepackage{xifthen}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[user=student,option=random]{cexam}
+\usepackage[fontwarning=on]{ctrlwarning}
+
+\begin{document}
+\chapter{选择题选项排版测试}
+
+ \begin{choices}
+   2.选择题题干,如果插入图片,则图片应当如所示.
+    从下面四个选项中选出正确的选项
+    \option[A]{错误选项}
+    \option[B]{错误选项}
+    \option*[C]{正确选项}
+    \option*[D]{正确选项}
+
+    a.*
+
+   2.选择题题干,如果插入图片,则图片应当如所示.
+    从下面四个选项中选出正确的选项
+    \option[A]{错误选项}
+    \option[B]{错误选项}
+    \option*[C]{正确选项}
+    \option*[D]{正确选项}
+
+    a.*
+
+   2.选择题题干,如果插入图片,则图片应当如\includegraphics{1.png}所示.
+    从下面四个选项中选出正确的选项
+    \option[A]{错误选项}
+    \option[B]{错误选项}
+    \option*[C]{正确选项}
+    \option*[D]{正确选项}
+
+    a.*
+
+   2.选择题题干,如果插入图片,则图片应当如\includegraphics{1.png}所示.
+    从下面四个选项中选出正确的选项
+    \option[A]{错误选项}
+    \option[B]{错误选项}
+    \option*[C]{正确选项}
+    \option*[D]{正确选项}
+
+    a.*
+
+ \end{choices}
+
+\ExplSyntaxOn
+\str_if_in:nnTF {ABCD}{ABC}
+{True}
+{False}
+\ExplSyntaxOff
+
+%\makeanswer
+
+\end{document}

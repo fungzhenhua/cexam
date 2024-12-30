@@ -1,0 +1,132 @@
+\chapter{涨落}
+\newcommand{\fangjunzhi}[1]{\left<#1^2\right>}
+\section{高斯分布}
+高斯分布指如下形式的分布
+\begin{gather}
+  \omega(x)dx=Ae^{-\frac{\beta}{2}x^2}dx
+  \intertext{对上式$x$从$-\infty$ 到$\infty$据归一化可得系数$A$,即}
+  A\sqrt{\frac{2\pi}{\beta}}=1
+  \intertext{解得}
+  A=\sqrt{\frac{\beta}{2\pi}}
+  \intertext{所以高斯分布为}
+  \omega(x)=\sqrt{\frac{\beta}{2\pi}}e^{-\frac{\beta}{2}x^2}
+\end{gather}
+
+下面求涨落的方均值即
+\begin{gather}
+  \left<x^2\right>=\sqrt{\frac{\beta}{2\pi}}\int_{-\infty}^\infty e^{-\frac{\beta}{2}x^2}x^2 dx\notag
+  \intertext{上式可以借用偏微分方便的计算为}
+  \left<x^2\right>=-2\sqrt{\frac{\beta}{2\pi}}\frac{\partial}{\partial \beta}
+  \int_{-\infty}^\infty e^{-\frac{\beta}{2}x^2} dx
+  \intertext{上式积分容易算出,得}
+  \left<x^2\right>=-2\sqrt{\frac{\beta}{2\pi}}\frac{\partial}{\partial \beta}
+  \sqrt{\frac{2\pi}{\beta}}
+  \intertext{稍加整理得}
+  \left<x^2\right>=\frac{1}{\beta}
+\end{gather}
+
+将高斯分布中的$\beta$用方均值代替,则高斯分布又可以表达为
+\begin{equation}
+  \omega(x)=\frac{1}{\sqrt{2\pi\fangjunzhi{x}}}e^{-\frac{x^2}{2\fangjunzhi{x}}}
+  \label{eq:gaussfenbu}
+\end{equation}
+
+\section{多个热力学量的高斯分布}
+
+由于孤立系统的熵在达到平衡时具有极大值,所以在平衡位置,可以将熵 Taylor 展开,而保留到二级项,因为一级微分项为零.同时,基于极大值的考虑,则二级项应当是负定二次型,为了方便表述采用了Einstein 约定,对重复的下标默认表示从$1$ 到$n$ 求和,即
+\begin{gather}
+  S-S_0 = -\frac{1}{2}\beta_{ij}x_ix_j 
+  \intertext{二阶张量是对称的,即$\beta_{ij}=\beta_{ji}$,所以多个热力学量的分布也构成高斯分布}
+  \omega(x_1,x_2,\cdots ,x_n)=Ae^{-\frac{1}{2}\beta_{ij}x_ix_j}
+  \label{eq:multigauss0}
+  \intertext{系数$A$ 同样可以据归一化来求出,但是直接求解不是很好处理.所以此处先把二次型写成标准型,设变换矩阵为$a_{ij}$,则}
+  \beta_{ij}x_ix_j=\beta_{ij}a_{il}a_{jk}x_l'x_k'
+  \label{eq:multigauss1}
+  \intertext{在式\eqref{eq:multigauss1}中令系数为$\delta_{lk}$则二次型化为标准型,即}
+  \beta_{ij}a_{il}a_{jk}=\delta_{lk}
+  \label{eq:multigauss2}
+  \intertext{式\eqref{eq:multigauss2}一共有$n^2$组等式,同时含有$n^2$个未知数,所以它有唯一解,同时$a_{ij}=a_{ji}$,即变换矩阵为对称矩阵.同时由Jacobi 行列式可以得到微元变换为}
+  \frac{\partial(x_1,x_2,\cdots,x_n)}{\partial(x_1',x_2',\cdots,x_n')}
+=\left|a_{ij}\right|=a
+\intertext{对\eqref{eq:multigauss0}关于$n$个变量积分,得}
+A\int \cdots \int e^{-\frac{1}{2}\beta_{ij}x_ix_j}\mathrm{d}{x_1}\mathrm{d}{x_2}\cdots\mathrm{d}{x_n}
+=
+Aa\int \cdots \int e^{-\frac{1}{2}x_i'x_i'}\mathrm{d}{x'_1}\mathrm{d}{x'_2}\cdots\mathrm{d}{x'_n}=Aa(2\pi)^{\frac{n}{2}}=1
+\intertext{解得系数为}
+A=\frac{1}{a(2\pi)^{\frac{n}{2}}}
+\end{gather}
+
+在前述的变换矩阵$|a_{ij}|$,我们是不需要直接求解出来的,因为本身高斯分布已经完全确定了分布,所以在各平均值的计算结果中是不会出现变换矩阵的有关信息的.记热力学共轭量为$X_i$,则按定义其为
+\begin{equation}
+  X_i=-\frac{\partial S}{\partial x_i}=\beta_{il}x_l
+  \label{eq:hotgonger}
+\end{equation}
+这里主要计算的涨落信息是$\left<x_ix_j\right>$ 和$\left<X_iX_j\right>$,这里有两种算法,其一是按朗道的计算方法,此法相当简洁明了;其二直接计算就好.
+
+\subsubsection{朗道的计算方法}
+令$\overline{x_i}=x_{0i}$则高斯分布可以写为
+\begin{gather}
+  \omega(x_1,x_2,\cdots ,x_n)=\frac{1}{a(2\pi)^{\frac{n}{2}}}e^{-\frac{1}{2}\beta_{ij}(x_i-x_{0i})(x_j-x_{0j})}
+  \intertext{可以计算均值如下}
+ \int \frac{1}{a(2\pi)^{\frac{n}{2}}}e^{-\frac{1}{2}\beta_{ij}(x_i-x_{0i})(x_j-x_{0j})}
+ x_l \mathrm{d}x_1\mathrm{d}x_2\cdots\mathrm{d}x_n=x_{0l}
+ \intertext{对$x_{0k}$微分,则右式为$\delta_{lk}$上式 即}
+ \int \frac{1}{a(2\pi)^{\frac{n}{2}}}e^{-\frac{1}{2}\beta_{ij}(x_i-x_{0i})(x_j-x_{0j})}
+ x_lX_k \mathrm{d}x_1\mathrm{d}x_2\cdots\mathrm{d}x_n=x_{0l}
+ \intertext{上式可以简写如下}
+ \left<x_lX_k\right>=\delta_{lk}
+ \intertext{上式的共轭量用$x_i$展开,则}
+ \beta_{ki}\left<x_ix_l\right>=\delta_{lk}
+ \intertext{记矩阵$\beta_{ki}$的逆为$\beta^{-1}_{ki}${\bf 注意不是倒数},由此式可得}
+ \left<x_ix_l\right>=\beta^{-1}_{il}
+ \intertext{同时也可以求得共轭量的乘积平均值}
+ \left<X_iX_l\right>=\beta_{ik}\left<x_kX_l\right>=\beta_{ik}\delta_{kl}
+ \intertext{即}
+ \left<X_iX_l\right>=\beta_{il}
+\end{gather}
+
+\subsubsection{直接计算法}
+
+\begin{align}
+  \left<x_ix_j\right>&=A\int x_ix_je^{-\frac{1}{2}\beta_{lm}x_lx_m} 
+  \mathrm{d}x_1 \mathrm{d}x_2\cdots\mathrm{d}x_n\notag\\
+  &=a_{ik}a_{jm}Aa\int x'_kx'_m e^{-\frac{1}{2}x'_lx'_l}
+  \mathrm{d}x'_1 \mathrm{d}x'_2\cdots\mathrm{d}x'_n\notag\\
+  &=a_{ik}a_{jm}\delta_{km}\notag\\
+  &=a_{ik}a_{jk}=a_{ik}a_{kj}
+  \label{eq:xixj0}
+\end{align}
+同时由于
+\begin{gather}
+  \beta_{ij}a_{ik}a_{jl}=\delta_{kl}
+  \intertext{所以}
+  \beta_{ij}a_{ik}a_{kj}=1
+  \intertext{于是可得$a_{ik}a_{kj}$为}
+  a_{ik}a_{kj}=\beta_{ij}^{-1}
+  \intertext{上式代入式\eqref{eq:xixj0}得}
+  \left<x_ix_j\right>=\beta_{ij}^{-1}
+\end{gather}
+下面计算$\left<X_iX_j\right>$,如下
+\begin{align}
+  \left<X_iX_j\right>&=\beta_{il}\beta_{jk}\left<x_lx_k\right>\notag\\
+  &=\beta_{il}\beta_{jk}\cdot \beta_{lk}^{-1}\notag\\
+  &=\beta_{il}\cdot \delta_{lj}\notag\\
+  &=\beta_{ij}
+  \label{eq:XiXj0}
+\end{align}
+
+对于多个热力学量的高斯分布,上面的计算技巧为使用线性变换将负定二次型转换为标准型,然后积分就容易进行.同时根据标准型的要求,可得各涨落量使用相应系数的表达.由于这些表达,则容易判断是否统计独立.
+
+\subsubsection{统计独立性的判断}
+
+对于任意两个物理量的平均值,可以先将其它的物理量积分(此积分不会对平均值起作用),然后再求解,即
+\begin{gather}
+  \left<x_1x_2\right>=A\int e^{-\frac{1}{2}\beta_{11}'x_1^2-\beta_{12}'x_1x_2-\frac{1}{2}\beta_{22}'x_2^2} x_1x_2\mathrm{d}x_1\mathrm{d}x_2 
+  \intertext{由此可得}
+  \left<x_1x_2\right>=\beta_{12}^{\prime -1}
+  \intertext{同理}
+  \left<X_1X_2\right>=\beta_{12}'
+  \intertext{为了讨论方便省去右上角的$\prime$号,则由行列式的代数余子式可以构成矩阵的逆,对于二阶矩阵可得其逆为}
+  \beta_{12}^{-1}=\frac{\beta_{12}}{\beta_{12}^2-\beta_{11}\beta_{22}}
+\end{gather}
+上式表明了,如果$\beta_{12}^{-1}=0$,则$\beta_{12}=0$,也就是说如果$\left<x_1x_2\right>=0$,则$\left<X_1X_2\right>=0$.即\CJKunderwave{如果某热力学量统计独立,则和该物理量对应的共轭量也统计独立.}

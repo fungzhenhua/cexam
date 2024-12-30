@@ -1,0 +1,34 @@
+\chapter {选择题选项排版测试（答案）}
+
+\begin {answerstd}
+
+1.{\heiti 答案}
+BC
+\RandRefabcd {1432}
+
+ee.{\heiti 解析}
+答案是\refc {}未知，\refd {}是老师。 
+
+2.{\heiti 答案}
+BD
+\RandRefabcd {1324}
+
+ee.{\heiti 解析}
+答案是\refc {}未知，\refd {}是老师。 
+
+3.{\heiti 答案}
+AD
+\RandRefabcd {2341}
+
+ee.{\heiti 解析}
+答案是\refc {}未知，\refd {}是老师。 
+
+\end {answerstd}
+
+\begin {answerstd}
+
+ee.{\heiti 解析}
+所以第 \refitem [2] 小问的解析为 
+
+\end {answerstd}
+

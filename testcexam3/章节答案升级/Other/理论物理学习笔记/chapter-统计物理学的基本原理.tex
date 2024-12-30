@@ -1,0 +1,288 @@
+\chapter{统计物理学的基本原理}
+\section{统计分布}
+\subsection{平均值的表示}
+用字母加上横线$\overline{f}$或尖括号$<f>$表示平均值,其中第二种方法对于表达书写繁冗表达式的平均值是极为方便的.这是和量子力学相一致的,最初我学习量子力学参加北京大学的理论物理考试时,都不能正确的识别这些符号,所以记录一下.
+\subsection{统计平衡}
+统计平衡也称为\CJKunderwave{热力学平衡}或\CJKunderwave{热平衡}状态.闭合宏观系统在其所处的状态下,其\CJKunderwave{任何子系统的宏观物理量}都充分精确地等于相应量的平均值的状态.
+\subsection{弛豫时间}
+一个离开平衡状态的系统过度到平衡状态所需要的时间称为\CJKunderwave{弛豫时间}.这里是描述此系统的所有物理量都达到稳定,所以弛豫时间应该就是所有物理量不再发生变化时的最长时间.平时所说``足够长''的时间实质就是比弛豫时间长得多的时间间隔.
+\subsection{动理学}
+与过渡到平衡状态有关的过程理论.
+\section{统计独立}
+\subsection{准闭合}
+子系统与周围部分发生相互作用的主要是那些在子系统表面附近的粒子.这些粒子的数目与子系统中粒子的总数之比随着子系统尺度的增加而迅速下降,因而当子系统足够大时,它与周围部分相互作用的能量比子系统的内能要小的多.因此可以说子系统是{\color{red}准闭合}的.
+\subsection{统计独立性}
+一个子系统所处的状态绝不影响其它子系统处于不同状态的概率.其统计分布函数满足
+\begin{equation}
+  \rho_{12}=\rho_1\rho_2
+\end{equation}
+如果二个物理量是统计独立的,则
+\begin{equation}
+  \overline{f_1f_2}=\overline{f_1}\cdot\overline{f_2}
+\end{equation}
+\subsection{均方根涨落}
+\begin{gather}
+  <(\Delta f)^2>=<(f-\overline{f})^2>\notag\\
+  <(\Delta f)^2>=<f^2-2\overline{f}f+\overline{f}^2>\notag\\
+  <(\Delta f)^2>=<f^2>-2<\overline{f}f>+\overline{f}^2\notag\\
+  <(\Delta f)^2>=<f^2>-2\overline{f}^2+\overline{f}^2\notag\\
+  <(\Delta f)^2>=\overline{f^2}-(\overline{f})^2
+  \intertext{所以均方根涨落为}
+  \sqrt{<(\Delta f)^2>}=\sqrt{\overline{f^2}-(\overline{f})^2}
+\end{gather}
+\subsection{相对涨落}
+相对涨落的定义为
+\begin{gather}
+  \frac{\sqrt{<(\Delta f)^2>}}{\overline{f}}
+\end{gather}
+\subsection{相对涨落与粒子数的平方根成反比}
+\begin{gather}
+  \intertext{设$f$为\CJKunderwave{可加的物理量}高物体分成数目很大的N个大致相同的部分,则}
+  \overline{f}=\sum_{i=1}^N\overline{f}_i
+  \intertext{由于统计独立性可得}
+  <(\Delta f)^2>=<(\sum_{i=1}^N\Delta f_i)^2>=\sum_{i=1}^N<(\Delta f_i)^2>
+  \intertext{则有}
+  \frac{\sqrt{<(\Delta f)^2>}}{\overline{f}}\propto \frac{\sqrt{N}}{N}=\frac{1}{\sqrt{N}}
+\end{gather}
+\section{刘维定理}
+一个闭合的系统设它的自由度为2s,使用分析力学来描述的时候符合Lagrange方程或Hamilton方程,所以在时刻t只要指明它的s个坐标和s个动量,则表明了一个状态.设$t_1$,$t_2$,$t_3$,$\cdots$ 的时刻的代表点用$A_1$,$A_2$,$A_3$,$\cdots$来表示,则经过足够长的时间后,由于系统的闭合性,则代表点总数是一定的.所以在$dpdq$的范围内,的代表点可以视为稳定的``气体'',因此符合连续性方程
+
+\begin{gather}
+  \frac{\partial\rho}{\partial t}+\frac{\partial \rho \dot{q}}{\partial q}+\frac{\partial \rho \dot{p}}{\partial p}=0
+  \intertext{上式用微分原则展开则}
+  \frac{\partial\rho}{\partial t}+\frac{\partial \rho }{\partial q}\dot{q}+\frac{\partial \rho }{\partial p}\dot{p}+
+  \rho\left\{\frac{\partial \dot{q}}{\partial q}+\frac{\partial \dot{p}}{\partial p}\right\}=0
+  \intertext{上式即}
+  \frac{d\rho}{dt}+
+  \rho\left\{\frac{\partial \dot{q}}{\partial q}+\frac{\partial \dot{p}}{\partial p}\right\}=0
+  \intertext{根据Hamilton方程,得}
+  \dot{p}=-\frac{\partial H}{\partial q} \qquad \dot{q}=\frac{\partial H}{\partial p}
+  \intertext{所以有}
+  \frac{d\rho}{dt}=0
+\end{gather}
+
+\section{能量的作用}
+
+如果在一个相当长的时间段内观察一个严格闭合的系统,它是稳定的,所以总的代表点数不会发生变化,在初值给定后,从单纯的力学角度考虑,相轨道一定是闭合的,系统具备一定的周期性,这个周期可以视为系统的弛豫时间.如果系统的相轨道不是闭合的,则系统的总代表点数必然是无限多个,这是不实际的.刘维定理所回答的是代表点密度是不随时间变化的常数,但是它不能回答的是对于不同的初始值,这个$\rho$值是否是相同的,这就需要从统计的角度考虑,由于不能说明哪一个初始值更具有特殊性,所以平均看来不同初始值的点这个$\rho$值应当是相同的.
+\begin{gather}
+  \intertext{考虑两个闭合系统构成的一个大系统,这个大系统也处于平衡状态,则有} 
+  \rho=\rho_1\rho_2
+  \intertext{取对数则}
+  \ln\rho=\ln\rho_1+\ln\rho_2
+  \intertext{上式表明,$\ln\rho$是一个可加性的积分常数.所以在相对于质心静止的坐标系中,这个值仅仅依赖于能量,即}
+  \ln\rho=\alpha+\beta E
+  \intertext{式中$\alpha$是一个可加性的量,依赖于归一化.由于能量$E$也是一个可加性的量,所以处于平衡状态的系统它们的$\beta$值是相同的.}\notag
+\end{gather}
+
+在朗道的书\footnote{《朗道理论物理教程 卷5 统计物理学1》第10页}中写到:上面的讨论可以使我们直接构造出一个适于描述系统统计性质的简单的分布函数.我们现在既然知道不可相加的运动积分的值不会对系统的统计性质发生影响,那么任何函数$\rho$只要它依赖于系统的可加性运动积分的值,并且满足刘维尔定理,就可以用来描述闭合系统的统计性质.最简单的这种函数就这样一个函数:{\color{red}在相空间中,对于所有的相应于系统的能量、动量和角动量取给定常数$E_0$,$P_0$,$M_0$的点，$\rho=\mbox{常数}$(不依赖于非可加性运动积分的值),对于所有其它的的点,$\rho=0$}.显然,这样规定的分布函数在任何情况下沿着系统的相轨道都保持常数,即满足刘维尔定理.
+
+上述红字部分,是朗道所做的规定,但是理由没有做详细的讨论,这实际是汪志诚《热力学与统计物理学》中所述的，基于统计的考虑：等概率原理.这也可以做如下考虑:两个存在相互作用的系统构成一个大的系统,则每一个部分以及整个大的闭合系统处于平衡状态,则系综的分布函数仍然具备乘积的形式,即$\rho=\rho_1\rho_2$.但是两个小部分是存在相互作用的,它们不是严格的闭合系统,但是可以认为相互作用足够小,而认为它们是准闭合的系统.则基于能量在相互作用非常微弱的情况下,可以认为满足可加性的,则分布函数就可以认为是满足可加性的.这个考虑是可靠的,因为一个宏观无穷小,微观无穷大的系统,相互作用的能量是远小于子系统的总能量的.
+
+\subsection{微正则分布}
+
+在相空间中,凡是$E$,$P$,$M$这些量中有一个不等于它们的给定值$E_0$,$P_0$,$M_0$的那些点,$\rho$为零点.函数$\rho$对于包含上述流形相点全部或部分在内的相体积求积分是有限的.则
+
+\begin{gather}
+  \rho= cost \cdot \delta(E-E_0)\delta(P-P_0)\delta(M-M_0)
+  \label{eq:weizhengze}
+\end{gather}
+
+式\eqref{eq:weizhengze}称为\CJKunderwave{微正则分布}.特殊一个情况:设想把系统包藏在一个刚体的``匣子''中,并且所有的坐标系相对于``匣子''是静止的.则运动积分只剩下能量,则微正则分布变成更加简单的形式,仅依赖于能量
+
+\begin{gather}
+  \rho= cost \cdot \delta(E-E_0)
+  \label{eq:weizhengze1}
+\end{gather}
+
+由力学运动积分及可加性物理量可得$\rho$和能量的函数关系为
+
+\begin{gather}
+  \ln\rho_n=\alpha_n+\beta E_n(p,q)
+\end{gather}
+
+\section{统计矩阵}
+\subsection{量子力学中的密度矩阵}
+\begin{gather}
+  \intertext{设所研究的系统不是完全闭合的,所以它不具备自己的波函数.只能用系统的波函数计算平均值.则}
+  \overline{f}=\int \Psi^*(x,q) \hat{f}\Psi(x,q)dqdx
+  \intertext{令上式$\Psi^*$中的$x$替换为$x'$,然后$\hat{f}$就可以移到最前面,而后再对$q$积分便得到密度矩阵}
+  \overline{f}=\int \hat{f} \int\Psi^*(x',q)\Psi(x,q)dqdx
+  \intertext{令$\omega(x',x)=\int\Psi^*(x',q)\Psi(x,q)dq$,称为密度矩阵,则}
+  \overline{f}=\int \hat{f}\rho(x',x)|_{x'=x}dx
+  \label{eq:midu0}
+\intertext{上式的意思是,先令$\hat{f}$作用到$\rho(x',x)$上,再令$x'=x$然后再对$x$积分,便得到$f$的平均值.令$\Psi$使用子系统的某一物理量的本征函数$\psi_n$展开,则}
+\rho(x',x)=\sum_{n,m}\int C_m^*(q)C_n(q)dq\psi_m^*(x')\psi_n(x)
+\intertext{令$\omega_{nm}=\int C_m^*(q)C_n(q)dq$,称为密度矩阵,则}
+\rho(x',x)=\sum_{n,m}\omega_{nm}\psi_m^*(x')\psi_n(x)
+\intertext{将上式代入\eqref{eq:midu0}得}
+\overline{f}=\sum_{n,m} \omega_{nm}\int \psi_m^*(x)\hat{f}\psi_n(x)dx
+\intertext{以矩阵元$f_{mn}=\int \psi_m^*(x)\hat{f}\psi_n(x)dx$代入上式,则}
+\overline{f}=\sum_{n,m} \omega_{nm}f_{mn}
+\intertext{以算符$\hat{\rho}$表示密度矩阵算符,则}
+\overline{f}=\sum_{n}(\hat{\omega}\hat{f})_{nn} 
+\intertext{上式也可以使用矩阵的迹表示为}
+\overline{f}=tr(\omega f)
+\end{gather}
+\subsection{统计物理学中的密度矩阵}
+
+\begin{gather}
+  \intertext{仍然考虑一个由子系统和外界构成的闭合系统.则将波函数按子系统的某物理量的本征态展开.则}
+  \Psi=\sum_n c_n \psi_n(q)
+  \intertext{所以量子力学纯态中,坐标概率分布由波函数的模方来确定,即}
+  |\Psi|^2=\sum_{n,m}C^*_n C_m \psi_n^* \psi_m
+  \intertext{由于当子系统处于某一个能量状态时，介质的状态可能有多个，也就是上式中的系数对子系统在不同时刻是不同的，考虑一个较长的时间，系统经历了足够多的状态，则按系综求平均，则}
+  |\Psi|^2=\sum_{n,m}\omega_{m,n} \psi_n^* \psi_m
+  \intertext{对于某一物理量，可以求它的平均值}
+  \overline{f}=\int \hat{f}|\Psi|^2 dx=\sum_{n,m}\omega_{m,n}f_{n,m} 
+  \intertext{引入密度矩阵算符$\hat{\omega}$,根据矩阵的乘积运算，则}
+  \overline{f}=\sum_n (\hat{\omega}\hat{f})_{n,n}
+  \intertext{上式又可以写成矩阵的迹}
+  \overline{f}=tr(\hat{\omega}\hat{f})
+\end{gather}
+
+在写这一部分时，出现了一点情况\footnote{在使用\LaTeX{}编译pdf文件时，出现了字体报错，这迫使我暂时离开去研究一下字体的问题。在ctex宏包手册中得到答案，安装字体后得到解决。同时处理这一部分，导致我解决了向pdf文件中加入目录outline的问题，那就是pdftk工具，同时加入中文目录可以使用\LaTeX{}编写章节，生成Pdf文件，再用pdftk提取目录，再导入到目标文件即可。}，经过几天的研究，马上回到热统的学习过程中，记录自己的学习感想。
+
+\subsection{概率密度和能量的关系}
+
+%经典统计中,由于在相格内的状态不是一个,所以可以推断概率密度具备$\delta$函数的形式.但是量子系统,能量是分立的,不会出现类似的情况,但是子系统一般不是孤立的,也就是子系统的能量是有一定宽度的,所以需要引入能量满足此宽度$\Delta E$时的状态数,此状态数是能量波函数的个数,并不是具体到的一个简并态.则系统处于一个能量量子态的概率也就可以理解为概率密度.也就是
+
+\begin{gather}
+  \intertext{在量子力学中描述一个量子体系,如果在$q$表象中,则其值为$q$时的概率为}
+  d\omega_q =\Psi^2 dq
+\intertext{对于一个闭合的系统,则密度矩阵是对角的,但是对角元是所取表象中某一量子态出现的概率.此时能级是无限稠密的,由于系统与外界存在相互作用,所以它的能量是有一定宽度的,所以可以选择能量小于某个值 $E$ 的各个量子态作为一个表象,同时由于在统计中能量决定了各量子态的分布,所以用各个量子态作为表象也是相对"完备"的,于是 \CJKunderwave{在 \mbox{$E$}\mbox{$\sim$}\mbox{$E$}+\mbox{$\Delta E$} 中的任何一个量子态的概率为}}
+  d\omega =\Psi^2 d\Gamma
+\intertext{同时由于系统还要受能量的限制,所以自由度会减少,则几率密度必然呈显 $\delta$ 函数的性质,则 \CJKunderwave{在 \mbox{$E$}\mbox{$\sim$}\mbox{$E$}+\mbox{$\Delta E$} 中的任何一个量子态的概率}形式上可以取为}
+  d\omega=\mbox{常数}\cdot \delta(E-E_n)d\Gamma
+  \intertext{如果系统的各个部分构成的小子系统处于准闭合状态,则上式的量子数又可以表达为 $d\Gamma=\prod_\alpha d\Gamma_\alpha$ ,但是各个子系统的能量和必须满足位于$E\sim E+\Delta E$ 中}
+  d\omega=\mbox{常数}\cdot \delta(E-E_n)\prod_\alpha d\Gamma_\alpha
+\end{gather}
+
+
+\section{熵}
+
+\subsection{熵的定义}
+
+系统在$E\sim E+\Delta E$内的微观状态数,记为$\Delta\Gamma$,则熵的定义为
+
+\begin{equation}
+  S=\ln \Delta\Gamma
+  \label{eq:shang}
+\end{equation}
+
+需要注意的是,在此处的定义和经典Boltamann关系$S=k\ln\Omega$不同,原因在于单位的选择上,它是温度所取单位为$erg$时的表达式,特点是简洁,后面的推证会给出说明.在朗道的书中直接结出这个定义,我认为从很大程度上给出了解决问题的核心,是一个相当好的设置.
+
+在经典统计中,没有量子态的概念,但是可以引入Plank常数来处理.根据量子力学测不准原理,能够同时指明坐标和动量的限度就是一个Plank常数,所以对应经典统计熵的定义就是
+
+\begin{equation}
+  S=\ln\frac{\Delta p\Delta q}{(2\pi\hbar)^s} 
+  \label{eq:shang1}
+\end{equation}
+
+\subsection{熵和分布函数的关系}
+\begin{gather}
+  \intertext{对分布函数关于全部状态求积分,则总概率一定为1,则}
+  \int \omega(E)d\Gamma=1
+  \intertext{考虑到分布函数和能量的关系,它具备$\delta$函数的性质,则记分布函数最大时,能量$\overline{E}$,则上式可以写为}
+  \omega(\overline{E})\Delta \Gamma=1
+  \intertext{对上式取对数得}
+  \ln\Delta\Gamma=-\ln\omega(\overline{E})
+  \intertext{于是得熵和分布函数关系为}
+  S=-\ln\omega(\overline{E})
+\end{gather}
+
+
+\subsection{熵的可加性}
+\begin{gather}
+  \intertext{当两个系统构成一个大的系统时,在各自准闭合的情况下,微观状态数关系为}
+  \rho=\rho_1\rho_2
+  \intertext{取对数再取负号,则}
+  -\ln\rho=-\ln\rho_1-\ln\rho_2
+  \intertext{即按熵和分布函数关系得}
+  S=S_1+S_2
+\end{gather}
+
+\section{关于经典统计和量子统计的思考}
+
+\subsection{经典统计}
+
+1.确定统计分布函数的存在.对于一个系统,观察足够长的时间$T$,则在$\Delta t$这一小段时间内处于相格$\Delta p\Delta q$内,则比值$\omega$接近一个常数,即
+\begin{equation}
+  \omega=\lim_{T\to\infty} \frac{\Delta t}{T}
+\end{equation}
+
+显然这可以看成是系统处于相格$dpdq$内的概率.在李政道所著《统计力学（讲义）》中按照系综理论也给出了说明\footnote{李政道讲义 统计力学/李政道编著.---上海:上海科学技术出版社,2006.11第7页.}：所设想系综的总数为$M$ , 所有系综的总能量为$E$ ,当所取系综增加时，总能量也增加，但是比值$\frac{E}{M}$越来越趋于一个稳定值，这就是系统的能量,这也说明了当系综取的足够多时,系统会有一个确定的分布,这也说明了统计分布函数的存在.
+
+2.系统处于相空间内的概率.
+
+\begin{equation}
+  d\omega=\rho dpdq
+\end{equation}
+
+3.考虑一们准闭合的系统,在足够长的一段时间内,沿某一相轨道运动其符合经典运动规律.在$\Delta t$内,$t_i$时刻系统的代表点为$A_i$,则在经典意义上,这样的态可以有无限多个.但是由于肯定了分布函数的存在,所以可以设想有和这些态同等数目的相同的系统,则每一时刻这些系统必处于其中的一个态中,由于随时间系统会演化,则相当于同一时刻这些不同的代表点相互转化,但是一定在所设想的所有态中.这些态,可以表达为坐标和动量的函数.所以分布函数的存在说明,$\Delta p\Delta q$内的代表点总数是不随时间变化的.这个考虑可以将这些代表点视为一些稳定存在的气体,但是还不能肯定的是一个足够小的区间内代表点的变化情况,也就是代表点密度问题没有得到解答.由于总数一定,所以代表点的变化一定符合连续性方程,再结合Hamilton方程就可以得到刘维定理,这定理肯定了代表点密度不随时间变化.
+
+4.按朗道的说法,只要观察时间足够短,则系统就可以看成准闭合的系统,则符合经典运动规律.则分布函数不会发生变化,但是若在所观察的时间内,恰好系统受到了一个微小的干扰,系统由一个经典轨道恰好跳到另一个轨道上,这时代表点密度是否会发生变化呢?这就需统计的考虑,不应当认为哪一个轨道是特殊的,所以就能肯定这两个代表点密度也是相同的.所以就肯定了,准闭合的系统其受到外界稍微干扰后仍然满足等概率原理.
+
+5.系统处于能量$E\sim E+\Delta E$的分布函数应当也满足$\delta$函数的形式,因为不处于相格内的状态出现的概率为零,但是按等概率原理,处于这个相格内的分布函数可以视为常数\footnote{按朗道的说法,只要是满足刘维定理的函数原则上都可以选为分布函数,只不过常数是一个最简单的情况.},同时系统的动量和坐标所构成的是$2s$维相空间,但是除此之外还要受到能量的限制,所以实际的自由度应该小于$2s$,因此在微正则分布中分布函数只有满足$\delta$函数的形式才能保证总概率不为零.即
+
+\begin{equation}
+  \rho =const \cdot \delta(E-E_0)
+\end{equation}
+
+\subsection{量子统计}
+
+在量子统计中,一个子系统的状态要按密度矩阵来描述.由于所考虑的宏观物理量是稳定的,所以它们应当与Hamilton量对易,这就表明,这些物理量和能量表象具备相同的本征态.,所以其平均值可以记为
+
+\begin{equation}
+  \overline{f}=\sum_n \omega_nf_{nn}
+\end{equation}
+
+同时分布函数也是稳定的,则它也与Hamilton量对易,则表明矩阵$\omega$也是对角的.则$\omega_n$由上式可得就表示能量本征态$\psi_n$出现的概率.这构成了量子统计的基础.
+
+对于量子系统,由于它不像经典的连续谱一样,所以谈不上系统处于相格内的状态数这一概念,但是对比经典统计,我们可以说这个分布函数就是一个状态上的概率,所以它也具备$\delta$函数的性质,但是处于能量$E\sim E+\Delta E$的能量状态,按统计的考虑,说不上哪一个 是特殊的,所以也等概率原理这些状态出现的概率是相同的,系统处于这个能量范围的概率为$d\omega$,则系统处于一个能量状态上的概率为
+
+\begin{equation}
+  \frac{d\omega}{d\Gamma}=const\cdot \delta (E-E_n)
+\end{equation}
+
+\section{熵的统计表达式}
+
+\begin{gather}
+  \intertext{基于准闭合系统能量可加性得到了分布函数和能量的关系}
+  \ln\omega(E)=\alpha+\beta E
+  \intertext{同时对上式求平均,则}
+  <\ln\omega(E)>=\alpha+\beta\overline{E}
+  \intertext{同时,基于函数关系也有}
+  \ln\omega(\overline{E})=\alpha+\beta \overline{E}
+  \intertext{对比可知}
+  <\ln\omega(E)>=\ln\omega(\overline{E})
+  \intertext{考虑到熵和分布函数的关系,则}
+  S=-<\ln\omega(E)>
+  \intertext{上式也可以写为}
+  S=-\sum_n(\omega\ln\omega)_{n,n}
+  \intertext{用矩阵的迹表达为}
+  S=-tr(\omega\ln\omega)
+\end{gather}
+\section{量子力学基本原理}
+
+\begin{gather}
+\intertext{一个系统,如果我们可以在多次测量中确定某一个物理量$f$,用n表示它的量子数,则对于\CJKunderwave{不同的该物理量的值},用不同的态函数$\psi_n$来表示.则波函数满足线性叠加原理,则}
+\Psi=\sum_n C_n\psi_n
+\label{eq:biaoxiang0}
+\intertext{其中$C_n^2$是测得该物理量的值的概率.但是此时能获得的信息就是$f$,如果又发现在$f$所区分的这些态下,物理量$p$还有不同的值,则可以说$f$相对于$p$而言是简并的.从数学上不难理解,$f$的态,可以用$p$的不同本征态$\varphi_m$来表示,即}
+\psi_n=\sum_m a_m\varphi_m
+\label{eq:biaoxiang1}
+\intertext{将式\eqref{eq:biaoxiang1}代入式\eqref{eq:biaoxiang0}则得到体系的态函数的更加详细的表达式}
+\Psi=\sum_n \sum_m C_na_m\varphi_m
+\intertext{以$\omega_{mn}=C_na_m$和$\phi_{mn}=\varphi_m$作符号上的替换,则}
+\Psi=\sum_{mn}\omega_{mn}\phi_{mn}
+\intertext{按统计诠释,则$\omega_{mn}^2$表示体系处于态$\Psi$的描述时,同时测得物理量$f$和$p$的值分别为$f_n$和$p_m$时的概率.如果再发现一个物理量在$f$和$p$同时具备一定值时,它也具备定值,则我们说使用物理量$f$和$p$来描述系统是不完备的,所以当再追加一个物理量$q$后再也找不到这种同时可以测定的物理量后,人们说使用物理$f$,$p$,$q$来描述系统是完备的.如果将量子力学用于描述一个系统,则在空间中描述要解Schr\"odinger方程,所以会出现三个量子数:主量子数n,角量子数l,角动量在z轴的分量$l_z$,所以描述一个三维空间的物体系统,在经典力学下需要三个坐标,如果描述一个量子系统,则需要三个对易的物理量才能描述系统,物理量的数目应当与空间的维度相一致.但是在这里需要注意,采用这个描述是在认为质心不变的情况下描述的.如果在质心以外的参考点来描述系统需要指明质心的位置,也就是需要三个坐标,同时还要指明系统相对于质心的运动这就需要追加它相对于质心的角量子数及其相对于过质心的轴的方向上角量子数的投影,这正是自旋的来源.对于基本粒子,由于其内部结构无法继续深入研究探明,所以只能精确到这种程序.如果能够确认电子等基本粒子还有内部结构,则还需要追加自由度.下面用Dirac符号来表达自旋的影响但是在这里需要注意,采用这个描述是在认为质心不变的情况下描述的.如果在质心以外的参考点来描述系统需要指明质心的位置,也就是需要三个坐标,同时还要指明系统相对于质心的运动这就需要追加它相对于质心的角量子数及其相对于过质心的轴的方向上角量子数的投影,这正是自旋的来源.对于基本粒子,由于其内部结构无法继续深入研究探明,所以只能精确到这种程序.如果能够确认电子等基本粒子还有内部结构,则还需要追加自由度.下面用Dirac符号来表达自旋的影响.原本系统处于某一个态$\Psi$,则}
+|\Psi>=\sum_{nlm}|nlm><nlm|\Psi>
+\label{eq:biaoxiang2}
+\intertext{而电子的自旋为$\hbar$,其在$z$轴方向上的投影只能是$\pm\frac{1}{2}$,所以相当于在上术波函数中每一个波函数还可以按自旋量子数展开,则}
+|\Psi>=\sum_{nlm}|\frac{1}{2}><\frac{1}{2}|nlm><nlm|\Psi>+\sum_{nlm}|-\frac{1}{2}><-\frac{1}{2}|nlm><nlm|\Psi>\\
+|\Psi>=|\frac{1}{2}><\frac{1}{2}|\Psi>+|-\frac{1}{2}><-\frac{1}{2}|\Psi>
+\intertext{同时如由于电子的自旋数为$\hbar$这是确定的,所以在波函数中不需再单独说明,而只指明它的$z$分量就可以了,则}
+|\Psi>=\sum_{nlm}|nlm\frac{1}{2}><nlm\frac{1}{2}|\Psi>
++\sum_{nlm}|nlm-\frac{1}{2}><nlm-\frac{1}{2}|\Psi>
+\end{gather}
+

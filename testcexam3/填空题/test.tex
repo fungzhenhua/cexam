@@ -1,0 +1,38 @@
+\documentclass[a4paper,fontset = windowsnew]{ctexbook}
+\usepackage{xifthen}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{tikz}
+%\usepackage{amsmath}
+\usepackage[user=student]{cexam}
+
+\begin{document}
+\chapter{基本排版程序}
+
+\begin{blanks}
+1.这是计算题的题干
+这是计算题的题干这是计算题的题干
+\begin{equation}
+  E=MC^2
+\end{equation}
+这是计算题的题干这是计算题的题干
+%<:
+%\begin{tikzpicture}
+%  \draw (0,0) rectangle (3,3);
+%\end{tikzpicture}
+%:>
+这\blank{答案1}是计算题的题干\blank{答案2}这是计算题的题\blank{feng}干
+这是计算题的题干这是计算题的题干
+\par
+
+a. *
+
+2.这是第二道填空题\blank{thinkpad}是\blank{lenovo}编写的第一支程序。
+
+a.*
+
+\end{blanks}
+
+\makeanswer
+
+\end{document}

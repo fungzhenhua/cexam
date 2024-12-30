@@ -1,0 +1,46 @@
+\documentclass[a4paper,fontset = windows]{ctexbook}
+\usepackage{xifthen}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{cexam}
+
+\begin{document}
+\chapter{选择题选项排版测试}
+这是选择题的选项排版测试
+\ExplSyntaxOn
+\tl_new:N\cho_opta_tl
+\tl_new:N\cho_optb_tl
+\tl_new:N\cho_optc_tl
+\tl_new:N\cho_optd_tl
+\bool_new:N \cho_optstar_bool
+\NewDocumentCommand {\option} { s o m}
+{
+   \str_case:nnTF {#2}
+   {
+      {A}{\tl_set:Nn \cho_opta_tl{#3}\tl_clear:N\cexam_blank_tl}
+      {B}{\tl_set:Nn \cho_optb_tl{#3}}
+      {C}{\tl_set:Nn \cho_optc_tl{#3}}
+      {D}{\tl_set:Nn \cho_optd_tl{#3}}
+   }
+   {
+      \IfBooleanTF{#1}
+      {\tl_put_right:No \cexam_choice_tl{#2}\bool_set_true:N\cho_optstar_bool}
+      {\tl_set:No \cexam_choice_tl{\c_empty_tl}}
+   }
+   {
+      \tl_clear:N \cho_opta_tl
+      \tl_clear:N \cho_optb_tl
+      \tl_clear:N \cho_optc_tl
+      \tl_clear:N \cho_optd_tl
+   }
+}
+\option[A]{Feng选项A}
+
+\cho_opta_tl
+
+\ExplSyntaxOff
+
+
+
+\end{document}

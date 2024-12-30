@@ -1,0 +1,123 @@
+\documentclass[a4paper,fontset = windowsnew]{ctexbook}
+\usepackage{xifthen}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{cexam}
+
+\begin{document}
+\chapter{行数统计程序}
+
+\parindent=0pt
+
+
+行数统计程序的latex3改写
+
+\ExplSyntaxOn
+
+      \cexam_type_ii:nnnnnnnnn 
+      {r}
+      {
+	\begin{tikzpicture}
+	  \draw (0,0) rectangle (3,4.7);
+	\end{tikzpicture}
+      }
+%      {10pt}{0pt}{0pt}{0pt}{20pt}{0pt}    
+      {0pt}{5pt}{0pt}{0pt}{20pt}{0pt}    
+    {
+	这是第三版的图文试题排版测试
+	这是第三版的图文试
+	\begin{equation}
+	  e=mc^2
+	\end{equation}
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	\begin{equation}
+	  e=mc^2
+	\end{equation}
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	\begin{equation}
+	  e=mc^2
+	\end{equation}
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	\begin{equation}
+	  e=mc^2
+	\end{equation}
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+      }
+      \newline
+      这是附加的选项部分.
+      这是附加的选项部分.
+      这是附加的选项部分.
+      这是附加的选项部分.
+      这是附加的选项部分.
+
+    \newpage
+    本页是第二种排版方式测试. 
+
+    \par
+
+    \cexam_type_i:nnnnnnn 
+    {l}
+      {
+	\begin{tikzpicture}
+	  \draw (0,0) rectangle (3,3);
+	\end{tikzpicture}
+      }
+      {10pt}{0pt}{0pt}{0pt}
+      {
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	\begin{equation}
+	  e=mc^2
+	\end{equation}
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	\begin{equation}
+	  e=mc^2
+	\end{equation}
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	\begin{equation}
+	  e=mc^2
+	\end{equation}
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版
+	这是第三版的图文试题排版测试
+      }
+      \newline
+      这是附加的选项
+      这是附加的选项
+      这是附加的选项
+      这是附加的选项
+      这是附加的选项
+      这是附加的选项
+      这是附加的选项
+
+
+    \end{document}

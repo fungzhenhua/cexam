@@ -1,0 +1,16 @@
+\documentclass[a4paper, fontset=windows]{ctexbook}
+
+\begin{document}
+\ExplSyntaxOn
+\box_new:N \my_box
+\box_set_ht:Nn \my_box{0pt}
+\hbox_set:Nn \my_box {中文盒子}
+
+\box_use:N\my_box{}
+\box_use:N\my_box{}
+\box_use:N\my_box{}
+这是中文测试
+
+
+\ExplSyntaxOff
+\end{document}

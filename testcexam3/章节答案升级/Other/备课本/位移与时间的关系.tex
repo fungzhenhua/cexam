@@ -1,0 +1,160 @@
+\section{匀速直线运动位移与时间的关系}
+
+为了导出匀变速直线运动位移与时间的关系先来推导一下最简单的匀速直线运动的位移与时间的关系.所谓匀速直线运动,指速度保持不变的运动,即:速度大小和方向都不发生变化.
+
+记$t=0$时的位移为零,t时刻的位移为$x$,代入速度的定义式\eqref{eq:velocity}式:
+
+\begin{equation*}
+v=\cfrac{x-0}{t-0}
+\end{equation*}
+
+将上式左右同时乘以时间$t$,然后再移项得:
+
+\begin{equation}
+  x=vt
+  \label{eq:uniform displacement}
+\end{equation}
+
+匀速直线运动的$v-t$图象为:
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \draw [->] (0,0) -- (3,0) node [anchor= north]{t};
+    \draw [->] (0,0) -- (0,2) node [anchor= west]{v};
+    \draw (0,1)--(3,1);
+    \draw [pattern=north west lines](0,0) rectangle (2,1);
+    \draw(0,1) node [anchor=east]{v};
+    \draw(2,0) node [anchor=north]{t};
+    \draw(0,0) node [anchor=north east]{0};
+  \end{tikzpicture}
+  \caption{匀速直线运动$v-t$关系}
+  \label{fig:uniform x-t}
+\end{figure}
+
+在上图中,显然阴影的面积为$vt$,对比匀速直线运动的位移公式,这个面积正好等于位移.这个结论拓展到匀变速直线运动中也是成立的.
+
+\section{匀变速直线运动位移与时间的关系}
+
+\subsection{基本关系推导}
+
+匀变速直线运动速度是变化的,我们可以利用微元法来求出它的位移.所谓微元法就是按时间分成若干个部分,在每一小段时间内速度变化不大,可以近似认为这一小段内质点做匀速直线运动,然后求出这一小段位移来,同理可以求出每一小段的位移,再将每一小段位移加起来就等于匀变速直线运动的位移了.
+
+如图\ref{fig:weiyuan} 画出匀变速直线运动的速度--时间图象
+\begin{figure}[H]
+  \centering
+\begin{tikzpicture}
+  \draw [->] (1,0)--(5,0) node [anchor=north]{t};
+  \draw [->] (1,0) -- (1,2.5) node [anchor= west]{$v$};
+  \draw(1,0) node [anchor=north east]{0};
+  \draw (1,0.5)--(4.4,2.2) node [anchor=south]{$v=v_0+at$};
+  \draw (1,0)--(1,0.5);
+  \draw (2,0)--(2,1);
+  \draw (3,0)--(3,1.5);
+  \draw (4,0)--(4,2);
+  \draw [pattern=north west lines](1,0) rectangle (2,0.5);
+  \draw [pattern=north west lines](2,0) rectangle (3,1);
+  \draw [pattern=north west lines](3,0) rectangle (4,1.5);
+  \draw (3,-0.5) node [anchor=north] {图:甲};
+\end{tikzpicture}
+\begin{tikzpicture}
+  \draw [->] (1,0)--(5,0) node [anchor=north]{t};
+  \draw [->] (1,0) -- (1,2.5) node [anchor= west]{$v$};
+  \draw(1,0) node [anchor=north east]{0};
+  \draw (1,0.5)--(4.4,2.2) node [anchor=south]{$v=v_0+at$};
+  \draw (1,0)--(1,0.5);
+  \draw (1.5,0)--(1.5,0.75);
+  \draw (2,0)--(2,1);
+  \draw (2.5,0)--(2.5,1.25);
+  \draw (3,0)--(3,1.5);
+  \draw (3.5,0)--(3.5,1.75);
+  \draw (4,0)--(4,2);
+  \draw [pattern=north west lines](1,0) rectangle (1.5,0.5);
+  \draw [pattern=north west lines](1.5,0) rectangle (2,0.75);
+  \draw [pattern=north west lines](2,0) rectangle (2.5,1);
+  \draw [pattern=north west lines](2.5,0) rectangle (3,1.25);
+  \draw [pattern=north west lines](3,0) rectangle (3.5,1.5);
+  \draw [pattern=north west lines](3.5,0) rectangle (4,1.75);
+  \draw (3,-0.5) node [anchor=north] {图:乙};
+\end{tikzpicture}
+  \caption{微元法求位移}
+  \label{fig:weiyuan}
+\end{figure}
+
+图甲等分时间的间隔较大,图乙等分间隔是甲的一半.无论是甲还是乙,均可以用阴影的小矩形的面积表示一小段时间内的位移,然后加起来就得到近似的匀变速直线运动的位移.但是甲的间隔较乙为大,所以甲不如乙精确,如果对乙再细分下去会得到更加精确的近似位移.可以预见当无限分割时间时,将会得到严格的位移,阴影也就成为了一个梯形,如下
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+  \draw [->] (1,0)--(4.5,0) node [anchor=north]{t};
+  \draw [->] (1,0) -- (1,2.5) node [anchor= west]{$v$};
+  \draw(1,0) node [anchor=north east]{0};
+  \draw (1,0.5)--(4.4,2.2) node [anchor=south]{$v=v_0+at$};
+  \draw [pattern=north west lines](1,0)--(4,0)--(4,2)--(1,0.5);
+  \draw (4,0) node [anchor=north]{t};
+  \draw (1,2) node [anchor=east]{$v$};
+  \draw (1,0.5) node [anchor=east]{$v_0$};
+  \draw[dotted] (1,2)--(4,2); 
+  \end{tikzpicture}
+  \caption{匀变速直线运动$x-t$关系}
+  \label{fig:x-t}
+\end{figure}
+
+由梯形的面积计算公式易得,匀变速直线运动的位移公式为:
+\begin{equation}
+x=\cfrac{(v+v_0)t}{2}
+  \label{eq:displacement}
+\end{equation}
+
+上面这个公式是推导匀变速直线运动的基本关系,一定要记牢.上述公式含有 $t$ 时刻的速度 $v$ ,将 \eqref{eq:v-t} 式代入 \eqref{eq:displacement} 消去 $v$ 便得到:
+
+\begin{equation*}
+x=\cfrac{(v_0+at+v_0)t}{2}=v_0t+\cfrac{1}{2}at^2
+\end{equation*}
+
+即匀变速直线运动位移与时间的关系为:
+
+\begin{equation}
+x=v_0t+\cfrac{1}{2}at^2
+  \label{eq:x-t}
+\end{equation}
+
+\subsection{例题分析}
+\begin{calculate}
+  1.一物体做初速度为零的匀加速直线运动,加速度大小为$a=2m/s^2$,求:
+  [1] 第$5s$ 末物体的速度多大?
+  [2] 前$4s$ 的位移多大?
+  [3] 第 $4s$ 内的位移多大?
+
+  a.(1) $10m/s$ (2) $16m$ (3) $7m$
+
+  e.(1)第$5s$ 末物体的速度由 \eqref{eq:v-t} 式得
+  $$v_1=0+2\times 5m/s=10m/s$$
+  (2)前$4s$ 的位移由\eqref{eq:x-t} 式得
+  $$x_1=0+\cfrac{1}{2}\times 2\times 4^2m=16m$$
+  (3)物体第3秒末的速度由\eqref{eq:v-t}式得
+  $$v_2=v_0+at_2=6m/s$$
+  则第$4s$ 内的位移由\eqref{eq:x-t}式得
+  $$x_2=v_2t_3+\cfrac{1}{2}at_3^2=7m$$
+
+  2.一辆汽车正在平直的公路上以$72km/h$ 的速度行驶,司机看见红色信号灯便立即踩下制动器,此后,汽车开始做匀减速直线运动.设汽车减速过程的加速度大小为$5m/s$,求:
+  [1]开始制动后,前$2s$ 内汽车行驶的距离;
+  [2]开始制动后,前$5s$ 内汽车行驶的距离.
+
+  a.(1) $30m$ (2) $40m$
+
+  e.首先将速度的单位换算为国际单位,方法如下:
+  $$72km/h=\cfrac{72km}{1h}=\cfrac{72\times 10^3m}{3.6\times 10^3 s}=20m/s$$
+  由于汽车最后停下来,则刹车时间记为$t_s$,由\eqref{eq:v-t}式可得
+  $$t_s=\cfrac{v-v_0}{a}=\cfrac{0-20m/s}{-5m/s^2}=4s$$
+  (1)因为$t_1=2s <t_s$,所以汽车在$2s$ 内一直做匀减速直线运动,并没有停下来.由\eqref{eq:x-t}式得:
+  $$x_1=v_0t_1+\cfrac{1}{2}at_1^2=20\times2-\cfrac{1}{2}\times5\times2^2 m=30m$$
+  (2)因为$t_2=5s>t_s$,所以汽车在$t_s=4s$ 时已经停止运动,而$4s$ 到$5s$ 一直没有运动,所以位移就是前$4s$的位移.
+  \newline
+  法一:由\eqref{eq:x-t}式得:
+  $$x_2=v_0t_s+\cfrac{1}{2}at_s^2=20\times4-\cfrac{1}{2}\times5\times4^2m=40m$$
+  法二:由\eqref{eq:displacement}式得
+  $$x_2=\cfrac{(v_0+v)t_s}{2}=\cfrac{(20m/s+0)\times 4s}{2}=40m$$
+  注意:此题不止一种解法,这里只是演示\eqref{eq:x-t}式和\eqref{eq:displacement}式的使用方法,在刹车类问题中两个方法比较的话,\eqref{eq:displacement}式要比\eqref{eq:x-t}式计算简单,简单的原因是\eqref{eq:displacement}式不涉及平方运算.但是是后面还可以有多种解法,请同学们注意及时回顾.
+
+\end{calculate}

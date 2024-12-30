@@ -1,0 +1,1220 @@
+%%
+%% This is file `cexam.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% cexam.dtx  (with options: `package')
+%% 
+%%     Copyright (C) 2017--3000
+%% ------------------------------------------------------------------------------
+%%     cexam.dtx文件由冯振华创建,作者系平原县第一中学物理教师
+%% 
+%%     当前的维护者:冯振华
+%% 
+%%     邮件:fengzhenhua@sina.cn
+%% 
+%%     博客:fengzhenhua.blog.163.com
+%% 
+%% ------------------------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+\ProvidesPackage{cexam}[2018/03/31 v1.0 for china middle school exam]
+\RequirePackage{ctex}
+\RequirePackage{xifthen}
+\RequirePackage{calc}
+\RequirePackage{xcolor}
+\RequirePackage{graphicx}
+\RequirePackage{tikz}
+\RequirePackage{CJKulem}
+\RequirePackage{makerobust}
+\RequirePackage{amsmath}
+\RequirePackage{array}
+
+\newlength{\cex@mDivPH}
+\newlength{\cex@mDivPW}
+\newlength{\cex@mDivTW}
+\newlength{\cex@mDivTH}
+\newlength{\cex@mDivPM}
+\newlength{\cex@mDivPMM}
+
+\newlength{\cex@m@pic@dp}
+\newlength{\cex@mShIn}%
+\newlength{\cex@mShInS}%
+\newlength{\cex@mswapht}%
+\newlength{\cex@mlinewd}%
+\newlength{\cex@mShWd}%
+\newlength{\cex@mShWdS}%
+\newlength{\cex@mShWdSS}%
+\newlength{\cex@mPicWd}
+\newlength{\cex@mBh}
+\newlength{\cex@mOh}
+\newlength{\cex@mBOh}
+\newlength{\cex@mPh}
+\newlength{\cex@mPw}
+\newlength{\cex@mLmax}
+\newlength{\cex@mLmaxsub}
+\newlength{\sel@linewidth}
+\newlength{\bl@nkwd}%
+\AtBeginDocument{%
+  \setlength{\cex@mDivPM}{\baselineskip}%
+  \setlength{\cex@mDivPMM}{2\baselineskip}%
+}%
+\newcommand{\setcex@mNumber}{%
+  \stepcounter{cex@mNumber}%
+  \settowidth{\cex@mShIn}{\thecex@mNumber}%
+  \addtolength{\cex@mShIn}{.4\ccwd}%
+  \setlength{\cex@mShInS}{\cex@mShIn+1.2\ccwd}%
+  \setlength{\cex@mlinewd}{\linewidth-\cex@mShIn}%
+}%
+\newcommand{\resetcex@mNumber}{%
+  \setlength{\cex@mShIn}{\ccwd}%
+  \setlength{\cex@mShInS}{\cex@mShIn+\ccwd}%
+  \setlength{\cex@mlinewd}{\linewidth-\cex@mShIn}%
+}%
+\newcounter{cex@mNumber}[section]
+\newcounter{cex@mShNum}%
+\newcounter{cex@mShNT}%
+\newcounter{cex@mGenPN}
+\newcounter{c@lOptNum}[cex@mNumber]%
+\newcounter{cex@mExam}[section]%
+\newcounter{cex@mExamS}[section]%
+\newwrite\@ans%
+\def\BE@write #1\begin#2#3\end#4#5\END{%
+  \write\@ans{#1}%
+  \write\@ans{\protect\begin{#2}}%
+  \write\@ans{#3}%
+  \write\@ans{\protect\end{#4}}%
+  \write\@ans{#5}%
+}%
+\def\cex@mwrite#1\END{%
+  \ifthenelse{\isin{\begin}{#1}}{%
+    \BE@write\relax{}#1{}\relax\END%
+  }{%
+    \write\@ans{#1}%
+  }%
+}%
+\newbox\@pic%
+\newboolean{cex@mNoOptIndent}%
+\newboolean{student}%
+\newboolean{StudentAns}%
+\newboolean{cex@mtail}%
+\newboolean{cex@mMathOn}%
+\newboolean{cex@mEnv}%
+\newboolean{cex@mBlaJud}%
+\newboolean{IsCalculate}%
+\DeclareOption{student}{%
+  \@ifundefined{beamer@tempdim}{%
+    \setboolean{student}{true}%
+    \openout\@ans=\jobname.ans%
+  }{%
+    \relax%
+  }%
+}%
+\DeclareOption{nowarning}{%
+  \def\@font@warning#1{\relax}%
+  \def\@latex@warning@no@line#1{\relax}%
+}%
+\ProcessOptions%
+\def\END{}
+\def \cex@mDivMT #1$$#2$$#3\END{%
+  \def \math@head{#1}%
+  \def \math@tail{#3}%
+}%
+\def \cex@mDivMTDone #1\END{%
+  \ifthenelse{\isin{*$$}{*#1}}{%
+    \setboolean{cex@mMathOn}{true}%
+    \ifthenelse{\isin{$$*}{#1*}}{%
+      \def\math@head{}%
+      \def\math@tail{}%
+      \setboolean{cex@mtail}{true}%
+    }{%
+      \cex@mDivMT *#1\END%
+      \def\math@head{}%
+      \setboolean{cex@mtail}{false}%
+    }%
+  }{%
+    \ifthenelse{\isin{$$*}{#1*}}{%$$
+      \setboolean{cex@mMathOn}{true}%
+      \cex@mDivMT #1*\END%
+      \def\math@tail{}%
+      \setboolean{cex@mtail}{true}%
+    }{%
+      \ifthenelse{\isin{$$}{#1}}{%$$
+\setboolean{cex@mMathOn}{true}%
+\cex@mDivMT #1\END%
+\setboolean{cex@mtail}{false}%
+      }{%
+\def\math@head{#1}%
+\def\math@tail{}%
+\setboolean{cex@mtail}{true}%
+\setboolean{cex@mMathOn}{false}%
+      }%
+    }%
+  }%
+}%
+\newcommand{\cex@mGenDone}[3]{%
+  \whiledo{\dimtest{#1}{>}{0pt}}{%
+    \addtolength{#1}{-#2}%
+    \stepcounter{#3}%
+  }%
+}%
+\newcommand{\cex@mGenRec}[5]{%
+  \settototalheight{\cex@mDivTH}{\parbox{\cex@mlinewd-#2}{#5}}%
+  \ifthenelse{\dimtest{\cex@mDivTH}{>}{#3}}{%
+    \cex@mGenDone{#3}{#1}{#4}%
+  }{%
+    \addtolength{#3}{-\cex@mDivTH}%
+    \cex@mGenDone{\cex@mDivTH}{#1}{#4}%
+  }%
+}%
+\newcommand{\cex@mGenMaRec}[5]{%
+  \setboolean{cex@mMathOn}{false}%
+  \setlength{\cex@mDivTH}{0pt}%
+  \expandafter\cex@mDivMTDone #5\END%
+  \cex@mGenRec{#1}{#2}{#3}{#4}{\math@head}%
+  \ifthenelse{\boolean{cex@mMathOn}}{%
+    \ifthenelse{\dimtest{#3}{<}{0.5\baselineskip}}{%
+      \setlength{#3}{0pt}%
+    }{%
+      \ifthenelse{\dimtest{#3}{>}{\cex@mDivPMM}}{%
+\addtolength{#3}{-\cex@mDivPMM}%
+      }{%
+\setlength{#3}{0pt}%
+      }%
+      \addtocounter{#4}{3}%
+    }%
+  }{%
+    \relax%
+  }%
+}%
+\newcommand{\cex@mGenMaRecX}[5]{%
+  \setboolean{cex@mtail}{false}%
+  \cex@mGenMaRec{#1}{#2}{#3}{#4}{#5}%
+  \whiledo{\dimtest{#3}{>}{0pt}}{%
+    \ifthenelse{\boolean{cex@mtail}}{%
+      \setlength{#3}{0pt}%
+    }{%
+      \cex@mGenMaRec{#1}{#2}{#3}{#4}{\math@tail}%
+    }%
+  }%
+}%
+\def\cex@mShd{}%
+\def\cex@mGenSh#1#2\END{%
+  \def\cex@mShd{#1#2}%
+}%
+\newcommand{\cex@mGenShX}[4]{%
+  \setlength{#3}{\linewidth-#1}%
+  \addtolength{#3}{-#2}%
+  \addtocounter{cex@mShNT}{#4}%
+  \whiledo{\cnttest{\thecex@mShNum}{<}{\thecex@mShNT}}{%
+    \expandafter\cex@mGenSh\cex@mShd #1 #3\END%
+    \stepcounter{cex@mShNum}%
+  }%
+}%
+\def\cex@mShDone #1\END{%
+  \def\cex@mParSh{\parshape=#1 \cex@mShd}%
+}%
+\newcommand{\cex@mMakeSh}[8]{%
+  \setcounter{#4}{0}%
+  \def\math@head{}%
+  \def\math@tail{}%
+  \cex@mGenMaRecX{#1}{#2}{#3}{#4}{#5}%
+  \cex@mGenShX{#6}{#7}{#8}{\csname the#4\endcsname}%
+}%
+\newcommand{\cex@mMakeShIn}[8]{%
+  \setcounter{#4}{0}%
+  \def\math@head{}%
+  \def\math@tail{}%
+  \cex@mGenMaRecX{#1}{#2}{#3}{#4}{#5}%
+  \ifthenelse{\boolean{cex@mNoOptIndent}}{%
+    \cex@mGenShX{\cex@mShIn}{#2}{#7}{\csname the#4\endcsname}%
+  }{%
+    \cex@mGenShX{#6}{#7}{#8}{\csname the#4\endcsname}%
+  }%
+}%
+\newcommand{\cex@mMakeShd}[1]{%
+  \stepcounter{cex@mShNum}%
+  \ifthenelse{\boolean{cex@mNoOptIndent}}{%
+    \setlength{\cex@mShWdSS}{#1-\cex@mShIn}%
+    \expandafter\cex@mGenSh\cex@mShd \cex@mShIn \cex@mShWdSS\END%
+  }{%
+    \setlength{\cex@mShWdSS}{#1-\cex@mShInS}%
+    \expandafter\cex@mGenSh\cex@mShd \cex@mShInS \cex@mShWdSS\END%
+  }%
+  \expandafter\cex@mShDone\thecex@mShNum\END%
+  \cex@mParSh%
+  \def\bl@nkAns{}%
+}%
+\newcommand{\cex@mPut}[3]{%
+  \addtolength{#3}{-\ccwd}%
+  \makebox[0pt][l]{%
+    \raisebox{-#3}[0pt][0pt]{%
+      \parbox[b][0pt][b]{#1}{\hfill #2}%
+    }%
+  }%
+}%
+\newcommand{\cex@mTypePM}[4]{%
+  \ifthenelse{\dimtest{#3}{>}{0.3\linewidth}}{%
+    \parshape= 1 \cex@mShIn \cex@mlinewd
+    #1
+    \newline
+    \centerline{#2}
+  }{%
+    \setcounter{cex@mShNum}{0}%
+    \setcounter{cex@mShNT}{0}%
+    \def\cex@mShd{}%
+    \setlength{\cex@mswapht}{#4}%
+    \cex@mMakeSh{\cex@mDivPM}{#3}{\cex@mswapht}{cex@mGenPN}{%
+    #1}{\cex@mShIn}{#3}{\cex@mShWd}%
+    \cex@mMakeShd{\linewidth}%
+    \cex@mPut{\cex@mlinewd-\parindent}{#2}{#4}%
+    #1%
+  }%
+}%
+\newcommand{\cex@mTypePMSpace}{%
+  \ifthenelse{\dimtest{\cex@mBh}{>}{\cex@mPh}}{%
+    \relax%
+  }{%
+    \ifthenelse{\dimtest{\cex@mPw}{>}{0.3\linewidth}}{%
+      \relax%
+    }{%
+      \addtolength{\cex@mPh}{.3\baselineskip}%
+      \addtolength{\cex@mPh}{-\cex@mBh}%
+      \vspace{\cex@mPh}%
+    }%
+  }%
+}%
+\newcommand{\cex@mTypeOne}[5]{%
+  \cex@mTypePM{#1}{#3}{#4}{#5}%
+  \newline%
+  #2
+}%
+\newcommand{\cex@mTypeTwo}[5]{%
+  \setcounter{cex@mShNum}{0}%
+  \setcounter{cex@mShNT}{0}%
+  \def\cex@mShd{}%
+  \settototalheight{\cex@mDivPH}{%
+    \parbox{\linewidth-\cex@mShIn}{#1}%
+  }%
+  \cex@mMakeSh{\cex@mDivPM}{0pt}{\cex@mDivPH}{cex@mGenPN}{%
+  #1}{\cex@mShIn}{0pt}{\cex@mShWd}%
+  \setlength{\cex@mswapht}{#5}%
+  \cex@mMakeShIn{\cex@mDivPM}{#4}{\cex@mswapht}{cex@mGenPN}{%
+  #2}{\cex@mShInS}{#4}{\cex@mShWdS}%
+  \cex@mMakeShd{\linewidth}%
+  #1%
+  \newline%
+  \cex@mPut{\linewidth-\cex@mShInS}{#3}{#5}%
+  #2%
+}%
+\newcommand{\cex@mTypeThree}[5]{%
+  \setcounter{cex@mShNum}{0}%
+  \setcounter{cex@mShNT}{0}%
+  \def\cex@mShd{}%
+  \setlength{\cex@mswapht}{#5}%
+  \cex@mMakeSh{\cex@mDivPM}{#4}{\cex@mswapht}{cex@mGenPN}{%
+  #1}{\cex@mShIn}{#4}{\cex@mShWd}%
+  \setcounter{cex@mGenPN}{0}%
+  \setlength{\cex@mswapht}{#5}%
+  \cex@mGenMaRecX{\cex@mDivPM}{#4}{\cex@mswapht}{cex@mGenPN}{#1\newline#2}%
+  \addtocounter{cex@mGenPN}{-\thecex@mShNum}%
+  \ifthenelse{\boolean{cex@mNoOptIndent}}{%
+    \cex@mGenShX{\cex@mShIn}{#4}{\cex@mShWdS}{\thecex@mGenPN}%
+  }{%
+    \cex@mGenShX{\cex@mShInS}{#4}{\cex@mShWdS}{\thecex@mGenPN}%
+  }%
+  \cex@mMakeShd{\linewidth}%
+  \cex@mPut{\cex@mlinewd-\parindent}{#3}{#5}%
+  #1
+  \newline
+  #2
+}%
+\newcommand{\cex@mTypeFour}[5]{%
+  \setcounter{cex@mShNum}{0}%
+  \setcounter{cex@mShNT}{0}%
+  \def\cex@mShd{}%
+  \settototalheight{\cex@mDivPH}{%
+    \parbox{\linewidth}{#1}%
+  }%
+  \cex@mMakeSh{\cex@mDivPM}{0pt}{\cex@mDivPH}{cex@mGenPN}{%
+  #1}{\cex@mShIn}{0pt}{\cex@mShWd}%
+  \ifthenelse{\isempty{#3}}{%
+    \relax%
+  }{%
+    \stepcounter{cex@mShNum}%
+    \expandafter\cex@mGenSh\cex@mShd \cex@mShIn \cex@mlinewd\END%
+  }%
+  \cex@mMakeShd{\cex@mlinewd}%
+  #1
+  \ifthenelse{\isempty{#3}}{%
+    \relax%
+  }{%
+    \newline
+    \parbox{\cex@mlinewd}{\centerline{#3}}%
+  }%
+  \newline%
+  #2
+}%
+\newcommand{\cex@mTypeDone}[7]{%
+  \ifthenelse{\isempty{#3}}{%
+    \cex@mTypeFour{#1}{#2}{#3}{#4}{#5}%
+  }{%
+    \ifthenelse{\dimtest{#7}{>}{#5}}{%
+      \ifthenelse{\dimtest{#6}{>}{#5}}{%
+\cex@mTypeTwo{#1}{#2}{#3}{#4}{#5}%
+      }{%
+\cex@mTypeThree{#1}{#2}{#3}{#4}{#5}%
+      }%
+    }{%
+      \ifthenelse{\dimtest{#6}{>}{#5}}{%
+\ifthenelse{\boolean{cex@mNoOptIndent}}{%
+  \cex@mTypeOne{#1}{#2}{#3}{#4}{#5}%
+}{%
+  \cex@mTypeTwo{#1}{#2}{#3}{#4}{#5}%
+}%
+      }{%
+\addtolength{#7}{#6}%
+\ifthenelse{\dimtest{#5}{>}{#7}}{%
+  \cex@mTypeFour{#1}{#2}{#3}{#4}{#5}%
+}{%
+  \cex@mTypeThree{#1}{#2}{#3}{#4}{#5}%
+}%
+      }%
+    }%
+  }%
+}%
+\newcommand{\cex@mHat}[2]{%
+  \makebox[0pt][r]{\raisebox{-.05\ccwd}{\parbox[b]{#1}{#2.\hfill}}}%
+}%
+\newcommand{\cex@mnum}{%
+  \cex@mHat{\cex@mShIn}{\thecex@mNumber}%
+}%
+\def \cex@mPicSep #1<:#2:>#3\END{%
+  \def\@Text{#1图\thefigure{}#3}%
+  \setbox\@pic=\hbox{#2}%
+  \ifthenelse{\dimtest{\wd\@pic}{<}{5pt}}{%
+    \setbox\@pic=\hbox{%
+      \begin{tikzpicture}
+\draw (0,0) rectangle (2,2);
+\draw (1,1) node {\small \textcolor{red}{请输入图片}};
+      \end{tikzpicture}
+    }%
+  }{%
+    \relax%
+  }%
+  \setlength{\cex@mPw}{\wd\@pic}%
+  \setlength{\cex@mPh}{\ht\@pic}%
+  \addtolength{\cex@mPh}{\dp\@pic}%
+  \addtolength{\cex@mPh}{\baselineskip}%
+  \setlength{\cex@m@pic@dp}{\dp\@pic}%
+  \def\@Picture{%
+    \parbox[b]{\cex@mPw}{%
+      \raisebox{\cex@m@pic@dp}{\unhbox\@pic}%
+      \vspace{-4pt}\newline%
+      \centerline{图 \thefigure}%
+    }%
+  }%
+}%
+\def \cex@mPicSepDone #1\END{%
+  \ifthenelse{\isin{<:}{#1}}{%
+    \ifthenelse{\isin{*<:}{*#1}}{%
+      \ifthenelse{\isin{:>*}{#1*}}{%
+\cex@mPicSep *#1*\END%
+\def\@Text{}%
+      }{%
+\cex@mPicSep\relax#1\END%
+      }%
+    }{%
+      \ifthenelse{\isin{:>*}{#1*}}{%
+\cex@mPicSep #1\relax\END%
+      }{%
+\cex@mPicSep #1\END%
+      }%
+    }%
+  }{%
+    \def\@Text{#1}%
+    \def\@Picture{}%
+    \setlength{\cex@mPw}{0pt}%
+    \setlength{\cex@mPh}{0pt}%
+  }%
+}%
+\def \setcex@mLmax #1\END{%
+  \settowidth{\cex@mLmaxsub}{\hbox{#1}}%
+  \ifthenelse{\dimtest{\cex@mLmaxsub}{>}{\cex@mLmax}}{%
+    \setlength{\cex@mLmax}{\cex@mLmaxsub}%
+  }{%
+    \relax%
+  }%
+}%
+\newcommand{\sel@optone}[4]{%
+  \makebox[.25\sel@linewidth][l]{A.#1}%
+  \makebox[.25\sel@linewidth][l]{B.#2}%
+  \makebox[.25\sel@linewidth][l]{C.#3}%
+  \makebox[.25\sel@linewidth][l]{D.#4}%
+}%
+\newcommand{\sel@opttwo}[4]{%
+  \makebox[.5\sel@linewidth][l]{A.#1}%
+  \makebox[.5\sel@linewidth][l]{B.#2}%
+  \newline
+  \makebox[.5\sel@linewidth][l]{C.#3}%
+  \makebox[.5\sel@linewidth][l]{D.#4}%
+}%
+\newcommand{\sel@optthree}[4]{%
+  \cex@mHat{1.2\ccwd}{A}#1
+  \newline
+  \cex@mHat{1.2\ccwd}{B}#2
+  \newline
+  \cex@mHat{1.2\ccwd}{C}#3
+  \newline
+  \cex@mHat{1.2\ccwd}{D}#4
+}%
+\newcommand{\sel@getLmax}[4]{%
+  \setlength{\cex@mLmax}{0pt}%
+  \expandafter\setcex@mLmax A. #1\END%
+  \expandafter\setcex@mLmax B. #2\END%
+  \expandafter\setcex@mLmax C. #3\END%
+  \expandafter\setcex@mLmax D. #4\END%
+}%
+\newcommand{\sel@OptDone}[4]{%
+  \ifthenelse{\dimtest{\cex@mLmax}{<}{.25\sel@linewidth}}{%
+      \sel@optone{#1}{#2}{#3}{#4}%
+  }{%
+    \ifthenelse{\dimtest{\cex@mLmax}{<}{.5\sel@linewidth}}{%
+      \sel@opttwo{#1}{#2}{#3}{#4}%
+    }{%
+      \sel@optthree{#1}{#2}{#3}{#4}%
+    }%
+  }%
+}%
+\newcommand{\sel@bracket}{\hfill\mbox{(\quad)}}%
+\def\sel@sep #1[#2]#3\END{%
+  \def\@Text{#1}%
+  \gdef\bl@nkAns{#2}%
+}%
+\def\sel@sepDone #1\END{%
+  \ifthenelse{\isin{[}{#1}}{%
+    \sel@sep #1\relax\END%
+  }{%
+    \def\@Text{#1}%
+    \gdef\bl@nkAns{}%
+  }%
+}%
+\def\sel@Type #1 A.#2 B.#3 C.#4 D.#5\par{%
+  \setboolean{cex@mNoOptIndent}{false}%
+  \setcex@mNumber%
+  \def\bl@nkAns{}%
+  \cex@mPicSepDone \cex@mnum#1\END%
+  \expandafter\sel@sepDone\@Text\END%
+  \settototalheight{\cex@mBh}{%
+    \parbox{\cex@mlinewd-\cex@mPw}{\@Text\sel@bracket}%
+  }%
+  \setlength{\sel@linewidth}{\cex@mlinewd-\cex@mPw}%
+  \sel@getLmax{#2}{#3}{#4}{#5}%
+  \ifthenelse{\dimtest{\cex@mLmax}{<}{.5\sel@linewidth}}{%
+    \setboolean{cex@mNoOptIndent}{true}%
+    \ifthenelse{\dimtest{\cex@mLmax}{<}{.25\sel@linewidth}}{%
+      \setlength{\cex@mOh}{\baselineskip}%
+    }{%
+      \setlength{\cex@mOh}{2\baselineskip}%
+    }%
+  }{%
+    \settototalheight{\cex@mOh}{%
+      \parbox{\cex@mlinewd-\cex@mPw}{\sel@OptDone{#2}{#3}{#4}{#5}}%
+    }%
+  }%
+  \setlength{\cex@mBOh}{\cex@mBh+\cex@mOh}%
+  \ifthenelse{\dimtest{\cex@mBh}{>}{\cex@mPh}}{%
+    \setlength{\sel@linewidth}{\cex@mlinewd}%
+  }{%
+    \ifthenelse{\dimtest{\cex@mBOh}{>}{\cex@mPh}}{%
+      \relax%
+    }{%
+      \setlength{\sel@linewidth}{\cex@mlinewd}%
+    }%
+  }%
+  \ifthenelse{\isin{<:}{#1}}{%
+    \stepcounter{figure}%
+  }{%
+    \relax%
+  }%
+  \cex@mTypeDone{\@Text\sel@bracket}{%
+    \sel@OptDone{#2}{#3}{#4}{#5}%
+  }{\@Picture}{\cex@mPw}{\cex@mPh}{\cex@mBh}{\cex@mOh}%
+  \par
+}%
+\def\bl@nked{}%
+\def\bl@nkget#1\END{%
+  \def\bl@nked{#1}%
+}%
+\def\bl@nkGen #1\END{\CJKunderline{#1}}%
+\def\bl@nkAns{}%
+\def\bl@nkSave#1\END{%
+  \gdef\bl@nkAns{#1}%
+}%
+\newcommand{\@blank}[1]{%
+  \def\bl@nked{}%
+  \settowidth{\bl@nkwd}{#1}%
+  \whiledo{\dimtest{\bl@nkwd}{>}{0pt}}{%
+    \expandafter\bl@nkget\bl@nked\mbox{\quad} \END%
+    \addtolength{\bl@nkwd}{-\ccwd}%
+  }%
+  \expandafter\bl@nkGen \bl@nked\END%
+  \expandafter\bl@nkSave\bl@nkAns#1\quad\END%
+}%
+\def \bl@nkSep #1[#2]#3\END{%
+  \def\bl@nkSeped{#1\@blank{#2}#3}%
+  \ifthenelse{\isin{[}{#3}}{%
+    \expandafter\bl@nkSep\bl@nkSeped\END%
+  }{%
+    \relax%
+  }%
+}%
+\def \bl@nkSepX #1\END{%
+  \def\bl@nkSeped{}%
+  \ifthenelse{\isin{[}{#1}}{%
+    \bl@nkSep \relax#1\relax\END%
+  }{%
+    \def\bl@nkSeped{#1}%
+  }%
+}%
+\def\bla@Type #1\par{%
+  \setboolean{cex@mNoOptIndent}{true}%
+  \def\bl@nkAns{}%
+  \setcex@mNumber%
+  \cex@mPicSepDone \cex@mnum#1\END%
+  \expandafter \bl@nkSepX\@Text\END%
+  \settototalheight{\cex@mBh}{\parbox{\cex@mlinewd-\cex@mPw}{\bl@nkSeped}}%
+  \def\bl@nkAns{}%
+  \ifthenelse{\isin{<:}{#1}}{%
+    \stepcounter{figure}%
+    \cex@mTypePM{\bl@nkSeped}{\@Picture}{\cex@mPw}{\cex@mPh}%
+    \cex@mTypePMSpace%
+  }{%
+    \parshape=1 \cex@mShIn \cex@mlinewd
+    \bl@nkSeped%
+  }%
+  \setboolean{cex@mNoOptIndent}{false}%
+  \par
+}%
+\newcommand{\thec@lnumber}{\stepcounter{c@lOptNum}\makebox[0pt][r]{(\thec@lOptNum)}}%
+\def\c@lOptSeped{}%
+\def\c@lOptSep #1[#2]#3\END{%
+  \def\c@lOptSeped{#1\newline\thec@lnumber#3}%
+  \ifthenelse{\isin{[}{#3}}{%
+    \expandafter\c@lOptSep\c@lOptSeped\END%
+  }{%
+    \relax%
+  }%
+}%
+\def\c@lOptSepX #1\END{%
+  \ifthenelse{\isin{[}{#1}}{%
+    \c@lOptSep\relax#1\relax\END%
+  }{%
+    \def\c@lOptSeped{#1}%
+  }%
+}%
+\def\c@lSepBO #1[#2]#3\END{%
+  \def\c@lbody{#1}%
+  \def\c@loption{#3}%
+}%
+\def\c@lSepBOX #1\END{%
+  \ifthenelse{\isin{[}{#1}}{%
+    \c@lSepBO #1\END%
+  }{%
+    \def\c@lbody{#1}%
+    \def\c@loption{}%
+  }%
+}%
+\def\c@lTypePicOpt #1\END{%
+  \setboolean{cex@mNoOptIndent}{false}%
+  \addtolength{\cex@mShInS}{5pt}%
+  \setcex@mNumber%
+  \ifthenelse{\isin{<:}{#1}}{%
+    \stepcounter{figure}%
+  }{%
+    \relax%
+  }%
+  \cex@mPicSepDone \cex@mnum#1\END%
+  \expandafter\c@lSepBOX\@Text\END%
+  \expandafter\c@lOptSepX\c@loption\END%
+  \settototalheight{\cex@mBh}{\parbox{\cex@mlinewd-\cex@mPw}{\c@lbody}}%
+  \settototalheight{\cex@mOh}{%
+    \parbox{\cex@mlinewd-\cex@mPw}{\thec@lnumber\c@lOptSeped}%
+  }%
+  \setlength{\cex@mBOh}{\cex@mBh+\cex@mOh}%
+  \ifthenelse{\dimtest{\cex@mBOh}{<}{\cex@mPh}}{%
+    \cex@mTypeThree{\c@lbody}{%
+      \setcounter{c@lOptNum}{0}\thec@lnumber\c@lOptSeped%
+    }{\@Picture}{\cex@mPw}{\cex@mPh}%
+    \addtolength{\cex@mPh}{.3\baselineskip}%
+    \addtolength{\cex@mPh}{-\cex@mBOh}%
+    \vspace{\cex@mPh}%
+  }{%
+      \cex@mTypeDone{\c@lbody}{%
+\setcounter{c@lOptNum}{0}\thec@lnumber\c@lOptSeped%
+      }{\@Picture}{\cex@mPw}{\cex@mPh}{\cex@mBh}{\cex@mOh}%
+    \ifthenelse{\dimtest{\cex@mBh}{>}{\cex@mPh}}{%
+      \ifthenelse{\dimtest{\cex@mOh}{<}{\cex@mPh}}{%
+\addtolength{\cex@mPh}{.6\baselineskip}%
+\addtolength{\cex@mPh}{-\cex@mOh}%
+\vspace{\cex@mPh}%
+      }{%
+\relax%
+      }%
+    }{%
+      \relax%
+    }%
+  }%
+  \addtolength{\cex@mShInS}{-3pt}%
+}%
+\def\c@lTypeX #1<:#2:>#3\END{%
+  \ifthenelse{\isin{[}{#1#3}}{%
+    \c@lTypePicOpt #1<:#2:>#3\END%
+  }{%
+    \bla@Type #1<:#2:>#3\END%
+  }%
+}%
+\def\c@lType #1\par{%
+  \ifthenelse{\isin{<:}{#1}}{%
+    \c@lTypeX\relax #1\relax\END%
+  }{%
+    \ifthenelse{\isin{[}{#1}}{%
+      \c@lTypePicOpt #1\END%
+    }{%
+      \bla@Type #1\END%
+    }%
+  }%
+  \par
+}%
+\def\jud@sep #1[#2]#3\END{%
+  \def\jud@Text{#1#3}%
+  \ifthenelse{\isin{t}{#2}}{%
+    \gdef\bl@nkAns{$\surd$}%
+  }{%
+    \ifthenelse{\isin{f}{#2}}{%
+      \gdef\bl@nkAns{$\times$}%
+    }{%
+      \gdef\bl@nkAns{正确:t,错误:f}%
+    }%
+  }%
+}%
+\def\jud@sepDone #1\END{%
+  \ifthenelse{\isin{[}{#1}}{%
+    \jud@sep\relax#1\relax\END%
+  }{%
+    \def\jud@Text{#1}%
+    \gdef\bl@nkAns{请使用[\quad]输入答案,正确:t,错误:f}%
+  }%
+}%
+\def\jud@Type #1\par{%
+  \setboolean{cex@mNoOptIndent}{true}%
+  \def\bl@nkAns{}%
+  \setcex@mNumber%
+  \cex@mPicSepDone \cex@mnum#1\END%
+  \expandafter\jud@sepDone\@Text\END%
+  \settototalheight{\cex@mBh}{%
+    \parbox{\cex@mlinewd-\cex@mPw}{\jud@Text\hfill\sel@bracket}%
+  }%
+  \ifthenelse{\isin{<:}{#1}}{%
+    \stepcounter{figure}%
+    \cex@mTypePM{\jud@Text\hfill\sel@bracket}{\@Picture}{\cex@mPw}{\cex@mPh}%
+    \cex@mTypePMSpace%
+  }{%
+    \parshape=1 \cex@mShIn \cex@mlinewd
+    \jud@Text\hfill\sel@bracket%
+  }%
+  \setboolean{cex@mNoOptIndent}{false}%
+  \par
+}%
+\@ifundefined{@chapter}{\relax}{%
+  \let\@cex@mchapter=\@chapter%
+  \let\@cex@mchaptered=\@cex@mchapter%
+  \def\@chapter[#1]#2{%
+    \@cex@mchaptered[#1]{#2}%
+    \write\@ans{\csname chapter\endcsname{#2答案}}%
+  }%
+}%
+\@ifundefined{CTEX@makeanchor}{%
+  \def\@sect#1#2#3#4#5#6[#7]#8{%
+    \write\@ans{\csname #1\endcsname{#8}}%
+    \ifnum #2>\c@secnumdepth
+    \let\@svsec\@empty
+    \else
+    \refstepcounter{#1}%
+    \protected@edef\@svsec{\@seccntformat{#1}\relax}%
+    \fi
+    \@tempskipa #5\relax
+    \ifdim \@tempskipa>\z@
+    \begingroup
+    #6{%
+      \@hangfrom{\hskip #3\relax\@svsec}%
+    \interlinepenalty \@M #8\@@par}%
+  \endgroup
+  \csname #1mark\endcsname{#7}%
+  \addcontentsline{toc}{#1}{%
+    \ifnum #2>\c@secnumdepth \else
+    \protect\numberline{\csname the#1\endcsname}%
+    \fi
+  #7}%
+  \else
+  \def\@svsechd{%
+    #6{\hskip #3\relax
+    \@svsec #8}%
+    \csname #1mark\endcsname{#7}%
+    \addcontentsline{toc}{#1}{%
+      \ifnum #2>\c@secnumdepth \else
+      \protect\numberline{\csname the#1\endcsname}%
+      \fi
+    #7}}%
+    \fi
+    \@xsect{#5}}
+  }{%
+    \def\@sect#1#2#3#4#5#6[#7]#8{%
+      \write\@ans{\csname #1\endcsname{#8}}%
+      \ifnum #2>\c@secnumdepth
+      \CTEX@ifnamefalse
+      \CTEX@makeanchor@sect{#1*}%
+      \let\@svsec\@empty
+      \else
+      \ifodd \csname CTEX@#1@numbering\endcsname
+      \CTEX@ifnametrue
+      \refstepcounter{#1}%
+      \protected@edef\@svsec{\@seccntformat{#1}\relax}%
+      \else
+      \CTEX@ifnamefalse
+      \CTEX@makeanchor{#1*}%
+      \let\@svsec\@empty
+      \fi
+      \fi
+      \unless \ifodd \CTEX@runin
+      \begingroup
+      #6{%
+\CTEX@hangfrom{\hskip\glueexpr #3\relax\@svsec}%
+\interlinepenalty \@M
+\csname CTEX@#1@titleformat\endcsname{#8}%
+      \csname CTEX@#1@aftertitle\endcsname}%
+    \endgroup
+    \csname #1mark\endcsname{#7}%
+    \CTEX@addtocline{#1}{#7}%
+    \else
+    \def\@svsechd{%
+      #6{\hskip\glueexpr #3\relax
+\@svsec
+\csname CTEX@#1@titleformat\endcsname{#8}%
+      \csname CTEX@#1@aftertitle\endcsname}%
+      \csname #1mark\endcsname{#7}%
+      \CTEX@addtocline{#1}{#7}}%
+      \fi
+      \@xsect{#5}}
+    }%
+\newcommand{\cex@mAnsTag}{{\heiti \makebox[0pt][r]{答}案}\hspace{5pt}}%
+\def \cex@mAnswerDone #1\END{%
+  \resetcex@mNumber%
+  \ifthenelse{\boolean{student}}{%
+    \write\@ans{\Answer}%
+    \write\@ans{#1}%
+    \write\@ans{\par}%
+    \ifthenelse{\boolean{cex@mEnv}}{%
+      \vspace{-1.1\baselineskip}\par%
+    }{%
+      \relax%
+    }%
+  }{%
+    \ifthenelse{\boolean{StudentAns}}{%
+      \setcex@mNumber%
+      \parshape=1 \cex@mShIn \cex@mlinewd
+      \cex@mnum{\heiti 答案}\hspace{5pt}#1\par%
+    }{%
+      \parshape=1 \cex@mShIn \cex@mlinewd
+      \cex@mAnsTag#1\par%
+    }%
+  }%
+}%
+\def\cex@mAnswer #1\par{%
+  {\parindent=0pt%
+    \cex@mAnswerDone #1\END%
+  }%
+}%
+\def\Answer #1\par{%
+  \ifthenelse{\boolean{cex@mBlaJud}}{%
+    \ifthenelse{\isin{*}{#1}}{%
+      \cex@mAnswer\bl@nkAns\par%
+    }{%
+      \cex@mAnswer#1\par%
+    }%
+    \setboolean{cex@mBlaJud}{false}%
+  }{%
+    \cex@mAnswer#1\par%
+  }%
+}%
+\let\Daan=\Answer
+\newcommand{\cex@mCal@Space}{%
+  \ifthenelse{\boolean{IsCalculate}}{%
+    \ifthenelse{\dimtest{\linewidth}{<}{100mm}}{%
+      \newpage%
+      \everypar={\c@levery}%
+    }{%
+      \ifthenelse{\dimtest{\pagetotal}{<=}{.4\pagegoal}}{%
+\vspace{.4\pagegoal}%
+      }{%
+\ifthenelse{\dimtest{\pagetotal}{<=}{.7\pagegoal}}{%
+  \newpage%
+}{%
+  \newpage%
+  \vspace{.3\pagegoal}%
+}%
+\everypar={\c@levery}%
+      }%
+    }%
+  }{%
+    \relax%
+  }%
+}%
+\newcommand{\cex@mExpTag}{{\heiti \makebox[0pt][r]{解}析}\hspace{5pt}}%
+\def \cex@mExplainDone #1\END{%
+    \ifthenelse{\boolean{StudentAns}}{%
+      \addtocounter{cex@mNumber}{-1}%
+      \setcex@mNumber%
+    }{%
+      \resetcex@mNumber%
+    }%
+  \ifthenelse{\boolean{student}}{%
+    \write\@ans{\Explain}%
+    \cex@mwrite #1\END%
+    \write\@ans{\par}%
+    \ifthenelse{\boolean{cex@mEnv}}{%
+      \vspace{-1.1\baselineskip}\par%
+    }{%
+      \relax%
+    }%
+    \@ifundefined{beamer@tempdim}{%
+      \cex@mCal@Space%
+    }{%
+      \relax%
+    }%
+
+  }{%
+    \ifthenelse{\isin{<:}{#1}}{%
+      \setboolean{cex@mNoOptIndent}{true}%
+      \stepcounter{figure}%
+      \cex@mPicSepDone \cex@mExpTag#1\END%
+      \settototalheight{\cex@mBh}{%
+\parbox{\cex@mlinewd-\cex@mPw}{\@Text}%
+      }%
+      \cex@mTypePM{\@Text}{\@Picture}{\cex@mPw}{\cex@mPh}%
+      \cex@mTypePMSpace%
+      \setboolean{cex@mNoOptIndent}{false}%
+    }{%
+      \parshape=1 \cex@mShIn \cex@mlinewd
+      \cex@mExpTag#1%
+    }%
+    \par
+  }%
+}%
+\def\cex@mExplain #1\par{%
+  {\parindent=0pt%
+    \cex@mExplainDone #1\END%
+  }%
+}%
+\let\Explain=\cex@mExplain
+\let\Jiexi=\Explain
+\def \cex@mSubExplainDone #1\END{%
+  \resetcex@mNumber%
+  \ifthenelse{\boolean{student}}{%
+    \write\@ans{\protect\SubExplain}%
+    \cex@mwrite #1\END%
+    \write\@ans{\par}%
+    \ifthenelse{\boolean{cex@mEnv}}{%
+      \vspace{-1.1\baselineskip}\par%
+    }{%
+      \relax%
+    }%
+    \@ifundefined{beamer@tempdim}{%
+      \cex@mCal@Space%
+    }{%
+      \relax%
+    }%
+  }{%
+    \ifthenelse{\isin{<:}{#1}}{%
+      \setboolean{cex@mNoOptIndent}{true}%
+      \stepcounter{figure}%
+      \cex@mPicSepDone #1\END%
+      \settototalheight{\cex@mBh}{%
+\parbox{\cex@mlinewd-\cex@mPw}{\@Text}%
+      }%
+      \cex@mTypePM{\@Text}{\@Picture}{\cex@mPw}{\cex@mPh}%
+      \ifthenelse{\dimtest{\cex@mBh}{>}{\cex@mPh}}{%
+\relax%
+      }{%
+\addtolength{\cex@mPh}{.5\baselineskip}%
+\addtolength{\cex@mPh}{-\cex@mBh}%
+\vspace{\cex@mPh}%
+      }%
+      \setboolean{cex@mNoOptIndent}{false}%
+    }{%
+      \parshape=1 \cex@mShIn \cex@mlinewd
+      #1
+    }%
+    \par
+  }%
+}%
+\def\cex@mSubExplain #1\par{%
+  {\parindent=0pt%
+    \cex@mSubExplainDone #1\END%
+  }%
+}%
+\let\SubExplain=\cex@mSubExplain
+\let\SubJiexi=\SubExplain
+\AtEndDocument{%
+  \ifthenelse{\boolean{student}}{%
+    \@ifundefined{beamer@tempdim}{%
+      \cleardoublepage%
+      \def\cex@mExpTag{{\heiti 解析}\hspace{5pt}}%
+      \def\theHchapter{a\arabic{chapter}}%
+      \setcounter{chapter}{0}%
+      \setcounter{cex@mNumber}{0}%
+      \immediate\closeout\@ans%
+      \setboolean{student}{false}
+      \setboolean{StudentAns}{true}
+      \IfFileExists{\jobname.ans}{\input{\jobname.ans}}{\relax}%
+    }{}%
+  }{%
+    \relax%
+  }%
+}%
+\newcommand{\cex@mevery@box}[3]{%
+  \ifthenelse{\isin{a}{#1}}{%
+    \ifthenelse{\isin{*}{#3}}{%
+      \expandafter\cex@mAnswer\bl@nkAns\par%
+    }{%
+      \cex@mAnswer#3\par%
+    }%
+  }{%
+    \ifthenelse{\isin{ee}{#1}}{%
+\cex@mSubExplain#3\par%
+    }{%
+      \ifthenelse{\isin{e}{#1}}{%
+\cex@mExplain#3\par%
+      }{%
+#2#3\par%
+      }%
+    }%
+  }%
+}%
+\newcommand{\cex@mevery}[3]{%
+  \@ifundefined{beamer@tempdim}{%
+    {\parindent=0pt%
+      \cex@mevery@box{#1}{#2}{#3}%
+    }%
+  }{%
+    \parbox{\linewidth}{\cex@mevery@box{#1}{#2}{#3}}\par
+  }%
+}%
+\def\sel@every#1.#2\par{%
+  \setboolean{IsCalculate}{false}%
+  \setboolean{cex@mBlaJud}{true}%
+  \cex@mevery{#1}{\sel@Type}{#2}%
+}%
+\let\Selection=\sel@every
+\let\Xuanze=\Selection
+\newenvironment{selection}{%
+  \par\setboolean{cex@mEnv}{true}%
+  \parindent=0pt%
+  \everypar={\sel@every}%
+}{%
+  \setboolean{cex@mEnv}{false}%
+}%
+\newenvironment{xuanze}{%
+  \par\setboolean{cex@mEnv}{true}%
+  \parindent=0pt%
+  \everypar={\sel@every}%
+}{%
+  \setboolean{cex@mEnv}{false}%
+}%
+\def\bla@every#1.#2\par{%
+  \setboolean{IsCalculate}{false}%
+  \cex@mevery{#1}{\bla@Type}{#2}%
+}%
+\def\Blank #1.#2\par{%
+  \setboolean{cex@mBlaJud}{true}%
+  \cex@mevery{#1}{\bla@Type}{#2}%
+}%
+\let\Tiankong=\Blank
+\newenvironment{blank}{%
+  \par\setboolean{cex@mEnv}{true}%
+  \parindent=0pt%
+  \everypar={\bla@every}%
+}{%
+  \setboolean{cex@mEnv}{false}%
+}%
+\newenvironment{tiankong}{%
+  \par\setboolean{cex@mEnv}{true}%
+  \parindent=0pt%
+  \everypar={\bla@every}%
+}{%
+  \setboolean{cex@mEnv}{false}%
+}%
+\def\c@levery#1.#2\par{%
+  \setboolean{IsCalculate}{true}%
+  \cex@mevery{#1}{\c@lType}{#2}%
+}%
+\let\Calculate=\c@levery
+\let\Jisuan=\Calculate
+\newenvironment{calculate}{%
+  \par\setboolean{cex@mEnv}{true}%
+  \parindent=0pt%
+  \everypar={\c@levery}%
+}{%
+  \setboolean{cex@mEnv}{false}%
+}%
+\newenvironment{jisuan}{%
+  \par\setboolean{cex@mEnv}{true}%
+  \parindent=0pt%
+  \everypar={\c@levery}%
+}{%
+  \setboolean{cex@mEnv}{false}%
+}%
+\def\jud@every #1.#2\par{%
+  \setboolean{IsCalculate}{false}%
+  \cex@mevery{#1}{\jud@Type}{#2}%
+}%
+\def\Judge#1.#2\par{%
+  \setboolean{cex@mBlaJud}{true}%
+  \cex@mevery{#1}{\jud@Type}{#2}%
+}%
+\let\Panduan=\Judge
+\newenvironment{judge}{%
+  \par\setboolean{cex@mEnv}{true}%
+  \parindent=0pt%
+  \everypar={\jud@every}%
+}{%
+  \setboolean{cex@mEnv}{false}%
+}%
+\newenvironment{panduan}{%
+  \par\setboolean{cex@mEnv}{true}%
+  \parindent=0pt%
+  \everypar={\jud@every}%
+}{%
+  \setboolean{cex@mEnv}{false}%
+}%
+\def\Exam@every #1.#2\par{%
+  \ifthenelse{\isin{s}{#1}}{%
+    \Selection #1.#2\par%
+  }{%
+    \ifthenelse{\isin{b}{#1}}{%
+      \Blank #1.#2\par%
+    }{%
+      \ifthenelse{\isin{j}{#1}}{%
+\Judge #1.#2\par%
+      }{%
+\ifthenelse{\isin{c}{#1}}{%
+  \Calculate #1.#2\par%
+}{%
+  \cex@mevery{#1}{}{#2}%
+}%
+      }%
+    }%
+  }%
+}%
+\@ifundefined{beamer@tempdim}{%
+  \newenvironment{example}{%
+    \parindent=0pt%
+    \vspace{5pt}%
+    \par%
+    \setboolean{cex@mEnv}{true}%
+    \setboolean{student}{false}%
+    \setcounter{cex@mExamS}{\thecex@mNumber}%
+    \stepcounter{cex@mExam}%
+    \setcounter{cex@mNumber}{\thecex@mExam}%
+    \addtocounter{cex@mNumber}{-1}%
+    \begin{tikzpicture}%
+      \draw (2pt,2pt) node [anchor=south west]{%
+\heiti 例题\@arabic{\c@section}.\thecex@mExam%
+      };
+      \draw[very thick] (2pt,3pt)--(\linewidth,3pt);
+      \draw[very thin] (2pt,0)--(\linewidth,0);
+    \end{tikzpicture}%
+    \vspace{5pt}%
+    \par%
+    \everypar={\Exam@every}%
+  }{%
+    \setboolean{cex@mEnv}{false}%
+    \nopagebreak%
+    \everypar={}%
+    \vspace{5pt}%
+    \begin{tikzpicture}%
+      \draw[very thin] (2pt,0)--(\linewidth,0);
+      \draw[very thick] (2pt,-3pt)--(\linewidth,-3pt) ;
+      \ifthenelse{\cnttest{\thecex@mNumber}{>}{\thecex@mExam}}{%
+\draw (\linewidth,0pt) node [anchor=south east]{%
+  例题\@arabic{\c@section}.\thecex@mExam---%
+  \@arabic{\c@section}.\thecex@mNumber%
+};
+      }{%
+\relax%
+      }%
+    \end{tikzpicture}%
+    \vspace{5pt}%
+    \setcounter{cex@mExam}{\thecex@mNumber}%
+    \setcounter{cex@mNumber}{\thecex@mExamS}%
+  }%
+}{}%
+\MakeRobustCommand{\section}%
+\MakeRobustCommand{\subsection}%
+\MakeRobustCommand{\subsubsection}%
+\@ifundefined{chapter}{}{%
+  \MakeRobustCommand{\chapter}%
+}%
+\MakeRobustCommand{\Answer}%
+\MakeRobustCommand{\Explain}%
+\@ifundefined{beamer@tempdim}{%
+  \MakeRobustCommand{\includegraphics}%
+}{%
+  \relax%
+}%
+\MakeRobustCommand{\quad}%
+\MakeRobustCommand{\sin}%
+\MakeRobustCommand{\cos}%
+\MakeRobustCommand{\tan}%
+\MakeRobustCommand{\cot}%
+\MakeRobustCommand{\sec}%
+\MakeRobustCommand{\csc}%
+\MakeRobustCommand{\arg}%
+\MakeRobustCommand{\arcsin}%
+\MakeRobustCommand{\arccos}%
+\MakeRobustCommand{\arctan}%
+\MakeRobustCommand{\sinh}%
+\MakeRobustCommand{\cosh}%
+\MakeRobustCommand{\tanh}%
+\MakeRobustCommand{\coth}%
+\MakeRobustCommand{\log}%
+\MakeRobustCommand{\lg}%
+\MakeRobustCommand{\ln}%
+\MakeRobustCommand{\exp}%
+\MakeRobustCommand{\lim}%
+\MakeRobustCommand{\limsup}%
+\MakeRobustCommand{\liminf}%
+\MakeRobustCommand{\max}%
+\MakeRobustCommand{\min}%
+\MakeRobustCommand{\sup}%
+\MakeRobustCommand{\inf}%
+\MakeRobustCommand{\det}%
+\MakeRobustCommand{\sqrt}%
+\MakeRobustCommand{\circ}%
+\MakeRobustCommand{\varliminf}%
+\MakeRobustCommand{\varinjlim}%
+\MakeRobustCommand{\varlimsup}%
+\MakeRobustCommand{\varprojlim}%
+\MakeRobustCommand{\cfrac}%
+\MakeRobustCommand{\tikz}%
+\DeclareRobustCommand{\draw}{}%
+\DeclareRobustCommand{\filldraw}{}%
+\DeclareRobustCommand{\clip}{}%
+\DeclareRobustCommand{\shade}{}%
+\DeclareRobustCommand{\shadedraw}{}%
+\DeclareRobustCommand{\coordinate}{}%
+\DeclareRobustCommand{\path}{}%
+\DeclareRobustCommand{\node}{}%
+%% This package consists of the file cexam.dtx
+%%
+%% End of file `cexam.sty'.

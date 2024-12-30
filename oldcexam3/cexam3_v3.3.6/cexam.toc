@@ -1,0 +1,55 @@
+\StopSpecialIndexModule 
+\contentsline {section}{\numberline {第1节}介绍}{2}{section.0.1}%
+\contentsline {section}{\numberline {第2节}宏包的安装}{2}{section.0.2}%
+\contentsline {section}{\numberline {第3节}宏包选项}{3}{section.0.3}%
+\contentsline {section}{\numberline {第4节}各题型输入格式}{3}{section.0.4}%
+\contentsline {subsection}{\numberline {4.1}选择题环境choices 和 xuanze}{4}{subsection.0.4.1}%
+\contentsline {subsection}{\numberline {4.2}填空题环境blanks 和 tiankong}{4}{subsection.0.4.2}%
+\contentsline {subsection}{\numberline {4.3}判断题环境judgements 和 panduan}{5}{subsection.0.4.3}%
+\contentsline {subsection}{\numberline {4.4}计算题环境calculations 和 jisuan}{5}{subsection.0.4.4}%
+\contentsline {subsection}{\numberline {4.5}证明题环境proofs 和zhengming}{6}{subsection.0.4.5}%
+\contentsline {subsection}{\numberline {4.6}首字母下沉命令\cs {lettersink}}{6}{subsection.0.4.6}%
+\contentsline {section}{\numberline {第5节}各题型排版效果展示}{6}{section.0.5}%
+\contentsline {subsection}{\numberline {5.1}选择题展示}{6}{subsection.0.5.1}%
+\contentsline {subsection}{\numberline {5.2}填空题展示}{7}{subsection.0.5.2}%
+\contentsline {subsection}{\numberline {5.3}判断题展示}{8}{subsection.0.5.3}%
+\contentsline {subsection}{\numberline {5.4}计算题展示}{8}{subsection.0.5.4}%
+\contentsline {subsection}{\numberline {5.5}证明题展示}{9}{subsection.0.5.5}%
+\contentsline {subsection}{\numberline {5.6}首字母下沉展示}{9}{subsection.0.5.6}%
+\contentsline {section}{\numberline {第6节}纯文本和数学文本分离}{9}{section.0.6}%
+\contentsline {section}{\numberline {第7节}获得指定宽度文本行数和高度}{9}{section.0.7}%
+\contentsline {section}{\numberline {第8节}段落形状生成}{10}{section.0.8}%
+\contentsline {section}{\numberline {第9节}图片格式化}{10}{section.0.9}%
+\contentsline {section}{\numberline {第10节}基本排版程序}{10}{section.0.10}%
+\value {tocdepth}=1\relax 
+\contentsline {section}{\numberline {第11节}cexam.sty代码实现}{12}{section.0.11}%
+\contentsline {subsection}{\numberline {11.1}缩写列表}{12}{subsection.0.11.1}%
+\contentsline {subsection}{\numberline {11.2}布尔值设置}{12}{subsection.0.11.2}%
+\contentsline {subsection}{\numberline {11.3}盒子设置}{13}{subsection.0.11.3}%
+\contentsline {subsection}{\numberline {11.4}长度设置}{14}{subsection.0.11.4}%
+\contentsline {subsection}{\numberline {11.5}计数器设置}{15}{subsection.0.11.5}%
+\contentsline {subsection}{\numberline {11.6}字符串变量}{16}{subsection.0.11.6}%
+\contentsline {subsection}{\numberline {11.7}宏包选项}{17}{subsection.0.11.7}%
+\contentsline {subsection}{\numberline {11.8}文本和数学分离}{18}{subsection.0.11.8}%
+\contentsline {subsection}{\numberline {11.9}行数测定}{19}{subsection.0.11.9}%
+\contentsline {subsection}{\numberline {11.10}排版文本高度和行数获得}{20}{subsection.0.11.10}%
+\contentsline {subsection}{\numberline {11.11}矩形行数获得}{20}{subsection.0.11.11}%
+\contentsline {subsection}{\numberline {11.12}形状生成}{22}{subsection.0.11.12}%
+\contentsline {subsection}{\numberline {11.13}图片格式化}{23}{subsection.0.11.13}%
+\contentsline {subsection}{\numberline {11.14}基本排版程序}{24}{subsection.0.11.14}%
+\contentsline {subsection}{\numberline {11.15}图片与文字的分离}{29}{subsection.0.11.15}%
+\contentsline {subsection}{\numberline {11.16}前缀设置}{31}{subsection.0.11.16}%
+\contentsline {subsection}{\numberline {11.17}选择题的排版}{32}{subsection.0.11.17}%
+\contentsline {subsection}{\numberline {11.18}填空题的排版}{40}{subsection.0.11.18}%
+\contentsline {subsection}{\numberline {11.19}判断题的排版}{42}{subsection.0.11.19}%
+\contentsline {subsection}{\numberline {11.20}计算题的排版}{43}{subsection.0.11.20}%
+\contentsline {subsection}{\numberline {11.21}答案和解析}{44}{subsection.0.11.21}%
+\contentsline {subsection}{\numberline {11.22}学生模式答案写出}{45}{subsection.0.11.22}%
+\contentsline {subsection}{\numberline {11.23}目录的设置}{46}{subsection.0.11.23}%
+\contentsline {subsection}{\numberline {11.24}章节命令加入答案写出}{46}{subsection.0.11.24}%
+\contentsline {subsection}{\numberline {11.25}各题型与答案和解析的自动选择}{48}{subsection.0.11.25}%
+\contentsline {subsection}{\numberline {11.26}用户接口的各题型输入}{50}{subsection.0.11.26}%
+\contentsline {subsection}{\numberline {11.27}派生排版命令}{55}{subsection.0.11.27}%
+\contentsline {section}{\numberline {第12节}ctrlwarning.sty代码实现}{56}{section.0.12}%
+\contentsline {section}{版本历史}{57}{section*.1}%
+\contentsline {section}{代码索引}{60}{section*.2}%

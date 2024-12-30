@@ -1,0 +1,1328 @@
+% \iffalse meta-comment ^^A 此行的\iffalse 和 \end{document}后的那个\fi配对,用以在获得说明文档时越过.ins 文件
+% !TeX program  = XeLaTeX
+% !TeX encoding = UTF-8
+%
+% cexam.dtx
+% Copyright 2016-2019 FengZhenhua <fengzhenhua@sina.cn>
+% 
+% 此版本是为了适应latex3,以便更好的维护系统，于2019年4月9日晚决定在空闲时间将已经由latex2e开发完成的cexam.sty,使用latex3改写全部代码.
+%
+%<*internal>
+\iffalse
+%</internal>
+%
+%<*readme>
+cexam
+=====
+
+`cexam` is a collection of macro packages and document classes
+for  Chinese examination.
+
+Authors and Contributors
+------------------------
+* Feng Zhenhua <fengzhenhua@sina.cn>
+
+Contributing
+------------
+This package was created by myself.
+
+Copyright and Licence
+---------------------
+    Copyright (C) 2017--2020
+    CTEX.ORG and any individual authors listed elsewhere in this file.
+    ----------------------------------------------------------------------
+
+    This work may be distributed and/or modified under the
+    conditions of the LaTeX Project Public License, either
+    version 1.3c of this license or (at your option) any later
+    version. This version of this license is in
+       http://www.latex-project.org/lppl/lppl-1-3c.txt
+    and the latest version of this license is in
+       http://www.latex-project.org/lppl.txt
+    and version 1.3 or later is part of all distributions of
+    LaTeX version 2005/12/01 or later.
+
+    This work has the LPPL maintenance status `maintained'.
+
+    The Current Maintainers of this work is Feng Zhenhua.
+
+    This package consists of the file cexam.dtx
+                and the derived files cexam.sty
+				      README.md (this file).
+  ------------------------------------------------------------------------------
+%</readme>
+%
+%<*internal>
+\fi
+%</internal>
+%
+%<*internal>
+\begingroup
+  \def\temp{LaTeX2e}
+\expandafter\endgroup\ifx\temp\fmtname\else 
+\csname fi\endcsname
+%</internal>
+%
+%<*install>
+\input ctxdocstrip %
+\askforoverwritefalse
+\keepsilent
+
+\preamble
+
+    Copyright (C) 2017--2020
+    CTEX.ORG and any individual authors listed elsewhere in this file.
+    ----------------------------------------------------------------------
+
+    This work may be distributed and/or modified under the
+    conditions of the LaTeX Project Public License, either
+    version 1.3c of this license or (at your option) any later
+    version. This version of this license is in
+       http://www.latex-project.org/lppl/lppl-1-3c.txt
+    and the latest version of this license is in
+       http://www.latex-project.org/lppl.txt
+    and version 1.3 or later is part of all distributions of
+    LaTeX version 2005/12/01 or later.
+
+    This work has the LPPL maintenance status `maintained'.
+
+    The Current Maintainers of this work is Feng Zhenhua.
+
+------------------------------------------------------------------------------
+\endpreamble
+%
+\postamble
+\endpostamble
+%
+\generate 
+{
+    \usedir{tex/latex/cexam}
+    \file{cexam.sty}	            {\from{\jobname.dtx}{package}}
+%</install>
+%<*internal>
+    \usedir{source/latex/cexam}
+    \file{\jobname.ins}                    {\from{\jobname.dtx}{install}}
+%</internal>
+%<*install>
+    \nopreamble\nopostamble
+    \usedir{doc/latex/cexam}
+    \file{README.md}                {\from{\jobname.dtx}{readme}}
+}
+
+\catcode32=12\space
+
+\Msg{***********************************************************}
+\Msg{                                                           }
+\Msg{ To finish the installation you have to move the following }
+\Msg{ file into proper directories searched by TeX:             }
+\Msg{                                                           }
+\Msg{ The recommended directory is TDS:tex/latex/ctex           }
+\Msg{                                                           }
+\Msg{     cexam.sty                                             }
+\Msg{                                                           }
+\Msg{ To produce the documentation run the file ctex.dtx        }
+\Msg{ through XeLaTeX.                                          }
+\Msg{                                                           }
+\Msg{ Happy TeXing!                                             }
+\Msg{                                                           }
+\Msg{***********************************************************}
+
+\endbatchfile 
+%</install>
+%<*internal>
+\fi  
+%</internal>
+%
+%<package>\NeedsTeXFormat{LaTeX2e}
+%<package>\RequirePackage{expl3,xparse,calc}
+%<package>\RequirePackage{xcolor}
+%<package>\GetIdInfo$Id: cexam.dtx v3.1.1(testing)  2019-08-27  ZhenhuaFeng  <fengzhenhua@sina.cn> $ {For chinese middle school examination}
+%<package>\ProvidesExplPackage{\ExplFileName}{\ExplFileDate}{\ExplFileVersion}{\ExplFileDescription}
+%
+%<*driver>
+\documentclass{ctxdoc}
+\EnableCrossrefs
+\CodelineIndex
+\RecordChanges
+%\OnlyDescription
+\begin{document}
+  \tableofcontents
+  \DocInput{\jobname.dtx}
+  \IndexLayout
+  \PrintChanges
+  \PrintIndex
+\end{document}
+%</driver>
+%
+% \fi ^^A 此\fi 和第1行的\iffalse 配对
+% 
+% \changes{v3.0.0}{2019/04/09}{开始使用\LaTeX3{}重构cexam.sty}
+% \changes{v3.0.1}{2019/07/31}{加入测行程序和形状生成程序,同时删除之前改写的代码}
+% \changes{v3.0.1}{2019/07/31}{缩写命名,加入缩写列表}
+% \changes{v3.1.0}{2019/08/25}{引入宏包xcolor}
+%
+% \CheckSum{0}
+%
+% \CharacterTable
+%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%   Digits        \0\1\2\3\4\5\6\7\8\9
+%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%   Dollar        \$     Percent       \%     Ampersand     \&
+%   Acute accent  \'     Left paren    \(     Right paren   \)
+%   Asterisk      \*     Plus          \+     Comma         \,
+%   Minus         \-     Point         \.     Solidus       \/
+%   Colon         \:     Semicolon     \;     Less than     \<
+%   Equals        \=     Greater than  \>     Question mark \?
+%   Commercial at \@     Left bracket  \[     Backslash     \\
+%   Right bracket \]     Circumflex    \^     Underscore    \_
+%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%   Right brace   \}     Tilde         \~}
+%
+% \title{中文试题排版cexam.dtx}
+% \author{冯振华}
+% \date{2019年5月8日}
+% \maketitle
+% \begin{abstract}
+% 我是一名高中物理教师,所以在工作中不可避免的会遇到输入数学公式的问题,同时我也希望能够将自己多年的备课及解决的疑难问题记录下来,以备学生们在复习时或者刚开始学习物理的同学作为教材的补充使用.历经各种困难,最后找到了\LaTeX{},发现了这个举世无双的神奇软件.2016年自学了一年的宏包编写，成功解决了高中的物理数学试卷的排版问题。但是之前直接写的sty文件和cls文件，实现了选择、填空、计算等题型的自动排版，同时实现批量处理各种题型、实现数学与图片的排版、自动生成beamer文档、生成答题卡、教师与学生不同模式排版。但是后来发现，功能越多代码越复杂，很难维护，同时也少了一份使用说明，所以写本文档，有两个目的：
+% 其一,方便代码的维护和升级;
+% 其二,方便参考此说明使用它排版试卷
+%
+% 由于在2018年我成功使用\LaTeX2e{} 完成了 \file{cexam.dtx} 文件, 但是对 \pkg{doc} 和 \pkg{docstrip} 理解的不够深入所以最初写成的 \file{cexam.dtx} 文件不是很规范,同时考虑到了 \CTeX{} 宏集使用 \LaTeX3{} 进行了重写,\LaTeX3{} 的语法更加友好,且已经很成熟了,所以我也决定对我的宏包 \pkg{cexam} 使用 \LaTeX3{}重写以便于更好的维护和拓展功能.考虑到实践的检验,所以开始不拟实现全部功能,仅写出核心功能,经过一段时间的检验后再逐步实现各项功能.
+% 
+% 由于立志通过北京大学的理论物理考试,同时工作又需要消耗大量的时间,一边学习一边工作一边搞 \pkg{cexam} 的开发,这很紧张.所以决定以考研大业为主,工作其次, \pkg{cexam} 改写工作于空闲时间进行.祝自己成功!!
+%
+% \end{abstract}
+%
+% \begin{documentation}
+%
+% \end{documentation}
+%
+% \StopEventually{}
+%\begin{implementation}
+% \clearpage
+% \section{代码实现}
+%
+% \subsection{缩写列表}
+% 
+% 由于编写过程中需要对函数命名,如果为了清析则可以使用全称来命名,但是这样做会导致程序的名字过长,输入不便同时会影响逻辑结构的表达清析.但是用过短的简写来命名,对于维护来说不是很方便,这也是我在此处列出缩写列表的目的所在,两者兼顾,同时所生成的宏包还不容易被破译.
+%
+%  \begin{center}
+%  \begin{tabular}{|*{12}{c|}}
+%  \hline
+%  简写&英文&中文&&简写&英文&中文&&简写&英文&中文\\
+%  \hline
+%  by& body&主体&& mk& make& 生成&& rec&rectangle&矩形\\
+%  \hline
+%  hd&head&头部&& sha&shape&形状&&sep&separate&分离\\
+%  \hline
+%  tl&tail&尾部&&txt &text &文本 &&mat &math &数学 \\
+%  \hline
+%  sub&subtraction&减去&&ps &parshape&形状&&equ &equation &公式 \\
+%  \hline
+%  \end{tabular}
+%  \end{center}
+%
+% \subsection{布尔值}
+%    \begin{macrocode}
+%<*package>
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%<@@=cexam>
+%    \end{macrocode}
+%    \begin{variable}[added=2019-05-11]{\g_@@_sep_by_bool,\g_@@_sep_tl_bool}
+%  这两个布尔值在数学分离模式中标志数学模式是否文本串中有数学公式,字符串分离后尾部是否为空.
+%    \begin{macrocode}
+\bool_new:N \g_@@_sep_by_bool
+\bool_new:N \g_@@_sep_tl_bool
+%    \end{macrocode}
+%    \end{variable}
+%
+%    \begin{variable}[added=2019-08-14]{\g_@@_hds_bool,\g_@@_bys_bool}
+%  此二个布尔值用来判断测行程序在头部停止还是在数学部分停止
+%    \begin{macrocode}
+\bool_new:N \g_@@_hds_bool
+\bool_new:N \g_@@_bys_bool
+%    \end{macrocode}
+%    \end{variable}
+%
+%
+%    \begin{variable}[added=2019-08-25]{\cexam_nopic_bool}
+%  此二个布尔值用来判断图片与文字分离时,题干中是否存在图片.如果为真则无图片,如果为假,则有图片.
+%    \begin{macrocode}
+\bool_new:N \cexam_nopic_bool
+%    \end{macrocode}
+%    \end{variable}
+%
+% \subsection{盒子}
+%
+% \begin{variable}[added=2019-05-14]{\cexam_txtht_box}
+% 此盒子用来在计算行数时获得对应文字的高度,其应用于 \cs{cexam_get_txtht:nno}中.
+%    \begin{macrocode}
+\box_new:N \cexam_txtht_box
+%    \end{macrocode}
+% \end{variable}
+%
+% \begin{variable}[added=2019-08-14]{\cexam_picture_box}
+% 此盒子用来存储图片,以获得图片的各种尺寸.
+%    \begin{macrocode}
+\box_new:N \cexam_picture_box 
+%    \end{macrocode}
+% \end{variable}
+%
+% \begin{variable}[added=2019-08-24]{\sel_option_box}
+% \changes{v3.0.9}{2019/08/24}{新增选择题选项最大长度获取盒子}
+% 此盒子用来存储选择题中的选项,以获得选项单行排版时的宽度.
+%    \begin{macrocode}
+\box_new:N \sel_option_box
+%    \end{macrocode}
+% \end{variable}
+%
+% \begin{variable}[added=2019-08-25]{\cexam_option_box}
+% \changes{v3.1.0}{2019/08/25}{新增选项格式化盒子}
+% 此盒子用来存储格式化的选项,用来的最终排版时生成对应的段落格式.
+%    \begin{macrocode}
+\box_new:N \cexam_option_box
+%    \end{macrocode}
+% \end{variable}
+%
+% \begin{variable}[added=2019-08-25]{\sep_temp_box}
+% \changes{v3.1.0}{2019/08/25}{新增图片分离临时盒子}
+% 此盒子用来在分离图片和文本时临时存储图片,以判定图片是否为空.
+%    \begin{macrocode}
+\box_new:N \sep_temp_box
+%    \end{macrocode}
+% \end{variable}
+%
+% \subsection{长度}
+%
+% \begin{variable}[added=2019-05-14]{\cexam_txt_sub_dim,\cexam_mat_sub_dim}
+% \changes{v3.0.7}{2019/08/15}{修改数学单减高度为1.8倍行距}
+% 这个长度是在行数统计程序中,计算正常文本和数学文本时所需要递减的高度.注意,单减数学高度 \cs{cexam_mat_sub_dim} 不是一个定值,如果设置过大则会导致存在数学公式时测行数减少,因为一个数学公式占据三行,但是在排版是程序会调整最佳的值.开始时我设置为2倍的行距,但是测行减少了一行.此导致的bug经过一整天的分析,最终在8月15号晚上解决,调整到1.8倍时可以得到正确答案.所以此处记录之.
+%    \begin{macrocode}
+\dim_new:N \cexam_txt_sub_dim  
+\dim_new:N \cexam_mat_sub_dim 
+\dim_set:Nn \cexam_txt_sub_dim{\baselineskip}
+\dim_set:Nn \cexam_mat_sub_dim{1.8\baselineskip}
+%    \end{macrocode}
+% \end{variable}
+% \begin{variable}[added=2019-07-31]{\rec_tempht_dim}
+% 此长度变量用来在计算行数时,临时存储文本的高度.
+%    \begin{macrocode}
+\dim_new:N \rec_tempht_dim
+%    \end{macrocode}
+% \end{variable}
+%
+% \begin{variable}[added=2019-07-31]{\cexam_psrin_dim,\cexam_pslin_dim,\cexam_pswd_dim}
+% 此三个变量用来在形状生成程序中存储右缩进,左缩进,行宽.
+%    \begin{macrocode}
+\dim_new:N \cexam_psrin_dim 
+\dim_new:N \cexam_pslin_dim 
+\dim_new:N \cexam_pswd_dim 
+%    \end{macrocode}
+% \end{variable}
+%
+% \begin{variable}[added=2019-08-14]{\cexam_picht_dim,\cexam_picwd_dim,\cexam_paperht_dim}
+% 此三个变量用来处理图片时记录图片的高,宽.第三个长是为了进行三级排版时设置的.
+%    \begin{macrocode}
+\dim_new:N \cexam_picht_dim
+\dim_new:N \cexam_picwd_dim
+\dim_new:N \cexam_paperht_dim
+\dim_set:Nn \cexam_paperht_dim {\textheight}
+%    \end{macrocode}
+% \end{variable}
+%
+% \begin{variable}[added=2019-08-24]{\cexam_fmtwd_dim}
+% \changes{v3.0.9}{2019/08/24}{增加图片居中排版宽度}
+% 此长度用来存储图片居中排版时,生成图片格式的段落盒子的宽度.为确保程序的可读性,所以单独设置了这一宽度.
+%    \begin{macrocode}
+\dim_new:N \cexam_fmtwd_dim
+%    \end{macrocode}
+% \end{variable}
+%
+% \begin{variable}[added=2019-08-24]{\sel_lmax_dim}
+% \changes{v3.0.9}{2019/08/24}{选择题最大选项长度}
+% 此长度用来存储选择题中四个选项的最大长度
+%    \begin{macrocode}
+\dim_new:N \sel_lmax_dim
+\dim_set:Nn \sel_lmax_dim {0pt}
+%    \end{macrocode}
+% \end{variable}
+%
+% \begin{variable}[added=2019-08-25]{\sel_optwd_dim}
+% \changes{v3.1.0}{2019/08/25}{选择题选项的行宽}
+% 此长度用来存储选择题四个选项排版时的行宽,默认值为\cs{linewidth}
+%    \begin{macrocode}
+\dim_new:N \sel_optwd_dim
+\dim_set:Nn \sel_optwd_dim {\linewidth}
+\dim_sub:Nn \sel_optwd_dim {\ccwd}
+%    \end{macrocode}
+% \end{variable}
+%
+% \subsection{计数器}
+%
+% \begin{variable}[added=2019-07-31]{\cexam_psnum_int}
+% 此计数器用来在生成段落形状时的行数.
+%    \begin{macrocode}
+\int_new:N \cexam_psnum_int 
+%    \end{macrocode}
+% \end{variable}
+%
+% \begin{variable}[added=2019-08-03]{\cexam_equ_int}
+% 此计数器用来在测行时,数学公式的计数器会增加,所以此计数器对数学公式部分取得高度后数学公式计数器的还原.
+%    \begin{macrocode}
+\int_new:N \cexam_equ_int
+%    \end{macrocode}
+% \end{variable}
+%
+% \begin{variable}[added=2019-08-14]{\cexam_hdnum_int,\cexam_bynum_int,\cexam_numtemp_int}
+% 此三计数器分别记录头部和数学部分停止时已经排版的行数,临时计算行数
+%    \begin{macrocode}
+\int_new:N  \cexam_hdnum_int
+\int_new:N  \cexam_bynum_int
+\int_new:N  \cexam_numtemp_int
+%    \end{macrocode}
+% \end{variable}
+%
+% \begin{variable}[added=2019-08-14]{\cexam_picmath_int,\cexam_totalnum_int,\cexam_stand_int}
+% 此三计数器分别记录图片的高度所生成的行数,图片之后一级,二级缩进的总行数,标准化图片高度为行距的整数倍时所用计数器.
+%    \begin{macrocode}
+\int_new:N \cexam_picmath_int
+\int_new:N \cexam_totalnum_int
+\int_new:N \cexam_stand_int 
+%    \end{macrocode}
+% \end{variable}
+%
+% \subsection{文本和数学分离}
+% 
+% \begin{macro}[added=2019-05-10]{\cexam_sep_i:n , \cexam_sep_ii:n, \cexam_sep_iii:n}
+%
+% 三个基本数学模式分离,数学模式符号不处于字符串两端的处理
+%
+%    \begin{macrocode}
+\cs_new:Npn \cexam_sep_i:n  #1$$#2$$#3\scan_stop:
+{
+  \cs_set:Nn \sep_hd_data: {#1}
+  \cs_set:Nn \sep_by_data: {$$#2$$}
+  \cs_set:Nn \sep_tl_data: {#3}
+}
+
+\cs_new:Npn \cexam_sep_ii:n #1\[#2\]#3\scan_stop:
+{
+  \cs_set:Nn \sep_hd_data: {#1}
+  \cs_set:Nn \sep_by_data: {\[#2\]}
+  \cs_set:Nn \sep_tl_data: {#3}
+}
+
+\cs_new:Npn \cexam_sep_iii:n #1\begin#2\end#3#4\scan_stop:
+{
+  \cs_set:Nn \sep_hd_data: {#1}
+  \cs_set:Nn \sep_by_data: {\begin#2\end{#3}}
+  \cs_set:Nn \sep_tl_data: {#4}
+}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}[added=2019-05-10]{\cexam_sep_mk:n}
+% 将三个数学模式合并为一个处理程序
+%    \begin{macrocode}
+\cs_new:Npn \cexam_sep_mk:n #1\scan_stop:
+{
+  \str_if_in:nnTF {#1}{$$}%$$
+  {\cexam_sep_i:n #1\scan_stop:}
+  {
+    \str_if_in:nnTF {#1}{\[}%\]
+      {\cexam_sep_ii:n #1\scan_stop:}
+      {
+	  \str_if_in:nnTF {#1}{\begin}
+	  {\cexam_sep_iii:n #1\scan_stop:}
+	  {}
+      }
+  }
+}
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}[added=2019-05-10]{\cexam_sep_isin:nn}
+% 加入三个数学模式符号处于字符串两端的处理
+%    \begin{macrocode}
+  \cs_new:Npn \cexam_sep_isin:nn #1#2
+  {
+    \str_if_in:nnTF {*#1}{*#2}
+    {
+      \bool_set_true:N \g_@@_sep_by_bool
+      \str_if_in:nnTF {#1*}{#2*}
+      {
+	\cs_set:Nn \sep_hd_data: {}
+	\cs_set:Nn \sep_by_data: {}
+	\cs_set:Nn \sep_tl_data: {}
+	\bool_set_false:N \g_@@_sep_tl_bool
+      }
+      {
+	\cexam_sep_mk:n *#1\scan_stop:
+	\cs_set:Nn \sep_hd_data: {}
+	\bool_set_true:N \g_@@_sep_tl_bool
+      }
+    }
+    {
+      \str_if_in:nnTF {#1*}{#2*}
+      {
+	\bool_set_true:N \g_@@_sep_by_bool
+	\cexam_sep_mk:n #1*\scan_stop:
+	\cs_set:Nn \sep_tl_data: {}
+	\bool_set_false:N \g_@@_sep_tl_bool
+      }
+      {
+	\str_if_in:nnTF {#1}{#2}
+	{
+	  \bool_set_true:N \g_@@_sep_by_bool
+	  \cexam_sep_mk:n #1\scan_stop:
+	  \bool_set_true:N \g_@@_sep_tl_bool
+	}{}
+      }
+    }
+  }
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}[added=2019-05-10]{\cexam_sep:n}
+% 加入数学和纯文本模式混合时的分离功能,自动判断是否存在数学模式,尾部是否为空
+%    \begin{macrocode}
+  \cs_new:Npn \cexam_sep:n #1 \scan_stop:
+  {
+    \str_if_in:nnTF {#1}{$$}%$$
+    {
+      \cexam_sep_isin:nn {#1}{$$}%$$
+    }
+    {
+      \str_if_in:nnTF {#1}{\[}%\]
+	{
+	  \cexam_sep_isin:nn {#1}{\[}%\]
+	  }
+	  {
+	    \str_if_in:nnTF {#1}{\begin}%\end
+	    {
+	      \cexam_sep_isin:nn {#1}{\begin}%\end
+	    }
+	    {
+	      \cs_set:Nn \sep_hd_data: {#1}
+	      \cs_set:Nn \sep_by_data: {}
+	      \cs_set:Nn \sep_tl_data: {}
+	      \bool_set_false:N \g_@@_sep_tl_bool
+	      \bool_set_false:N \g_@@_sep_by_bool
+	    }
+	  }
+      }
+  }
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsection{行数测定}
+%
+% \begin{macro}[added=2019-07-30]{\cexam_get:nNnN}
+% 四个参数依次为:1计数器增量,2计数器,3行减量,4总减行高.这样设计的依据是,使待求量尽量放在前面,则在后面使用时可以在追加资料的情况下,不同程序中相同位置表示相同的量,这样可以增加程序的可读性.
+%    \begin{macrocode}
+  \cs_new:Npn \cexam_get:nNnN #1#2#3#4
+  {
+    \dim_while_do:nNnn {#4}>{0pt}
+    {
+      \dim_sub:Nn {#4}{#3}
+      \int_add:Nn {#2}{#1}
+    }
+  }
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsection{排版文本高度获得}
+%
+% \begin{macro}[added=2019-07-30]{\cexam_get_txtht:nno}
+% \changes{v3.0.2}{2019/08/03}{增加equation计数器的还原}
+%
+% 三个参数依次为:1高(所要求的量),2宽,3文本. 此程序产生文本的总体高度.由于在对数学部分取对应高度时会使用\cs{parbox}来预排版,而数学计数器是一个全局计数器,它的数值会增加,所以先取得计数器之值,然后预排版取得数学文本高度,再还原数学计数器之值,最终以正确的计数器参与正式排版.
+%
+%    \begin{macrocode}
+  \cs_new:Npn \cexam_get_txtht:nno #1#2#3
+  {
+    \int_set:Nn \cexam_equ_int {\int_use:N\c@equation}
+    \hbox_set:Nn \cexam_txtht_box 
+    {\parbox{#2}{#3}}
+    \int_set:Nn \c@equation {\int_use:N \cexam_equ_int}
+    \dim_set:Nn {#1}{\box_dp:N \cexam_txtht_box}
+    \dim_add:Nn {#1}{\box_ht:N \cexam_txtht_box}
+  }
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsection{行数测定}
+%
+% \begin{macro}[added=2019-07-31]{\cexam_get_rec_i:nNnNnn}
+% \changes{v3.0.3}{2019/08/12}{修改为7参量,增加左缩进和右缩进}
+%
+% 六个参数依次为:1计数器增量,2计数器,3行减量,4总减行高,5左缩进,6右缩进,7文本
+%
+%    \begin{macrocode}
+  \cs_new:Npn \cexam_get_rec_i:nNnNnnn #1#2#3#4#5#6#7
+  {
+    \dim_set:Nn \cexam_pswd_dim {\linewidth}
+    \dim_sub:Nn \cexam_pswd_dim {#5}
+    \dim_sub:Nn \cexam_pswd_dim {#6}
+    \cexam_get_txtht:nno {\rec_tempht_dim}{\cexam_pswd_dim}{#7}
+  \dim_compare:nNnTF {\rec_tempht_dim} < {#4}
+    {
+      \dim_sub:Nn #4 {\rec_tempht_dim}
+      \cexam_get:nNnN {#1}{#2}{#3}{\rec_tempht_dim}
+    }
+    {\cexam_get:nNnN {#1}{#2}{#3}{#4}}
+  }
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}[added=2019-07-31]{\cexam_get_rec:nnnn}
+% \changes{v3.0.4}{2019/08/14}{修改为六参量函数}
+% \changes{v3.0.7}{2019/08/15}{改进数学结尾时测行}
+% \changes{v3.1.0}{2019/08/25}{精简了三行代码}
+%
+% 六个参数依次为:1计数器,2矩形高,3矩形宽,4左缩进,5右缩进,6文本(含数学文本).此程序于2019年7月30日成功进行了重构,其比之前的程序精炼了许多,逻辑更加清析.2019年8月12日改进为更加可靠的参数形式.同时追加了排完后记录停止时行数及停止时是文本排版还是数学排版.
+%
+% 在本程序的第四步,原本所设置的代码是测试一下尾部是非空,如果非空则对6文本展开一次.默认尾部是空的,所以第一次执行测行时不展开,当第二次进入循环时再展开一次6文本.虽然这样逻辑上清析,但是在2018年8月25日测试程序时发现去掉后没有影响,所以去掉了这步判断,直接进行一次展开.
+%
+%    \begin{macrocode}
+  \cs_new:Npn \cexam_get_rec:nnnnnn #1#2#3#4#5#6
+  {
+    \dim_set:Nn \cexam_pslin_dim {#4}
+    \dim_set:Nn \cexam_psrin_dim {#3}
+    \dim_add:Nn \cexam_psrin_dim {#5}
+    \exp_args:No \cexam_sep:n #6 \scan_stop: 
+    \int_set:Nn \cexam_numtemp_int {\int_use:N #1}
+    \cexam_get_rec_i:nNnNnnn {1}{#1}{\cexam_txt_sub_dim}{#2}
+    {\cexam_pslin_dim}{\cexam_psrin_dim}{\sep_hd_data:}
+    \int_set:Nn \cexam_hdnum_int {\int_use:N #1}
+    \int_sub:Nn \cexam_hdnum_int {\cexam_numtemp_int}
+    \dim_compare:nNnTF {#2} >{0pt}
+    {
+      \bool_if:NTF \g__cexam_sep_by_bool
+      {
+	\dim_compare:nNnTF {#2} > {\cexam_mat_sub_dim}
+	{
+	  \int_add:Nn #1 {3}
+	  \dim_sub:Nn #2{\cexam_mat_sub_dim}
+	  \int_set:Nn \cexam_bynum_int{0}
+	}
+	{
+	\dim_compare:nNnTF {#2} > {.5\cexam_txt_sub_dim}
+	  {
+	    \int_add:Nn #1 {2}
+	    \dim_set:Nn #2{0pt}
+	    \int_set:Nn \cexam_bynum_int{1}
+	  }
+	  { 
+	    \int_add:Nn #1{2} 
+	    \dim_set:Nn #2{0pt}
+	    \int_set:Nn \cexam_bynum_int{1}
+	  }
+	}
+	\dim_compare:nNnTF {#2} > {0pt}{}
+	{\bool_set_true:N \g__cexam_bys_bool}
+      }{\relax}
+    }{
+      \bool_set_true:N \g__cexam_hds_bool
+    }
+    \dim_compare:nNnTF {#2} > {0pt}
+    {
+      \bool_if:NTF \g__cexam_sep_tl_bool
+      {
+	\cexam_get_rec:nnnnnn {#1}{#2}{#3}
+	{#4}{#5}{\sep_tl_data:}
+      }{\relax}
+    }{\relax}
+  }
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsection{形状生成}
+%
+% \begin{macro}[added=2019-07-31]{\cexam_shad:}
+% 此命令用来存储所生成的段落形状,初始为空.
+%    \begin{macrocode}
+  \cs_new:Nn \cexam_shad: {}
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}[added=2019-07-31]{\cexam_sha_cape:}
+% 为了保证生成正确的形状,此处定义不可展开的空格.在\LaTeX3 的语法中忽略一切空格,但是在\cs{pasha}中又必须使用空格分开各行缩进和行宽,测试后发现\~{} 可以达到在\LaTeX3 的目标.但是本身\~{} 是一个活动符号,在生成形状时需要逐级展开,它会消失,所以此处用了一个不可展开的命令来代替它.
+%    \begin{macrocode}
+  \cs_new_protected:Nn \cexam_sha_cape:{~}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}[added=2019-08-14]{\cexam_sha_mk_i:nnnn}
+% \changes{v3.0.5}{2019/08/14}{修改原来的排版程序更加规范}
+%
+% 四个参数依次为:1计数器,2左缩进,3行宽,4右缩进
+%    \begin{macrocode}
+  \cs_new:Npn \cexam_sha_mk_i:nnnn #1#2#3#4
+  {
+    \dim_set:Nn \cexam_pslin_dim {#2}
+    \dim_set:Nn \cexam_psrin_dim {#4}
+    \dim_set:Nn \cexam_pswd_dim {#3}
+    \dim_sub:Nn \cexam_pswd_dim {#2}
+    \dim_sub:Nn \cexam_pswd_dim {#4}
+    \int_while_do:nNnn {#1} > {0}
+    {
+      \int_sub:Nn {#1}{1}
+      \exp_args:NNx\cs_set:Nn \cexam_shad:
+      {\cexam_shad:\cexam_sha_cape: \dim_use:N \cexam_pslin_dim}
+      \exp_args:NNx\cs_set:Nn \cexam_shad:
+      {\cexam_shad:\cexam_sha_cape: \dim_use:N \cexam_pswd_dim}
+    }
+  }
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}[added=2019-08-14]{\cexam_sha_mk_ii:nnnnnnn}
+% 四个参数依次为:1计数器,2一级左缩进,3一级行宽,4一级右缩进,5二级左缩进,6二级行宽,7二级右缩进
+%    \begin{macrocode}
+  \cs_new:Npn \cexam_sha_mk_ii:nnnnnnn #1#2#3#4#5#6#7
+  {
+    \int_add:Nn{#1}{1}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:{\cexam_sha_cape: \int_use:N #1}
+    \int_sub:Nn{#1}{1}
+    \cexam_sha_mk_i:nnnn {#1}{#2}{#3}{#4}
+    \dim_set:Nn \cexam_pslin_dim {#5}
+    \dim_set:Nn \cexam_psrin_dim {#7}
+    \dim_set:Nn \cexam_pswd_dim {#6}
+    \dim_sub:Nn \cexam_pswd_dim {#5}
+    \dim_sub:Nn \cexam_pswd_dim {#7}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_shad:\cexam_sha_cape: \dim_use:N \cexam_pslin_dim}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_shad:\cexam_sha_cape: \dim_use:N \cexam_pswd_dim}
+  }
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsection{图片格式化}
+%
+% \changes{v3.0.7}{2019/08/15}{删除命令\cs{cexam_stand_dim:n}}
+% \changes{v3.0.7}{2019/08/15}{删除命令\cs{cexam_fmt_pic:n}}
+%
+% \begin{macro}[added=2019-08-15]{\cexam_fmt_fig:}
+% \changes{v3.0.8}{2019/08/15}{增加图片编码格式}
+% \changes{v3.1.0}{2019/08/25}{去除图片标号插入文本中,黑体格式超出范围的bug}
+%
+% 此命令存储了图片编号的格式,如果需要修改,则可以修改这个命令.
+%    \begin{macrocode}
+  \cs_new:Nn \cexam_fmt_fig:{{\bf Figure:~\thefigure}}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}[added=2019-08-15]{\cexam_fmt_pic:nn}
+% \changes{v3.0.7}{2019/08/15}{支持图片带编号和左右排版}
+% \changes{v3.0.9}{2019/08/24}{增加图片居中排版格式}
+% \changes{v3.0.9}{2019/08/24}{图片格式化增加编号增长命令}
+%
+% 此程序用来格式化图片,获得图片的宽,高,生成参与排版的零宽度盒子.此命令暂时不完备,待以后充实.
+%    \begin{macrocode}
+ \cs_new:Npn \cexam_fmt_pic:nn #1#2
+ { 
+   \int_add:Nn \c@figure {1}
+   \hbox_set:Nn \cexam_picture_box {#2}
+   \dim_set:Nn {\cexam_picwd_dim}{\box_wd:N \cexam_picture_box}
+   \str_if_in:nnTF {#1}{*}
+   {\relax}
+   {
+     \hbox_set:Nn \cexam_picture_box 
+     {
+       \parbox[b]{\cexam_picwd_dim}{
+	 #2
+	 \newline
+	 \centerline{\cexam_fmt_fig:}
+       }
+     }
+   }
+%    \end{macrocode}
+% 获得高度
+%    \begin{macrocode}
+   \dim_set:Nn {\cexam_picht_dim}{\box_ht:N \cexam_picture_box}
+   \dim_add:Nn {\cexam_picht_dim}{\box_dp:N \cexam_picture_box}
+%    \end{macrocode}
+%
+% 获得图片排版形状
+%    \begin{macrocode}
+   \str_if_in:nnTF {#1}{l}
+   {
+     \hbox_set:Nn \cexam_picture_box
+     {
+       \raisebox{-\totalheight-.8\ccwd}[0pt][0pt]{
+	 \parbox[b]{\cexam_picwd_dim}{\hbox_unpack:N \cexam_picture_box \hfill}
+       }
+     }
+   }
+   {
+     \str_if_in:nnTF {#1}{r}
+     {
+       \hbox_set:Nn \cexam_picture_box
+       {\raisebox{-\totalheight-.8\ccwd}[0pt][0pt]{
+	   \parbox[b]{\linewidth}{\hfill \hbox_unpack:N \cexam_picture_box}
+	 }
+       }
+     }
+     {
+       \str_if_in:nnTF {#1}{c}
+       {
+	 \hbox_set:Nn \cexam_picture_box
+	 {
+	   \parbox[b]{\cexam_fmtwd_dim}{\centerline{\hbox_unpack:N \cexam_picture_box}}
+	 }
+       }
+       {\relax}
+     }
+   }
+ }
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsection{基本排版程序}
+%
+% \begin{macro}[added=2019-08-14]{\cexam_type_i:nnnnnnn}
+% \changes{v3.0.6}{2019/08/14}{创建二级缩排程序}
+% \changes{v3.0.7}{2019/08/15}{修改为七参量函数,增加图片位置格式控制}
+%
+% 七个参量1.图片位置(l左,r右),2.图片,3.一级左缩进,4一级右缩进,5.二级左缩进,6二级右缩进,7文本.此程序用来处理二级缩进的排版,这是在排版试题时会遇到的大多数情况.
+%
+%    \begin{macrocode}
+  \cs_new:Npn \cexam_type_i:nnnnnnn #1#2#3#4#5#6#7
+  {
+%    \end{macrocode}
+%
+% 格式化图片
+%    \begin{macrocode}
+    \cexam_fmt_pic:nn {#1}{#2}
+%    \end{macrocode}
+%
+% 生成一级行数
+%    \begin{macrocode}
+    \cexam_get_rec:nnnnnn 
+    {\cexam_picmath_int}
+    {\cexam_picht_dim}{\cexam_picwd_dim}
+    {#3}{#4}{#7}
+%    \end{macrocode}
+%
+% 生成左缩进形状
+%    \begin{macrocode}
+    \str_if_in:nnTF {#1}{l}
+    {
+      \dim_set:Nn \cexam_pslin_dim {#3}
+      \dim_set:Nn \cexam_psrin_dim {#4}
+      \dim_set:Nn \cexam_pswd_dim {\linewidth}
+      \dim_add:Nn \cexam_pslin_dim {\cexam_picwd_dim}
+      \cexam_sha_mk_ii:nnnnnnn 
+      {\cexam_picmath_int} 
+      {\cexam_pslin_dim}{\cexam_pswd_dim}{\cexam_psrin_dim} 
+      {#5}{\linewidth}{#6} 
+      \dim_add:Nn \cexam_picwd_dim{#3}
+    }
+    {
+%    \end{macrocode}
+%
+% 生成右缩进形状
+%    \begin{macrocode}
+      \dim_set:Nn \cexam_pslin_dim {#3}
+      \dim_set:Nn \cexam_psrin_dim {#4}
+      \dim_set:Nn \cexam_pswd_dim {\linewidth}
+      \dim_add:Nn \cexam_psrin_dim {\cexam_picwd_dim}
+      \cexam_sha_mk_ii:nnnnnnn 
+      {\cexam_picmath_int} 
+      {\cexam_pslin_dim}{\cexam_pswd_dim}{\cexam_psrin_dim} 
+      {#5}{\linewidth}{#6} 
+    }
+%    \end{macrocode}
+%
+% 执行排版任务
+%    \begin{macrocode}
+    \tex_parshape:D \cexam_shad:
+    \box_use:N \cexam_picture_box
+    #7
+  }
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}[added=2019-08-14]{\cexam_type_ii:nnnnnnnnn}
+%
+% \changes{v3.0.6}{2019/08/14}{增加三级缩排程序}
+% \changes{v3.0.7}{2019/08/15}{增加图片左右位置控制}
+% \changes{v3.0.7}{2019/08/15}{整理三级缩进代码}
+% \changes{v3.0.9}{2019/08/24}{增加对\cs{cexam_paperht_dim}的付值}
+% \changes{v3.1.0}{2019/08/25}{由于精简了测行程序,所以此程序也精简掉了一行代码}
+% \changes{v3.1.1}{2019/08/27}{去除了若尾部为空,多一行的bug}
+%
+% 九个参量:1.图片位置(l左,r右),2图片,3一级缩进,4一级右缩进,5二级左缩进,6二级右缩进,7三级左缩进,8三级右缩进,9文本.此程序用来排版三级缩进的情况,一般遇到的较少,在选择题排版时如果题干总高度超过图片时,会遇到此处的情况.
+%    \begin{macrocode}
+  \cs_new:Npn \cexam_type_ii:nnnnnnnnn #1#2#3#4#5#6#7#8#9
+  {
+    \dim_set:Nn \cexam_paperht_dim {\textheight}
+%    \end{macrocode}
+%
+% 格式化图片
+%    \begin{macrocode}
+    \cexam_fmt_pic:nn {#1}{#2}
+%    \end{macrocode}
+%
+% 生成图片所占行数
+%    \begin{macrocode}
+    \cexam_get_rec:nnnnnn {\cexam_picmath_int}
+    {\cexam_picht_dim}{\cexam_picwd_dim}
+    {#3}{#4}{#9}
+%    \end{macrocode}
+%
+% 排版图片以文字head结尾
+%    \begin{macrocode}
+    \bool_if:NTF \g__cexam_hds_bool
+    {
+%    \end{macrocode}
+%
+% 生成前二级的排版形状
+%    \begin{macrocode}
+      \int_set:Nn \cexam_numtemp_int {\int_use:N \cexam_hdnum_int}
+      \dim_set:Nn \cexam_pslin_dim {#3}
+      \dim_set:Nn \cexam_psrin_dim {\cexam_picwd_dim}
+      \dim_add:Nn \cexam_psrin_dim {#4}
+      \cexam_sha_mk_ii:nnnnnnn {\cexam_hdnum_int}
+      {\cexam_pslin_dim}{\linewidth}{\cexam_psrin_dim}
+      {#5}{\linewidth}{#6}
+%    \end{macrocode}
+%
+% 测量前两级排版的高度
+%    \begin{macrocode}
+      \dim_set:Nn \cexam_pswd_dim {\linewidth}
+      \dim_sub:Nn \cexam_pswd_dim {#3}
+      \dim_sub:Nn \cexam_pswd_dim {#4}
+      \cexam_get_txtht:nno {\rec_tempht_dim}
+      {\cexam_pswd_dim}
+      {
+	\tex_parshape:D \cexam_shad:
+	\sep_hd_data:
+      }
+%    \end{macrocode}
+%
+% 计算文字排版后的行数
+%    \begin{macrocode}
+      \int_set:Nn \cexam_hdnum_int {0}
+      \cexam_get:nNnN {1}{\cexam_hdnum_int}
+      {\cexam_txt_sub_dim}{\rec_tempht_dim}
+      \int_sub:Nn \cexam_hdnum_int {\cexam_numtemp_int}
+      \int_set:Nn \cexam_numtemp_int {\int_use:N \cexam_hdnum_int}
+      \int_sub:Nn \cexam_hdnum_int {\cexam_numtemp_int}
+%    \end{macrocode}
+%
+% 如果数学模式开,表明之后的排版首先遇到数学公式,则计算此数学公式行数
+%    \begin{macrocode}
+      \bool_if:NTF \g__cexam_sep_by_bool
+      {
+	\cexam_get_txtht:nno {\rec_tempht_dim}{\cexam_pswd_dim}{\sep_by_data:}
+	\cexam_get:nNnN {3}{\cexam_numtemp_int}
+	{\cexam_mat_sub_dim}{\rec_tempht_dim}
+      }{\relax}
+    }{\relax}
+%    \end{macrocode}
+%
+% 如果前两级排版以数学排版结束,则计算已经排版行数
+%    \begin{macrocode}
+    \bool_if:NTF \g__cexam_bys_bool
+    {
+      \int_set:Nn \cexam_numtemp_int {\int_use:N \cexam_bynum_int}
+    }{\relax}
+%    \end{macrocode}
+%
+% 获得尾部行数,此处只有当尾部存在时才计算行数,否则不需要计算.
+%    \begin{macrocode}
+    \bool_if:NTF \g__cexam_sep_tl_bool
+    {
+      \cexam_get_rec:nnnnnn {\cexam_numtemp_int}
+      {\cexam_paperht_dim}{0pt}
+      {#5}{#6}{\sep_tl_data:}
+    }
+    {\relax}
+%    \end{macrocode}
+%
+% 生成整体形状
+%    \begin{macrocode}
+    \int_set:Nn \cexam_totalnum_int {\int_use:N \cexam_picmath_int}
+    \int_add:Nn \cexam_totalnum_int {\int_use:N \cexam_numtemp_int}
+    \int_add:Nn \cexam_totalnum_int {1}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_sha_cape: \int_use:N \cexam_totalnum_int}
+%    \end{macrocode}
+%
+% 生成图片左排形状
+%    \begin{macrocode}
+    \str_if_in:nnTF {#1}{l}
+    {
+      \dim_set:Nn \cexam_pslin_dim {#3}
+      \dim_add:Nn \cexam_pslin_dim {\cexam_picwd_dim}
+      \dim_set:Nn \cexam_psrin_dim {#4}
+      \cexam_sha_mk_i:nnnn {\cexam_picmath_int}
+      {\cexam_pslin_dim}{\linewidth}{\cexam_psrin_dim}
+      \dim_add:Nn \cexam_picwd_dim{#3}
+    }
+%    \end{macrocode}
+%
+% 生成图片右排形状
+%    \begin{macrocode}
+    {
+      \dim_set:Nn \cexam_pslin_dim {#3}
+      \dim_set:Nn \cexam_psrin_dim {#4}
+      \dim_add:Nn \cexam_psrin_dim {\cexam_picwd_dim}
+      \cexam_sha_mk_i:nnnn {\cexam_picmath_int}
+      {\cexam_pslin_dim}{\linewidth}{\cexam_psrin_dim}
+    }
+%    \end{macrocode}
+%
+% 生成图片之后的排版
+%    \begin{macrocode}
+    \cexam_sha_mk_i:nnnn {\cexam_numtemp_int}
+    {#5}{\linewidth}{#6}
+%    \end{macrocode}
+%
+% 追加三级排版形状(一行,此行后的行数重复此格式)
+%    \begin{macrocode}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_shad:\cexam_sha_cape: #7}
+    \dim_set:Nn \cexam_pswd_dim {\linewidth}
+    \dim_sub:Nn \cexam_pswd_dim {#7}
+    \dim_sub:Nn \cexam_pswd_dim {#8}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_shad:\cexam_sha_cape: \cexam_pswd_dim}
+    \tex_parshape:D \cexam_shad:
+    \box_use:N \cexam_picture_box
+    #9
+  }
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}[added=2019-08-24]{\cexam_type_iii:nnnnnnn}
+% \changes{v3.0.9}{2019/08/24}{增加图片居中排版程序}
+% 七个参数依次为:1.图片位置,2图片,3一级左缩进,4一级右缩进,5二级左缩进,6二级右缩进,7文本
+%    \begin{macrocode}
+  \cs_new:Npn \cexam_type_iii:nnnnnnn #1#2#3#4#5#6#7
+  {
+%    \end{macrocode}
+% 设置图片放置宽度
+%    \begin{macrocode}
+    \dim_set:Nn \cexam_fmtwd_dim {\linewidth}
+    \dim_sub:Nn \cexam_fmtwd_dim {#3}
+    \dim_sub:Nn \cexam_fmtwd_dim {#4}
+%    \end{macrocode}
+% 格式化图片
+%    \begin{macrocode}
+    \cexam_fmt_pic:nn {#1}{#2}
+%    \end{macrocode}
+% 虚图片高=纸高
+%    \begin{macrocode}
+    \dim_set:Nn \cexam_paperht_dim {\textheight}
+%    \end{macrocode}
+% 计数器置零
+%    \begin{macrocode}
+    \int_set:Nn \cexam_numtemp_int {0}
+%    \end{macrocode}
+% 获得文本行数
+%    \begin{macrocode}
+    \cexam_get_rec:nnnnnn {\cexam_picmath_int}
+    {\cexam_paperht_dim}{0pt}
+    {#3}{#4}{#7}
+%    \end{macrocode}
+% 追加一行用以排版图片
+%    \begin{macrocode}
+    \int_add:Nn \cexam_picmath_int {1}
+%    \end{macrocode}
+% 生成段落形状
+%    \begin{macrocode}
+    \cexam_sha_mk_ii:nnnnnnn
+    {\cexam_picmath_int}
+    {#3}{\linewidth}{#4}
+    {#5}{\linewidth}{#6}
+%    \end{macrocode}
+% 开始排版图片和文字
+%    \begin{macrocode}
+    \tex_parshape:D \cexam_shad:
+    #7
+    \newline
+    \hbox_unpack:N \cexam_picture_box
+  }
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}[added=2019-08-27]{\cexam_type_iv:nnnnnnnn}
+% \changes{v3.1.1}{2019/08/27}{新增图文排版,取代原纯文本排版}
+% 
+% 八个参数:1图片位置,2图片,3一级左缩进,4一级右缩进,5二级左缩进,6二级右缩进7主文本,8副文本.此程序用来排版当选项与题干的总高大于图高,但是题干高度低于图高的情况.
+%  
+%    \begin{macrocode}
+  \cs_new:Npn \cexam_type_iv:nnnnnnnn #1#2#3#4#5#6#7#8
+  {
+%    \end{macrocode}
+% 格式化图片,由于此模式图片居左排版相当不美观,所以取消其左排模式,凡进入者皆图片右排.
+%    \begin{macrocode}
+    \cexam_fmt_pic:nn {r}{#2}
+%    \end{macrocode}
+% 取得主文本行数,文本高小于图片高
+%    \begin{macrocode}
+    \cexam_get_rec:nnnnnn {\cexam_picmath_int}
+    {\cexam_picht_dim}{\cexam_picwd_dim}
+    {#3}{#4}{#7}
+%    \end{macrocode}
+% 取得副文本行数,副文本高度大于图片的剩余高度
+%    \begin{macrocode}
+    \int_set:Nn \cexam_numtemp_int{0}
+    \cexam_get_rec:nnnnnn {\cexam_numtemp_int}
+    {\cexam_picht_dim}{\cexam_picwd_dim}
+    {#5}{#6}{#8}
+%    \end{macrocode}
+% 设置总行数 
+%    \begin{macrocode}
+    \int_set:Nn \cexam_totalnum_int {\int_use:N \cexam_picmath_int}
+    \int_add:Nn \cexam_totalnum_int {\int_use:N \cexam_numtemp_int}
+    \int_add:Nn \cexam_totalnum_int {1}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_sha_cape: \int_use:N \cexam_totalnum_int}
+%    \end{macrocode}
+% 生成主文本形状
+%    \begin{macrocode}
+    \dim_set:Nn \cexam_pslin_dim {#3}
+    \dim_set:Nn \cexam_psrin_dim {#4}
+    \dim_add:Nn \cexam_psrin_dim {\cexam_picwd_dim}
+    \cexam_sha_mk_i:nnnn {\cexam_picmath_int}
+    {\cexam_pslin_dim}{\linewidth}{\cexam_psrin_dim}
+%    \end{macrocode}
+% 生成副文本形状
+%    \begin{macrocode}
+    \dim_set:Nn \cexam_pslin_dim {#5}
+    \cexam_sha_mk_i:nnnn {\cexam_numtemp_int}
+    {\cexam_pslin_dim}{\linewidth}{\cexam_psrin_dim}
+%    \end{macrocode}
+% 生成尾行形状
+%    \begin{macrocode}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_shad:\cexam_sha_cape: \cexam_pslin_dim}
+    \dim_set:Nn \cexam_pswd_dim {\linewidth}
+    \dim_sub:Nn \cexam_pswd_dim {#5}
+    \dim_sub:Nn \cexam_pswd_dim {#6}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_shad:\cexam_sha_cape: \cexam_pswd_dim}
+%    \end{macrocode}
+% 准备排版图文
+%    \begin{macrocode}
+    \tex_parshape:D \cexam_shad:
+    \box_use:N \cexam_picture_box
+    #7
+    \newline
+    #8
+  }
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}[added=2019-08-24]{\cexam_type_v:nnnnn}
+% \changes{v3.0.9}{2019/08/24}{增加无图排版模式}
+% \changes{v3.1.1}{2019/08/27}{排版号由iv增加一个,变为v}
+% 五个参数依次为:1.一级左缩进,2一级右缩进,3二级左缩进,4二级右缩进,5文本
+%    \begin{macrocode}
+  \cs_new:Npn \cexam_type_v:nnnnn #1#2#3#4#5
+  {
+%    \end{macrocode}
+% 虚图片高=纸高
+%    \begin{macrocode}
+    \dim_set:Nn \cexam_paperht_dim {\textheight}
+%    \end{macrocode}
+% 计数器置零
+%    \begin{macrocode}
+    \int_set:Nn \cexam_numtemp_int {0}
+%    \end{macrocode}
+% 获得文本行数
+%    \begin{macrocode}
+    \cexam_get_rec:nnnnnn {\cexam_picmath_int}
+    {\cexam_paperht_dim}{0pt}
+    {#1}{#2}{#5}
+%    \end{macrocode}
+% 生成段落形状
+%    \begin{macrocode}
+    \cexam_sha_mk_ii:nnnnnnn
+    {\cexam_picmath_int}
+    {#1}{\linewidth}{#2}
+    {#3}{\linewidth}{#4}
+%    \end{macrocode}
+% 开始排版图片和文字
+%    \begin{macrocode}
+    \tex_parshape:D \cexam_shad:
+    #5
+  }
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsection{图片与文字的分离}
+%
+% \begin{macro}[added=2019-08-25]{\cexam_seped_pic:,\cexam_seped_txt:}
+% 此处二个命令分别用来保存图片与文字分离后的图片和文本.初始设置为空.
+%    \begin{macrocode}
+\cs_new:Nn \cexam_seped_pic: {}
+\cs_new:Nn \cexam_seped_txt: {}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}[added=2019-08-25]{\cexam_sep_pictxt_i:n}
+% \changes{v3.1.0}{2019/08/25}{增加图片与文本初级分离程序}
+%
+% 此程序用于分离图片和文字,以供进一步处理排版.此程序中,充分考虑到图片在插入时的方便,所以在题目中尽量不加入命令,故确定了以符号<:和:>来定界图片,在其中所包围的部分应当是输入的图片.同时,如果在输入题目时图片尚未准备好,则只输入定界符<:和:>先占据图片位置,而输出时会以一个$2.4 cm \times2.4cm$ 的方框,同时以红色文字 \textcolor{red}{NO~PICTURE!}来提示作者还没有输入图片.
+%
+%    \begin{macrocode}
+\cs_new:Npn \cexam_sep_pictxt_i:n #1<:#2:>#3 \scan_stop:
+{
+  \cs_set:Nn \cexam_seped_txt: {#1~\cexam_fmt_fig:~ #3}
+  \hbox_set:Nn \sep_temp_box {#2}
+  \dim_compare:nNnTF {\box_wd:N \sep_temp_box} < {5pt}
+  {
+    \cs_set:Nn \cexam_seped_pic:
+    {
+      \begin{tikzpicture}
+	\draw (0,0) rectangle (2.4,2.4);
+	\draw (1.2,1.2) node {\small \textcolor{red}{NO~PICTURE!}};
+      \end{tikzpicture}
+    }
+  }
+  {
+    \cs_set:Nn \cexam_seped_pic: {#2}
+  }
+}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}[added=2019-08-25]{\cexam_sep_pictxt_ii:n}
+% \changes{v3.1.0}{2019/08/25}{增加图片与文本分离程序}
+%
+% 此程序在\LaTeX2e{} 版本中,像数学公式和文本分离时一样写出了分离后的具体各种情况,因为图片有可能出现在所处理文本的开头,结尾,也有可能是只有图片.但是仔细分析,分离图片和文本一般只出现的排版试题时的开始,且执行一次,如果用两个\cs{relax}来占位,而不去写出具体情况,则这样分离而得的文本前后将有各有一个\cs{relax},这不影响排版,但是这样做,代码将简洁很多,所以综合考虑后,这里改变了\LaTeX2e{} 版本中的处理方案.
+%
+%    \begin{macrocode}
+\cs_new:Npn \cexam_sep_pictxt_ii:n #1 \scan_stop:
+{
+  \str_if_in:nnTF {#1}{<:}
+  {
+    \bool_set_false:N \cexam_nopic_bool
+    \cexam_sep_pictxt_i:n \relax #1\relax\scan_stop:
+  }
+  {
+    \bool_set_true:N \cexam_nopic_bool
+    \cs_set:Nn \cexam_seped_pic: {}
+    \cs_set:Nn \cexam_seped_txt: {#1}
+  }
+}
+%    \end{macrocode}
+% \end{macro}
+%
+%
+% \subsection{前缀设置}
+%
+% \begin{macro}[added=2019-08-25]{\cexam_ind_hat:nn}
+% \changes{v3.1.0}{2019/08/25}{增加前缀设置程序}
+% 此程序用来生成前缀,如题号,选择题选项前的标号等.
+%
+%    \begin{macrocode}
+\cs_new:Npn \cexam_ind_hat:nn #1#2
+{
+  \makebox[0pt][r]{\raisebox{-.05\ccwd}{\parbox[b]{#1}{#2.\hfill}}}
+}
+%    \end{macrocode}
+% \end{macro}
+% \subsection{选择题的排版}
+% 
+% \begin{macro}[added=2019-08-24]{\sel_get_lmax:n}
+% \changes{v3.0.9}{2019/08/24}{增加选择题选项最大长度获得程序}
+%
+% 此程序并不复杂,在\LaTeX2e{}版本中,我曾单独写出了这支程序,但是在\LaTeX3{} 中给出了一个标准的取得最大长度的程序\cs{dim_max:nn},所以在此版本中,我选择了这个标准的程序来获得最大选项长度.
+%    \begin{macrocode}
+\cs_new:Npn \sel_get_lmax:n #1 
+{
+  \hbox_set:Nn \sel_option_box{#1}
+  \dim_set:Nn \sel_lmax_dim{\dim_max:nn {\sel_lmax_dim}{\box_wd:N \sel_option_box}}
+}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}[added=2019-08-25]{\sel_opt_type_i:nnnn}
+% \changes{v3.1.0}{2019/08/25}{增加选择题短选项一行排版}
+%    \begin{macrocode}
+\cs_new:Npn \sel_opt_type_i:nnnn #1#2#3#4
+{
+  \makebox[.25\sel_optwd_dim][l]{A.#1}~
+  \makebox[.25\sel_optwd_dim][l]{B.#2}~
+  \makebox[.25\sel_optwd_dim][l]{C.#3}~
+  \makebox[.25\sel_optwd_dim][l]{D.#4}
+}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}[added=2019-08-25]{\sel_opt_type_ii:nnnn}
+% \changes{v3.1.0}{2019/08/25}{增加选择题中选项二行排版}
+%    \begin{macrocode}
+\cs_new:Npn \sel_opt_type_ii:nnnn #1#2#3#4
+{
+  \makebox[.5\sel_optwd_dim][l]{A.#1}~
+  \makebox[.5\sel_optwd_dim][l]{B.#2}~
+  \newline
+  \makebox[.5\sel_optwd_dim][l]{C.#3}~
+  \makebox[.5\sel_optwd_dim][l]{D.#4}
+}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}[added=2019-08-25]{\sel_opt_type_iii:nnnn}
+% \changes{v3.1.0}{2019/08/25}{增加选择题长选项多行排版}
+%    \begin{macrocode}
+\cs_new:Npn \sel_opt_type_iii:nnnn #1#2#3#4
+{
+  \cexam_ind_hat:nn {1.2\ccwd}{A}#1
+  \newline
+  \cexam_ind_hat:nn {1.2\ccwd}{B}#2
+  \newline
+  \cexam_ind_hat:nn {1.2\ccwd}{C}#3
+  \newline
+  \cexam_ind_hat:nn {1.2\ccwd}{D}#4
+}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}[added=2019-08-25]{\cexam_fmt_opt_sel:nnnn}
+% \changes{v3.1.0}{2019/08/25}{增加选择题选项格式化程序}
+% 此程序用来在选择题排版之前将选项先格式化,最后参与排版.
+%
+%    \begin{macrocode}
+\cs_new:Npn \cexam_fmt_opt_sel:nnnn #1#2#3#4
+{
+  \sel_get_lmax:n {#1}
+  \sel_get_lmax:n {#2}
+  \sel_get_lmax:n {#3}
+  \sel_get_lmax:n {#4}
+  \dim_compare:nNnTF {\sel_lmax_dim} < {.25\sel_optwd_dim}
+  {
+    \hbox_set:Nn \cexam_option_box {\sel_opt_type_i:nnnn {#1}{#2}{#3}{#4}}
+  }
+  {
+    \dim_compare:nNnTF {\sel_lmax_dim} < {.5\sel_optwd_dim}
+    {
+      \hbox_set:Nn \cexam_option_box {\sel_opt_type_ii:nnnn {#1}{#2}{#3}{#4}}
+    }
+    {
+      \hbox_set:Nn \cexam_option_box {\sel_opt_type_iii:nnnn {#1}{#2}{#3}{#4}}
+    }
+  }
+}
+%    \end{macrocode}
+% \end{macro}
+%
+%
+%
+%    \begin{macrocode}
+%</package>
+%    \end{macrocode}
+%
+% \end{implementation}
+%
+% \Finale
+%
+% \endinput

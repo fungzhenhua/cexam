@@ -1,0 +1,56 @@
+\documentclass[a4paper,UTF8,fontset = windows]{ctexbook}
+\usepackage[margin=2cm]{geometry}
+\usepackage{xeCJKfntef}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usepackage[
+  pdfborder=0 0 0,
+  bookmarksnumbered=true
+]{hyperref}
+\usepackage[user=student]{cexam}
+\includeonly{%
+  自序,
+  chapter-统计物理学的基本原理,
+  chapter-热力学量,
+  chapter-巨正则分布,
+  chapter-量子力学中的微扰论,
+  Schwinger表象,
+  chapter-国际制和高斯制的换算,
+  chapter-经典力学,
+  chapter-非理想气体,
+  chapter-溶液,
+  chapter-化学反应,
+  chapter-涨落,
+  chapter-二次量子化,
+  chapter-狭义相对论,
+}%
+\begin{document}
+\input{define.tex}
+%\title{理论物理学习笔记}
+%\author{冯振华}
+%\date{2019/03/15}
+%\maketitle
+\tableofcontents
+\include{自序}
+\include{chapter-统计物理学的基本原理}
+\include{chapter-热力学量}
+\include{chapter-巨正则分布}
+\include{chapter-量子力学中的微扰论}
+\include{Schwinger表象}
+\include{chapter-国际制和高斯制的换算}
+\include{chapter-经典力学}
+\include{chapter-非理想气体}
+\include{chapter-溶液}
+\include{chapter-化学反应}
+\include{chapter-涨落}
+\include{chapter-二次量子化}
+\include{chapter-狭义相对论}
+\makeanswer
+
+\end{document}

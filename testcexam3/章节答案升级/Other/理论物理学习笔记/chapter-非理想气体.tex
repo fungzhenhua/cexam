@@ -1,0 +1,109 @@
+\chapter{非理想气体}
+
+\section{范德瓦尔斯公式}
+第208页,习题4.对于范德瓦尔斯气体,求焦耳---汤姆孙过程反转点对温度的依赖关系.在书中没有具体写出计算过程,此处就是这个过程.范德瓦尔斯气体方程为
+
+\begin{equation}
+  \left(p+\frac{N^2a}{V^2}\right)\left(V-Nb\right)=NT
+  \label{eq:VanderWaals}
+\end{equation}
+
+\vspace{-30pt}
+\begin{gather}
+  \intertext{反转曲线由$\left(\frac{\partial T}{\partial p}\right)_H=0$决定,则}
+  \difh H = T\diff S +V \diff p =
+  T\left(\frac{\partial S}{\partial T}\right)_p \diff T 
+  +\left[T \left(\frac{\partial S}{\partial p}\right)_T+V\right]\diff p=0
+  \intertext{解得}
+  \left(\frac{\partial T}{\partial p}\right)_H
+  =-\frac{1}{T\left(\frac{\partial S}{\partial T}\right)_p}\cdot 
+  \left[T \left(\frac{\partial S}{\partial p}\right)_T+V\right]
+  \intertext{由定压热容量和麦克斯韦关系将上式化为}
+  \left(\frac{\partial T}{\partial p}\right)_H
+  =\frac{1}{C_p}\left[T\left(\frac{\partial V}{\partial T}\right)_p-V\right]
+  \intertext{于是得反转曲线}
+  \left(\frac{\partial T}{\partial V}\right)_p =\frac{T}{V}
+  \label{eq:VanderWaals0}
+  \intertext{将式\eqref{eq:VanderWaals}代入式\eqref{eq:VanderWaals0}得反转曲线}
+  T\cdot\frac{N}{V}=-2a\frac{N^2}{V^3}\left(V-Nb\right)+\left(p+a\frac{N^2}{V^2}\right) 
+  \label{eq:VanderWaals1}
+  \intertext{记粒子数密度$n=\frac{N}{V}$,则式\eqref{eq:VanderWaals}和式\eqref{eq:VanderWaals1}可以写成}
+  \left\{
+    \begin{gathered}
+      (p+an^2)(1-bn)=Tn\\
+      p-an^2+2abn^3=Tn
+    \end{gathered}
+  \right.
+  \label{eq:VanderWaals2}
+  \intertext{令上述二式相等,约去$Tn$得}
+  3ab\cdot n^2-2a\cdot n+pb=0
+  \label{eq:VanderWaals3}
+  \intertext{解得}
+  n=\frac{1\pm \sqrt{1-\frac{3b^2}{a}p}}{3b}
+  \label{eq:VanderWaals4}
+  \intertext{由式\eqref{eq:VanderWaals3}可得}
+  p+an^2=\frac{2a}{b}(1-bn)
+  \label{eq:VanderWaals5}
+  \intertext{式\eqref{eq:VanderWaals5}代入式\eqref{eq:VanderWaals2}可得}
+  T=\frac{2a}{b}(1-nb)^2
+  \label{eq:VanderWaals6}
+  \intertext{式\eqref{eq:VanderWaals4}代入式\eqref{eq:VanderWaals6}得}
+  T=\frac{2a}{9b}\left(2\mp \sqrt{1-\frac{3b^2}{a}p}\right)^2
+\end{gather}
+
+\section{位力系数与散射振幅的关系}
+
+原文中计算的是对动量$p$的微分,但是考虑到 德布罗意关系$p=\hbar k$我在这时修改为对$k$的微分,这样在式中不会出现$\hbar$,单纯的讨论数学计算而己.
+\begin{equation}
+  \sum_{l=0}^\infty (2l+1)\cdot \frac{\mathrm{d}\delta_l}{\mathrm{d}k}
+  =\frac{\partial}{\partial k} \frac{k}{2}\left[f(0)+f^*(0)\right]
+  +\frac{1}{4\pi i}\int k^2(f^*\frac{\partial f}{\partial k}-f\frac{\partial f^*}{\partial k})\mathrm{d}\Omega
+  \label{eq:zhenfu}
+\end{equation}
+
+{\bf 证明} 量子力学中已经计算出了散射振幅如下\footnote{这些计算我在我自己的笔记《特殊函数基础》中所做的，这里为了完整而直接引用.} 
+
+\begin{gather}
+  f(\theta)=\frac{1}{k}\sum_{l=0}^\infty (2l+1)P_l(\cos\theta)e^{i\delta_l}\cdot \sin\delta_l
+  \label{eq:zhenfu0}
+  \intertext{考虑到$P_l(1)=1$,则式\eqref{eq:zhenfu0}中$\theta=0$得}
+  kf(0)=\sum_{l=0}^\infty (2l+1)e^{i\delta_l}\cdot \sin\delta_l
+  \label{eq:zhenfu1}
+  \intertext{上式对 $k$ 微分,得}
+  \frac{\partial kf(0)}{\partial k}=\sum_{l=0}^{\infty} \cdot e^{i2\delta_l}\cdot \frac{\mathrm{d}\delta_l}{\mathrm{d}k}
+  \label{eq:zhenfu2}
+  \intertext{对式\eqref{eq:zhenfu2}求共轭,得}
+  \frac{\partial kf^*(0)}{\partial k}=\sum_{l=0}^{\infty} \cdot e^{-i2\delta_l}\cdot \frac{\mathrm{d}\delta_l}{\mathrm{d}k}
+  \label{eq:zhenfu3}
+  \intertext{\eqref{eq:zhenfu2}+\eqref{eq:zhenfu3}再除以2得}
+  \frac{\partial}{\partial k}\frac{k}{2}\left[f(0)+f^*(0)\right]
+  =\sum_{l=0}^\infty(2l+1)\cos2\delta_l \cdot \frac{\mathrm{d}\delta_l}{\mathrm{d}k}
+  \label{eq:zhenfu4}
+  \intertext{如$\theta$ 没有取零,则}
+  \frac{\partial kf}{\partial k}=\sum_{l=0}^{\infty} \cdot e^{i2\delta_l}\cdot P_l(\cos\theta)\cdot \frac{\mathrm{d}\delta_l}{\mathrm{d}k}
+  \label{eq:zhenfu5}
+  \intertext{同时将式\eqref{eq:zhenfu0}左右同乘以$k$ 再取共轭得}
+  kf^*(\theta)=\sum_{l=0}^\infty (2l+1)P_l(\cos\theta)e^{-i\delta_l}\cdot \sin\delta_l
+  \label{eq:zhenfu6}
+  \intertext{式\eqref{eq:zhenfu5}乘以式\eqref{eq:zhenfu6}再对立体角求积分以消去$P_l(\cos\theta)$计算结果为}
+  \int kf^*\frac{\partial kf}{\partial k}\mathrm{d}\Omega =4\pi \sum_{l=0}^\infty (2l+1)\cdot e^{i\delta_l}\cdot \sin\delta_l \cdot \frac{\mathrm{d}\delta_l}{\mathrm{d}k}
+  \label{eq:zhenfu7}
+  \intertext{对式\eqref{eq:zhenfu7}求共轭,得}
+  \int kf\frac{\partial kf^*}{\partial k}\mathrm{d}\Omega =4\pi \sum_{l=0}^\infty (2l+1)\cdot e^{-i\delta_l}\cdot \sin\delta_l \cdot \frac{\mathrm{d}\delta_l}{\mathrm{d}k}
+  \label{eq:zhenfu8}
+  \intertext{式\eqref{eq:zhenfu7}加上式\eqref{eq:zhenfu8}可以得}
+  \int \left(kf^*\frac{\partial kf}{\partial k}-kf\frac{\partial kf^*}{\partial k}\right)\mathrm{d}\Omega
+  =8\pi i\sum_{l=0}^\infty (2l+1)\cdot \sin^2\delta_l \cdot\frac{\mathrm{d}\delta_l}{\mathrm{d}k}
+  \label{eq:zhenfu9}
+  \intertext{由三角函数半角公式可得式\eqref{eq:zhenfu9}化为}
+  \frac{1}{4\pi i}\int \left(kf^*\frac{\partial kf}{\partial k}-kf\frac{\partial kf^*}{\partial k}\right)\mathrm{d}\Omega
+  =\sum_{l=0}^\infty (2l+1)\cdot (1-\cos2\delta_l) \cdot\frac{\mathrm{d}\delta_l}{\mathrm{d}k}
+  \label{eq:zhenfu10}
+  \intertext{式\eqref{eq:zhenfu9}和式\eqref{eq:zhenfu10}相加消去$\cos2\delta_l$便得到式\eqref{eq:zhenfu}}
+  \sum_{l=0}^\infty (2l+1)\cdot \frac{\mathrm{d}\delta_l}{\mathrm{d}k}
+  =\frac{\partial}{\partial k} \frac{k}{2}\left[f(0)+f^*(0)\right]
+  +\frac{1}{4\pi i}\int k^2(f^*\frac{\partial f}{\partial k}-f\frac{\partial f^*}{\partial k})\mathrm{d}\Omega
+\end{gather}
+
+在上述证明中,其关键点在于消去角度 $\theta$ ,对于振幅的表达式\eqref{eq:zhenfu0}而言我们总共有两种方法达成这个目的.其一,令$\theta$ 取特殊值,在证明中取了$\theta=0$; 其二,借助积分和 $P_l(\cos\theta)$ 正交性.同时再考虑三角函数的运算,才可以完成和式\eqref{eq:zhenfu}的证明,这是一个相当巧合的技巧.
+

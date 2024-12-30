@@ -1,0 +1,37 @@
+%%
+%% This is file `nowarning.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% nowarning.dtx  (with options: `package')
+%% 
+%%     Copyright (C) 2017--3000
+%% ------------------------------------------------------------------------------
+%%     nowarning.dtx文件由冯振华创建,作者系平原县第一中学物理教师
+%% 
+%%     当前的维护者:冯振华
+%% 
+%%     邮件:fengzhenhua@sina.cn
+%% 
+%%     博客:fengzhenhua.blog.163.com
+%% 
+%% ------------------------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+\ProvidesPackage{nowarning}[2019/03/12 v1.0 for warning forbiden]
+\RequirePackage{expl3}%
+\RequirePackage{xparse}%
+\DeclareOption{latex}{%
+  \def\@font@warning#1{\relax}%
+  \def\@latex@warning@no@line#1{\relax}%
+}%
+\ProcessOptions%
+\ExplSyntaxOn
+\RenewDocumentCommand \CTEXsetup { +o > { \TrimSpaces } m }%
+{
+  \IfNoValueF {#1} { \keys_set:nn { ctex / #2 } {#1} }
+}
+\cs_set:Npn \__fontspec_warning:n   {}
+\cs_set:Npn \__fontspec_warning:nx #1#2 {}
+\cs_set:Npn \__fontspec_warning:nxx #1#2#3 {}
+\ExplSyntaxOff

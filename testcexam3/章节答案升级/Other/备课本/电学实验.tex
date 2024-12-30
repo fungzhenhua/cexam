@@ -1,0 +1,226 @@
+\chapter{电学实验}
+\section{供电电路的接法和选择}
+在电学实验中,供电电路的选择是一个重要的问题,需要我们深入讨论一下,同时在理解的基础上我们可以给出明确的解题步骤.在初步的讨论中,由于滑动变阻器的阻值一般一可以与待测阻值相比拟,所以它的阻值不能忽略.但是电压表阻值很大,电流表阻值很小,所以可以认为电压表和电流表是理想电表,即:电压表认为断路,电流表认为短路.
+\subsection{分压电路}
+\begin{figure}[H]
+  \centering
+\begin{circuitikz}
+  \draw (-1,0) to[battery] (1,0)--(1.5,0) to[switch] (3,0); 
+  \draw (-1,0)--(-1,1) to [pR] (3,1)--(3,0);
+  \draw (1,0.8) node [anchor=north] {$R_L$};
+  \draw (-1,1)--(-1,3) to [R=$R_x$] (3,3)--(3,2)--(1,2)--(1,1.5);
+\end{circuitikz}
+  \caption{分压电路}
+  \label{fig:fenyadianlu}
+\end{figure}
+
+在分压电路图\ref{fig:fenyadianlu}中,由闭合电路的欧姆定律可得实测电阻的电压范围是
+\begin{gather}
+  0\leq U \leq \frac{E}{1+\frac{r}{R_x}+\frac{r}{R_L}}
+  \label{eq:fenya}
+  \intertext{同时在分压电路中,当触头滑动到最右端时,电路中电阻最小,电路中出现的最大电流为$I_{m1}$}
+  I_{m1}=\frac{E}{r+\frac{R_x\cdot R_L}{R_x+R_L}}
+  \intertext{由于在触头接近右端时,电阻几乎就等于最小值,所以电流也可以认为最大,但是通过滑动变阻器的电流不能超过它的额定电流,所认在选择电路时就得注意$I_{m1}<I_{\mbox{\small 额}}$.}
+\end{gather}
+\subsection{限流电路}
+\begin{figure}[H]
+  \centering
+\begin{circuitikz}
+  \draw (-1,0) to[battery] (0,0)--(0,0) to[switch] (1,0)--(1,0) to [pR](3,0); 
+  \draw (2,0.55)--(3,0.55);
+  \draw (-1,0)--(-1,3) to [R=$R_x$] (3,3)--(3,0);
+\end{circuitikz}
+  \caption{限流电路}
+  \label{fig:xianliudianlu}
+\end{figure}
+
+在限流电路图\ref{fig:xianliudianlu}中,由闭合电路的欧姆定律可得实测电阻的电压范围是
+
+\begin{gather}
+  \frac{E}{1+\frac{r+R_l}{R_x}} \leq U \leq \frac{E}{1+\frac{r}{R_x}}
+  \label{eq:xianliu}
+  \intertext{同时在限流电路中,当滑动变阻器触头滑到最左端时,电路中出现最大电流$I_{m2}$是}
+  I_{m2}=\frac{E}{r+R_x}
+\end{gather}
+
+由于$I_{m1}>I_{m2}$,如果分压法中电流不超过滑动变阻器的最大电流,则限流法中电流也必不会超过额定电流.在$I_{m1}<I_{\mbox{\small 额}}$的前提下,如
+\begin{gather}
+  \frac{E}{1+\frac{r}{R_x}+\frac{r}{R_L}} <\frac{1}{3}U_v 
+\end{gather}
+则此电路中出现的最大电压也不能达到电压表的$\frac{1}{3}$,则读数时将会带来较大的偶然误差,则不适用分压法,而改用限流法,如果限流法的最大电压也不满足大于$\frac{1}{3}$电压表量程的要求,则需要更换仪器再做实验.实际测量中,必不会$U=0,I=0$.因为这无需测量而一定成立.在最大电压接近满偏或超过$\frac{1}{3}$电压表量程时,只有当$\frac{R_L}{R_x}\gg 1$ 时,限流法才有较大的测量范围,即大阻值$R_L$才适用限流法.
+
+
+\section{测量电路的接法和选择}
+测量电路,要获得通过待测元件的电流和电阻,主要有二种基本测量电路:电流表内接法和电流表外接法.这就要讨论二种电路的选择的问题,原则就是\CJKunderwave{谁的误差小用谁.}
+\subsection{电流表内接法}
+\begin{figure}[H]
+  \centering
+\begin{circuitikz}
+  \draw (-2.4,0) to [R=$R_x$] (0,0)--(0.6,0)(1.4,0)--(2,0);
+  \draw (1,0) node {A} circle [radius=0.4];
+  \draw (-2,0)--(-2,1.5)--(-0.6,1.5)(0.2,1.5)--(1.6,1.5)--(1.6,0);
+  \draw (-0.2,1.5) node {V} circle [radius=0.4];
+\end{circuitikz}
+  \caption{电流表内接法}
+  \label{fig:dianliubiaoneijie}
+\end{figure}
+
+在内接法中,电压表显示的电压是电流表和待测电阻二者串联的电压,因此电流表的分压作用导致了内接法的系统误差.但是电流表测量的示数是准确,因此按欧姆定律算出的测量值是待测电阻和电流表内阻串联值,记电流表内接法测量的测量值$R_{\mbox{\small 内}}$和真实值$R_x$,它们之间的关系为
+\begin{gather}
+  R_{\mbox{\small 内}}=R_x+R_A
+  \label{eq:niejie0}
+  \intertext{电流表内接法的测量误差=测量值---真实值}
+  \Delta R_{\mbox{ \small 内}}=R_{\mbox{ \small 内}}-R_x=R_A
+  \label{eq:niejie1}
+\end{gather}
+\subsection{电流表外接法}
+\begin{figure}[H]
+  \centering
+\begin{circuitikz}
+  \draw (-2.4,0) to [R=$R_x$] (0,0)--(0.6,0)(1.4,0)--(2,0);
+  \draw (1,0) node {A} circle [radius=0.4];
+  \draw (-2,0)--(-2,1.5)--(-1.6,1.5)(-0.8,1.5)--(-0.4,1.5)--(-0.4,0);
+  \draw (-1.2,1.5) node {V} circle [radius=0.4];
+\end{circuitikz}
+  \caption{电流表外接法}
+  \label{fig:dianliubiaowaijie}
+\end{figure}
+
+在电流外接法中,电压表和待测电阻是并联关系,则电压相同,所以测量的电压是准确的,但是电流表示数是通过电压表的电流和待测电阻的电流的和,因此电压表的分流作用导致了测量误差.于是,测量值就是电压表的内阻和待测电阻的并联值.记电流表外接法测量的测量值$R_{\mbox{\small 外}}$和真实值$R_x$,则它们之间的关系为
+\begin{gather}
+  R_{\mbox{\small 外}}=\frac{R_V \cdot R_x}{R_V+R_x}
+  \intertext{外接法的测量误差=真实值---测量值}
+  \Delta R_{\mbox{\small 外}}=R_x -R_{\mbox{\small 外}}\\
+  =\frac{R_x^2}{R_V+R_x}
+  \intertext{由于$R_V\gg R_x$,则}
+  R_{\mbox{\small 外}}\approx \frac{R_x^2}{R_V}
+\end{gather}
+\subsubsection{外接法的选择依据}
+\begin{gather}
+  \intertext{如$\Delta R_{\mbox{\small 内}}>\Delta R_{\mbox{\small 外}}$则选择外接法,即}
+  R_x<\sqrt{R_A\cdot R_V}
+\end{gather}
+\subsubsection{内接法的选择依据}
+\begin{gather}
+  \intertext{如$\Delta R_{\mbox{\small 内}}<\Delta R_{\mbox{\small 外}}$则选择内接法,即}
+  R_x>\sqrt{R_A\cdot R_V}
+\end{gather}
+\subsection{试触法}
+在上面介绍的方法中,$R_x$ 的阻值必须大体知道,然而如果这个值的大体不知道,则应该选用试触法来判断使用内接法还是外接法.如图\ref{fig:shichufa} 中,当电压表右侧接2时构成外接法,当电压表右侧接1时构成内接法.
+
+\begin{figure}[H]
+  \centering
+\begin{circuitikz}
+  \draw (-2.4,0) to [R=$R_x$] (0,0)--(0.6,0)(1.4,0)--(2,0);
+  \draw (1,0) node {A} circle [radius=0.4];
+  \draw (-2,0)--(-2,1.5)--(-1.6,1.5)(-0.8,1.5)--(-0.4,1.5);
+  \draw (-1.2,1.5) node {V} circle [radius=0.4];
+  \draw [dashed](-0.4,1.5)--(-0.4,0) node [anchor=north]{2};
+  \draw [dashed](-0.4,1.5)--(1.6,1.5)--(1.6,0) node [anchor=north]{1};
+\end{circuitikz}
+  \caption{试触法}
+  \label{fig:shichufa}
+\end{figure}
+
+\begin{gather}
+  \intertext{电压表右侧接2,则试触构成外接法,此时待测阻值为}
+  R_{\mbox{\small 外}}=\frac{U_1}{I_1}
+  \intertext{电压表右侧接1,则试触构成内接法,此时待测阻值为}
+  R_{\mbox{\small 内}}=\frac{U_2}{I_2}
+  \intertext{由于在内接法中电流测量是准确的,在外接法中电压测量是准确的,所以可以给合这两个情况下的真实值给出接近真实值的一个估计值}
+  R_x \approx \frac{U_1}{I_2}
+  \intertext{于是可以得到内外接法中大致的误差分别为}
+  \Delta R_{\mbox{\small 内}}=\frac{U_2}{I_2}-\frac{U_1}{I_2}=\frac{\Delta U}{I_2}\\
+  \Delta R_{\mbox{\small 外}}=\frac{U_1}{I_2}-\frac{U_1}{I_1}=\frac{U_1\Delta I}{I_1I_2}
+  \intertext{如果选择内接法,则要求}
+  \Delta R_{\mbox{\small 内}}<\Delta R_{\mbox{\small 外}}
+  \intertext{代入内外接法的表达式得}
+  \frac{\Delta U}{U_1}<\frac{\Delta I}{I_1}
+  \intertext{反之外接法的表达式得}
+  \frac{\Delta U}{U_1}>\frac{\Delta I}{I_1}
+\end{gather}
+
+\section{电表的改装}
+
+电流表头是灵敏设备,一般只能测量很小的电流和电压,这就涉及到测量大电流和大电压时电表的改装问题.
+
+\subsection{电流表的改装}
+
+\begin{figure}[H]
+  \centering
+\begin{circuitikz}
+  \draw (0,0) node {G} circle [radius=0.4];
+  \draw (-2,0)--(-0.4,0)(0.4,0)--(2,0);
+  \draw (-1,0)--(-1,1) to [R=$R_x$] (1,1)--(1,0);
+  \draw[dashed] (-1.5,-1) rectangle (1.5,2);
+  \draw (2.5,0)--(3.1,0)(3.9,0)--(4.5,0);
+  \draw (3.5,0) node {A} circle [radius=0.4];
+\end{circuitikz}
+  \caption{电流表的改装}
+  \label{fig:dianliubiaogaizhuang}
+\end{figure}
+
+电流表的改装依据是并联电路的分流作用.如图\ref{fig:dianliubiaogaizhuang} 所示,在电流表头上并联上一个电阻,虚线框中的部分相当于右侧的电流表.干路电流即是新的电流表的测量电流,它与通过电流表头的电流关系为
+
+\begin{gather}
+  I=I_g + \frac{I_g R_g}{R_x}
+  \intertext{以$n$表示电流表量程放大的倍数,即$n=\frac{I}{I_g}$,则由上式得,当量程放大$n$时,需要并联在电流表头上的阻值为}
+  R_x=\frac{R_g}{n-1}
+\end{gather}
+
+\subsection{电压表的改装}
+
+\begin{figure}[H]
+  \centering
+\begin{circuitikz}
+  \draw (-2,0) to [R=$R_x$] (0,0)--(0.6,0)(1,0) node {G} circle [radius=0.4] (1.4,0)--(2,0);
+  \draw[dashed] (-1.7,-1) rectangle (1.6,1);
+  \draw (2.5,0)--(3.1,0)(3.9,0)--(4.5,0);
+  \draw (3.5,0) node {V} circle [radius=0.4];
+\end{circuitikz}
+  \caption{电压表的改装}
+  \label{fig:dianyabiaogaizhuang}
+\end{figure}
+
+电压表的改装依据是串联电路的分压作用.如图\ref{fig:dianyabiaogaizhuang} 所示,在电流表头上串联上一个电阻,虚线框中的部分相当于右侧的电压表.干路端的电压即是新的电压表的测量电压,它与通过电流表头的电压关系为
+
+\begin{gather}
+  U=U_g + \frac{U_g}{R_g}\cdot R_x
+  \intertext{以$n$表示电流表量程放大的倍数,即$n=\frac{I}{I_g}$,则由上式得,当量程放大$n$时,需要并联在电流表头上的阻值为}
+  R_x=R_g \cdot (n-1)
+\end{gather}
+
+\section{分压电路和限流电路,电压表和电流表的选择}
+
+按照前述分析,已经得出了分压电路和限流电路中待测阻值$R_x$ 两端的电压范围,现在将二者合写在此处.
+
+\begin{gather}
+  0\sim \frac{E}{1+\frac{r}{R_x}+\frac{r}{R_L}} < \frac{E}{1+\frac{r}{R_x}}\sim \frac{E}{1+\frac{r}{R_x+R_L}}
+  \label{eq:fyxlxuanze}
+\end{gather}
+
+\begin{enumerate}
+  \item   当$r\gg R_x , r \ll R_x+R_L$时,显然分压电路将不能提供较大的电压调节范围,而限流法可以提供较大的电压调节范围,因此应当选择限流法,且$R_L$越大,限流法能提供的电压调节范围就越大,所以此时应当选择较大的$R_L$.
+  \item  当 $r\ll R_x$ 则$r\ll R_x+R_L$ 必然成立,此时限流电路不能提供较大的电压调节范围,而分压电路可以提供较大的电压调节范围,所以选择分压法.在此有一个矛盾,如果要获得较大的电压调节范围,那么$R_L$ 越大越好,但是较大$R_L$ 的滑动变阻器,它允许的额定电流一般较小(因为电阻丝较细),而分压法干路中通过的电流一般较大,所以一般在所要求的电压可以达到时,尽量选择较小$R_L$的滑动变阻器.
+  \item   当$r\gg R_x$,同时$R_x\gg R_L$ 时,分压法和限流法都不能得到较大的电压调节范围,所认此时需要更换滑动变阻器才能进行正常的实验过程.
+  \item  记电压表量程为$U_m$ ,电流表量程为$I_m$,在满足分压法的前提下,如果有
+    $$ \frac{E}{1+\frac{r}{R_x}+\frac{r}{R_L} }<\frac{1}{3}U_m $$
+    则分压法所得测量电压较小,导致读数误差偏大,所以这种情况下应当更换量程较小的电压表,以使读数时指针达到$\frac{1}{3}U_m$ 以上.
+    \item 如果在分压电路可行的前提下
+    $$ U_m > \frac{E}{1+\frac{r}{R_x}+\frac{r}{R_L} }>\frac{1}{3}U_m $$
+    则读数时也满足偶然误差较小的要求,所以此时电压表是正确的选择.
+  \item 如果在分压电路可行的前提下
+    $$ \frac{E}{1+\frac{r}{R_x}+\frac{r}{R_L} }>U_m $$
+    则在测量过程中有可能超电压表量程,这种情况是不允许的,所以需要更换较大量程的电压表(或者使用一个定值电阻与此电压表串联,改造成适当量程的电压表).
+  \item 在分压电路可行的前提下,如果
+    $$ \frac{E}{1+\frac{r}{R_x}+\frac{r}{R_L} }<\frac{1}{3}I_m R_x$$
+    则电流表的读数误差较大,需要更换小量程的电流表.
+    \item 如果在分压电路可行的前提下
+    $$ I_mR_x > \frac{E}{1+\frac{r}{R_x}+\frac{r}{R_L} }>\frac{1}{3}I_m R_x$$
+    则读数时也满足偶然误差较小的要求,所以此时电流表是正确的选择.
+  \item 如果在分压电路可行的前提下
+    $$ \frac{E}{1+\frac{r}{R_x}+\frac{r}{R_L} }>I_mR_x $$
+    则在测量过程中有可能超电流表量程,这种情况是不允许的,所以需要更换较大量程的电流表(或者使用一个定值电阻与此电流表并联,改造成适当量程的电流表).
+\end{enumerate}
+
+

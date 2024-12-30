@@ -1,0 +1,313 @@
+\documentclass[a4paper,fontset = windowsnew]{ctexbook}
+\usepackage{xifthen}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{cexam}
+
+\begin{document}
+\chapter{行数统计程序}
+
+\parindent=0pt
+
+%\int_use:N \prevgraf
+2019年8月29日下午重新改写下一代测行程序依据 prevgraf, 更加准确
+\makeatletter
+\ExplSyntaxOn
+% 设置段落行数
+\cs_new:Nn \sep_hd_old: {} %保存排过的版
+\dim_new:N \sep_hd_old_ht  %文本高度
+%  \cs_new:Npn \cexam_get_txtht:nno #1#2#3
+% 四个参量依次为:1行数(返回),2高度(返回),3宽度(指定),4文本(指定)
+  \cs_new:Npn \get_pg_ht:nnnn #1#2#3#4
+  {
+    \int_set:Nn \cexam_equ_int {\int_use:N\c@equation}
+    \hbox_set:Nn \cexam_txtht_box
+    {\parbox{#3}{#4\par\int_gset:Nn #1{\int_use:N \prevgraf}\quad}}
+    \int_set:Nn \c@equation {\int_use:N \cexam_equ_int}
+    \dim_set:Nn {#2}{\box_dp:N \cexam_txtht_box}
+    \dim_add:Nn {#2}{\box_ht:N \cexam_txtht_box}
+  }
+% -->ok
+% 定义hd_old: 累加程序
+  \cs_new:Npn \sep_hd_old_add:n #1\scan_stop:
+  {
+   \exp_args:NNo \cs_set:Nn \sep_hd_old: {\sep_hd_old: #1}
+  }
+%%考虑文本比图高小的情况
+  \cs_new:Npn \cexam_get_rec_new:nnnnnn #1#2#3#4#5#6
+  {
+% 置空old
+    \cs_set:Nn \sep_hd_old: {} 
+% 获得排版宽度
+    \dim_set:Nn \cexam_pswd_dim {\linewidth}
+    \dim_sub:Nn \cexam_pswd_dim {#3}
+    \dim_sub:Nn \cexam_pswd_dim {#4}
+    \dim_sub:Nn \cexam_pswd_dim {#5}
+    \get_pg_ht:nnnn 
+    {#1}
+    {\sep_hd_old_ht}
+    {\cexam_pswd_dim}
+    {#6}
+    \dim_compare:nNnTF
+    {\sep_hd_old_ht} < {#2}
+    {\relax}
+    {
+      \cexam_get_rec_i_new:nnnnnn
+      {#1}{#2}{#3}{#4}{#5}{#6}
+    }
+  }
+%% 重新改写开辟一个矩形区域的程序
+% 六个参量1计数器,2矩形高,3矩形宽,4左缩进,5右缩进,6文本(含数学文本)
+  \cs_new:Npn \cexam_get_rec_i_new:nnnnnn #1#2#3#4#5#6
+  { 
+% 获得排版宽度
+    \dim_set:Nn \cexam_pswd_dim {\linewidth}
+    \dim_sub:Nn \cexam_pswd_dim {#3}
+    \dim_sub:Nn \cexam_pswd_dim {#4}
+    \dim_sub:Nn \cexam_pswd_dim {#5}
+% 对hd_old 测量高度 同时获得旧文本行数.
+    \get_pg_ht:nnnn 
+    {#1}
+    {\sep_hd_old_ht}
+    {\cexam_pswd_dim}
+    {\sep_hd_old:}
+%   分离头,干,尾
+    \exp_args:No \cexam_sep:n #6 \scan_stop:
+%  头部并入old
+%    \exp_args:NNo \cs_set:Nn \sep_hd_old: {\sep_hd_old:\sep_hd_data:}
+    \exp_args:No \sep_hd_old_add:n \sep_hd_data:\scan_stop:
+%  取得old 的新高度
+    \get_pg_ht:nnnn 
+    {#1}
+    {\sep_hd_old_ht}
+    {\cexam_pswd_dim}
+    {\sep_hd_old:}
+% 对比旧高与图高
+    \dim_compare:nNnTF 
+    {\sep_hd_old_ht} > {#2}
+    {
+      \bool_if:NTF \g__cexam_sep_by_bool
+      {\relax}
+      {
+	\dim_sub:Nn \sep_hd_old_ht {#2}
+	\dim_while_do:nNnn 
+	{\sep_hd_old_ht} > {0pt}
+	{
+	  \int_sub:Nn #1 {1}
+	  \dim_sub:Nn \sep_hd_old_ht {\baselineskip}
+	}
+% 追加2的原因在于,第一取得总高度比实际高度要高,所以测量会多出一行;
+% 第二,目标是计算剩下的行数,来减去,要求最后小于0,所以再追加一行保证大于0
+	\dim_compare:nNnTF 
+	{\dim_abs:n{\sep_hd_old_ht}} < {5pt}
+	{\int_add:Nn #1{1}}
+	{\int_add:Nn #1{2}}
+      }
+    }
+    {
+% 干部并入old
+%      \exp_args:NNo \cs_set:Nn \sep_hd_old: {\sep_hd_old:\sep_by_data:}
+      \exp_args:No \sep_hd_old_add:n \sep_by_data:\scan_stop:
+% 取得old 的新高度
+      \get_pg_ht:nnnn 
+      {#1}
+      {\sep_hd_old_ht}
+      {\cexam_pswd_dim}
+      {\sep_hd_old:}
+% 对比旧高与图高
+      \dim_compare:nNnTF 
+      {\sep_hd_old_ht} > {#2}
+      {\relax} %此处待补充数学结尾时的排版设定
+      { 
+% 整体高度不足,则进入循环
+	\cexam_get_rec_i_new:nnnnnn 
+	{#1}{#2}{#3}{#4}{#5}{\sep_tl_data:}
+      }
+    }
+  }
+%% 原排版程序改写成新程序
+  \cs_new:Npn \cexam_type_i_new:nnnnnnn #1#2#3#4#5#6#7
+  {
+    \cexam_fmt_pic:nn {#1}{#2}
+    \cexam_get_rec_new:nnnnnn
+    {\cexam_picmath_int}
+    {\cexam_picht_dim}{\cexam_picwd_dim}
+    {#3}{#4}{#7}
+    \str_if_in:nnTF {#1}{l}
+    {
+      \dim_set:Nn \cexam_pslin_dim {#3}
+      \dim_set:Nn \cexam_psrin_dim {#4}
+      \dim_set:Nn \cexam_pswd_dim {\linewidth}
+      \dim_add:Nn \cexam_pslin_dim {\cexam_picwd_dim}
+      \cexam_sha_mk_ii:nnnnnnn
+      {\cexam_picmath_int}
+      {\cexam_pslin_dim}{\cexam_pswd_dim}{\cexam_psrin_dim}
+      {#5}{\linewidth}{#6}
+      \dim_add:Nn \cexam_picwd_dim{#3}
+    }
+    {
+      \dim_set:Nn \cexam_pslin_dim {#3}
+      \dim_set:Nn \cexam_psrin_dim {#4}
+      \dim_set:Nn \cexam_pswd_dim {\linewidth}
+      \dim_add:Nn \cexam_psrin_dim {\cexam_picwd_dim}
+      \cexam_sha_mk_ii:nnnnnnn
+      {\cexam_picmath_int}
+      {\cexam_pslin_dim}{\cexam_pswd_dim}{\cexam_psrin_dim}
+      {#5}{\linewidth}{#6}
+    }
+    \tex_parshape:D \cexam_shad:
+    \box_use:N \cexam_picture_box
+    #7
+  }
+%%%%%%%%%新一代三级缩排%%%%%%%%%%
+  \cs_new:npn \cexam_type_ii_new:nnnnnnnnn #1#2#3#4#5#6#7#8#9
+  {
+% 格式化图片
+    \cexam_fmt_pic:nn {#1}{#2}
+% 获得图片的排版行数
+    \cexam_get_rec_new:nnnnnn {\cexam_picmath_int}
+    {\cexam_picht_dim}{\cexam_picwd_dim}
+    {#3}{#4}{#9}
+% 将图片行数传给 第一次排版行数
+    \int_set:Nn \cexam_numtemp_int{\int_use:N \cexam_picmath_int}
+% 设置文字排版宽度
+    \dim_set:Nn \cexam_pswd_dim {\linewidth}
+    \dim_sub:Nn \cexam_pswd_dim {#3}
+    \dim_sub:Nn \cexam_pswd_dim {#4}
+    \dim_set:Nn \cexam_pslin_dim {#3}
+    \dim_set:Nn \cexam_psrin_dim {#4}
+    \dim_add:Nn \cexam_psrin_dim {\cexam_picwd_dim}
+% 生成形状
+    \cexam_sha_mk_ii:nnnnnnn {\cexam_numtemp_int}
+    {\cexam_pslin_dim}{\linewidth}{\cexam_psrin_dim}
+    {#5}{\linewidth}{#6}
+% 获得图片后的排版行数
+    \get_pg_ht:nnnn
+    {\cexam_totalnum_int} %生成总行数 ,主要目的
+    {\rec_tempht_dim}     %排版总高度,此处无用
+    {\cexam_pswd_dim}
+    {
+      \tex_parshape:D \cexam_shad:
+      #9
+    }
+% 设置图片之后行数
+    \int_set:Nn \cexam_numtemp_int {\int_use:N \cexam_totalnum_int}
+    \int_sub:Nn \cexam_numtemp_int {\cexam_picmath_int}
+% 生成最终形状
+    \int_add:Nn \cexam_totalnum_int {1}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_sha_cape: \int_use:N \cexam_totalnum_int}
+% 生成一级的左右缩进形状
+    \str_if_in:nnTF {#1}{l}
+    {
+      \dim_set:Nn \cexam_pslin_dim {#3}
+      \dim_add:Nn \cexam_pslin_dim {\cexam_picwd_dim}
+      \dim_set:Nn \cexam_psrin_dim {#4}
+      \cexam_sha_mk_i:nnnn {\cexam_picmath_int}
+      {\cexam_pslin_dim}{\linewidth}{\cexam_psrin_dim}
+      \dim_add:Nn \cexam_picwd_dim{#3}
+    }
+    {
+      \dim_set:Nn \cexam_pslin_dim {#3}
+      \dim_set:Nn \cexam_psrin_dim {#4}
+      \dim_add:Nn \cexam_psrin_dim {\cexam_picwd_dim}
+      \cexam_sha_mk_i:nnnn {\cexam_picmath_int}
+      {\cexam_pslin_dim}{\linewidth}{\cexam_psrin_dim}
+    }
+    \cexam_sha_mk_i:nnnn {\cexam_numtemp_int}
+    {#5}{\linewidth}{#6}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_shad:\cexam_sha_cape: #7}
+    \dim_set:Nn \cexam_pswd_dim {\linewidth}
+    \dim_sub:Nn \cexam_pswd_dim {#7}
+    \dim_sub:Nn \cexam_pswd_dim {#8}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_shad:\cexam_sha_cape: \cexam_pswd_dim}
+    \tex_parshape:D \cexam_shad:
+    \box_use:N \cexam_picture_box
+    #9
+  }
+%%%%%%%%%测试行数%%%%%%%%%%
+\par
+**********************************************
+\par
+ \dim_new:N \my_ht_dim
+
+% \cexam_type_i_new:nnnnnnn
+ \cexam_type_ii_new:nnnnnnnnn
+ {r}
+ {
+   \begin{tikzpicture}
+     \draw (0,0) rectangle (3,6);
+   \end{tikzpicture}
+ }
+ {0pt}{0pt}
+ {20pt}{0pt}
+ {40pt}{0pt}
+ {
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    \begin{equation}
+      E=MC^2
+    \end{equation}
+    这是行数测试文本
+    \begin{equation}
+      E=MC^2
+    \end{equation}
+    这是行数测试文本
+    这是行数测试文本
+    \begin{equation}
+      E=MC^2
+    \end{equation}
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文是行数测试文本
+  }
+  \newline
+  这是选项部分
+  这是选项部分
+  这是选项部分
+  这是选项部分
+  这是选项部分
+
+    \end{document}

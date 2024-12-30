@@ -1,0 +1,87 @@
+\chapter{热力学量}
+
+\section{热力学不等式}
+
+\hfill 2019年 03月 29日 星期五 21:23:13 CST
+\begin{gather}
+  \intertext{设想由物体和介质构成的一个大系统,则总熵记为$S_t$,系统的熵记为$S$.介质的熵记为$S_0$,则由于系统比介质小的多,而介质可以认为保持压强和温度不变,所以对于系统可以列出能量守恒定律,即}
+  \Delta E=W+P_0\Delta V_0-T_0\Delta S_0
+  \label{eq:lexiatalie0}
+  \intertext{由于总系统的体积保持不变,且有熵增原理,则}
+  \Delta V+\Delta V_0=0 \quad \Delta S+\Delta S_0 \geqslant 0
+  \label{eq:lexiatalie1}
+  \intertext{将式\eqref{eq:lexiatalie1}代入式\eqref{eq:lexiatalie0}得}
+  W\geqslant \Delta E +P_0 \Delta V-T_0\Delta S
+  \intertext{式中$W$表示客体对系统做的功,而系统对客体做的功应当与它相差一个负号,所以客体对系统做的最小功为}
+  W_{min}=\Delta E +P_0 \Delta V-T_0\Delta S
+  \intertext{如果没有客体做功,则系统和介质构成一个闭合的孤立的大系统,其也符合熵增原理,则}
+  0 \geqslant \Delta E +P_0 \Delta V-T_0\Delta S
+  \label{eq:lexiatalie2}
+  \intertext{系统的能量是其熵和体积的函数,则考虑其Taylor 展开的二级项,则}
+  dE=\frac{\partial E}{\partial S}dS+\frac{\partial E}{\partial V}dV+\frac{1}{2}
+  \left\{
+    \frac{\partial^2E}{\partial S^2}dS^2+2\frac{\partial^2E}{\partial S\partial V}dSdV+\frac{\partial^2E}{\partial V^2}dV^2
+  \right\}
+  \label{eq:lexiatalie3}
+  \intertext{上式即}
+  dE-T\Delta S+P\Delta V=\frac{1}{2}
+  \left\{
+    \frac{\partial^2E}{\partial S^2}dS^2+2\frac{\partial^2E}{\partial S\partial V}dSdV+\frac{\partial^2E}{\partial V^2}dV^2
+  \right\}
+  \label{eq:lexiatalie4}
+  \intertext{式\eqref{eq:lexiatalie2}反映的是一个系统在不平衡时所能自发进行的过程,当它再次达到平衡,则熵又达到最大,所以就会有下式成立}
+  \Delta E -T_0\Delta S+P_0 \Delta V > 0
+  \intertext{\eqref{eq:lexiatalie4}代入上式可得}
+  \frac{1}{2}
+  \left\{
+    \frac{\partial^2E}{\partial S^2}dS^2+2\frac{\partial^2E}{\partial S\partial V}dSdV+\frac{\partial^2E}{\partial V^2}dV^2
+  \right\} > 0
+  \label{eq:lexiatalie5}
+  \intertext{上式如果成立,则必有}
+  \left\{
+    \begin{gathered}
+      \frac{\partial^2E}{\partial S^2}>0 \quad \frac{\partial^2E}{\partial V^2}>0\\
+      \frac{\partial^2E}{\partial S^2}\frac{\partial^2E}{\partial V^2}-\left(
+      \frac{\partial^2E}{\partial S\partial V}\right)^2>0
+    \end{gathered}
+  \right.
+  \intertext{上式也即}
+  \left\{
+    \begin{gathered}
+      \frac{T}{C_v}>0 \quad \left(\frac{\partial P}{\partial V}\right)_T<0\\
+      \frac{\partial^2E}{\partial S^2}\frac{\partial^2E}{\partial V^2}-\left(
+      \frac{\partial^2E}{\partial S\partial V}\right)^2>0
+    \end{gathered}
+  \right.
+\end{gather}
+
+\section{能斯特定理}
+
+在 \S 23 能斯特定理的第23.4 式的说明中提到从 16.9 式看出来.但是我仔细考察了这个问题,发现不是一眼能看出来,所以放到这里来论述一下.第 23.4 式为
+
+\begin{gather}
+  \mbox{当 $T=0$ 时 ,} \quad \frac{C_p-C_v}{C_p}=0.
+\end{gather}
+
+当熵 $S$ 按某种幂律变为零时,即 $ S=aT^n$ 其中 $a$ 为 $V,P$ 的函数.则
+
+\begin{align}
+  \left(\frac{\partial V}{\partial T} \right)_p &=-\left(\frac{\partial S}{\partial P} \right)_T=-\frac{\partial a}{\partial P} \cdot T^n
+  \label{eq:nst0}\\
+  \left(\frac{\partial P}{\partial T} \right)_v &=\left(\frac{\partial S}{\partial V} \right)_T=\frac{\partial a}{\partial V} \cdot T^n
+  \label{eq:nst1}\\
+  C_V&=T\left(\frac{\partial S}{\partial T}\right)_v=n\cdot aT^n
+  \label{eq:nst2}\\
+  \left(\frac{\partial V}{\partial P}\right)_T=\frac{\partial(V,T)}{\partial(P,T)}=&\frac{\partial(V,T)}{\partial(V,P)}\cdot \frac{\partial(V,P)}{\partial(P,T)}=-\left(\frac{\partial T}{\partial P}\right )_v\cdot \left(\frac{\partial V}{\partial T}\right)_p
+  \label{eq:nst3}
+\end{align}
+
+由偏微分运算易得如下关系
+
+\begin{gather}
+  C_p-C_v=-T\frac{\left(\frac{\partial V}{\partial T}\right)^2_P}{\left(\frac{\partial V}{\partial P}\right)_T}
+  \intertext{由式\eqref{eq:nst0}可知上式分子部分与 $T^{2n+1}$成正比,而分母部分由式\eqref{eq:nst3}可知与温度无关.所以有}
+  C_p-C_v \propto T^{2n+1}
+  \intertext{或者有关系}
+  \frac{C_p-C_v}{C_p} \propto T^{n+1}
+\end{gather}

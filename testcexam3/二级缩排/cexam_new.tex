@@ -1,0 +1,234 @@
+\documentclass[a4paper,fontset = windowsnew]{ctexbook}
+\usepackage{xifthen}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{cexam}
+
+\begin{document}
+\chapter{行数统计程序}
+
+\parindent=0pt
+行数统计程序的latex3改写
+
+\ExplSyntaxOn
+%%boolean
+      \box_new:N \cexam_picture_box
+      \box_new:N \cexam_vpicture_box
+      \dim_new:N \cexam_picht_dim
+      \dim_new:N \cexam_picwd_dim
+      \dim_new:N \cexam_paperht_dim
+      \dim_set:Nn \cexam_paperht_dim {\textheight}
+      \int_new:N \cexam_picmath_int
+      \int_new:N \cexam_totalnum_int
+      \int_new:N \cexam_stand_int %%规范图片为标准高度
+%%长度标准化程序
+      \cs_new:Npn \cexam_stand_dim:n #1
+      {
+	\dim_while_do:nNnn {#1}>{0pt}
+	{
+	  \dim_sub:Nn {#1}{\cexam_txt_sub_dim}
+	  \int_add:Nn {\cexam_stand_int}{1}
+	}
+	\int_while_do:nNnn {\cexam_stand_int}>{0}
+	{
+	  \int_sub:Nn {\cexam_stand_int}{1}
+	  \dim_add:Nn {#1}{\cexam_txt_sub_dim}
+	}
+      }
+%% 新排版类型补全
+%%图片处理fmt=format
+ \cs_new:Npn \cexam_fmt_pic:n #1
+ {
+   \hbox_set:Nn \cexam_picture_box {#1}
+   \dim_set:Nn {\cexam_picwd_dim}{\box_wd:N \cexam_picture_box}
+   \dim_set:Nn {\cexam_picht_dim}{\box_ht:N \cexam_picture_box}
+   \dim_add:Nn {\cexam_picht_dim}{\box_dp:N \cexam_picture_box}
+   \cexam_stand_dim:n {\cexam_picht_dim} %标准化图片高度
+   \hbox_set:Nn \cexam_picture_box {\raisebox{-\totalheight-.8\ccwd}[0pt][0pt]{\parbox[b]{\linewidth}{\hfill #1}}}
+   \box_set_wd:Nn \cexam_picture_box {0pt}
+ }
+%参量:1图片,2一级左缩进,3一级右缩进,4二级左缩进,5二级右缩进,6文本
+  \cs_new:Npn \cexam_type_i:nnnnnn #1#2#3#4#5#6
+  {
+    \cexam_fmt_pic:n {#1}
+    \cexam_get_rec:nnnnnn {\cexam_picmath_int}{\cexam_picht_dim}{\cexam_picwd_dim}{#2}{#3}{#6}
+    \dim_set:Nn \cexam_pswd_dim {\linewidth}
+    \dim_sub:Nn \cexam_pswd_dim {\cexam_picwd_dim}
+    \cexam_sha_mk_ii:nnnnnnn {\cexam_picmath_int}
+    {#2}{\cexam_pswd_dim}{#3}
+    {#4}{\linewidth}{#5} 
+    \tex_parshape:D \cexam_shad:
+    \box_use:N \cexam_picture_box 
+    #6
+  }
+%%原本:1.图片,2,文本
+%%更新:1图片,2一级左缩进,3一级右缩进,4二级左缩进,5二级右缩进,6三级左缩进,7三级右缩进,8文本
+      \cs_new:Npn \cexam_type_ii:nnnnnnnn #1#2#3#4#5#6#7#8
+      {
+	\cexam_fmt_pic:n {#1}
+%%以上处理图片的宽高
+	  \cexam_get_rec:nnnnnn {\cexam_picmath_int}{\cexam_picht_dim}{\cexam_picwd_dim}{#2}{#3}{#8}
+%%text
+	  \bool_if:NTF \g__cexam_hds_bool
+	  { 
+	    \int_set:Nn \cexam_numtemp_int {\int_use:N \cexam_hdnum_int}%接收head缩排行数
+	    \dim_set:Nn \cexam_psrin_dim {\cexam_picwd_dim}%一级缩排宽度
+	    \dim_add:Nn \cexam_psrin_dim {#3}
+	    \cexam_sha_mk_ii:nnnnnnn {\cexam_hdnum_int}{#2}{\linewidth}{\cexam_psrin_dim}{#4}{\linewidth}{#5}%生成此head的形状
+	    \dim_set:Nn \cexam_pswd_dim {\linewidth}%设定排版宽度
+	    \dim_sub:Nn \cexam_pswd_dim {#2}
+	    \dim_sub:Nn \cexam_pswd_dim {#3}
+	    \cexam_get_txtht:nno {\rec_tempht_dim} %排版head以获得缩排后的行数
+	    {\cexam_pswd_dim}
+	    {
+	      \tex_parshape:D \cexam_shad:
+	      \sep_hd_dim:
+	    }
+	    \int_set:Nn \cexam_hdnum_int {0}
+	    \cexam_get:nNnN {1}{\cexam_hdnum_int}{\cexam_txt_sub_dim}{\rec_tempht_dim}
+	    \int_sub:Nn \cexam_hdnum_int {\cexam_numtemp_int}
+	    \int_set:Nn \cexam_numtemp_int {\int_use:N \cexam_hdnum_int}%接收head缩排之后的行数
+	    \bool_if:NTF \g__cexam_sep_by_bool
+	    {
+	      \cexam_get_txtht:nno {\rec_tempht_dim}{\cexam_pswd_dim}{\sep_by_dim:}
+	      \cexam_get:nNnN {3}{\cexam_numtemp_int}{\cexam_mat_sub_dim}{\rec_tempht_dim}
+	    }{\relax}
+	  }{\relax}
+%%math
+	  \bool_if:NTF \g__cexam_bds_bool
+	  { 
+	    \int_set:Nn \cexam_numtemp_int {\int_use:N \cexam_bynum_int}%接收body 缩排行数
+	    \cexam_sha_mk_ii:nnnnnnn {\cexam_bynum_int}{#2}{\linewidth}{\cexam_psrin_dim}{#4}{\linewidth}{#5}%生成此body的形状
+	    \dim_set:Nn \cexam_pswd_dim {\linewidth}%设定排版宽度
+	    \dim_sub:Nn \cexam_pswd_dim {#2}
+	    \dim_sub:Nn \cexam_pswd_dim {#3}
+	    \cexam_get_txtht:nno {\rec_tempht_dim}%排版body以获得缩排后的行数
+	    {\cexam_pswd_dim}
+	    {
+	      \tex_parshape:D \cexam_shad:
+	      \sep_by_dim:
+	    }
+	    \int_set:Nn \cexam_bynum_int {0}
+	    \cexam_get:nNnN {3}{\cexam_bynum_int}{\cexam_mat_sub_dim}{\rec_tempht_dim}
+	    \int_sub:Nn \cexam_bynum_int {\cexam_numtemp_int}
+	    \int_set:Nn \cexam_numtemp_int {\int_use:N \cexam_bynum_int}%接收body缩排之后的行数
+	  }{\relax}
+	  \bool_set_true:N \g__cexam_sep_tl_bool
+	  \cexam_get_rec:nnnnnn {\cexam_numtemp_int}{\cexam_paperht_dim}{0pt}{#4}{#5}{\sep_tl_dim:}
+%%总体生成形状
+	  \int_set:Nn \cexam_totalnum_int {\int_use:N \cexam_picmath_int}
+	  \int_add:Nn \cexam_totalnum_int {\int_use:N \cexam_numtemp_int}
+	  \int_add:Nn \cexam_totalnum_int {1}
+	  \exp_args:NNx\cs_set:Nn \cexam_shad:{\cexam_sha_cape: \int_use:N \cexam_totalnum_int}
+	  \dim_set:Nn \cexam_psrin_dim {\cexam_picwd_dim}%一级缩排宽度
+	  \dim_add:Nn \cexam_psrin_dim {#3}
+	  \cexam_sha_mk_i:nnnn {\cexam_picmath_int}{#2}{\linewidth}{\cexam_psrin_dim}
+	  \cexam_sha_mk_i:nnnn {\cexam_numtemp_int}{#4}{\linewidth}{#5}
+	  \exp_args:NNx\cs_set:Nn \cexam_shad:
+	  {\cexam_shad:\cexam_sha_cape: #6}
+	  \dim_set:Nn \cexam_pswd_dim {\linewidth}
+	  \dim_sub:Nn \cexam_pswd_dim {#2}
+	  \dim_sub:Nn \cexam_pswd_dim {#4}
+	  \dim_sub:Nn \cexam_pswd_dim {#7}
+	  \exp_args:NNx\cs_set:Nn \cexam_shad:
+	  {\cexam_shad:\cexam_sha_cape: \cexam_pswd_dim}
+%%%%
+	  \tex_parshape:D \cexam_shad:
+	  \box_use:N \cexam_picture_box 
+	  #8
+      }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+      \dim_new:N \g__exam_test_dim
+      \int_new:N \g__exam_test_int
+      \dim_set:Nn \g__exam_test_dim {50pt}
+
+      \cexam_type_ii:nnnnnnnn 
+      {
+	\begin{tikzpicture}
+	  \draw (0,0) rectangle (3,4);
+	\end{tikzpicture}
+      }
+    {20pt}{8pt}{40pt}{0pt}{60pt}{0pt}
+    {
+	这head1是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	\begin{equation}
+	  e=mc^2
+	\end{equation}
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版
+	这是第三版的图文试题排版测试
+%	这是第三版的图文试题
+	\begin{equation}
+	  e=mc^2
+	\end{equation}
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	\begin{equation}
+	  e=mc^2
+	\end{equation}
+	这是第三版的图文试题排版测试
+	这tail是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	\begin{equation}
+	  e=mc^2
+	\end{equation}
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+      }
+      \newline
+      这是附加的选项部分.
+      这是附加的选项部分.
+      这是附加的选项部分.
+      这是附加的选项部分.
+      这是附加的选项部分.
+
+    \newpage
+    本页是第二种排版方式测试. 
+
+    \par
+
+    \cexam_type_i:nnnnnn 
+      {
+	\begin{tikzpicture}
+	  \draw (0,0) rectangle (3,2.5);
+	\end{tikzpicture}
+      }
+      {20pt}{8pt}{40pt}{0pt}
+      {
+	这head1是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	\begin{equation}
+	  e=mc^2
+	\end{equation}
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版
+	这是第三版的图文试题排版测试
+      }
+
+
+    \end{document}

@@ -1,0 +1,44 @@
+\chapter{溶液}
+
+\section{强电解质溶液}
+
+强电解质指溶解到溶液中时能够完全电离成离子的物质.其热力学势为
+\begin{gather}
+  \Phi=N\mu_0+
+  \sum_a\left(Tn_a\ln \frac{n_a}{eN}+n_a\Psi_a\right)
+  -\frac{2e^3}{3\varepsilon^{\frac{3}{2}}}\cdot
+  \left(\frac{\pi}{\nu T}\right)^{\frac{1}{2}}\cdot N
+  \cdot \left( \frac{\sum_a n_aZ_a^2}{N}\right)^{\frac{3}{2}}
+  \intertext{可以求得一个离子的化学势为}
+  \mu_a=\frac{\partial \Phi}{\partial n_a}
+  =T\ln\frac{n_a}{eN}+\Psi_a
+  -\frac{e^3}{\varepsilon^{\frac{3}{2}}}\cdot
+  \left(\frac{\pi}{N\nu T}\right)^{\frac{1}{2}}Z_a
+  \cdot \left( \sum_a n_aZ_a^2\right)^{\frac{1}{2}}
+\end{gather}
+习题:试求加入一定量的第二种电解质(其所有离子与第一种的全都不同)后第一种强电角质溶解度(假设很小)的改变.
+
+{\bf 解:}电解质溶解度的定义为:第a种分子在溶液中最大的浓度.设一个电解质分子所带第a种离子的数量为$\nu_a$,即
+\begin{gather}
+  c_0=\frac{n_a}{N\nu_a} 
+  \intertext{当固体电解质与溶液达到平衡时,其浓度达到最大,就是其溶解度.记$\mu_s$  为电解质分子的化学势,则}
+  \mu_s(P,T)=\sum_a \nu_a \mu_a
+  \intertext{由于平衡,所以固体中$\mu_a$ 可以使用饱和溶液中的化学势来代入,得}
+  \mu_s =T\sum_a \nu_a\ln\frac{n_a}{N}
+  +\sum_a \nu_a\mu_a
+  -\frac{e^3}{\varepsilon^{\frac{3}{2}}}\cdot
+  \left(\frac{\pi}{N\nu T}\right)^{\frac{1}{2}}\cdot
+\sum_a\nu_aZ_a^2\cdot
+\left( \sum_b n_bZ_b^2\right)^{\frac{1}{2}}
+\intertext{在上式中对a的求和,是和固态电解质平衡的成份,也就是它们的浓度就是溶解度.但是对b的求和,包含了溶液中的全部溶质成份.当再加入另一种电解质后,则已达饱和的a类离子将不发生变化,而新加入的离子就在对b求和的和式中,这在推导过程中很清楚.所以对第a种离子的溶解度的影响,是由对b的和式导致的,由于平衡时热力学势取极小值,因此对其变分就可以得到溶解度的影响.即}
+T\sum_a \nu_a \cdot \frac{\delta c_0}{c_0}
+-\frac{e^3}{\varepsilon^{\frac{3}{2}}}
+\left(\frac{\pi}{N\nu T}\right)^{\frac{1}{2}}\cdot
+\sum_a\nu_a Z_a^2 \cdot \frac{1}{\sqrt{\sum_an_aZ_a^2}}\cdot 
+\delta \left(\sum_an_aZ_a^2\right)=0
+\intertext{简单整理可得}
+\delta c_0=\frac{e^3\pi^{\frac{1}{2}}}{2v^\frac{1}{2}(T\varepsilon N)^{\frac{3}{2}}\sum_a\nu_a}
+\cdot \left(\sum_bn_bZ_b^2\right)^{\frac{1}{2}}\cdot
+\delta \left(\sum_bn_bZ_b^2\right)
+\end{gather}
+变分号后的和式只含另加的离子类型,因为它是由于新加入的离子导致的变化.在所考虑的条件溶解度增加.

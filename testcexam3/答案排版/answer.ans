@@ -1,0 +1,65 @@
+\section {各题型测试(答案)}
+
+\begin {answerstd}
+
+1.{\heiti 答案}
+AB 
+
+ee.{\heiti 解析}
+这是选择题的解析部分. 
+
+ee.这是选择题解析下一级部分,用来输入解析较长的情况. 
+
+2.{\heiti 答案}
+ABCD 
+
+ee.{\heiti 解析}
+这是第二题的解析. << \includegraphics [scale=0.2]{2.jpg} >> 所示是图片.其中有四个选项,分别是 所示是图片.其中有四个选项,分别是 所示是图片.其中有四个选项,分别是 所示是图片.其中有四个选项,分别是 所示是图片.其中有四个选项,分别是 所示是图片.其中有四个选项,分别是 所示是图片.其中有四个选项,分别是 
+
+ee.这是第二题的追加解析. 
+
+\end {answerstd}
+
+\begin {answerstd}
+
+4.{\heiti 答案}
+计算题\hskip 1em\relax 计算题\hskip 1em\relax 题干\hskip 1em\relax 题干\hskip 1em\relax 
+
+ee.{\heiti 解析}
+这是填空题的解析部分.用以测试填空题解析输出. 
+
+ee.这是填空题的追加解析部分.用以测试填空题追加的解析输出. 
+
+\end {answerstd}
+
+\begin {answerstd}
+
+7.{\heiti 答案}
+对 
+
+8.{\heiti 答案}
+错 
+
+ee.{\heiti 解析}
+这是判断题的解析.2019年9月3日晚完成了全部内容. 
+
+\end {answerstd}
+
+\begin {answerstd}
+
+9.{\heiti 答案}
+这是计算题的答案.它是第一题的答案测试. 
+
+ee.{\heiti 解析}
+这是计算题的解析.2019年9月17日晚完成了全部内容. 
+
+10.{\heiti 答案}
+这是计算题的答案.它是第二题的答案测试. 
+
+ee.{\heiti 解析}
+这是计算题的解析.2019年9月3日晚完成了全部内容. 
+
+\end {answerstd}
+
+\section {答案和解析的测试(答案)}
+

@@ -1,0 +1,38 @@
+\chapter {基本排版程序（答案）}
+
+\begin {answerstd}
+
+1.{\heiti 答案}
+AB 
+
+ee.{\heiti 解析}
+这是选择题的解析部分. 
+
+ee.这是选择题解析下一级部分,用来输入解析较长的情况. 
+
+2.{\heiti 答案}
+ABCD 
+
+\end {answerstd}
+
+\begin {answerstd}
+
+4.{\heiti 答案}
+计算题\hskip 1em\relax 计算题\hskip 1em\relax 
+
+\end {answerstd}
+
+\begin {answerstd}
+
+ee.{\heiti 解析}
+这是判断题的解析.2019年9月3日晚完成了全部内容. 
+
+\end {answerstd}
+
+\begin {answerstd}
+
+ee.{\heiti 解析}
+这是判断题的解析.2019年9月3日晚完成了全部内容. 
+
+\end {answerstd}
+

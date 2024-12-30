@@ -1,0 +1,16 @@
+\chapter {基本排版程序（答案）}
+
+\begin {answerstd}[proof]
+
+ee.{\heiti 证明}
+ 设:$x_{n+1}=x_1$,则因为$x_i\in (0,1]$,所以 $\frac {1}{x_i}\in [1,\infty )$,$(i=1,2,\cdots ,n)$ 由伯努利不等式得:当$x_i>-1$,且 $\alpha _i\in [1,\infty )$时 \[ (1+x_i)^{\alpha _i}\geqslant 1+\alpha _i x_i \] 当且仅当 $x_i=0$ 或 $a_i=1$ 时上式等号成立。由均值不等式得 \[ 1+\alpha _i x_i\geqslant 2\sqrt {\alpha _ix_i} \] 当且仅当 $\alpha _ix_i=1$ 时等号成立。所以得 \[ (1+x_i)^{\alpha _i}\geqslant 2\sqrt {\alpha _ix_i} \] 上式当且仅当 $\alpha _i=x_i=1$ 时等号成立。设 $\alpha _i=\frac {1}{x_{i+1}}$ ,则由上式得 \[ (1+x_i)^{\frac {1}{x_{i+1}}}\geqslant 2\sqrt {\frac {x_i}{x_{i+1}}} \] 上式对 $i$ 从 $1$ 到$n$ 求积得 \[ (1+x_1)^{\frac {1}{x_2}}(1+x_2)^{\frac {1}{x_3}}\cdots (1+x_n)^{\frac {1}{x_1}}\geqslant 2^n \] \prf_end_tl 
+
+ee.此题也可以从多元函数求极值来确定。由于 $x_i$ 的轮换对称性可知此 $n$ 元函数当 $x_1=x_2=\dots =x_n=x$ 时取极值，通过取特殊值可以断定此极值为极小值。则 \[ f(x_1,x_2,\dots ,x_n)=(1+x_1)^{\frac {1}{x_2}}(1+x_2)^{\frac {1}{x_3}}\cdots (1+x_n)^{\frac {1}{x_1}}\geqslant (1+x)^{\frac {n}{x}} \] 由于 $(1+x)^{\frac {n}{x}}$ 为单减函数，所以当$x=1$时最极小值的极小值，即 \[ (1+x_1)^{\frac {1}{x_2}}(1+x_2)^{\frac {1}{x_3}}\cdots (1+x_n)^{\frac {1}{x_1}}\geqslant (1+1)^n=2^n \] \prf_end_tl 
+
+ee.{\heiti 证明}
+由伯努利不等式得 \[ (1-x_1)(1-x_2)\dots (1-x_n) \geqslant 1-(x_1+x_2+\dots +x_n) =1-\frac {1}{2}=\frac {1}{2} \] \prf_end_tl 
+
+ee.此题也是轮换不等式。由多元函数各偏微分为零可得，当$x_1=x_2=\dots =x_n$时，此多元函数取极值,即 $x_i=\frac {1}{2n}$ ,于是 \[ f_m= (1-\frac {1}{2n})^n \] 显然当$n$ 增加时，$fm$增加，同时由特殊值不可以写出此极值为极小值。同时极小值的极小值为$n=1$时，即 \[ (1-x_1)(1-x_2)\dots (1-x_n) \geqslant (1-\frac {1}{2n})^n \geqslant \frac {1}{2} \] \prf_end_tl 
+
+\end {answerstd}
+

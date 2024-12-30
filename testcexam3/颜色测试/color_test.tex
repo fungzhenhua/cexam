@@ -1,0 +1,211 @@
+\documentclass[a4paper,fontset = windowsnew]{ctexbook}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[user=teacher]{cexam}
+%\usepackage{xcolor}
+%\usepackage{l3color}
+\usepackage{l3draw}
+
+\begin{document}
+\chapter{运动的描述}
+\section{运动学基本概念}
+\subsection{坐标系}
+上一节中,参考系可以确定物体是静还是动的问题.但是不能确定动多么快的问题,也就是定性的,所以要准确的描述物体的位置及位置变化需要建立坐标系,这个坐标系包括:\CJKunderwave{原点,正方向和单位长度.}
+
+研究物体的直线运动时,一般建立直线坐标系,研究物体的曲线运动(轨迹是曲线的运动)时建立平面直角坐标系.另外还有极坐标系,自然坐标系等.感兴趣的同学可以参考一下相关的数学资料.\CJKunderwave{所有坐标系中的一个点和物体的位置一一对应}.
+
+\begin{jisuan}
+   1.一质点在x轴上运动,各个时刻的位置坐标如
+   \begin{tabular}{|*{7}{c|}}
+      \hline
+      t/s & 0 & 1 & 2 & 3 & 4 & 5\\
+      \hline
+      x/m & 0 & 5 & -4 & -1 & -7 & 1\\
+      \hline
+   \end{tabular}
+   所示:
+   \qitem 请画出x轴,在上面标出质点在各个时刻的位置.
+   \qitem 哪个时刻离开坐标原点最远?有多远?
+
+%   a.见解析
+%
+   e.(1)各时刻质点的位置坐标如
+      \begin{tikzpicture}[scale=0.4]
+	 \draw [->] (-8,0)--(7,0);
+	 \foreach \x in {-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5}
+	 \draw (\x,0pt)--(\x,3pt) node [anchor=north] {\x};
+	 \draw (8,0) node [anchor=north east] {$x/m$};
+	 \draw [<-] (-7,4pt)--(-7,24pt) node [anchor=south]{ 4s 末};
+	 \draw [<-] (-4,4pt)--(-4,24pt) node [anchor=south]{ 2s 末};
+	 \draw [<-] (-1,4pt)--(-1,24pt) node [anchor=south]{ 3s 末};
+	 \draw [<-] (1,4pt)--(1,24pt) node [anchor=south]{ 5s 末};
+	 \draw [<-] (5,4pt)--(5,24pt) node [anchor=south]{ 1s 末};
+	 \draw [<-] (0,4pt)--(0,44pt) node [anchor=south]{0时刻};
+      \end{tikzpicture}
+   所示.
+
+   ee.(2)由图可知第4s 末质点离开坐标原点最远,有7m.
+
+  1.一质点在x轴上运动,各个时刻的位置坐标如
+   \begin{tabular}{|*{7}{c|}}
+      \hline
+      t/s & 0 & 1 & 2 & 3 & 4 & 5\\
+      \hline
+      x/m & 0 & 5 & -4 & -1 & -7 & 1\\
+      \hline
+   \end{tabular}
+   所示:
+   \qitem 请画出x轴,在上面标出质点在各个时刻的位置.
+   \qitem 哪个时刻离开坐标原点最远?有多远?
+
+  1.一质点在x轴上运动,各个时刻的位置坐标如
+   \begin{tabular}{|*{7}{c|}}
+      \hline
+      t/s & 0 & 1 & 2 & 3 & 4 & 5\\
+      \hline
+      x/m & 0 & 5 & -4 & -1 & -7 & 1\\
+      \hline
+   \end{tabular}
+   所示:
+   \qitem 请画出x轴,在上面标出质点在各个时刻的位置.
+   \qitem 哪个时刻离开坐标原点最远?有多远?
+
+  1.一质点在x轴上运动,各个时刻的位置坐标如
+   \begin{tabular}{|*{7}{c|}}
+      \hline
+      t/s & 0 & 1 & 2 & 3 & 4 & 5\\
+      \hline
+      x/m & 0 & 5 & -4 & -1 & -7 & 1\\
+      \hline
+   \end{tabular}
+   所示:
+   \qitem 请画出x轴,在上面标出质点在各个时刻的位置.
+   \qitem 哪个时刻离开坐标原点最远?有多远?
+
+  1.一质点在x轴上运动,各个时刻的位置坐标如
+   \begin{tabular}{|*{7}{c|}}
+      \hline
+      t/s & 0 & 1 & 2 & 3 & 4 & 5\\
+      \hline
+      x/m & 0 & 5 & -4 & -1 & -7 & 1\\
+      \hline
+   \end{tabular}
+   所示:
+   \qitem 请画出x轴,在上面标出质点在各个时刻的位置.
+   \qitem 哪个时刻离开坐标原点最远?有多远?
+
+  1.一质点在x轴上运动,各个时刻的位置坐标如
+   \begin{tabular}{|*{7}{c|}}
+      \hline
+      t/s & 0 & 1 & 2 & 3 & 4 & 5\\
+      \hline
+      x/m & 0 & 5 & -4 & -1 & -7 & 1\\
+      \hline
+   \end{tabular}
+   所示:
+   \qitem 请画出x轴,在上面标出质点在各个时刻的位置.
+   \qitem 哪个时刻离开坐标原点最远?有多远?
+
+  1.一质点在x轴上运动,各个时刻的位置坐标如
+   \begin{tabular}{|*{7}{c|}}
+      \hline
+      t/s & 0 & 1 & 2 & 3 & 4 & 5\\
+      \hline
+      x/m & 0 & 5 & -4 & -1 & -7 & 1\\
+      \hline
+   \end{tabular}
+   所示:
+   \qitem 请画出x轴,在上面标出质点在各个时刻的位置.
+   \qitem 哪个时刻离开坐标原点最远?有多远?
+
+  1.一质点在x轴上运动,各个时刻的位置坐标如
+   \begin{tabular}{|*{7}{c|}}
+      \hline
+      t/s & 0 & 1 & 2 & 3 & 4 & 5\\
+      \hline
+      x/m & 0 & 5 & -4 & -1 & -7 & 1\\
+      \hline
+   \end{tabular}
+   所示:
+   \qitem 请画出x轴,在上面标出质点在各个时刻的位置.
+   \qitem 哪个时刻离开坐标原点最远?有多远?
+
+  1.一质点在x轴上运动,各个时刻的位置坐标如
+   \begin{tabular}{|*{7}{c|}}
+      \hline
+      t/s & 0 & 1 & 2 & 3 & 4 & 5\\
+      \hline
+      x/m & 0 & 5 & -4 & -1 & -7 & 1\\
+      \hline
+   \end{tabular}
+   所示:
+   \qitem 请画出x轴,在上面标出质点在各个时刻的位置.
+   \qitem 哪个时刻离开坐标原点最远?有多远?
+
+  1.一质点在x轴上运动,各个时刻的位置坐标如
+   \begin{tabular}{|*{7}{c|}}
+      \hline
+      t/s & 0 & 1 & 2 & 3 & 4 & 5\\
+      \hline
+      x/m & 0 & 5 & -4 & -1 & -7 & 1\\
+      \hline
+   \end{tabular}
+   所示:
+   \qitem 请画出x轴,在上面标出质点在各个时刻的位置.
+   \qitem 哪个时刻离开坐标原点最远?有多远?
+
+  1.一质点在x轴上运动,各个时刻的位置坐标如
+   \begin{tabular}{|*{7}{c|}}
+      \hline
+      t/s & 0 & 1 & 2 & 3 & 4 & 5\\
+      \hline
+      x/m & 0 & 5 & -4 & -1 & -7 & 1\\
+      \hline
+   \end{tabular}
+   所示:
+   \qitem 请画出x轴,在上面标出质点在各个时刻的位置.
+   \qitem 哪个时刻离开坐标原点最远?有多远?
+
+  1.一质点在x轴上运动,各个时刻的位置坐标如
+   \begin{tabular}{|*{7}{c|}}
+      \hline
+      t/s & 0 & 1 & 2 & 3 & 4 & 5\\
+      \hline
+      x/m & 0 & 5 & -4 & -1 & -7 & 1\\
+      \hline
+   \end{tabular}
+   所示:
+   \qitem 请画出x轴,在上面标出质点在各个时刻的位置.
+   \qitem 哪个时刻离开坐标原点最远?有多远?
+
+\end{jisuan}
+
+\begin{xuanze}[example]
+   1.下列关于质点的说法中,正确的是
+   A.质点是一个理想化的模型,实际上并不存在,所以引入这个概念没有多大意义
+   B.体积很小的物体更容易看做质点
+   C.凡轻小的物体,皆可看做质点
+   D.当物体的形状和大小对所研究的问题属于无关或者次要因素时,即可把物体看成质点
+
+   a.D
+
+   e.建立理想模型是物理中的重要的研究方法,对于复杂问题的研究有重大意义,A错误;一个物体能否看做质点不应看其大小,关键是看其大小对于研究的问题的影响能否忽略,体积很小的物体有时可以看成质点,有时不能看成质点,B错误;一个物体能否看成质点不以轻重而论,C错误;物体能否看成质点取决于其大小和形状对所研究的问题是否属于无关或次要因素,若是就可以看成质点,D正确.
+
+   1.下列关于质点的说法中,正确的是
+   A.质点
+   B.体积
+   C.凡轻
+   D.当物
+
+\end{xuanze}
+
+ \lettersink[2cm][2pt][magenta]
+ 物理学的发展，推动了工业、农业和信息技术等方面的进步，引发了一次次的产业革命，改变了人类的生产和生活方式。技术的进步又为物理学的研究提供了更为强大的手段，并引发了人们对物理问题进行更深入的思考，从而反过来促进物理学的发展。
+ 创立于17世纪的牛顿力学，被广泛地应用于工程技术，大大推动了社会的发展。18 ～ 19世纪，工程上对蒸汽机的改进需求，又迫使人们对热的问题进行深入研究，引发了热力学的巨大进步。
+  19 ～20世纪初，电磁学的发展，直接导致发电机和无线电通信的诞生，使电能被广泛利用。电走进了千家万户，世界被电灯点亮，电话和电报把各地的人们连接起来，人类从此进入了电气时代。
+
+\ExplSyntaxOn
+\color_select:n {magenta} 这是\c_space_tl{}\skip_horizontal:n{\ccwd}颜色测试。
+\ExplSyntaxOff
+
+\end{document}

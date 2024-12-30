@@ -1,0 +1,3652 @@
+% \iffalse meta-comment
+%!TeX program  = XeLaTeX
+%!TeX encoding = UTF-8
+%
+% cexam.dtx
+% Copyright 2016-2018 FengZhenhua <fengzhenhua@sina.cn>
+% 
+% 这个工作是我在处理物理习题排版时,为了快速排版高中物理试题而编写的.之前已经完成了一复杂的版本,其兼具排版试卷、输出beamer课件、输出学生试卷为一体，能够输出多种格式的排版。所以为了增强其可维护性，决定2018年3月31开始用dtx重写，加入说明文档。
+%
+%<*internal>
+\iffalse
+%</internal>
+%<*install>
+\input ctxdocstrip %
+\keepsilent
+\preamble
+
+    Copyright (C) 2017--3000
+------------------------------------------------------------------------------
+    cexam.dtx文件由冯振华创建,作者系平原县第一中学物理教师
+
+    声明:本宏包由于使用的特殊环境,专用于处理高中物理试题,则决定暂时不开源.
+
+    当前的维护者:冯振华
+
+    邮件:fengzhenhua@sina.cn
+
+    博客:fengzhenhua.blog.163.com
+
+------------------------------------------------------------------------------
+\endpreamble
+\postamble
+This package consists of the file cexam.dtx
+\endpostamble
+\generate
+{
+    \usedir{tex/latex/ctex}
+    \file{cexam.sty}	            {\from{\jobname.dtx}{package}}
+    \file{cexam.cls}	            {\from{\jobname.dtx}{class}}
+    \file{examination.cls}	    {\from{\jobname.dtx}{examination}}
+}
+\Msg{***********************************************************}
+\Msg{                                                           }
+\Msg{ 将下列文件移动到可被TeX搜索到的目录                       }
+\Msg{                                                           }
+\Msg{     cexam.sty                                             }
+\Msg{     cexam.cls                                             }
+\Msg{     examination.cls                                       }
+\Msg{                                                           }
+\Msg{ 例如目录TDS:tex/latex/ctex                                }
+\Msg{                                                           }
+\Msg{ 使用XeLaTex编译 cexam.dtx文件生成说明文档                 }
+\Msg{                                                           }
+\Msg{ Happy TeXing!                                             }
+\Msg{                                                           }
+\Msg{***********************************************************}
+\endbatchfile
+%</install>
+%<*internal>
+\fi
+%</internal>
+% \fi
+%
+% \iffalse
+%引入一些需要的宏包。
+%<package|class|examination>\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+%<package>\ProvidesPackage{cexam}[2019/01/11 v2.0 for china middle school exam] 
+%<class>\ProvidesClass{cexam}[2018/05/04 v1.0 for china middle school exam]
+%<examination>\ProvidesClass{examination}[2018/05/12 v1.0 for china middle school exam]
+%<class|examination>\RequirePackage{expl3}%
+%<class|examination>\RequirePackage{xparse}%
+%<class>\LoadClass{ctexbook}%
+%<examination>\LoadClass[twocolumn]{book}%
+%<class|examination>\RequirePackage{cexam}
+%<class>\RequirePackage{geometry}%
+%<class>\RequirePackage{dashrule}%
+%<package>\RequirePackage{ctex}
+%<package>\RequirePackage{xifthen}
+%<package>\RequirePackage{calc}
+%<package>\RequirePackage{xcolor}
+%<package>\RequirePackage{graphicx}
+%<package>\RequirePackage{tikz}
+%<package>\RequirePackage{CJKulem}
+%<package>\RequirePackage{makerobust}
+%<package>\RequirePackage{amsmath}
+%\changes{v1.0.g}{2018/04/08}{加入array数学表格宏包}
+%<package>\RequirePackage{array}
+%
+%<*driver>
+\documentclass{ltxdoc}
+\usepackage[fontset = windowsnew]{ctex}
+\usepackage{xcolor}
+\usepackage{metalogo}
+\usepackage[%
+  left=40mm,
+  right=20mm,
+  top=20mm,
+  bottom=20mm
+]{geometry}
+\usepackage[
+pdfborder=0 0 0,
+bookmarksnumbered=true
+]{hyperref}
+\EnableCrossrefs
+\CodelineIndex
+\RecordChanges
+%\OnlyDescription
+\makeatletter
+  \def\@font@warning#1{\relax}
+  \def\@latex@warning@no@line#1{\relax}
+\makeatother
+\begin{document}
+  \tableofcontents
+  \DocInput{cexam.dtx}
+  \newpage
+%  \PrintIndex
+%  \newpage
+  \PrintChanges
+\end{document}
+%</driver>
+%\fi
+%
+%\CheckSum{0}
+%
+% \CharacterTable
+%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%   Digits        \0\1\2\3\4\5\6\7\8\9
+%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%   Dollar        \$     Percent       \%     Ampersand     \&
+%   Acute accent  \'     Left paren    \(     Right paren   \)
+%   Asterisk      \*     Plus          \+     Comma         \,
+%   Minus         \-     Point         \.     Solidus       \/
+%   Colon         \:     Semicolon     \;     Less than     \<
+%   Equals        \=     Greater than  \>     Question mark \?
+%   Commercial at \@     Left bracket  \[     Backslash     \\
+%   Right bracket \]     Circumflex    \^     Underscore    \_
+%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%   Right brace   \}     Tilde         \~}
+%
+%\changes{v1.0.a}{2018/03/23}{正式写成可以排版数学公式和图片的程序}
+%\changes{v1.0.b}{2018/04/02}{完成使用ltxdoc重新编写，排除ctxdoc中烦人的字体问题}
+%\changes{v1.1.s}{2018/04/16}{修改完成新结构后，对注释做了修改}
+%\changes{v1.1.v}{2018/04/16}{修改cexam.dtx文件，将长度、计数器、布尔值统一放置到文件前面}
+%\changes{v1.2.a}{2018/04/17}{加入填空题初级模块，暂不处理答案和解析}
+%\changes{v1.2.c}{2018/04/19}{修复填空题中含有行间公式时，计算行数失败的bug}
+%\changes{v1.2.c}{2018/04/19}{增加了解析的处理程序}
+%\changes{v1.2.o}{2018/04/22}{增加单独答案和解析}
+%\changes{v1.3.a}{2018/04/26}{增加了对beamer的支持}
+%\changes{v1.3.j}{2018/05/04}{修复加入每段缩进为0pt后,导致星号答案不能正常输出的问题}
+%\changes{v1.4.c}{2018/05/06}{各题型环境中加入段落缩进置零命令}
+%\changes{v1.4.d}{2018/05/07}{加入答案和解析的段落缩进置零}
+%\changes{v1.5.a}{2018/05/11}{加入试卷排版文类examination}
+%\changes{v1.5.b}{2018/05/13}{加入cexam.ins文件}
+%
+%\GetFileInfo{cexam.sty}
+%
+%\DoNotIndex{\newcommand,\newenvironment}
+%\DoNotIndex{\ifthenelse,\isin,\equal}
+%\DoNotIndex{\addtocounter,\addtolength,\baselineskip,\linewidth,\parbox}
+%\DoNotIndex{\relax,\raisebox,\setcounter,\setlength,\settowidth,\settototalheight,\settoheight}
+%\DoNotIndex{\ccwd,\def,\dimtest,\expandafter,\hangpara,\hfill,\hspace,\makebox}
+%\DoNotIndex{\newcounter,\newlength,\stepcounter,\whiledo}
+%\DoNotIndex{\newline,\parshape,\quad}
+%\DoNotIndex{\addcontentsline,\arcsin,\arccos,\arctan,\arg,\AtBeginDocument,\AtEndDocument}
+%\DoNotIndex{\begin,\begingroup,\bf,\boolean,\cfrac,\chapter,\circ,\CJKunderline,\cleardoublepage,\closeout,\cnttest,\cos,\cosh,\cot,\coth,\cs,\csc,\csname}
+%\DoNotIndex{\CTEX@addtocline,\CTEX@hangfrom,\CTEX@ifnamefalse,\CTEX@ifnametrue,\CTEX@makeanchor,\CTEX@makeanchor@sect,\CTEX@runin}
+%\DoNotIndex{\DeclareOption,\det,\draw}
+%\DoNotIndex{\else,\end,\endcsname,\endgroup,\everypar,\exp}
+%\DoNotIndex{\fi,\glueexpr,\hbox,\heiti,\hline,\hskip,\ht}
+%\DoNotIndex{\ifdim,\IfFileExists,\ifnum,\ifodd,\immediate,\includegraphics}
+%\DoNotIndex{\inf,\input,\interlinepenalty,\isempty}
+%\DoNotIndex{\let,\lg,\lim,\liminf,\limsup,\log}
+%\DoNotIndex{\MakeRobustCommand,\max,\mbox,\min,\multicolumn}
+%\DoNotIndex{\newboolean,\newbox,\newpage,\nopagebreak,\numberline}
+%\DoNotIndex{\openout,\pagegoal,\pagetotal,\par,\parindent,\ProcessOptions,\protect,\protected@edef}
+%\DoNotIndex{\refstepcounter,\sec,\section,\setboolean,\setbox,\sin,\sinh}
+%\DoNotIndex{\sqrt,\subsection,\subsubsection,\sup,\surd,\tan,\tanh}
+%\DoNotIndex{\times,\varinjlim,\varliminf,\varlimsup,\varprojlim,\vspace,\wd,\write,\z@}
+%\DoNotIndex{\@@par,\@M,\@arabic,\@chapter,\@empty,\@hangfrom,\@ifundefined}
+%  \DoNotIndex{\@latex@warning@no@line,\@seccntformat,\@sect,\@svsec,\@svsechd,\@tempskipa,\@xsect,\\}
+%\setlength{\parindent}{0pt}
+%\setlength{\parskip}{5pt plus 2pt minus 1pt}
+%
+%\title{中文试题排版宏包cexam}
+%\date{2018年3月30日}
+%\author{冯振华}
+%\maketitle
+%\makeatletter
+%\section{编写说明}
+% 之前刚刚接触\LaTeX{},自学了一年的宏包编写，成功解决了高中的物理数学试卷的排版问题。但是之前直接写的sty文件和cls文件，实现了选择、填空、计算等题型的自动排版，同时实现批量处理各种题型、实现数学与图片的排版、自动生成beamer文档、生成答题卡、教师与学生不同模式排版。但是后来发现，功能越多代码越复杂，很难维护，同时也少了一份使用说明，所以写本文档，有两个目的：
+%  
+% \begin{enumerate}
+%  \item 方便代码的维护和升级
+%  \item 方便参考此说明使用它排版试卷
+% \end{enumerate}
+%  
+%  \section{测试日志}
+%
+%  由于在测试宏包时,可能会遇到一些不可预知的错误.这些错误有时候不是很好解决,同时用 \cs{changes} 标记变更历史时,又不能简短的描述清楚,所以这里以日志的形式,记录一下本宏包开发过程中出现的重大问题以及解决方案.
+%  
+%  在2019年完成考研初试后,开始继续我的高中的教材编写工作,但是在写的过程中我想到了可以统一数学输入模式的方法,所以于元月9号开始准备升级工作,历时三天完成了数学模式的|$$..$$|,|\[..\]|再到|\begin{foo}..\end{foo}|的全面支持,但是在使用时需要注意{\bf 由于在数学环境中存在|\intertext|命令来插入文本,它的操作是分段处理,然在数学公式的图片混排的模式中是通过|\everypar|引入的,所以输入部分不能含有|\par|因此支持数学环境,但在环境中不要插入文字,必要的时候可以结束一个环境,再重新开一个环境,在它们之间插入文字},在11日上午完成了在计算题中的测试,并且修复了一个在计算题中二级缩进的小bug,使之输出更加完美.由于这次升级是测行程序的功能性升级,所以我直接将cexam.sty的版本号提升为2.0.a,以标志功能上的新变化.
+%  
+% \subsection{使用文档类的替换}
+%  
+%  本来我是计划与ctex相统一，而采用了ctxdoc文档类编写cexam.dtx文档的。之前一版做了测试，写成了这个模块，前一天晚上完成了，但是第二天继续工作时，发现会跳出fvrb-xe.sty的警告，不明原因。我试图确定原因，但是没有头绪，所以我找到ctxdoc.cls注释掉对fvrb-xe.sty的引用，然后问题解决了。但是我不能确定，不引用这个宏包会对以后的工作有什么影响，所以转而采纳了ltxdoc.cls来继续工作，所以今天2018年4月2日，我用ltxdoc.cls的标准命令重新编写了这个部分。
+
+%   之后分析原因，ctxdoc.cls是为了编写ctex.sty而编写的，由于ctex.sty比较宏大，所以在字体设置上比较复杂，有的字体在我的电脑上没有安装，尽管我已经安装了所有的windows字体，但是还是报错。当我禁用了\LaTeX{} 的字体警告后，又出现了fvrb-xe.sty出现的警告，我就意识到这个问题的严重性，所以就干脆用支持英文的ltxdoc来编写cexam。为了支持中文我引用xeCJK宏包，而不是ctex，原因也是怕ctex做了过多的修改，当文件比较大的时候带来不必要的麻烦。
+%
+% 2019年3月21日,在我编写物理方面的一些资料时发现,采用 \XeLaTeX{} 编译一些 ctexbook , ctexreport , ctexart 等文件时,会出现字体报错,这个字体就是 Fandol 字体.百度之发现它是一个破产的字体公司开源的产品,一般为 Linux 系统安装,但是在处理中文方面显然这套字体是不能完全胜任的.于是我消耗了近两天的时间研究字体.读 ctex 手册,发现其实这个问题很好解决,但是在没有人告之的情况下,这却是一个相当令人头疼的问题.只需要引用 ctex 宏包时加入字体选项 [fontset = founder] 就可以了,同时可以使用的字体还有 adobe , windows , windowsnew ,windowsold, 这些已经足够了.完成这些测试后,我又开始清理 cexam.dtx 文件中对字体的修改,以使其更加合理.这一段文字就是记录的这个工作.同时在输入中用到了对 \LaTeX{} 家族符号的引用,所以在 cexam.dtx 文件中加入了对宏包 metalogo 的引用.
+%
+%\subsection{段落缩进的修订}
+%
+%经过一段时间的开发，在具体测试中出现了不同的情况。同时也为了精简代码和提高效率则修改一些刚开始写的程序为有参数的形式，或追加的了些参数。同时引入了二级缩进\cs{cex@mShIn}和\cs{cex@mShInS},这样的话一级缩进可以保证题号悬挂缩进，二级缩进可以保证选项的A、B、C、D等的缩进。在修改过程中出现了一些情况，尤其是一些长度的设置，由于工作环境比较吵，导致修改过程中不是很彻底，所以测试过程中出现了一些不明原因的bug,排除这些bug消耗了不少时间。所以写这段文字记录这段悲伤的历史。 
+%
+% \subsection{演示文稿的支持}
+%  
+%   当2018年4月25日完成cexam.sty时,它已经可以支持学生模式(也就是自动将答案写出
+%  到一个\cs{jobname}.ans 文件中,然后在书籍最后调入答案).但是在做对beamer演示文稿的支持上我暂时没有盲目的按照之前一下按每节都写出一个beamer文件,那样做的话宏包过于复杂,同时不符合一个宏包中干好一件事的哲学理念.考虑以后,计划到考研任务完成之后再做相应的工作.虽然没有加入生成beamer文件的功能,但是需要支持beamer宏包,以备在必要的时候能够顺利排版物理课件,在昨天下午的测试中,发现了一系列的问题.经过仔细分析,在学生模式中需写出答案功能,但是对于图片的调用命令\cs{includegraphics} 需要转化为坚强的命令才能顺利输出.但是不知道什么原因,当将此命令转为坚强后,beamer文档类中使用\cs{includegraphics}就会报错.同时还有第二个严重的bug,我定义了一个例题环境 example,但是 beamer 中也有这个环境,这就导致了冲突.但是我又不想放弃example 这个名称.
+%  
+%  综合以上考虑,然后分析了beamer.cls,得到一个方法:如果检测beamer 中定义的命令,别的宏包没有定义,这样就能够区分开是否用在beamer中了.但是beamer 中有如此多的命令,选择是个问题,所以两难的时候,我一般选择第一个,于是选定了\cs{beamer@tempdim} ,作为区分依据.在本文档中,凡是出现对此命令检测的,都是针对beamer 的特定设计.
+%
+% 为了确保程序的可靠性,在2018年4月26日下午,分别对一般试题和beamer 中排版试题进行了测试,由于在上午修改dtx文件时疏忽,没有将原来的\cs{cex@mevery}改为\cs{cex@mevery@box},这带来了让我头疼的问题.但是分析错误日志后得到了这个问题的答案,于是将原来的\cs{cex@mevery} 改为 \cs{cex@mevery@box}  问题解决.顺利通过了测试.
+%
+%\subsection{内部生成答案}
+% 由于在测试由题干中的方括号标记生成答案时,开始没有问题.但是在2018年5月4号的测试中,由于后来增加了每个题目都要缩进时,将题目以一个小组的形式标记了出来.这会导致新问题的产生.这一小节分析这个问题. 
+% 
+%  在命令\cs{cex@mevery} 没有加入\cs{parindent}=0pt 时,如果文档类中开启了首行缩进,则会影响题目的排版形式.所以必须加入这个题目不缩进命令,以保证所有题目在任何情况下都悬挂缩进.同时这个命令应当在组内完成,所以就用花括号包含起来这一段题目的区域.
+%  
+%  在选择题中,没有加入\cs{parindent}=0pt时,可以用\cs{def} 正常生成\cs{bl@nkAns},但是加入缩进分组后,用\cs{def} 在组内定义的这个答案,不能传出到答案命令中,而在答案中产生空的答案,除非不使用星号输出.所以加入组内无缩进后,应当用\cs{gdef} 获得答案,同时在获得题干的高度时,不会产生答案的积累,所以选择题中不需要重置答案,而填空题中会有问题,如下面分析.
+%  
+%  在填空题中,由于填空题需要答案的累加输出,所以在没有用\cs{parindent}=0pt 时,获取题干高度时,由于是在\cs{parbox} 中进行的,所以这部分积累的答案不会传出.而在正式排版时,积累的答案才会输出,这样就达到了答案输出一次.但是,在加入\cs{parindent}=0pt 以后,答案由于限定到了组内,所以不能输出到星号答案中,直接输入答案又不方便.这样就可以用\cs{gdef} 取代\cs{def} 来积累填空题答案,但是这样又带来新的问题,在获取题干高度时,积累的答案会传出\cs{parbox}的组,正式排版时又积累一次,这样答案就会重复一次,于是需要在获得题干的高度后要将填空题答案置零,问题就解决了.
+%  
+%  在判断题中,从题目中分离答案时也是以\cs{def}进行的,但是这样也不能顺利传出给星号答案.所以用\cs{gdef}来获取答案才可以传出到星号答案.但是在判断题中,这不会导致新的问题,因为在题干高度获取时,题干内部没有再进行答案分离工作,所以不会导致答案的重复,而且也能正常输出到组外供星号答案输出使用.
+%
+%  \subsection{超链接的支持}
+%  
+%  在编写此宏包前，已经直接写成了cexam.sty和cexam.cls文件，但不是dtx文件，所以不便于维护.本来制作此宏包的一大作用就是利用hyperref生成超链接,方便在阅读器上使用pdf文件.
+%  
+%  之前的解决方案是我修改了大量的原始关于section,chapter,subection文件,虽然达到了目的,但是由于做了过多的修改,其稳定性不是很好,很有可能与某些宏包冲突.
+%  
+%  在这里我主要考虑了两点,一是足够稳定,所以就要求做出足够少的修改,二是考虑到程序运行的高效.分析了hyperref宏包文件,我确定它建立各章节与目录的超链接时,是根据章节号来识别的.但是如果生成学生模式的答案,则要重置chapter计数器,这样做答案可以正常输出,这样做的目的是为了使答案的章节与书籍前面的习题能够一一对应起来,但是这样的后果便是答案与前面的章节代号一致,所以hyperref不能够正确生成答案的超链接.
+%  
+%  分析hyperref宏包,可以得出它所识别的代码依懒于命令\cs{theHchapter},这规定了链接的识别符号.也就是上一段所分析问题的所在,研究后我想到了两个方案:其一,增加一个计数器,每当章节出现时,则该计数器增加1,则这样做会带来很大的优点,就是在书中如果令某个章或者节计数器置零,则对应的链接符号仍然不同,所以任何情况都能正常工作.但是一部书的章节往往太多,这样的计数器的计算量就大了,然后生成的计数器值也太大,会降低效率.其二,在引入答案时,对\cs{theHchapter}重新定义,只计算一次就可以解决问题,但是若书中将某个chapter或者section等置零,则又会导致链接不能正常识别.考虑到一般的书中不会置零这些计数器,所以有第二个方案更好.这时我只在\cs{theHchapter}中增加了一个字母a,就搞定了问题---此问题于2018年5月5日解决.
+%
+%\changes{v1.5.g}{2018/06/09}{修复修改前缀导致图片放置宽度增大的bug}
+%\subsection{图片计数器}
+%  在2018年6月1日,经过慎重考虑,将图片计数器 cex@mPicture 删除,改用\LaTeX{}内置的图片计数器来代替.原因在于,在编写讲义时,会有解析性的表述,其中会用到图片,同时也有例题,例题中也可能有图片.这就要求对所有的图片都编号.如果单纯的编写试题,没有解析性的表述,则用这个内置的计数器也不会有什么问题.
+%  
+%  由于图片在一篇文章中占据少数,所以按章编号也显得合情理.综合这些考虑,于2018年6月1日上午在源码中去除了这个专有的图片计数器,改用内置计数器figure 替代.
+%
+%\subsection{前缀}
+% 设计前缀的目的在于实现题号的自动校准,但在之前(2018年6月9日) 的测试中并未出现问题.但是问题确实存在,这表现在三个方面:
+%\begin{enumerate}
+%  \item 填空题需要将答案不断积累,但是这样按原来的方案,会导致存在行间数学公式时测行不准.
+%  \item 按原来的方案,如果修改了前缀格式(学案编写中的例题需要修改),则会出现图片排版位置右移的bug.
+%  \item 新发现的bug,当填空题中出现行间公式时,由于要进入循环模式测定行数,则会导致答案多次积累.
+%\end{enumerate}
+%  
+% 原来的排版方案中,在初步进入各种长度的计算时不计及前缀,但是在排版时将前缀放在排版程序中.如果前缀中的内容都是在零盒子中,则不会导致什么问题,但是也有一个问题就是在填空题中由于不断的答案积累,则会导致测定行数时,如果题干中含有行间数学公式时有可能进入行数测定程序后不能正确识别行间数学公式.
+%  
+%  综合以上考虑,提出了一个更加合理的解决方案:将前缀在进入题目中必须进行图片和文字的分离,在分离时就加入到文本中,这样就可以保证在计算长度的时候准确的计及前缀非零宽度的情况.对于此次新发现的bug,由于每种排版都要生成对应的形状,所以在使用\cs{cex@mMakeShd}命令生成形状后令\cs{bl@nkAns}置零,则答案仅在排版后生成,这样就可以达成预期的效果.
+%  
+%\subsection{图文排版}
+% 在2018年6月11日编写计算题时,由于要写受力分析一节,这一节受力分析图比较多.在排版例题时,发现单一的图片居右版式比较难看,同时连续几道题都这样就更难看,解析中图片也是居右的,很显然需要做出调整.关于调整的方案,暂时考虑设计一个新的自动排图模块,同时考虑加入手动干预的选项,这样的话就能在特定的情况下做出人工校正.由于此项工作比较重要,则研究一段时间后,待想法成熟再做出具体修改.计划此项工作完成后升级版本号为1.6.a
+%
+%  在测试图文排版时,如果有多行行间公式与图片排版时,不能正常进入循环,则导致测行失效.较严重bug.20180611晚.
+%  
+%\changes{v1.0.c}{2018/04/04}{添加开发规范并按规范修改代码}
+% \section{开发规范}
+% 
+% 由于本宏包要处理各种不同的题型，而不同的模块有的时候要协同工作，所以用一定的命名来明确区分不同的模块很有必要。同时，每种题型我计划提供一条直接命令和一个环境，这就有必要将其它内部的命令用|@|限定的宏内使用，所以制定以下命名规则
+%
+%  \begin{enumerate}
+%    \item 凡是通用的模块以 |cex@m|开头，之后是以大写首字母的缩写。
+%    \item 某一个题型的专有命令，开头用题型命名，比如\cs{sel@xxx}等。
+%    \item 为了通用性能的增强，尽量用参量函数表达程序。
+%  \end{enumerate}
+%
+%\section{已经确定的bug}
+%
+% 此程序使用parshape 来构建各种题型的排版模式，不知道是不是parshape 与长度命令parindent 和leftskip 有冲突还是怎么着，对于parindent 只有在设置为0pt时才能起作用，设置其它值是无效。对于leftskip 设置会出现计算行数不准确等不明bug,留到日后研究透彻再解决这些问题。
+%  
+% 这里我定义了中文试题排版宏包的例题环境,但是在使用beamer的过程中,则有会有冲突,但我又不想为此命名放弃.所以暂时保留下来,等开发beamer支持时再证.
+%  
+%  \subsection{关于tabular的bug}
+%  这个bug很隐避,于2018年5月23日晚测试时确定,但是尚未解决,因为一旦调用cexam.sty则会在表格的头两行产生过多的竖线,但是我暂时没有解决此问题.先记录在此处.
+%
+%  此bug在2018年5月24日上午测试确定为:用\cs{MakeRobustCommand}将\cs{end}转化为坚强造成的.但是前期转为坚强的目的是为了在学生答案生成中如果存在由tikz宏包中的作图环境命令时,能够正确生成学生答案图片形式.开始考虑解决方案.
+%
+%  2018年5月25日成功解决此bug.由于\cs{begin}和\cs{end}在构建\LaTeX{}源文件时,经常使用,且起着十分重要的作用,所以对它们的修改要相当谨慎,最好不修改.在这里我考虑了两种方案:其一,通过修改catcode 的方式,将反斜杠的类代码修改为12,等写出完成后再修改回0.这个方法在正文中测试通过,但是在定义新命令时用在\cs{def}中不能正常使用,所以这个方法很危险.其二,通过新定义一个写出命令,专门用来写出含有\cs{begin}和\cs{end}环境的命令.这个方法测试通过了,其原理为通过\cs{def}的参量结构,分离出来\cs{begin}以前的部分执行一次写出,再单独从\cs{begin}前追加一个\cs{protect}然后写出,再写出\cs{begin}和\cs{end}中间的部分,再对\cs{end}单独追加一个\cs{protect}执行写出,再写出\cs{end}以后的部分.
+%  
+%  这样操作之后,就可以不再将\cs{begin}和\cs{end}转为坚强,也就解决了tabular 表格的问题.同时,可以使解析的结构更加清析易读.
+%
+% \StopEventually{}
+%
+%\section{长度}
+%
+%\changes{v1.1.o}{2018/04/14}{去除不必要的长度设置，增加通用的长度}
+%\subsection{分离程序中的长度}
+%  
+% 首先设置排版需要的长度,其中简写的内容有|cex@m|是 指 cexam ，加入|@|为了处理为内部命令， Div 是 divorce 的简写，PH 是 picture height 的简写，TH 是 text height 的简写。
+%  
+%  \DescribeMacro\cex@mDivPH|\cex@mDivPH|图片高度
+%  \DescribeMacro\cex@mDivTH|\cex@mDivTH|文本高度
+%
+%    \begin{macrocode}
+%<*package>
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\newlength{\cex@mDivPH}
+\newlength{\cex@mDivPW}
+%    \end{macrocode}
+%  
+%    \begin{macrocode}
+\newlength{\cex@mDivTW}
+\newlength{\cex@mDivTH}
+%    \end{macrocode}
+%  
+%  \DescribeMacro\cex@mDivPM
+%  |\cex@mDivPM|计算一个图片折合多少行时每次递减的长度，越小则行数越多反之越大。符号 PM 表示 picture minus。
+%\DescribeMacro\cex@mDivPMM
+%  |\cex@mDivPMM|遇到一个数学公式时应减去的长度，但是每一个行间公式按3行计算\footnote{参考《The \TeX{} book》188页 \cmd{\prevgraf},鲜鲜翻译版86页}。符号 PMM 表示 picture math minus。
+%  
+%  同时初始付值分别为 |\baselineskip|和|2\baselineskip|，这是因为普通文本它是等间隔分行的，但是数学公式要占用2倍间距以上的空间，所以这样设置。因为这个长度是非常重要的所以一开始就指明了它的付值。
+%
+%    \begin{macrocode}
+\newlength{\cex@mDivPM}
+\newlength{\cex@mDivPMM}
+%    \end{macrocode}
+%
+% 
+% \begin{macro}{\cex@m@pic@dp}
+% \changes{v1.5.l}{2018/08/14}{增加图片深度单独存储长度}
+% 这是图片分离程序中所存储的图片的深度,于2018年8月14日晚加入.原因在于这几天的排版中,发现一个表格在输出时下方的图片标号与图片间距过小,会出现重叠.分析原因,图片是用盒子保存的,则排版盒子时要将表格用升盒子去除深度.但是这其间,应该是先释放盒子再给出深度,所以升盒子的作用就失效了.于是单独设置这一个长度来提前存储这个深度.
+
+%    \begin{macrocode}
+\newlength{\cex@m@pic@dp}
+%    \end{macrocode}
+% \end{macro}
+%  
+%  \subsection{二级缩进长度设置}
+%  
+% \begin{macro}{\cex@mShIn}
+% 此长度是为了生成选择题中A、B、C、D等标号缩进而设计的。可以让选项实现缩进效果。
+%  为了在使用时不忘记，则首先设置此缩进为一个汉字宽度。后来开发过程中为了规范，我把付值过程放到的document开始时统一付值。
+%  
+%    \begin{macrocode}
+\newlength{\cex@mShIn}%
+\newlength{\cex@mShInS}%
+%    \end{macrocode}
+% \end{macro}
+%
+%  \subsection{临时长度设置}
+%  
+% \changes{v1.1.m}{2018/04/14}{加入临时作用的高度\cs{cex@mswapht}} 
+% \begin{macro}{\cex@mswapht}
+% 在排版程序中临时使用的高度，不参与程序外的付值运算
+%    \begin{macrocode}
+\newlength{\cex@mswapht}%
+%    \end{macrocode}
+% \end{macro}
+%\changes{v1.1.q}{2018/04/15}{加入临时宽度}
+%
+% \begin{macro}{\cex@mlinewd}
+% 此宽度用来在题目中临时使用，主要用来控制选项的宽度
+%    \begin{macrocode}
+\newlength{\cex@mlinewd}%
+%    \end{macrocode}
+% \end{macro}
+%\subsection{控制段落形状的三级宽度}
+% \DescribeMacro\cex@mShWd
+% \DescribeMacro\cex@mShWdS
+% \DescribeMacro\cex@mShWdSS
+% 一段文本如果被分成三部分，实际上在选择题和计算题必须要用。每一段有不同的行宽，所以要设计三个长度。
+%    \begin{macrocode}
+\newlength{\cex@mShWd}%
+\newlength{\cex@mShWdS}%
+\newlength{\cex@mShWdSS}%
+%    \end{macrocode}
+%
+% \begin{macro}{\cex@mPicWd}
+% 此为题目中图片的宽度，在生成图片格式时要用到。
+%  
+%    \begin{macrocode}
+\newlength{\cex@mPicWd}
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsection{选择题中的长度}
+%
+% \begin{macro}{\cex@mBh}
+% 此长度用来保存题干的高度。
+%    \begin{macrocode}
+\newlength{\cex@mBh}
+%    \end{macrocode}
+% \end{macro}
+% 
+%  
+% \begin{macro}{\cex@mOh}
+% 此长度用来保存选项的高度。
+%    \begin{macrocode}
+\newlength{\cex@mOh}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\cex@mBOh}
+% 此长度用来保存题干和选项的总高度
+%    \begin{macrocode}
+\newlength{\cex@mBOh}
+%    \end{macrocode}
+% \end{macro}
+% 
+% \begin{macro}{\cex@mPh}
+% 此长度用来保存选择模式中图片的高度，所以单独设置。
+%    \begin{macrocode}
+\newlength{\cex@mPh}
+%    \end{macrocode}
+% \end{macro}
+%  
+% \begin{macro}{\cex@mPw}
+% 此长度用来保存选择模式中图片的宽度，所以单独设置。
+%    \begin{macrocode}
+\newlength{\cex@mPw}
+%    \end{macrocode}
+% \end{macro}
+% 
+% \begin{macro}{\cex@mLmax}
+% 此长度保存了选项的最大长度，为了便于选择适当的选项排版而设定。
+%    \begin{macrocode}
+\newlength{\cex@mLmax}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\cex@mLmaxsub}
+% 此长度是为了获得最大长度而设置的辅助长度，保存所需参量的长度。
+%    \begin{macrocode}
+\newlength{\cex@mLmaxsub}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\sel@linewidth}
+% 选择题选项中使用的宽度，根据不同的排版模式可以使用不同的宽度。
+%    \begin{macrocode}
+\newlength{\sel@linewidth}
+%    \end{macrocode}
+% \end{macro}
+%
+%  \subsection{填空题中的长度}
+% 
+% \begin{macro}{\bl@nkwd}
+% 此长度用来记录填空题中空的长度，以生成对应长度的空白。
+%    \begin{macrocode}
+\newlength{\bl@nkwd}%
+%    \end{macrocode}
+% \end{macro}
+%  
+%  \subsection{行统计程序中的长度}
+% \begin{macro}{\cex@mEnvHt}
+% 此长度用来记录数学环境中的部分,以行宽减图宽排版时的高度.
+%    \begin{macrocode}
+\newlength{\cex@mEnvHt}%
+%    \end{macrocode}
+% \end{macro}
+%  
+%\changes{v1.1.u}{2018/04/16}{规范长度付值}
+%\changes{v1.2.r}{2018/04/23}{修复题号动态缩进问题}
+%\subsection{规范付值}
+% 此处规范长度的付值，规定在使用长度时要先付值再使用。其中在document开始时再付值，编辑题目的过程中会使用到这些长度，因此这里提出来。 
+%
+%  考虑到了题号宽度是动态的,所以作了修改.增加了\cs{setcex@mNumber} 和 \cs{resetcex@mNumber} ,因此在文档开头,仅保留计算行数的固定长度.
+%  
+%    \begin{macrocode}
+\AtBeginDocument{%
+  \setlength{\cex@mDivPM}{\baselineskip}%
+  \setlength{\cex@mDivPMM}{2\baselineskip}%
+}%
+%    \end{macrocode}
+%
+% 在实践中,我忽略了一个问题.在题号计数器增长时,当位数升级到2位以上时,设置初级宽度为\cs{ccwd} ,则不够使用.所以对于\cs{cex@mShIn}的宽度应当由检测题号来获得,同时考虑到选择题只有四个选项,所以四个选项的标号宽度是一致的,不需要缩进,因此设置成固定的宽度.同时计算题的选项,由于一般也不会超过9个,它的宽度也没有必要设置变动的情况.综合考虑了上述因素,做出如下调整.
+%  
+%  
+% \begin{macro}{\setcex@mNumber}
+% 此命令,根据题号宽度来设置对应的初级缩进,二级缩进要在初级缩进的基础上增加1.2倍的字宽.
+%    \begin{macrocode}
+\newcommand{\setcex@mNumber}{%
+  \stepcounter{cex@mNumber}%
+  \settowidth{\cex@mShIn}{\thecex@mNumber}%
+  \addtolength{\cex@mShIn}{.4\ccwd}%
+  \setlength{\cex@mShInS}{\cex@mShIn+1.2\ccwd}%
+  \setlength{\cex@mlinewd}{\linewidth-\cex@mShIn}%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\resetcex@mNumber}
+% 此命令用在答案和解析中,因为答案和解析是固定的宽度,所以在题干中动态生成的初级缩进在这里就,不适合了.因此将默认的长度恢复定值.
+%    \begin{macrocode}
+\newcommand{\resetcex@mNumber}{%
+  \setlength{\cex@mShIn}{\ccwd}%
+  \setlength{\cex@mShInS}{\cex@mShIn+\ccwd}%
+  \setlength{\cex@mlinewd}{\linewidth-\cex@mShIn}%
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+%  \section{计数器}
+% \subsection{通用程序中的计数器}
+%
+%\changes{v1.5.d}{2018/05/17}{修正cex@mNumber属于section}
+% \begin{macro}{cex@mNumber}
+%  题目的题号，为了实现系统自动校正题号的功能。2018 年5月17日,修改此计数器隶数于section ,每当一个新的节开始时,计数器要置零.
+%    \begin{macrocode}
+\newcounter{cex@mNumber}[section]
+%    \end{macrocode}
+% \end{macro}
+%
+%\changes{v1.5.f}{2018/06/01}{用默认计数器figure 替代 cex@mPicture}
+%
+%\subsection{段落生成模块中的计数器}
+%  
+% \begin{macro}{cex@mShNum}
+% 这个计数器记录了生成段落形状的行数，每工作一次会置零。
+%    \begin{macrocode}
+\newcounter{cex@mShNum}%
+%    \end{macrocode}
+% \end{macro}
+%
+% 
+% \begin{macro}{cex@mShNT}
+% NT是number total的缩写，表示一个段落的生成形状时的总行数。\footnote{注意不一定是完整的行数，只取到包含图片所要求的行数}
+%    \begin{macrocode}
+\newcounter{cex@mShNT}%
+%    \end{macrocode}
+% \end{macro}
+%
+%  \subsection{行数统计程序中的计数器}
+%  
+% \begin{macro}{cex@mGenPN}
+% 存储用图片生成缩进时的行数。Gen 表示 generate , PN 表示 picture number。
+%
+%    \begin{macrocode}
+\newcounter{cex@mGenPN}
+%    \end{macrocode}
+% \end{macro}
+%  
+% \begin{macro}{math@equation}
+% 此计数器是因为在引入了行统计程序对数学环境支持后,为了限定数学公式计数器不随测定行数时的循环增加.
+%    \begin{macrocode}
+\newcounter{math@equation}
+%    \end{macrocode}
+% \end{macro}
+%  
+% \subsection{计算题模块中的计数器}
+%  
+% 
+% \begin{macro}{c@lOptNum}
+% 此计数器用来显示计算题中有多个小问时的小问标号。此计数器依懒于题号，每增加一个题号，则它将归零。
+%    \begin{macrocode}
+\newcounter{c@lOptNum}[cex@mNumber]%
+%    \end{macrocode}
+% \end{macro}
+% 
+%  
+% \begin{macro}{cex@mExam}
+% 此计数器保存例题的数量,也就是例题的题号.它属于节,如果节增加,则它归零.
+%    \begin{macrocode}
+\newcounter{cex@mExam}[section]%
+%    \end{macrocode}
+% \end{macro}
+%  
+%  
+% \begin{macro}{cex@mExamS}
+% 此计数器用来配合例题计数器完成统计例题数量的任务,以便使例题中的题号在例题环境中可用,同时在退出例题时双还原到进入例题时的题号.此计数器就保存了进入时的题号.
+%    \begin{macrocode}
+\newcounter{cex@mExamS}[section]%
+%    \end{macrocode}
+% \end{macro}
+%
+%  \section{写出命令}
+%  
+%\changes{v1.5.d}{2018/05/25}{增加环境写出命令\cs{cex@mwrite}}
+% \begin{macro}{\@ans}
+% 此写出用于写出答案到指定的文件 \cs{jobname}.ans 中,以方便生成学生格式单独答案
+%    \begin{macrocode}
+\newwrite\@ans%
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\BE@write}
+%在生成学生答案命令中,有可能存在用tikz所生成的图片.但是这里面包含\cs{begin}和\cs{end}定界符号,开始采用了将这二个命令转为坚强的方法,但是一转成坚强,如果使用tabular作表格时,则表格会多出一行,并且多出的一行会有二个竖线,显然这个方法造成了对表格的不兼容.为了消除这个bug,这里重新定义了一个专用于环境的写出命令\cs{BE@write},B指的begin,E指的end.
+%    \begin{macrocode}
+\def\BE@write #1\begin#2#3\end#4#5\END{%
+  \write\@ans{#1}%
+  \write\@ans{\protect\begin{#2}}%
+  \write\@ans{#3}%
+  \write\@ans{\protect\end{#4}}%
+  \write\@ans{#5}%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\cex@mwrite}
+% 此命令用来判断要写出的内容中有没有环境命令\cs{begin} 和\cs{end},如果有则以\cs{BE@write}分段写出,如果没有则直接写出到答案,为了增加兼容性,则写出命令中统一加入\cs{protect}命令,确保写出内容中的命令都能原版输出到答案.
+%    \begin{macrocode}
+\def\cex@mwrite#1\END{%
+  \ifthenelse{\isin{\begin}{#1}}{%
+    \BE@write\relax{}#1{}\relax\END%
+  }{%
+    \write\@ans{#1}%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%  \section{盒子}
+%  
+% \begin{macro}{\@pic}
+% 此盒子用来临时存储图片,以方便图片的宽和高
+%    \begin{macrocode}
+\newbox\@pic%
+%    \end{macrocode}
+% \end{macro}
+%  
+%  \section{布尔值}
+%
+%\changes{v1.1.b}{2018/04/08}{加入boolean值，以确定是否缩进}  
+% \begin{macro}{cex@mNoOptIndent}
+% 此布值用来控制生成不需要缩进选项的题目，默认是有缩进的，如果一个题目经过前面检测不需要缩进则设置为真，执行完成后，\cs{cex@mTypeTwo} 将再次设置为假。
+%    \begin{macrocode}
+\newboolean{cex@mNoOptIndent}%
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{student}
+% 这个布尔值用来控制学生模式与教师模式，默认教师模式，显示答案和解析，学生模式不显示答案和解析。
+%    \begin{macrocode}
+\newboolean{student}%
+%    \end{macrocode}
+% \end{macro}
+%
+%  
+% \begin{macro}{StudentAns}
+% 此布尔值,设置在答案和解析中,当为真时,在非学生模式
+%  下开启答案显示.以确保在学生模式中,最后的插入答案
+%  的需要.
+%    \begin{macrocode}
+\newboolean{StudentAns}%
+%    \end{macrocode}
+% \end{macro}
+% 
+% \begin{macro}{cex@mtail}
+% 行数统计中的布尔值，由于在文本存在有行间公式时，统计行数要不断的展开\cs{math@tail},开始测试时很完美，但是在将程序使用到填空题中时，由于\cs{@blank}对填空的处理比较复杂的，所以当并入到\cs{math@tail}中进入行数统计环节时，就会有不明原因的问题出现。经过思考，我增加了这个布尔值，这样的话，在分离行间公式和文本时就不必展开\cs{math@tail}而引发问题。
+%    \begin{macrocode}
+\newboolean{cex@mtail}%
+%    \end{macrocode}
+% \end{macro}
+%
+%  
+% \begin{macro}{cex@mMathOn}
+%此布尔是为了检测文本中存在数学行间公式的情况，这是后来设置的。原因是在处理解析程序中，由于经过前面的分离图片程序后，如果不展开检测文本，则不能识别内部的数学行间公式。所以用此布尔值来表示是否含有数学行间公式，单独作为一个程序，然后用\cs{expandafter}来展开后面的部分，可以准确的测定数学行间公式。
+%    \begin{macrocode}
+\newboolean{cex@mMathOn}%
+%    \end{macrocode}
+% \end{macro}
+%  
+% 
+% \begin{macro}{cex@mEnv}
+% 此布尔值为了在题型环境中,控制答案解析的显示形式.因为答案和解析都是以\cs{everypar}的参数加入到环境中识别的.所以如果使用\cs{relax},它会产生一段空白段,可以使用\cs{vspace}来消除空白.但是在单独使用答案或者解析的命令时,如果使用\cs{vspace}来消除空白,则会产生重叠,中只能使用\cs{relax}.
+%
+%    \begin{macrocode}
+\newboolean{cex@mEnv}%
+%    \end{macrocode}
+% \end{macro}
+%  
+%
+% \begin{macro}{cex@mBlaJud}
+% 此布尔值用来控制在单独使用\cs{Answer}或\cs{Daan}时,是否根据题目看自动生成的答案来输入.目前,计算题型没有自动生成答案功能,考虑在选择题中也加入此功能.
+%    \begin{macrocode}
+\newboolean{cex@mBlaJud}%
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{IsCalculate}
+% 此布尔值用来设置计算题的答题空间的识别的.因为作为学生模式,计算题要留下答题空间,但是其它题型不需要,所以这里就设置一个识别的布尔值.
+%    \begin{macrocode}
+\newboolean{IsCalculate}%
+%    \end{macrocode}
+% \end{macro}
+%  
+% \section{宏包的声明}
+% 
+% \begin{macro}{student}
+% 声明为学生模式,第一,可以控制学生答案不显示;第二,可以开启答案写出功能.
+%
+%    \begin{macrocode}
+\DeclareOption{student}{%
+  \@ifundefined{beamer@tempdim}{%
+    \setboolean{student}{true}%
+    \openout\@ans=\jobname.ans%
+  }{%
+    \relax%
+%在beamer中使用时不做写出操作,所以此处对beamer中的经定义的一条命令做检测.
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+% 
+%\changes{v1.2.t}{2018/04/25}{加入字体警告禁用选项nowarning}
+% \begin{macro}{nowarning}
+% 此声明选项用来禁用字体的警告,则于系统会自动适配一些不合适的字体,在仔细研究
+% source2e源文件后,得到禁用字体警告的方法.此处用这一选项引入,默认不开启.
+%    \begin{macrocode}
+\DeclareOption{nowarning}{%
+  \def\@font@warning#1{\relax}%
+  \def\@latex@warning@no@line#1{\relax}%
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+% 使声明选项生效
+%  
+%    \begin{macrocode}
+\ProcessOptions%
+%    \end{macrocode}
+%  
+%  \section{行数统计程序}
+%
+%  \changes{v1.6.a}{2019/01/10}{增加行数计算中数学模式支持中括号和数学环境}
+%  在2019年01月10日紧张的研究生考试工作结束了,于是我又开始准备离开高中老师行列的写作---编写高中物理《备课本》,我决定对行数统计程序作功能上的重大改良,使其支持|\[..\]|的输入方式和|\begin{foo}..\end{foo}|的数学环境.
+%  
+% \begin{macro}{\END}
+%  因为在后面的程序中处理特殊的图片与数学等排版时，需要用到原始的\TeX{}定义命令|\def|，而它需要一个结束符，为了方便统一而引入一个空的命令|\END|作为结尾。
+%    \begin{macrocode}
+\def\END{}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\cex@mDivMT}
+%  DivMT 是 divorce math text 简写，本程序的目的是将一段含有数学公式的文本切分为二段，逐段与图片比较进行排版。行间公式前的部分命名为|\math@head|之后的部分命名为|\math@tail|,由于在2019年01月10日更新程序时加入了对数学环境的支持,所以引入|\math@body|来存储数学环境部分.
+%  
+%  这一命令将原来的|\cex@mDivMT|改写成了|\cex@mDivMTOne|以使之成为新支持模块的一部分.
+%    \begin{macrocode}
+\def \cex@mDivMTOne #1$$#2$$#3\END{%
+  \def \math@head{#1}%
+  \def \math@body{}%
+  \def \math@tail{#3}%
+}%
+%    \end{macrocode}
+%  这一部分是对|\[..\]|输入方式的支持.
+%    \begin{macrocode}
+\def \cex@mDivMTTwo #1\[#2\]#3\END{%
+  \def \math@head{#1}%
+  \def \math@body{}%
+  \def \math@tail{#3}%
+}%
+%    \end{macrocode}
+%  这一部分是对|\begin{foo}..\end{foo}|数学输入环境的支持,但是注意由于排版是在一个段落中进行,所以在数学环境命令中不得使用|\intertext{foo}|等会导致分段产生的命令.
+%    \begin{macrocode}
+\def \cex@mDivMTThree #1\begin#2\end#3#4\END{%
+  \def \math@head{#1}%
+  \def \math@body{\begin#2\end{#3}}%
+  \def \math@tail{#4}%
+}%
+%    \end{macrocode}
+%  这一部分是将三个数学输入模式合并为新的|\cex@mDivMT|命令.
+%    \begin{macrocode}
+\def \cex@mDivMT #1\END{%
+  \ifthenelse{\isin{$$}{#1}}{%$$
+    \cex@mDivMTOne #1\END%
+  }{%
+    \ifthenelse{\isin{\[}{#1}}{%\]
+      \cex@mDivMTTwo #1\END%
+    }{%20190110
+      \ifthenelse{\isin{\begin}{#1}}{%
+	\cex@mDivMTThree #1\END%
+      }{%
+	\relax
+      }%
+    }%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+% 
+%\changes{v1.2.g}{2018/04/20}{去除测行数多出一行bug}
+% 
+% \begin{macro}{\cex@mDivSymble}
+%
+%  在2019年01月10日的数学支持功能更新中,由于要判断数学输入方式,所以将\newline
+%  |\cex@mDivMTDone| 改写成含参数的表达形式.
+%  
+%    \begin{macrocode}
+\def \cex@mDivSymble#1<[#2]>\END{%
+  \ifthenelse{\isin{*#2}{*#1}}{%
+    \setboolean{cex@mMathOn}{true}%
+    \ifthenelse{\isin{#2*}{#1*}}{%
+      \def\math@head{}%
+      \def \math@body{}%
+      \def\math@tail{}%
+      \setboolean{cex@mtail}{false}%
+    }{%
+      \cex@mDivMT *#1\END%
+      \def\math@head{}%
+      \setboolean{cex@mtail}{true}%
+    }%
+  }{%
+    \ifthenelse{\isin{#2*}{#1*}}{%
+      \setboolean{cex@mMathOn}{true}%
+      \cex@mDivMT #1*\END%
+      \def\math@tail{}%
+      \setboolean{cex@mtail}{false}%
+    }{%
+      \ifthenelse{\isin{#2}{#1}}{%
+	\setboolean{cex@mMathOn}{true}%
+	\cex@mDivMT #1\END%
+	\setboolean{cex@mtail}{true}%
+      }{%
+	\relax%
+      }%
+    }%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+% \begin{macro}{\cex@mDivMTDone}
+%  此程序可以保证一段文本如果本身就是以 \$\$ 开头，或者以 \$\$ 结尾时能够正常工作，因为 |\cex@mDivMT| 只能用于特定格式的排版，所以要考虑到一般情况。如果开头就是数学公式，则分离后 |\math@head| 为空，如果结尾是数学公式，则分离后 |\math@tail| 为空。
+%
+% 在探测结构时，同时确定尾部是否为空，但是此时设定布尔值cex@mtail。这样的话，进入循环时，就不必直接探测\cs{math@tail},而是直接测定布尔值cex@mtail,这样的话对于\cs{math@tail}，其内部就可以有比较复杂的结构。尤其是填空题中，处理填空的情况。
+%
+% 在测试程序排版时,在\cs{cex@mTypeThree}时,逻辑上没有错误,但是在统计题干的行数时总是多出一行.仔细分析这个bug应该不简单,因为生成循环图形时,如果图片过高,则可能有多次循环,每循环一次就会多出一行.所以不能简单的删除一行就可以解决.在\cs{cex@mDivMTDone}中加入数学模式和尾部的判定布尔值.
+%  
+%  2019年01月10日加入了|\cex@mDivSymble|之后对此命令做了更新,以增加对数学输入模式的支持.
+%  
+%    \begin{macrocode}
+\def \cex@mDivMTDone #1\END{%
+  \ifthenelse{\isin{$$}{#1}}{%$$
+    \cex@mDivSymble#1<[$$]>\END%$$
+  }{%
+    \ifthenelse{\isin{\[}{#1}}{%\]
+      \cex@mDivSymble#1<[\[]>\END%\]
+    }{%
+      \ifthenelse{\isin{\begin}{#1}}{%
+	\cex@mDivSymble#1<[\begin]>\END%\]
+      }{%
+	\def\math@head{#1}%
+	\def \math@body{}%
+	\def\math@tail{}%
+	\setboolean{cex@mtail}{false}%
+	\setboolean{cex@mMathOn}{false}%
+      }%
+    }%
+  }%
+}%
+%    \end{macrocode}
+%
+% \end{macro}
+%  
+% 
+% \begin{macro}{\cex@mGenDone}
+%    \cmd{\cex@mGenDone}\marg{长度}\marg{每次减的长度}\marg{行计数器}
+%  
+%  GenDone 是 generate done 简写。此命令用来根据文字和所需高度获得缩进行数。
+%    \begin{macrocode}
+\newcommand{\cex@mGenDone}[3]{%
+  \whiledo{\dimtest{#1}{>}{0pt}}{%
+    \addtolength{#1}{-#2}%
+    \stepcounter{#3}%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%\changes{v1.0.d}{2018/04/04}{加入参量排版 \cs{cex@mGenRec}获得矩形区域}
+%
+% \begin{macro}{\cex@mGenRec}
+% \cs{cex@mGenRec}\marg{单减高度}\marg{矩形宽度}\marg{矩形高度}\marg{计数器}\marg{文本}
+%
+%  Rec指的 rectangle 矩形,此程序用来在文本中计算开辟出一个矩形区域所需要的行数。
+%
+%\changes{v1.1.r}{2018/04/16}{去掉测行不准确的小bug}
+%    \begin{macrocode}
+\newcommand{\cex@mGenRec}[5]{%
+  \settototalheight{\cex@mDivTH}{\parbox{\cex@mlinewd-#2}{#5}}%
+  \ifthenelse{\dimtest{\cex@mDivTH}{>}{#3}}{%
+    \cex@mGenDone{#3}{#1}{#4}%
+  }{%
+    \addtolength{#3}{-\cex@mDivTH}%
+    \cex@mGenDone{\cex@mDivTH}{#1}{#4}%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%\changes{v1.2.d}{2018/04/19}{新增行间公式探测程序 \cs{cex@mDetectMath}}
+%\changes{v1.2.h}{2018/04/20}{去除\cs{cex@mDetectMath},将测定数学模式功能集成到\cs{cex@mDivMTDone}中}
+%\changes{v1.2.d}{2018/04/19}{修改\cs{cex@mGenMaRec}来改进行间公式探测程序}  
+%\changes{v1.0.e}{2018/04/05}{增加\cs{cex@mGenMaRec}5参量程序，用来拓展排版模块}
+% \begin{macro}{\cex@mGenMaRec}
+% \cs{cex@mGenMaRec}\marg{单减高度}\marg{矩形宽度}\marg{矩形高度}\marg{计数器}\marg{文本}
+%
+% MaRec 指 math rectangle ,此程序用来在含有数学行间公式的文本中计算开辟出一个矩形区域所需的行数。在2019年01月10日对此命令做了功能拓展,使其可以计算包含数学环境的行数.
+%
+%    \begin{macrocode}
+\newcommand{\cex@mGenMaRec}[5]{%
+  \setcounter{math@equation}{\the\c@equation}%
+%    \end{macrocode}
+%上述命令,将进入循环的数学公式计数器用|math@equation|暂存,最后循环完毕再交还|equation|计数器,从而保证数学公式计数的准确.
+%    \begin{macrocode}
+  \setboolean{cex@mMathOn}{false}%
+%    \end{macrocode}
+%因为默认工作于无数学行间公式中,当存在数学公式时,由 |\cex@mDivMTDone| 给出
+%    \begin{macrocode}
+  \setlength{\cex@mDivTH}{0pt}%
+  \expandafter\cex@mDivMTDone #5\END%
+  \cex@mGenRec{#1}{#2}{#3}{#4}{\math@head}%
+  \ifthenelse{\boolean{cex@mMathOn}}{%
+    \ifthenelse{\dimtest{#3}{<}{0.5\baselineskip}}{%
+      \setlength{#3}{0pt}%
+    }{%
+      \settototalheight{\cex@mEnvHt}{\parbox{\linewidth-#2}{\math@body}}%
+      \ifthenelse{\dimtest{\cex@mDivPMM}{<}{\cex@mEnvHt}}{%
+	\ifthenelse{\dimtest{#3}{>}{\cex@mEnvHt}}{%
+	  \addtolength{#3}{-\cex@mEnvHt}%
+	  \whiledo{\dimtest{\cex@mEnvHt}{>}{\cex@mDivPMM}}{%
+	    \addtolength{\cex@mEnvHt}{-\cex@mDivPMM}%
+	    \addtocounter{#4}{3}%
+	  }%
+	  \ifthenelse{\dimtest{#3}{>}{\cex@mDivPMM}}{%
+	    \relax%
+	  }{%
+	    \setlength{#3}{0pt}%
+	  }%
+	}{%
+	  \whiledo{\dimtest{#3}{>}{\cex@mDivPMM}}{%
+	    \addtolength{#3}{-\cex@mDivPMM}%
+	    \addtocounter{#4}{3}%
+	  }%
+	  \setlength{#3}{0pt}%
+	}%
+      }{%
+	\ifthenelse{\dimtest{#3}{>}{\cex@mDivPMM}}{%
+	  \addtolength{#3}{-\cex@mDivPMM}%
+	}{%
+	  \setlength{#3}{0pt}%
+	}%
+	\addtocounter{#4}{3}%
+      }%
+    }%
+  }{%
+    \relax%
+  }%
+  \setcounter{equation}{\themath@equation}%
+%    \end{macrocode}
+%此命令接收之前的|equation|计数器,确保数学公式计数准确.
+%    \begin{macrocode}
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\cex@mGenMaRecX}
+% \cs{cex@mGenMaRecX}\marg{单减高度}\marg{矩形宽度}\marg{矩形高度}\marg{计数器}\marg{文本}
+% 
+% 此程序用来在含数学公式的文本中开拓出一个矩形区域，由于在\cs{cex@mGenMaRec}中不一定能够一次满足要求，所以要多次循环才能保证排版计算的严谨。
+%
+% 这个程序开始时不能正确识别\cs{boolean}\{cex@mtail\},仔细考察后发现是\cs{cex@mGenMaRec}中出现了严重逻辑错误.这个bug非常隐蔽,经过长达两天的仔细思考及逐步排查,终于解决问题.
+%  
+%\changes{v1.5.h}{2018/06/11}{去除不能正确循环得到行数的bug}
+%    \begin{macrocode}
+\newcommand{\cex@mGenMaRecX}[5]{%
+  \setboolean{cex@mtail}{true}%
+%    \end{macrocode}
+%默认分离程序中的math@tail是不空的，保证进入分离，在分离过程中才有可能出现空的情况。当处理下一题时，也得保证其为false,由分离程序自动决定是否为true。
+%    \begin{macrocode}
+  \cex@mGenMaRec{#1}{#2}{#3}{#4}{#5}%
+  \whiledo{\dimtest{#3}{>}{0pt}}{%
+    \ifthenelse{\boolean{cex@mtail}}{%
+      \cex@mGenMaRec{#1}{#2}{#3}{#4}{\math@tail}%
+    }{%
+      \setlength{#3}{0pt}%
+%    \end{macrocode}
+% 上述代码在2018年6月11日晚做了一次修改,排除了不能正确循环得到行数的bug.具体分析为:原始代码对\cs{math@tail}用\cs{cex@mDivMTDone}作了一次分离,然后对新生成的\cs{math@head}使用\cs{cex@mGenMaRec}处理,由于在\cs{cex@mGenMaRec}中存在测定是否为数学模式,但是在之前使用的是经\cs{cex@mDivMtDone}处理后的新的\cs{math@head},\cs{math@head}中必然不含有数学模式,则导致此处仅循环了一次,这个bug 在一般的测试中是能通过的,因为一般超过二个行间公式并排的情况很少,但是2018年6月11日晚使用cexam.sty编写《备课本》中的（力的分解）一节时，里面有大量的受力分析图和数学计算，却得到了这个情况.所以连夜排除此bug.使用\cs{cex@mGenMaRec}直接处理\cs{math@tail}就可以,这样不仅正确,而且还节省了一行代码.
+%    \begin{macrocode}
+    }%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+%
+%\changes{v1.0.f}{2018/04/07}{加入段落计算程序}
+%  
+%\section{段落形状生成模块}  
+%为了生成不同的图文排版形式，有必要专门设计一个计算段落形状的模块以配合其它部分协同工作。
+%
+% \begin{macro}{\cex@mShd}
+% 此是生成的形状，也就是\cs{parshape} 后面的缩进行宽参数，但是行数需要计算出来以后再添加。
+%  
+%    \begin{macrocode}
+\def\cex@mShd{}%
+%    \end{macrocode}
+% \end{macro}
+%
+% 
+% \begin{macro}{\cex@mSh}
+% \cs{cex@mSh}\marg{arg1}\marg{arg2}\cs{END}
+%  
+%  这个命令用来保证循环的正常进行，不断的把新的行参数加入到\cs{cex@mShd}中。
+%    \begin{macrocode}
+\def\cex@mGenSh#1#2\END{%
+  \def\cex@mShd{#1#2}%
+}%
+%    \end{macrocode}
+% \end{macro}
+% 
+%  
+%  
+% \begin{macro}{\cex@mGenShX}
+%\cs{cex@mGenShX}\marg{左缩进}\marg{右缩进}\marg{行宽}\marg{行数} 
+%
+%  此命令用来具体实现对\cs{cex@mShd}的累加，从而通过不同段落添加不同的行宽和缩进生成不同的段落形状。
+%    \begin{macrocode}
+\newcommand{\cex@mGenShX}[4]{%
+  \setlength{#3}{\linewidth-#1}%
+  \addtolength{#3}{-#2}%
+  \addtocounter{cex@mShNT}{#4}%
+  \whiledo{\cnttest{\thecex@mShNum}{<}{\thecex@mShNT}}{%
+    \expandafter\cex@mGenSh\cex@mShd #1 #3\END%
+    \stepcounter{cex@mShNum}%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+% 
+%  
+% \begin{macro}{\cex@mShDone}
+% \cs{cex@mShDone}\marg{行数}\cs{END}
+%
+%  此命令用来将行数展开后加入到缩进形状，用一个命令作为本段的形状。
+%    \begin{macrocode}
+\def\cex@mShDone #1\END{%
+  \def\cex@mParSh{\parshape=#1 \cex@mShd}%
+}%
+%    \end{macrocode}
+% \end{macro}
+% 
+%  
+% \begin{macro}{\cex@mMakeSh}
+% \cs{cex@mMakeSh}\marg{单减高度}\marg{矩形宽}\marg{矩形高}\marg{计数器}\marg{文本}\marg{左缩进}\marg{右缩进}\marg{段落宽度}
+%
+% 这是一个八参量命令，其中前五个为\cs{cex@mGenMaRcX}所对应 的参量，用来生成该计数器的值对应此段落的行数，文本可以含有数学公式，左缩进，段落宽为\cs{cex@mGenShX}所需要的，由于在生成形状时矩形宽有时候就是生成形状的右缩进， 但有时候又不是，所以后来考虑后又将右缩进单独加进来了。
+%
+%    \begin{macrocode}
+\newcommand{\cex@mMakeSh}[8]{%
+  \setcounter{#4}{0}%
+  \def\math@head{}%
+  \def\math@tail{}%
+  \cex@mGenMaRecX{#1}{#2}{#3}{#4}{#5}%
+  \cex@mGenShX{#6}{#7}{#8}{\csname the#4\endcsname}%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%
+%\changes{v1.1.e}{2018/04/09}{加入专门处理选项缩进的功能，简化图形计算命令}
+% \begin{macro}{\cex@mMakeShIn}
+% \cs{cex@mMakeShIn} \marg{单减高度} \marg{矩形宽} \marg{矩形高} \marg{计数器} \marg{文本} \marg{左缩进} \marg{右缩进} \marg{段落宽度}
+%
+% 命令最右边In表示indent 。 此命令与\cs{cex@mMakeSh}基本相同，不同的是它受控于布尔值cex@mNoOptIndent,用来专门处理选项的缩进问题，因为不是所有的题目的选项都需要缩进。所谓不缩进指选项不缩进，但是总体由于题号的单独列出，则整体必须缩进一个宽度。
+%
+%    \begin{macrocode}
+\newcommand{\cex@mMakeShIn}[8]{%
+  \setcounter{#4}{0}%
+  \def\math@head{}%
+  \def\math@tail{}%
+  \cex@mGenMaRecX{#1}{#2}{#3}{#4}{#5}%
+  \ifthenelse{\boolean{cex@mNoOptIndent}}{%
+    \cex@mGenShX{\cex@mShIn}{#2}{#7}{\csname the#4\endcsname}%
+  }{%
+    \cex@mGenShX{#6}{#7}{#8}{\csname the#4\endcsname}%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+% \begin{macro}{\cex@mMakeShd}
+% 此命令开始设计时没有参数，后来经过修改带有一个参数。用来在计算完形状后追加一行，行宽则是第三级行宽，以方便选择题选项的构成。之所以单列在此，目的在于使构建的段落形状生成命令条理清析。
+%  
+%\changes{v1.1.b}{2018/04/08}{修改\cs{cex@mMakeShd}单参命令，控制缩进}
+%\changes{v1.1.b}{2018/04/09}{修改单参命令的结构，以适应不同模块的选项缩进}
+%\changes{v1.5.g}{2018/06/09}{增加\cs{bl@nkAns}置零,防止填空题多次答案积累}
+%
+%    \begin{macrocode}
+\newcommand{\cex@mMakeShd}[1]{%
+  \stepcounter{cex@mShNum}%
+  \ifthenelse{\boolean{cex@mNoOptIndent}}{%
+    \setlength{\cex@mShWdSS}{#1-\cex@mShIn}%
+    \expandafter\cex@mGenSh\cex@mShd \cex@mShIn \cex@mShWdSS\END%
+  }{%
+    \setlength{\cex@mShWdSS}{#1-\cex@mShInS}%
+    \expandafter\cex@mGenSh\cex@mShd \cex@mShInS \cex@mShWdSS\END%
+  }%
+  \expandafter\cex@mShDone\thecex@mShNum\END%
+  \cex@mParSh%
+  \def\bl@nkAns{}%
+}%
+%    \end{macrocode}%  
+% \end{macro}
+% 
+%\changes{v1.1.d}{2018/04/09}{将\cs{cex@mPut}修改为二参量命令}
+%\changes{v1.1.n}{2018/04/14}{去除\cs{cex@mPut}中的长度付值命令，增加一个参数}
+% \begin{macro}{\cex@mPut}
+% \cs{cex@mPut}\marg{放置行宽度}\marg{图片}\marg{图高}
+%
+% 此命令用来将图片放在适当的位置，比如用\cs{includegraphics}和tikz绘制的图片。为了清析起见有必要单独设立此命令。
+%  
+%    \begin{macrocode}
+\newcommand{\cex@mPut}[3]{%
+  \addtolength{#3}{-\ccwd}%
+  \makebox[0pt][l]{%
+    \raisebox{-#3}[0pt][0pt]{%
+      \parbox[b][0pt][b]{#1}{\hfill #2}%
+    }%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%\changes{v1.1.i}{2018/04/09}{修改\cs{cex@mTypePM}为两参量，去掉前缀}
+%\changes{v1.1.l}{2018/04/14}{去除图片长度高度付值命令，用两个参量代替}
+%\changes{v1.1.p}{2018/04/15}{去除对hanging的依懒}
+%\changes{v1.1.t}{2018/04/16}{解决当parindent不为0时的图片排版错误}
+%\changes{v1.2.j}{2018/04/21}{去除cex@mTypePM排版bug}
+% \begin{macro}{\cex@mTypePM}
+% \cs{cex@mTypePM}\marg{含数学公式的文本}\marg{图片}\marg{图宽}\marg{图高}
+%  
+% 这个命令用来排版含数学行间公式的文本与图片，默认图片在右上角矩形区域内放置，以后可以增加其它放置位置的能力。如果用它来输出答案和解析，则只需要在答案或解析的前头加上相应的前缀就可以了。
+%  
+%  这段程序开始使用hanging宏包实现，但是后来使用了自己开发的\cs{cex@mMakeSh}来直接生成段落形状，就可以避开了对hanging宏包的引用，引用更少的宏包，意味着更可靠的性能。所以写一下文字记录下。
+% 
+% 在进行多个题型联合排版测试时,如果单行排版则很完美,但是双行排版时会有一个段落形状的错乱.分析原代码后发现,开始使用的是hanging宏包实现,但是后来制成了\cs{cex@mMakeSh}后,做了替代,但是程序开始时的段落形状没有清空,导致了上一题的段落形状会保留下来.修改后清除了bug. 
+%
+% 在2018年6月6号的备课本编写中,发现计算题排图时,图片向右突出,同时与文字间距偏大.经过分析,原来是\cs{cex@mTypePM} 中放置图片命令中放置宽度出错,所以2018年6月7日晚将\cs{parindent} 修改为\cs{cex@mShIn},则消除bug.
+%
+%2018年6月9日晚,在研究这导致图片突出的bug时,发现不能简单的作出修改为\cs{cex@mShIn}的长度,因为这会导致cexam.sty在单独调用时产生新的bug.所以可靠的方案是重新改回来.
+%
+%  \changes{v1.5.i}{2018/06/14}{增加\cs{cex@mTypePM}的中央排图功能}
+% 2018年6月14日下午,在缩写备课本的过程中主要处理受力分析图,这里面有可能出现较大的图片,这时再居右排列并不是很美观,所以在研究后决定加入一个中央排图模式.如果图片过宽,则将图片排于文字的后面另起一行且居中.在定过宽的这个宽度时,作了试排测试,定出为$1/3$ 行宽,如果超过个宽度,则排图就进入居中模式.
+%
+%    \begin{macrocode}
+\newcommand{\cex@mTypePM}[4]{%
+  \ifthenelse{\dimtest{#3}{>}{0.3\linewidth}}{%
+    \parshape= 1 \cex@mShIn \cex@mlinewd
+    #1
+    \newline
+    \centerline{#2}
+  }{%
+    \setcounter{cex@mShNum}{0}%
+    \setcounter{cex@mShNT}{0}%
+    \def\cex@mShd{}%
+    \setlength{\cex@mswapht}{#4}%
+    \cex@mMakeSh{\cex@mDivPM}{#3}{\cex@mswapht}{cex@mGenPN}{%
+    #1}{\cex@mShIn}{#3}{\cex@mShWd}%
+    \cex@mMakeShd{\linewidth}%
+    \cex@mPut{\cex@mlinewd-\parindent}{#2}{#4}%
+    #1%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\cex@mTypePMSpace}
+%
+%  \changes{v1.5.i}{2018/06/14}{加入空白设置命令}
+% 在使用\cs{cex@mTypePM}排版时,如果题干的高度小于图片时,则要留出一定的空白才行,因为图片是按零盒子排入的.但是在图片宽度大于$1/3$的行宽时,在2018年6月14日下午加入了图片居后中央排版模式,这时候就是顺序排版,此刻图片不再是以零盒子排版,同时也不需要加入一定空白了,考虑到以下多外排版模块中引用了这个相同的空白设置命令,则统一一下,设置为命令\cs{cex@mTypePMSpace}.
+% 
+% 考虑到此留白命令只在 \cs{cex@mTypePM} 中使用,一种方案是可以将 \cs{cex@mTypePMSpace}  并入 \cs{cex@mTypePM} 中,另一个方案是不并入.但在选择题中有一个模式需要命令 \cs{cex@mTypePM} 但是不需要留白,则鉴于通用模块使用的灵活性,则不并入其中,采用第二种方案.---2018年6月14日下午
+%  
+%    \begin{macrocode}
+\newcommand{\cex@mTypePMSpace}{%
+  \ifthenelse{\dimtest{\cex@mBh}{>}{\cex@mPh}}{%
+    \relax%
+  }{%
+    \ifthenelse{\dimtest{\cex@mPw}{>}{0.3\linewidth}}{%
+      \relax%
+    }{%
+      \addtolength{\cex@mPh}{.3\baselineskip}%
+      \addtolength{\cex@mPh}{-\cex@mBh}%
+      \vspace{\cex@mPh}%
+    }%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+% 在下面的使用说明表达时，如下约定：设选项的高度用 oh 表示，题干的高度用 bh 表示，图片的高度用 ph表示，图片的宽度用 pw表示,行宽用lw表示。
+%  
+%\changes{v1.1.h}{2018/04/09}{在\cs{cex@mTypePM}的基础上引入本TypeOne排版模式}  
+%\changes{v1.1.k}{2018/04/14}{去除排版题型中的长度付值命令，避免重复长度付值}
+% \begin{macro}{\cex@mTypeOne}
+% \cs{cex@mTypeOne}\marg{题干}\marg{选项}\marg{图片}\marg{图宽}\marg{图高}
+% 
+% 此命令用来排版以$lw-pw$排版题干时，$bh>ph$的情况。 
+%
+% 由于在图后的行数不能确定，所以本模式暂时以选项不需要缩进时使用，若需要缩进则进入 \cs{cex@mTypeTwo} 模式排版。
+%
+%    \begin{macrocode}
+\newcommand{\cex@mTypeOne}[5]{%
+  \cex@mTypePM{#1}{#3}{#4}{#5}%
+  \newline%
+  #2
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+%\changes{v1.1.c}{2018/04/08}{加入控制选项缩进功能}
+%\changes{v1.1.a}{2018/04/08}{加入归零形状总数，以保证连续工作时的形状完整}
+%\changes{v1.1.f}{2018/04/09}{通过引入\cs{cex@mMakeShIn}简化命令，结构更加清析}
+%\changes{v1.2.l}{2018/04/22}{去除\cs{cexam@TypeTwo}中的一个多余空格bug}
+% \begin{macro}{\cex@mTypeTwo}
+% \cs{cex@mTypeTwo}\marg{题干}\marg{选项}\marg{图片}\marg{图宽}\marg{图高}
+%  
+% 此命令用来排版以$lw-pw$排版选项时，$oh>ph$的情况。同时，选项可以有缩进，同时它也受控于cex@mNoOptIndent。
+%
+%    \begin{macrocode}
+\newcommand{\cex@mTypeTwo}[5]{%
+  \setcounter{cex@mShNum}{0}%
+  \setcounter{cex@mShNT}{0}%
+  \def\cex@mShd{}%
+  \setcounter{math@equation}{\the\c@equation}%
+  \settototalheight{\cex@mDivPH}{%
+    \parbox{\linewidth-\cex@mShIn}{#1}%
+  }%
+  \setcounter{equation}{\themath@equation}%
+  \cex@mMakeSh{\cex@mDivPM}{0pt}{\cex@mDivPH}{cex@mGenPN}{%
+  #1}{\cex@mShIn}{0pt}{\cex@mShWd}%
+  \setlength{\cex@mswapht}{#5}%
+%    \end{macrocode}
+% 如果前面的测试中不需要选项缩进，则将布尔值cex@mNoOptIndent 设置为真，而后就以\newline |\cex@mShIn| 计算和排版形状。控制命令集成到 |\cex@mMakeShIn| 和 |\cex@mMakeShd| 中，所以结构更加清析。
+%    \begin{macrocode}
+  \cex@mMakeShIn{\cex@mDivPM}{#4}{\cex@mswapht}{cex@mGenPN}{%
+  #2}{\cex@mShInS}{#4}{\cex@mShWdS}%
+  \cex@mMakeShd{\linewidth}%
+  #1%
+  \newline%
+  \cex@mPut{\linewidth-\cex@mShInS}{#3}{#5}%
+  #2%
+}%
+%    \end{macrocode}
+%\end{macro}
+% 
+% \begin{macro}{\cex@mTypeThree}
+% \cs{cex@mTypeThree}\marg{题干}\marg{选项}\marg{图片}\marg{图宽}\marg{图高}
+%
+%  此命令用来排版当题干和选项以$lw-pw$排版时，$bh+oh>ph$，但是$bh<ph$的情况。
+%  因为无图模式中的所有情况在\cs{cex@mTypeTwo}中都实现，所以在这里不计划开发无图模式的支持。当无图时转入到\cs{cex@mTypeTwo}排版就好。
+%
+%    \begin{macrocode}
+\newcommand{\cex@mTypeThree}[5]{%
+  \setcounter{cex@mShNum}{0}%
+  \setcounter{cex@mShNT}{0}%
+  \def\cex@mShd{}%
+%    \end{macrocode}
+% 上述三行，将形状数和总行数，以及形状置零。
+%    \begin{macrocode}
+  \setlength{\cex@mswapht}{#5}%
+  \cex@mMakeSh{\cex@mDivPM}{#4}{\cex@mswapht}{cex@mGenPN}{%
+  #1}{\cex@mShIn}{#4}{\cex@mShWd}%
+  \setcounter{cex@mGenPN}{0}%
+%    \end{macrocode}
+% 将总行数置零。
+%    \begin{macrocode}
+  \setlength{\cex@mswapht}{#5}%
+%    \end{macrocode}
+% 由于在上一步计算形状时会导致图高为0pt，所以在使用时再付值。
+%    \begin{macrocode}
+  \cex@mGenMaRecX{\cex@mDivPM}{#4}{\cex@mswapht}{cex@mGenPN}{#1\newline#2}%
+%    \end{macrocode}
+% 用题干和选项一块生成排版图片需要的总行数。
+%    \begin{macrocode}
+  \addtocounter{cex@mGenPN}{-\thecex@mShNum}%
+%    \end{macrocode}
+% 在总行数中减去已经排版过的行数，得到需要排版的选项行数。
+%    \begin{macrocode}
+  \ifthenelse{\boolean{cex@mNoOptIndent}}{%
+    \cex@mGenShX{\cex@mShIn}{#4}{\cex@mShWdS}{\thecex@mGenPN}%
+  }{%
+    \cex@mGenShX{\cex@mShInS}{#4}{\cex@mShWdS}{\thecex@mGenPN}%
+  }%
+%    \end{macrocode}
+% 此处加入对布尔值 cex@mNoOptIndent 的判断，当不需缩进时以缩进 |\cex@mShIn| 生成形状，否则以 
+%  |\cex@mShInS| 来生成形状。
+%    \begin{macrocode}
+  \cex@mMakeShd{\linewidth}%
+%    \end{macrocode}
+% 最后加入的一行的行宽应当等于行宽，但是在需要缩进时，在\cs{cex@mMakeShd}中会自动加入缩进，所以在这里不需单独写出。
+%    \begin{macrocode}
+  \cex@mPut{\cex@mlinewd-\parindent}{#3}{#5}%
+%    \end{macrocode}
+% 由于图片需要放置在题干前面，所以图片的放置宽度当为行宽。
+%    \begin{macrocode}
+  #1
+  \newline
+  #2
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+%
+%\changes{v1.1.g}{2018/04/09}{加入题干图片与选项的顺序排列，但选项可控缩进}
+%\changes{v1.2.m}{2018/04/21}{修复图片居中排版的小bug}
+%\changes{v1.3.c}{2018/05/01}{修复\cs{cex@mTypeFour} 中的形状行数置零bug}
+% \begin{macro}{\cex@mTypeFour}
+% \cs{cex@mTypeFour}\marg{题干}\marg{选项}\marg{图片}\marg{图宽}\marg{图高}
+% 
+%  此程序用来排版当以$lw-pw$排版时 $bh+oh<ph$的情况。 可以实现与无图版模式的兼容，但是由于计算形状导致不如直接按顺序排布，考虑以后单独追加直接排版命令。
+%  
+%    \begin{macrocode}
+\newcommand{\cex@mTypeFour}[5]{%
+  \setcounter{cex@mShNum}{0}%
+  \setcounter{cex@mShNT}{0}%
+  \def\cex@mShd{}%
+%    \end{macrocode}
+% 先将形状和行数置零。
+%    \begin{macrocode}
+  \setcounter{math@equation}{\the\c@equation}%
+%    \end{macrocode}
+%锁定公式计数器|equation|
+%    \begin{macrocode}
+  \settototalheight{\cex@mDivPH}{%
+    \parbox{\linewidth}{#1}%
+  }%
+%    \end{macrocode}
+%将题干以行宽来排版，获得总高度。
+%    \begin{macrocode}
+  \setcounter{equation}{\themath@equation}%
+%    \end{macrocode}
+%将计数器原值反回.
+%    \begin{macrocode}
+  \cex@mMakeSh{\cex@mDivPM}{0pt}{\cex@mDivPH}{cex@mGenPN}{%
+  #1}{\cex@mShIn}{0pt}{\cex@mShWd}%
+%    \end{macrocode}
+%生成题干的行数。
+%    \begin{macrocode}
+  \ifthenelse{\isempty{#3}}{%
+    \relax%
+  }{%
+    \stepcounter{cex@mShNum}%
+    \expandafter\cex@mGenSh\cex@mShd \cex@mShIn \cex@mlinewd\END%
+  }%
+%    \end{macrocode}
+%上述命令，如果图片为空，则不追加行数，如果不是空则在题干行数和基础上追加一行，用来排版图片，使图片单独一行居于整行的中间。
+%  |\cex@mMakeShd{\cex@mlinewd}|%
+%此命令用来追加一行，事控缩进的选项排版。一行之个，所有的其它没有排形状的行，将以\cs{parshape}的惯例来按最后一行排列。
+%    \begin{macrocode}
+  #1
+  \ifthenelse{\isempty{#3}}{%
+    \relax%
+  }{%
+    \newline
+    \parbox{\cex@mlinewd}{\centerline{#3}}%
+  }%
+%    \end{macrocode}
+%如果图片不是空的则加入图片显示项，否则不加入，以完成无图模式。
+%    \begin{macrocode}
+  \newline%
+  #2
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\cex@mTypeDone}
+% \cs{cex@mTypeDone}\marg{题干}\marg{选项}\marg{图片}\marg{图宽}\marg{图高}\marg{题干高}\marg{选项高}
+%  
+%  此命令添加了模式选择命令，用来根据不同的题干高和选项高以及图片高三者的关系来确定适当的选择模式。
+%  
+%    \begin{macrocode}
+\newcommand{\cex@mTypeDone}[7]{%
+  \ifthenelse{\isempty{#3}}{%
+    \cex@mTypeFour{#1}{#2}{#3}{#4}{#5}%
+  }{%
+    \ifthenelse{\dimtest{#7}{>}{#5}}{%
+      \ifthenelse{\dimtest{#6}{>}{#5}}{%
+	\cex@mTypeTwo{#1}{#2}{#3}{#4}{#5}%
+      }{%
+	\cex@mTypeThree{#1}{#2}{#3}{#4}{#5}%
+      }%
+    }{%
+      \ifthenelse{\dimtest{#6}{>}{#5}}{%
+	\ifthenelse{\boolean{cex@mNoOptIndent}}{%
+	  \cex@mTypeOne{#1}{#2}{#3}{#4}{#5}%
+	}{%
+	  \cex@mTypeTwo{#1}{#2}{#3}{#4}{#5}%
+	}%
+      }{%
+	\addtolength{#7}{#6}%
+	\ifthenelse{\dimtest{#5}{>}{#7}}{%
+	  \cex@mTypeFour{#1}{#2}{#3}{#4}{#5}%
+	}{%
+	  \cex@mTypeThree{#1}{#2}{#3}{#4}{#5}%
+	}%
+      }%
+    }%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%\section{试题的通用结构}  
+%
+%  \changes{v1.1.j}{2018/04/10}{加入前缀放置命令}
+% \begin{macro}{\cex@mHat}
+%  \cs{cex@mHat}\marg{前缀宽度}\marg{前缀}
+%  此命令用来添加前缀到题干或选项中，比如选择题中的A、B、C 、D以及题目的序号等。
+%  用零度盒子可以让选项等实现整体缩进，但是该序号在前面，同时长度的加入如果用\cs{cex@mShIn}代入前缀宽度，则它会要据所设置数值自动调整。
+%  
+%    \begin{macrocode}
+\newcommand{\cex@mHat}[2]{%
+  \makebox[0pt][r]{\raisebox{-.05\ccwd}{\parbox[b]{#1}{#2.\hfill}}}%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\cex@mnum}
+%
+%  此命令用来自动生成试题的题号，同时可以根据需要对其格式进行定制。它属于公用程序，不是某一个题型所特有的，可以使用到任何一个地方。
+%
+%    \begin{macrocode}
+\newcommand{\cex@mnum}{%
+  \cex@mHat{\cex@mShIn}{\thecex@mNumber}%
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+% \changes{v1.1.k}{2018/04/11}{题目中图片设置}
+% \section{图片处理}
+%  
+%  \subsection{文本与图片的分离}
+%  
+% \begin{macro}{\cex@mPicSep}
+%  此命令用来分离题目中的图片和文字，为了能够明确表达图片的范围，我经过考虑选定了符号 <: 表示图的开始，以\  :> 表示图的结束,这两个符号的输入指英文下的符号，大于号与冒号之间没有空格，同样小于号与冒号间也没有空格。这样的话，插入tikz作图也是比较明确的，同时我采用的这个符号，也是一般输入中不用的。所以这是一个较好的选择。
+%
+%  这个命令开始设计时考虑了图片格式和图的分离,本来要单独控制格式,现在想来
+% 这样会增加对图片的重复付值,影响效率,果断去除.将付值命令并入分离程序中,更好一些.
+%
+% 设置用\cs{@pic}盒子来获得图片的宽和高,这样比用直接付值的命令更加简洁.同时,效率要比原来高,每次排版中图片会被用到两次.一是存入盒子,二是直接排版输出. 
+%  
+% 在有的题目中有可能出现图表,但是在题目中我把表当作图片处理.这时候有个问题,图表有深度,但是图片深度为0,所以考虑后作如下修改,成功支持图表.
+%  
+%\changes{v1.2.k}{2018/04/21}{加入图片宽度付值和定义图片\cs{@Picture}}
+%\changes{v1.1.l}{2018/04/21}{修改图片与下标间距,减小4pt}
+%\changes{v1.3.e}{2018/05/02}{修复图表的支持}
+%
+%  2018年7月3日下午,在办公室吵的头疼,无法正常学习《量子力学》，于是决定对图片分离程序做一下小的升级.当作者决定输入图片时,以符号 <: 开始,以 :> 结束,但是中间暂时不方便输入图片或者忘记输入图片时,则以一个 $2cm \times 2cm $ 的正方形,并以文字\textcolor{red}{请输入图片} 作出提示.
+%
+%\changes{v1.5.j}{2018/07/03}{图片为空时,加入红字提示}
+%
+%    \begin{macrocode}
+\def \cex@mPicSep #1<:#2:>#3\END{%
+  \def\@Text{#1图\thefigure{}#3}%
+  \setbox\@pic=\hbox{#2}%
+%    \end{macrocode}
+% 为了判断图片是否为空,则一般图片的大小不可能小于 $5pt$ .则将上面所得盒子的宽度与 $5pt$ 对比,若小于则认为是空,否则不作处理.
+%    \begin{macrocode}
+  \ifthenelse{\dimtest{\wd\@pic}{<}{5pt}}{%
+    \setbox\@pic=\hbox{%
+      \begin{tikzpicture}
+	\draw (0,0) rectangle (2,2);
+	\draw (1,1) node {\small \textcolor{red}{请输入图片}};
+      \end{tikzpicture}
+    }%
+  }{%
+    \relax%
+  }%
+  \setlength{\cex@mPw}{\wd\@pic}%
+  \setlength{\cex@mPh}{\ht\@pic}%
+  \addtolength{\cex@mPh}{\dp\@pic}%
+  \addtolength{\cex@mPh}{\baselineskip}%
+  \setlength{\cex@m@pic@dp}{\dp\@pic}%
+  \def\@Picture{%
+    \parbox[b]{\cex@mPw}{%
+      \raisebox{\cex@m@pic@dp}{\unhbox\@pic}%
+      \vspace{-4pt}\newline%
+      \centerline{图 \thefigure}%
+    }%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%  \changes{v1.2.k}{2018/04/21}{增加图片宽高的付值命令}
+% \begin{macro}{\cex@mPicSepDone}
+% 此命令用来处理开头就有图片的，或者结束有图片的情况。也有的可能性是题目中没有图片，这时图需要定义为空。
+%    \begin{macrocode}
+\def \cex@mPicSepDone #1\END{%
+  \ifthenelse{\isin{<:}{#1}}{%
+    \ifthenelse{\isin{*<:}{*#1}}{%
+      \ifthenelse{\isin{:>*}{#1*}}{%
+	\cex@mPicSep *#1*\END%
+	\def\@Text{}%
+      }{%
+	\cex@mPicSep\relax#1\END%
+      }%
+    }{%
+      \ifthenelse{\isin{:>*}{#1*}}{%
+	\cex@mPicSep #1\relax\END%
+      }{%
+	\cex@mPicSep #1\END%
+      }%
+    }%
+  }{%
+    \def\@Text{#1}%
+    \def\@Picture{}%
+    \setlength{\cex@mPw}{0pt}%
+    \setlength{\cex@mPh}{0pt}%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%\section{最大长度获取程序}
+% 
+% \begin{macro}{\setcex@mLmax}
+% 此程序获得最大长度命令。
+%    \begin{macrocode}
+\def \setcex@mLmax #1\END{%
+  \settowidth{\cex@mLmaxsub}{\hbox{#1}}%
+  \ifthenelse{\dimtest{\cex@mLmaxsub}{>}{\cex@mLmax}}{%
+    \setlength{\cex@mLmax}{\cex@mLmaxsub}%
+  }{%
+    \relax%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%\section{选择题的设置}
+%  
+%  \subsection{四个选项的自动排版}
+% 
+% \begin{macro}{\sel@optone}
+% \cs{sel@optone}\marg{选项A}\marg{选项B}\marg{选项C}\marg{选项D}
+%  
+% 此程序用于排版四个选项小于$1/4$的行宽时的排版，四个选项排一行均匀分布。
+%    \begin{macrocode}
+\newcommand{\sel@optone}[4]{%
+  \makebox[.25\sel@linewidth][l]{A.#1}%
+  \makebox[.25\sel@linewidth][l]{B.#2}%
+  \makebox[.25\sel@linewidth][l]{C.#3}%
+  \makebox[.25\sel@linewidth][l]{D.#4}%
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+%  
+% \begin{macro}{\sel@opttwo}
+% \cs{sel@opttwo}\marg{选项A}\marg{选项B}\marg{选项C}\marg{选项D}
+%  
+% 此程序用于排版四个选项大于$1/4$的行宽但是小于$1/2$行宽的情况，每二个选项一行，标号对齐排二行。
+%    \begin{macrocode}
+\newcommand{\sel@opttwo}[4]{%
+  \makebox[.5\sel@linewidth][l]{A.#1}%
+  \makebox[.5\sel@linewidth][l]{B.#2}%
+  \newline
+  \makebox[.5\sel@linewidth][l]{C.#3}%
+  \makebox[.5\sel@linewidth][l]{D.#4}%
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+% \begin{macro}{\sel@optthree}
+% \cs{sel@optthree}\marg{选项A}\marg{选项B}\marg{选项C}\marg{选项D}
+%  
+% 此程序用于四个选项中最长的长度超过$1/2$行宽的情况下，四个选项保持有缩进，逐次排排列。
+%    \begin{macrocode}
+\newcommand{\sel@optthree}[4]{%
+  \cex@mHat{1.2\ccwd}{A}#1
+  \newline
+  \cex@mHat{1.2\ccwd}{B}#2
+  \newline
+  \cex@mHat{1.2\ccwd}{C}#3
+  \newline
+  \cex@mHat{1.2\ccwd}{D}#4
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%  
+%\changes{v1.2.h}{2018/04/19}{去除选择题最大选项长度获取程序中的bug}
+% \begin{macro}{\sel@getLmax}
+% 此为了单独从四个选项中获得最大长度，进入选择题时单独执行
+%    \begin{macrocode}
+\newcommand{\sel@getLmax}[4]{%
+  \setlength{\cex@mLmax}{0pt}%
+%开始时没有设置此归零命令,所以在连续排两道以上的选择题时,上一题的最大长度将会保留下来.所以必须归零,让它重新获得下一题的选项最大长度。
+  \expandafter\setcex@mLmax A. #1\END%
+  \expandafter\setcex@mLmax B. #2\END%
+  \expandafter\setcex@mLmax C. #3\END%
+  \expandafter\setcex@mLmax D. #4\END%
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+% \begin{macro}{\sel@OptDone}
+% \cs{sel@OptDone}\marg{选项A}\marg{选项B}\marg{选项C}\marg{选项D}
+%  
+% 此程序用来自动在三种选项排版中选择适当的排版方式。
+%    \begin{macrocode}
+\newcommand{\sel@OptDone}[4]{%
+  \ifthenelse{\dimtest{\cex@mLmax}{<}{.25\sel@linewidth}}{%
+      \sel@optone{#1}{#2}{#3}{#4}%
+  }{%
+    \ifthenelse{\dimtest{\cex@mLmax}{<}{.5\sel@linewidth}}{%
+      \sel@opttwo{#1}{#2}{#3}{#4}%
+    }{%
+      \sel@optthree{#1}{#2}{#3}{#4}%
+    }%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%  \subsection{选择题的排版模式}
+%
+%\changes{v1.2.j}{2018/04/20}{增加选择题中的括号}
+% \begin{macro}{\sel@bracket}
+% 此命令为选择题中自动添加括号,输入时不必输入括号.
+%    \begin{macrocode}
+\newcommand{\sel@bracket}{\hfill\mbox{(\quad)}}%
+%    \end{macrocode}
+% \end{macro}
+%
+%\changes{v1.3.c}{2018/04/28}{加入选择题答案生成模块}
+%\changes{v1.3.d}{2018/05/01}{修改\cs{sel@seped}为\cs{@Text}}
+% \DescribeMacro\sel@sep\DescribeMacro\sel@sepDone 
+% 此程序用来从题干中分离出选择题的答案.本没有设计这个环节,但是基于原来直接写 cexam.sty 时,有这个功能,同时在填空题时双必须有这个步骤,在判断题中也有这个环节,所以在选择中,决定保留这个功能.
+%    \begin{macrocode}
+\def\sel@sep #1[#2]#3\END{%
+  \def\@Text{#1}%
+  \gdef\bl@nkAns{#2}%
+}%
+\def\sel@sepDone #1\END{%
+  \ifthenelse{\isin{[}{#1}}{%
+    \sel@sep #1\relax\END%
+  }{%
+    \def\@Text{#1}%
+    \gdef\bl@nkAns{}%
+  }%
+}%
+%    \end{macrocode}
+%  
+%\changes{v1.1.w}{2018/04/17}{去掉了\cs{cex@mlinewd}的重复付值}
+%\changes{v1.2.e}{2018/04/19}{修复不能自动处理数学行间公式的bug}
+%\changes{v1.2.i}{2018/04/20}{将\cs{END}换成\cs{par}为进入everypar做好准备}
+%\changes{v1.2.i}{2018/04/20}{修改了图片计数探测程序,用\cs{isin}表达}
+%\changes{v1.2.k}{2018/04/21}{将对图片的付值并入图片分离程序,去除图片付值命令}
+%\changes{v1.3.d}{2018/05/01}{消除加入选择题内部答案后不支持tikz的bug}
+% \begin{macro}{\sel@Type}
+% 此程序用来排版选择题，经过多次测试和思考，定为先预测排版模式，然后对选择付值，再正式排版的顺序。
+%    \begin{macrocode}
+\def\sel@Type #1 A.#2 B.#3 C.#4 D.#5\par{%
+  \setboolean{cex@mNoOptIndent}{false}%
+  \setcex@mNumber%
+  \def\bl@nkAns{}%
+  \cex@mPicSepDone \cex@mnum#1\END%
+%    \end{macrocode}
+%在图片分离时,加入前缀,这样在计算各长度更加精确.同时在进入排版时测定行数时,由于存在\cs{expandafter},则展开一级时就可以正确识别行间数学公式.如果按原来在正式排版时再加入\cs{cex@mnum}则测行程序中的\cs{expandafter}但展开的是前缀从而会影响测行有可能失败.2018年6月10日零晨做完此修改后加入的此说明文字.
+%    \begin{macrocode}
+  \expandafter\sel@sepDone\@Text\END%
+%    \end{macrocode}
+%此功能本来没有设置,考虑到输入习惯的问题,加入了此答案分离功能.
+%    \begin{macrocode}
+  \setcounter{math@equation}{\the\c@equation}%
+  \settototalheight{\cex@mBh}{%
+    \parbox{\cex@mlinewd-\cex@mPw}{\@Text\sel@bracket}%
+  }%
+  \setcounter{equation}{\themath@equation}%
+  \setlength{\sel@linewidth}{\cex@mlinewd-\cex@mPw}%
+  \sel@getLmax{#2}{#3}{#4}{#5}%
+  \ifthenelse{\dimtest{\cex@mLmax}{<}{.5\sel@linewidth}}{%
+    \setboolean{cex@mNoOptIndent}{true}%
+    \ifthenelse{\dimtest{\cex@mLmax}{<}{.25\sel@linewidth}}{%
+      \setlength{\cex@mOh}{\baselineskip}%
+    }{%
+      \setlength{\cex@mOh}{2\baselineskip}%
+    }%
+  }{%
+    \settototalheight{\cex@mOh}{%
+      \parbox{\cex@mlinewd-\cex@mPw}{\sel@OptDone{#2}{#3}{#4}{#5}}%
+    }%
+  }%
+  \setlength{\cex@mBOh}{\cex@mBh+\cex@mOh}%
+%    \end{macrocode}
+%以上为图片宽高、题干高、选项高付值。计算选项高时以行宽减去图宽为排版宽度
+%    \begin{macrocode}
+  \ifthenelse{\dimtest{\cex@mBh}{>}{\cex@mPh}}{%
+    \setlength{\sel@linewidth}{\cex@mlinewd}%
+  }{%
+    \ifthenelse{\dimtest{\cex@mBOh}{>}{\cex@mPh}}{%
+      \relax%
+    }{%
+      \setlength{\sel@linewidth}{\cex@mlinewd}%
+    }%
+  }%
+%    \end{macrocode}
+%上述命令为根据预测排版模式将选项中的宽度设置为行宽，或者不改动。
+%    \begin{macrocode}
+  \ifthenelse{\isin{<:}{#1}}{%
+    \stepcounter{figure}%
+  }{%
+    \relax%
+  }%
+%    \end{macrocode}
+%上述命令用于在题目中增加题号计数器，如果有图则增加图片计数器，如果无图则不增加图片计数器。
+%    \begin{macrocode}
+  \cex@mTypeDone{\@Text\sel@bracket}{%
+    \sel@OptDone{#2}{#3}{#4}{#5}%
+  }{\@Picture}{\cex@mPw}{\cex@mPh}{\cex@mBh}{\cex@mOh}%
+  \par
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%  
+%  \section{填空题排版模块}
+%
+% \DescribeMacro\bl@nked
+% 这个命令是用来存储经过处理后的文本的。
+%    \begin{macrocode}
+\def\bl@nked{}%
+%    \end{macrocode}
+%  
+%\DescribeMacro\bl@nkget
+%  此命令用来辅助生成处理括号后的文本的。
+%    \begin{macrocode}
+\def\bl@nkget#1\END{%
+  \def\bl@nked{#1}%
+}%
+%    \end{macrocode}
+% 
+%  \DescribeMacro\bl@nkGen
+%  此命令用来生成空白，单独设置一个命令为了能够在生成空白处展开存储的\cs{bl@nked}，同时用\cs{CJKunderline}来生成可以自动段行的空白。
+%    \begin{macrocode}
+\def\bl@nkGen #1\END{\CJKunderline{#1}}%
+%    \end{macrocode}
+% 
+%  \changes{v1.2.n}{2018/04/22}{增加填空题答案自动存储功能}
+% \begin{macro}{\bl@nkSave}
+% 此命令用来保存填空题中的答案,每次排版完成,则会自动将挖去的空保存在\cs{bl@nkAns}中,初始设置填空答案为空.将此命令追加到\cs{@blank}中,实现每个空的累加.
+%    \begin{macrocode}
+\def\bl@nkAns{}%
+\def\bl@nkSave#1\END{%
+  \gdef\bl@nkAns{#1}%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%  \DescribeMacro\@blank
+%  此命令用来处理填空题的空白问题，因为是初级写成，所以暂时不加入答案的生成。待各题型完成后，统一处理答案和解析的问题。
+%
+%  初步加入答案存储功能,测试成功.
+%  
+%    \begin{macrocode}
+\newcommand{\@blank}[1]{%
+  \def\bl@nked{}%
+  \settowidth{\bl@nkwd}{#1}%
+  \whiledo{\dimtest{\bl@nkwd}{>}{0pt}}{%
+    \expandafter\bl@nkget\bl@nked\mbox{\quad} \END%
+    \addtolength{\bl@nkwd}{-\ccwd}%
+  }%
+  \expandafter\bl@nkGen \bl@nked\END%
+  \expandafter\bl@nkSave\bl@nkAns#1\quad\END%
+}%
+%    \end{macrocode}
+%  
+% \DescribeMacro\bl@nkSep
+%  此程序用来分离各个填空题中的空白，此处考虑到方括号在填空题中出现的几率不高，所以用方括号来定界所空出的填空。此程序使用了自己引用的方式，以达到不断循环完成方括号替换的目的。非常高效和简洁，我很兴奋。
+%    \begin{macrocode}
+\def \bl@nkSep #1[#2]#3\END{%
+  \def\bl@nkSeped{#1\@blank{#2}#3}%
+  \ifthenelse{\isin{[}{#3}}{%
+    \expandafter\bl@nkSep\bl@nkSeped\END%
+  }{%
+    \relax%
+  }%
+}%
+%    \end{macrocode}
+%  
+% \DescribeMacro\bl@nkSepX
+% 此程序是为了排除当一串文本中没有标出方括号的情况。
+%    \begin{macrocode}
+\def \bl@nkSepX #1\END{%
+  \def\bl@nkSeped{}%
+  \ifthenelse{\isin{[}{#1}}{%
+    \bl@nkSep \relax#1\relax\END%
+  }{%
+    \def\bl@nkSeped{#1}%
+  }%
+}%
+%    \end{macrocode}
+%  
+% 
+%\changes{v1.1.f}{2018/04/19}{修复了填空题中出现行间公式时，测定行数bug}
+%\changes{v1.2.i}{2018/04/20}{修改填空题中\cs{END}为\cs{par}}
+%\changes{v1.2.k}{2018/04/21}{去除填空题中图片付值命令}
+% \begin{macro}{\bla@Type}
+% 此程序是填空题的排版程序。由于在排版填空题时不需要二级缩进，因为它没有选项，所以在题目中开启无缩进项。但是在使用时不确定后面的题目是填空还是选择或计算，所以这里在题目后要重新打开二级缩进。
+%    \begin{macrocode}
+\def\bla@Type #1\par{%
+  \setboolean{cex@mNoOptIndent}{true}%
+  \def\bl@nkAns{}%
+  \setcex@mNumber%
+  \cex@mPicSepDone \cex@mnum#1\END%
+%    \end{macrocode}
+%  2018年6月10日零晨将\cs{cex@mnum}移动到图文字分离的步骤中,解释同选择题.
+%    \begin{macrocode}
+  \expandafter \bl@nkSepX\@Text\END%
+  \setcounter{math@equation}{\the\c@equation}%
+  \settototalheight{\cex@mBh}{\parbox{\cex@mlinewd-\cex@mPw}{\bl@nkSeped}}%
+  \setcounter{equation}{\themath@equation}%
+  \def\bl@nkAns{}%
+  \ifthenelse{\isin{<:}{#1}}{%
+    \stepcounter{figure}%
+    \cex@mTypePM{\bl@nkSeped}{\@Picture}{\cex@mPw}{\cex@mPh}%
+    \cex@mTypePMSpace%
+  }{%
+    \parshape=1 \cex@mShIn \cex@mlinewd
+    \bl@nkSeped%
+  }%
+  \setboolean{cex@mNoOptIndent}{false}%
+  \par
+}%
+%    \end{macrocode}
+% \end{macro}
+% \changes{v1.2.b}{2018/04/18}{增加计算题模块} 
+%\section{计算题模块}
+%
+%  \DescribeMacro\thec@lnumber
+%  此命令是小问的标号控制，以零盒子生成。如果需要改变则重新定义此命令。
+%    \begin{macrocode}
+\newcommand{\thec@lnumber}{\stepcounter{c@lOptNum}\makebox[0pt][r]{(\thec@lOptNum)}}%
+%    \end{macrocode}
+%
+%  \DescribeMacro\c@lOptSeped
+%  此命存储计算题的选项。
+%    \begin{macrocode}
+\def\c@lOptSeped{}%
+%    \end{macrocode}
+%
+% \begin{macro}{\c@lOptSep}
+% 此命令用来处理选项，将各个小问标号替换为设置好的小问标号格式。借鉴了填空题中处理填空的程序，用自身循环的方式实现。
+%    \begin{macrocode}
+\def\c@lOptSep #1[#2]#3\END{%
+  \def\c@lOptSeped{#1\newline\thec@lnumber#3}%
+  \ifthenelse{\isin{[}{#3}}{%
+    \expandafter\c@lOptSep\c@lOptSeped\END%
+  }{%
+    \relax%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\c@lOptSepX}
+% 此命令用来处理当选项中没有方括号标注的情况，或者以方括号开头的情况。
+%    \begin{macrocode}
+\def\c@lOptSepX #1\END{%
+  \ifthenelse{\isin{[}{#1}}{%
+    \c@lOptSep\relax#1\relax\END%
+  }{%
+    \def\c@lOptSeped{#1}%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+%  
+% \begin{macro}{\c@lSepBO}
+% 此程序用来分离计算题中的选项和题干。
+%    \begin{macrocode}
+\def\c@lSepBO #1[#2]#3\END{%
+  \def\c@lbody{#1}%
+  \def\c@loption{#3}%
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+%  
+% \begin{macro}{\c@lSepBOX}
+% 此程序用来处理整个题目中如果没有选项的情况，属于增强的\cs{c@lSepBO}。
+%    \begin{macrocode}
+\def\c@lSepBOX #1\END{%
+  \ifthenelse{\isin{[}{#1}}{%
+    \c@lSepBO #1\END%
+  }{%
+    \def\c@lbody{#1}%
+    \def\c@loption{}%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+% 
+% \changes{v1.2.k}{2018/04/21}{去除计算题中图片付值命令} 
+% \begin{macro}{\c@lTypePicOpt}
+% 此程序用来处理，计算题中有选项和图片的情况。选择题中一定有选项，填空题中一定没有选项，计算题中有可能有选项也有可能没有选项。这导致了计算题排版的复杂性，所以考虑以后决定，单独写这个有选项和图片的排版程序，然后没有选项的情况就可以归结到填空题的排版程序就可以了。
+% \changes{v1.2.b}{2019/01/11}{修复计算题次级选项缩进bug}
+%    \begin{macrocode}
+\def\c@lTypePicOpt #1\END{%
+  \setboolean{cex@mNoOptIndent}{false}%
+  \setcex@mNumber%
+  \addtolength{\cex@mShInS}{.2\ccwd}%
+%    \end{macrocode}
+% 由于三级缩进与选择题不一样，所以要单独加上一个小量以修正,由于不同的文章有可能使用的字体大小不一样,所以这里使用了相对于字大小的倍数关系,而替换掉了以前的绝对数值。
+%    \begin{macrocode}
+  \ifthenelse{\isin{<:}{#1}}{%
+    \stepcounter{figure}%
+  }{%
+    \relax%
+  }%
+%    \end{macrocode}
+%如果题目中有图片则增加一个图片计数器
+%    \begin{macrocode}
+  \cex@mPicSepDone \cex@mnum#1\END%
+  \expandafter\c@lSepBOX\@Text\END%
+  \expandafter\c@lOptSepX\c@loption\END%
+  \setcounter{math@equation}{\the\c@equation}%
+  \settototalheight{\cex@mBh}{\parbox{\cex@mlinewd-\cex@mPw}{\c@lbody}}%
+  \setcounter{equation}{\themath@equation}%
+  \settototalheight{\cex@mOh}{%
+    \parbox{\cex@mlinewd-\cex@mPw}{\thec@lnumber\c@lOptSeped}%
+  }%
+  \setlength{\cex@mBOh}{\cex@mBh+\cex@mOh}%
+%    \end{macrocode}
+%分离图片选项，同时给图宽、图高、项宽、项高付值
+%    \begin{macrocode}
+  \ifthenelse{\dimtest{\cex@mBOh}{<}{\cex@mPh}}{%
+    \cex@mTypeThree{\c@lbody}{%
+      \setcounter{c@lOptNum}{0}\thec@lnumber\c@lOptSeped%
+    }{\@Picture}{\cex@mPw}{\cex@mPh}%
+    \addtolength{\cex@mPh}{.3\baselineskip}%
+    \addtolength{\cex@mPh}{-\cex@mBOh}%
+    \vspace{\cex@mPh}%
+%    \end{macrocode}
+%如果$bh+oh<ph$则进入\cs{cex@mTypeThree}排版,同时图片会占用一定的空间，但是它是用零盒子引入的，所以要单独追加一个竖直空白
+%    \begin{macrocode}
+  }{%
+      \cex@mTypeDone{\c@lbody}{%
+	\setcounter{c@lOptNum}{0}\thec@lnumber\c@lOptSeped%
+      }{\@Picture}{\cex@mPw}{\cex@mPh}{\cex@mBh}{\cex@mOh}%
+%    \end{macrocode}
+%如果$bh+oh>ph$则进入通用排版程序。
+%    \begin{macrocode}
+    \ifthenelse{\dimtest{\cex@mBh}{>}{\cex@mPh}}{%
+      \ifthenelse{\dimtest{\cex@mOh}{<}{\cex@mPh}}{%
+	\addtolength{\cex@mPh}{.6\baselineskip}%
+	\addtolength{\cex@mPh}{-\cex@mOh}%
+	\vspace{\cex@mPh}%
+      }{%
+	\relax%
+      }%
+    }{%
+      \relax%
+    }%
+%    \end{macrocode}
+%考虑到图与选项排版时，如果$oh<ph$时，用空白占据图片所产生的空间。以与其它段落有正常的间距
+%    \begin{macrocode}
+  }%
+}%
+%    \end{macrocode}
+%减去这个高度|\addtolength{\cex@mShInS}{-3pt}|，原因在于不知道后面的题目是选择还是填空，所以需要再复原这个二级缩进。
+% \end{macro}
+%  
+%\changes{v1.2.i}{2018/04/20}{修改计算题中\cs{END}为\cs{par}}
+%\changes{v1.3.g}{2018/05/03}{修复计算题中用tikz画图时,内部的方括号导致的识别错误}
+% \begin{macro}{\c@lType}
+% 此程序用来区分有选项和无选项的情况，如果有选项则进入有选项模式，如果没有选项则进入填空题所规定的题干与图片的排版。无图模式，这二种模式看上去处理。
+%    \begin{macrocode}
+\def\c@lTypeX #1<:#2:>#3\END{%
+  \ifthenelse{\isin{[}{#1#3}}{%
+    \c@lTypePicOpt #1<:#2:>#3\END%
+  }{%
+    \bla@Type #1<:#2:>#3\END%
+  }%
+}%
+\def\c@lType #1\par{%
+  \ifthenelse{\isin{<:}{#1}}{%
+    \c@lTypeX\relax #1\relax\END%
+  }{%
+    \ifthenelse{\isin{[}{#1}}{%
+      \c@lTypePicOpt #1\END%
+    }{%
+      \bla@Type #1\END%
+    }%
+  }%
+  \par
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%\changes{v1.2.p}{2018/04/22}{加入判断题模块}
+%\section{判断题模块}
+% 
+%由于判断题也是比较容易处理的一类题目,没有选项,所以可以借助填空题的格式来设计
+%
+% \begin{macro}{\jud@sep}
+% 分离判断题的答案,考虑到方括号使用频率低,仍用方括号标注答案.考虑到答案的处理,则此处用填空题的存储命令\cs{bl@nkAns}来保存答案,则方便直接用答案程序输出.
+%    \begin{macrocode}
+\def\jud@sep #1[#2]#3\END{%
+  \def\jud@Text{#1#3}%
+  \ifthenelse{\isin{t}{#2}}{%
+    \gdef\bl@nkAns{$\surd$}%
+  }{%
+    \ifthenelse{\isin{f}{#2}}{%
+      \gdef\bl@nkAns{$\times$}%
+    }{%
+      \gdef\bl@nkAns{正确:t,错误:f}%
+    }%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+% 
+% \begin{macro}{\jud@sepDone}
+% 此为了应对题目中没有输入答案的情况
+%    \begin{macrocode}
+\def\jud@sepDone #1\END{%
+  \ifthenelse{\isin{[}{#1}}{%
+    \jud@sep\relax#1\relax\END%
+  }{%
+    \def\jud@Text{#1}%
+    \gdef\bl@nkAns{请使用[\quad]输入答案,正确:t,错误:f}%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+% 
+%  
+% \begin{macro}{\jud@Type}
+% 判断题的输出程序,充分考虑了其与填空题的相同性质,但是答案又有不同的形式,所以在填空题的基础中改造而来.
+%    \begin{macrocode}
+\def\jud@Type #1\par{%
+  \setboolean{cex@mNoOptIndent}{true}%
+  \def\bl@nkAns{}%
+  \setcex@mNumber%
+  \cex@mPicSepDone \cex@mnum#1\END%
+  \expandafter\jud@sepDone\@Text\END%
+  \setcounter{math@equation}{\the\c@equation}%
+  \settototalheight{\cex@mBh}{%
+    \parbox{\cex@mlinewd-\cex@mPw}{\jud@Text\hfill\sel@bracket}%
+  }%
+  \setcounter{equation}{\themath@equation}%
+  \ifthenelse{\isin{<:}{#1}}{%
+    \stepcounter{figure}%
+    \cex@mTypePM{\jud@Text\hfill\sel@bracket}{\@Picture}{\cex@mPw}{\cex@mPh}%
+    \cex@mTypePMSpace%
+  }{%
+    \parshape=1 \cex@mShIn \cex@mlinewd
+    \jud@Text\hfill\sel@bracket%
+  }%
+  \setboolean{cex@mNoOptIndent}{false}%
+  \par
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+%
+%\section{答案和解析的写出}
+%  这一节考虑的是正确输出学生答案到答案文件,这样做的目的是:当为学生模式时,答案不再在题目中显示,而是转为输出到\cs{jobname}.ans 文件中,并且在书籍的后面适当位置可以用\cs{input} 命令引入.从而达到显示答案的目的.
+%  
+%  但是,在显示答案的时候,要注意,那些章节也必须一同输出到答案中,形成对应名称的章节答案.经过仔细分析,我修改了ctexbook.cls 中的相关命令追加了答案写出功能.
+%  
+%  此写出命令是在完成基本题型后,最后添加的.以保证程序的完美测试.
+% 
+%  在20180425 的测试中,发现,如果全部引用ctexbook 中关于\cs{@chapter} 的定义,则在一些英文文档中则会因为ctexbook 中的一些定义在英文标准文类中没有定义而报错.但是如果使用英文定义,则在ctexbook类下写作习题时,则格式上又要做过多的调整.
+%  
+% 本来在一些相同名称的程序不同宏包中有不同定义时,而仅仅为了添加一些功能,可以借助\cs{let} 来实现.但是发现对\cs{@chapter} 使用这个方法时可以较好的解决问题,在ctexbook和book文类都可以正常工作.但是对于小节的生成程序\cs{@sect}使用此法时会严重错误.什么原因,我暂时不清楚,可能是因为它里面对于一些控制级别的计数器需要一定的测试.为了达到兼容的目的,这时只好牺牲一部分代码空间,从标准book中和ctecbook中分别取它们的原始代码,通过探测某特定的ctexbook中定义的命令来分别实现写出操作.
+%
+%\changes{v1.4.b}{2018/05/06}{在答案中，章标题后加入“答案”二字}
+% \begin{macro}{\@chapter}
+% 此命令,原本参考了source2e和ctexbook.cls 中的定义,原版引用ctexbook.cls 中针对中文的定义.只是引入写出功能而己,对原代码不做任何修改.但是为了兼容book.cls 所以通过测试使用\cs{let}可以实现,同时可以精简代码,这里对章采用了这个方法.
+%
+%  2018年5月6日，在编写习题册文档类时，考虑到答案要有清析的结构，能表明是答案同时还不乱.只在章中加入``答案''二字,节以下原文输出,不做修改.
+%  
+%    \begin{macrocode}
+\@ifundefined{@chapter}{\relax}{%
+  \let\@cex@mchapter=\@chapter%
+  \let\@cex@mchaptered=\@cex@mchapter%
+%    \end{macrocode}
+%由于book和ctexbook中对|\@chapter| 的定义不同,所以为了兼容则使用|\let| 来解决问题.
+%    \begin{macrocode}
+  \def\@chapter[#1]#2{%
+    \@cex@mchaptered[#1]{#2}%
+    \write\@ans{\csname chapter\endcsname{#2答案}}%
+%    \end{macrocode}
+%上面一组命令是在学生模式时写出章号和章标题,而上面的部分没有做任何修改.
+%    \begin{macrocode}
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+% 
+% \begin{macro}{\@sect}
+% 此为8参量程序,其用来生成各级节号,为了实现,节的输出,修改这一命令则所有的节,次节,次次节都可以正常写出到答案文件中.经测试,section,subsection,subsubsection都是坚强命令,而chapter是非坚强命令,所以用makerobust 宏包对其处理.
+%
+%  由于这个命令在中文和英文标准文档中都有定义,因此不需作定义检测.但是\cs{chapter} 对于 article ,report等文档类就没有定义,所以在对它的处理上就追加的一步定义探测
+%
+%    \begin{macrocode}
+\@ifundefined{CTEX@makeanchor}{%
+%    \end{macrocode}
+%通过探测 |\CTEX@makeanchor| 来判断是否是 ctexbook ,如果不是则进入标准的book中的
+%定义由于在标准的book文类中,各小节是不坚强的,所以写出时会展开,但是经测试在 
+%  ctexbook下直接使用就没有问题,所以此时要先转为坚强命令,以正确写出.
+%    \begin{macrocode}
+  \def\@sect#1#2#3#4#5#6[#7]#8{%
+    \write\@ans{\csname #1\endcsname{#8}}%
+%    \end{macrocode}
+%仅仅追加了一行写出命令
+%    \begin{macrocode}
+    \ifnum #2>\c@secnumdepth
+    \let\@svsec\@empty
+    \else
+    \refstepcounter{#1}%
+    \protected@edef\@svsec{\@seccntformat{#1}\relax}%
+    \fi
+    \@tempskipa #5\relax
+    \ifdim \@tempskipa>\z@
+    \begingroup
+    #6{%
+      \@hangfrom{\hskip #3\relax\@svsec}%
+    \interlinepenalty \@M #8\@@par}%
+  \endgroup
+  \csname #1mark\endcsname{#7}%
+  \addcontentsline{toc}{#1}{%
+    \ifnum #2>\c@secnumdepth \else
+    \protect\numberline{\csname the#1\endcsname}%
+    \fi
+  #7}%
+  \else
+  \def\@svsechd{%
+    #6{\hskip #3\relax
+    \@svsec #8}%
+    \csname #1mark\endcsname{#7}%
+    \addcontentsline{toc}{#1}{%
+      \ifnum #2>\c@secnumdepth \else
+      \protect\numberline{\csname the#1\endcsname}%
+      \fi
+    #7}}%
+    \fi
+    \@xsect{#5}}
+  }{%
+%    \end{macrocode}
+%下面是ctexbook中关于|\@sect|的定义,所以当|\CTEX@makeanchor| 存在时用与ctexbook 中完全相同的定义.
+%    \begin{macrocode}
+    \def\@sect#1#2#3#4#5#6[#7]#8{%
+      \write\@ans{\csname #1\endcsname{#8}}%
+%    \end{macrocode}
+%仅仅追加了一行写出操作,其它完全与ctexbook中的定义相同.
+%    \begin{macrocode}
+      \ifnum #2>\c@secnumdepth
+      \CTEX@ifnamefalse
+      \CTEX@makeanchor@sect{#1*}%
+      \let\@svsec\@empty
+      \else
+      \ifodd \csname CTEX@#1@numbering\endcsname
+      \CTEX@ifnametrue
+      \refstepcounter{#1}%
+      \protected@edef\@svsec{\@seccntformat{#1}\relax}%
+      \else
+      \CTEX@ifnamefalse
+      \CTEX@makeanchor{#1*}%
+      \let\@svsec\@empty
+      \fi
+      \fi
+      \unless \ifodd \CTEX@runin
+      \begingroup
+      #6{%
+	\CTEX@hangfrom{\hskip\glueexpr #3\relax\@svsec}%
+	\interlinepenalty \@M
+	\csname CTEX@#1@titleformat\endcsname{#8}%
+      \csname CTEX@#1@aftertitle\endcsname}%
+    \endgroup
+    \csname #1mark\endcsname{#7}%
+    \CTEX@addtocline{#1}{#7}%
+    \else
+    \def\@svsechd{%
+      #6{\hskip\glueexpr #3\relax
+	\@svsec
+	\csname CTEX@#1@titleformat\endcsname{#8}%
+      \csname CTEX@#1@aftertitle\endcsname}%
+      \csname #1mark\endcsname{#7}%
+      \CTEX@addtocline{#1}{#7}}%
+      \fi
+      \@xsect{#5}}
+    }%
+%    \end{macrocode}
+% \end{macro}
+%  
+%  \section{答案的设置}
+%  曾经直接写成的cexam.sty文件中，答案和解析是从题目中直接获取的，但是考虑到问题的简化，所以决定题干单独排版，将答案和解析独立出来。默认答案中不含图片，所以相对比较简单。
+%  
+%  \DescribeMacro\cex@mAnsTag
+%  这是答案的标签，默认黑体字，与文字相距5pt，如果要修改则更改此命令即可。
+%    \begin{macrocode}
+\newcommand{\cex@mAnsTag}{{\heiti \makebox[0pt][r]{答}案}\hspace{5pt}}%
+%    \end{macrocode}
+%
+%\changes{v1.2.m}{2018/04/22}{联合题型测试中修复student模式的bug}
+%\changes{v1.2.n}{2018/04/22}{将答案和解析标志加入对应命令中}
+% \begin{macro}{\cex@mAnswer}
+% 此命令用来加入到\cs{everypar}中，所以要以\cs{par}结尾。如果是学生模式则将段落隐藏，教师模式则正常显示。
+%\changes{v1.2.s}{2018/04/25}{加入写出答案格式控制命令,升级了\cs{cex@mAnswer}}
+%\changes{v1.5.d}{2018/05/25}{优化了写出答案的格式,分三步写出}
+%    \begin{macrocode}
+\def \cex@mAnswerDone #1\END{%
+  \resetcex@mNumber%
+  \ifthenelse{\boolean{student}}{%
+    \write\@ans{\Answer}%
+    \write\@ans{#1}%
+    \write\@ans{\par}%
+    \ifthenelse{\boolean{cex@mEnv}}{%
+      \vspace{-1.1\baselineskip}\par%
+    }{%
+      \relax%
+    }%
+  }{%
+    \ifthenelse{\boolean{StudentAns}}{%
+      \setcex@mNumber%
+      \parshape=1 \cex@mShIn \cex@mlinewd
+      \cex@mnum{\heiti 答案}\hspace{5pt}#1\par%
+    }{%
+      \parshape=1 \cex@mShIn \cex@mlinewd
+      \cex@mAnsTag#1\par%
+    }%
+  }%
+}%
+%    \end{macrocode}
+%下这 条命令是为了加入每种情况下答案都能正确的执行以零缩进排版,这样题目中可以缩进,但不影响答案.
+%    \begin{macrocode}
+\def\cex@mAnswer #1\par{%
+  {\parindent=0pt%
+    \cex@mAnswerDone #1\END%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%\changes{v1.2.q}{2018/04/22}{加入答案和解析单独命令}
+% \begin{macro}{\Answer}
+% 此为不使用环境时的答案输出程序
+%    \begin{macrocode}
+\def\Answer #1\par{%
+  \ifthenelse{\boolean{cex@mBlaJud}}{%
+    \ifthenelse{\isin{*}{#1}}{%
+      \cex@mAnswer\bl@nkAns\par%
+    }{%
+      \cex@mAnswer#1\par%
+    }%
+    \setboolean{cex@mBlaJud}{false}%
+  }{%
+    \cex@mAnswer#1\par%
+  }%
+}%
+\let\Daan=\Answer
+%    \end{macrocode}
+% \end{macro}
+% 
+%\section{解析的设置}
+%
+% \subsection{解析留白}
+% 当解析工作于计算题时,如果遇到学生模式,则它的任务应该是留出一定的答题空间.所以这一部分空间的具体实现需要仔细斟酌一下.考虑了一些相关的物理资料的排版.定出了如下规则
+%  
+%\changes{v1.3.b}{2018/04/28}{增加计算题空间分配模块}
+% \begin{macro}{\cex@mCal@Space}
+%  当行宽小于$100mm$ 时,每个计算题留一栏空白.这主要是因为此时较窄,空白要够用.排题要美观,当小于这个值时,一般是A4 双栏排版了.
+%  
+%  如果不是A4双栏,则如果积累的文字高度小于 $0.4$ 倍的总高度,则提供 $0.4$ 倍的总高的空白作为答题空间.如果积累文字高度大于 $0.4$ 倍的总高,但是小于$0.7$ 的总高,则直接分页.余下的空间都给这个大题.如果积累文字高度大于$0.7$ 的总高,则重启一页,而页面上留 $0.3$ 的总高. 由于在使用命令\cs{newpage} 的过程中会导致 \cs{everypar} 重新置零,所以分完空间后,要重新将计算题的命令\cs{c@levery} 放入 \cs{everypar} 中.如是不是计算题,则不留空白.
+%
+%    \begin{macrocode}
+\newcommand{\cex@mCal@Space}{%
+  \ifthenelse{\boolean{IsCalculate}}{%
+    \ifthenelse{\dimtest{\linewidth}{<}{100mm}}{%
+      \newpage%
+      \everypar={\c@levery}%
+    }{%
+      \ifthenelse{\dimtest{\pagetotal}{<=}{.4\pagegoal}}{%
+	\vspace{.4\pagegoal}%
+      }{%
+	\ifthenelse{\dimtest{\pagetotal}{<=}{.7\pagegoal}}{%
+	  \newpage%
+	}{%
+	  \newpage%
+	  \vspace{.3\pagegoal}%
+	}%
+	\everypar={\c@levery}%
+      }%
+    }%
+  }{%
+    \relax%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+%  \subsection{解析模块实现}
+%\changes{v1.2.f}{2018/04/19}{增加解析程序，解析支持图片}
+%  \DescribeMacro\cex@mExpTag
+%  此命令默认定义了解析的标签，为黑体，只左缩进一个字符，留5pt的空白。格式与答案标签一样。
+%    \begin{macrocode}
+\newcommand{\cex@mExpTag}{{\heiti \makebox[0pt][r]{解}析}\hspace{5pt}}%
+%    \end{macrocode}
+%
+%  
+%\changes{v1.2.k}{2018/04/21}{去除了解析中的图片付值命令}
+%\changes{v1.2.m}{2018/04/22}{去除了解析中student模式bug}
+%\changes{v1.2.s}{2018/04/25}{升级\cs{cexam@Explain}支持学生模式,单独解析的格式排版}
+%\changes{v1.2.t}{2018/04/25}{修复学生答案模式时的缩进bug}
+%\changes{v1.3.b}{2018/04/25}{加入空间分配模块到\cs{cex@mExplain}}
+% \begin{macro}{\cex@mExplain}
+% 此为解析的输出程序，支持一张图片的排版。默认要使用到\cs{everypar}中，所以结束符号为\cs{par}。
+%  
+%  在\cs{everypar}中应当加入\cs{cex@mExplain}\cs{cex@mExpTag},此处暂时不处理，等完善后再加入。
+%\changes{v1.5.d}{2018/05/25}{优化了解析写出格式,分三步写出}
+%    \begin{macrocode}
+\def \cex@mExplainDone #1\END{%
+    \ifthenelse{\boolean{StudentAns}}{%
+      \addtocounter{cex@mNumber}{-1}%
+      \setcex@mNumber%
+    }{%
+      \resetcex@mNumber%
+    }%
+  \ifthenelse{\boolean{student}}{%
+    \write\@ans{\Explain}%
+    \cex@mwrite #1\END%
+    \write\@ans{\par}%
+    \ifthenelse{\boolean{cex@mEnv}}{%
+      \vspace{-1.1\baselineskip}\par%
+    }{%
+      \relax%
+    }%
+    \@ifundefined{beamer@tempdim}{%
+      \cex@mCal@Space%
+    }{%
+      \relax%
+    }%
+
+%    \end{macrocode}
+%上述命令,如果工作于beamer 模式,则不加入空间分配,其它排版试题的情况分配空白.
+%    \begin{macrocode}
+  }{%
+    \ifthenelse{\isin{<:}{#1}}{%
+      \setboolean{cex@mNoOptIndent}{true}%
+      \stepcounter{figure}%
+      \cex@mPicSepDone \cex@mExpTag#1\END%
+      \setcounter{math@equation}{\the\c@equation}%
+      \settototalheight{\cex@mBh}{%
+	\parbox{\cex@mlinewd-\cex@mPw}{\@Text}%
+      }%
+      \setcounter{equation}{\themath@equation}%
+      \cex@mTypePM{\@Text}{\@Picture}{\cex@mPw}{\cex@mPh}%
+      \cex@mTypePMSpace%
+      \setboolean{cex@mNoOptIndent}{false}%
+    }{%
+      \parshape=1 \cex@mShIn \cex@mlinewd
+      \cex@mExpTag#1%
+    }%
+    \par
+  }%
+}%
+%    \end{macrocode}
+%2018年5月7日早上做出如上修改,目的在于能够清析的加入每段的解析缩进为零而不受正文缩进的影响.同时在StudentAns 中开始没有增加付值命令,导致测试出现了bug,于今天早上排除.
+%
+%  2018年6月10日零晨修改为只使用 \cs{cex@mExpTag} 的形式,已经将 \cs{cex@mExpTag} 在 \newline
+  \cs{AtEndDocument} 中做了重新定义,这样的解析更加合理.
+%  
+%    \begin{macrocode}
+\def\cex@mExplain #1\par{%
+  {\parindent=0pt%
+    \cex@mExplainDone #1\END%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\Explain}
+% 解析的单独命令
+%    \begin{macrocode}
+\let\Explain=\cex@mExplain
+\let\Jiexi=\Explain
+%    \end{macrocode}
+% \end{macro}
+%
+%\changes{v1.5.e}{2018/05/31}{加入解析子模块}
+% \subsection{子解析模块}
+% 在一边编写高中物理资料,一边测试本宏包的过程中,发现了一个问题.如果编写的解析是一个计算题,同时解析要缩写多步,每一步有的时候要涉及图片的输入.按原解析输入方案,则一个解析只能输入一张图片,显然处理能力偏弱.同时原始输入方案,每一小问要用\cs{newline} 来隔开,这会导致一个多问的计算题的解析过长,这会导致解析的源码可读性变差.同时修改和维护也不是很方便.经过慎重考虑,决定加入子解析命令,以处理多问计算题的解析.
+%
+%  在这一模块中,无论是答案还是正文,不需要考虑标号的缩进问题,不需要考虑标号的显示,所以相对而言较简单.于2018年5月31日加入此项.
+%
+%  使用时,无论在哪个题型环境中,以ee开头,则就可以进入到子模块编写模式了.
+%  
+% \begin{macro}{\cex@mSubExplainDone}
+% 此命令用来输入子解析模块,因为一个题目中有可能有多问,为了增加解析源码可读性,及可维护性,这里增加解析子模块.
+%
+%    \begin{macrocode}
+\def \cex@mSubExplainDone #1\END{%
+  \resetcex@mNumber%
+  \ifthenelse{\boolean{student}}{%
+    \write\@ans{\protect\SubExplain}%
+    \cex@mwrite #1\END%
+    \write\@ans{\par}%
+    \ifthenelse{\boolean{cex@mEnv}}{%
+      \vspace{-1.1\baselineskip}\par%
+    }{%
+      \relax%
+    }%
+    \@ifundefined{beamer@tempdim}{%
+      \cex@mCal@Space%
+    }{%
+      \relax%
+    }%
+  }{%
+    \ifthenelse{\isin{<:}{#1}}{%
+      \setboolean{cex@mNoOptIndent}{true}%
+      \stepcounter{figure}%
+      \cex@mPicSepDone #1\END%
+      \setcounter{math@equation}{\the\c@equation}%
+      \settototalheight{\cex@mBh}{%
+	\parbox{\cex@mlinewd-\cex@mPw}{\@Text}%
+      }%
+      \setcounter{equation}{\themath@equation}%
+      \cex@mTypePM{\@Text}{\@Picture}{\cex@mPw}{\cex@mPh}%
+      \ifthenelse{\dimtest{\cex@mBh}{>}{\cex@mPh}}{%
+	\relax%
+      }{%
+	\addtolength{\cex@mPh}{.5\baselineskip}%
+	\addtolength{\cex@mPh}{-\cex@mBh}%
+	\vspace{\cex@mPh}%
+      }%
+      \setboolean{cex@mNoOptIndent}{false}%
+    }{%
+      \parshape=1 \cex@mShIn \cex@mlinewd
+      #1
+    }%
+    \par
+  }%
+}%
+\def\cex@mSubExplain #1\par{%
+  {\parindent=0pt%
+    \cex@mSubExplainDone #1\END%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+% 加入子解析模块的单独命令.
+%    \begin{macrocode}
+\let\SubExplain=\cex@mSubExplain
+\let\SubJiexi=\SubExplain
+%    \end{macrocode}
+%  
+%  \subsection{答案解析文件}
+% 答案解析文件是为了配合在学生模式时答案要在试卷或者书籍的后面单独显示,而在前面没显示.所以在这里要做的是,用\cs{write}在学生模式时,将前面章节中的答案写出到\cs{jobname}.ans文件中,在整个文件后面再通过\cs{input}命令,将答案文件单独引入.
+%
+%  在答案中只要保证将章标号置零,则其它的标号也会自动置零,所以只置零这一项就够了
+%  .
+% 在学生模式下,但是演示文稿中却不需要在文档末输出答案,所以这里加入演示文稿识别命令. 
+%  
+% 2018年5月5日,加入一条命令\cs{theHchapter}用来确保生成学生模式答案时hyperref宏包能正确识别答案的链接.此方法分析了一个下午,但是最后却以一条命令搞定,且相当可靠.
+%  
+%\changes{v1.4.b}{2018/05/05}{加入超链接支持}
+%    \begin{macrocode}
+\AtEndDocument{%
+  \ifthenelse{\boolean{student}}{%
+    \@ifundefined{beamer@tempdim}{%
+      \cleardoublepage%
+      \def\cex@mExpTag{{\heiti 解析}\hspace{5pt}}%
+      \def\theHchapter{a\arabic{chapter}}%
+      \setcounter{chapter}{0}%
+      \setcounter{cex@mNumber}{0}%
+      \immediate\closeout\@ans%
+      \setboolean{student}{false}
+      \setboolean{StudentAns}{true}
+      \IfFileExists{\jobname.ans}{\input{\jobname.ans}}{\relax}%
+    }{}%
+  }{%
+    \relax%
+  }%
+}%
+%    \end{macrocode}%
+%  
+%  \section{各题型的格式化}
+%
+%  \subsection{答案和解析的输入格式}
+%  
+% 为了引入各题型的编写环境,则考虑了在一个环境中答案和解析的输入问题.一个题型应当以题号加``.''再加内容来定义.同时如果题号输入小写字母``a'',则表示此段为答案,如果题号输入``e'' 则代表此段输入的是解析.a是answer,e是explain.如果没有特定的字母在题号中,则选择对应的题型输入.
+%  
+% 
+%\changes{v1.2.o}{2018/04/22}{增强自动生成填空和解析能力}
+%\changes{v1.2.p}{2018/04/25}{去除学生答案模式带星号时的答案写出bug}
+%\changes{v1.3.i}{2018/05/03}{每个题目在正文中都缩进为0pt,但是不影响其它部分的缩进}
+% 当在beamer中使用时,不能正确显示排版出来的题,因为它的中文断行不知道为什么会出现问题.所以在这里需要做出调整.
+%  
+% \begin{macro}{\cex@mevery@box}
+% \cs{cex@mevery}\marg{题号}\marg{待输入命令}\marg{文本}
+%
+% 此命令用来输入不同题型,放在\cs{every}里面.
+%\changes{v1.5.e}{2018/05/31}{加入识别解析子模块功能}
+%    \begin{macrocode}
+\newcommand{\cex@mevery@box}[3]{%
+  \ifthenelse{\isin{a}{#1}}{%
+    \ifthenelse{\isin{*}{#3}}{%
+      \expandafter\cex@mAnswer\bl@nkAns\par%
+    }{%
+      \cex@mAnswer#3\par%
+    }%
+  }{%
+    \ifthenelse{\isin{ee}{#1}}{%
+	\cex@mSubExplain#3\par%
+    }{%
+      \ifthenelse{\isin{e}{#1}}{%
+	\cex@mExplain#3\par%
+      }{%
+	#2#3\par%
+      }%
+    }%
+  }%
+}%
+\newcommand{\cex@mevery}[3]{%
+  \@ifundefined{beamer@tempdim}{%
+    {\parindent=0pt%
+      \cex@mevery@box{#1}{#2}{#3}%
+    }%
+  }{%
+%    \end{macrocode}
+%在beamer中显示各排版题型时,将它们放入段落盒子中,盒子宽度等于行宽.一般每帧有一个题目需要展示,所以这够用了.同时也有可能输出答案,所以加入|\par|,以便能够正确换行分段.
+%    \begin{macrocode}
+    \parbox{\linewidth}{\cex@mevery@box{#1}{#2}{#3}}\par
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+%\subsection{选择题的设置}
+%  这时处理问题,考虑到有的人英语不是很好,则以汉语拼音和英语来设计等效命令.
+%  
+%  \DescribeMacro\Selection\DescribeMacro\Xuanze
+%  考虑到不是有的人习惯用汉语拼音,所以提供了这样的二条命令.由于为了防止与其它宏包的冲突,这里采用大写第一个字母的方式定义单独命令.
+%  
+%    \begin{macrocode}
+\def\sel@every#1.#2\par{%
+  \setboolean{IsCalculate}{false}%
+%    \end{macrocode}
+%上述布尔值告知程序,这不是计算题,所以控制计算题,不留空白.
+%    \begin{macrocode}
+  \setboolean{cex@mBlaJud}{true}%
+%    \end{macrocode}
+%上述布尔值告知选择题也是可以自动产生答案的
+%    \begin{macrocode}
+  \cex@mevery{#1}{\sel@Type}{#2}%
+}%
+\let\Selection=\sel@every
+\let\Xuanze=\Selection
+%    \end{macrocode}
+%  
+%  下面定义选择题环境,为了大批量的处理选择题型.同样提供汉语拼音和英语等效环境.
+%\changes{v1.2.o}{2018/04/22}{加入环境独立布尔值}
+% \begin{macro}{selection}
+% 以英语定义的环境
+%    \begin{macrocode}
+\newenvironment{selection}{%
+  \par\setboolean{cex@mEnv}{true}%
+  \parindent=0pt%
+  \everypar={\sel@every}%
+}{%
+  \setboolean{cex@mEnv}{false}%
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+%  
+%  
+% \begin{macro}{xuanze}
+% 以汉语定义的环境
+%    \begin{macrocode}
+\newenvironment{xuanze}{%
+  \par\setboolean{cex@mEnv}{true}%
+  \parindent=0pt%
+  \everypar={\sel@every}%
+}{%
+  \setboolean{cex@mEnv}{false}%
+}%
+%    \end{macrocode}
+% \end{macro}
+% \subsection{填空题的设置}
+% 和选择题一样,定义英语和汉语二条命令
+%  
+%  \DescribeMacro\Blank\DescribeMacro\Tiankong
+% 这两条命令,也是为了兼顾进入\cs{everypar},同时也和选择一样的格式.
+%    \begin{macrocode}
+\def\bla@every#1.#2\par{%
+  \setboolean{IsCalculate}{false}%
+  \cex@mevery{#1}{\bla@Type}{#2}%
+}%
+\def\Blank #1.#2\par{%
+  \setboolean{cex@mBlaJud}{true}%
+  \cex@mevery{#1}{\bla@Type}{#2}%
+}%
+\let\Tiankong=\Blank
+%    \end{macrocode}
+%
+%  定义英语和汉语的填空题输入环境
+%
+% \begin{macro}{blank}
+% 英语填空输入环境
+%    \begin{macrocode}
+\newenvironment{blank}{%
+  \par\setboolean{cex@mEnv}{true}%
+  \parindent=0pt%
+  \everypar={\bla@every}%
+}{%
+  \setboolean{cex@mEnv}{false}%
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+%  
+% \begin{macro}{tiankong}
+% 汉语填空题输入环境
+%    \begin{macrocode}
+\newenvironment{tiankong}{%
+  \par\setboolean{cex@mEnv}{true}%
+  \parindent=0pt%
+  \everypar={\bla@every}%
+}{%
+  \setboolean{cex@mEnv}{false}%
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+% \subsection{计算题的设置}
+% 
+%  \DescribeMacro\Calculate\DescribeMacro\Jisuan
+% 计算题也定义英语和汉语拼音两条命令,以大写英文字母开头.
+%    \begin{macrocode}
+\def\c@levery#1.#2\par{%
+  \setboolean{IsCalculate}{true}%
+%    \end{macrocode}
+%此布尔值告知计算题,需要留空白.
+%    \begin{macrocode}
+  \cex@mevery{#1}{\c@lType}{#2}%
+}%
+\let\Calculate=\c@levery
+\let\Jisuan=\Calculate
+%    \end{macrocode}
+%  
+% 
+% \begin{macro}{calculate}
+% 英语计算题输入环境
+%    \begin{macrocode}
+\newenvironment{calculate}{%
+  \par\setboolean{cex@mEnv}{true}%
+  \parindent=0pt%
+  \everypar={\c@levery}%
+}{%
+  \setboolean{cex@mEnv}{false}%
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+%  
+% \begin{macro}{jisuan}
+% 汉语计算题输入环境
+%    \begin{macrocode}
+\newenvironment{jisuan}{%
+  \par\setboolean{cex@mEnv}{true}%
+  \parindent=0pt%
+  \everypar={\c@levery}%
+}{%
+  \setboolean{cex@mEnv}{false}%
+}%
+%    \end{macrocode}
+% \end{macro}
+%\subsection{判断题设置}
+%  
+%  
+%\DescribeMacro\Judge\DescribeMacro\Panduan
+%此处对于判断题也提供中英文两种输入方法,以大写字母开头.
+% \begin{macro}{\jud@every}
+% 计算题的进入\cs{every}时的排版命令及汉语拼音和英语命令同时可用.
+% 
+%    \begin{macrocode}
+\def\jud@every #1.#2\par{%
+  \setboolean{IsCalculate}{false}%
+  \cex@mevery{#1}{\jud@Type}{#2}%
+}%
+\def\Judge#1.#2\par{%
+  \setboolean{cex@mBlaJud}{true}%
+  \cex@mevery{#1}{\jud@Type}{#2}%
+}%
+\let\Panduan=\Judge
+%    \end{macrocode}
+% \end{macro}
+%  
+% 
+% \begin{macro}{judge}
+% 英文判断题环境
+%    \begin{macrocode}
+\newenvironment{judge}{%
+  \par\setboolean{cex@mEnv}{true}%
+  \parindent=0pt%
+  \everypar={\jud@every}%
+}{%
+  \setboolean{cex@mEnv}{false}%
+}%
+%    \end{macrocode}
+% \end{macro}
+%  
+%  
+% \begin{macro}{panduan}
+% 汉语拼音判断题环境
+%    \begin{macrocode}
+\newenvironment{panduan}{%
+  \par\setboolean{cex@mEnv}{true}%
+  \parindent=0pt%
+  \everypar={\jud@every}%
+}{%
+  \setboolean{cex@mEnv}{false}%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%  \changes{v1.2.r}{2018/04/24}{今天我的生日,加入例题环境}
+%\section{例题环境}
+% 
+% 这一节加入了例题环境,这一个环境考虑了挺长时间.由于例题一般不会太多,同时也有可能一次输入几个例题,而且几个例题也有可能是不同的题型.所以采用了下面的策略:
+%  
+%  在题号前输入具体的识别码,选择:s,填空:b,判断:j,计算:c.在例题环境中的题号中输入这几个识别码,则会进入相应的排版程序.同时,在例题开始时,输入例题开始的题号,在输入结束时输入例题区间(即从第几题到第几题),同时为了识别开始和结束,则用双线来表示,双线:先粗线再细线为开始,先细线再粗线为结束.
+% 
+% \begin{macro}{\Exam@every}
+% 此命令用来识别题型,选择进入,分别以s,b,j,c表示选择,填空,判断,计算题型.如果没有
+%  则正常输出所列文字.
+%    \begin{macrocode}
+\def\Exam@every #1.#2\par{%
+  \ifthenelse{\isin{s}{#1}}{%
+    \Selection #1.#2\par%
+  }{%
+    \ifthenelse{\isin{b}{#1}}{%
+      \Blank #1.#2\par%
+    }{%
+      \ifthenelse{\isin{j}{#1}}{%
+	\Judge #1.#2\par%
+      }{%
+	\ifthenelse{\isin{c}{#1}}{%
+	  \Calculate #1.#2\par%
+	}{%
+	  \cex@mevery{#1}{}{#2}%
+	}%
+      }%
+    }%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+% 
+%\changes{v1.3.f}{2018/05/02}{增加如果一道例题,则不统计例题的个数,更加合理}
+%\changes{v1.3.h}{2018/05/03}{增加例题环境中前后空白5pt,段落缩进为0pt}
+% \begin{macro}{example}
+% 此为例题环境,其中考虑到实用且不花哨,所以不设置例题格式修改命令.如果想要更改格
+%  式,则需重新定义此环境即可.
+%    \begin{macrocode}
+\@ifundefined{beamer@tempdim}{%
+%    \end{macrocode}
+%加入此检测,为了确保在beamer 文档类时,不与beamer 中定义的例题环境冲突.由于在beamer中也不需要我设计的这个例题环境,所以在beaamer 中编写课件时不做定义.
+%    \begin{macrocode}
+  \newenvironment{example}{%
+    \parindent=0pt%
+    \vspace{5pt}%
+    \par%
+    \setboolean{cex@mEnv}{true}%
+    \setboolean{student}{false}%
+    \setcounter{cex@mExamS}{\thecex@mNumber}%
+    \stepcounter{cex@mExam}%
+    \setcounter{cex@mNumber}{\thecex@mExam}%
+    \addtocounter{cex@mNumber}{-1}%
+    \begin{tikzpicture}%
+      \draw (2pt,2pt) node [anchor=south west]{%
+	\heiti 例题\@arabic{\c@section}.\thecex@mExam%
+      };
+      \draw[very thick] (2pt,3pt)--(\linewidth,3pt);
+      \draw[very thin] (2pt,0)--(\linewidth,0);
+    \end{tikzpicture}%
+    \vspace{5pt}%
+    \par%
+    \everypar={\Exam@every}%
+  }{%
+    \setboolean{cex@mEnv}{false}%
+    \nopagebreak%
+    \everypar={}%
+    \vspace{5pt}%
+    \begin{tikzpicture}%
+      \draw[very thin] (2pt,0)--(\linewidth,0);
+      \draw[very thick] (2pt,-3pt)--(\linewidth,-3pt) ;
+      \ifthenelse{\cnttest{\thecex@mNumber}{>}{\thecex@mExam}}{%
+	\draw (\linewidth,0pt) node [anchor=south east]{%
+	  例题\@arabic{\c@section}.\thecex@mExam---%
+	  \@arabic{\c@section}.\thecex@mNumber%
+	};
+      }{%
+	\relax%
+      }%
+    \end{tikzpicture}%
+    \vspace{5pt}%
+    \setcounter{cex@mExam}{\thecex@mNumber}%
+    \setcounter{cex@mNumber}{\thecex@mExamS}%
+  }%
+}{}%
+%    \end{macrocode}
+% \end{macro}
+%
+%\changes{v1.5.d}{2018/05/25}{去除了一些转为坚强的命令}
+%  \section{转为坚强的命令}
+%考虑到有的命令是在这个宏包中定义的,则转成坚强的命令需要先定义好才行,所以在宏包的最后将一些命令转为坚强,以确保写出答案时命令能够正确写出.  
+%
+%\subsection{标准文档类的转换}
+%
+%在生成学生答案模式中,需要写出章节命令,则将标准文档类中的章、节、小节转为坚强.
+%
+%    \begin{macrocode}
+\MakeRobustCommand{\section}%
+\MakeRobustCommand{\subsection}%
+\MakeRobustCommand{\subsubsection}%
+%    \end{macrocode}
+%
+%下述之所以加入一个定义探测,原因在于有的文类没有对章的定义,所以先探测一下.如果没有则可以不用转为坚强,因为没有定义就转为坚强会出现错误.
+%
+%    \begin{macrocode}
+\@ifundefined{chapter}{}{%
+  \MakeRobustCommand{\chapter}%
+}%
+%    \end{macrocode}
+%
+%\subsection{cexam.sty的转换}
+%下面两个命令是本宏包定义的需要写出的命令,下面的这些命令是一些常用数学命令,
+%写出时要保持命令的正确写出.
+%
+%    \begin{macrocode}
+\MakeRobustCommand{\Answer}%
+\MakeRobustCommand{\Explain}%
+%    \end{macrocode}
+%
+%  \subsection{graphicx的转换}
+%
+%上述命令,由于在beamer 中对坚强的\cs{includegraphics} 会导致错误,所以当用在beamer 中时,不做处理,其它情况转成坚强.
+%
+%    \begin{macrocode}
+\@ifundefined{beamer@tempdim}{%
+  \MakeRobustCommand{\includegraphics}%
+}{%
+  \relax%
+}%
+%    \end{macrocode}
+%
+%\subsection{基本数学命令转换}
+%
+%    \begin{macrocode}
+\MakeRobustCommand{\quad}%
+\MakeRobustCommand{\sin}%
+\MakeRobustCommand{\cos}%
+\MakeRobustCommand{\tan}%
+\MakeRobustCommand{\cot}%
+\MakeRobustCommand{\sec}%
+\MakeRobustCommand{\csc}%
+\MakeRobustCommand{\arg}%
+\MakeRobustCommand{\arcsin}%
+\MakeRobustCommand{\arccos}%
+\MakeRobustCommand{\arctan}%
+\MakeRobustCommand{\sinh}%
+\MakeRobustCommand{\cosh}%
+\MakeRobustCommand{\tanh}%
+\MakeRobustCommand{\coth}%
+\MakeRobustCommand{\log}%
+\MakeRobustCommand{\lg}%
+\MakeRobustCommand{\ln}%
+\MakeRobustCommand{\exp}%
+\MakeRobustCommand{\lim}%
+\MakeRobustCommand{\limsup}%
+\MakeRobustCommand{\liminf}%
+\MakeRobustCommand{\max}%
+\MakeRobustCommand{\min}%
+\MakeRobustCommand{\sup}%
+\MakeRobustCommand{\inf}%
+\MakeRobustCommand{\det}%
+\MakeRobustCommand{\sqrt}%
+\MakeRobustCommand{\circ}%
+%    \end{macrocode}
+%
+%  \subsection{amsmath的转换}
+%
+%下面的命令来自宏包amsmath,考虑到用的比较多,所以也放在这里转成坚强
+%
+%    \begin{macrocode}
+\MakeRobustCommand{\varliminf}%
+\MakeRobustCommand{\varinjlim}%
+\MakeRobustCommand{\varlimsup}%
+\MakeRobustCommand{\varprojlim}%
+\MakeRobustCommand{\cfrac}%
+%    \end{macrocode}
+%
+%\subsection{tikz的转换}
+%  
+%下面的命令是对tikz的支持,因为在学生模式中答案执行写出操作,要为了能够正确生成tikz答案解析,需要将基本绘图命令转为坚强.经过测试\cs{fill}是坚强的,不必处理,而\cs{foreach}中有可能有变量,但这不便处理,所以暂时不支持此答案的输出.同时由于在一般的试题中,不需要\cs{foreach} 所以不再设置.
+%
+% 单独绘图命令\cs{tikz} 是含参量的命令,所以不能重新定义,故用\cs{MakeRobustCommand}来转为坚强.但是在tikz环境命令中,一此绘制命令无参数,所以在直接定义为空,同时经过测试此方法可行.
+%  
+%\changes{v1.4.e}{2018/05/07}{修复学生答案模式中对tikz图片的支持bug}
+%    \begin{macrocode}
+\MakeRobustCommand{\tikz}%
+\DeclareRobustCommand{\draw}{}%
+\DeclareRobustCommand{\filldraw}{}%
+\DeclareRobustCommand{\clip}{}%
+\DeclareRobustCommand{\shade}{}%
+\DeclareRobustCommand{\shadedraw}{}%
+\DeclareRobustCommand{\coordinate}{}%
+\DeclareRobustCommand{\path}{}%
+\DeclareRobustCommand{\node}{}%
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%</package>
+%    \end{macrocode}
+%
+% \changes{v1.4.a}{2018/05/04}{初步加入一些纸张的设定} 
+% \changes{v1.4.a}{2018/05/04}{开始加入cexam文档类} 
+%  \section{cexam文档类}
+% 设置此文档类,主要为了编写高中物理习题册,对于具体格式作出一些设置.
+%  \subsection{文档类的选项声明}
+%  
+%    \begin{macrocode}
+%<*class>
+%    \end{macrocode}
+% 在文档类声明中,主要设置一些常用的纸张尺寸,以方便直接调用. 
+% \changes{v1.5.m}{2018/11/09}{修正b4paper和b4paperjis选项中的拼写错误,漏掉了一个``o''}
+%    \begin{macrocode}
+\DeclareOption{twocolumn}{\PassOptionsToClass{twocolumn}{ctexbook}}%
+\DeclareOption{onecolumn}{\PassOptionsToClass{onecolumn}{ctexbook}}%
+\DeclareOption{student}{\PassOptionsToPackage{student}{cexam}}%
+\DeclareOption{nowarning}{\PassOptionsToPackage{nowarning}{cexam}}%
+\DeclareOption{b4paper}{%
+  \geometry{paperwidth=250mm,paperheight=353mm}%
+}%
+\DeclareOption{b4paperjis}{%
+  \geometry{paperwidth=257mm,paperheight=364mm}%
+}%
+\DeclareOption{a4paper}{%
+  \geometry{%
+    paperwidth=210mm,
+    paperheight=297mm,
+    left=2.00cm, 
+    right=2.00cm, 
+    top=2.00cm, 
+    bottom=2.00cm	
+  }%
+}%
+\DeclareOption{exampaper}{%
+  \geometry{%
+    paperwidth=353mm,
+    paperheight=250mm,
+    left=3.00cm, 
+    right=3.00cm, 
+    top=2.00cm, 
+    bottom=2.00cm	
+  }%
+}%
+\DeclareOption{exampaperjis}{%
+  \geometry{%
+    paperwidth=364mm,
+    paperheight=257mm,
+    left=3.00cm, 
+    right=3.00cm, 
+    top=2.00cm, 
+    bottom=2.00cm	
+  }%
+}%
+\ProcessOptions%
+%    \end{macrocode}
+%\subsection{布尔值}
+% \begin{macro}{studentsub}
+%  为了达到第一部分只输出讲义和例题的目的,在第一部分中默认不开启学生模式.但是在第二部分编写练习册时,又要受控于学生模式.为此设计此布尔值.
+% 
+%    \begin{macrocode}
+\newboolean{studentsub}
+\AtBeginDocument{%
+  \closeout\@ans%
+  \ifthenelse{\boolean{student}}{%
+    \setboolean{studentsub}{true}%
+    \setboolean{student}{false}%
+  }{%
+    \relax%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%\changes{v1.4.c}{2018/05/06}{cexam.cls增加虚线栏线模式}
+%\subsection{虚线栏线间距}
+%
+% \begin{macro}{\columnsepruledash}
+% 这一小节修改了栏线,原来只支持实线,但是有的时候需要虚线.这考虑到不做过多的影响的原则,所以取用了source2e 中的原始定义,只对栏线作了修改.
+%    \begin{macrocode}
+\newlength{\columnsepruledash}%
+%    \end{macrocode}
+% \end{macro}
+% 下面对source2e中的原始代码修改.
+%    \begin{macrocode}
+\def\@outputdblcol{%
+  \if@firstcolumn
+    \global\@firstcolumnfalse
+    \global\setbox\@leftcolumn\copy\@outputbox
+    \splitmaxdepth\maxdimen
+    \vbadness\maxdimen
+     \setbox\@outputbox\vbox{\unvbox\@outputbox\unskip}%
+     \setbox\@outputbox\vsplit\@outputbox to\maxdimen
+    \toks@\expandafter{\topmark}%
+    \xdef\@firstcoltopmark{\the\toks@}%
+    \toks@\expandafter{\splitfirstmark}%
+    \xdef\@firstcolfirstmark{\the\toks@}%
+    \ifx\@firstcolfirstmark\@empty
+      \global\let\@setmarks\relax
+    \else
+      \gdef\@setmarks{%
+        \let\firstmark\@firstcolfirstmark
+        \let\topmark\@firstcoltopmark}%
+    \fi
+  \else
+    \global\@firstcolumntrue
+    \setbox\@outputbox\vbox{%
+     \hb@xt@\textwidth{%
+        \hb@xt@\columnwidth{\box\@leftcolumn \hss}%
+        \hfil
+%    \end{macrocode}
+%以下修改的代码
+%    \begin{macrocode}
+	\ifthenelse{\dimtest{\columnsepruledash}{>}{0pt}}{%
+	  {\normalcolor\rotatebox{90}{%
+	    \hdashrule{\pagegoal}{\columnseprule}{\columnsepruledash}%
+	  }}%
+	}{%
+	  {\normalcolor\vrule \@width\columnseprule}%
+	}%
+%    \end{macrocode}
+%以上修改的代码
+%    \begin{macrocode}
+        \hfil
+       \hb@xt@\columnwidth{\box\@outputbox \hss}}}%
+  \@combinedblfloats
+    \@setmarks
+    \@outputpage
+    \begingroup
+      \@dblfloatplacement
+      \@startdblcolumn
+      \@whilesw\if@fcolmade \fi{\@outputpage
+     \@startdblcolumn}%
+    \endgroup
+  \fi}%
+%    \end{macrocode}
+%
+%\changes{v1.4.f}{2018/05/08}{消除了ctexbook文档类,发出的标题警告}
+%\changes{v1.4.f}{2018/05/08}{消除了fontspec发出的各类警告}
+% \subsection{警告的消除}
+%  
+%  在测试过程中遇到一些警告问题,首先是标题格式的警告.因为在 ctexbook 中如果使用命令 \newline
+%  \cs{CTEXsetup} 设置的标题格式,一般的文章中会使用一套标题格式,所以在原始的 ctexbook  文类中就有了对该定义的检测.但是在这里设计的是习题册,前一部分是讲义,后一部分是习题册,所以同一篇文章中就有了二种格式需求.在中文的使用过程中,会调用 fontspec 宏包 选择 字体,但是系统会自动处理字体问题,有一些细节不必都去理会,所以我决定去掉此宏包的警告.
+% 
+% 这里遇到了一个问题,因为ctex和fontspec 都是用 \LaTeX3 编写的宏包,然而我目前对此格式还不熟悉,这让我很头疼,于是在2018年5月7日晚连夜读相关文章 expl3 和 interfaces 来学习理解,于零晨2点学习完毕.记录在此,以纪念自己的努力.
+%
+%在\LaTeX2e 中使用\LaTeX3 的格式代码,需要用命令\cs{ExplSyntaxOn} 和 \cs{ExplSyntaxOff} 来间隔开来.但之前需要调用宏包 expl3 和 xparse ,所以此次修改也包含了对这两个宏包的调用.
+% 
+% 下面的代码是去掉了\cs{CTEXsetup} 中发出的标题格式警告.
+%    \begin{macrocode}
+\ExplSyntaxOn
+\RenewDocumentCommand \CTEXsetup { +o > { \TrimSpaces } m }%
+{
+  \IfNoValueF {#1} { \keys_set:nn { ctex / #2 } {#1} }
+}
+%    \end{macrocode}
+% 下面这段代码是禁用fontspec宏包的字体警告,其它的不做处理.
+%    \begin{macrocode}
+\cs_set:Npn \__fontspec_warning:n   {}
+\cs_set:Npn \__fontspec_warning:nx #1#2 {}
+\cs_set:Npn \__fontspec_warning:nxx #1#2#3 {}
+\ExplSyntaxOff
+%    \end{macrocode}
+%  
+% \subsection{讲义设置}
+
+%  这一部分包括基础知识和例题的讲解,为符合中文资料的形式,将节号的格式改为只显示节号,而不再有章号.同时小节格式也改成只有一个小节号,用黑体中文显示.
+% 
+%  在正文讲义部分,所有出现的题目都是例题,为了确保输出的简约,则将每个题目的代号修改为一个黑体的``例''再加计数器开头.如果出现练习册,则再重置回无例题模式.
+%  
+%    \begin{macrocode}
+\def\thesection{\@arabic{\c@section}}%
+\def\thesubsection{\@arabic{\c@subsection}}%
+\CTEXsetup[name={第~,~节}]{section}%
+\CTEXsetup[%
+  name={,、~\hspace{-\ccwd}},number={\chinese{subsection}},format={\heiti}%
+]{subsection}
+\let\cex@mnumold=\cex@mnum
+\def\cex@mnum{\makebox[0pt][r]{\heiti 例} \thecex@mNumber.}%
+%    \end{macrocode}
+%
+%\changes{v1.5.e}{2018/05/31}{修复讲义缩进bug}
+% 在2018年5月31日下午排版备课本时发现此bug,并及时消除.在排版试题时,缩进需根据题号设置,如果超过10,则对应的题目缩进度要增加一个适当的值.但是在编写计义的过程中,出现的都是例题,则只需要缩进一个单位就够用了,所认这里应当对缩进做出修改.如下
+%
+%    \begin{macrocode}
+\renewcommand{\setcex@mNumber}{%
+  \stepcounter{cex@mNumber}%
+  \resetcex@mNumber%
+}%
+%    \end{macrocode}
+
+% \subsection{练习册设置}
+
+% \begin{macro}{\Exercises}
+%  在习题册的后一部分一般附有具体的习题，这时应当修改节和小节的格式到训练格式。
+%  且以一个命令开始.
+%  在练习部分重新开启一页,将章和题目计数器置零,确保与前面对应的讲义一致.同时将hyperref宏包要求的识别符,追加一个字母 b ,以区别于前面的对应章节.这点在测试日志中有详细说明,可以参考.
+% 
+% 2018年5月31日,在编写备课本的时候发现前一部分讲义中对段首缩进的bug,修复后它将会影响到习题册,所以在习题册开始命令\cs{Exercises} 中要恢复对\cs{setcex@mNumber}的原始设置.
+%
+%    \begin{macrocode}
+\def\Exercises{%
+  \newpage%
+  \setcounter{chapter}{0}%
+  \setcounter{cex@mNumber}{0}%
+  \let\cex@mnum=\cex@mnumold%
+%    \end{macrocode}
+%下面这行对\cs{theHchapter}追加了一个字母b,用来识别答案中的超链接,正确生成目录.
+%    \begin{macrocode}
+  \def\theHchapter{b\arabic{chapter}}%
+%    \end{macrocode}
+%    \begin{macrocode}
+  \ifthenelse{\boolean{studentsub}}{%
+    \setboolean{student}{true}%
+    \openout\@ans=\jobname.ans%
+  }{%
+    \relax%
+  }%
+  \CTEXsetup[name={训练~,}]{section}%
+  \CTEXsetup[%
+    name={题组,},number={\chinese{subsection}},format={\heiti}%
+  ]{subsection}%
+  \renewcommand{\setcex@mNumber}{%
+    \stepcounter{cex@mNumber}%
+    \settowidth{\cex@mShIn}{\thecex@mNumber}%
+    \addtolength{\cex@mShIn}{.4\ccwd}%
+    \setlength{\cex@mShInS}{\cex@mShIn+1.2\ccwd}%
+    \setlength{\cex@mlinewd}{\linewidth-\cex@mShIn}%
+  }%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+%    \begin{macrocode}
+%</class>
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%<*examination>
+%    \end{macrocode}
+%\section{examination文档类} 
+%\changes{v1.5.k}{2018/07/13}{调整了一些节的顺序,增加标题头}
+% \subsection{页面设置}
+%首先设置好页面格式.
+%    \begin{macrocode}
+\RequirePackage[%
+    paperwidth=364mm,
+    paperheight=257mm,
+    left=3.00cm,
+    right=3.00cm,
+    top=2.00cm,
+    bottom=2.00cm
+]{geometry}%
+%    \end{macrocode}
+% \subsection{布尔值}
+% \begin{macro}{cex@mname}
+% 此布尔值用来处理试卷标题是否显示姓名等信息.
+%    \begin{macrocode}
+\newboolean{cex@mname}%
+%    \end{macrocode}
+% \end{macro}
+%  \subsection{计数器}
+%  这里一共设置了三个计数器,用以生成双页码---左页和右页,但是还要一个总页码,每一节都是一份单独的试卷,所以此总页码会依懒于章节标号.
+%
+%  2018年5月15日增加了计数器|cex@mans|,它是答案的识别码,这样可以正确处理答案的双页码问题.计数器|cex@mID|用来存储上一次的识别码,当识别码发生变化时,则对它重新付值,同时将|cex@mpage|置零.
+%  
+%    \begin{macrocode}
+\newcounter{cex@mlpage}%
+\newcounter{cex@mrpage}%
+\newcounter{cex@mpage}%
+\newcounter{cex@mans}%
+\newcounter{cex@mID}%
+%    \end{macrocode}
+%\subsection{计数器初始化}
+%    \begin{macrocode}
+\setcounter{cex@mlpage}{-1}%
+\setcounter{cex@mrpage}{0}%
+\setcounter{cex@mpage}{0}%
+%    \end{macrocode}
+% \subsection{写出页码文件}
+% \begin{macro}{\@Page}
+% 命令\cs{@Page}用来将\cs{MakePage}写入到文件 \cs{jobname}.page ,然后通过在\cs{AtBeginDocument}中调用,则\cs{MakePage}生成每节的试卷总页码了.
+%    \begin{macrocode}
+\newwrite\@Page
+%    \end{macrocode}
+% \end{macro}
+%
+%\subsection{设置选项}
+% 向book文档类传递参数.
+%    \begin{macrocode}
+\DeclareOption{name}{\setboolean{cex@mname}{true}}%
+\DeclareOption{twocolumn}{\PassOptionsToClass{twocolumn}{book}}%
+\DeclareOption{student}{\PassOptionsToClass{student}{cexam}}%
+\DeclareOption{nowarning}{\PassOptionsToClass{nowarning}{cexam}}%
+\ProcessOptions%
+%    \end{macrocode}
+%
+% 此文类是在cexam.sty和cexam.cls完成之后又考虑加入的，前者完成了排题的功能，后者完成了编写试题册的功能，而现在写的这个文档类是为了排版高中阶段的考试试卷.
+%  编写过程中遇到不少困难,尤其中双页码探测程序.经过几天的考虑,终于以一个圆满的方式解决了问题,在生成学生模式时要答案和试题分离,这又带来了不少麻烦,但是最后以加入识别码的方式成功解决.
+%\changes{v1.5.c}{2018/05/15}{增加答案类型计数器cex@mans}
+%\changes{v1.5.c}{2018/05/15}{增加识别码计数器cex@mID}
+%\subsection{姓名信息}
+% 在2018年7月13日,增加姓名等信息处理功能.
+% \begin{macro}{\n@meline}
+% 此命令用来生成姓名,学校,准考证号等名称后的横线
+%    \begin{macrocode}
+\def \n@meline#1{%
+  #1:\rule[-2pt]{60pt}{.4pt}%
+}%
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\studnetn@me}
+% 此命令用来生成试卷左侧的姓名等信息,其格式暂时只设置一种,不作过多装饰.
+%    \begin{macrocode}
+\def\studentn@me{%
+  \ifodd\thepage
+  \makebox[0pt][r]{\rotatebox{90}{\parbox{\textheight}{%
+    \hfil \qquad\n@meline{学校} 
+    \hfil \n@meline{班级}
+    \hfil \n@meline{姓名}
+    \hfil \n@meline{准考证号}
+    \hfil
+    \par
+    \vspace*{5pt}
+    \par
+    \rule[-2pt]{\textheight}{2pt}
+    \par
+    \vspace*{15pt}
+  }}}%
+  \fi
+}%
+%    \end{macrocode}
+% \end{macro}
+%  \subsection{生成总页码}
+%\changes{v1.5.c}{2018/05/15}{增加\cs{MakePage}识别码功能}
+% \DescribeMacro\MakePage
+% \cs{MakePage}\marg{识别码}\marg{页码}
+%
+%这个命令在\cs{AtBeginDocument} 中调用的\cs{jobname}.page 中,在每页的写出结束后生成的.
+%对计数器cex@mpage 的付值,可以在下一个页码定义时判断是否新页码大于之前的一个页码,如果大于则定义为新的页码,如果小于前一个页码则不作处理.其中\cs{csname} 命令就是每页调用的试卷页码数,但是原来的页码page不做处理,依然记录总的页码数.
+%  
+%  由于左页码和右页码是单独设置的,它们没有关联,这可以确保每生成一栏则对应页码的数值就增长2,然后就可以保证页码的连惯.由于总页码是在排版完成之后生成的,所以不能象page一样先生成后使用.这必须精确的等于当前页码.
+%
+%  2018年5月15日,成功增加\cs{MakePage}的识别码功能.在前几天的测试中发现,如果是学生答案,则页码识别会出现失误,因为答案中章节会归结到和前述章节相同的标号,按照这个规则,那也会对前述章节的双页码生成影响.为了解决这个问题,引入一个识别码 |cex@mans|,在生成总页码时会先对比该识别码,识别码由章、节、|cex@mans|组成，在开始时默认|cex@mans|的值为0,由于在试卷部分不同的试卷章节不一样，则每一章节部分的识别码不同，则每一部分的总页码就可以正确引用了。但是在答案中会将章节重置，以便与试卷一一对应，这样就可以设置|cex@mans|为1,则答案的识别码与前述同章节的也不一样，故实现了双页码的正确显示.
+%  
+%识别码=章号+节号+|cex@mans|
+%
+%    \begin{macrocode}
+\newcommand\MakePage[2]{%
+%    \end{macrocode}
+%  下面的代码用来识别由章节|ex@mans|生成的识别码,以确保在第1页时执行统计总页码.
+%    \begin{macrocode}
+  \ifthenelse{\cnttest{\thecex@mID}{=}{#1}}{}{%
+    \setcounter{cex@mpage}{0}%
+    \setcounter{cex@mID}{\the\c@chapter\the\c@section\thecex@mans}%
+  }%
+%    \end{macrocode}
+% 下面的代码用来测试同一识别码下,如果页码发生变化时总页码的增加.
+%    \begin{macrocode}
+  \ifthenelse{\cnttest{\thecex@mpage}{<}{#2}}{%
+    \setcounter{cex@mpage}{#2}%
+    \expandafter\def\csname cex@mpage#1\endcsname{#2}%
+  }{%
+    \relax
+  }%
+}%
+\MakeRobustCommand{\MakePage}%
+\MakeRobustCommand{\setcounter}%
+%    \end{macrocode}
+% \DescribeMacro\cex@moutputbox
+% 此命令用来测定第二栏中是否有内容,首先获得第二栏的内容,然后测定高度.由于在试卷中需要标题和题目等都对齐,则修改\cs{topskip}为 0pt.在plain \TeX{}  中,默认值为 10pt ,目的在于使每页的文字尽量保持一定的高度.\footnote{参考 The \TeX{} book相关内容}
+%  
+%  为了分析问题的明确性,这里我摘抄下来相关的介绍.\footnote{参考 \TeX{}-impatient 翻译版}
+%  
+%  为确保页面第一个盒子的基线到上页边的距离总是d,\TeX{} 在每个页面顶部都插入粘连.\cs{topskip}给出了d的值,以此确定该粘连大小(只要页面第一个盒子不会太高).d等于\cs{topskip}粘连自然大小.如果页面第一个盒子的高度超过d,计算出的粘连将为负值,此时在该页顶部\TeX{} 不插入\cs{topskip}粘连.
+%  
+%  为了更好的理解这些规则,我们假设 \cs{topski} 无伸长量也无收缩量,且页面第一项就是个盒子.如果该盒子的高度不大于 \cs{topskip} ,不管高度为多少,它的基线和上页边的距离就始终等于 \cs{topskip} .反过来,如果该盒子的高度比 \cs{topskip} 大e,它的基线和上页边的距离就是 \cs{topskip}+e.在 The \TeX{} book 第113-114页中详细解释了 \cs{topskip} 的作用.Plain \TeX{} 设定 \cs{topskip} 为10pt.
+
+%  以上两段就是引用的内容,通过分析我们可以知道,如果两页中首行文字大小不一样,则这个 \cs{topskip} 可以让两页文字尽量保持同高开始排版.但是如果两页文字一样大,则有没有这个胶则也是对齐的,在试卷排版中,内容是高度一致的,所以在此设定 \cs{topskip} 为 0pt,这样可以准确的测定第二栏有无文字.如果没有文字,则去掉胶以后,输出盒子的高度将是 0pt ,如果不是空的,则输出盒子的高度不是0,根据这个道理,在book 文类的基础上做了相应的修改.
+%  
+%先将\cs{topskip}置零.
+%    \begin{macrocode}
+\newbox\cex@moutputbox%
+\global\topskip0pt
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\def\@outputdblcol{%
+%    \end{macrocode}
+%下面这几行代码是加入的判断如果在第一行,则左页码加2,如果在第二栏,则测定第二栏高度是否大于2pt,如果不大于则没有文字排入,则右码计数器不增加.如果大于则说明右页中排入了文字,则右页计数器增加2. 
+%    \begin{macrocode}
+  \if@firstcolumn
+    \addtocounter{cex@mlpage}{2}%
+  \else
+    \setbox\cex@moutputbox\vbox{\unvbox\@outputbox\unskip}%
+    \ifdim\ht\cex@moutputbox > 2pt%
+      \addtocounter{cex@mrpage}{2}%
+    \fi%
+  \setbox\@outputbox\vbox to \@colht{\unvbox\cex@moutputbox}%
+  \fi
+%    \end{macrocode}
+%以下是原始内容没有做修改.
+%    \begin{macrocode}
+  \if@firstcolumn
+      \global\@firstcolumnfalse
+      \global\setbox\@leftcolumn\copy\@outputbox
+      \splitmaxdepth\maxdimen
+      \vbadness\maxdimen
+      \setbox\@outputbox\vbox{\unvbox\@outputbox\unskip}%
+      \setbox\@outputbox\vsplit\@outputbox to\maxdimen
+      \toks@\expandafter{\topmark}%
+      \xdef\@firstcoltopmark{\the\toks@}%
+      \toks@\expandafter{\splitfirstmark}%
+      \xdef\@firstcolfirstmark{\the\toks@}%
+      \ifx\@firstcolfirstmark\@empty
+	\global\let\@setmarks\relax
+      \else
+	\gdef\@setmarks{%
+	  \let\firstmark\@firstcolfirstmark
+	  \let\topmark\@firstcoltopmark%
+	}%
+      \fi
+  \else
+%    \end{macrocode}
+%第一栏已经生成了寄数页码，当第二次执行时已经生成，所以可以写出。
+%    \begin{macrocode}
+    \write\@Page{\MakePage{\the\c@chapter\the\c@section\thecex@mans}{\thecex@mlpage}}%
+%    \end{macrocode}
+%下述为原始代码,没有修改.
+%    \begin{macrocode}
+	\global\@firstcolumntrue
+	\setbox\@outputbox\vbox{%
+	  \hb@xt@\textwidth{%
+	    \hb@xt@\columnwidth{%
+	      \ifthenelse{\boolean{cex@mname}}{%
+		\studentn@me%
+	      }{%
+		\relax%
+	      }%
+	      \box\@leftcolumn \hss
+	    }%
+	    \hfil
+	    {\normalcolor\vrule \@width\columnseprule}%
+	    \hfil
+	    \hb@xt@\columnwidth{%
+	      \box\@outputbox \hss%
+	    }%
+	  }%
+	}%
+	\@combinedblfloats
+	\@setmarks
+	\@outputpage
+	\begingroup
+	  \@dblfloatplacement
+	  \@startdblcolumn
+	  \@whilesw\if@fcolmade \fi{%
+	    \@outputpage
+	    \@startdblcolumn%
+	  }%
+	\endgroup
+%    \end{macrocode}
+%当执行完排版时，第二栏的页码才生成，所以要在完成排版后再写出总页码
+%    \begin{macrocode}
+	\write\@Page{\MakePage{\the\c@chapter\the\c@section\thecex@mans}{\thecex@mrpage}}%
+%    \end{macrocode}
+% 以下内容是原始内容.
+%    \begin{macrocode}
+  \fi%
+}%
+%    \end{macrocode}
+%确保生成双页码总数后能够正确调用.在答案中写入章节重置命令,同时增加一位答案识别码确保答案能正确统计总页码数.
+%    \begin{macrocode}
+\AtBeginDocument{%
+  \write\@ans{\setcounter{section}{0}}%
+  \write\@ans{\setcounter{chapter}{1}}%
+  \write\@ans{\setcounter{cex@mans}{1}}%
+  \openout\@Page=\jobname.page
+  \IfFileExists{\jobname.page}{%
+    \input{\jobname.page}%
+  }{}%
+}%
+%    \end{macrocode}
+%  
+%\subsection{双页码的显示}  
+%
+%此控制总页码显示,如果页码尚未定义,则显示两个问号,这点考虑和交叉引用相似,如果第一遍编译,则生成对应引用,但是为了提示编译第二遍,则以双问号显示.
+%
+%    \begin{macrocode}
+\def\cex@mpagetotal{%
+  \expandafter\if\csname cex@mpage\the\c@chapter\the\c@section\thecex@mans\endcsname\relax
+    \ ??
+  \else
+    \csname cex@mpage\the\c@chapter\the\c@section\thecex@mans\endcsname
+  \fi
+}%
+%    \end{macrocode}
+%
+%  考虑到以后格式的添加,此处设计好页码格式,以后事以再追加新的内容.
+%
+%    \begin{macrocode}
+\def\ns@oddfoot{%
+  \ifthenelse{\cnttest{\thesection}{=}{0}}{%
+    \relax
+  }{%
+    \ifthenelse{\cnttest{\thecex@mlpage}{>=}{1}}{%
+      \ifthenelse{\cnttest{\thecex@mrpage}{>}{\thecex@mlpage}}{%
+	\hfil
+	第\thecex@mlpage{}页(共\cex@mpagetotal{}页)
+	\hfil\hfil
+	第\thecex@mrpage{}页(共\cex@mpagetotal{}页)
+	\hfil
+      }{%
+	\hfil
+	第\thecex@mlpage{}页(共\cex@mpagetotal{}页)
+	\hfil\hfil\hfil
+      }%
+    }{}%
+}}%
+%    \end{macrocode}
+% 下面是试卷的格式,这里命名为exam.
+%    \begin{macrocode}
+\def\ps@exam{%
+%  \let\@mkboth\@gobbletwo
+  \let\@oddhead\@empty%
+  \let\@oddfoot\ns@oddfoot%
+  \let\@evenhead\@oddhead%
+  \let\@evenfoot\@oddfoot%
+}
+\pagestyle{exam}
+%    \end{macrocode}
+%  
+%  \subsection{章格式的修改}
+%  在试卷模式中,设定章为单独一页,没有双页码,只有单页码,并且可以关闭.
+%  
+%下面是原始文件内容.
+%    \begin{macrocode}
+\def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
+                       \if@mainmatter
+                         \refstepcounter{chapter}%
+                         \typeout{\@chapapp\space\thechapter.}%
+                         \addcontentsline{toc}{chapter}%
+                                   {\protect\numberline{\thechapter}#1}%
+                       \else
+                         \addcontentsline{toc}{chapter}{#1}%
+                       \fi
+                    \else
+                      \addcontentsline{toc}{chapter}{#1}%
+                    \fi
+                    \chaptermark{#1}%
+                    \addtocontents{lof}{\protect\addvspace{10\p@}}%
+                    \addtocontents{lot}{\protect\addvspace{10\p@}}%
+		    \onecolumn
+		    \thispagestyle{empty}
+%    \end{macrocode}
+%以下为修改的章格式,在页面中间,居中显示,以1.5cm宽的大字排版.
+%    \begin{macrocode}
+		    \hbox{}
+		    \vfill
+		\hfil\resizebox{!}{1.5cm}{第\thechapter{}章\hspace{5pt}#2}\hfil
+		    \vfill
+		    \hbox{}
+%    \end{macrocode}
+%下面是原始文件内容,未做修改.
+%    \begin{macrocode}
+		    \clearpage
+		    \twocolumn
+		  }
+%    \end{macrocode}
+% 下面是对加星章格式设计,与无星号相同,但不执行加入目录等功能.
+%    \begin{macrocode}
+\def\@schapter#1{%
+  \onecolumn
+  \thispagestyle{empty}
+  \hbox{}
+  \vfill
+  \hfil\resizebox{!}{1.5cm}{第\thechapter{}章\hspace{5pt}#1}\hfil
+  \vfill
+  \hbox{}
+  \clearpage
+  \twocolumn
+}
+%    \end{macrocode}
+%  对章重新定义,在章开始时,不执行分页,但是若不是第一章的开始,则要分布,确保一套试卷的完整输出.
+%    \begin{macrocode}
+\def\chapter{%
+  \ifthenelse{\cnttest{\thechapter}{=}{0}}{%
+    \relax
+  }{%
+    \cleardoublepage
+  }%
+  \setcounter{cex@mlpage}{-1}
+  \setcounter{cex@mrpage}{0}
+  \setcounter{cex@mpage}{0}
+\secdef\@chapter\@schapter}%
+%    \end{macrocode}
+%\subsection{小节格式修改}
+%小节标题格式修改.
+%    \begin{macrocode}
+\def\thesection{\@arabic{\c@section}}%
+\def\thesubsection{\@arabic{\c@subsection}}%
+%    \end{macrocode}
+%  
+%  下面的修改还不完善,暂时记录在此处.日后再补充.
+%  
+%    \begin{macrocode}
+\def\@sect#1#2#3#4#5#6[#7]#8{%
+%    \end{macrocode}
+%  当开始的是节时,则写出将cex@mpage置零的命令,则可以使\cs{MakePage}准确的生成试卷页码,同时将左页和右页页码置零.
+%    \begin{macrocode}
+  \ifthenelse{\equal{section}{#1}}{%
+    \cleardoublepage
+    \setcounter{cex@mlpage}{-1}
+    \setcounter{cex@mrpage}{0}
+  }{%
+    \relax
+  }%%%
+%    \end{macrocode}
+%写出节标题到答案中.  
+%    \begin{macrocode}
+  \write\@ans{\csname #1\endcsname{#8}}%
+%    \end{macrocode}
+% 下述为原文.
+%    \begin{macrocode}
+  \ifnum #2>\c@secnumdepth
+  \let\@svsec\@empty
+  \else
+  \refstepcounter{#1}%
+%    \end{macrocode}
+% 选择性的对节和小节标题格式进行设置.
+%    \begin{macrocode}
+  \ifthenelse{\equal{section}{#1}}{%%%
+    \protected@edef\@svsec{卷\chinese{section}\quad\relax}%
+  }{%
+    \ifthenelse{\equal{subsection}{#1}}{%
+      \protected@edef\@svsec{\chinese{subsection}、\relax}%
+    }{%
+      \protected@edef\@svsec{\@seccntformat{#1}\relax}%
+    }%
+  }%%%
+%    \end{macrocode}
+%下述为原文.
+%    \begin{macrocode}
+  \fi
+  \@tempskipa #5\relax
+  \ifdim \@tempskipa>\z@
+  \begingroup
+  #6{%
+    \ifthenelse{\equal{section}{#1}}{%
+      \centerline{\@svsec#8}
+    }{%
+      \@hangfrom{\hskip #3\relax\@svsec}%
+      \interlinepenalty \@M #8\@@par
+    }%
+  }%
+\endgroup
+\csname #1mark\endcsname{#7}%
+\addcontentsline{toc}{#1}{%
+  \ifnum #2>\c@secnumdepth \else
+  \protect\numberline{\csname the#1\endcsname}%
+  \fi
+#7}%
+\else
+\def\@svsechd{%
+  #6{\hskip #3\relax
+  \@svsec #8}%
+  \csname #1mark\endcsname{#7}%
+  \addcontentsline{toc}{#1}{%
+    \ifnum #2>\c@secnumdepth \else
+    \protect\numberline{\csname the#1\endcsname}%
+    \fi
+  #7}}%
+  \fi
+  \@xsect{#5}}
+%    \end{macrocode}
+%
+%\subsection{警告的消除}
+%
+% 因为fontspec 经常发出警告,这里有的时候没必要去讨论具体的字体,则略去这些警告.由于为了文件的顺序性,同时为了文件的可读性,此处再从cexam.cls中抄录重写的这几行代码.以后在精细化各个程序的时候再修改为标记格式,为两个程序共有.  
+%
+% 下面的代码是去掉了\cs{CTEXsetup} 中发出的标题格式警告.
+%    \begin{macrocode}
+\ExplSyntaxOn
+\RenewDocumentCommand \CTEXsetup { +o > { \TrimSpaces } m }%
+{
+  \IfNoValueF {#1} { \keys_set:nn { ctex / #2 } {#1} }
+}
+%    \end{macrocode}
+% 下面这段代码是禁用fontspec宏包的字体警告,其它的不做处理.
+%    \begin{macrocode}
+\cs_set:Npn \__fontspec_warning:n   {}
+\cs_set:Npn \__fontspec_warning:nx #1#2 {}
+\cs_set:Npn \__fontspec_warning:nxx #1#2#3 {}
+\ExplSyntaxOff
+%    \end{macrocode}
+%\subsection{分页控制}
+%  在使用\cs{clearpage}和\cs{cleardoublepage}时会加入空白页,这也会增加双页码的计数,但是增加的页码又没有内容.所以这一部分不应当生成总页,也不应当显示双页码.经过考虑这里采用改变|cex@mlpage|和|cex@mrpage|的方法来实现.当降低这些增加的空白页的双页码后,则\cs{MakePage}不会处理新增值,因为它比之前的小,同时由于设置为负值,则页脚上也不会出现低于1的双页码.这样就解决了使用分布后的双页码问题.由于\cs{newpage}是人为用来增加内容才使用的,所以不对它处理.
+%    \begin{macrocode}
+\let\cex@mclearpage=\clearpage
+\def\clearpage{%
+  \cex@mclearpage
+  \if@firstcolumn
+    \setcounter{cex@mlpage}{-3}
+    \addtocounter{cex@mrpage}{-2}
+  \fi
+}%
+\let\cex@mcleardoublepage=\cleardoublepage
+\def\cleardoublepage{%
+  \cex@mcleardoublepage
+  \ifodd\c@page%
+    \setcounter{cex@mlpage}{-3}
+    \addtocounter{cex@mrpage}{-2}
+  \fi
+}%
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%</examination>
+%    \end{macrocode}
+%  
+%  \Finale
+% \endinput

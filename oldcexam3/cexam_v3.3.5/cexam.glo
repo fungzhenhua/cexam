@@ -1,0 +1,290 @@
+\glossaryentry{000030000000000=v3.0.0> =General:>开始使用 \hologoRobust {LaTeX3}{}重构cexam.sty|hdpindex{}}{1}
+\glossaryentry{000030000000001=v3.0.1> =General:>加入测行程序和形状生成程序,同时删除之前改写的代码|hdpindex{}}{1}
+\glossaryentry{000030000000001=v3.0.1> =General:>缩写命名,加入缩写列表|hdpindex{}}{1}
+\glossaryentry{000030000000007=v3.0.7> =General:>删除命令\cs {cexam_stand_dim:n}|hdpindex{}}{1}
+\glossaryentry{000030000000007=v3.0.7> =General:>删除命令\cs {cexam_fmt_pic:n}|hdpindex{}}{1}
+\glossaryentry{000030000100000=v3.1.0> =General:>引入宏包xcolor|hdpindex{}}{1}
+\glossaryentry{000030000100002=v3.1.2> =General:>重新改写测行程序|hdpindex{}}{1}
+\glossaryentry{000030000100002=v3.1.2> =General:>删除了一些旧的代码|hdpindex{}}{1}
+\glossaryentry{000030000100003=v3.1.3> =General:>selection更名为choice|hdpindex{}}{1}
+\glossaryentry{000030000100003=v3.1.3> =General:>对cexam.dtx文件,修改了版权信息|hdpindex{}}{1}
+\glossaryentry{000030000100004=v3.1.4> =General:>进行了程序精简,更加稳定|hdpindex{}}{1}
+\glossaryentry{000030000100004=v3.1.4> =General:>删除了长度命令\cs {cexam_fmtwd_dim}|hdpindex{}}{1}
+\glossaryentry{000030000100006=v3.1.6> =General:>加入答案写出功能|hdpindex{}}{1}
+\glossaryentry{000030000100006=v3.1.6> =General:>答案支持超链接|hdpindex{}}{1}
+\glossaryentry{000030000100006=v3.1.6> =General:>修改了文档中的一些输入文本错误|hdpindex{}}{1}
+\glossaryentry{000030000100007=v3.1.7> =General:>增加例题模式|hdpindex{}}{1}
+\glossaryentry{000030000100007=v3.1.7> =General:>引入宏包tikz|hdpindex{}}{1}
+\glossaryentry{000030000100008=v3.1.8> =General:>增加源文档中的一些命令解释和题目输入举例|hdpindex{}}{1}
+\glossaryentry{000030000100009=v3.1.9> =General:>优化了说明档，增加题型排版展示和安装说明|hdpindex{}}{1}
+\glossaryentry{000030000200002=v3.2.2> =General:>此版主要的工作是规范了\hologoRobust {LaTeX3}{}格式，替换原来的一些命令为字符串变量|hdpindex{}}{1}
+\glossaryentry{000030000200002=v3.2.2> =General:>删除\cs {sep_hd_old:},\cs {sp_hd_old_add:n}|hdpindex{}}{1}
+\glossaryentry{000030000200003=v3.2.3> =General:>去除宏包\pkg  {xcolor},\pkg  {tikz}|hdpindex{}}{1}
+\glossaryentry{000030000200004=v3.2.4> =General:>删除\cs {cexam_pic_det:n},去除宏包\pkg  {calc}|hdpindex{}}{1}
+\glossaryentry{000030000200005=v3.2.5> =General:>删除测行程序之外的\cs {parbox}命令|hdpindex{}}{1}
+\glossaryentry{000030000200006=v3.2.6> =General:>以\cs {c_empty_tl}取代\cs {relax}|hdpindex{}}{1}
+\glossaryentry{000030000200006=v3.2.6> =General:>修改宏包的安装路径为默认路径|hdpindex{}}{1}
+\glossaryentry{000030000200007=v3.2.7> =General:>删除\cs {ind_hat_hdim}|hdpindex{}}{1}
+\glossaryentry{000030000200008=v3.2.8> =General:>增加证明题环境，但是在一般文档中启用学生模式会出现错误，在下一版中修复|hdpindex{}}{1}
+\glossaryentry{000030000300000=v3.3.0> =General:>去除命令\cs {cexam_end_add:np},\cs {ctrl_end_det:p},\cs {cexam_everypar_do:nnn},优化了末段加入\cs {par}功能|hdpindex{}}{1}
+\glossaryentry{000030000300000=v3.3.0> =General:>规范各题型处理题型的参数规范|hdpindex{}}{1}
+\glossaryentry{000030000300003=v3.3.3> =General:>因新浪邮箱限制客户端登录问题，同时也考虑到国际化问题，将邮箱修改为outlook邮箱。|hdpindex{}}{1}
+\glossaryentry{000030000300005=v3.3.5> =General:>删除一些不需要的代码，不再支持选择题选项的旧输入方式|hdpindex{}}{1}
+\glossaryentry{000030000300005=v3.3.5> =General:>选择题选项定界符号由\cs {option}修改为\cs {choice}|hdpindex{}}{1}
+\glossaryentry{000030000300003=v3.3.3>install.sh=\verb!*&install.sh&:>新增安装脚本|hdclindex{1}{}}{3}
+\glossaryentry{000030000200006=v3.2.6>l3-too-old=\verb!*&l3-too-old&:>新增版本检测|hdclindex{57}{}}{12}
+\glossaryentry{000030000100002=v3.1.2>cexam_fmt_bool=\verb!*&\cexam_fmt_bool&:>增加图片格式化判断布尔值|hdclindex{77}{}}{12}
+\glossaryentry{000030000100002=v3.1.2>cho_opt_maxed_bool=\verb!*&\cho_opt_maxed_bool&:>增加长选项判断布尔值|hdclindex{79}{}}{13}
+\glossaryentry{000030000100006=v3.1.6>answer_student_bool=\verb!*&\answer_student_bool&:>增加学生模式答案写出布尔值|hdclindex{81}{}}{13}
+\glossaryentry{000030000300004=v3.3.4>cho_optrand_bool=\verb!*&\cho_optrand_bool&:>新增命令|hdclindex{85}{}}{13}
+\glossaryentry{000030000300004=v3.3.4>cho_optstar_bool=\verb!*&\cho_optstar_bool&:>新增命令|hdclindex{87}{}}{13}
+\glossaryentry{000030000300004=v3.3.4>choice_oldopt_bool=\verb!*&\choice_oldopt_bool&:>新增命令|hdclindex{89}{}}{13}
+\glossaryentry{000030000300004=v3.3.4>cexam_judgement_bool=\verb!*&\cexam_judgement_bool&:>新增命令|hdclindex{91}{}}{13}
+\glossaryentry{000030000000009=v3.0.9>cho_option_box=\verb!*&\cho_option_box&:>新增选择题选项最大长度获取盒子|hdclindex{100}{}}{13}
+\glossaryentry{000030000100000=v3.1.0>cexam_option_box=\verb!*&\cexam_option_box&:>新增选项格式化盒子|hdclindex{102}{}}{13}
+\glossaryentry{000030000100000=v3.1.0>sep_temp_box=\verb!*&\sep_temp_box&:>新增图片分离临时盒子|hdclindex{104}{}}{13}
+\glossaryentry{000030000100002=v3.1.2>cho_optpic_box=\verb!*&\cho_optpic_box&:>新增判定选项排版格式盒子|hdclindex{106}{}}{13}
+\glossaryentry{000030000100002=v3.1.2>cexam_number_box=\verb!*&\cexam_number_box&:>新增题号格式尺寸获得盒子|hdclindex{108}{}}{13}
+\glossaryentry{000030000100003=v3.1.3>blank_wd_box=\verb!*&\blank_wd_box&:>新增填空题空白长度测量盒子|hdclindex{110}{}}{13}
+\glossaryentry{000030000200004=v3.2.4>fmt_pic_t_vbox=\verb!*&\fmt_pic_t_vbox&:>新增前缀盒子|hdclindex{112}{}}{14}
+\glossaryentry{000030000200005=v3.2.5>ind_hat_box=\verb!*&\ind_hat_box&:>新增前缀盒子|hdclindex{121}{}}{14}
+\glossaryentry{000030000000009=v3.0.9>cho_lmax_dim=\verb!*&\cho_lmax_dim&:>选择题最大选项长度|hdclindex{134}{}}{14}
+\glossaryentry{000030000100009=v3.1.9>cho_lmax_ii_dim=\verb!*&\cho_lmax_ii_dim&:>新增\cs {cho_lmax_i_dim}|hdclindex{137}{}}{14}
+\glossaryentry{000030000200000=v3.2.0>cho_lmax_ii_dim=\verb!*&\cho_lmax_ii_dim&:>新增\cs {cho_lmax_ii_dim}|hdclindex{137}{}}{14}
+\glossaryentry{000030000100000=v3.1.0>cho_optwd_i_dim=\verb!*&\cho_optwd_i_dim&:>选择题选项的行宽|hdclindex{142}{}}{14}
+\glossaryentry{000030000100002=v3.1.2>sep_HD_ht=\verb!*&\sep_HD_ht&:>新增长度|hdclindex{145}{}}{14}
+\glossaryentry{000030000100002=v3.1.2>cho_optpic_hti_dim=\verb!*&\cho_optpic_hti_dim&:>新增长度|hdclindex{147}{}}{14}
+\glossaryentry{000030000100002=v3.1.2>cexam_indent_i_dim=\verb!*&\cexam_indent_i_dim&:>新增长度|hdclindex{151}{}}{15}
+\glossaryentry{000030000100002=v3.1.2>cexam_numtxt_skip=\verb!*&\cexam_numtxt_skip&:>新增长度|hdclindex{154}{}}{15}
+\glossaryentry{000030000100003=v3.1.3>cexam_pic_linwd_dim=\verb!*&\cexam_pic_linwd_dim&:>新增长度|hdclindex{159}{}}{15}
+\glossaryentry{000030000100003=v3.1.3>blank_wd_dim=\verb!*&\blank_wd_dim&:>新增长度|hdclindex{161}{}}{15}
+\glossaryentry{000030000100003=v3.1.3>get_rec_linewd_dim=\verb!*&\get_rec_linewd_dim&:>新增长度|hdclindex{163}{}}{15}
+\glossaryentry{000030000100009=v3.1.9>cexam_picwd_limit=\verb!*&\cexam_picwd_limit&:>新增长度|hdclindex{165}{}}{15}
+\glossaryentry{000030000200006=v3.2.6>cexam_ccwd_dim=\verb!*&\cexam_ccwd_dim&:>新增长度\cs {cexam_ccwd_dim},取消对\pkg  {ctex}的依赖|hdclindex{167}{}}{15}
+\glossaryentry{000030000200001=v3.2.1>cho_hat_ht_dim=\verb!*&\cho_hat_ht_dim&:>新增长度|hdclindex{172}{}}{15}
+\glossaryentry{000030000200005=v3.2.5>cho_hat_ht_dim=\verb!*&\cho_hat_ht_dim&:>新增长度\cs {cho_hat_ht_dim}|hdclindex{172}{}}{15}
+\glossaryentry{000030000200004=v3.2.4>fmt_picture_ydim=\verb!*&\fmt_picture_ydim&:>新增长度用来在格式化图片时定位图片位置|hdclindex{180}{}}{15}
+\glossaryentry{000030000100002=v3.1.2>cexam_number_int=\verb!*&\cexam_number_int&:>新增题号计数器|hdclindex{185}{}}{15}
+\glossaryentry{000030000100003=v3.1.3>cexam_qitem_int=\verb!*&\cexam_qitem_int&:>新增计算题小问计数器|hdclindex{194}{}}{16}
+\glossaryentry{000030000100007=v3.1.7>cexam_numold_int=\verb!*&\cexam_numold_int&:>新增存储题号计数器和例题环境题号计数器|hdclindex{196}{}}{16}
+\glossaryentry{000030000300004=v3.3.4>choice_optabcd_int=\verb!*&\choice_optabcd_int&:>新增命令|hdclindex{199}{}}{16}
+\glossaryentry{000030000300005=v3.3.5>choice_option_it=\verb!*&\choice_option_it&:>新增命令|hdclindex{205}{}}{16}
+\glossaryentry{000030000200002=v3.2.2>sep_tl_tl=\verb!*&\sep_tl_tl&:>新增字符串变量|hdclindex{207}{}}{16}
+\glossaryentry{000030000200002=v3.2.2>cho_fmt_tl=\verb!*&\cho_fmt_tl&:>新增字符串变量|hdclindex{212}{}}{16}
+\glossaryentry{000030000200002=v3.2.2>cexam_number_tag_i_tl=\verb!*&\cexam_number_tag_i_tl&:>新增字符串变量|hdclindex{214}{}}{16}
+\glossaryentry{000030000200002=v3.2.2>ans_tag_i_tl=\verb!*&\ans_tag_i_tl&:>新增字符串变量|hdclindex{217}{}}{16}
+\glossaryentry{000030000200008=v3.2.8>prf_tag_i_tl=\verb!*&\prf_tag_i_tl&:>新增证明题标签|hdclindex{222}{}}{16}
+\glossaryentry{000030000300000=v3.3.0>prf_tag_i_tl=\verb!*&\prf_tag_i_tl&:>删除\cs {prf_end_tl}|hdclindex{222}{}}{16}
+\glossaryentry{000030000200002=v3.2.2>choice_ans_tl=\verb!*&\choice_ans_tl&:>新增字符串变量|hdclindex{225}{}}{16}
+\glossaryentry{000030000300004=v3.3.4>choice_ans_tl=\verb!*&\choice_ans_tl&:>修改\cs {cexam_blank_tl}为\cs {cexam_anspub_tl},选择题和填空题共用|hdclindex{225}{}}{16}
+\glossaryentry{000030000300004=v3.3.4>choice_ans_tl=\verb!*&\choice_ans_tl&:>增加选择题专用答案存储字符串\cs {choice_ans_tl}|hdclindex{225}{}}{16}
+\glossaryentry{000030000100006=v3.1.6>answer_write=\verb!*&\answer_write&:>新增答案写出|hdclindex{243}{}}{17}
+\glossaryentry{000030000100006=v3.1.6>cexam/option=\verb!*&cexam/option&:>新增宏包选项|hdclindex{245}{}}{17}
+\glossaryentry{000030000300004=v3.3.4>cexam/option=\verb!*&cexam/option&:>规范化选项设置，增加选择题随机选项控制选项option|hdclindex{245}{}}{17}
+\glossaryentry{000030000200002=v3.2.2>cexam_sep_iii:n=\verb!*&\cexam_sep_iii:n&:>用\hologoRobust {LaTeX3}{}中的数据格式tokenlist 重写了数据分析结构|hdclindex{263}{}}{17}
+\glossaryentry{000030000200002=v3.2.2>cexam_sep_isin:nn=\verb!*&\cexam_sep_isin:nn&:>用\hologoRobust {LaTeX3}{}中的数据格式tokenlist 重写了数据分析结构|hdclindex{299}{}}{18}
+\glossaryentry{000030000200002=v3.2.2>cexam_sep:n=\verb!*&\cexam_sep:n&:>用\hologoRobust {LaTeX3}{}中的数据格式tokenlist 重写了数据分析结构|hdclindex{336}{}}{18}
+\glossaryentry{000030000100002=v3.1.2>cexam_get:nNnN=\verb!*&\cexam_get:nNnN&:>排版中已经不再使用该程序累加行数,保留备用|hdclindex{363}{}}{19}
+\glossaryentry{000030000100002=v3.1.2>get_par_row:nnn=\verb!*&\get_par_row:nnn&:>新增程序|hdclindex{372}{}}{19}
+\glossaryentry{000030000100002=v3.1.2>get_par_ht:nnn=\verb!*&\get_par_ht:nnn&:>新增程序|hdclindex{380}{}}{19}
+\glossaryentry{000030000100002=v3.1.2>get_par_rowht:nnnn=\verb!*&\get_par_rowht:nnnn&:>新增程序|hdclindex{390}{}}{19}
+\glossaryentry{000030000000004=v3.0.4>cexam_get_rec:nnnnnn=\verb!*&\cexam_get_rec:nnnnnn&:>修改为六参量函数|hdclindex{396}{}}{20}
+\glossaryentry{000030000000007=v3.0.7>cexam_get_rec:nnnnnn=\verb!*&\cexam_get_rec:nnnnnn&:>改进数学结尾时测行|hdclindex{396}{}}{20}
+\glossaryentry{000030000100000=v3.1.0>cexam_get_rec:nnnnnn=\verb!*&\cexam_get_rec:nnnnnn&:>精简了三行代码|hdclindex{396}{}}{20}
+\glossaryentry{000030000100002=v3.1.2>cexam_get_rec:nnnnnn=\verb!*&\cexam_get_rec:nnnnnn&:>全新改写|hdclindex{396}{}}{20}
+\glossaryentry{000030000100004=v3.1.4>cexam_get_rec:nnnnnn=\verb!*&\cexam_get_rec:nnnnnn&:>以专用行宽代之前的通用行宽|hdclindex{396}{}}{20}
+\glossaryentry{000030000100009=v3.1.9>cexam_get_rec:nnnnnn=\verb!*&\cexam_get_rec:nnnnnn&:>修复生成行后,图片高度规零|hdclindex{396}{}}{20}
+\glossaryentry{000030000000003=v3.0.3>cexam_get_rec_i:nnnnnn=\verb!*&\cexam_get_rec_i:nnnnnn&:>修改为7参量,增加左缩进和右缩进|hdclindex{418}{}}{20}
+\glossaryentry{000030000100002=v3.1.2>cexam_get_rec_i:nnnnnn=\verb!*&\cexam_get_rec_i:nnnnnn&:>全新改写,并减少为六个参量|hdclindex{418}{}}{20}
+\glossaryentry{000030000100002=v3.1.2>cexam_get_rec_i:nnnnnn=\verb!*&\cexam_get_rec_i:nnnnnn&:>修复逻辑错误|hdclindex{418}{}}{20}
+\glossaryentry{000030000100004=v3.1.4>cexam_get_rec_i:nnnnnn=\verb!*&\cexam_get_rec_i:nnnnnn&:>精简代码|hdclindex{418}{}}{20}
+\glossaryentry{000030000200002=v3.2.2>cexam_get_rec_i:nnnnnn=\verb!*&\cexam_get_rec_i:nnnnnn&:>去除\cs {sep_hd_old:}|hdclindex{418}{}}{20}
+\glossaryentry{000030000200006=v3.2.6> =General:>删除\cs {cexam_shad:}|hdclindex{468}{}}{21}
+\glossaryentry{000030000200006=v3.2.6> =General:>删除\cs {cexam_sha_cape:}|hdclindex{468}{}}{21}
+\glossaryentry{000030000100004=v3.1.4>cexam_shad_add:n=\verb!*&\cexam_shad_add:n&:>新增程序|hdclindex{469}{}}{21}
+\glossaryentry{000030000200006=v3.2.6>cexam_shad_add:n=\verb!*&\cexam_shad_add:n&:>重写此程序|hdclindex{469}{}}{21}
+\glossaryentry{000030000100004=v3.1.4> =General:>删除\cs {cexam_sha_mk_i:nnnn}|hdclindex{474}{}}{21}
+\glossaryentry{000030000100004=v3.1.4> =General:>删除\cs {cexam_sha_mk_ii:nnnnnnn}|hdclindex{474}{}}{21}
+\glossaryentry{000030000200006=v3.2.6>cexam_shad_set:n=\verb!*&\cexam_shad_set:n&:>重写此程序|hdclindex{485}{}}{22}
+\glossaryentry{000030000000007=v3.0.7>cexam_fmt_pic:nnnn=\verb!*&\cexam_fmt_pic:nnnn&:>支持图片带编号和左右排版|hdclindex{509}{}}{22}
+\glossaryentry{000030000000009=v3.0.9>cexam_fmt_pic:nnnn=\verb!*&\cexam_fmt_pic:nnnn&:>增加图片居中排版格式|hdclindex{509}{}}{22}
+\glossaryentry{000030000000009=v3.0.9>cexam_fmt_pic:nnnn=\verb!*&\cexam_fmt_pic:nnnn&:>图片格式化增加编号增长命令|hdclindex{509}{}}{22}
+\glossaryentry{000030000100002=v3.1.2>cexam_fmt_pic:nnnn=\verb!*&\cexam_fmt_pic:nnnn&:>修改星标控制格式化为布尔值控制|hdclindex{509}{}}{22}
+\glossaryentry{000030000100002=v3.1.2>cexam_fmt_pic:nnnn=\verb!*&\cexam_fmt_pic:nnnn&:>改为并列结构格式化图片|hdclindex{509}{}}{22}
+\glossaryentry{000030000100003=v3.1.3>cexam_fmt_pic:nnnn=\verb!*&\cexam_fmt_pic:nnnn&:>修改为三参量及排版模式|hdclindex{509}{}}{22}
+\glossaryentry{000030000100004=v3.1.4>cexam_fmt_pic:nnnn=\verb!*&\cexam_fmt_pic:nnnn&:>删除\cs {cexam_fmt_pic:nnn}|hdclindex{509}{}}{22}
+\glossaryentry{000030000100004=v3.1.4>cexam_fmt_pic:nnnn=\verb!*&\cexam_fmt_pic:nnnn&:>修改为四参量及排版模式|hdclindex{509}{}}{22}
+\glossaryentry{000030000100004=v3.1.4>cexam_fmt_pic:nnnn=\verb!*&\cexam_fmt_pic:nnnn&:>修复图片下标在题目环境中的错误|hdclindex{509}{}}{22}
+\glossaryentry{000030000200003=v3.2.3>cexam_fmt_pic:nnnn=\verb!*&\cexam_fmt_pic:nnnn&:>增加表格格式化|hdclindex{509}{}}{22}
+\glossaryentry{000030000200004=v3.2.4>cexam_fmt_pic:nnnn=\verb!*&\cexam_fmt_pic:nnnn&:>使用\pkg  {l3box}重构，不再使用\pkg  {parbox}|hdclindex{509}{}}{22}
+\glossaryentry{000030000200009=v3.2.9>cexam_fmt_pic:nnnn=\verb!*&\cexam_fmt_pic:nnnn&:>修复格式化图片后高度的错误|hdclindex{509}{}}{22}
+\glossaryentry{000030000300005=v3.3.5>cexam_fmt_pic:nnnn=\verb!*&\cexam_fmt_pic:nnnn&:>使用正则表达式改写部分代码|hdclindex{509}{}}{22}
+\glossaryentry{000030000000006=v3.0.6>cexam_type_i:nnnnnnn=\verb!*&\cexam_type_i:nnnnnnn&:>创建二级缩排程序|hdclindex{599}{}}{24}
+\glossaryentry{000030000000007=v3.0.7>cexam_type_i:nnnnnnn=\verb!*&\cexam_type_i:nnnnnnn&:>修改为七参量函数,增加图片位置格式控制|hdclindex{599}{}}{24}
+\glossaryentry{000030000100003=v3.1.3>cexam_type_i:nnnnnnn=\verb!*&\cexam_type_i:nnnnnnn&:>修改图片放置命令|hdclindex{599}{}}{24}
+\glossaryentry{000030000100004=v3.1.4>cexam_type_i:nnnnnnn=\verb!*&\cexam_type_i:nnnnnnn&:>精简长度付值重构程序|hdclindex{599}{}}{24}
+\glossaryentry{000030000000006=v3.0.6>cexam_type_ii:nnnnnnnnn=\verb!*&\cexam_type_ii:nnnnnnnnn&:>增加三级缩排程序|hdclindex{621}{}}{24}
+\glossaryentry{000030000000007=v3.0.7>cexam_type_ii:nnnnnnnnn=\verb!*&\cexam_type_ii:nnnnnnnnn&:>增加图片左右位置控制|hdclindex{621}{}}{24}
+\glossaryentry{000030000000007=v3.0.7>cexam_type_ii:nnnnnnnnn=\verb!*&\cexam_type_ii:nnnnnnnnn&:>整理三级缩进代码|hdclindex{621}{}}{24}
+\glossaryentry{000030000100000=v3.1.0>cexam_type_ii:nnnnnnnnn=\verb!*&\cexam_type_ii:nnnnnnnnn&:>由于精简了测行程序,所以此程序也精简掉了一行代码|hdclindex{621}{}}{24}
+\glossaryentry{000030000100001=v3.1.1>cexam_type_ii:nnnnnnnnn=\verb!*&\cexam_type_ii:nnnnnnnnn&:>去除了若尾部为空,多一行的bug|hdclindex{621}{}}{24}
+\glossaryentry{000030000100002=v3.1.2>cexam_type_ii:nnnnnnnnn=\verb!*&\cexam_type_ii:nnnnnnnnn&:>全新改写|hdclindex{621}{}}{24}
+\glossaryentry{000030000100002=v3.1.2>cexam_type_ii:nnnnnnnnn=\verb!*&\cexam_type_ii:nnnnnnnnn&:>基于新的测行程序去除微小bug|hdclindex{621}{}}{24}
+\glossaryentry{000030000100004=v3.1.4>cexam_type_ii:nnnnnnnnn=\verb!*&\cexam_type_ii:nnnnnnnnn&:>精简和重构程序|hdclindex{621}{}}{24}
+\glossaryentry{000030000000009=v3.0.9>cexam_type_iii:nnnnnnn=\verb!*&\cexam_type_iii:nnnnnnn&:>增加图片居中排版程序|hdclindex{667}{}}{26}
+\glossaryentry{000030000100002=v3.1.2>cexam_type_iii:nnnnnnn=\verb!*&\cexam_type_iii:nnnnnnn&:>使用新的测行程序改写|hdclindex{667}{}}{26}
+\glossaryentry{000030000100004=v3.1.4>cexam_type_iii:nnnnnnn=\verb!*&\cexam_type_iii:nnnnnnn&:>精简代码,重构部分程序|hdclindex{667}{}}{26}
+\glossaryentry{000030000100001=v3.1.1>cexam_type_iv:nnnnnnnn=\verb!*&\cexam_type_iv:nnnnnnnn&:>新增图文排版,取代原纯文本排版|hdclindex{691}{}}{26}
+\glossaryentry{000030000100002=v3.1.2>cexam_type_iv:nnnnnnnn=\verb!*&\cexam_type_iv:nnnnnnnn&:>去除二级缩进的代码置0|hdclindex{691}{}}{26}
+\glossaryentry{000030000100002=v3.1.2>cexam_type_iv:nnnnnnnn=\verb!*&\cexam_type_iv:nnnnnnnn&:>使用新的测行程序重新设计了代码|hdclindex{691}{}}{26}
+\glossaryentry{000030000100004=v3.1.4>cexam_type_iv:nnnnnnnn=\verb!*&\cexam_type_iv:nnnnnnnn&:>精简并重构部分代码|hdclindex{691}{}}{26}
+\glossaryentry{000030000100007=v3.1.7>cexam_type_iv:nnnnnnnn=\verb!*&\cexam_type_iv:nnnnnnnn&:>修复二级缩进错误|hdclindex{691}{}}{26}
+\glossaryentry{000030000100008=v3.1.8>cexam_type_iv:nnnnnnnn=\verb!*&\cexam_type_iv:nnnnnnnn&:>修复二级缩进错误|hdclindex{691}{}}{26}
+\glossaryentry{000030000100009=v3.1.9>cexam_type_iv:nnnnnnnn=\verb!*&\cexam_type_iv:nnnnnnnn&:>修复题高小于图高时的自动填充空白|hdclindex{691}{}}{26}
+\glossaryentry{000030000000009=v3.0.9>cexam_type_v:nnnnn=\verb!*&\cexam_type_v:nnnnn&:>增加无图排版模式|hdclindex{731}{}}{27}
+\glossaryentry{000030000100001=v3.1.1>cexam_type_v:nnnnn=\verb!*&\cexam_type_v:nnnnn&:>排版号由iv增加一个,变为v|hdclindex{731}{}}{27}
+\glossaryentry{000030000100002=v3.1.2>cexam_type_v:nnnnn=\verb!*&\cexam_type_v:nnnnn&:>精简两行代码|hdclindex{731}{}}{27}
+\glossaryentry{000030000100002=v3.1.2>cexam_type_v:nnnnn=\verb!*&\cexam_type_v:nnnnn&:>使用新的测行程序重新设计了代码|hdclindex{731}{}}{27}
+\glossaryentry{000030000100004=v3.1.4>cexam_type_v:nnnnn=\verb!*&\cexam_type_v:nnnnn&:>精简并重构部分代码|hdclindex{731}{}}{27}
+\glossaryentry{000030000200003=v3.2.3>cexam_sep_txt_tl=\verb!*&\cexam_sep_txt_tl&:>将原来的控制序列修改为字符串格式|hdclindex{749}{}}{28}
+\glossaryentry{000030000100000=v3.1.0>picture=\verb!*&picture&:>增加图片与文本初级分离程序|hdclindex{770}{}}{28}
+\glossaryentry{000030000100002=v3.1.2>picture=\verb!*&picture&:>修改无图时的提醒格式|hdclindex{770}{}}{28}
+\glossaryentry{000030000100003=v3.1.3>picture=\verb!*&picture&:>图片界定符换为<<和>>|hdclindex{770}{}}{28}
+\glossaryentry{000030000100005=v3.1.5>picture=\verb!*&picture&:>增加对图片尺寸的探测，并限制大图|hdclindex{770}{}}{28}
+\glossaryentry{000030000100005=v3.1.5>picture=\verb!*&picture&:>加入message 提示图片太大和太小|hdclindex{770}{}}{28}
+\glossaryentry{000030000100009=v3.1.9>picture=\verb!*&picture&:>允许通过较宽的图片,限制图高为半个行宽|hdclindex{770}{}}{28}
+\glossaryentry{000030000200003=v3.2.3>picture=\verb!*&picture&:>删除命令\cs {cexam_sep_pictxt_i:p},同时删除定界符|hdclindex{770}{}}{28}
+\glossaryentry{000030000300000=v3.3.0>cexam_sep_tikz:p=\verb!*&\cexam_sep_tikz:p&:>修复无图时布尔值设置的错误|hdclindex{828}{}}{29}
+\glossaryentry{000030000300001=v3.3.1>cexam_sep_multiply_ii:p=\verb!*&\cexam_sep_multiply_ii:p&:>加入多图多表并排的处理|hdclindex{863}{}}{30}
+\glossaryentry{000030000100000=v3.1.0>cexam_ind_hat:nnnn=\verb!*&\cexam_ind_hat:nnnn&:>增加前缀设置程序|hdclindex{878}{}}{30}
+\glossaryentry{000030000100007=v3.1.7>cexam_ind_hat:nnnn=\verb!*&\cexam_ind_hat:nnnn&:>由原来的二参量改为三参量|hdclindex{878}{}}{30}
+\glossaryentry{000030000200002=v3.2.2>cexam_ind_hat:nnnn=\verb!*&\cexam_ind_hat:nnnn&:>修改下沉量为0.01|hdclindex{878}{}}{30}
+\glossaryentry{000030000200005=v3.2.5>cexam_ind_hat:nnnn=\verb!*&\cexam_ind_hat:nnnn&:>修改为四个参量，加入高度参量，重写代码，去除\cs {parbox}|hdclindex{878}{}}{30}
+\glossaryentry{000030000200007=v3.2.7>cexam_ind_hat:nnn=\verb!*&\cexam_ind_hat:nnn&:>新增命令|hdclindex{888}{}}{31}
+\glossaryentry{000030000000009=v3.0.9>cho_get_lmax:nn=\verb!*&\cho_get_lmax:nn&:>增加选择题选项最大长度获得程序|hdclindex{897}{}}{31}
+\glossaryentry{000030000200000=v3.2.0>cho_get_lmax:nn=\verb!*&\cho_get_lmax:nn&:>删除\cs {cho_get_lmax:n}|hdclindex{897}{}}{31}
+\glossaryentry{000030000200000=v3.2.0>cho_get_lmax:nn=\verb!*&\cho_get_lmax:nn&:>新增\cs {cho_get_lmax:nn}|hdclindex{897}{}}{31}
+\glossaryentry{000030000200001=v3.2.1>cho_fmt_tl=\verb!*&\cho_fmt_tl&:>新增命令|hdclindex{903}{}}{31}
+\glossaryentry{000030000200002=v3.2.2>cho_fmt_tl=\verb!*&\cho_fmt_tl&:>修改为\cs {cho_fmt_tl}|hdclindex{903}{}}{31}
+\glossaryentry{000030000100000=v3.1.0>cho_opt_type_i:nnnn=\verb!*&\cho_opt_type_i:nnnn&:>增加选择题短选项一行排版|hdclindex{905}{}}{31}
+\glossaryentry{000030000100002=v3.1.2>cho_opt_type_i:nnnn=\verb!*&\cho_opt_type_i:nnnn&:>追加了每个选项的排版宽度|hdclindex{905}{}}{31}
+\glossaryentry{000030000100002=v3.1.2>cho_opt_type_i:nnnn=\verb!*&\cho_opt_type_i:nnnn&:>改写了排版选项,以解决水平盒子偶然过宽问题|hdclindex{905}{}}{31}
+\glossaryentry{000030000200000=v3.2.0>cho_opt_type_i:nnnn=\verb!*&\cho_opt_type_i:nnnn&:>优化了单行排版|hdclindex{905}{}}{31}
+\glossaryentry{000030000200001=v3.2.1>cho_opt_type_i:nnnn=\verb!*&\cho_opt_type_i:nnnn&:>规范了选项间隔|hdclindex{905}{}}{31}
+\glossaryentry{000030000100000=v3.1.0>cho_opt_type_ii:nnnn=\verb!*&\cho_opt_type_ii:nnnn&:>增加选择题中选项二行排版|hdclindex{913}{}}{31}
+\glossaryentry{000030000100002=v3.1.2>cho_opt_type_ii:nnnn=\verb!*&\cho_opt_type_ii:nnnn&:>追加了每个选项的排版宽度|hdclindex{913}{}}{31}
+\glossaryentry{000030000100002=v3.1.2>cho_opt_type_ii:nnnn=\verb!*&\cho_opt_type_ii:nnnn&:>改写了排版选项,以解决水平盒子偶然过宽问题|hdclindex{913}{}}{31}
+\glossaryentry{000030000200001=v3.2.1>cho_opt_type_ii:nnnn=\verb!*&\cho_opt_type_ii:nnnn&:>规范了选项间隔|hdclindex{913}{}}{31}
+\glossaryentry{000030000100000=v3.1.0>cho_opt_type_iii:nnnn=\verb!*&\cho_opt_type_iii:nnnn&:>增加选择题长选项多行排版|hdclindex{922}{}}{31}
+\glossaryentry{000030000200001=v3.2.1>cho_opt_type_iii:nnnn=\verb!*&\cho_opt_type_iii:nnnn&:>规范了选项间隔|hdclindex{922}{}}{31}
+\glossaryentry{000030000200005=v3.2.5>cho_opt_type_iii:nnnn=\verb!*&\cho_opt_type_iii:nnnn&:>由于修改了\cs {cexam_ind_hat:nnnn}，所以此处也对应做了修改|hdclindex{922}{}}{31}
+\glossaryentry{000030000100000=v3.1.0>cexam_fmt_opt_cho:nnnn=\verb!*&\cexam_fmt_opt_cho:nnnn&:>增加选择题选项格式化程序|hdclindex{933}{}}{32}
+\glossaryentry{000030000100002=v3.1.2>cexam_fmt_opt_cho:nnnn=\verb!*&\cexam_fmt_opt_cho:nnnn&:>去除选项排版不对齐bug|hdclindex{933}{}}{32}
+\glossaryentry{000030000100005=v3.1.5>cexam_fmt_opt_cho:nnnn=\verb!*&\cexam_fmt_opt_cho:nnnn&:>去除多题排版时,上一题选项最长对下一题的影响|hdclindex{933}{}}{32}
+\glossaryentry{000030000100005=v3.1.5>cexam_fmt_opt_cho:nnnn=\verb!*&\cexam_fmt_opt_cho:nnnn&:>恢复二行选项排版时,每项宽为半个行宽.|hdclindex{933}{}}{32}
+\glossaryentry{000030000100009=v3.1.9>cexam_fmt_opt_cho:nnnn=\verb!*&\cexam_fmt_opt_cho:nnnn&:>优化选项双行排版|hdclindex{933}{}}{32}
+\glossaryentry{000030000200000=v3.2.0>cexam_fmt_opt_cho:nnnn=\verb!*&\cexam_fmt_opt_cho:nnnn&:>优化选项单行排版|hdclindex{933}{}}{32}
+\glossaryentry{000030000200000=v3.2.0>cexam_fmt_opt_cho:nnnn=\verb!*&\cexam_fmt_opt_cho:nnnn&:>再次优化选项双行排版|hdclindex{933}{}}{32}
+\glossaryentry{000030000100002=v3.1.2>cexam_sep_pictxt:n=\verb!*&\cexam_sep_pictxt:n&:>新增图片与文字分离程序|hdclindex{976}{}}{32}
+\glossaryentry{000030000200003=v3.2.3>cexam_sep_pictxt:n=\verb!*&\cexam_sep_pictxt:n&:>完全改写此命令|hdclindex{976}{}}{32}
+\glossaryentry{000030000300001=v3.3.1>cexam_sep_pictxt:n=\verb!*&\cexam_sep_pictxt:n&:>加入多图或多表模式|hdclindex{976}{}}{32}
+\glossaryentry{000030000100007=v3.1.7>cexam_number_tag_i_tl=\verb!*&\cexam_number_tag_i_tl&:>新增程序|hdclindex{1028}{}}{33}
+\glossaryentry{000030000200002=v3.2.2>cexam_number_tag_i_tl=\verb!*&\cexam_number_tag_i_tl&:>修改命令为tokenlist|hdclindex{1028}{}}{33}
+\glossaryentry{000030000300004=v3.3.4>refd=\verb!*&\refd&:>新增命令|hdclindex{1031}{}}{33}
+\glossaryentry{000030000300004=v3.3.4>refd=\verb!*&\refd&:>新增随机模式下选项引用命令|hdclindex{1031}{}}{33}
+\glossaryentry{000030000300004=v3.3.4>choice_option_set_i:p=\verb!*&\choice_option_set_i:p&:>新增命令|hdclindex{1037}{}}{33}
+\glossaryentry{000030000300004=v3.3.4>choice_randint_make:=\verb!*&\choice_randint_make:&:>新增命令|hdclindex{1060}{}}{34}
+\glossaryentry{000030000300004=v3.3.4>choice_option_set_ii:p=\verb!*&\choice_option_set_ii:p&:>新增命令|hdclindex{1121}{}}{35}
+\glossaryentry{000030000300004=v3.3.4>choice_ans_order:n=\verb!*&\choice_ans_order:n&:>新增命令|hdclindex{1132}{}}{35}
+\glossaryentry{000030000300004=v3.3.4>choice_option_set:nnnn=\verb!*&\choice_option_set:nnnn&:>新增命令|hdclindex{1141}{}}{35}
+\glossaryentry{000030000300004=v3.3.4>choice_option_set:nnnn=\verb!*&\choice_option_set:nnnn&:>使用布尔表达式优化实现过程|hdclindex{1141}{}}{35}
+\glossaryentry{000030000100002=v3.1.2>choice_type_i:p=\verb!*&\choice_type_i:p&:>新增选择题排版程序|hdclindex{1161}{}}{35}
+\glossaryentry{000030000100003=v3.1.3>choice_type_i:p=\verb!*&\choice_type_i:p&:>更名|hdclindex{1161}{}}{35}
+\glossaryentry{000030000100004=v3.1.4>choice_type_i:p=\verb!*&\choice_type_i:p&:>修复环境排题时图片下标格式错误|hdclindex{1161}{}}{35}
+\glossaryentry{000030000100004=v3.1.4>choice_type_i:p=\verb!*&\choice_type_i:p&:>加入选择题空白括号|hdclindex{1161}{}}{35}
+\glossaryentry{000030000100007=v3.1.7>choice_type_i:p=\verb!*&\choice_type_i:p&:>增强题号功能,配合生成例题模式|hdclindex{1161}{}}{35}
+\glossaryentry{000030000100009=v3.1.9>choice_type_i:p=\verb!*&\choice_type_i:p&:>增加图片超半个行宽时的排版|hdclindex{1161}{}}{35}
+\glossaryentry{000030000200001=v3.2.1>choice_type_i:p=\verb!*&\choice_type_i:p&:>规范了选项间隔|hdclindex{1161}{}}{35}
+\glossaryentry{000030000200007=v3.2.7>choice_type_i:p=\verb!*&\choice_type_i:p&:>修改了题号命令为三个参量|hdclindex{1161}{}}{35}
+\glossaryentry{000030000300004=v3.3.4>choice_type_i:p=\verb!*&\choice_type_i:p&:>修改选项间隔符号为\cs {option}及选项处理|hdclindex{1161}{}}{35}
+\glossaryentry{000030000300005=v3.3.5>choice_option_total:p=\verb!*&\choice_option_total:p&:>新增命令|hdclindex{1333}{}}{39}
+\glossaryentry{000030000100003=v3.1.3>choice_warning:=\verb!*&\choice_warning:&:>新增命令|hdclindex{1343}{}}{39}
+\glossaryentry{000030000300005=v3.3.5>choice_warning:=\verb!*&\choice_warning:&:>修改了提示内容|hdclindex{1343}{}}{39}
+\glossaryentry{000030000100003=v3.1.3>choice_type:p=\verb!*&\choice_type:p&:>重新定义选择题排版程序|hdclindex{1350}{}}{39}
+\glossaryentry{000030000300004=v3.3.4>choice_type:p=\verb!*&\choice_type:p&:>加入了随机选项排列功能，同时兼容之前的选项输入格式|hdclindex{1350}{}}{39}
+\glossaryentry{000030000300005=v3.3.5>choice_type:p=\verb!*&\choice_type:p&:>去除了对旧输入格式的兼容|hdclindex{1350}{}}{39}
+\glossaryentry{000030000100003=v3.1.3>blank_type_i:p=\verb!*&\blank_type_i:p&:>新增命令|hdclindex{1367}{}}{39}
+\glossaryentry{000030000100004=v3.1.4>blank_type_i:p=\verb!*&\blank_type_i:p&:>修复环境排题时图片下标格式错误|hdclindex{1367}{}}{39}
+\glossaryentry{000030000100009=v3.1.9>blank_type_i:p=\verb!*&\blank_type_i:p&:>增加宽图排版|hdclindex{1367}{}}{39}
+\glossaryentry{000030000300002=v3.3.2>blank_type_i:p=\verb!*&\blank_type_i:p&:>修复题干高于图高时排版时调用排版模式的错误|hdclindex{1367}{}}{39}
+\glossaryentry{000030000100003=v3.1.3>blank_type:p=\verb!*&\blank_type:p&:>新增命令|hdclindex{1444}{}}{41}
+\glossaryentry{000030000200007=v3.2.7>blank_type:p=\verb!*&\blank_type:p&:>修改了题号命令为三个参量|hdclindex{1444}{}}{41}
+\glossaryentry{000030000200002=v3.2.2>cexam_blan:n=\verb!*&\cexam_blan:n&:>规范填空题命令，修改为字符串命令|hdclindex{1457}{}}{41}
+\glossaryentry{000030000100003=v3.1.3>judge_type:p=\verb!*&\judge_type:p&:>新增命令|hdclindex{1475}{}}{42}
+\glossaryentry{000030000100003=v3.1.3>cexam_qitem:=\verb!*&\cexam_qitem:&:>新增命令|hdclindex{1478}{}}{42}
+\glossaryentry{000030000200005=v3.2.5>cexam_qitem:=\verb!*&\cexam_qitem:&:>使用\cs {cexam_ind_hat:nnnn}改写，删除了原来的\cs {parbox}|hdclindex{1478}{}}{42}
+\glossaryentry{000030000200007=v3.2.7>cexam_qitem:=\verb!*&\cexam_qitem:&:>修改了题号命令为三个参量|hdclindex{1478}{}}{42}
+\glossaryentry{000030000100003=v3.1.3>calculate_type_i:p=\verb!*&\calculate_type_i:p&:>新增命令|hdclindex{1484}{}}{42}
+\glossaryentry{000030000100004=v3.1.4>calculate_type_i:p=\verb!*&\calculate_type_i:p&:>修复环境排版时图片下标格式错误|hdclindex{1484}{}}{42}
+\glossaryentry{000030000100009=v3.1.9>calculate_type_i:p=\verb!*&\calculate_type_i:p&:>增加图宽大于半个行宽的排版|hdclindex{1484}{}}{42}
+\glossaryentry{000030000100009=v3.1.9>calculate_type_i:p=\verb!*&\calculate_type_i:p&:>置零计数器改为标准的\cs {int_zero:N}|hdclindex{1484}{}}{42}
+\glossaryentry{000030000200007=v3.2.7>calculate_type_i:p=\verb!*&\calculate_type_i:p&:>修改了题号命令为三个参量|hdclindex{1484}{}}{42}
+\glossaryentry{000030000100003=v3.1.3>calculate_type:p=\verb!*&\calculate_type:p&:>新增命令|hdclindex{1568}{}}{43}
+\glossaryentry{000030000100003=v3.1.3>ana_tag_i_tl=\verb!*&\ana_tag_i_tl&:>新增命令|hdclindex{1575}{}}{44}
+\glossaryentry{000030000100006=v3.1.6>ana_tag_i_tl=\verb!*&\ana_tag_i_tl&:>新增答案文件中的标签命令|hdclindex{1575}{}}{44}
+\glossaryentry{000030000200002=v3.2.2>ana_tag_i_tl=\verb!*&\ana_tag_i_tl&:>修改命令为tokenlist|hdclindex{1575}{}}{44}
+\glossaryentry{000030000200008=v3.2.8>ana_tag_i_tl=\verb!*&\ana_tag_i_tl&:>增加证明题标签|hdclindex{1575}{}}{44}
+\glossaryentry{000030000100003=v3.1.3>analysis_type:p=\verb!*&\analysis_type:p&:>新增命令|hdclindex{1582}{}}{44}
+\glossaryentry{000030000300004=v3.3.4>cexam_optrand_iow:n=\verb!*&\cexam_optrand_iow:n&:>新增命令|hdclindex{1601}{}}{44}
+\glossaryentry{000030000100006=v3.1.6>cexam_answer_iow:p=\verb!*&\cexam_answer_iow:p&:>新增命令|hdclindex{1604}{}}{44}
+\glossaryentry{000030000200002=v3.2.2>cexam_answer_iow:p=\verb!*&\cexam_answer_iow:p&:>修改答案写出填空题命令|hdclindex{1604}{}}{44}
+\glossaryentry{000030000100006=v3.1.6>cexam_answer_add:p=\verb!*&\cexam_answer_add:p&:>新增命令|hdclindex{1642}{}}{45}
+\glossaryentry{000030000100009=v3.1.9>cexam_table_bool=\verb!*&\cexam_table_bool&:>新增布尔值，修复目录错误|hdclindex{1652}{}}{45}
+\glossaryentry{000030000100006=v3.1.6>@sset=\verb!*&\@sset&:>新增命令|hdclindex{1668}{}}{45}
+\glossaryentry{000030000100007=v3.1.7>@sset=\verb!*&\@sset&:>加入例题计数器随章计数器置零|hdclindex{1668}{}}{45}
+\glossaryentry{000030000100008=v3.1.8>@sset=\verb!*&\@sset&:>追加重定义章节命令时的检测,适应不同文档类|hdclindex{1668}{}}{45}
+\glossaryentry{000030000100009=v3.1.9>@sset=\verb!*&\@sset&:>置零计数器改用标准的\cs {int_zero:N}|hdclindex{1668}{}}{45}
+\glossaryentry{000030000200002=v3.2.2>@sset=\verb!*&\@sset&:>修复题号不置零错误|hdclindex{1668}{}}{45}
+\glossaryentry{000030000300003=v3.3.3>@sset=\verb!*&\@sset&:>初步解决\cs {@sect}的修改导致与hyperref宏包的冲突|hdclindex{1668}{}}{45}
+\glossaryentry{000030000100006=v3.1.6>answerstd=\verb!*&answerstd&:>新增命令|hdclindex{1726}{}}{46}
+\glossaryentry{000030000200008=v3.2.8>answerstd=\verb!*&answerstd&:>末段不必追加一个空行|hdclindex{1726}{}}{46}
+\glossaryentry{000030000300000=v3.3.0>answerstd=\verb!*&answerstd&:>优化末段不必追加一行功能|hdclindex{1726}{}}{46}
+\glossaryentry{000030000100006=v3.1.6>makeanswer=\verb!*&\makeanswer&:>新增命令|hdclindex{1733}{}}{46}
+\glossaryentry{000030000100007=v3.1.7>makeanswer=\verb!*&\makeanswer&:>新打开一页后再排版答案|hdclindex{1733}{}}{46}
+\glossaryentry{000030000100008=v3.1.8>makeanswer=\verb!*&\makeanswer&:>追加超链接增加答案前对章节命令的检测|hdclindex{1733}{}}{46}
+\glossaryentry{000030000100009=v3.1.9>makeanswer=\verb!*&\makeanswer&:>置零计数器改用标准的\cs {int_zero:N}|hdclindex{1733}{}}{46}
+\glossaryentry{000030000100009=v3.1.9>makeanswer=\verb!*&\makeanswer&:>去除答案生成时引用答案文件的错误|hdclindex{1733}{}}{46}
+\glossaryentry{000030000100009=v3.1.9>makeanswer=\verb!*&\makeanswer&:>增加目录中参考答案提示|hdclindex{1733}{}}{46}
+\glossaryentry{000030000200002=v3.2.2>makeanswer=\verb!*&\makeanswer&:>修复\cs {phantomsection}不引用hypter宏包时错误|hdclindex{1733}{}}{46}
+\glossaryentry{000030000100003=v3.1.3>everypar_choice:p=\verb!*&\everypar_choice:p&:>新增命令|hdclindex{1769}{}}{47}
+\glossaryentry{000030000300004=v3.3.4>everypar_choice:p=\verb!*&\everypar_choice:p&:>选择题加入了随机选项排列功能，同时兼容之前的选项输入格式|hdclindex{1769}{}}{47}
+\glossaryentry{000030000100003=v3.1.3>everypar_blank:p=\verb!*&\everypar_blank:p&:>新增命令|hdclindex{1807}{}}{47}
+\glossaryentry{000030000100007=v3.1.7>everypar_blank:p=\verb!*&\everypar_blank:p&:>修复填空题排版答案置零错误|hdclindex{1807}{}}{47}
+\glossaryentry{000030000200002=v3.2.2>everypar_blank:p=\verb!*&\everypar_blank:p&:>填空题答案输出改为字符串|hdclindex{1807}{}}{47}
+\glossaryentry{000030000100003=v3.1.3>everypar_judge:p=\verb!*&\everypar_judge:p&:>新增命令|hdclindex{1832}{}}{48}
+\glossaryentry{000030000100003=v3.1.3>everypar_calculate:p=\verb!*&\everypar_calculate:p&:>新增命令|hdclindex{1848}{}}{48}
+\glossaryentry{000030000300000=v3.3.0>everypar_calculate:p=\verb!*&\everypar_calculate:p&:>优化末段不必追加一行功能|hdclindex{1848}{}}{48}
+\glossaryentry{000030000100003=v3.1.3>everypar_proofs:p=\verb!*&\everypar_proofs:p&:>新增命令|hdclindex{1864}{}}{48}
+\glossaryentry{000030000200008=v3.2.8>everypar_proofs:p=\verb!*&\everypar_proofs:p&:>新增证明题命令|hdclindex{1864}{}}{48}
+\glossaryentry{000030000200009=v3.2.9>everypar_proofs:p=\verb!*&\everypar_proofs:p&:>简化证明题命令|hdclindex{1864}{}}{48}
+\glossaryentry{000030000100003=v3.1.3>everypar_proof:p=\verb!*&\everypar_proof:p&:>新增命令|hdclindex{1878}{}}{49}
+\glossaryentry{000030000100003=v3.1.3>qitem=\verb!*&\qitem&:>新增命令|hdclindex{1897}{}}{49}
+\glossaryentry{000030000100003=v3.1.3>blank=\verb!*&\blank&:>新增命令|hdclindex{1907}{}}{49}
+\glossaryentry{000030000100007=v3.1.7>change_normal:n=\verb!*&\change_normal:n&:>新增命令|hdclindex{1910}{}}{49}
+\glossaryentry{000030000100008=v3.1.8>change_normal:n=\verb!*&\change_normal:n&:>增加对章节号的检测,存在才重定义例题标签|hdclindex{1910}{}}{49}
+\glossaryentry{000030000100009=v3.1.9>change_normal:n=\verb!*&\change_normal:n&:>修改\cs {str_if_in:nnTF}为\cs {IfNoValueTF}|hdclindex{1910}{}}{49}
+\glossaryentry{000030000100003=v3.1.3>jisuan=\verb!*&jisuan&:>新增环境|hdclindex{1944}{}}{50}
+\glossaryentry{000030000100007=v3.1.7>jisuan=\verb!*&jisuan&:>增加例题选项模式|hdclindex{1944}{}}{50}
+\glossaryentry{000030000200008=v3.2.8>jisuan=\verb!*&jisuan&:>习题环境末段可以不必须加入一个空行|hdclindex{1944}{}}{50}
+\glossaryentry{000030000300000=v3.3.0>jisuan=\verb!*&jisuan&:>优化末段加\cs {par}功能|hdclindex{1944}{}}{50}
+\glossaryentry{000030000200008=v3.2.8>zhengming=\verb!*&zhengming&:>增加证明题环境|hdclindex{2044}{}}{51}
+\glossaryentry{000030000300000=v3.3.0>zhengming=\verb!*&zhengming&:>兼容amsthm.sty的proofs环境，但增强其排版能力符合中文多题目排版格式|hdclindex{2044}{}}{51}
+\glossaryentry{000030000100003=v3.1.3>letter_sink:nnnnp=\verb!*&\letter_sink:nnnnp&:>新增首字下沉命令|hdclindex{2101}{}}{52}
+\glossaryentry{000030000100004=v3.1.4>letter_sink:nnnnp=\verb!*&\letter_sink:nnnnp&:>精简并重构部分代码|hdclindex{2101}{}}{52}
+\glossaryentry{000030000200004=v3.2.4>letter_sink:nnnnp=\verb!*&\letter_sink:nnnnp&:>由于重构了图片模式模块，对其作出修改,参数调整为6个|hdclindex{2101}{}}{52}
+\glossaryentry{000030000200005=v3.2.5>letter_sink:nnnnp=\verb!*&\letter_sink:nnnnp&:>恢复原来的5参量结构|hdclindex{2101}{}}{52}
+\glossaryentry{000030000200005=v3.2.5>letter_sink:nnnnp=\verb!*&\letter_sink:nnnnp&:>使用\pkg  {l3color}重写颜色部分|hdclindex{2101}{}}{52}
+\glossaryentry{000030000100003=v3.1.3>lettersink=\verb!*&\lettersink&:>新增首字下沉命令的用户接口命令|hdclindex{2134}{}}{53}
+\glossaryentry{000030000100009=v3.1.9>lettersink=\verb!*&\lettersink&:>修改\cs {str_if_in:nnTF}为\cs {IfNoValueTF}|hdclindex{2134}{}}{53}
+\glossaryentry{000030000300003=v3.3.3>ctrlwarning.sty=\verb!*&ctrlwarning.sty&:>增加ctrlwarning.sty(v1.0)宏包|hdclindex{2151}{}}{53}
+\glossaryentry{000030000300004=v3.3.4>ctrlwarning.sty=\verb!*&ctrlwarning.sty&:>规范化ctrlwarning.sty选项|hdclindex{2151}{}}{53}

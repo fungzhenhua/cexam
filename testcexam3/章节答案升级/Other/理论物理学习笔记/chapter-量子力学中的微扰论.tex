@@ -1,0 +1,190 @@
+\chapter{量子力学中的微扰论}
+
+在量子力学中由于Schr\"odinger 方程一般而言是不好求解的,但是若 Hamilton 量可以分为两部分,第一部分的本征态及本征值可以方便的求解,第二部分与第一部分相差一个数量级以上,则采用逐级求解的方法可以得到一定精度下的近似解.这个方法就是微扰论,但是在实际的物理情景中,一些较低级别的值效果不是很明显,也就没有考虑的必要,然而做为计算的方法上的考虑,讨论这些方法是有益的.
+
+\section{符号约定}
+
+\def\bra#1{\left<#1\right|}
+\def\ket#1{\left|#1\right>}
+\def\braket#1#2{\left<#1|#2\right>}
+
+约定以圆括号表示各级近似,即$E^{(n)}$表示能量的第$n$级近似,$\ket{(n)}$表示第$n$级波函数近似,以双标表示简并态的能级,如$\ket{n\nu}$表示零级波函数的第$\nu$个简并态.
+\begin{gather}
+  \intertext{波函数按数量级展开为}
+  \ket{\Psi}=\sum_{n=0}^\infty \lambda^n\ket{(n)}
+  \intertext{能量按数量级展开为}
+  E=\sum_{n=0}^\infty \lambda^n E^{(n)}
+  \intertext{Hamilton 量和能量的差为$\zeta=\hat{H}-E$,则}
+  \zeta =\sum_{n=0}^\infty \lambda^n \zeta^{(n)}
+\end{gather}
+
+\section{基本原理}
+
+\subsection{递推公式}
+
+\begin{gather}
+  \intertext{Schr\"odinger 方程为}
+  \zeta \ket{\Psi}=0
+  \intertext{代入$\zeta$和$\ket{\Psi}$按数量级的展开式得}
+  \sum_{n=0}^\infty \sum_{i=0}^n \zeta^i \ket{(n-i)} \lambda^n=0
+  \intertext{所以得递推公式}
+  \sum_{i=0}^n \zeta^{(i)} \ket{(n-i)}=0
+  \label{eq:weirao0}
+\end{gather}
+
+\subsection{非简并的基本公式}
+
+\begin{gather}
+  \intertext{在式\eqref{eq:weirao0}中取$n=0$,则得零级近似} 
+  \zeta^{(0)}\ket{(0)}=0
+  \intertext{上述公式是可以严格求解的,所有的近似都是以零级波函数为基础展开的,再取$n=1$得一级递推公式}
+\zeta^{(1)}\ket{(0)}+\zeta^{(0)}\ket{(1)}=0
+  \label{eq:weirao1}
+  \intertext{以$\bra{(0)}$作用于式\eqref{eq:weirao1},得}
+\bra{(0)}\zeta^{(1)}\ket{(0)}=0
+\intertext{于是得一级能量修正为}
+E^{(1)}=\bra{(0)}H'\ket{(0)}
+\intertext{在考虑波函按数量级的展开时我们可以设各级近似波函中不含零级波函,这样可以带来正交的方便.以异于零级波函数的波函$\ket{k}$作用于一级递推式\eqref{eq:weirao1}可得}
+\bra{k}H'\ket{(0)}+\left[E_k-E^{(0)}\right]\braket{k}{(1)}=0
+\intertext{解得}
+\braket{k}{(1)}=-\frac{\bra{k}H'\ket{(0)}}{E_k-E^{(0)}}
+\intertext{重书递推公式如下}
+\zeta^{(n)}\ket{(0)}+\zeta^{(n-1)}\ket{(1)}+\cdots +\zeta^{(1)}\ket{(n-1)}+\zeta^{(0)}\ket{(n)}=0
+\label{eq:weirao2}
+\intertext{以$\bra{(0)}$作用于式\eqref{eq:weirao2}得}
+E^{(n)}=\bra{(0)}H'\ket{(n-1)}
+\label{eq:weirao3}
+\intertext{以异于零级波函数的其它波函$\bra{k}$作用于式\eqref{eq:weirao2}可得}
+\braket{k}{(n)}=\frac{1}{E_k-E^{(0)}}\left[ \sum_{i=1}^n E^{(i)}\braket{k}{(n-i)}-\bra{k}H'\ket{(n-1)}\right]
+\label{eq:weirao4}
+\intertext{由式\eqref{eq:weirao3}和\eqref{eq:weirao4}交替计算可以得到各级近似的解,至此非简并态的情况得到解决.}\notag
+\end{gather}
+
+\subsection{简并态的基本公式}
+
+\begin{gather}
+  \intertext{设简并态的简并度为$s$,则}
+  \zeta^{(0)}\ket{(0)}=0
+  \label{eq:jianbing0}
+  \intertext{由上式可以确定$s$个零级波函数，则其如何选择这$s$个波函数还没有确定，需要下一级的考虑.}
+\zeta^{(1)}\ket{(0)}+\zeta^{(0)}\ket{(1)}=0
+  \label{eq:jianbing1}
+\intertext{以$\bra{n\nu}$左作用上式得}
+\bra{n\nu}\zeta^{(1)}\ket{(0)}=0
+  \label{eq:jianbing2}
+\intertext{以各简并能级展开上式得}
+\sum_{\nu'}\left[H_{\nu\nu'}'-E^{(1)}\delta_{\nu\nu'}\right]\braket{n\nu'}{(0)}=0
+  \label{eq:jianbing3}
+\intertext{上式若存在非零解，则得久期方程}
+\left|H_{\nu\nu'}'-E^{(1)}\delta_{\nu\nu'}\right|=0
+  \label{eq:jianbing4}
+  \intertext{同时可以得到\textcolor{red}{对角化}的$s$个波函数,所以不防设$\ket{(0)}$就是这$s$个零级波函其中的一个,则会给计算带来方便.式\eqref{eq:jianbing3}化为}
+  \begin{gathered}
+    \left[H_{\nu\nu}'-E^{(1)}\right]\cdot 1=0 \qquad (\ket{(0)}=\ket{n\nu})\\
+    \left[0-E^{(1)}\cdot 0 \right] \cdot 1 =0 \qquad (\ket{(0)}\neq \ket{n\nu})
+  \end{gathered}
+  \intertext{上述\textcolor{red}{第二式永远成立},于是对零级波函数 $\ket{n\nu}$的修正项将可以含有除本身之外的其它零级波函数,也可以不含.为了讨论的方便则可以令其不含,则如此计算各级波函数近似时,将和非简并时的计算方式一致,而不用再管零级波函数的其它情况.同时可得一级能量修正为}
+  E^{(1)}=H_{\nu\nu}'
+  \label{eq:jianbing5}
+  \intertext{下面确定一级波函,由式\eqref{eq:jianbing2}可知,$\ket{(i)}\quad i\neq0$中可以包含$\ket{(0)}$及其简并态$\ket{n\nu}$,也可以不包含,如果设置其不包含则会带来正交的便利.于是和非简并态一样可得一级波函数修正}
+\braket{k}{(1)}=-\frac{\bra{k}H'\ket{(0)}}{E_k-E^{(0)}}
+\intertext{和非简并态一样也能得到二级能量修正为}
+E^{(2)}=\bra{(0)}H'\ket{(1)}=-\sum_k \frac{\bra{(0)}H'\ket{k}\bra{k}H'\ket{(0)}}{E_k-E^{(0)}}
+\intertext{利用各级能量及波函的计算公式便可以计算各简并能级的各级能量和波函数修正了.所以关键的一点是在一级能量修正和波函数修正时确定久期方程和$s$个相互正交的零级波函数.}\notag
+\end{gather}
+\subsection{朗道的微扰论}
+在上述小节,求解了简并态微扰论的公式,但是朗道给出了不同的处理方案.如果一个能级是简并的,并且在解得久期方程后所得到的若干个解不能使简并完全解除,则如果按照上一节的公式我们可以对每一个使$\hat{H}'$ 对角化的新零级波函数,我们可以完全按照非简并微扰的步骤来继续求解二级能量修正.但是注意,本来就是微扰,二级能量修正就更加微小了,如果连二级能量修正也不能使微扰完全解除,则原理上可以求解三级能量修正,但是实际上来讲意义不太,因为能量修正差距如此微小,在实验上注定是不明显的.所以朗道的处理,在此处更加高效,因为它不涉及重新选择零级波函数的步骤.具体步骤如下:
+\begin{gather}
+  \intertext{设波函数取到一级,即}
+  \ket{\Psi}=\ket{(0)}+\ket{(1)} \label{eq:weiraolandau0}
+  \intertext{则近似到一级修正的 Schr\"odinger 方程为}
+  \zeta^{(0)}\ket{(0)}+\zeta^{(1)}\ket{(0)}+\zeta^{(0)}\ket{(1)}+\zeta^{(1)}\ket{(1)}=0\label{eq:weiraolandau1}
+  \intertext{按数量级可得,零级容易求解,即}
+  \zeta^{(0)}\ket{(0)}=0\label{eq:weiraolandau2}
+  \intertext{在初步的处理中,按数量级可得和前一节相同的递推公式}
+  \zeta^{(1)}\ket{(0)}+\zeta^{(0)}\ket{(1)}=0\label{eq:weiraolandau3}
+  \intertext{以$\bra{k}$作用于式\eqref{eq:weiraolandau3}可得}
+  \braket{k}{(1)}=-\frac{\bra{k}\hat{H}'\ket{(0)}}{E_k^{(0)}-E_n^{(0)}}\label{eq:weiraolandau4}
+  \intertext{下面的处理将更加精确,我们主计及式\eqref{eq:weiraolandau1}中的最后的小项,且$\braket{k}{(1)}$ 以式\eqref{eq:weiraolandau4}代之,则}
+  \zeta^{(0)}\ket{(1)}+\zeta^{(1)}\ket{(0)}+\sum_k \zeta^{(1)}\ket{k}\braket{k}{(1)}=0\notag
+  \intertext{经过简单计算可得}
+  \zeta^{(0)}\ket{(1)}+\zeta^{(1)}\ket{(0)}-\sum_k\frac{ \zeta^{(1)}\ket{k}\braket{k}{(0)}}{E_k^{(0)}-E_n^{(0)}}=0\label{eq:weiraolandau5}
+  \intertext{以零级波函数中的任意一个$\ket{n\nu}$ 左作用式\eqref{eq:weiraolandau5},同时将$\ket{(0)}$以其零级波函展开,经计算可得}
+  \sum_{\nu'}\left[H_{\nu\nu'}-E^{(1)}\delta_{\nu\nu'}-\sum_k \frac{H'_{\nu k}H'_{k\nu'}}{E_k^{(0)}-E_n^{(0)}}\right]\braket{n\nu'}{(0)}=0\label{eq:weiraolandau6}
+  \intertext{作替换 $U_{\nu\nu'}=H_{\nu\nu'}-\sum_k \frac{H'_{\nu k}H'_{k\nu'}}{E_k^{(0)}-E_n^{(0)}}$ 则式 \eqref{eq:weiraolandau6}可以表达为}
+  \sum_{\nu'}\left[U_{\nu\nu'}-E^{(1)}\delta_{\nu\nu'}\right]\braket{n\nu'}{(0)}=0\label{eq:weiraolandau7}
+  \intertext{如上式存在非零解,则}
+  \left|U_{\nu\nu'}-E^{(1)}\delta_{\nu\nu'}\right|=0\label{eq:weiraolandau8}
+  \intertext{式\eqref{eq:weiraolandau8}形式上和初级的久期方程相同,但是计入了下一级的修正项.解出方程后如果简并完全解除,则目的达到.如果简并未完全解除,则说明使用此种微扰的限度也就达到此种程度了,如果要完全解除微扰,则需要更换微扰的形式.}\notag
+\end{gather}
+
+\subsection{简并态的各级计算}
+
+这里记录的是对于简并能级的严格处理。设简并能级所对应的波函数为
+\begin{equation}
+   \ket{n\nu}=\ket{(\nu0)}+\ket{(\nu1)}+\ket{(\nu2)} + \cdots
+\end{equation}
+由于不同的能量本征态相互正交，则
+\begin{equation}
+   \braket{n\nu'}{n\nu}=\braket{(\nu'0)}{(\nu0)}+\braket{(\nu'0)}{(\nu1)}
+   +\braket{(\nu0)}{(\nu'1)}=\delta_{\nu'\nu}
+\end{equation}
+由此可得
+\begin{equation}
+   \braket{(\nu'0)}{(\nu1)}=0
+\end{equation}
+上式即 $\ket{(n\nu)}$ 一级波函修正中不含简并零级波函数。为了讨论的方便，设置各级能量修正均不含修正的简并的零级波函数，这样能够带来更多的简单公式。先来看零级波函数
+\begin{equation}
+  \zeta^{(0)}\ket{(0)}=0
+\end{equation}
+设简并度为$f$ , 则以简并的任一零级波函数 $\bra{n\nu}$ 左作用上式得
+\begin{gather}
+   \bra{n\nu}\zeta^{(0)}\ket{(0)}=0
+   \intertext{利用Dirac 符号展开，则}
+   \sum_{\nu'}\bra{n\nu}\zeta^{(0)}\ket{n\nu'}\braket{n\nu'}{(0)}=0
+   \intertext{上式即}
+   det \left|H^{(0)}_{\nu\nu'}-E^{(0)}\delta_{\nu\nu'}\right|=0
+\end{gather}
+下面考虑一级修正，递推式为
+\begin{equation}
+   \zeta^{(0)}\ket{(1)}=-\zeta^{(1)}\ket{(0)}
+\end{equation}
+以任意一简并能级 $\bra{n\nu}$ 左作用于上式得
+\begin{gather}
+   \bra{n\nu}\zeta^{(1)}\ket{(0)}=0
+   \intertext{利用Dirac 符号展开，则}
+   \sum_{\nu'}\bra{n\nu}\zeta^{(1)}\ket{n\nu'}\braket{n\nu'}{(0)}=0
+   \intertext{上式即}
+   det \left|H'_{\nu\nu'}-E^{(1)}\delta_{\nu\nu'}\right|=0
+\end{gather}
+如果由上式解得$f$个不同的根，则能级完全解除。如果能级不完全解除，则需要考虑二级近似，如下
+\begin{gather}
+   \zeta^{(0)}\ket{(2)}=-\zeta^{(1)}\ket{(1)}-\zeta^{(2)}\ket{(0)}
+   \intertext{以任意一零级简并能级左作用上式得}
+   \bra{(n\nu)}\zeta^{(1)}\ket{(1)}+\zeta^{(2)}\ket{(0)}=0
+   \intertext{将$\ket{(1)}$ 使用其它非简并零级波函数展开}
+   \sum_k\bra{(n\nu)}\zeta^{(1)}\ket{k}\braket{k}{(1)}+\zeta^{(2)}\braket{n\nu}{(0)}=0
+   \intertext{代入一级波函数修正，得}
+   \sum_k \frac{H'_{\nu k}\bra{k}H'\ket{(0)}}{E_n-E_k}-E^{(2)}\braket{n\nu}{(0)}=0
+   \intertext{将上式中的$\ket{(0)}$ 用各零级简并能级展开得}
+   \sum_{\nu'}\sum_k \frac{H'_{\nu k}H'_{k\nu'}\braket{n\nu'}{(0)}}{E_n-E_k}-E^{(2)}\braket{n\nu}{(0)}=0
+   \intertext{上式可以写成矩阵式为}
+   det \left| \sum_k \frac{H'_{\nu k}H'_{k\nu'}}{E_n-E_k}-E^{(2)}\delta_{\nu\nu'}\right|=0
+\end{gather}
+如果简并仍然没有完全消除，再考虑三级修正。如下
+\begin{equation}
+   \zeta^{(0)}\ket{(3)}=-\zeta^{(1)}\ket{(2)}-\zeta^{(2)}\ket{(1)}-\zeta^{(3)}\ket{(0)}
+\end{equation}
+以任意一简并能级 $\bra{n\nu}$ 左作用于上式得
+\begin{gather}
+   \bra{n\nu}\zeta^{(1)}\ket{(2)}+\zeta^{(3)}\braket{n\nu}{(0)}=0
+   \intertext{将二级修正波函数用其它非简并零级波函数展开得}
+   \sum_k\bra{n\nu}\zeta^{(1)}\ket{k}\braket{k}{(2)}+\zeta^{(3)}\braket{n\nu}{(0)}=0
+   \intertext{进一步可以写成}
+   \sum_{k,k'}\frac{H'_{\nu k}H'_{kk'}\bra{k'}H'\ket{(0)}}{(E_n-E_k)(E_n-E_{k'})}-E^{(3)}\braket{n\nu}{(0)}=0
+   \intertext{将零级波函数用简并的零级波函数展开得}
+   \sum_{\nu'}\left[\sum_{k,k'}\frac{H'_{\nu k}H'_{kk'}H'_{k'\nu'}}{(E_n-E_k)(E_n-E_{k'})}-E^{(3)}\delta_{\nu\nu'}\right]\braket{n\nu'}{(0)}=0
+   \intertext{上式可以写成矩阵}
+   det \left|\sum_{k,k'}\frac{H'_{\nu k}H'_{kk'}H'_{k'\nu'}}{(E_n-E_k)(E_n-E_{k'})}-E^{(3)}\delta_{\nu\nu'}\right|=0
+\end{gather}
+按照此程序作下去，可以得出各级能量修正，直到简并消除。如果简并一直不能消除，则需要更换微扰。但是越精细，则数值越小，由其导致的修正太小而不便实验测量。所以一般有直接意义的是到二级能量修正便可以得到解决，如果还不能解决简并的问题，则更换方法。

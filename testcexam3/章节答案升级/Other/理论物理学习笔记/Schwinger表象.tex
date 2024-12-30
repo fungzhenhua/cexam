@@ -1,0 +1,125 @@
+\section{Schwinger 表象}
+
+曾经学习量子力学时讨论角动量时使用了 Schwinger 表象,但是其提出的原因,书上说是根据群的对称性.\footnote{《量子力学》 (卷一) 曾谨言著,第四版,338页脚注.}在4月27号高中学生期中考试的考场中我想到了此问题的一个来源,论证于此.
+\begin{gather}
+  \intertext{谐振子哈密顿量在自然单位时为}
+  H=\frac{p^2+x^2}{2}
+  \intertext{对于引入升降算子,则理论依据可以是微分方程的理论,也可以是其它理论,但是因子的分解却不是唯一的,这有两种方案均是可行的.其Hamliton 量形式上相同,都是 $H=aa^++\frac{1}{2}$,下面列出二种分解方式如下}
+  \left\{
+    \begin{gathered}
+      a\ =\frac{x+ip}{\sqrt{2}}\\
+      a^+=\frac{x-ip}{\sqrt{2}}
+    \end{gathered}
+  \right.
+  \qquad
+  \left\{
+    \begin{gathered}
+      a\ =\frac{p-ix}{\sqrt{2}}\\
+      a^+=\frac{p+ix}{\sqrt{2}}
+    \end{gathered}
+  \right.
+  \intertext{可以求出上面二种情况的逆表达式分别为}
+  \left\{
+    \begin{gathered}
+      x=\frac{a+a^+}{\sqrt{2}}\\
+      p=\frac{a-a^+}{\sqrt{2}i}
+    \end{gathered}
+  \right.
+  \qquad
+  \left\{
+    \begin{gathered}
+      x=\frac{a^+-a}{\sqrt{2}i}\\
+      p=\frac{a^++a}{\sqrt{2}}
+    \end{gathered}
+  \right.
+  \intertext{根据角动量的构成形式,如果取二组升降算子分别代表 $x,p_x$ 和 $y,p_y$,则有四种方案,第一种的取法为}
+  \left\{
+    \begin{gathered}
+      x=\frac{a_1+a_1^+}{\sqrt{2}}\\
+      p_x=\frac{a_1-a_1^+}{\sqrt{2}i}
+    \end{gathered}
+  \right.
+  \qquad
+  \left\{
+    \begin{gathered}
+      y=\frac{a_2+a_2^+}{\sqrt{2}}\\
+      p_y=\frac{a_2-a_2^+}{\sqrt{2}i}
+    \end{gathered}
+  \right.
+  \intertext{按角动量的构成规则,计算}
+  xp_y-yp_x=\frac{1}{i}[a_1^+a_2-a_1a_2^+]
+  \intertext{第二种取法为}
+  \left\{
+    \begin{gathered}
+      x=\frac{a_1+a_1^+}{\sqrt{2}}\\
+      p_x=\frac{a_1-a_1^+}{\sqrt{2}i}
+    \end{gathered}
+  \right.
+  \qquad
+  \left\{
+    \begin{gathered}
+      y=\frac{a_2^+-a_2}{\sqrt{2}i}\\
+      p_y=\frac{a_2^++a_2}{\sqrt{2}}
+    \end{gathered}
+  \right.
+  \intertext{同样计算角动量则}
+  xp_y-yp_x=[a_1^+a_2+a_1a_2^+]
+  \intertext{第三种取法}
+  \left\{
+    \begin{gathered}
+      x=\frac{a_1^+-a_1}{\sqrt{2}i}\\
+      p_x=\frac{a_1^++a_1}{\sqrt{2}}
+    \end{gathered}
+  \right.
+  \qquad
+  \left\{
+    \begin{gathered}
+      y=\frac{a_2^+-a_2}{\sqrt{2}i}\\
+      p_y=\frac{a_2^++a_2}{\sqrt{2}}
+    \end{gathered}
+  \right.
+  \intertext{计算角动量则}
+  xp_y-yp_x=\frac{1}{i}[a_1^+a_2-a_1a_2^+]
+  \intertext{第四种取法}
+  \left\{
+    \begin{gathered}
+      x=\frac{a_1^+-a_1}{\sqrt{2}i}\\
+      p_x=\frac{a_1^++a_1}{\sqrt{2}}
+    \end{gathered}
+  \right.
+  \qquad
+  \left\{
+    \begin{gathered}
+      y=\frac{a_2+a_2^+}{\sqrt{2}i}\\
+      p_y=\frac{a_2-a_2^+}{\sqrt{2}}
+    \end{gathered}
+  \right.
+  \intertext{计算角动量则}
+  xp_y-yp_x=-[a_1^+a_2+a_1a_2^+]
+%  \intertext{大家注意,上面的取法由于涉及两个自由度,每个自由度上取自然单位,但是所出现的两种线性无关的角动量不能同时成立,因为如两个式子同时成立,则只能有一种对应关系,而一旦选定对应关系,则一个式子表示角动量另一个式子就不再表示角动量.但是从纯代数的观点来看两个表达式都具备角动量的代数特征,如果认为在某一表象中二个式子可以同时成立,则必须放弃从 $x,p_x,y,p_y$ 到 $a_1,a_1^+,a_2,a_2^+$ 的对应关系,这种表象叫做 Schwinger 表象,纯粹来讨论角动量的一般规律.}
+  \intertext{大家注意,在上面的讨论中使用不同的振子分解方式,我们构造出了两个不同的角动量($j_1=\frac{1}{i}[a_1^+a_2-a_1a_2^+]$ 和 $j_2=[a_1^+a_2+a_1a_2^+]$),但是看似又存在问题,因为这两个角动量看似不能共存,因为一旦选定了一种从 $x,p_x,y,p_y$ 到 $a_1,a_1^+,a_2,a_2^+$ 的对应关系,意味着对两式都成立才行,但是若对其一个式子表示角动量,则另一个代入对应关系后就不再是角动量了.这很矛盾!然而,它们确实又都是某个角动量按振子升降算符的分解,所以问题的核心在于$x,p_x,y,p_y$ 和 $a_1,a_1^+,a_2,a_2^+$ 的对应关系上,要保证这两者都是角动量,则对应关系必不是像线性谐振子的对应关系一样,至于其对应关系为何可以不必讨论,而让两个角动量都成立,然后按角动量对易关系求出第三个角动量即可.于是按振子的方式确定的角动量算符只能是代数上满足要求,其数值上应当与对应的角动量差一个常数才对,设两个常数分别为$\alpha$ 和 $\beta$ 然后按下式规定 $j_x,j_y$则}
+  \begin{gathered}
+  j_x=\alpha[a_1^+a_2+a_1a_2^+]\\
+  j_y=\frac{\beta}{i}[a_1^+a_2-a_1a_2^+]
+  \label{eq:jiaodongliangxy}
+  \end{gathered}
+  \intertext{按角动量运算规则可得}
+  [j_x,j_y]=ij_z
+  \intertext{代入$j_x,j_y$可得}
+  j_z=2\alpha\beta[a_1a_1^+-a_2a_2^+]
+  \intertext{按照角动量的特征,再计算 $j_y$ 得}
+  j_y=4\alpha^2\beta [a_1^+a_2-a_1a_2^+]
+  \intertext{将上式和式\eqref{eq:jiaodongliangxy} 第二式对比可得}
+  \alpha=\pm \frac{1}{2}
+  \intertext{同理再由 $j_y$ 和 $j_z$ 计算 $j_x$ 可得}
+  j_x=4\alpha\beta^2[a_1^+a_2+a_1a_2^+]
+  \intertext{将上式和式\eqref{eq:jiaodongliangxy}第一式对比可得}
+  \beta=\pm\frac{1}{2}
+  \intertext{同理可以连续由 $j_x,j_y$ 计算 $j_z$ 或其它等价的计算,可以判断$\alpha$和 $\beta$ 只能取正号,因此在 Schwinger 表象中三个角动量可以表达为}
+  \begin{gathered}
+    j_x=\frac{1}{2}[a_1^+a_2+a_1a_2^+]\\
+    j_y=\frac{1}{2i}[a_1^+a_2-a_1a_2^+]\\
+    j_z=\frac{1}{2}[a_1a_1^+-a_2a_2^+]
+  \end{gathered}
+  \intertext{但是请大家注意,在Schwinger 表象中,升降算符和坐标动量已经不再具备一一对应的简单关系,理由前面已经陈述.}\notag
+\end{gather}

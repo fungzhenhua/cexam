@@ -1,0 +1,124 @@
+\section{牛顿第二定律}
+\subsection{牛顿第二定律的内容}
+物体的加速度的大小跟它受到的作用力成\CJKunderwave{正比},跟它的质量成\CJKunderwave{反比},加速度的方向跟作用力的方向\CJKunderwave{相同}.即
+
+\begin{equation}
+  F=ma
+  \label{eq:newton2}
+\end{equation}
+
+在上式中各物理量的单位分别是:$F$ 单位 $N$,质量$m$ 单位 $kg$,加速度$a$单位 $m/s^2$
+
+\subsection{对牛顿第二定律的理解}
+牛顿第二定律的表达式\eqref{eq:newton2} 中 $F$ 是物体受到的\CJKunderwave{合外力},合外力$F$ 与加速度$a$ 是瞬时对应关系.同时与第一定律不同,第一定律不是实验定律,但是牛顿第二定律\CJKunderwave{是实验定律}.
+
+\subsection{例题分析}
+\begin{selection}
+  1.下列对牛顿第二定律的理解正确的是
+  A.由$F=ma$ 可知,$F$ 与 $a$ 成正比,$m$ 与$a$ 成反比
+  B.牛顿第二定律说明当物体有加速度时,物体才受到外力的作用
+  C.加速度的方向总跟合外力的方向一致
+  D.当外力停止作用时,加速度随之消失
+
+  a.CD
+
+  e.虽然$F=ma$ ,但$F$ 与 $a$ 无关,因$a$ 是由$m$ 和 $F$ 共同决定的,即$a\propto \frac{F}{m}$ 且$a$ 与 $F$ 同时产生,同时消失,同时存在,同时改变;$a$ 与 $F$ 的方向永远相同.综上所述,可知A,B错误,C,D正确.
+
+  2.(多选)一物体随气球匀速上升,某时刻物体从气球上脱落,则物体离开气球的瞬间(不计阻力)
+  A.物体的加速度为零
+  B.物体的加速度为$g$
+  C.物体立即向下运动
+  D.物体仍有向上的速度
+
+  a.BD
+
+  e.物体离开气球,只受重力作用,所以加速度为$g$,A错误,B正确;脱离瞬间由于惯性物体仍有向上的事度,C错误,D正确.
+
+\end{selection}
+\begin{calculate}
+  1.如<:
+  \begin{tikzpicture}
+    \draw (0,0) rectangle (1,1);
+    \draw [pattern = north west lines] (-0.5,-0.2)--(-0.5,0)--(1.5,0)--(1.5,-0.2);
+    \draw [<-,>=stealth,rotate around={143:(0,1)}] (0,1) node [anchor=south west]{\small $F$}--(1,1);
+    \draw [dotted](-0.8,1)--(0,1);
+    \draw (-0.4,1) arc (180:143:0.4);
+    \draw (-0.4,1) node [anchor=south east] {\small $37^\circ$};
+  \end{tikzpicture}
+  :>所示,质量为$1kg$ 的物体静止在水平面上,物体与水平面间的动摩擦因数$\mu=0.5$ ,物体受到大小为$20N$,与水平方向成$37^\circ$ 角斜向下的推力$F$ 作用时,沿水平方向做匀加速直线运动,求物体加速度的大小.($g$ 取$10m/^2$ , $\sin37^\circ =0.6$, $\cos 37^\circ =0.8$ )
+
+  a.$5m/s^2$
+
+  e.取物体为研究对象,对它受力分析如<:
+  \begin{tikzpicture}
+    \draw (0,0) rectangle (1,1);
+    \draw [pattern = north west lines] (-0.5,-0.2)--(-0.5,0)--(1.5,0)--(1.5,-0.2);
+    \draw [->,>=stealth,rotate around={-37:(0.5,0.5)}] (0.5,0.5) --(1.5,0.5)node [anchor=west]{\small $F$};
+    \draw[->,>=stealth] (-1,0.5)--(2,0.5) node [anchor=north] {\small $x$};
+    \draw[->,>=stealth] (0.5,-1)--(0.5,2) node [anchor=west] {\small $y$};
+    \draw [->,>=stealth] (0.5,0.5)--(0.5,1.5) node [anchor=west] {\small $F_N$};
+    \draw [->,>=stealth] (0.5,0.5)--(-0.5,0.5) node [anchor=north] {\small $F_f$};
+    \draw [->,>=stealth] (0.5,0.5)--+(0.8,0) node [anchor=south] {\small $F_x$};
+    \draw [->,>=stealth] (0.5,0.5)--+(0,-0.6) node [anchor=south] {\small $F_y$};
+    \draw [dotted] (1.3,0.5) -- (1.3,-0.1);
+    \draw [dotted] (0.5,-0.1)--(1.3,-0.1);
+    \draw (0.9,0.5) arc (0:-37:0.4);
+    \draw (1,0.3) node {\tiny $\theta$};
+    \draw [->,>=stealth] (0.5,0.5)--(0.5,-0.5) node [anchor=east] {\small $mg$};
+  \end{tikzpicture}
+  :>所示,易求得$F_x=F\cos37^\circ$ , $F_y=F\sin37^\circ$.在水平方向上由牛顿第二定律得
+  $$F\cos37^\circ -F_f=ma$$
+  在竖直方向上受力平衡得
+  $$F_N-mg-F\sin37^\circ=0 $$
+  由摩擦力计算公式得
+  $$F_f=\mu F_N$$
+  以上三式联立解得
+  $$a=5m/s^2$$
+
+  2.如<:
+  \begin{tikzpicture}
+    \draw[pattern=north west lines] (-2,-0.2)--(-2,0)--(2,0)--(2,-0.2);
+    \draw (-1.5,0) rectangle (-1,0.5);
+    \filldraw [black] (-1,0) circle [radius=1pt];
+    \filldraw [black] (1,0) circle [radius=1pt];
+    \draw (-1,-0.2) node [anchor=north] {\small $A$};
+    \draw (1,-0.2) node [anchor=north] {\small $B$};
+  \end{tikzpicture}
+  :>所示,一质量为$8kg$ 的物体静止在粗糙的水平地面上,物体与地面间的动摩擦因数为$0.2$ ,用一水平力$F=20N$ 拉物体由$A$ 点开始运动,经过$8s$ 后撤去拉力$F$ ,再经过一段时间物体到达$B$ 点停止.求($g=10m/s^2$)
+  [1]在拉力作用下物体运动的加速度大小;
+  [2]撤去拉力时物体的速度大小;
+  [3]撤去拉力$F$ 后物体运动的距离.
+
+ a.(1)$0.5m/s^2$ \quad (2) $4m/s$ \quad (3) $4m$
+  
+ e.(1)对物体受力分析,如<:
+ \begin{tikzpicture}
+    \draw[pattern=north west lines] (-2,-0.2)--(-2,0)--(2,0)--(2,-0.2);
+    \draw (-1.5,0) rectangle (-1,0.5);
+    \filldraw [black] (-1,0) circle [radius=1pt];
+    \filldraw [black] (1,0) circle [radius=1pt];
+    \draw (-1,-0.2) node [anchor=north] {\small $A$};
+    \draw (1,-0.2) node [anchor=north] {\small $B$};
+    \draw [->,>=stealth] (-1.25,0.25)--(0.25,0.25) node [anchor=west] {\small $F$};
+    \draw [->,>=stealth] (-1.25,0.25)--(-2.25,0.25) node [anchor=east] {\small $F_f$};
+    \draw [->,>=stealth] (-1.25,0.25)--(-1.25,1) node [anchor=west] {\small $F_N$};
+    \draw [->,>=stealth] (-1.25,0.25)--(-1.25,-1.25) node [anchor=west] {\small $F_N$};
+ \end{tikzpicture}
+ :>所示,得竖直方向由受力平衡得
+ $$F_N-mg=0$$
+ 水平方向,由牛顿第二定律得
+ $$F-\mu F_N=ma_1$$
+ 解得
+ $$a_1=\cfrac{F-\mu F_N}{m}=0.5m/s^2$$
+
+ ee.(2)撤去拉力时物体的速度由运动学公式得
+ $$v=a_1t=4m/s$$
+
+ ee.(3)撤去拉力$F$ 后由牛顿第二定律得
+ $$-\mu mg =ma_2$$
+ 解得
+ $$a_2=-\mu g =-2m/s^2$$
+ 由运动学公式$0-v^2=2a_2x$解得
+ $$x=\cfrac{0-v^2}{2a_2}=4m$$
+
+\end{calculate}

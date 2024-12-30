@@ -1,0 +1,197 @@
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}统计物理学的基本原理}{7}{chapter.1}%
+\contentsline {section}{\numberline {1.1}统计分布}{7}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}平均值的表示}{7}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}统计平衡}{7}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}弛豫时间}{7}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}动理学}{7}{subsection.1.1.4}%
+\contentsline {section}{\numberline {1.2}统计独立}{7}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}准闭合}{7}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}统计独立性}{7}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}均方根涨落}{8}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}相对涨落}{8}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.5}相对涨落与粒子数的平方根成反比}{8}{subsection.1.2.5}%
+\contentsline {section}{\numberline {1.3}刘维定理}{8}{section.1.3}%
+\contentsline {section}{\numberline {1.4}能量的作用}{9}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}微正则分布}{10}{subsection.1.4.1}%
+\contentsline {section}{\numberline {1.5}统计矩阵}{10}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}量子力学中的密度矩阵}{10}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}统计物理学中的密度矩阵}{11}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}概率密度和能量的关系}{12}{subsection.1.5.3}%
+\contentsline {section}{\numberline {1.6}熵}{12}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}熵的定义}{12}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}熵和分布函数的关系}{12}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.3}熵的可加性}{13}{subsection.1.6.3}%
+\contentsline {section}{\numberline {1.7}关于经典统计和量子统计的思考}{13}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}经典统计}{13}{subsection.1.7.1}%
+\contentsline {subsection}{\numberline {1.7.2}量子统计}{14}{subsection.1.7.2}%
+\contentsline {section}{\numberline {1.8}熵的统计表达式}{14}{section.1.8}%
+\contentsline {section}{\numberline {1.9}量子力学基本原理}{15}{section.1.9}%
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}热力学量}{17}{chapter.2}%
+\contentsline {section}{\numberline {2.1}热力学不等式}{17}{section.2.1}%
+\contentsline {section}{\numberline {2.2}能斯特定理}{18}{section.2.2}%
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}巨正则分布}{19}{chapter.3}%
+\contentsline {section}{\numberline {3.1}配分函数}{19}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}关于求和的讨论}{19}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}近独立分布}{19}{subsection.3.1.2}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}量子力学中的微扰论}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}符号约定}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.2}基本原理}{21}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}递推公式}{21}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}非简并的基本公式}{22}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}简并态的基本公式}{22}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}朗道的微扰论}{23}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}简并态的各级计算}{24}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Schwinger 表象}{27}{section.4.3}%
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}国际制和高斯制的换算}{29}{chapter.5}%
+\contentsline {section}{\numberline {5.1}基本公式的转换}{29}{section.5.1}%
+\contentsline {section}{\numberline {5.2}相对论公式}{32}{section.5.2}%
+\contentsline {section}{\numberline {5.3}极化能和磁化能}{33}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}极化能}{33}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}磁化能}{34}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}朗德因子}{34}{section.5.4}%
+\contentsline {chapter}{\numberline {第六章\hspace {.3em}}经典力学}{37}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Possion 括号}{37}{section.6.1}%
+\contentsline {chapter}{\numberline {第七章\hspace {.3em}}非理想气体}{39}{chapter.7}%
+\contentsline {section}{\numberline {7.1}范德瓦尔斯公式}{39}{section.7.1}%
+\contentsline {section}{\numberline {7.2}位力系数与散射振幅的关系}{40}{section.7.2}%
+\contentsline {chapter}{\numberline {第八章\hspace {.3em}}溶液}{43}{chapter.8}%
+\contentsline {section}{\numberline {8.1}强电解质溶液}{43}{section.8.1}%
+\contentsline {chapter}{\numberline {第九章\hspace {.3em}}化学反应}{45}{chapter.9}%
+\contentsline {section}{\numberline {9.1}化学平衡条件}{45}{section.9.1}%
+\contentsline {chapter}{\numberline {第十章\hspace {.3em}}涨落}{47}{chapter.10}%
+\contentsline {section}{\numberline {10.1}高斯分布}{47}{section.10.1}%
+\contentsline {section}{\numberline {10.2}多个热力学量的高斯分布}{48}{section.10.2}%
+\contentsline {subsubsection}{朗道的计算方法}{48}{subsubsection*.2}%
+\contentsline {subsubsection}{直接计算法}{49}{subsubsection*.3}%
+\contentsline {subsubsection}{统计独立性的判断}{50}{subsubsection*.4}%
+\contentsline {chapter}{\numberline {第十一章\hspace {.3em}}二次量子化}{51}{chapter.11}%
+\contentsline {section}{\numberline {11.1}同类粒子的不可分辨原理}{51}{section.11.1}%
+\contentsline {section}{\numberline {11.2}交换作用}{52}{section.11.2}%
+\contentsline {section}{\numberline {11.3}置换对称性}{54}{section.11.3}%
+\contentsline {section}{\numberline {11.4}二次量子化---玻色统计}{59}{section.11.4}%
+\contentsline {section}{\numberline {11.5}二次量子化---费米统计情形}{61}{section.11.5}%
+\contentsline {chapter}{\numberline {第十二章\hspace {.3em}}狭义相对论}{63}{chapter.12}%
+\contentsline {section}{\numberline {12.1}相互作用的传播速度}{63}{section.12.1}%
+\contentsline {subsection}{\numberline {12.1.1}参考系}{63}{subsection.12.1.1}%
+\contentsline {subsection}{\numberline {12.1.2}相对性原理}{63}{subsection.12.1.2}%
+\contentsline {subsection}{\numberline {12.1.3}最大传播速度}{63}{subsection.12.1.3}%
+\contentsline {section}{\numberline {12.2}间隔}{64}{section.12.2}%
+\contentsline {subsection}{\numberline {12.2.1}朗道关于间隔不变性的论述}{64}{subsection.12.2.1}%
+\contentsline {subsection}{\numberline {12.2.2}间隔不变性的第二种论述}{65}{subsection.12.2.2}%
+\contentsline {section}{\numberline {12.3}洛仑兹变换}{65}{section.12.3}%
+\contentsline {subsection}{\numberline {12.3.1}方案一}{66}{subsection.12.3.1}%
+\contentsline {subsection}{\numberline {12.3.2}方案二}{67}{subsection.12.3.2}%
+\contentsline {subsection}{\numberline {12.3.3}方案三}{68}{subsection.12.3.3}%
+\contentsline {section}{\numberline {12.4}固有时}{68}{section.12.4}%
+\contentsline {section}{\numberline {12.5}相对论的速度变换}{70}{section.12.5}%
+\contentsline {section}{\numberline {12.6}相对论中的力学量}{70}{section.12.6}%
+\contentsline {subsection}{\numberline {12.6.1}自由粒子的拉格朗日函数}{70}{subsection.12.6.1}%
+\contentsline {subsection}{\numberline {12.6.2}再议速度变换公式}{72}{subsection.12.6.2}%
+\contentsline {section}{\numberline {12.7}相对速度}{73}{section.12.7}%
+\contentsline {subsection}{\numberline {12.7.1}不变量标量计算法}{73}{subsection.12.7.1}%
+\contentsline {subsection}{\numberline {12.7.2}矢量计算法}{74}{subsection.12.7.2}%
+\contentsline {section}{\numberline {12.8}分布函数的变化}{74}{section.12.8}%
+\contentsline {subsection}{\numberline {12.8.1}基本数学原理}{74}{subsection.12.8.1}%
+\contentsline {subsection}{\numberline {12.8.2}动量微元的变换}{75}{subsection.12.8.2}%
+\contentsline {section}{\numberline {12.9}粒子的衰变}{76}{section.12.9}%
+\contentsline {subsection}{\numberline {12.9.1}椭圆的解析分析}{76}{subsection.12.9.1}%
+\contentsline {subsection}{\numberline {12.9.2}衰变时粒子的偏角问题}{78}{subsection.12.9.2}%
+\contentsline {chapter}{\Large 【参考答案】}{81}{section*.5}%
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}统计物理学的基本原理（答案）}{81}{chapter.ans1}%
+\contentsline {section}{\numberline {1.1}统计分布}{82}{section.ans1.1}%
+\contentsline {subsection}{\numberline {1.1.1}平均值的表示}{82}{subsection.ans1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}统计平衡}{82}{subsection.ans1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}弛豫时间}{82}{subsection.ans1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}动理学}{82}{subsection.ans1.1.4}%
+\contentsline {section}{\numberline {1.2}统计独立}{82}{section.ans1.2}%
+\contentsline {subsection}{\numberline {1.2.1}准闭合}{82}{subsection.ans1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}统计独立性}{82}{subsection.ans1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}均方根涨落}{82}{subsection.ans1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}相对涨落}{82}{subsection.ans1.2.4}%
+\contentsline {subsection}{\numberline {1.2.5}相对涨落与粒子数的平方根成反比}{82}{subsection.ans1.2.5}%
+\contentsline {section}{\numberline {1.3}刘维定理}{82}{section.ans1.3}%
+\contentsline {section}{\numberline {1.4}能量的作用}{82}{section.ans1.4}%
+\contentsline {subsection}{\numberline {1.4.1}微正则分布}{82}{subsection.ans1.4.1}%
+\contentsline {section}{\numberline {1.5}统计矩阵}{82}{section.ans1.5}%
+\contentsline {subsection}{\numberline {1.5.1}量子力学中的密度矩阵}{82}{subsection.ans1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}统计物理学中的密度矩阵}{82}{subsection.ans1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}概率密度和能量的关系}{82}{subsection.ans1.5.3}%
+\contentsline {section}{\numberline {1.6}熵}{82}{section.ans1.6}%
+\contentsline {subsection}{\numberline {1.6.1}熵的定义}{82}{subsection.ans1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}熵和分布函数的关系}{82}{subsection.ans1.6.2}%
+\contentsline {subsection}{\numberline {1.6.3}熵的可加性}{82}{subsection.ans1.6.3}%
+\contentsline {section}{\numberline {1.7}关于经典统计和量子统计的思考}{82}{section.ans1.7}%
+\contentsline {subsection}{\numberline {1.7.1}经典统计}{82}{subsection.ans1.7.1}%
+\contentsline {subsection}{\numberline {1.7.2}量子统计}{82}{subsection.ans1.7.2}%
+\contentsline {section}{\numberline {1.8}熵的统计表达式}{82}{section.ans1.8}%
+\contentsline {section}{\numberline {1.9}量子力学基本原理}{82}{section.ans1.9}%
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}热力学量（答案）}{83}{chapter.ans2}%
+\contentsline {section}{\numberline {2.1}热力学不等式}{83}{section.ans2.1}%
+\contentsline {section}{\numberline {2.2}能斯特定理}{83}{section.ans2.2}%
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}巨正则分布（答案）}{85}{chapter.ans3}%
+\contentsline {section}{\numberline {3.1}配分函数}{85}{section.ans3.1}%
+\contentsline {subsection}{\numberline {3.1.1}关于求和的讨论}{85}{subsection.ans3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}近独立分布}{85}{subsection.ans3.1.2}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}量子力学中的微扰论（答案）}{87}{chapter.ans4}%
+\contentsline {section}{\numberline {4.1}符号约定}{87}{section.ans4.1}%
+\contentsline {section}{\numberline {4.2}基本原理}{87}{section.ans4.2}%
+\contentsline {subsection}{\numberline {4.2.1}递推公式}{87}{subsection.ans4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}非简并的基本公式}{87}{subsection.ans4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}简并态的基本公式}{87}{subsection.ans4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}朗道的微扰论}{87}{subsection.ans4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}简并态的各级计算}{87}{subsection.ans4.2.5}%
+\contentsline {section}{\numberline {4.3}Schwinger 表象}{87}{section.ans4.3}%
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}国际制和高斯制的换算（答案）}{89}{chapter.ans5}%
+\contentsline {section}{\numberline {5.1}基本公式的转换}{89}{section.ans5.1}%
+\contentsline {section}{\numberline {5.2}相对论公式}{89}{section.ans5.2}%
+\contentsline {section}{\numberline {5.3}极化能和磁化能}{89}{section.ans5.3}%
+\contentsline {subsection}{\numberline {5.3.1}极化能}{89}{subsection.ans5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}磁化能}{89}{subsection.ans5.3.2}%
+\contentsline {section}{\numberline {5.4}朗德因子}{89}{section.ans5.4}%
+\contentsline {chapter}{\numberline {第六章\hspace {.3em}}经典力学（答案）}{91}{chapter.ans6}%
+\contentsline {section}{\numberline {6.1}Possion 括号}{91}{section.ans6.1}%
+\contentsline {chapter}{\numberline {第七章\hspace {.3em}}非理想气体（答案）}{93}{chapter.ans7}%
+\contentsline {section}{\numberline {7.1}范德瓦尔斯公式}{93}{section.ans7.1}%
+\contentsline {section}{\numberline {7.2}位力系数与散射振幅的关系}{93}{section.ans7.2}%
+\contentsline {chapter}{\numberline {第八章\hspace {.3em}}溶液（答案）}{95}{chapter.ans8}%
+\contentsline {section}{\numberline {8.1}强电解质溶液}{95}{section.ans8.1}%
+\contentsline {chapter}{\numberline {第九章\hspace {.3em}}化学反应（答案）}{97}{chapter.ans9}%
+\contentsline {section}{\numberline {9.1}化学平衡条件}{97}{section.ans9.1}%
+\contentsline {chapter}{\numberline {第十章\hspace {.3em}}涨落（答案）}{99}{chapter.ans10}%
+\contentsline {section}{\numberline {10.1}高斯分布}{99}{section.ans10.1}%
+\contentsline {section}{\numberline {10.2}多个热力学量的高斯分布}{99}{section.ans10.2}%
+\contentsline {subsubsection}{朗道的计算方法}{99}{subsubsection*.6}%
+\contentsline {subsubsection}{直接计算法}{99}{subsubsection*.7}%
+\contentsline {subsubsection}{统计独立性的判断}{99}{subsubsection*.8}%
+\contentsline {chapter}{\numberline {第十一章\hspace {.3em}}二次量子化（答案）}{101}{chapter.ans11}%
+\contentsline {section}{\numberline {11.1}同类粒子的不可分辨原理}{101}{section.ans11.1}%
+\contentsline {section}{\numberline {11.2}交换作用}{101}{section.ans11.2}%
+\contentsline {section}{\numberline {11.3}置换对称性}{101}{section.ans11.3}%
+\contentsline {section}{\numberline {11.4}二次量子化---玻色统计}{101}{section.ans11.4}%
+\contentsline {section}{\numberline {11.5}二次量子化---费米统计情形}{101}{section.ans11.5}%
+\contentsline {chapter}{\numberline {第十二章\hspace {.3em}}狭义相对论（答案）}{103}{chapter.ans12}%
+\contentsline {section}{\numberline {12.1}相互作用的传播速度}{104}{section.ans12.1}%
+\contentsline {subsection}{\numberline {12.1.1}参考系}{104}{subsection.ans12.1.1}%
+\contentsline {subsection}{\numberline {12.1.2}相对性原理}{104}{subsection.ans12.1.2}%
+\contentsline {subsection}{\numberline {12.1.3}最大传播速度}{104}{subsection.ans12.1.3}%
+\contentsline {section}{\numberline {12.2}间隔}{104}{section.ans12.2}%
+\contentsline {subsection}{\numberline {12.2.1}朗道关于间隔不变性的论述}{104}{subsection.ans12.2.1}%
+\contentsline {subsection}{\numberline {12.2.2}间隔不变性的第二种论述}{104}{subsection.ans12.2.2}%
+\contentsline {section}{\numberline {12.3}洛仑兹变换}{104}{section.ans12.3}%
+\contentsline {subsection}{\numberline {12.3.1}方案一}{104}{subsection.ans12.3.1}%
+\contentsline {subsection}{\numberline {12.3.2}方案二}{104}{subsection.ans12.3.2}%
+\contentsline {subsection}{\numberline {12.3.3}方案三}{104}{subsection.ans12.3.3}%
+\contentsline {section}{\numberline {12.4}固有时}{104}{section.ans12.4}%
+\contentsline {section}{\numberline {12.5}相对论的速度变换}{104}{section.ans12.5}%
+\contentsline {section}{\numberline {12.6}相对论中的力学量}{104}{section.ans12.6}%
+\contentsline {subsection}{\numberline {12.6.1}自由粒子的拉格朗日函数}{104}{subsection.ans12.6.1}%
+\contentsline {subsection}{\numberline {12.6.2}再议速度变换公式}{104}{subsection.ans12.6.2}%
+\contentsline {section}{\numberline {12.7}相对速度}{104}{section.ans12.7}%
+\contentsline {subsection}{\numberline {12.7.1}不变量标量计算法}{104}{subsection.ans12.7.1}%
+\contentsline {subsection}{\numberline {12.7.2}矢量计算法}{104}{subsection.ans12.7.2}%
+\contentsline {section}{\numberline {12.8}分布函数的变化}{104}{section.ans12.8}%
+\contentsline {subsection}{\numberline {12.8.1}基本数学原理}{104}{subsection.ans12.8.1}%
+\contentsline {subsection}{\numberline {12.8.2}动量微元的变换}{104}{subsection.ans12.8.2}%
+\contentsline {section}{\numberline {12.9}粒子的衰变}{104}{section.ans12.9}%
+\contentsline {subsection}{\numberline {12.9.1}椭圆的解析分析}{104}{subsection.ans12.9.1}%
+\contentsline {subsection}{\numberline {12.9.2}衰变时粒子的偏角问题}{104}{subsection.ans12.9.2}%

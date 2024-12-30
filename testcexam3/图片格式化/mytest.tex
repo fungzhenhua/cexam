@@ -1,0 +1,77 @@
+\documentclass[a4paper,UTF8,fontset = windowsnew]{ctexbook}
+\usepackage[user=teacher]{cexam}
+\usepackage[margin=2cm]{geometry}
+%\usepackage[utf8]{inputenc}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+%\usepackage{amsmath}
+%\usepackage{float}
+\usepackage{tikz}
+%\usetikzlibrary{patterns}
+%\usepackage[european,oldvoltagedirection]{circuitikz}
+%\usepackage{graphicx}
+%\usepackage[
+%  pdfborder=0 0 0,
+%  bookmarksnumbered=true
+%]{hyperref}
+%\usepackage{draftwatermark}
+%\usepackage{l3color}
+%\usepackage{l3draw}
+%\SetWatermarkText{冯振华手稿}
+%\includeonly{
+%   chapter-运动的描述,
+%}
+
+\begin{document}
+\title{高中物理讲义}
+\author{冯振华}
+\date{2019年9月1日}
+%\maketitle
+%\frontmatter
+%\tableofcontents
+
+%\include{chapter-运动的描述}
+\chapter{运动的描述}
+\section{运动学基本概念}
+
+\subsection{坐标系}
+上一节中,参考系可以确定物体是静还是动的问题.但是不能确定动多么快的问题,也就是定性的,所以要准确的描述物体的位置及位置变化需要建立坐标系,这个坐标系包括:\CJKunderwave{原点,正方向和单位长度.}
+
+研究物体的直线运动时,一般建立直线坐标系,研究物体的曲线运动(轨迹是曲线的运动)时建立平面直角坐标系.另外还有极坐标系,自然坐标系等.感兴趣的同学可以参考一下相关的数学资料.\CJKunderwave{所有坐标系中的一个点和物体的位置一一对应}.
+
+\begin{jisuan}[example]
+   1.一质点在x轴上运动,各个时刻的位置坐标如
+   \begin{tabular}{|*{7}{c|}}
+      \hline
+      t/s & 0 & 1 & 2 & 3 & 4 & 5\\
+      \hline
+      x/m & 0 & 5 & -4 & -1 & -7 & 1\\
+      \hline
+   \end{tabular}
+   所示:
+   \qitem 请画出x轴,在上面标出质点在各个时刻的位置.
+   \qitem 哪个时刻离开坐标原点最远?有多远?
+
+   a.见解析
+
+   e.(1)各时刻质点的位置坐标如
+      \begin{tikzpicture}[scale=0.4]
+	 \draw [->] (-8,0)--(7,0);
+	 \foreach \x in {-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5}
+	 \draw (\x,0pt)--(\x,3pt) node [anchor=north] {\x};
+	 \draw (8,0) node [anchor=north east] {$x/m$};
+	 \draw [<-] (-7,4pt)--(-7,24pt) node [anchor=south]{ 4s 末};
+	 \draw [<-] (-4,4pt)--(-4,24pt) node [anchor=south]{ 2s 末};
+	 \draw [<-] (-1,4pt)--(-1,24pt) node [anchor=south]{ 3s 末};
+	 \draw [<-] (1,4pt)--(1,24pt) node [anchor=south]{ 5s 末};
+	 \draw [<-] (5,4pt)--(5,24pt) node [anchor=south]{ 1s 末};
+	 \draw [<-] (0,4pt)--(0,44pt) node [anchor=south]{0时刻};
+      \end{tikzpicture}
+   所示.
+
+   ee.(2)由图可知第4s 末质点离开坐标原点最远,有7m.
+
+
+\end{jisuan}
+
+\end{document}

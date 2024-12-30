@@ -1,0 +1,1089 @@
+%%
+%% This is file `cexam.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% cexam.dtx  (with options: `package')
+%% 
+%%     Copyright (C) 2017--2020
+%%     CTEX.ORG and any individual authors listed elsewhere in this file.
+%%     ----------------------------------------------------------------------
+%% 
+%%     This work may be distributed and/or modified under the
+%%     conditions of the LaTeX Project Public License, either
+%%     version 1.3c of this license or (at your option) any later
+%%     version. This version of this license is in
+%%        http://www.latex-project.org/lppl/lppl-1-3c.txt
+%%     and the latest version of this license is in
+%%        http://www.latex-project.org/lppl.txt
+%%     and version 1.3 or later is part of all distributions of
+%%     LaTeX version 2005/12/01 or later.
+%% 
+%%     This work has the LPPL maintenance status `maintained'.
+%% 
+%%     The Current Maintainers of this work is Feng Zhenhua.
+%% 
+%% ------------------------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\RequirePackage{expl3,xparse,calc}
+\RequirePackage{xcolor}
+\GetIdInfo$Id: cexam.dtx v3.1.2(testing)  2019-08-29  ZhenhuaFeng  <fengzhenhua@sina.cn> $ {For chinese middle school examination}
+\ProvidesExplPackage{\ExplFileName}{\ExplFileDate}{\ExplFileVersion}{\ExplFileDescription}
+\bool_new:N \g__cexam_sep_bd_bool
+\bool_new:N \g__cexam_sep_tl_bool
+\bool_new:N \cexam_nopic_bool
+\bool_new:N \cexam_fmt_bool
+\bool_new:N \sel_opt_maxed_bool
+\bool_new:N \sel_data_bool
+\box_new:N \cexam_txtht_box
+\box_new:N \cexam_picture_box
+\box_new:N \sel_option_box
+\box_new:N \cexam_option_box
+\box_new:N \sep_temp_box
+\box_new:N \sel_optpic_box
+\box_new:N \cexam_number_box
+\dim_new:N \rec_tempht_dim
+\dim_new:N \cexam_psrin_dim
+\dim_new:N \cexam_pslin_dim
+\dim_new:N \cexam_pswd_dim
+\dim_new:N \cexam_picht_dim
+\dim_new:N \cexam_picwd_dim
+\dim_new:N \cexam_fmtwd_dim
+\dim_new:N \sel_lmax_dim
+\dim_set:Nn \sel_lmax_dim {0pt}
+\dim_new:N \sel_optwd_dim
+\dim_new:N \sel_optwd_i_dim
+\dim_new:N \sep_hd_old_ht
+\dim_new:N \sel_optpic_ht_dim
+\dim_new:N \sel_optpic_hti_dim
+\dim_new:N \sel_optpic_wd_dim
+\dim_new:N \cexam_indent_dim
+\dim_new:N \cexam_indent_i_dim
+\dim_new:N \cexam_pictxt_skip
+\dim_set:Nn \cexam_pictxt_skip{5pt}
+\dim_new:N \cexam_numtxt_skip
+\dim_set:Nn \cexam_numtxt_skip{5pt}
+\int_new:N \cexam_number_int
+\int_new:N \cexam_equ_int
+\int_new:N  \cexam_numtemp_int
+\int_new:N \cexam_picmath_int
+\int_new:N \cexam_totalnum_int
+\cs_new:Npn \cexam_sep_i:n  #1$$#2$$#3\scan_stop:
+{
+  \cs_set:Nn \sep_hd_data: {#1}
+  \cs_set:Nn \sep_bd_data: {$$#2$$}
+  \cs_set:Nn \sep_tl_data: {#3}
+}
+
+\cs_new:Npn \cexam_sep_ii:n #1\[#2\]#3\scan_stop:
+{
+  \cs_set:Nn \sep_hd_data: {#1}
+  \cs_set:Nn \sep_bd_data: {\[#2\]}
+  \cs_set:Nn \sep_tl_data: {#3}
+}
+
+\cs_new:Npn \cexam_sep_iii:n #1\begin#2\end#3#4\scan_stop:
+{
+  \cs_set:Nn \sep_hd_data: {#1}
+  \cs_set:Nn \sep_bd_data: {\begin#2\end{#3}}
+  \cs_set:Nn \sep_tl_data: {#4}
+}
+\cs_new:Npn \cexam_sep_mk:n #1\scan_stop:
+{
+  \str_if_in:nnTF {#1}{$$}%$$
+  {\cexam_sep_i:n #1\scan_stop:}
+  {
+    \str_if_in:nnTF {#1}{\[}%\]
+      {\cexam_sep_ii:n #1\scan_stop:}
+      {
+  \str_if_in:nnTF {#1}{\begin}
+  {\cexam_sep_iii:n #1\scan_stop:}
+  {}
+      }
+  }
+}
+  \cs_new:Npn \cexam_sep_isin:nn #1#2
+  {
+    \str_if_in:nnTF {*#1}{*#2}
+    {
+      \bool_set_true:N \g__cexam_sep_bd_bool
+      \str_if_in:nnTF {#1*}{#2*}
+      {
+\cs_set:Nn \sep_hd_data: {}
+\cs_set:Nn \sep_bd_data: {}
+\cs_set:Nn \sep_tl_data: {}
+\bool_set_false:N \g__cexam_sep_tl_bool
+      }
+      {
+\cexam_sep_mk:n *#1\scan_stop:
+\cs_set:Nn \sep_hd_data: {}
+\bool_set_true:N \g__cexam_sep_tl_bool
+      }
+    }
+    {
+      \str_if_in:nnTF {#1*}{#2*}
+      {
+\bool_set_true:N \g__cexam_sep_bd_bool
+\cexam_sep_mk:n #1*\scan_stop:
+\cs_set:Nn \sep_tl_data: {}
+\bool_set_false:N \g__cexam_sep_tl_bool
+      }
+      {
+\str_if_in:nnTF {#1}{#2}
+{
+  \bool_set_true:N \g__cexam_sep_bd_bool
+  \cexam_sep_mk:n #1\scan_stop:
+  \bool_set_true:N \g__cexam_sep_tl_bool
+}{}
+      }
+    }
+  }
+  \cs_new:Npn \cexam_sep:n #1 \scan_stop:
+  {
+    \str_if_in:nnTF {#1}{$$}%$$
+    {
+      \cexam_sep_isin:nn {#1}{$$}%$$
+    }
+    {
+      \str_if_in:nnTF {#1}{\[}%\]
+{
+  \cexam_sep_isin:nn {#1}{\[}%\]
+  }
+  {
+    \str_if_in:nnTF {#1}{\begin}%\end
+    {
+      \cexam_sep_isin:nn {#1}{\begin}%\end
+    }
+    {
+      \cs_set:Nn \sep_hd_data: {#1}
+      \cs_set:Nn \sep_bd_data: {}
+      \cs_set:Nn \sep_tl_data: {}
+      \bool_set_false:N \g__cexam_sep_tl_bool
+      \bool_set_false:N \g__cexam_sep_bd_bool
+    }
+  }
+      }
+  }
+  \cs_new:Npn \cexam_get:nNnN #1#2#3#4
+  {
+    \dim_while_do:nNnn {#4}>{0pt}
+    {
+      \dim_sub:Nn {#4}{#3}
+      \int_add:Nn {#2}{#1}
+    }
+  }
+  \cs_new:Npn \get_par_row:nnn #1#2#3
+  {
+    \int_set:Nn \cexam_equ_int {\int_use:N\c@equation}
+    \hbox_set:Nn \cexam_txtht_box
+    {\parbox{#2}{#3\par\int_gset:Nn #1{\int_use:N \prevgraf}\quad}}
+    \int_set:Nn \c@equation {\int_use:N \cexam_equ_int}
+  }
+  \cs_new:Npn \get_par_ht:nnn #1#2#3
+  {
+    \int_set:Nn \cexam_equ_int {\int_use:N\c@equation}
+    \hbox_set:Nn \cexam_txtht_box
+    {\parbox{#2}{#3}}
+    \int_set:Nn \c@equation {\int_use:N \cexam_equ_int}
+    \dim_set:Nn {#1}{\box_dp:N \cexam_txtht_box}
+    \dim_add:Nn {#1}{\box_ht:N \cexam_txtht_box}
+  }
+  \cs_new:Npn \get_par_rowht:nnnn #1#2#3#4
+  {
+    \get_par_row:nnn {#1}{#3}{#4}
+    \get_par_ht:nnn  {#2}{#3}{#4}
+  }
+  \cs_new:Nn \sep_hd_old: {}
+  \cs_new:Npn \sep_hd_old_add:n #1\scan_stop:
+  {
+    \exp_args:NNo \cs_set:Nn \sep_hd_old: {\sep_hd_old: #1}
+  }
+  \cs_new:Npn \cexam_get_rec_i:nnnnnn #1#2#3#4#5#6
+  {
+    \dim_set:Nn \cexam_pswd_dim {\linewidth}
+    \dim_sub:Nn \cexam_pswd_dim {#3}
+    \dim_sub:Nn \cexam_pswd_dim {#4}
+    \dim_sub:Nn \cexam_pswd_dim {#5}
+    \exp_args:No \cexam_sep:n #6 \scan_stop:
+    \exp_args:No \sep_hd_old_add:n \sep_hd_data:\scan_stop:
+    \get_par_rowht:nnnn
+    {#1}
+    {\sep_hd_old_ht}
+    {\cexam_pswd_dim}
+    {\sep_hd_old:}
+    \dim_compare:nNnTF
+    {\sep_hd_old_ht} > {#2}
+    {
+      \dim_sub:Nn \sep_hd_old_ht {#2}
+      \dim_while_do:nNnn
+      {\sep_hd_old_ht} > {0pt}
+      {
+\int_sub:Nn #1 {1}
+\dim_sub:Nn \sep_hd_old_ht {\baselineskip}
+      }
+      \dim_compare:nNnTF
+      {\dim_abs:n{\sep_hd_old_ht}} < {5pt}
+      {\int_add:Nn #1{0}}
+      {\int_add:Nn #1{1}}
+    }
+    {
+      \bool_if:NTF \g__cexam_sep_bd_bool
+      {
+\exp_args:No \sep_hd_old_add:n \sep_bd_data:\scan_stop:
+\get_par_rowht:nnnn
+{#1}
+{\sep_hd_old_ht}
+{\cexam_pswd_dim}
+{\sep_hd_old:}
+\dim_compare:nNnTF
+{\sep_hd_old_ht} > {#2}
+{
+  \relax %for multiplie math.
+}
+{
+  \bool_if:NTF \g__cexam_sep_tl_bool
+  {
+    \cexam_get_rec_i:nnnnnn
+    {#1}{#2}{#3}{#4}{#5}{\sep_tl_data:}
+  }
+  {\relax}
+}
+      }
+      {\relax}
+    }
+  }
+  \cs_new:Npn \cexam_get_rec:nnnnnn #1#2#3#4#5#6
+  {
+    \cs_set:Nn \sep_hd_old: {}
+    \dim_set:Nn \cexam_pswd_dim {\linewidth}
+    \dim_sub:Nn \cexam_pswd_dim {#3}
+    \dim_sub:Nn \cexam_pswd_dim {#4}
+    \dim_sub:Nn \cexam_pswd_dim {#5}
+    \get_par_rowht:nnnn
+    {#1}
+    {\sep_hd_old_ht}
+    {\cexam_pswd_dim}
+    {#6}
+    \dim_compare:nNnTF
+    {\sep_hd_old_ht} < {#2}
+    {\relax}
+    {
+      \cexam_get_rec_i:nnnnnn
+      {#1}{#2}{#3}{#4}{#5}{#6}
+    }
+  }
+  \cs_new:Nn \cexam_shad: {}
+  \cs_new_protected:Nn \cexam_sha_cape:{~}
+  \cs_new:Npn \cexam_sha_mk_i:nnnn #1#2#3#4
+  {
+    \dim_set:Nn \cexam_pslin_dim {#2}
+    \dim_set:Nn \cexam_psrin_dim {#4}
+    \dim_set:Nn \cexam_pswd_dim {#3}
+    \dim_sub:Nn \cexam_pswd_dim {#2}
+    \dim_sub:Nn \cexam_pswd_dim {#4}
+    \int_while_do:nNnn {#1} > {0}
+    {
+      \int_sub:Nn {#1}{1}
+      \exp_args:NNx\cs_set:Nn \cexam_shad:
+      {\cexam_shad:\cexam_sha_cape: \dim_use:N \cexam_pslin_dim}
+      \exp_args:NNx\cs_set:Nn \cexam_shad:
+      {\cexam_shad:\cexam_sha_cape: \dim_use:N \cexam_pswd_dim}
+    }
+  }
+  \cs_new:Npn \cexam_sha_mk_ii:nnnnnnn #1#2#3#4#5#6#7
+  {
+    \int_add:Nn{#1}{1}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:{\cexam_sha_cape: \int_use:N #1}
+    \int_sub:Nn{#1}{1}
+    \cexam_sha_mk_i:nnnn {#1}{#2}{#3}{#4}
+    \dim_set:Nn \cexam_pslin_dim {#5}
+    \dim_set:Nn \cexam_psrin_dim {#7}
+    \dim_set:Nn \cexam_pswd_dim {#6}
+    \dim_sub:Nn \cexam_pswd_dim {#5}
+    \dim_sub:Nn \cexam_pswd_dim {#7}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_shad:\cexam_sha_cape: \dim_use:N \cexam_pslin_dim}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_shad:\cexam_sha_cape: \dim_use:N \cexam_pswd_dim}
+  }
+  \cs_new:Nn \cexam_fmt_fig:{\figurename~\thefigure}
+% debuging
+  \dim_new:N \cexam_pic_linwd_dim
+  \cs_new:Nn \cexam_picture:{}
+% 图片的格式化
+ \cs_new:Npn \cexam_fmt_pic:nn #1#2
+ {
+   \bool_if:NTF \cexam_fmt_bool
+   {
+     \int_add:Nn \c@figure {1}
+   }
+   {\relax}
+   \hbox_set:Nn \cexam_picture_box {#2}
+   \dim_set:Nn {\cexam_picwd_dim}{\box_wd:N \cexam_picture_box}
+   \bool_if:NTF \cexam_fmt_bool
+   {
+     \hbox_set:Nn \cexam_picture_box
+     {
+       \parbox[b]{\cexam_picwd_dim}{
+	 #2
+	 \newline
+	 \centerline{\cexam_fmt_fig:}
+       }
+     }
+   }
+   {
+     \cs_set:Nn \cexam_fmt_fig: {\figurename}
+   }
+   \dim_set:Nn {\cexam_picht_dim}{\box_ht:N \cexam_picture_box}
+   \dim_add:Nn {\cexam_picht_dim}{\box_dp:N \cexam_picture_box}
+   \dim_set:Nn \cexam_pic_linwd_dim{\linewidth} %adding
+   \dim_sub:Nn \cexam_pic_linwd_dim {\cexam_indent_dim} %adding
+   \str_if_in:nnTF {#1}{l}
+   {
+%     \hbox_set:Nn \cexam_picture_box
+%     {
+%       \raisebox{-\totalheight-.8\ccwd}[0pt][0pt]{
+%	 \parbox[b]{\cexam_picwd_dim}{\hbox_unpack:N \cexam_picture_box \hfill}
+%       }
+%     }
+     \cs_set:Nn \cexam_picture: 
+     {\makebox[0pt][r]{
+	 \raisebox{.8\ccwd-\height}[0pt][0pt]{
+       \parbox[b]{\cexam_picwd_dim}{\hfill \hbox_unpack:N \cexam_picture_box}}}
+     }
+   }
+   {\relax}
+   \str_if_in:nnTF {#1}{c}
+   {
+%     \hbox_set:Nn \cexam_picture_box
+%     {
+%       \parbox[b]{\cexam_fmtwd_dim}{\centerline{\hbox_unpack:N \cexam_picture_box}}
+%     }
+     \cs_set:Nn \cexam_picture: 
+     {
+       \parbox[b]{\cexam_fmtwd_dim}{\centerline{\hbox_unpack:N \cexam_picture_box}}
+     }
+   }
+   {\relax}
+   \str_if_in:nnTF {#1}{r}
+   {
+%     \hbox_set:Nn \cexam_picture_box
+%     {\raisebox{-\totalheight-.8\ccwd}[0pt][0pt]{
+%	 \parbox[b]{\linewidth}{\hfill \box_use:N \cexam_picture_box}
+%       }
+%     }
+     \cs_set:Nn \cexam_picture: 
+     {\makebox[0pt][l]{
+	 \raisebox{.8\ccwd-\height}[0pt][0pt]{
+	   \parbox[b]{\cexam_pic_linwd_dim}{\hfill \hbox_unpack:N \cexam_picture_box}}}
+     }
+   }
+   {\relax}
+ }
+  \cs_new:Npn \cexam_type_i:nnnnnnn #1#2#3#4#5#6#7
+  {%
+    \cexam_fmt_pic:nn {#1}{#2}%
+    \cexam_get_rec:nnnnnn%
+    {\cexam_picmath_int}%
+    {\cexam_picht_dim}{\cexam_picwd_dim}%
+    {#3}{#4}{#7}%
+    \str_if_in:nnTF {#1}{l}%
+    {%
+      \dim_set:Nn \cexam_pslin_dim {#3}%
+      \dim_set:Nn \cexam_psrin_dim {#4}%
+      \dim_set:Nn \cexam_pswd_dim {\linewidth}%
+      \dim_add:Nn \cexam_pslin_dim {\cexam_picwd_dim}%
+      \cexam_sha_mk_ii:nnnnnnn%
+      {\cexam_picmath_int}%
+      {\cexam_pslin_dim}{\cexam_pswd_dim}{\cexam_psrin_dim}%
+      {#5}{\linewidth}{#6}%
+      \dim_add:Nn \cexam_picwd_dim{#3}%
+    }%
+    {%
+      \dim_set:Nn \cexam_pslin_dim {#3}%
+      \dim_set:Nn \cexam_psrin_dim {#4}%
+      \dim_set:Nn \cexam_pswd_dim {\linewidth}%
+      \dim_add:Nn \cexam_psrin_dim {\cexam_picwd_dim}%
+      \cexam_sha_mk_ii:nnnnnnn%
+      {\cexam_picmath_int}%
+      {\cexam_pslin_dim}{\cexam_pswd_dim}{\cexam_psrin_dim}%
+      {#5}{\linewidth}{#6}%
+    }%
+    \tex_parshape:D \cexam_shad:
+%    \box_use:N \cexam_picture_box
+    \cexam_picture:
+    #7
+  }
+  \cs_new:Npn \cexam_type_ii:nnnnnnnnn #1#2#3#4#5#6#7#8#9
+  {
+    \cexam_fmt_pic:nn {#1}{#2}
+    \cexam_get_rec:nnnnnn {\cexam_picmath_int}
+    {\cexam_picht_dim}{\cexam_picwd_dim}
+    {#3}{#4}{#9}
+    \int_set:Nn \cexam_numtemp_int{\int_use:N \cexam_picmath_int}
+    \dim_set:Nn \cexam_pslin_dim {#3}
+    \dim_set:Nn \cexam_psrin_dim {#4}
+    \dim_add:Nn \cexam_psrin_dim {\cexam_picwd_dim}
+    \dim_set:Nn \cexam_pswd_dim {\linewidth}
+    \dim_sub:Nn \cexam_pswd_dim {\cexam_pslin_dim}
+    \dim_sub:Nn \cexam_pswd_dim {\cexam_psrin_dim}
+    \cexam_get_rec:nnnnnn {\cexam_picmath_int}
+    {\cexam_picht_dim}{\cexam_picwd_dim}
+    {#3}{#4}{#9}
+    \int_set:Nn \cexam_numtemp_int{\int_use:N \cexam_picmath_int}
+    \cexam_sha_mk_ii:nnnnnnn {\cexam_numtemp_int}
+    {\cexam_pslin_dim}{\linewidth}{\cexam_psrin_dim}
+    {#5}{\linewidth}{#6}
+    \get_par_row:nnn
+    {\cexam_totalnum_int}
+    {\cexam_pswd_dim}
+    {
+      \tex_parshape:D \cexam_shad:
+      #9
+    }
+    \int_set:Nn \cexam_numtemp_int {\int_use:N \cexam_totalnum_int}
+    \int_sub:Nn \cexam_numtemp_int {\cexam_picmath_int}
+    \int_add:Nn \cexam_totalnum_int {1}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_sha_cape: \int_use:N \cexam_totalnum_int}
+    \str_if_in:nnTF {#1}{l}
+    {
+      \dim_set:Nn \cexam_pslin_dim {#3}
+      \dim_add:Nn \cexam_pslin_dim {\cexam_picwd_dim}
+      \dim_set:Nn \cexam_psrin_dim {#4}
+      \cexam_sha_mk_i:nnnn {\cexam_picmath_int}
+      {\cexam_pslin_dim}{\linewidth}{\cexam_psrin_dim}
+      \dim_add:Nn \cexam_picwd_dim{#3}
+    }
+    {
+      \dim_set:Nn \cexam_pslin_dim {#3}
+      \dim_set:Nn \cexam_psrin_dim {#4}
+      \dim_add:Nn \cexam_psrin_dim {\cexam_picwd_dim}
+      \cexam_sha_mk_i:nnnn {\cexam_picmath_int}
+      {\cexam_pslin_dim}{\linewidth}{\cexam_psrin_dim}
+    }
+    \cexam_sha_mk_i:nnnn {\cexam_numtemp_int}
+    {#5}{\linewidth}{#6}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_shad:\cexam_sha_cape: #7}
+    \dim_set:Nn \cexam_pswd_dim {\linewidth}
+    \dim_sub:Nn \cexam_pswd_dim {#7}
+    \dim_sub:Nn \cexam_pswd_dim {#8}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_shad:\cexam_sha_cape: \cexam_pswd_dim}
+    \tex_parshape:D \cexam_shad:
+    \box_use:N \cexam_picture_box
+    #9
+  }
+  \cs_new:Npn \cexam_type_iii:nnnnnnn #1#2#3#4#5#6#7
+  {
+    \dim_set:Nn \cexam_pslin_dim {#3}
+    \dim_set:Nn \cexam_psrin_dim {#4}
+    \dim_set:Nn \cexam_fmtwd_dim {\linewidth}
+    \dim_sub:Nn \cexam_fmtwd_dim {#3}
+    \dim_sub:Nn \cexam_fmtwd_dim {#4}
+    \cexam_fmt_pic:nn {c}{#2}
+    \dim_set:Nn \cexam_pswd_dim {\linewidth}
+    \dim_sub:Nn \cexam_pswd_dim {#3}
+    \dim_sub:Nn \cexam_pswd_dim {#4}
+    \get_par_row:nnn
+    {\cexam_picmath_int}
+    {\cexam_pswd_dim}{#7}
+    \int_add:Nn \cexam_picmath_int {2}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_sha_cape: \int_use:N \cexam_picmath_int}
+    \int_sub:Nn \cexam_picmath_int {1}
+    \cexam_sha_mk_i:nnnn {\cexam_picmath_int}
+    {\cexam_pslin_dim}{\linewidth}{\cexam_psrin_dim}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_shad:\cexam_sha_cape: #5}
+    \dim_set:Nn \cexam_pswd_dim {\linewidth}
+    \dim_sub:Nn \cexam_pswd_dim {#5}
+    \dim_sub:Nn \cexam_pswd_dim {#6}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_shad:\cexam_sha_cape: \cexam_pswd_dim}
+    \tex_parshape:D \cexam_shad:
+    #7
+    \vspace{5pt}
+    \newline
+    \hbox_unpack:N \cexam_picture_box
+  }
+  \cs_new:Npn \cexam_type_iv:nnnnnnnn #1#2#3#4#5#6#7#8
+  {
+    \cexam_fmt_pic:nn {r}{#2}
+    \dim_set:Nn \cexam_pslin_dim {#3}
+    \dim_set:Nn \cexam_psrin_dim {#4}
+    \dim_set:Nn \cexam_pswd_dim {\linewidth}
+    \dim_sub:Nn \cexam_pswd_dim {\cexam_pslin_dim}
+    \dim_sub:Nn \cexam_pswd_dim {\cexam_psrin_dim}
+    \dim_sub:Nn \cexam_pswd_dim {\cexam_picwd_dim}
+    \get_par_rowht:nnnn
+    {\cexam_picmath_int}
+    {\rec_tempht_dim}
+    {\cexam_pswd_dim}
+    {#7}
+    \dim_sub:Nn \cexam_picht_dim{\rec_tempht_dim}
+    \cexam_get_rec:nnnnnn {\cexam_numtemp_int}
+    {\cexam_picht_dim}{\cexam_picwd_dim}
+    {#5}{#6}{#8}
+    \int_set:Nn \cexam_totalnum_int {\int_use:N \cexam_picmath_int}
+    \int_add:Nn \cexam_totalnum_int {\int_use:N \cexam_numtemp_int}
+    \int_add:Nn \cexam_totalnum_int {1}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_sha_cape: \int_use:N \cexam_totalnum_int}
+    \dim_set:Nn \cexam_pslin_dim {#3}
+    \dim_set:Nn \cexam_psrin_dim {#4}
+    \dim_add:Nn \cexam_psrin_dim {\cexam_picwd_dim}
+    \cexam_sha_mk_i:nnnn {\cexam_picmath_int}
+    {\cexam_pslin_dim}{\linewidth}{\cexam_psrin_dim}
+    \dim_set:Nn \cexam_pslin_dim {#5}
+    \cexam_sha_mk_i:nnnn {\cexam_numtemp_int}
+    {\cexam_pslin_dim}{\linewidth}{\cexam_psrin_dim}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_shad:\cexam_sha_cape: \cexam_pslin_dim}
+    \dim_set:Nn \cexam_pswd_dim {\linewidth}
+    \dim_sub:Nn \cexam_pswd_dim {#5}
+    \dim_sub:Nn \cexam_pswd_dim {#6}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_shad:\cexam_sha_cape: \cexam_pswd_dim}
+    \tex_parshape:D \cexam_shad:
+    \box_use:N \cexam_picture_box
+    #7
+    \newline
+    #8
+  }
+  \cs_new:Npn \cexam_type_v:nnnnn #1#2#3#4#5
+  {
+    \dim_set:Nn \cexam_pslin_dim {#1}
+    \dim_set:Nn \cexam_psrin_dim {#2}
+    \dim_set:Nn \cexam_pswd_dim{\linewidth}
+    \dim_sub:Nn \cexam_pswd_dim{\cexam_pslin_dim}
+    \dim_sub:Nn \cexam_pswd_dim{\cexam_psrin_dim}
+    \get_par_row:nnn
+    {\cexam_picmath_int}{\cexam_pswd_dim}{#5}
+    \cexam_sha_mk_ii:nnnnnnn
+    {\cexam_picmath_int}
+    {#1}{\linewidth}{#2}
+    {#3}{\linewidth}{#4}
+    \tex_parshape:D \cexam_shad:
+    #5
+  }
+\cs_new:Nn \cexam_seped_pic: {}
+\cs_new:Nn \cexam_seped_txt: {}
+%\cs_new:Npn \cexam_sep_pictxt_i:n #1<:#2:>#3 \scan_stop:
+\cs_new:Npn \cexam_sep_pictxt_i:n #1<<#2>>#3 \scan_stop:
+{
+  \cs_set:Nn \cexam_seped_txt: {#1\cexam_fmt_fig:#3}
+  \hbox_set:Nn \sep_temp_box {#2}
+  \dim_compare:nNnTF {\box_wd:N \sep_temp_box} < {5pt}
+  {
+    \cs_set:Nn \cexam_seped_pic:
+    {
+      \begin{tikzpicture}
+	\draw (0,0) rectangle (2.4,2.4);
+	\draw (1.2,1.2) node {\textcolor{red}{\figurename\hspace{3pt}??}};
+      \end{tikzpicture}
+    }
+  }
+  {
+    \cs_set:Nn \cexam_seped_pic: {#2}
+  }
+}
+\cs_new:Npn \cexam_ind_hat:nn #1#2
+{
+  \makebox[0pt][r]{\raisebox{-.05\ccwd}{\parbox[b]{#1}{#2.\hfill}}}
+}
+\cs_new:Npn \sel_get_lmax:n #1
+{
+  \hbox_set:Nn \sel_option_box{#1}
+  \dim_set:Nn \sel_lmax_dim{\dim_max:nn {\sel_lmax_dim}{\box_wd:N \sel_option_box}}
+}
+\cs_new:Npn \sel_opt_type_i:nnnn #1#2#3#4
+{
+  A.#1\hfill
+  B.#2\hfill
+  C.#3\hfill
+  D.#4
+}
+\cs_new:Npn \sel_opt_type_ii:nnnn #1#2#3#4
+{
+  \makebox[\sel_optwd_i_dim][l]{A.#1}
+  B.#2
+  \newline
+  \makebox[\sel_optwd_i_dim][l]{C.#3}
+  D.#4
+}
+\cs_new:Npn \sel_opt_type_iii:nnnn #1#2#3#4
+{
+  \cexam_ind_hat:nn {1.2\ccwd}{A}#1
+  \newline
+  \cexam_ind_hat:nn {1.2\ccwd}{B}#2
+  \newline
+  \cexam_ind_hat:nn {1.2\ccwd}{C}#3
+  \newline
+  \cexam_ind_hat:nn {1.2\ccwd}{D}#4
+}
+\cs_new:Npn \cexam_fmt_opt_sel:nnnn #1#2#3#4
+{
+  \sel_get_lmax:n {#1}
+  \sel_get_lmax:n {#2}
+  \sel_get_lmax:n {#3}
+  \sel_get_lmax:n {#4}
+  \dim_compare:nNnTF {\sel_lmax_dim} < {.25\sel_optwd_dim}
+  {
+    \bool_set_false:N \sel_opt_maxed_bool
+    \hbox_set:Nn \cexam_option_box {\sel_opt_type_i:nnnn {#1}{#2}{#3}{#4}}
+  }
+  {
+    \dim_compare:nNnTF {\sel_lmax_dim} < {.5\sel_optwd_dim}
+    {
+      \bool_set_false:N \sel_opt_maxed_bool
+      \dim_set:Nn \sel_optwd_i_dim {\sel_optwd_dim}
+      \dim_set:Nn \sel_lmax_dim {0pt}
+      \sel_get_lmax:n {C.#3}
+      \sel_get_lmax:n {D.#4}
+      \dim_sub:Nn \sel_optwd_i_dim {\sel_lmax_dim}
+      \hbox_set:Nn \cexam_option_box {\sel_opt_type_ii:nnnn {#1}{#2}{#3}{#4}}
+    }
+    {
+      \bool_set_true:N \sel_opt_maxed_bool
+      \hbox_set:Nn \cexam_option_box {\sel_opt_type_iii:nnnn {#1}{#2}{#3}{#4}}
+    }
+  }
+}
+\cs_new:Npn \sel_data_det:n #1
+{
+  \bool_set_false:N \sel_data_bool
+  \str_if_in:nnTF {#1}{A.}
+  {
+    \str_if_in:nnTF {#1}{B.}
+    {
+      \str_if_in:nnTF {#1}{C.}
+      {
+	\str_if_in:nnTF {#1}{D.}
+	{\bool_set_true:N \sel_data_bool}
+	{\relax}
+      }
+      {\relax}
+    }
+    {\relax}
+  }
+  {\relax}
+}
+\cs_new:Npn \cexam_pic_det:n #1
+{
+  \bool_set_true:N \cexam_nopic_bool
+  \str_if_in:nnTF {#1}{<<}
+  {
+    \str_if_in:nnTF {#1}{>>}
+    {\bool_set_false:N \cexam_nopic_bool}
+    {\relax}
+  }
+  {\relax}
+}
+\cs_new:Npn \cexam_sep_pictxt:n #1
+{
+  \cexam_pic_det:n {#1}
+  \bool_if:NTF \cexam_nopic_bool
+  {
+    \cs_set:Nn \cexam_seped_pic: {}
+    \cs_set:Nn \cexam_seped_txt: {#1}
+  }
+  {
+    \cexam_sep_pictxt_i:n \relax #1\relax\scan_stop:
+  }
+}
+\cs_new:Npn \selection_type_i:n #1.#2 A.#3 B.#4 C.#5 D.#6 \scan_stop:
+{
+  \int_add:Nn \cexam_number_int {1}
+  \hbox_set:Nn \cexam_number_box {\int_use:N \cexam_number_int .}
+  \dim_set:Nn \cexam_indent_dim{\box_wd:N \cexam_number_box}
+  \dim_add:Nn \cexam_indent_dim{\cexam_numtxt_skip}
+  \dim_set:Nn \cexam_indent_i_dim {\cexam_indent_dim}
+  \dim_add:Nn \cexam_indent_i_dim {1.23\ccwd}
+  \cexam_sep_pictxt:n
+  {
+    \cexam_ind_hat:nn
+    {\cexam_indent_dim}
+    {\int_use:N \cexam_number_int}#2\hfill(\quad)  %adding
+  }
+  \dim_set:Nn \sel_optwd_dim {\linewidth}
+  \dim_sub:Nn \sel_optwd_dim {\cexam_indent_dim}
+  \dim_sub:Nn \sel_optwd_dim {\cexam_pictxt_skip}
+  \bool_if:NTF \cexam_nopic_bool
+  {\relax}
+  {
+    \hbox_set:Nn \sel_optpic_box{\cexam_seped_pic:}
+    \dim_set:Nn {\sel_optpic_wd_dim}{\box_wd:N \sel_optpic_box}
+    \dim_set:Nn {\sel_optpic_ht_dim}{\box_ht:N \sel_optpic_box}
+    \dim_add:Nn {\sel_optpic_ht_dim}{\box_dp:N \sel_optpic_box}
+    \str_if_in:nnTF {#1}{*}
+    {\bool_set_false:N \cexam_fmt_bool}
+    {
+      \bool_set_true:N \cexam_fmt_bool
+      \dim_add:Nn \sel_optpic_ht_dim {\baselineskip}
+    }
+  }
+  \bool_if:NTF \cexam_nopic_bool
+  {
+    \cexam_fmt_opt_sel:nnnn {#3}{#4}{#5}{#6}
+  }
+  {
+    \dim_sub:Nn \sel_optwd_dim {\sel_optpic_wd_dim}
+    \cexam_fmt_opt_sel:nnnn {#3}{#4}{#5}{#6}
+    \get_par_ht:nnn
+    {\sel_optpic_hti_dim}
+    {\sel_optwd_dim}
+    {\cexam_seped_txt:}
+  }
+  \bool_if:NTF \cexam_nopic_bool
+  {
+    \bool_if:NTF \sel_opt_maxed_bool
+    {\relax}
+    {
+      \dim_set:Nn \cexam_indent_i_dim {\cexam_indent_dim}
+    }
+    \cexam_type_v:nnnnn
+    {\cexam_indent_dim}{0pt}
+    {\cexam_indent_i_dim}{0pt}
+    {\cexam_seped_txt:}
+    \newline
+    \hbox_unpack:N \cexam_option_box
+  }
+  {
+    \dim_compare:nNnTF {\sel_optpic_hti_dim} > {\sel_optpic_ht_dim}
+    {
+      \dim_add:Nn \sel_optwd_dim {\sel_optpic_wd_dim}
+      \cexam_fmt_opt_sel:nnnn {#3}{#4}{#5}{#6}
+      \bool_if:NTF \sel_opt_maxed_bool
+      {\relax}
+      {\dim_set:Nn \cexam_indent_i_dim {\cexam_indent_dim}}
+      \cexam_type_ii:nnnnnnnnn
+      {r}{\cexam_seped_pic:}
+      {\cexam_indent_dim}{\cexam_pictxt_skip}
+      {\cexam_indent_dim}{0pt}
+      {\cexam_indent_i_dim}{0pt}
+      {\cexam_seped_txt:}
+      \newline
+      \hbox_unpack:N \cexam_option_box
+    }
+    {
+      \dim_sub:Nn \sel_optpic_ht_dim {\sel_optpic_hti_dim}
+      \bool_if:NTF \sel_opt_maxed_bool
+      {
+	\get_par_ht:nnn
+	{\sel_optpic_hti_dim}
+	{\sel_optwd_dim}
+	{\hbox_unpack:N \cexam_option_box}
+	\dim_compare:nNnTF
+	{\sel_optpic_ht_dim}< {\sel_optpic_hti_dim}
+	{
+	  \cs_set:Nn \cexam_seped_txt_i:
+	  {\hbox_unpack:N \cexam_option_box}
+	  \dim_add:Nn \sel_optwd_dim {\sel_optpic_wd_dim}
+	  \cexam_type_iv:nnnnnnnn
+	  {r}{\cexam_seped_pic:}
+	  {\cexam_indent_dim}{\cexam_pictxt_skip}
+	  {\cexam_indent_i_dim}{0pt}
+	  {\cexam_seped_txt:}{\cexam_seped_txt_i:}
+	}
+	{
+	  \dim_add:Nn \sel_optwd_dim {\sel_optpic_wd_dim}
+	  \cexam_fmt_opt_sel:nnnn {#3}{#4}{#5}{#6}
+	  \cexam_type_iii:nnnnnnn
+	  {c}{\cexam_seped_pic:}
+	  {\cexam_indent_dim}{0pt}
+	  {\cexam_indent_i_dim}{0pt}
+	  {\cexam_seped_txt:}
+	  \newline
+	  \hbox_unpack:N \cexam_option_box
+	}
+      }
+      {
+	\dim_compare:nNnTF {\sel_optpic_ht_dim} > {2\baselineskip}
+	{
+	  \dim_add:Nn \sel_optwd_dim {\sel_optpic_wd_dim}
+	  \cexam_fmt_opt_sel:nnnn {#3}{#4}{#5}{#6}
+	  \cexam_type_iii:nnnnnnn
+	  {c}{\cexam_seped_pic:}
+	  {\cexam_indent_dim}{0pt}
+	  {\cexam_indent_dim}{0pt}
+	  {\cexam_seped_txt:}
+	  \newline
+	  \hbox_unpack:N \cexam_option_box
+	}
+	{
+	  \dim_add:Nn \sel_optpic_wd_dim{\cexam_pictxt_skip}
+	  \cexam_type_i:nnnnnnn
+	  {r}{\cexam_seped_pic:}
+	  {\cexam_indent_dim}{\cexam_pictxt_skip}
+	  {\cexam_indent_dim}{\sel_optpic_wd_dim}
+	  {
+	    \cexam_seped_txt:
+	  }
+	  \newline
+	  \hbox_unpack:N \cexam_option_box
+	}
+      }
+    }
+  }
+}
+% 选择题付加结构判断结构
+\cs_new:Nn \selection_warning: 
+{
+  \textcolor{red}{The~structure~of~the~choice~questions~is~incomplete~.}
+}
+\cs_new:Npn \selection_type:n #1.#2 \scan_stop:
+{
+  \str_if_in:nnTF {#2}{A.}
+  {
+    \str_if_in:nnTF {#2}{B.}
+    {
+      \str_if_in:nnTF {#2}{C.}
+      {
+	\str_if_in:nnTF {#2}{D.}
+	{
+	  \selection_type_i:n #1.#2 \scan_stop:
+	}
+	{\selection_warning:}
+      }
+      {\selection_warning:}
+    }
+    {\selection_warning:}
+  }
+  {\selection_warning:}
+}
+%  开始准备填空题,判断题 (无选项之情况)
+% 二个参数:1题干,2选项
+\cs_new:Npn \blank_type:n #1.#2 \scan_stop:
+{%
+% 题号处理
+  \int_add:Nn \cexam_number_int {1}%
+  \hbox_set:Nn \cexam_number_box {\int_use:N \cexam_number_int .}%
+  \dim_set:Nn \cexam_indent_dim{\box_wd:N \cexam_number_box}%
+  \dim_add:Nn \cexam_indent_dim{\cexam_numtxt_skip}%
+% 分离图文
+  \cexam_sep_pictxt:n%
+  {%
+    \cexam_ind_hat:nn%
+    {\cexam_indent_dim}%
+    {\int_use:N \cexam_number_int}#2%
+  }%
+% 判断图片格式化
+  \bool_if:NTF \cexam_nopic_bool%
+  {\relax}%
+  {%
+    \hbox_set:Nn \sel_optpic_box{\cexam_seped_pic:}%
+    \dim_set:Nn {\sel_optpic_wd_dim}{\box_wd:N \sel_optpic_box}%
+    \dim_set:Nn {\sel_optpic_ht_dim}{\box_ht:N \sel_optpic_box}%
+    \dim_add:Nn {\sel_optpic_ht_dim}{\box_dp:N \sel_optpic_box}%
+    \str_if_in:nnTF {#1}{*}%
+    {\bool_set_false:N \cexam_fmt_bool}%
+    {%
+      \bool_set_true:N \cexam_fmt_bool%
+      \dim_add:Nn \sel_optpic_ht_dim {\baselineskip}%
+    }%
+  }%
+% 基础排版
+  \bool_if:NTF \cexam_nopic_bool%
+  {%
+% 无图排版
+    \cexam_type_v:nnnnn%
+    {\cexam_indent_dim}{0pt}%
+    {\cexam_indent_i_dim}{0pt}%
+    {\cexam_seped_txt:}%
+  }%
+  {%
+% 有图排版,获得文本以行宽减图宽排版时的测量高度
+    \dim_set:Nn \sel_optwd_dim {\linewidth}%
+    \dim_sub:Nn \sel_optwd_dim {\cexam_indent_dim}%
+    \dim_sub:Nn \sel_optwd_dim {\cexam_pictxt_skip}%
+    \dim_sub:Nn \sel_optwd_dim {\sel_optpic_wd_dim}%
+    \get_par_ht:nnn%
+    {\sel_optpic_hti_dim}%
+    {\sel_optwd_dim}%
+    {\cexam_seped_txt:}%
+% 决定排版
+    \dim_compare:nNnTF {\sel_optpic_hti_dim} > {\sel_optpic_ht_dim}%
+    {%
+      \cexam_type_ii:nnnnnnnnn%
+      {r}{\cexam_seped_pic:}%
+      {\cexam_indent_dim}{\cexam_pictxt_skip}%
+      {\cexam_indent_dim}{0pt}%
+      {\cexam_indent_i_dim}{0pt}%
+      {\cexam_seped_txt:}%
+    }%
+    {%
+      \dim_sub:Nn \sel_optpic_ht_dim {\sel_optpic_hti_dim}%
+      \dim_compare:nNnTF%
+      {\sel_optpic_ht_dim} < {\baselineskip}%
+      {%
+	\cexam_type_i:nnnnnnn%
+	{r}{\cexam_seped_pic:}%
+	{\cexam_indent_dim}{\cexam_pictxt_skip}%
+	{\cexam_indent_dim}{\sel_optpic_wd_dim}%
+	{%
+	  \cexam_seped_txt:%
+	}%
+	\vspace{\sel_optpic_ht_dim}%
+      }%
+      {%
+	\cexam_type_iii:nnnnnnn%
+	{c}{\cexam_seped_pic:}%
+	{\cexam_indent_dim}{0pt}%
+	{\cexam_indent_dim}{0pt}%
+	{\cexam_seped_txt:}%
+      }%
+    }%
+  }%
+}
+% 判断题的排版
+\cs_new:Npn \judge_type:n #1.#2\scan_stop:
+{
+  \blank_type:n #1.#2\hfill(\quad) \scan_stop:
+}
+% 定义计算题的选项
+\int_new:N \cexam_qitem_int
+\cs_new:Nn \cexam_qitem:
+{
+  \makebox[0pt][r]{\parbox[b]{1.4\ccwd}{ (\int_use:N \cexam_qitem_int)\hfill}}
+}
+\NewDocumentCommand \qitem { }
+{
+  \int_add:Nn \cexam_qitem_int {1}
+  \int_compare:nNnTF
+  {\cexam_qitem_int} = {1}
+  {\relax}
+  {\newline}
+  \cexam_qitem:
+}
+% 计算题有的会带有几个小问题,所以需要考虑选项与图片的排版.而选项的序号可以用方括来界定选项.
+\cs_new:Npn \calculate_type_i:n #1.#2\qitem#3#4\scan_stop:
+{%
+% 题号处理
+  \int_add:Nn \cexam_number_int {1}%
+  \hbox_set:Nn \cexam_number_box {\int_use:N \cexam_number_int .}%
+  \dim_set:Nn \cexam_indent_dim{\box_wd:N \cexam_number_box}%
+  \dim_add:Nn \cexam_indent_dim{\cexam_numtxt_skip}%
+  \dim_set:Nn \cexam_indent_i_dim {\cexam_indent_dim}%
+  \dim_add:Nn \cexam_indent_i_dim {1.43\ccwd}%
+  \int_set:Nn \cexam_qitem_int{0}%
+% 分离图文
+  \cexam_sep_pictxt:n
+  {%
+    \cexam_ind_hat:nn%
+    {\cexam_indent_dim}%
+    {\int_use:N \cexam_number_int}#2%
+  }%
+% 判断图片格式化
+  \bool_if:NTF \cexam_nopic_bool%
+  {\relax}%
+  {%
+    \hbox_set:Nn \sel_optpic_box{\cexam_seped_pic:}%
+    \dim_set:Nn {\sel_optpic_wd_dim}{\box_wd:N \sel_optpic_box}%
+    \dim_set:Nn {\sel_optpic_ht_dim}{\box_ht:N \sel_optpic_box}%
+    \dim_add:Nn {\sel_optpic_ht_dim}{\box_dp:N \sel_optpic_box}%
+    \str_if_in:nnTF {#1}{*}%
+    {\bool_set_false:N \cexam_fmt_bool}%
+    {%
+      \bool_set_true:N \cexam_fmt_bool%
+      \dim_add:Nn \sel_optpic_ht_dim {\baselineskip}%
+    }%
+  }%
+% 定义选项盒子
+  \hbox_set:Nn \cexam_option_box {\qitem{#3}#4}
+% 排版
+  \bool_if:NTF \cexam_nopic_bool
+  {
+    \cexam_type_v:nnnnn
+    {\cexam_indent_dim}{0pt}
+    {\cexam_indent_i_dim}{0pt}
+    {\cexam_seped_txt:}
+    \newline
+    \hbox_unpack:N \cexam_option_box
+  }
+  {
+    \dim_set:Nn \sel_optwd_dim {\linewidth}
+    \dim_sub:Nn \sel_optwd_dim {\cexam_indent_dim}
+    \dim_sub:Nn \sel_optwd_dim {\cexam_pictxt_skip}
+    \dim_sub:Nn \sel_optwd_dim {\sel_optpic_wd_dim}
+    \get_par_ht:nnn
+    {\sel_optpic_hti_dim}
+    {\sel_optwd_dim}
+    {\cexam_seped_txt:}
+    \dim_compare:nNnTF 
+    {\sel_optpic_hti_dim}>{\sel_optpic_ht_dim}
+    {
+      \cexam_type_ii:nnnnnnnnn
+      {r}{\cexam_seped_pic:}
+      {\cexam_indent_dim}{\cexam_pictxt_skip}
+      {\cexam_indent_dim}{0pt}
+      {\cexam_indent_i_dim}{0pt}
+      {\cexam_seped_txt:}
+      \newline
+      \hbox_unpack:N \cexam_option_box
+    }
+    {
+	\cs_set:Nn \cexam_seped_txt_i:
+	{\hbox_unpack:N \cexam_option_box}
+	\cexam_type_iv:nnnnnnnn
+	{r}{\cexam_seped_pic:}
+	{\cexam_indent_dim}{\cexam_pictxt_skip}
+	{\cexam_indent_i_dim}{0pt}
+	{\cexam_seped_txt:}{\cexam_seped_txt_i:}
+    }
+  }
+}
+\cs_new:Npn \calculate_type:n #1.#2 \scan_stop:
+{%
+  \str_if_in:nnTF {#2}{\qitem}%
+  {\calculate_type_i:n #1.#2\scan_stop:}%
+  {\blank_type:n #1.#2\scan_stop:}%
+}
+% 定义填空题的空白
+\bool_new:N \cexam_blank_bool
+\cs_new:Nn \cexam_blank_ed:{}
+\cs_new_protected:Nn \cexam_quad: {\rule[-2pt]{\ccwd}{0.4pt}}
+\box_new:N \blank_wd_box
+\dim_new:N \blank_wd_dim
+\cs_new:Npn \cexam_blank:n #1
+{
+  \exp_args:NNo \cs_set:Nn \cexam_blank_ed:{\cexam_blank_ed:~#1\quad}
+  \hbox_set:Nn \blank_wd_box {#1}
+  \dim_set:Nn \blank_wd_dim {\box_wd:N \blank_wd_box}
+  \dim_add:Nn \blank_wd_dim {2\ccwd}
+  \hspace{3pt}
+  \dim_while_do:nNnn
+  {\blank_wd_dim} > {0pt}
+  { 
+    \dim_sub:Nn \blank_wd_dim {\ccwd}
+    \cexam_quad: 
+    \hspace{-13pt}
+    \quad
+  }
+  \hspace{6pt}
+}
+% 定义用户接口
+\NewDocumentCommand \blank {m}
+{
+  \cexam_blank:n{#1}
+}
+\NewDocumentCommand \blanked {}
+{
+  \cexam_blank_ed:
+}
+\cs_new:Npn \cexam_everypar:n #1.#2 ABC
+{
+%  \blank_type:n #1.#2\scan_stop:
+  \calculate_type:n #1.#2\scan_stop:
+}
+\NewDocumentCommand \mycmd {}
+{\cexam_everypar:n}
+
+%\NewDocumentEnvironment {blanks}{}
+%{
+%  \par
+%  \parindent=0pt
+%  \everypar={\mycmd}
+%}{}

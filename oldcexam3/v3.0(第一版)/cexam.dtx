@@ -1,0 +1,538 @@
+% \iffalse meta-comment ^^A 此行的\iffalse 和 \end{document}后的那个\fi配对,用以在获得说明文档时越过.ins 文件
+% !TeX program  = XeLaTeX
+% !TeX encoding = UTF-8
+%
+% cexam.dtx
+% Copyright 2016-2019 FengZhenhua <fengzhenhua@sina.cn>
+% 
+% 此版本是为了适应latex3,以便更好的维护系统，于2019年4月9日晚决定在空闲时间将已经由latex2e开发完成的cexam.sty,使用latex3改写全部代码.
+%
+%<*internal>
+\iffalse
+%</internal>
+%
+%<*readme>
+cexam
+=====
+
+`cexam` is a collection of macro packages and document classes
+for  Chinese examination.
+
+Authors and Contributors
+------------------------
+* Feng Zhenhua <fengzhenhua@sina.cn>
+
+Contributing
+------------
+This package was created by myself.
+
+Copyright and Licence
+---------------------
+    Copyright (C) 2017--2020
+    CTEX.ORG and any individual authors listed elsewhere in this file.
+    ----------------------------------------------------------------------
+
+    This work may be distributed and/or modified under the
+    conditions of the LaTeX Project Public License, either
+    version 1.3c of this license or (at your option) any later
+    version. This version of this license is in
+       http://www.latex-project.org/lppl/lppl-1-3c.txt
+    and the latest version of this license is in
+       http://www.latex-project.org/lppl.txt
+    and version 1.3 or later is part of all distributions of
+    LaTeX version 2005/12/01 or later.
+
+    This work has the LPPL maintenance status `maintained'.
+
+    The Current Maintainers of this work is Feng Zhenhua.
+
+    This package consists of the file cexam.dtx
+                and the derived files cexam.sty
+				      README.md (this file).
+  ------------------------------------------------------------------------------
+%</readme>
+%
+%<*internal>
+\fi
+%</internal>
+%
+%<*internal>
+\begingroup
+  \def\temp{LaTeX2e}
+\expandafter\endgroup\ifx\temp\fmtname\else 
+\csname fi\endcsname
+%</internal>
+%
+%<*install>
+\input ctxdocstrip %
+\askforoverwritefalse
+\keepsilent
+
+\preamble
+
+    Copyright (C) 2017--2020
+    CTEX.ORG and any individual authors listed elsewhere in this file.
+    ----------------------------------------------------------------------
+
+    This work may be distributed and/or modified under the
+    conditions of the LaTeX Project Public License, either
+    version 1.3c of this license or (at your option) any later
+    version. This version of this license is in
+       http://www.latex-project.org/lppl/lppl-1-3c.txt
+    and the latest version of this license is in
+       http://www.latex-project.org/lppl.txt
+    and version 1.3 or later is part of all distributions of
+    LaTeX version 2005/12/01 or later.
+
+    This work has the LPPL maintenance status `maintained'.
+
+    The Current Maintainers of this work is Feng Zhenhua.
+
+------------------------------------------------------------------------------
+\endpreamble
+%
+\postamble
+\endpostamble
+%
+\generate 
+{
+    \usedir{tex/latex/cexam}
+    \file{cexam.sty}	            {\from{\jobname.dtx}{package}}
+%</install>
+%<*internal>
+    \usedir{source/latex/cexam}
+    \file{\jobname.ins}                    {\from{\jobname.dtx}{install}}
+%</internal>
+%<*install>
+    \nopreamble\nopostamble
+    \usedir{doc/latex/cexam}
+    \file{README.md}                {\from{\jobname.dtx}{readme}}
+}
+
+\catcode32=12\space
+
+\Msg{***********************************************************}
+\Msg{                                                           }
+\Msg{ To finish the installation you have to move the following }
+\Msg{ file into proper directories searched by TeX:             }
+\Msg{                                                           }
+\Msg{ The recommended directory is TDS:tex/latex/ctex           }
+\Msg{                                                           }
+\Msg{     cexam.sty                                             }
+\Msg{                                                           }
+\Msg{ To produce the documentation run the file ctex.dtx        }
+\Msg{ through XeLaTeX.                                          }
+\Msg{                                                           }
+\Msg{ Happy TeXing!                                             }
+\Msg{                                                           }
+\Msg{***********************************************************}
+
+\endbatchfile 
+%</install>
+%<*internal>
+\fi  
+%</internal>
+%
+%<package>\NeedsTeXFormat{LaTeX2e}
+%<package>\RequirePackage{expl3,xparse,calc}
+%<package>\GetIdInfo$Id: cexam.dtx v3.0(testing) 2019-07-31 ZhenhuaFeng  <fengzhenhua@sina.cn> $ {For chinese middle school examination}
+%<package>\ProvidesExplPackage{\ExplFileName}{\ExplFileDate}{\ExplFileVersion}{\ExplFileDescription}
+%
+%<*driver>
+\documentclass{ctxdoc}
+\EnableCrossrefs
+\CodelineIndex
+\RecordChanges
+%\OnlyDescription
+\begin{document}
+  \tableofcontents
+  \DocInput{\jobname.dtx}
+  \IndexLayout
+  \PrintChanges
+  \PrintIndex
+\end{document}
+%</driver>
+%
+% \fi ^^A 此\fi 和第1行的\iffalse 配对
+% 
+% \changes{v3.0.1}{2019/04/09}{开始使用LaTeX3重构cexam.sty}
+% \changes{v3.0.1}{2019/07/31}{加入测行程序和形状生成程序,同时删除之前改写的代码}
+% \changes{v3.0.1}{2019/07/31}{缩写命名,加入缩写列表}
+%
+% \CheckSum{0}
+%
+% \CharacterTable
+%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%   Digits        \0\1\2\3\4\5\6\7\8\9
+%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%   Dollar        \$     Percent       \%     Ampersand     \&
+%   Acute accent  \'     Left paren    \(     Right paren   \)
+%   Asterisk      \*     Plus          \+     Comma         \,
+%   Minus         \-     Point         \.     Solidus       \/
+%   Colon         \:     Semicolon     \;     Less than     \<
+%   Equals        \=     Greater than  \>     Question mark \?
+%   Commercial at \@     Left bracket  \[     Backslash     \\
+%   Right bracket \]     Circumflex    \^     Underscore    \_
+%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%   Right brace   \}     Tilde         \~}
+%
+% \title{中文试题排版cexam.dtx}
+% \author{冯振华}
+% \date{2019年5月8日}
+% \maketitle
+% \begin{abstract}
+% 我是一名高中物理教师,所以在工作中不可避免的会遇到输入数学公式的问题,同时我也希望能够将自己多年的备课及解决的疑难问题记录下来,以备学生们在复习时或者刚开始学习物理的同学作为教材的补充使用.历经各种困难,最后找到了\LaTeX{},发现了这个举世无双的神奇软件.2016年自学了一年的宏包编写，成功解决了高中的物理数学试卷的排版问题。但是之前直接写的sty文件和cls文件，实现了选择、填空、计算等题型的自动排版，同时实现批量处理各种题型、实现数学与图片的排版、自动生成beamer文档、生成答题卡、教师与学生不同模式排版。但是后来发现，功能越多代码越复杂，很难维护，同时也少了一份使用说明，所以写本文档，有两个目的：
+% 其一,方便代码的维护和升级;
+% 其二,方便参考此说明使用它排版试卷
+%
+% 由于在2018年我成功使用\LaTeX2e{} 完成了 \file{cexam.dtx} 文件, 但是对 \pkg{doc} 和 \pkg{docstrip} 理解的不够深入所以最初写成的 \file{cexam.dtx} 文件不是很规范,同时考虑到了 \CTeX{} 宏集使用 \LaTeX3{} 进行了重写,\LaTeX3{} 的语法更加友好,且已经很成熟了,所以我也决定对我的宏包 \pkg{cexam} 使用 \LaTeX3{}重写以便于更好的维护和拓展功能.考虑到实践的检验,所以开始不拟实现全部功能,仅写出核心功能,经过一段时间的检验后再逐步实现各项功能.
+% 
+% 由于立志通过北京大学的理论物理考试,同时工作又需要消耗大量的时间,一边学习一边工作一边搞 \pkg{cexam} 的开发,这很紧张.所以决定以考研大业为主,工作其次, \pkg{cexam} 改写工作于空闲时间进行.祝自己成功!!
+%
+% \end{abstract}
+%%
+% \begin{documentation}
+%
+% \end{documentation}
+%
+% \StopEventually{}
+%\begin{implementation}
+% \clearpage
+% \section{代码实现}
+%
+% \subsection{缩写列表}
+% 
+% 由于编写过程中需要对函数命名,如果为了清析则可以使用全称来命名,但是这样做会导致程序的名字过长,输入不便同时会影响逻辑结构的表达清析.但是用过短的简写来命名,对于维护来说不是很方便,这也是我在此处列出缩写列表的目的所在,两者兼顾,同时所生成的宏包还不容易被破译.
+%
+%  \begin{center}
+%  \begin{tabular}{|*{12}{c|}}
+%  \hline
+%  简写&英文&中文&&简写&英文&中文&&简写&英文&中文\\
+%  \hline
+%  by& body&主体&& mk& make& 生成&& rec&rectangle&矩形\\
+%  \hline
+%  hd&head&头部&& sha&shape&形状&&sep&separate&分离\\
+%  \hline
+%  tl&tail&尾部&&txt &text &文本 &&mat &math &数学 \\
+%  \hline
+%  sub&subtraction&减去&&ps &parshape&形状&&equ &equation &公式 \\
+%  \hline
+%  \end{tabular}
+%  \end{center}
+%
+% \subsection{布尔值}
+%    \begin{macrocode}
+%<*package>
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%<@@=cexam>
+%    \end{macrocode}
+%    \begin{variable}[added=2019-05-11]{\g_@@_sep_by_bool,\g_@@_sep_tl_bool}
+%  这两个布尔值在数学分离模式中标志数学模式是否文本串中有数学公式,字符串分离后尾部是否为空.
+%    \begin{macrocode}
+\bool_new:N \g_@@_sep_by_bool
+\bool_new:N \g_@@_sep_tl_bool
+%    \end{macrocode}
+%    \end{variable}
+%%
+% \subsection{盒子}
+%
+% \begin{variable}[added=2019-05-14]{\cexam_txtht_box}
+% 此盒子用来在计算行数时获得对应文字的高度,其应用于 \cs{cexam_get_txtht:nno}中.
+%    \begin{macrocode}
+\box_new:N \cexam_txtht_box
+%    \end{macrocode}
+% \end{variable}
+%
+% \subsection{长度}
+%
+% \begin{variable}[added=2019-05-14]{\cexam_txt_sub_dim,\cexam_mat_sub_dim}
+% 这个长度是在行数统计程序中,计算正常文本和数学文本时所需要递减的高度.
+%    \begin{macrocode}
+\dim_new:N \cexam_txt_sub_dim  
+\dim_new:N \cexam_mat_sub_dim 
+\dim_set:Nn \cexam_txt_sub_dim{\baselineskip}
+\dim_set:Nn \cexam_mat_sub_dim{2\baselineskip}
+%    \end{macrocode}
+% \end{variable}
+% \begin{variable}[added=2019-07-31]{\rec_tempht_dim}
+% 此长度变量用来在计算行数时,临时存储文本的高度.
+%    \begin{macrocode}
+\dim_new:N \rec_tempht_dim
+%    \end{macrocode}
+% \end{variable}
+%
+% \begin{variable}[added=2019-07-31]{\cexam_psrin_dim,\cexam_pslin_dim,\cexam_pswd_dim}
+% 此三个变量用来在形状生成程序中存储右缩进,左缩进,行宽.
+%    \begin{macrocode}
+      \dim_new:N \cexam_psrin_dim 
+      \dim_new:N \cexam_pslin_dim 
+      \dim_new:N \cexam_pswd_dim 
+%    \end{macrocode}
+% \end{variable}
+%
+% \subsection{计数器}
+%
+% \begin{variable}[added=2019-07-31]{\cexam_psnum_int}
+% 此计数器用来在生成段落形状时的行数.
+%    \begin{macrocode}
+      \int_new:N \cexam_psnum_int 
+%    \end{macrocode}
+% \end{variable}
+%
+% \begin{variable}[added=2019-08-03]{\cexam_equ_int}
+% 此计数器用来在测行时,数学公式的计数器会增加,所以此计数器对数学公式部分取得高度后数学公式计数器的还原.
+%    \begin{macrocode}
+      \int_new:N \cexam_equ_int
+%    \end{macrocode}
+% \end{variable}
+%
+% \subsection{含数学公式文本的行数测定}
+% 
+% \begin{function}[added=2019-05-10]{\cexam_sep_i:n , \cexam_sep_ii:n, \cexam_sep_iii:n}
+%
+% 三个基本数学模式分离,数学模式符号不处于字符串两端的处理
+%
+%    \begin{macrocode}
+\cs_new:Npn \cexam_sep_i:n  #1$$#2$$#3\scan_stop:
+{
+  \cs_set:Nn \sep_hd_dim: {#1}
+  \cs_set:Nn \sep_by_dim: {$$#2$$}
+  \cs_set:Nn \sep_tl_dim: {#3}
+}
+
+\cs_new:Npn \cexam_sep_ii:n #1\[#2\]#3\scan_stop:
+{
+  \cs_set:Nn \sep_hd_dim: {#1}
+  \cs_set:Nn \sep_by_dim: {\[#2\]}
+  \cs_set:Nn \sep_tl_dim: {#3}
+}
+
+\cs_new:Npn \cexam_sep_iii:n #1\begin#2\end#3#4\scan_stop:
+{
+  \cs_set:Nn \sep_hd_dim: {#1}
+  \cs_set:Nn \sep_by_dim: {\begin#2\end{#3}}
+  \cs_set:Nn \sep_tl_dim: {#4}
+}
+%    \end{macrocode}
+% \end{function}
+%
+% \begin{function}[added=2019-05-10]{\cexam_sep_mk:n}
+% 将三个数学模式合并为一个处理程序
+%    \begin{macrocode}
+\cs_new:Npn \cexam_sep_mk:n #1\scan_stop:
+{
+  \str_if_in:nnTF {#1}{$$}%$$
+  {\cexam_sep_i:n #1\scan_stop:}
+  {
+    \str_if_in:nnTF {#1}{\[}%\]
+      {\cexam_sep_ii:n #1\scan_stop:}
+      {
+	  \str_if_in:nnTF {#1}{\begin}
+	  {\cexam_sep_iii:n #1\scan_stop:}
+	  {}
+      }
+  }
+}
+%    \end{macrocode}
+% \end{function}
+% \begin{function}[added=2019-05-10]{\cexam_sep_isin:nn}
+% 加入三个数学模式符号处于字符串两端的处理
+%    \begin{macrocode}
+  \cs_new:Npn \cexam_sep_isin:nn #1#2
+  {
+    \str_if_in:nnTF {*#1}{*#2}
+    {
+      \bool_set_true:N \g_@@_sep_by_bool
+      \str_if_in:nnTF {#1*}{#2*}
+      {
+	\cs_set:Nn \sep_hd_dim: {}
+	\cs_set:Nn \sep_by_dim: {}
+	\cs_set:Nn \sep_tl_dim: {}
+	\bool_set_false:N \g_@@_sep_tl_bool
+      }
+      {
+	\cexam_sep_mk:n *#1\scan_stop:
+	\cs_set:Nn \sep_hd_dim: {}
+	\bool_set_true:N \g_@@_sep_tl_bool
+      }
+    }
+    {
+      \str_if_in:nnTF {#1*}{#2*}
+      {
+	\bool_set_true:N \g_@@_sep_by_bool
+	\cexam_sep_mk:n #1*\scan_stop:
+	\cs_set:Nn \sep_tl_dim: {}
+	\bool_set_false:N \g_@@_sep_tl_bool
+      }
+      {
+	\str_if_in:nnTF {#1}{#2}
+	{
+	  \bool_set_true:N \g_@@_sep_by_bool
+	  \cexam_sep_mk:n #1\scan_stop:
+	  \bool_set_true:N \g_@@_sep_tl_bool
+	}{}
+      }
+    }
+  }
+%    \end{macrocode}
+% \end{function}
+% \begin{function}[added=2019-05-10]{\cexam_sep:n}
+% 加入数学和纯文本模式混合时的分离功能,自动判断是否存在数学模式,尾部是否为空
+%    \begin{macrocode}
+  \cs_new:Npn \cexam_sep:n #1 \scan_stop:
+  {
+    \str_if_in:nnTF {#1}{$$}%$$
+    {
+      \cexam_sep_isin:nn {#1}{$$}%$$
+    }
+    {
+      \str_if_in:nnTF {#1}{\[}%\]
+	{
+	  \cexam_sep_isin:nn {#1}{\[}%\]
+	  }
+	  {
+	    \str_if_in:nnTF {#1}{\begin}%\end
+	    {
+	      \cexam_sep_isin:nn {#1}{\begin}%\end
+	    }
+	    {
+	      \cs_set:Nn \sep_hd_dim: {#1}
+	      \cs_set:Nn \sep_by_dim: {}
+	      \cs_set:Nn \sep_tl_dim: {}
+	      \bool_set_false:N \g_@@_sep_tl_bool
+	      \bool_set_false:N \g_@@_sep_by_bool
+	    }
+	  }
+      }
+  }
+%    \end{macrocode}
+% \end{function}
+% \begin{function}[added=2019-07-30]{\cexam_get:nNnN}
+% 四个参数依次为:1计数器增量,2计数器,3行减量,4总减行高.这样设计的依据是,使待求量尽量放在前面,则在后面使用时可以在追加资料的情况下,不同程序中相同位置表示相同的量,这样可以增加程序的可读性.
+%    \begin{macrocode}
+  \cs_new:Npn \cexam_get:nNnN #1#2#3#4
+  {
+    \dim_while_do:nNnn {#4}>{0pt}
+    {
+      \dim_sub:Nn {#4}{#3}
+      \int_add:Nn {#2}{#1}
+    }
+  }
+%    \end{macrocode}
+% \end{function}
+% \begin{function}[added=2019-07-30]{\cexam_get_txtht:nno}
+% \changes{v3.0.2}{2019/08/03}{增加equation计数器的还原}
+% 三个参数依次为:1高(所要求的量),2宽,3文本. 此程序产生文本的总体高度.由于在对数学部分取对应高度时会使用\cs{parbox}来预排版,而数学计数器是一个全局计数器,它的数值会增加,所以先取得计数器之值,然后预排版取得数学文本高度,再还原数学计数器之值,最终以正确的计数器参与正式排版.
+%    \begin{macrocode}
+  \cs_new:Npn \cexam_get_txtht:nno #1#2#3
+  {
+    \int_set:Nn \cexam_equ_int {\int_use:N\c@equation}
+    \hbox_set:Nn \cexam_txtht_box 
+    {\parbox{#2}{#3}}
+    \int_set:Nn \c@equation {\int_use:N \cexam_equ_int}
+    \dim_set:Nn {#1}{\box_dp:N \cexam_txtht_box}
+    \dim_add:Nn {#1}{\box_ht:N \cexam_txtht_box}
+  }
+%    \end{macrocode}
+% \end{function}
+% \begin{function}[added=2019-07-31]{\cexam_get_rec_i:nNnNnn}
+% 六个参数依次为:1计数器增量,2计数器,3行减量,4总减行高,5矩形宽,6文本(含数学文本)
+%    \begin{macrocode}
+  \cs_new:Npn \cexam_get_rec_i:nNnNnn #1#2#3#4#5#6
+  {
+    \cexam_get_txtht:nno {\rec_tempht_dim}{\linewidth - #5}{#6}
+    \dim_compare:nTF {\rec_tempht_dim < #4}
+    {
+      \dim_sub:Nn #4 {\rec_tempht_dim}
+      \cexam_get:nNnN {#1}{#2}{#3}{\rec_tempht_dim}
+    }
+    {\cexam_get:nNnN {#1}{#2}{#3}{#4}}
+  }
+%    \end{macrocode}
+% \end{function}
+%
+% \begin{function}[added=2019-07-31]{\cexam_get_rec:nnnn}
+% 四个参数依次为:1计数器,2矩形高,3矩形宽,4文本(含数学文本).此程序于2019年7月30日成功进行了重构,其比之前的程序精炼了许多,逻辑更加清析.
+%    \begin{macrocode}
+  \cs_new:Npn \cexam_get_rec:nnnn #1#2#3#4
+  {
+    \bool_if:NTF \g__cexam_sep_tl_bool
+    {\exp_args:No \cexam_sep:n #4 \scan_stop:}
+    {\cexam_sep:n #4 \scan_stop:}
+    \cexam_get_rec_i:nNnNnn {1}{#1}{\cexam_txt_sub_dim}{#2}{#3}{\sep_hd_dim:}
+%    \end{macrocode}
+% 以上先分离一次,对head计算行数,如果总减高不为零,则对body排版
+%    \begin{macrocode}
+    \dim_compare:nTF {#2 > 0pt}
+    {
+      \bool_if:NTF \g__cexam_sep_by_bool
+      {	
+	\cexam_get_rec_i:nNnNnn {3}{#1}{\cexam_mat_sub_dim}{#2}{#3}{\sep_by_dim:}
+      }{\relax}
+    }{\relax}
+%    \end{macrocode}
+% 以上对body排版,如仍然不能令\pkg{\#4=0pt},则继续对tail排版
+%    \begin{macrocode}
+    \dim_compare:nTF {#2 > 0pt}
+    {
+      \bool_if:NTF \g__cexam_sep_tl_bool
+      {
+	\cexam_get_rec:nnnn {#1}{#2}{#3}{\sep_tl_dim:}
+      }{\relax}
+    }{\relax}
+  }
+%    \end{macrocode}
+% \end{function}
+% \begin{function}[added=2019-07-31]{\cexam_shad:}
+% 此命令用来存储所生成的段落形状,初始为空.
+%    \begin{macrocode}
+  \cs_new:Nn \cexam_shad: {}
+%    \end{macrocode}
+% \end{function}
+% \begin{function}[added=2019-07-31]{\cexam_sha_cape:}
+% 为了保证生成正确的形状,此处定义不可展开的空格.在\LaTeX3 的语法中忽略一切空格,但是在\cs{pasha}中又必须使用空格分开各行缩进和行宽,测试后发现\~{} 可以达到在\LaTeX3 的目标.但是本身\~{} 是一个活动符号,在生成形状时需要逐级展开,它会消失,所以此处用了一个不可展开的命令来代替它.
+%    \begin{macrocode}
+  \cs_new_protected:Nn \cexam_sha_cape:{~}
+%    \end{macrocode}
+% \end{function}
+%
+% \begin{function}[added=2019-07-31]{\cexam_sha_mk:nnnn}
+% 四个参数依次为:1计数器,2左缩进,3行宽,4右缩进
+%    \begin{macrocode}
+  \cs_new:Npn \cexam_sha_mk:nnnn #1#2#3#4
+  {
+    \int_add:Nn {#1}{1}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:{\cexam_sha_cape: \int_use:N #1}
+    \dim_set:Nn \cexam_pslin_dim {#2}
+    \dim_set:Nn \cexam_psrin_dim {#4}
+    \dim_set:Nn \cexam_pswd_dim {#3}
+    \dim_sub:Nn \cexam_pswd_dim {#2}
+    \dim_sub:Nn \cexam_pswd_dim {#4}
+    \int_while_do:nNnn {#1} > {1}
+    {
+      \int_sub:Nn {#1}{1}
+      \exp_args:NNx\cs_set:Nn \cexam_shad:
+      {\cexam_shad:\cexam_sha_cape: \dim_use:N \cexam_pslin_dim}
+      \exp_args:NNx\cs_set:Nn \cexam_shad:
+      {\cexam_shad:\cexam_sha_cape: \dim_use:N \cexam_pswd_dim}
+    }
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_shad:\cexam_sha_cape: 0pt}
+    \exp_args:NNx\cs_set:Nn \cexam_shad:
+    {\cexam_shad:\cexam_sha_cape: \dim_use:N \linewidth}
+  }
+
+%    \end{macrocode}
+% \end{function}
+%    \begin{macrocode}
+%</package>
+%    \end{macrocode}
+% 
+% \end{implementation}
+%
+% \Finale
+%
+% \endinput

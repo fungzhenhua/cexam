@@ -1,0 +1,27 @@
+\documentclass[a4paper,fontset = windowsnew]{ctexbook}
+\usepackage{xifthen}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+%\usepackage{amsmath}
+\usepackage[user=student]{cexam}
+
+\begin{document}
+\chapter{基本排版程序}
+
+
+\ExplSyntaxOn
+%\parindent=0pt
+\cexam_sep:n 爱因斯坦的质能方程为
+\begin{equation}
+   E=MC^2
+\end{equation}
+它是一个非常重要的方程。\scan_stop:
+
+\sep_hd_tl
+
+\ExplSyntaxOff
+%\makeanswer
+
+\end{document}

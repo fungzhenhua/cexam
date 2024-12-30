@@ -1,0 +1,196 @@
+%  \section{\pkg{doc}宏包中定义的基本命令}
+% 
+% \subsection{General conventions}
+% 
+% \begin{function}[added=2018-03-26]{macrocode}
+%   \begin{syntax}
+%     %    \tn{begin}\{macrocode\}
+%   and after this part a line
+%     %    \tn{end}\{macrocode\}
+%   \end{syntax}
+%  On the other hand,if the documentation of these macros is to be produced,the 'definition parts' should be typeset verbatim. To achieve this,these parts are surrounded by the macrocode environment. More exactly:before a 'definition part' there should be a line containing
+%  
+% \hspace*{\MacroIndent}\verb*+%    \begin{macrocode}+\\
+% and after this part a line\\
+% \hspace*{\MacroIndent}\verb*+%    \end{macrocode}+\\
+%  
+% There must be {\em exactly\/} four spaces between the |%|
+% and |\end{macrocode}| --- \TeX{} is looking for this string
+% and not for the macro while processing a `definition part'.
+%  
+%  Inside a 'definition part' all \TeX{} commands are allowed;even the percent sign could be used to suppress unwanted spaces etc.
+%  
+%   \end{function}
+%  
+%  \begin{function}[added=2018-03-26]{macrocode*}
+%   Instead of the \pkg{macrocode} environment one can also use the \pkg{macrocode*} environment which produces the same results except that spaces are printed as \nopagebreak\verb*+ +  characters.
+%   \end{function}
+%  
+% \subsection{Describing the usage of new macros}
+%  
+%  这一节中我把部分命令用ctxdoc宏包中的方式作了格式上的修改，以方便统一格式。但是在修改过程中发现，function 环境只能编辑一个命令或环境，而在一段文字中描述多外相关的命令或者环境时 function环境不如 |\DescribeMacro|和|\DescribeEnv|如用，为了保证能够根据此文档顺利使用dtx文学化编程，这里保留部分英文文档ltxdoc.dtx中的源码方便学习和分析。
+% 
+% \begin{function}[added=2018-03-28]{\DescribeMacro}
+%   \begin{syntax}
+%     \tn{DescribeMacro}\Arg{\tn{foo}}
+%   \end{syntax}
+%
+% When you describe a new macro you may use |\DescribeMacro| to
+% indicate that at this point the usage of a specific macro is
+% explained. It takes one argument which will be printed in the margin
+% and also produces a special index entry.  For example, I used
+% |\DescribeMacro{\DescribeMacro}| to make clear that this is the
+% point where the usage of |\DescribeMacro| is explained.
+% \end{function}
+%
+%
+% \begin{function}[added=2018-03-28]{\DescribeEnv}
+%   \begin{syntax}
+%     \tn{DescribeEnv}\Arg{foo}
+%   \end{syntax}
+% An analogous macro |\DescribeEnv| should be used to indicate
+% that a \LaTeX{} environment is explained. It will produce a somewhat
+% different index entry. Below I used |\DescribeEnv{verbatim}|.
+% \end{function}
+%
+% \begin{function}[added=2018-03-28]{verbatim}
+%   \begin{syntax}
+%      \tn{begin}\{verbatim\}
+%	your macrocode and text.
+%      \tn{end}\{verbatim\}
+%   \end{syntax}
+% It is often a good idea to include examples of the usage of new macros
+% in the text. Because of the |%| sign in the first column of every
+% row, the \textsf{verbatim} environment is slightly altered to suppress
+% those  characters.
+% \end{function}
+%
+% \begin{function}[added=2018-03-28]{verbatim*}
+%   \begin{syntax}
+%      \tn{begin}\{verbatim*\}
+%	your macrocode and text.
+%      \tn{end}\{verbatim*\}
+%   \end{syntax}
+% The \textsf{verbatim$*$} environment is changed in the same way.
+% \end{function}
+%
+% \begin{function}[added=2018-03-28]{\verb}
+%   \begin{syntax}
+%     \tn{verb}\{foo\}
+%   \end{syntax}
+% The "\verb" command is re-implemented to give an error report if a
+% newline appears in its argument.
+% The \textsf{verbatim} and \textsf{verbatim$*$} environments set text
+% in the style.
+% \end{function}
+%  
+% \subsection{Describing the definition of new macros}
+%
+% \begin{function}[added=2018-03-28]{macro}
+% To describe the definition of a new macro we use the \textsf{macro}
+% environment. It has one argument: the name of the new  macro.
+% This argument is also used to print the name in the margin and to
+% produce an index entry.
+% Actually the index entries for usage and definition are different to
+% allow an easy reference.
+% This environment might be nested. In this case the
+% labels in the margin are placed under each other.
+% There should be some text---even  if it's just an empty
+% "\mbox{}"---in this environment before "\begin{macrocode}" or the
+% marginal label won't print in the right place.
+% \end{function}
+%  
+% \DescribeMacro\MacrocodeTopsep
+% \DescribeMacro\MacroTopsep
+% There also exist four style parameters: |\MacrocodeTopsep| and
+% |\MacroTopsep| are used to control the vertical spacing above
+% and below the \textsf{macrocode} and the \textsf{macro}
+% \DescribeMacro\MacroIndent
+% environment, |\MacroIndent| is used to indent the lines of code
+% and
+% \DescribeMacro\MacroFont 
+% |\MacroFont| holds the font and a possible size change command
+% for the code lines, the "verbatim"["*"] environment and the macro
+% names printed in the margin.  If you want
+% to change their default values in a
+% class file (like \texttt{ltugboat.cls}) use the |\DocstyleParms|
+% command described below. Starting with release 2.0a it can now
+% be changed directly as long as the redefinition happens before
+%
+%
+% \begin{function}[added=2018-03-28]{\SpecialEscapechar}
+% If one defines complicated macros it is sometimes necessary to
+% introduce a new escape character because the `|\|' has got a
+% special |\catcode|. In this case one can use
+% |\SpecialEscapechar| to indicate which character is actually
+% used to play the r\^ole of the `|\|'. A scheme like this is
+% needed because the \textsf{macrocode} environment and its counterpart
+% \textsf{macrocode$*$} produce an index entry for every occurrence of a
+% macro name. They would be very confused if you didn't tell them that
+% you'd changed |\catcode|$\,$s.  The argument to
+% |\SpecialEscapechar| is a single-letter control sequence, that
+% is, one has to use "\|" for example to denote that `\verb+|+'
+% is used as an escape character. |\SpecialEscapechar| only
+% changes the behavior of the next \textsf{macrocode} or
+% \textsf{macrocode$*$} environment.
+%
+%  The actual index entries created will all be printed with |\|
+% rather than \verb+|+, but this probably reflects their usage, if not
+% their definition, and anyway must be preferable to not having any
+% entry at all.  The entries {\em could\/} be formatted appropriately,
+% but the effort is hardly worth it, and the resulting index might be
+% more confusing (it would certainly be longer!).
+% \end{function}
+%
+% \subsection{Cross-referencing all macros used}
+%
+% \DescribeMacro\DisableCrossrefs 
+% \DescribeMacro\EnableCrossrefs 
+% As already mentioned, every new macro name used within a
+% \textsf{macrocode} or \textsf{macrocode$*$} environment will produce
+% an index entry. In this way one can easily find out where a specific
+% macro is used.  Since \TeX{} is considerably slower when it has to
+% produce such a bulk of index entries one can turn off this feature
+% by using |\DisableCrossrefs| in the driver file. To turn it on again
+% just use |\EnableCrossrefs|.\footnote{Actually, \texttt{\bslash
+% EnableCrossrefs} changes things more drastically; any following
+% \texttt{\bslash DisableCrossrefs} which might be present in the
+% source will be ignored.}
+%
+%
+% \DescribeMacro\DoNotIndex
+% But also finer control is provided. The |\DoNotIndex| macro
+% takes a list of macro names separated by commas. Those names won't
+% show up in the index. You might use several |\DoNotIndex|
+% commands: their lists will be concatenated.  In this article I used
+% |\DoNotIndex| for
+% all macros which are already defined in \LaTeX.
+%
+% All three above declarations are local to the current group.
+%
+% Production (or not) of the index (via the "\makeindex" commend) is
+% controlled by using or omitting the following declarations in the
+% driver file preamble; if neither is used, no index is produced.
+%  
+% \DescribeMacro\PageIndex
+% Using "\PageIndex" makes all index
+% entries refer to their page number; with
+% \DescribeMacro\CodelineIndex 
+%"\CodelineIndex", index entries
+% produced by "\DescribeMacro" and "\DescribeEnv" refer to page number
+% but those produced by the \textsf{macro} environment refer to the
+% code lines, which will be numbered automatically.\footnote{The line
+% number is actually that of the first line of the first
+% \textsf{macrocode} environment in the \textsf{macro} environment.}
+% \DescribeMacro\theCodelineNo
+% The style of this numbering can be controlled by defining the macro
+% "\theCodelineNo".  Its default definition is to use scriptsize
+% arabic numerals; a user-supplied definition won't be overwritten.
+%
+% \DescribeMacro\CodelineNumbered
+% When you don't wish to get an index but want your code lines
+% numbered use "\CodelineNumbered" instead of "\CodelineIndex". This
+% prevents the generation of an unnecessary ".idx" file.
+%
+% 以上是一些我从doc.dtx文件中节选的，暂时保留这些，如有需要再作相应调整。
+%  

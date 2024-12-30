@@ -1,0 +1,64 @@
+\documentclass[a4paper,fontset = windows]{ctexbook}
+\usepackage{xifthen}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[user=student,option=random]{cexam}
+\usepackage[fontwarning=on]{ctrlwarning}
+
+\begin{document}
+\chapter{选择题选项排版测试}
+此为写出操作，用来控制选择题随机答案模式.
+
+\ExplSyntaxOn
+\cs_new:Npn \cmdtest_i:p #1#2#3#4 { A.#1~B.#2~C.#3~D.#4}
+\NewDocumentCommand {\cmdtestt}{m}{\cmdtest_i:p  #1 }
+\iow_new:N \random_write
+\ior_new:N \random_read
+\tl_new:N \random_line_tl
+\iow_open:Nn \random_write{\jobname.rand}
+\iow_now:Nn \random_write {1234}
+\iow_now:Nn \random_write {2341}
+\iow_now:Nn \random_write {3412}
+\iow_now:Nn \random_write {4123}
+\iow_now:Nn \random_write {2134}
+\iow_now:Nn \random_write {2341}
+\iow_now:Nn \random_write {2413}
+\iow_close:N \random_write
+\ior_open:Nn \random_read{\jobname.rand}
+
+\ior_str_get:NN \random_read \random_line_tl
+\exp_args:Nx \cmdtestt{\tl_use:N\random_line_tl}\par
+\ior_str_get:NN \random_read \random_line_tl
+\exp_args:Nx \cmdtestt{\tl_use:N\random_line_tl}\par
+\ior_str_get:NN \random_read \random_line_tl
+\exp_args:Nx \cmdtestt{\tl_use:N\random_line_tl}\par
+\ior_str_get:NN \random_read \random_line_tl
+\exp_args:Nx \cmdtestt{\tl_use:N\random_line_tl}\par
+\ior_str_get:NN \random_read \random_line_tl
+\exp_args:Nx \cmdtestt{\tl_use:N\random_line_tl}\par
+\ior_str_get:NN \random_read \random_line_tl
+\exp_args:Nx \cmdtestt{\tl_use:N\random_line_tl}\par
+\bool_case_true:n
+{
+   {\answer_student_bool && \cho_optrand_bool}{student~with~random}
+   {!\answer_student_bool && \cho_optrand_bool}{teacher~with~random}
+   {!\answer_student_bool && !\cho_optrand_bool}{teacher~without~random}
+   {\answer_student_bool && !\cho_optrand_bool}{student~without~random}
+}
+
+\tl_if_eq:NnTF \random_line_tl{2341}
+{right}
+{wrong}
+
+
+\str_case:nn {A}
+{
+   {A}{Good}
+   {B}{Sorry}
+}
+
+\ExplSyntaxOff
+
+
+\end{document}

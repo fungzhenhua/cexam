@@ -1,0 +1,12 @@
+\chapter {基本排版程序（答案）}
+
+\begin {answerstd}
+
+1.{\heiti 答案}
+ 答案1\hskip 1em\relax  答案2\hskip 1em\relax  feng\hskip 1em\relax 
+
+2.{\heiti 答案}
+ thinkpad\hskip 1em\relax  lenovo\hskip 1em\relax 
+
+\end {answerstd}
+

@@ -1,0 +1,76 @@
+\documentclass[a4paper,fontset = windowsnew]{ctexbook}
+\usepackage{xifthen}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{cexam}
+
+\begin{document}
+\chapter{行数统计程序}
+
+\parindent=0pt
+
+%\int_use:N \prevgraf
+2019年8月29日下午重新改写下一代测行程序依据 prevgraf, 更加准确
+\ExplSyntaxOn
+% 设置段落行数
+**********************************************
+\par
+
+% \cexam_type_ii:nnnnnnnnn
+% \cexam_type_iii:nnnnnnn
+% \cexam_type_iv:nnnnnnnn
+ \cexam_type_v:nnnnn
+% {r}
+% {
+%   \begin{tikzpicture}
+%     \draw (0,0) rectangle (3,2);
+%   \end{tikzpicture}
+% }
+ {20pt}{0pt}
+ {40pt}{0pt}
+% {40pt}{0pt}
+ {
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    \begin{equation}
+      E=MC^2
+    \end{equation}
+    这是行数测试文本
+    \begin{equation}
+      E=MC^2
+    \end{equation}
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    \begin{equation}
+      E=MC^2
+    \end{equation}
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+    这是行数测试文本
+  }
+  \newline  
+  这是选项部分
+  这是选项部分
+  这是选项部分
+  这是选项部分
+  这是选项部分
+ 
+
+    \end{document}

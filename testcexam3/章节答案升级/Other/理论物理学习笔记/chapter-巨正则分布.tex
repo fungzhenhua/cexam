@@ -1,0 +1,46 @@
+\chapter{巨正则分布}
+\section{配分函数}
+\subsection{关于求和的讨论}
+\begin{gather}
+  \intertext{在近独立的情况求配分函数会出现如下形式的和}
+  \sum_{a_n}e^{-\sum_n \varepsilon_n a_n}
+  \intertext{为了方便讨论,我们取二项的情况讨论,形式如下}
+  \sum_{a_1,a_2}e^{-\varepsilon_1a_1-\varepsilon_2a_2}
+  \intertext{显然上述的和式可以表达为关于$\varepsilon_1$ 和 $\varepsilon_2$ 的某函数的乘积,同时基于二者的相同地位,则可以判断此函数结构相同,即}
+  \sum_{a_1,a_2}e^{-\varepsilon_1a_1-\varepsilon_2a_2}=f(\varepsilon_1)\cdot f(\varepsilon_2)
+  \intertext{由求和的结果可以判断每一项$f(\varepsilon_n)$应当包含所有属于 $\varepsilon_n$ 的指数项,即}
+  f(\varepsilon_n)=\sum_{a_n}e^{-\varepsilon_n a_n}
+\end{gather}
+
+\subsection{近独立分布}
+\begin{gather}
+  \intertext{巨正则分布的配分函数表达为}
+  \varXi =\sum_N e^{\frac{\mu N}{T}}\sum_{n}e^{-\frac{E_{nN}}{T}}
+  \intertext{上式的求和是保持$N$不变先对能级求和,然后再对 $N$ 求和.在近独立的情况下此式可以推得广延量的相加性质.一个准闭合系统有}
+  \begin{gathered}
+    \sum_n a_n=N\\
+    \sum_n \varepsilon_n a_n =E
+  \end{gathered}
+  \intertext{近独立的情况配分函数可以写为}
+  \varXi =\sum_N \sum_{n}e^{\sum_n(\frac{\mu}{T}-\frac{\varepsilon_n}{T})a_n}
+  \intertext{巨正则分布是计及了能量涨落和总粒子数涨落的,所以对 $N$ 的求和可以转化为对一切可能的 $a_n$ 求和,同时由上述表达式可得}
+  \varXi = \prod_n \sum_{a_n} e^{\frac{\mu-\varepsilon_n}{T}\cdot a_n}
+  \intertext{记上述和式为$\varXi_n$即}
+  \varXi_n = \sum_{a_n} e^{\frac{\mu-\varepsilon_n}{T}\cdot a_n}
+  \intertext{即}
+  \varXi =\prod_n \varXi_n
+  \label{eq:Xi0}
+  \intertext{巨热力势函数为}
+  \Omega = -T\ln \varXi
+  \intertext{代入式\eqref{eq:Xi0}可得}
+  \Omega = -T\ln \prod_n \varXi_n=\sum_n \Omega_n
+  \intertext{其中 $\Omega_n$ 是和能级$ \varepsilon_n$ 相对应的巨热力势函数,即}
+  \Omega_n = -T\ln \varXi_n
+  \intertext{其中关于 $n$ 的求和就是对每一个能级的求和,如果某一能级有简并,如$\varepsilon_1$ 和 $\varepsilon_2$ 是相同的能级, 记为 $\varepsilon_1'$ 则 }
+  \varXi_1'=\varXi_1\cdot \varXi_2=(\varXi_1)^2
+  \intertext{则和能级 $\varepsilon_1$  对应的巨热力势函数 $\Omega_1$ 为}
+  \Omega_1=\ln\varXi_1'=2\ln\varXi_1
+  \intertext{按此规则,如果能级$\varepsilon_n$ 的简并度为 $\omega_n$ ,则}
+  \Omega_n=\omega_n\ln\varXi_n
+\end{gather}
+

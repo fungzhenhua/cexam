@@ -1,0 +1,74 @@
+
+ \begin{theglossary} 
+
+    \makeatletter\scan@allowedfalse
+
+  \item v3.0.0\efill 
+ \subitem General:\ 开始使用\hologoRobust {LaTeX}3{}重构cexam.sty\pfill 
+		\hdpindex{}{1}
+  \item v3.0.1\efill 
+ \subitem General:\ 加入测行程序和形状生成程序,同时删除之前改写的代码\pfill 
+		\hdpindex{}{1}
+      \subsubitem 缩写命名,加入缩写列表\pfill \hdpindex{}{1}
+  \item v3.0.2\efill 
+ \subitem \verb*&\cexam_get_txtht:nno&:\ 增加equation计数器的还原\pfill \hdclindex{167}{}{6}
+  \item v3.0.3\efill 
+ \subitem \verb*&\cexam_get_rec_i:nNnNnn&:\ 修改为7参量,增加左缩进和右缩进\pfill 
+		\hdclindex{177}{}{7}
+  \item v3.0.4\efill 
+ \subitem \verb*&\cexam_get_rec:nnnn&:\ 修改为六参量函数\pfill \hdclindex{191}{}{7}
+  \item v3.0.5\efill 
+ \subitem \verb*&\cexam_sha_mk_i:nnnn&:\ 修改原来的排版程序更加规范\pfill \hdclindex{245}{}{8}
+  \item v3.0.6\efill 
+ \subitem \verb*&\cexam_type_i:nnnnnnn&:\ 创建二级缩排程序\pfill \hdclindex{331}{}{10}
+    \subitem \verb*&\cexam_type_ii:nnnnnnnnn&:\ 增加三级缩排程序\pfill \hdclindex{365}{}{10}
+  \item v3.0.7\efill 
+ \subitem General:\ 删除命令\cs {cexam_fmt_pic:n}\pfill \hdclindex{278}{}{9}
+      \subsubitem 删除命令\cs {cexam_stand_dim:n}\pfill 
+		\hdclindex{278}{}{9}
+    \subitem \verb*&\cexam_fmt_pic:nn&:\ 支持图片带编号和左右排版\pfill \hdclindex{281}{}{9}
+    \subitem \verb*&\cexam_get_rec:nnnn&:\ 改进数学结尾时测行\pfill \hdclindex{191}{}{7}
+    \subitem \verb*&\cexam_mat_sub_dim&:\ 修改数学单减高度为1.8倍行距\pfill \hdclindex{21}{}{4}
+    \subitem \verb*&\cexam_type_i:nnnnnnn&:\ 修改为七参量函数,增加图片位置格式控制\pfill 
+		\hdclindex{331}{}{10}
+    \subitem \verb*&\cexam_type_ii:nnnnnnnnn&:\ 增加图片左右位置控制\pfill \hdclindex{365}{}{10}
+      \subsubitem 整理三级缩进代码\pfill \hdclindex{365}{}{10}
+  \item v3.0.8\efill 
+ \subitem \verb*&\cexam_fmt_fig:&:\ 增加图片编码格式\pfill \hdclindex{279}{}{9}
+  \item v3.0.9\efill 
+ \subitem \verb*&\cexam_fmt_pic:nn&:\ 图片格式化增加编号增长命令\pfill \hdclindex{281}{}{9}
+      \subsubitem 增加图片居中排版格式\pfill 
+		\hdclindex{281}{}{9}
+    \subitem \verb*&\cexam_fmtwd_dim&:\ 增加图片居中排版宽度\pfill \hdclindex{37}{}{4}
+    \subitem \verb*&\cexam_type_ii:nnnnnnnnn&:\ 增加对\cs {cexam_paperht_dim}的付值\pfill \hdclindex{365}{}{10}
+    \subitem \verb*&\cexam_type_iii:nnnnnnn&:\ 增加图片居中排版程序\pfill \hdclindex{449}{}{12}
+    \subitem \verb*&\cexam_type_v:nnnnn&:\ 增加无图排版模式\pfill \hdclindex{508}{}{13}
+    \subitem \verb*&\sel_get_lmax:n&:\ 增加选择题选项最大长度获得程序\pfill 
+		\hdclindex{564}{}{15}
+    \subitem \verb*&\sel_lmax_dim&:\ 选择题最大选项长度\pfill \hdclindex{39}{}{4}
+    \subitem \verb*&\sel_option_box&:\ 新增选择题选项最大长度获取盒子\pfill 
+		\hdclindex{15}{}{3}
+  \item v3.1.0\efill 
+ \subitem General:\ 引入宏包xcolor\pfill \hdpindex{}{1}
+    \subitem \verb*&\cexam_fmt_fig:&:\ 去除图片标号插入文本中,黑体格式超出范围的bug\pfill 
+		\hdclindex{279}{}{9}
+    \subitem \verb*&\cexam_fmt_opt_sel:nnnn&:\ 增加选择题选项格式化程序\pfill \hdclindex{598}{}{15}
+    \subitem \verb*&\cexam_get_rec:nnnn&:\ 精简了三行代码\pfill \hdclindex{191}{}{7}
+    \subitem \verb*&\cexam_ind_hat:nn&:\ 增加前缀设置程序\pfill \hdclindex{559}{}{15}
+    \subitem \verb*&\cexam_option_box&:\ 新增选项格式化盒子\pfill \hdclindex{17}{}{3}
+    \subitem \verb*&\cexam_sep_pictxt_i:n&:\ 增加图片与文本初级分离程序\pfill \hdclindex{526}{}{14}
+    \subitem \verb*&\cexam_sep_pictxt_ii:n&:\ 增加图片与文本分离程序\pfill \hdclindex{545}{}{14}
+    \subitem \verb*&\cexam_type_ii:nnnnnnnnn&:\ 由于精简了测行程序,所以此程序也精简掉了一行代码\pfill 
+		\hdclindex{365}{}{10}
+    \subitem \verb*&\sel_opt_type_i:nnnn&:\ 增加选择题短选项一行排版\pfill \hdclindex{570}{}{15}
+    \subitem \verb*&\sel_opt_type_ii:nnnn&:\ 增加选择题中选项二行排版\pfill \hdclindex{578}{}{15}
+    \subitem \verb*&\sel_opt_type_iii:nnnn&:\ 增加选择题长选项多行排版\pfill \hdclindex{587}{}{15}
+    \subitem \verb*&\sel_optwd_dim&:\ 选择题选项的行宽\pfill \hdclindex{42}{}{4}
+    \subitem \verb*&\sep_temp_box&:\ 新增图片分离临时盒子\pfill \hdclindex{19}{}{3}
+  \item v3.1.1\efill 
+ \subitem \verb*&\cexam_type_ii:nnnnnnnnn&:\ 去除了若尾部为空,多一行的bug\pfill \hdclindex{365}{}{10}
+    \subitem \verb*&\cexam_type_iv:nnnnnnnn&:\ 新增图文排版,取代原纯文本排版\pfill 
+		\hdclindex{471}{}{13}
+    \subitem \verb*&\cexam_type_v:nnnnn&:\ 排版号由iv增加一个,变为v\pfill \hdclindex{508}{}{13}
+
+ \end{theglossary}

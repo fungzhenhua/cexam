@@ -1,0 +1,55 @@
+\NeedsTeXFormat{LaTeX2e}
+\RequirePackage{expl3,l3keys2e,xparse,l3draw}
+\RequirePackage{tcolorbox}
+\GetIdInfo$Id: colornote.sty  v1.1  2021-02-05  ZhenhuaFeng  <fengzhenhua@outlook.com> $ {countrl fontwarning}
+\ProvidesExplPackage{\ExplFileName}{\ExplFileDate}{\ExplFileVersion}{\ExplFileDescription}
+
+\NewDocumentEnvironment {note}{o}
+{
+    \noindent
+    \IfNoValueTF {#1}
+    {
+        \begin{tcolorbox}[colback=gray!12!white,colframe=gray!16!white,nobeforeafter, boxrule=0.5pt, arc=0mm]
+            \color{gray!60!black}
+    }
+    {
+        \str_case:nn {#1}
+        {
+            {danger}
+            {
+                \begin{tcolorbox}[colback=red!12!white,colframe=red!16!white, nobeforeafter, boxrule=0.5pt, arc=0mm]
+                    \color{red!65!black}
+            }
+            {warning}
+            {
+                \begin{tcolorbox}[colback=orange!12!white,colframe=orange!18!white, nobeforeafter, boxrule=0.5pt, arc=0mm]
+                    \color{orange!50!black}
+            }
+            {info}
+            {
+                \begin{tcolorbox}[colback=cyan!12!white,colframe=cyan!18!white, nobeforeafter, boxrule=0.5pt, arc=0mm]
+                    \color{cyan!70!black}
+            }
+            {success}
+            {
+                \begin{tcolorbox}[colback=green!12!white,colframe=green!19!white, nobeforeafter, boxrule=0.5pt, arc=0mm]
+                    \color{green!40!black}
+            }
+            {primary}
+            {
+                \begin{tcolorbox}[colback=violet!12!white,colframe=violet!14!white, nobeforeafter, boxrule=0.5pt, arc=0mm]
+                    \color{violet!80!blue}
+            }
+            {brown}
+            {
+                \begin{tcolorbox}[colback=brown!9!white,colframe=brown!35!white, nobeforeafter, boxrule=0.5pt, arc=0mm]
+                    \color{brown!90!black}
+            }
+            {default}
+            {
+                \begin{tcolorbox}[colback=gray!12!white,colframe=gray!16!white,nobeforeafter, boxrule=0.5pt, arc=0mm]
+                    \color{gray!60!black}
+            }
+        }
+    }
+}{\end{tcolorbox}}

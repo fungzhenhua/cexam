@@ -1,0 +1,38 @@
+\chapter{经典力学}
+\section{Possion 括号}
+\begin{align}
+  \intertext{这一节主要论述Possion 括号的展开性质,设三个关于广义动量和坐标的函数 A,B,C,同时采用Einsterin 约定对重标求和,则}
+  [ [A,B],C]&=
+  \left [\frac{\partial A}{\partial p_i}\frac{\partial B}{\partial q_i},C \right]
+  -\left [\frac{\partial A}{\partial q_i}\frac{\partial B}{\partial p_i},C \right]\notag\\
+  [ [A,B],C]&=
+  \left [\frac{\partial A}{\partial p_i}, C \right ]\frac{\partial B}{\partial q_i}-\left [ \frac{\partial A}{\partial q_i},C\right ] \frac{\partial B}{\partial p_i}
+  +\frac{\partial A}{\partial p_i}\left [\frac{\partial B}{\partial q_i},C\right ]-\frac{\partial A}{\partial q_i}\left [ \frac{\partial B}{\partial p_i},C\right ]
+  \intertext{按微分法则将上式展开,则}
+  [ [A,B],C]&=\frac{\partial[A,C]}{\partial p_i}\frac{\partial B}{\partial q_i}-\frac{\partial [A,C]}{\partial q_i}\frac{\partial B}{\partial p_i}
+  +\frac{\partial A}{\partial p_i}\frac{\partial [B,C]}{\partial q_i}-\frac{\partial A}{\partial q_i}\frac{\partial [B,C]}{\partial p_i}\notag\\
+  &\quad -\left [ A,\frac{\partial C}{\partial p_i}\right ]\frac{\partial B}{\partial q_i}+\left [ A,\frac{\partial C}{\partial q_i}\right ]\frac{\partial B}{\partial p_i}-\frac{\partial A}{\partial p_i}\left [ B,\frac{\partial C}{\partial q_i}\right ]
++\frac{\partial A}{\partial q_i}\left [ B,\frac{\partial C}{\partial p_i}\right ]
+\label{eq:possionkh0}
+\intertext{式 \eqref{eq:possionkh0}第一行可以用 Possion 括号来表示,则化为}
+[ [A,B],C]&=[ [A,C],B]+[A,[B,C]]\notag\\
+  &\quad -\left [ A,\frac{\partial C}{\partial p_i}\right ]\frac{\partial B}{\partial q_i}+\left [ A,\frac{\partial C}{\partial q_i}\right ]\frac{\partial B}{\partial p_i}-\frac{\partial A}{\partial p_i}\left [ B,\frac{\partial C}{\partial q_i}\right ]
++\frac{\partial A}{\partial q_i}\left [ B,\frac{\partial C}{\partial p_i}\right ]
+\label{eq:possionkh1}
+\intertext{式\eqref{eq:possionkh1}中的第二行为零,曾经我试图走一些捷径来论证,但是似乎并不严谨,所以这里我认为具体算出就好,对于第二式中的各项分别计算如下}
+-&\left [A,\frac{\partial C}{\partial p_i} \right ]\frac{\partial B}{\partial q_i}=\frac{\partial A}{\partial q_j}\frac{\partial^2 C}{\partial p_i\partial p_j}\frac{\partial B}{\partial q_i}-\frac{\partial A}{\partial p_j}\frac{\partial^2 C}{\partial p_i\partial q_j}\frac{\partial B}{\partial q_i}
+\label{eq:possionkh2}\\
+ &\left [A,\frac{\partial C}{\partial q_i} \right ]\frac{\partial B}{\partial p_i}=\frac{\partial A}{\partial p_j}\frac{\partial^2 C}{\partial q_i\partial q_j}\frac{\partial B}{\partial p_i}-\frac{\partial A}{\partial q_j}\frac{\partial^2 C}{\partial q_i\partial p_j}\frac{\partial B}{\partial p_i}
+\label{eq:possionkh3}\\
+-&\frac{\partial A}{\partial p_i}\left [B,\frac{\partial C}{\partial q_i} \right ]=\frac{\partial A}{\partial p_i}\frac{\partial^2 C}{\partial q_i\partial p_j}\frac{\partial B}{\partial q_j}-\frac{\partial A}{\partial p_i}\frac{\partial^2 C}{\partial q_i\partial q_j}\frac{\partial B}{\partial p_j}
+\label{eq:possionkh4}\\
+&\frac{\partial A}{\partial q_i}\left [B,\frac{\partial C}{\partial p_i} \right ]=\frac{\partial A}{\partial q_i}\frac{\partial^2 C}{\partial p_i\partial q_j}\frac{\partial B}{\partial p_j}-\frac{\partial A}{\partial q_i}\frac{\partial^2 C}{\partial p_i\partial p_j}\frac{\partial B}{\partial q_i}
+\label{eq:possionkh5}
+\intertext{由于 $i,j$ 是求和的下标号,它们是独立的,所以交换它们并不改变和式的值, 同时对函数取二重偏微分时对不同自变量的微分顺序微分值也是相同的.考虑到这一点,则 \eqref{eq:possionkh2} + \eqref{eq:possionkh3} + \eqref{eq:possionkh4} + \eqref{eq:possionkh5} = 0 ,则式 \eqref{eq:possionkh1}化为}
+&[ [A,B],C]=[ [C,B],A]+[ [A,C],B]
+\label{eq:possionkh6}
+\intertext{上式的写法规则是:左式等于交换 $A,C$ 与 交换 $B,C$ 的和.此式也可以写成轮换式,即}
+&[ [A,B],C]+[ [B,C], A]+ [ [C,A],B]=0
+\label{eq:possionkh7}
+\end{align}
+

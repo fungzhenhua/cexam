@@ -1,0 +1,304 @@
+\documentclass[a4paper,fontset = adobe]{ctexbook}
+\usepackage{xifthen}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{cexam}
+
+\begin{document}
+\chapter{行数统计程序}
+\makeatletter
+
+行数统计程序的latex3改写
+
+\ExplSyntaxOn
+%%boolean
+\bool_new:N \g__cexam_math_on_bool
+\bool_new:N \g__cexam_math_tail_bool
+%%
+\cs_new:Npn \cexam_separate_i:n  #1$$#2$$#3\scan_stop:
+{
+  \cs_set:Nn \hang_math_head: {#1}
+  \cs_set:Nn \hang_math_body: {$$#2$$}
+  \cs_set:Nn \hang_math_tail: {#3}
+}
+
+\cs_new:Npn \cexam_separate_ii:n #1\[#2\]#3\scan_stop:
+{
+  \cs_set:Nn \hang_math_head: {#1}
+  \cs_set:Nn \hang_math_body: {\[#2\]}
+  \cs_set:Nn \hang_math_tail: {#3}
+}
+
+\cs_new:Npn \cexam_separate_iii:n #1\begin#2\end#3#4\scan_stop:
+{
+  \cs_set:Nn \hang_math_head: {#1}
+  \cs_set:Nn \hang_math_body: {\begin#2\end{#3}}
+  \cs_set:Nn \hang_math_tail: {#4}
+}
+\cs_new:Npn \cexam_separate_done:n #1\scan_stop:
+{
+  \str_if_in:nnTF {#1}{$$}%$$
+  {\cexam_separate_i:n #1\scan_stop:}
+  {\str_if_in:nnTF {#1}{\[}%\]
+      {\cexam_separate_ii:n #1\scan_stop:}
+      {
+	\str_if_in:nnTF {#1}{\begin}
+	{\cexam_separate_iii:n #1\scan_stop:}
+	{}
+      }
+
+    }
+  }
+  \cs_new:Npn \cexam_separate_isin:nn #1#2
+  {
+    \str_if_in:nnTF {*#1}{*#2}
+    {
+      \bool_set_true:N \g__cexam_math_on_bool
+      \str_if_in:nnTF {#1*}{#2*}
+      {
+	\cs_set:Nn \hang_math_head: {}
+	\cs_set:Nn \hang_math_body: {}
+	\cs_set:Nn \hang_math_tail: {}
+	\bool_set_false:N \g__cexam_math_tail_bool
+      }
+      {
+	\cexam_separate_done:n *#1\scan_stop:
+	\cs_set:Nn \hang_math_head: {}
+	\bool_set_true:N \g__cexam_math_tail_bool
+      }
+    }
+    {
+      \str_if_in:nnTF {#1*}{#2*}
+      {
+	\bool_set_true:N \g__cexam_math_on_bool
+	\cexam_separate_done:n #1*\scan_stop:
+	\cs_set:Nn \hang_math_tail: {}
+	\bool_set_false:N \g__cexam_math_tail_bool
+      }
+      {
+	\str_if_in:nnTF {#1}{#2}
+	{
+	  \bool_set_true:N \g__cexam_math_on_bool
+	  \cexam_separate_done:n #1\scan_stop:
+	  \bool_set_true:N \g__cexam_math_tail_bool
+	}{}
+      }
+    }
+  }
+  \cs_new:Npn \cexam_separate:n #1 \scan_stop:
+  {
+    \str_if_in:nnTF {#1}{$$}%$$
+    {
+      \cexam_separate_isin:nn {#1}{$$}%$$
+    }
+    {
+      \str_if_in:nnTF {#1}{\[}%\]
+	{
+	  \cexam_separate_isin:nn {#1}{\[}%\]
+	  }
+	  {
+	    \str_if_in:nnTF {#1}{\begin}%\end
+	    {
+	      \cexam_separate_isin:nn {#1}{\begin}%\end
+	    }
+	    {
+	      \cs_set:Nn \hang_math_head: {#1}
+	      \cs_set:Nn \hang_math_body: {}
+	      \cs_set:Nn \hang_math_tail: {}
+	      \bool_set_false:N \g__cexam_math_tail_bool
+	      \bool_set_false:N \g__cexam_math_on_bool
+	    }
+	  }
+	}
+      }
+
+% 以下为补充命令
+      \cs_new:Npn \cexam_separate:o #1\scan_stop:
+      {
+	\cexam_separate:n #1\scan_stop:
+      }
+
+      \bool_if:NTF \g__cexam_math_on_bool 
+      {The~ math~ modle~ is~ open}
+      {The~ text~ model~ is~ open}
+
+
+      \par
+      ******测行程序******
+      \par
+
+%%2019年7月30日,学习之计划重新规划这个cexam.sty的latex3的重写程序.
+%%由于在进行行数测定时需要一步一步的追加需要处理的资料,所以在此处设计为将一直处理的到最后的内容放入靠前的位置,同时后面的位置追加资料后不改变前面等求量的符号,所以更加的明确.
+%20190730begin
+%四个参数依次为:1计数器增量,2计数器,3行减量,4总减行高
+
+      \cs_new:Npn \cexam_get:nNnN #1#2#3#4
+      {
+	\dim_while_do:nNnn {#4}>{0pt}
+	{
+	  \dim_sub:Nn {#4}{#3}
+	  \int_add:Nn {#2}{#1}
+	}
+      }
+%%-->ok
+
+%用来记录文本高度的盒子
+      \box_new:N \cexam_TxtHt_box
+%%三个参数依次为:1高(所要求的量),2宽,3文本
+% 此程序产生文本的总体高度
+      \cs_new:Npn \cexam_get_TxtHt:nno #1#2#3
+      {
+	\hbox_set:Nn \cexam_TxtHt_box 
+	{\parbox{#2}{#3}}
+	\dim_set:Nn {#1}{\box_dp:N \cexam_TxtHt_box}
+	\dim_add:Nn {#1}{\box_ht:N \cexam_TxtHt_box}
+      }
+%%-->ok
+      \dim_new:N \rectangle_tempht_dim
+%六个参数依次为:1计数器增量,2计数器,3行减量,4总减行高,5矩形宽,6文本(含数学文本)
+      \cs_new:Npn \cexam_get_rectangle_i:nNnNnn #1#2#3#4#5#6
+      {
+	\cexam_get_TxtHt:nno {\rectangle_tempht_dim}{\linewidth - #5}{#6}
+	\dim_compare:nTF {\rectangle_tempht_dim < #4}
+	{
+	  \dim_sub:Nn #4 {\rectangle_tempht_dim}
+	  \cexam_get:nNnN {#1}{#2}{#3}{\rectangle_tempht_dim}
+	}
+	{\cexam_get:nNnN {#1}{#2}{#3}{#4}}
+      }
+%%行数计算中使用的长度
+      \int_new:N \cexam_equation
+      \dim_new:N \cexam_mathhead_ht %高
+      \dim_new:N \cexam_mathbody_ht %高
+      \dim_new:N \cexam_math_minus  %数学减高
+      \dim_new:N \cexam_text_minus  %文本减高
+      \dim_set:Nn \cexam_text_minus{\baselineskip}
+      \dim_set:Nn \cexam_math_minus{2\baselineskip}
+%四个参数依次为:1计数器,2矩形高,3矩形宽,4文本(含数学文本)
+      \cs_new:Npn \cexam_get_rectangle:nnnn #1#2#3#4
+      {
+	\bool_if:NTF \g__cexam_math_tail_bool
+	{\exp_args:No \cexam_separate:n #4 \scan_stop:}
+	{\cexam_separate:n #4 \scan_stop:}
+	\cexam_get_rectangle_i:nNnNnn {1}{#1}{\cexam_text_minus}{#2}{#3}{\hang_math_head:}
+%%以上先分离一次,对head计算行数,如果总减高不为零,则对body排版
+	\dim_compare:nTF {#2 > 0pt}
+	{
+	  \bool_if:NTF \g__cexam_math_on_bool
+	  {	
+	    \cexam_get_rectangle_i:nNnNnn {3}{#1}{\cexam_math_minus}{#2}{#3}{\hang_math_body:}
+	  }{\relax}
+	}{\relax}
+%%以上对body排版,如仍然不能令#4=0pt,同继续对tail排版
+	\dim_compare:nTF {#2 > 0pt}
+	{
+	  \bool_if:NTF \g__cexam_math_tail_bool
+	  {
+	    \cexam_get_rectangle:nnnn {#1}{#2}{#3}{\hang_math_tail:}
+	  }{\relax}
+	}{\relax}
+      }
+%%-->ok_testing
+%%开关生成形状
+      \dim_new:N \cexam_psrin_dim %左缩进量
+      \dim_new:N \cexam_pslin_dim %左缩进量
+      \dim_new:N \cexam_pswd_dim %行长度
+      \int_new:N \cexam_psnum_int %行数
+      \cs_new:Nn \cexam_shaped: {}%形状存储
+      \cs_new:Npn \cexam_shape_i:nn #1#2
+      {
+	\cs_set:Nn \cexam_shaped: {~#1~#2}
+      }
+%为了保证生成正确的形状,此处定义不可展开的空格
+      \cs_new_protected:Nn \cexam_shape_cape:{~}
+%四个参数为:1.计数器 2.左缩进 3.行长 4.右缩进 
+      \cs_new:Npn \cexam_shape_make:nnnn #1#2#3#4
+      {
+	\int_add:Nn {#1}{1}
+	\exp_args:NNx\cs_set:Nn \cexam_shaped:{\cexam_shape_cape: \int_use:N #1}
+	\dim_set:Nn \cexam_pslin_dim {#2}
+	\dim_set:Nn \cexam_psrin_dim {#4}
+	\dim_set:Nn \cexam_pswd_dim {#3}
+	\dim_sub:Nn \cexam_pswd_dim {#2}
+	\dim_sub:Nn \cexam_pswd_dim {#4}
+	\int_while_do:nNnn {#1} > {1}
+	{
+	  \int_sub:Nn {#1}{1}
+	  \exp_args:NNx\cs_set:Nn \cexam_shaped:{\cexam_shaped:\cexam_shape_cape: \dim_use:N \cexam_pslin_dim}
+	  \exp_args:NNx\cs_set:Nn \cexam_shaped:{\cexam_shaped:\cexam_shape_cape: \dim_use:N \cexam_pswd_dim}
+	}
+	  \exp_args:NNx\cs_set:Nn \cexam_shaped:{\cexam_shaped:\cexam_shape_cape: 0pt}
+	  \exp_args:NNx\cs_set:Nn \cexam_shaped:{\cexam_shaped:\cexam_shape_cape: \dim_use:N \linewidth}
+      }
+
+%%-->testing
+      \box_new:N \cexam_picture_box
+      \box_new:N \cexam_vpicture_box
+      \dim_new:N \cexam_picht_dim
+      \dim_new:N \cexam_picwd_dim
+      \int_new:N \cexam_picmath_int
+%%1图片,2文本
+      \cs_new:Npn \cexam_publish_mp:nn #1#2
+      {
+          \hbox_set:Nn \cexam_picture_box {#1}
+	  \dim_set:Nn {\cexam_picwd_dim}{\box_wd:N \cexam_picture_box}
+	  \dim_set:Nn {\cexam_picht_dim}{\box_ht:N \cexam_picture_box}
+	  \dim_add:Nn {\cexam_picht_dim}{\box_dp:N \cexam_picture_box}
+	  \cexam_get_rectangle:nnnn {\cexam_picmath_int}{\cexam_picht_dim}{\cexam_picwd_dim}{#2}
+	  \cexam_shape_make:nnnn {\cexam_picmath_int}{0pt}{\linewidth}{\cexam_picwd_dim}
+	  \hbox_set:Nn \cexam_picture_box {\raisebox{-\totalheight-\ccwd}[0pt][0pt]{\parbox[b]{\linewidth}{\hfill #1}}}
+	  \box_set_wd:Nn \cexam_picture_box {0pt}
+	  \tex_parshape:D \cexam_shaped:
+	  \box_use:N \cexam_picture_box #2
+      }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+      \dim_new:N \g__exam_test_dim
+      \int_new:N \g__exam_test_int
+      \dim_set:Nn \g__exam_test_dim {50pt}
+
+      \cexam_publish_mp:nn {
+      \begin{tikzpicture}
+	\draw (0,0) rectangle (2,2);
+      \end{tikzpicture}
+    }{
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	\begin{equation}
+	  E=MC^2
+	\end{equation}
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+      }
+
+\ExplSyntaxOff
+
+
+\ExplFileName
+
+\ExplFileDate
+
+\ExplFileVersion
+
+\ExplFileDescription
+
+     
+
+
+    \end{document}

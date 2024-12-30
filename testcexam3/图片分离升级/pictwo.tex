@@ -1,0 +1,37 @@
+%2020年 09月 22日 星期二 22:27:06 CST
+\documentclass[a4paper,fontset = windows]{ctexbook}
+\usepackage{xifthen}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usepackage{cexam}
+\usepackage{xcolor}
+
+\begin{document}
+\chapter{图片与文字分离升级程序}
+此处为了解决一个文件中有多个图片时，并列排版的问题。
+
+\begin{jisuan}[example]
+  1. 如 
+  <BeginTabular>
+  \begin{tikzpicture}
+     \draw[pattern=north west lines] (-0.5,1.7)--(-0.5,1.5)--(0.5,1.5)--(0.5,1.7);
+     \draw (0,0.2)--(0,1.5);
+     \draw (0,0) circle [radius=2mm];
+     \draw (0,-0.5) node [anchor=north] {\small 甲};
+  \end{tikzpicture}
+  \begin{tikzpicture}
+     \draw[pattern=north west lines] (-0.5,1.7)--(-0.5,1.5)--(0.5,1.5)--(0.5,1.7);
+     \draw (0,0.2)--(0,1.5);
+     \draw (0,0) circle [radius=2mm];
+     \draw (0,-0.5) node [anchor=north] {\small 甲};
+     \draw (0,0) circle [radius=4mm];
+  \end{tikzpicture}
+  <EndTabular>
+所示,对物体$P$ 作受力分析,其中甲、乙、丙中物体$P$ 处于静止状态,丁中物体$P$ 在水平面上匀速滚动.
+
+\end{jisuan}
+
+
+\end{document}

@@ -1,0 +1,2038 @@
+
+ \begin{theindex} 
+ \makeatletter\scan@allowedfalse
+{\bfseries\hfil Symbols\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&\[&}\pfill \hdclindex{271}{}{188}, 
+		\hdclindex{274}{}{191}, \hdclindex{290}{}{206}, 
+		\hdclindex{344}{}{258}, \hdclindex{346}{}{260}
+  \item {\verbatim@font \verb*&\\&}\pfill \hdclindex{61}{}{38}, 
+		\hdclindex{62}{}{39}
+  \item {\verbatim@font \verb*&\]&}\pfill \hdclindex{271}{}{188}, 
+		\hdclindex{274}{}{191}, \hdclindex{290}{}{206}, 
+		\hdclindex{344}{}{258}, \hdclindex{346}{}{260}
+
+  \indexspace
+{\bfseries\hfil A\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&\addcontentsline&}\pfill 
+		\hdclindex{1750}{}{1602}, \hdclindex{1751}{}{1603}
+  \item \pkg{ana} commands:\efill 
+ \subitem {\verbatim@font \verb*&\ana&\_\verb*&tag&\_\verb*&i&\_\verb*&tl&}\pfill 
+		\hdclindex{221}{}{147}, \hdclindex{1575}{main}{1436}, 
+		\hdclindex{1632}{}{1489}, \hdclindex{2048}{}{1888}, 
+		\hdclindex{2073}{}{1913}
+    \subitem {\verbatim@font \verb*&\ana&\_\verb*&tag&\_\verb*&tl&}\pfill 
+		\hdclindex{217}{main}{144}, 
+		\hdclindex{1575}{main}{1436}, \hdclindex{1597}{}{1456}, 
+		\hdclindex{1882}{}{1728}, \hdclindex{2047}{}{1887}, 
+		\hdclindex{2072}{}{1912}
+  \item \pkg{analysis} commands:\efill 
+ \subitem {\verbatim@font \verb*&\analysis&\_\verb*&type:p&}\pfill 
+		\hdclindex{1582}{main}{1442}, \hdclindex{1802}{}{1653}, 
+		\hdclindex{1824}{}{1674}, \hdclindex{1843}{}{1692}, 
+		\hdclindex{1859}{}{1707}
+  \item \pkg{ans} commands:\efill 
+ \subitem {\verbatim@font \verb*&\ans&\_\verb*&tag&\_\verb*&i&\_\verb*&tl&}\pfill 
+		\hdclindex{217}{main}{144}, 
+		\hdclindex{1575}{main}{1436}, \hdclindex{1612}{}{1469}
+    \subitem {\verbatim@font \verb*&\ans&\_\verb*&tag&\_\verb*&tl&}\pfill 
+		\hdclindex{217}{main}{144}, 
+		\hdclindex{1575}{main}{1436}, \hdclindex{1586}{}{1445}, 
+		\hdclindex{1785}{}{1636}, \hdclindex{1793}{}{1644}, 
+		\hdclindex{1794}{}{1645}, \hdclindex{1797}{}{1648}, 
+		\hdclindex{1819}{}{1669}
+  \item \pkg{answer} commands:\efill 
+ \subitem {\verbatim@font \verb*&\answer&\_\verb*&student&\_\verb*&bool&}\pfill 
+		\hdclindex{81}{main}{52}, \hdclindex{250}{}{168}, 
+		\hdclindex{253}{}{171}, \hdclindex{255}{}{173}, 
+		\hdclindex{1590}{}{1449}, \hdclindex{1607}{}{1464}, 
+		\hdclindex{1645}{}{1501}, \hdclindex{1656}{}{1511}, 
+		\hdclindex{1661}{}{1516}, \hdclindex{1663}{}{1518}, 
+		\hdclindex{1736}{}{1588}, \hdclindex{1752}{}{1604}, 
+		\hdclindex{1774}{}{1625}, \hdclindex{1812}{}{1662}, 
+		\hdclindex{1837}{}{1686}, \hdclindex{1853}{}{1701}, 
+		\hdclindex{1918}{}{1760}
+    \subitem {\verbatim@font \verb*&\answer&\_\verb*&type:p&}\pfill 
+		\hdclindex{1582}{main}{1442}, \hdclindex{1839}{}{1688}, 
+		\hdclindex{1855}{}{1703}
+    \subitem {\verbatim@font \verb*&\answer&\_\verb*&write&}\pfill 
+		\hdclindex{243}{main}{163}, \hdclindex{251}{}{169}, 
+		\hdclindex{1603}{}{1461}, \hdclindex{1611}{}{1468}, 
+		\hdclindex{1615}{}{1472}, \hdclindex{1620}{}{1477}, 
+		\hdclindex{1621}{}{1478}, \hdclindex{1626}{}{1483}, 
+		\hdclindex{1627}{}{1484}, \hdclindex{1632}{}{1489}, 
+		\hdclindex{1633}{}{1490}, \hdclindex{1634}{}{1491}, 
+		\hdclindex{1647}{}{1503}, \hdclindex{1648}{}{1504}, 
+		\hdclindex{1753}{}{1605}
+  \item {\verbatim@font \verb*&answerstd&}\pfill 
+		\hdclindex{1726}{main}{1580}
+  \item {\verbatim@font \verb*&\arabic&}\pfill \hdclindex{1757}{}{1609}, 
+		\hdclindex{1760}{}{1612}
+  \item {\verbatim@font \verb*&\AtBeginDocument&}\pfill 
+		\hdclindex{2095}{}{1935}
+
+  \indexspace
+{\bfseries\hfil B\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&\baselineskip&}\pfill 
+		\hdclindex{0}{usage}{2}, \hdclindex{770}{usage}{28}, 
+		\hdclindex{436}{}{344}, \hdclindex{534}{}{437}, 
+		\hdclindex{1195}{}{1066}, \hdclindex{1305}{}{1176}, 
+		\hdclindex{1381}{}{1248}, \hdclindex{1421}{}{1288}, 
+		\hdclindex{1509}{}{1371}, \hdclindex{1591}{}{1450}, 
+		\hdclindex{1775}{}{1626}, \hdclindex{1813}{}{1663}, 
+		\hdclindex{1838}{}{1687}, \hdclindex{1854}{}{1702}
+  \item {\verbatim@font \verb*&\begin&}\pfill \hdclindex{278}{}{195}, 
+		\hdclindex{281}{}{198}, \hdclindex{293}{}{209}, 
+		\hdclindex{349}{}{263}, \hdclindex{351}{}{265}, 
+		\hdclindex{829}{}{722}, \hdclindex{836}{}{729}, 
+		\hdclindex{844}{}{737}, \hdclindex{852}{}{745}, 
+		\hdclindex{857}{}{750}, \hdclindex{988}{}{871}, 
+		\hdclindex{1949}{}{1790}, \hdclindex{1962}{}{1803}, 
+		\hdclindex{1974}{}{1815}, \hdclindex{1987}{}{1828}, 
+		\hdclindex{1999}{}{1840}, \hdclindex{2011}{}{1852}, 
+		\hdclindex{2023}{}{1864}, \hdclindex{2035}{}{1876}, 
+		\hdclindex{2053}{}{1893}, \hdclindex{2078}{}{1918}
+  \item {\verbatim@font \verb*&\bf&}\pfill \hdclindex{1576}{}{1436}, 
+		\hdclindex{1577}{}{1437}, \hdclindex{1578}{}{1438}, 
+		\hdclindex{2098}{}{1938}
+  \item {\verbatim@font \verb*&\blank&}\pfill \hdclindex{36}{usage}{4}, 
+		\hdclindex{1907}{main}{1751}
+  \item \pkg{blank} commands:\efill 
+ \subitem {\verbatim@font \verb*&\blank&\_\verb*&type:p&}\pfill 
+		\hdclindex{1444}{main}{1311}, \hdclindex{1477}{}{1341}, 
+		\hdclindex{1573}{}{1434}, \hdclindex{1827}{}{1677}
+    \subitem {\verbatim@font \verb*&\blank&\_\verb*&type&\_\verb*&i:p&}\pfill 
+		\hdclindex{1367}{main}{1235}, \hdclindex{1451}{}{1317}, 
+		\hdclindex{1586}{}{1445}, \hdclindex{1594}{}{1453}, 
+		\hdclindex{1597}{}{1456}
+    \subitem {\verbatim@font \verb*&\blank&\_\verb*&wd&\_\verb*&box&}\pfill 
+		\hdclindex{110}{main}{68}, \hdclindex{1461}{}{1326}, 
+		\hdclindex{1462}{}{1327}
+    \subitem {\verbatim@font \verb*&\blank&\_\verb*&wd&\_\verb*&dim&}\pfill 
+		\hdclindex{161}{main}{105}, \hdclindex{1462}{}{1327}, 
+		\hdclindex{1463}{}{1328}, \hdclindex{1466}{}{1331}, 
+		\hdclindex{1468}{}{1333}
+  \item {\verbatim@font \verb*&blanks&}\pfill \hdclindex{36}{usage}{4}, 
+		\hdclindex{1944}{main}{1786}
+  \item \pkg{bool} commands:\efill 
+ \subitem {\verbatim@font \verb*&\bool&\_\verb*&case&\_\verb*&true:n&}\pfill 
+		\hdclindex{512}{}{415}
+    \subitem {\verbatim@font \verb*&\bool&\_\verb*&if:NTF&}\pfill 
+		\hdclindex{444}{}{352}, \hdclindex{458}{}{366}, 
+		\hdclindex{533}{}{436}, \hdclindex{541}{}{444}, 
+		\hdclindex{997}{}{880}, \hdclindex{1184}{}{1055}, 
+		\hdclindex{1198}{}{1069}, \hdclindex{1222}{}{1093}, 
+		\hdclindex{1224}{}{1095}, \hdclindex{1242}{}{1113}, 
+		\hdclindex{1256}{}{1127}, \hdclindex{1371}{}{1238}, 
+		\hdclindex{1383}{}{1250}, \hdclindex{1499}{}{1361}, 
+		\hdclindex{1512}{}{1374}, \hdclindex{1607}{}{1464}, 
+		\hdclindex{1656}{}{1511}, \hdclindex{1736}{}{1588}, 
+		\hdclindex{1774}{}{1625}, \hdclindex{1783}{}{1634}, 
+		\hdclindex{1792}{}{1643}, \hdclindex{1812}{}{1662}, 
+		\hdclindex{1837}{}{1686}, \hdclindex{1853}{}{1701}, 
+		\hdclindex{1887}{}{1732}, \hdclindex{2062}{}{1902}, 
+		\hdclindex{2087}{}{1927}, \hdclindex{2164}{}{2001}
+    \subitem {\verbatim@font \verb*&\bool&\_\verb*&if:nTF&}\pfill 
+		\hdclindex{1144}{}{1016}, \hdclindex{1590}{}{1449}, 
+		\hdclindex{1616}{}{1473}, \hdclindex{1645}{}{1501}
+    \subitem {\verbatim@font \verb*&\bool&\_\verb*&new:N&}\pfill 
+		\hdclindex{70}{}{46}, \hdclindex{72}{}{47}, 
+		\hdclindex{74}{}{48}, \hdclindex{76}{}{49}, 
+		\hdclindex{78}{}{50}, \hdclindex{80}{}{51}, 
+		\hdclindex{82}{}{52}, \hdclindex{84}{}{53}, 
+		\hdclindex{86}{}{54}, \hdclindex{88}{}{55}, 
+		\hdclindex{90}{}{56}, \hdclindex{92}{}{57}, 
+		\hdclindex{93}{}{58}, \hdclindex{94}{}{59}, 
+		\hdclindex{95}{}{60}, \hdclindex{1653}{}{1508}, 
+		\hdclindex{2152}{}{1989}
+    \subitem {\verbatim@font \verb*&\bool&\_\verb*&set&\_\verb*&false:N&}\pfill 
+		\hdclindex{253}{}{171}, \hdclindex{255}{}{173}, 
+		\hdclindex{260}{}{178}, \hdclindex{310}{}{225}, 
+		\hdclindex{324}{}{239}, \hdclindex{357}{}{271}, 
+		\hdclindex{358}{}{272}, \hdclindex{806}{}{700}, 
+		\hdclindex{833}{}{726}, \hdclindex{841}{}{734}, 
+		\hdclindex{842}{}{735}, \hdclindex{849}{}{742}, 
+		\hdclindex{850}{}{743}, \hdclindex{866}{}{758}, 
+		\hdclindex{873}{}{765}, \hdclindex{874}{}{766}, 
+		\hdclindex{946}{}{830}, \hdclindex{954}{}{838}, 
+		\hdclindex{963}{}{847}, \hdclindex{1165}{}{1036}, 
+		\hdclindex{1193}{}{1064}, \hdclindex{1360}{}{1228}, 
+		\hdclindex{1380}{}{1247}, \hdclindex{1508}{}{1370}, 
+		\hdclindex{1661}{}{1516}, \hdclindex{1752}{}{1604}, 
+		\hdclindex{1869}{}{1716}, \hdclindex{1918}{}{1760}, 
+		\hdclindex{2106}{}{1945}, \hdclindex{2159}{}{1996}, 
+		\hdclindex{2161}{}{1998}
+    \subitem {\verbatim@font \verb*&\bool&\_\verb*&set&\_\verb*&true:N&}\pfill 
+		\hdclindex{250}{}{168}, \hdclindex{258}{}{176}, 
+		\hdclindex{304}{}{219}, \hdclindex{315}{}{230}, 
+		\hdclindex{321}{}{236}, \hdclindex{329}{}{244}, 
+		\hdclindex{331}{}{246}, \hdclindex{807}{}{701}, 
+		\hdclindex{834}{}{727}, \hdclindex{855}{}{748}, 
+		\hdclindex{856}{}{749}, \hdclindex{867}{}{759}, 
+		\hdclindex{970}{}{854}, \hdclindex{991}{}{874}, 
+		\hdclindex{992}{}{875}, \hdclindex{1050}{}{930}, 
+		\hdclindex{1191}{}{1062}, \hdclindex{1378}{}{1245}, 
+		\hdclindex{1506}{}{1368}, \hdclindex{1663}{}{1518}, 
+		\hdclindex{1868}{}{1715}, \hdclindex{1947}{}{1788}, 
+		\hdclindex{1960}{}{1801}, \hdclindex{2157}{}{1994}
+  \item \pkg{box} commands:\efill 
+ \subitem {\verbatim@font \verb*&\box&\_\verb*&dp:N&}\pfill 
+		\hdclindex{387}{}{298}, \hdclindex{532}{}{435}, 
+		\hdclindex{1190}{}{1061}, \hdclindex{1377}{}{1244}, 
+		\hdclindex{1505}{}{1367}
+    \subitem {\verbatim@font \verb*&\box&\_\verb*&ht:N&}\pfill 
+		\hdclindex{388}{}{299}, \hdclindex{531}{}{434}, 
+		\hdclindex{1015}{}{898}, \hdclindex{1189}{}{1060}, 
+		\hdclindex{1376}{}{1243}, \hdclindex{1504}{}{1366}
+    \subitem {\verbatim@font \verb*&\box&\_\verb*&move&\_\verb*&left:nn&}\pfill 
+		\hdclindex{581}{}{484}, \hdclindex{883}{}{774}, 
+		\hdclindex{892}{}{782}
+    \subitem {\verbatim@font \verb*&\box&\_\verb*&move&\_\verb*&right:nn&}\pfill 
+		\hdclindex{546}{}{449}, \hdclindex{585}{}{488}
+    \subitem {\verbatim@font \verb*&\box&\_\verb*&new:N&}\pfill 
+		\hdclindex{97}{}{61}, \hdclindex{99}{}{62}, 
+		\hdclindex{101}{}{63}, \hdclindex{103}{}{64}, 
+		\hdclindex{105}{}{65}, \hdclindex{107}{}{66}, 
+		\hdclindex{109}{}{67}, \hdclindex{111}{}{68}, 
+		\hdclindex{113}{}{69}, \hdclindex{114}{}{70}, 
+		\hdclindex{115}{}{71}, \hdclindex{116}{}{72}, 
+		\hdclindex{117}{}{73}, \hdclindex{118}{}{74}, 
+		\hdclindex{119}{}{75}, \hdclindex{120}{}{76}, 
+		\hdclindex{122}{}{77}, \hdclindex{123}{}{78}, 
+		\hdclindex{124}{}{79}
+    \subitem {\verbatim@font \verb*&\box&\_\verb*&set&\_\verb*&ht:Nn&}\pfill 
+		\hdclindex{592}{}{495}, \hdclindex{882}{}{773}
+    \subitem {\verbatim@font \verb*&\box&\_\verb*&set&\_\verb*&wd:Nn&}\pfill 
+		\hdclindex{595}{}{498}, \hdclindex{885}{}{776}, 
+		\hdclindex{894}{}{784}
+    \subitem {\verbatim@font \verb*&\box&\_\verb*&use:N&}\pfill 
+		\hdclindex{545}{}{448}, \hdclindex{546}{}{449}, 
+		\hdclindex{551}{}{454}, \hdclindex{581}{}{484}, 
+		\hdclindex{585}{}{488}, \hdclindex{589}{}{492}, 
+		\hdclindex{594}{}{497}, \hdclindex{597}{}{500}, 
+		\hdclindex{883}{}{774}, \hdclindex{884}{}{775}, 
+		\hdclindex{886}{}{777}, \hdclindex{892}{}{782}, 
+		\hdclindex{893}{}{783}, \hdclindex{895}{}{785}
+    \subitem {\verbatim@font \verb*&\box&\_\verb*&wd:N&}\pfill 
+		\hdclindex{530}{}{433}, \hdclindex{539}{}{442}, 
+		\hdclindex{540}{}{443}, \hdclindex{573}{}{476}, 
+		\hdclindex{901}{}{790}, \hdclindex{1001}{}{884}, 
+		\hdclindex{1008}{}{891}, \hdclindex{1170}{}{1041}, 
+		\hdclindex{1188}{}{1059}, \hdclindex{1375}{}{1242}, 
+		\hdclindex{1449}{}{1315}, \hdclindex{1462}{}{1327}, 
+		\hdclindex{1489}{}{1351}, \hdclindex{1503}{}{1365}
+
+  \indexspace
+{\bfseries\hfil C\hfil}\nopagebreak
+
+  \item \pkg{calculate} commands:\efill 
+ \subitem {\verbatim@font \verb*&\calculate&\_\verb*&type:p&}\pfill 
+		\hdclindex{1568}{main}{1430}, \hdclindex{1860}{}{1708}
+    \subitem {\verbatim@font \verb*&\calculate&\_\verb*&type&\_\verb*&i:p&}\pfill 
+		\hdclindex{1484}{main}{1347}, \hdclindex{1572}{}{1433}
+  \item {\verbatim@font \verb*&calculations&}\pfill 
+		\hdclindex{38}{usage}{5}, \hdclindex{1944}{main}{1786}
+  \item {\verbatim@font \verb*&\ccwd&}\pfill \hdclindex{169}{}{109}, 
+		\hdclindex{170}{}{110}
+  \item {\verbatim@font \verb*&cexam / option&}\pfill 
+		\hdclindex{34}{usage}{3}
+  \item \pkg{cexam} commands:\efill 
+ \subitem {\verbatim@font \verb*&\cexam&\_\verb*&anspub&\_\verb*&tl&}\pfill 
+		\hdclindex{225}{main}{150}, \hdclindex{1135}{}{1008}, 
+		\hdclindex{1136}{}{1009}, \hdclindex{1137}{}{1010}, 
+		\hdclindex{1138}{}{1011}, \hdclindex{1139}{}{1012}, 
+		\hdclindex{1457}{main}{1323}, \hdclindex{1615}{}{1472}, 
+		\hdclindex{1793}{}{1644}, \hdclindex{1819}{}{1669}, 
+		\hdclindex{1826}{}{1676}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&answer&\_\verb*&add:p&}\pfill 
+		\hdclindex{1642}{main}{1499}, \hdclindex{1676}{}{1530}, 
+		\hdclindex{1687}{}{1541}, \hdclindex{1697}{}{1551}, 
+		\hdclindex{1700}{}{1554}, \hdclindex{1705}{}{1559}, 
+		\hdclindex{1708}{}{1562}, \hdclindex{1721}{}{1575}, 
+		\hdclindex{1722}{}{1576}, \hdclindex{1949}{}{1790}, 
+		\hdclindex{1956}{}{1797}, \hdclindex{1962}{}{1803}, 
+		\hdclindex{1969}{}{1810}, \hdclindex{1974}{}{1815}, 
+		\hdclindex{1982}{}{1823}, \hdclindex{1987}{}{1828}, 
+		\hdclindex{1994}{}{1835}, \hdclindex{1999}{}{1840}, 
+		\hdclindex{2006}{}{1847}, \hdclindex{2011}{}{1852}, 
+		\hdclindex{2018}{}{1859}, \hdclindex{2023}{}{1864}, 
+		\hdclindex{2030}{}{1871}, \hdclindex{2035}{}{1876}, 
+		\hdclindex{2042}{}{1883}, \hdclindex{2053}{}{1893}, 
+		\hdclindex{2068}{}{1908}, \hdclindex{2078}{}{1918}, 
+		\hdclindex{2093}{}{1933}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&answer&\_\verb*&iow:p&}\pfill 
+		\hdclindex{1604}{main}{1462}, \hdclindex{1805}{}{1656}, 
+		\hdclindex{1830}{}{1680}, \hdclindex{1846}{}{1695}, 
+		\hdclindex{1862}{}{1710}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&blan:n&}\pfill 
+		\hdclindex{1457}{main}{1323}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&blank:n&}\pfill 
+		\hdclindex{1458}{}{1323}, \hdclindex{1909}{}{1752}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&blank&\_\verb*&bool&}\pfill 
+		\hdclindex{91}{main}{57}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&calculate&\_\verb*&bool&}\pfill 
+		\hdclindex{91}{main}{57}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&ccwd&\_\verb*&dim&}\pfill 
+		\hdclindex{1241}{usage}{37}, 
+		\hdclindex{167}{main}{108}, \hdclindex{175}{}{114}, 
+		\hdclindex{176}{}{115}, \hdclindex{179}{}{118}, 
+		\hdclindex{228}{}{152}, \hdclindex{538}{}{441}, 
+		\hdclindex{592}{}{495}, \hdclindex{943}{}{827}, 
+		\hdclindex{960}{}{844}, \hdclindex{966}{}{850}, 
+		\hdclindex{1463}{}{1328}, \hdclindex{1468}{}{1333}, 
+		\hdclindex{1482}{}{1345}, \hdclindex{1492}{}{1354}, 
+		\hdclindex{1585}{}{1444}, \hdclindex{1596}{}{1455}, 
+		\hdclindex{1777}{}{1628}, \hdclindex{1815}{}{1665}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&chapter:n&}\pfill 
+		\hdclindex{1671}{}{1525}, \hdclindex{1673}{}{1527}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&choice&\_\verb*&bool&}\pfill 
+		\hdclindex{91}{main}{57}, \hdclindex{1616}{}{1473}, 
+		\hdclindex{1947}{}{1788}, \hdclindex{1960}{}{1801}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&end&\_\verb*&tl&}\pfill 
+		\hdclindex{234}{main}{156}, \hdclindex{1888}{}{1733}, 
+		\hdclindex{2050}{}{1890}, \hdclindex{2064}{}{1904}, 
+		\hdclindex{2075}{}{1915}, \hdclindex{2089}{}{1929}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&env&\_\verb*&add&\_\verb*&par:np&}\pfill 
+		\hdclindex{1731}{}{1584}, \hdclindex{1891}{}{1736}, 
+		\hdclindex{1895}{}{1740}, \hdclindex{1952}{}{1793}, 
+		\hdclindex{1965}{}{1806}, \hdclindex{1977}{}{1818}, 
+		\hdclindex{1990}{}{1831}, \hdclindex{2002}{}{1843}, 
+		\hdclindex{2014}{}{1855}, \hdclindex{2026}{}{1867}, 
+		\hdclindex{2038}{}{1879}, \hdclindex{2056}{}{1896}, 
+		\hdclindex{2081}{}{1921}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&env&\_\verb*&end&\_\verb*&tl&}\pfill 
+		\hdclindex{234}{usage}{17}, \hdclindex{234}{main}{156}, 
+		\hdclindex{1884}{main}{1730}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&equ&\_\verb*&int&}\pfill 
+		\hdclindex{187}{main}{124}, \hdclindex{375}{}{287}, 
+		\hdclindex{378}{}{290}, \hdclindex{383}{}{294}, 
+		\hdclindex{386}{}{297}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&fmt&\_\verb*&bool&}\pfill 
+		\hdclindex{77}{main}{50}, \hdclindex{514}{}{417}, 
+		\hdclindex{519}{}{422}, \hdclindex{524}{}{427}, 
+		\hdclindex{526}{}{429}, \hdclindex{533}{}{436}, 
+		\hdclindex{541}{}{444}, \hdclindex{1191}{}{1062}, 
+		\hdclindex{1193}{}{1064}, \hdclindex{1378}{}{1245}, 
+		\hdclindex{1380}{}{1247}, \hdclindex{1506}{}{1368}, 
+		\hdclindex{1508}{}{1370}, \hdclindex{2106}{}{1945}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&fmt&\_\verb*&opt&\_\verb*&cho:nnnn&}\pfill 
+		\hdclindex{933}{main}{818}, \hdclindex{1200}{}{1071}, 
+		\hdclindex{1209}{}{1080}, \hdclindex{1214}{}{1085}, 
+		\hdclindex{1240}{}{1111}, \hdclindex{1280}{}{1151}, 
+		\hdclindex{1294}{}{1165}, \hdclindex{1308}{}{1179}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&fmt&\_\verb*&pic:nnnn&}\pfill 
+		\hdclindex{49}{usage}{10}, \hdclindex{112}{usage}{14}, 
+		\hdclindex{509}{main}{413}, \hdclindex{602}{}{504}, 
+		\hdclindex{624}{}{525}, \hdclindex{672}{}{572}, 
+		\hdclindex{694}{}{593}, \hdclindex{2107}{}{1946}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&fmt&\_\verb*&tag&\_\verb*&tl&}\pfill 
+		\hdclindex{229}{main}{153}, \hdclindex{517}{}{420}, 
+		\hdclindex{522}{}{425}, \hdclindex{525}{}{428}, 
+		\hdclindex{527}{}{430}, \hdclindex{536}{}{439}, 
+		\hdclindex{776}{}{670}, \hdclindex{781}{}{675}, 
+		\hdclindex{786}{}{680}, \hdclindex{791}{}{685}, 
+		\hdclindex{796}{}{690}, \hdclindex{801}{}{695}, 
+		\hdclindex{835}{}{728}, \hdclindex{843}{}{736}, 
+		\hdclindex{851}{}{744}, \hdclindex{868}{}{760}, 
+		\hdclindex{875}{}{767}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&get:nNnN&}\pfill 
+		\hdclindex{363}{main}{277}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&rec:nnnnnn&}\pfill 
+		\hdclindex{396}{main}{306}, \hdclindex{603}{}{505}, 
+		\hdclindex{625}{}{526}, \hdclindex{703}{}{602}, 
+		\hdclindex{2115}{}{1954}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&rec&\_\verb*&i:nnnnnn&}\pfill 
+		\hdclindex{413}{}{322}, \hdclindex{418}{main}{327}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&ind&\_\verb*&hat:nnn&}\pfill 
+		\hdclindex{888}{main}{779}, \hdclindex{1176}{}{1047}, 
+		\hdclindex{1452}{}{1318}, \hdclindex{1481}{}{1344}, 
+		\hdclindex{1496}{}{1358}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&ind&\_\verb*&hat:nnnn&}\pfill 
+		\hdclindex{121}{usage}{14}, \hdclindex{878}{main}{770}, 
+		\hdclindex{925}{}{810}, \hdclindex{927}{}{812}, 
+		\hdclindex{929}{}{814}, \hdclindex{931}{}{816}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&indent&\_\verb*&dim&}\pfill 
+		\hdclindex{151}{main}{98}, \hdclindex{1170}{}{1041}, 
+		\hdclindex{1171}{}{1042}, \hdclindex{1172}{}{1043}, 
+		\hdclindex{1177}{}{1048}, \hdclindex{1182}{}{1053}, 
+		\hdclindex{1205}{}{1076}, \hdclindex{1227}{}{1098}, 
+		\hdclindex{1230}{}{1101}, \hdclindex{1244}{}{1115}, 
+		\hdclindex{1247}{}{1118}, \hdclindex{1248}{}{1119}, 
+		\hdclindex{1274}{}{1145}, \hdclindex{1284}{}{1155}, 
+		\hdclindex{1298}{}{1169}, \hdclindex{1299}{}{1170}, 
+		\hdclindex{1312}{}{1183}, \hdclindex{1313}{}{1184}, 
+		\hdclindex{1322}{}{1193}, \hdclindex{1323}{}{1194}, 
+		\hdclindex{1386}{}{1253}, \hdclindex{1392}{}{1259}, 
+		\hdclindex{1397}{}{1264}, \hdclindex{1398}{}{1265}, 
+		\hdclindex{1403}{}{1270}, \hdclindex{1414}{}{1281}, 
+		\hdclindex{1415}{}{1282}, \hdclindex{1425}{}{1292}, 
+		\hdclindex{1426}{}{1293}, \hdclindex{1435}{}{1302}, 
+		\hdclindex{1436}{}{1303}, \hdclindex{1449}{}{1315}, 
+		\hdclindex{1450}{}{1316}, \hdclindex{1453}{}{1319}, 
+		\hdclindex{1489}{}{1351}, \hdclindex{1490}{}{1352}, 
+		\hdclindex{1491}{}{1353}, \hdclindex{1497}{}{1359}, 
+		\hdclindex{1515}{}{1377}, \hdclindex{1523}{}{1385}, 
+		\hdclindex{1528}{}{1390}, \hdclindex{1529}{}{1391}, 
+		\hdclindex{1536}{}{1398}, \hdclindex{1548}{}{1410}, 
+		\hdclindex{1549}{}{1411}, \hdclindex{1560}{}{1422}, 
+		\hdclindex{1585}{}{1444}, \hdclindex{1596}{}{1455}, 
+		\hdclindex{1777}{}{1628}, \hdclindex{1779}{}{1630}, 
+		\hdclindex{1780}{}{1631}, \hdclindex{1815}{}{1665}, 
+		\hdclindex{1817}{}{1667}, \hdclindex{1818}{}{1668}, 
+		\hdclindex{2104}{}{1943}, \hdclindex{2132}{}{1971}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&indent&\_\verb*&i&\_\verb*&dim&}\pfill 
+		\hdclindex{151}{main}{98}, \hdclindex{1172}{}{1043}, 
+		\hdclindex{1173}{}{1044}, \hdclindex{1227}{}{1098}, 
+		\hdclindex{1231}{}{1102}, \hdclindex{1244}{}{1115}, 
+		\hdclindex{1249}{}{1120}, \hdclindex{1275}{}{1146}, 
+		\hdclindex{1285}{}{1156}, \hdclindex{1387}{}{1254}, 
+		\hdclindex{1491}{}{1353}, \hdclindex{1492}{}{1354}, 
+		\hdclindex{1516}{}{1378}, \hdclindex{1550}{}{1412}, 
+		\hdclindex{1561}{}{1423}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&judgement&\_\verb*&bool&}\pfill 
+		\hdclindex{91}{main}{57}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&lwr&\_\verb*&set:nnnn&}\pfill 
+		\hdclindex{48}{usage}{10}, \hdclindex{493}{main}{398}, 
+		\hdclindex{607}{}{509}, \hdclindex{613}{}{515}, 
+		\hdclindex{630}{}{531}, \hdclindex{635}{}{536}, 
+		\hdclindex{649}{}{550}, \hdclindex{654}{}{555}, 
+		\hdclindex{659}{}{560}, \hdclindex{670}{}{570}, 
+		\hdclindex{681}{}{581}, \hdclindex{695}{}{594}, 
+		\hdclindex{712}{}{611}, \hdclindex{717}{}{616}, 
+		\hdclindex{734}{}{632}, \hdclindex{742}{}{640}, 
+		\hdclindex{2119}{}{1958}, \hdclindex{2125}{}{1964}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&nopic&\_\verb*&bool&}\pfill 
+		\hdclindex{828}{usage}{29}, \hdclindex{73}{main}{48}, 
+		\hdclindex{514}{}{417}, \hdclindex{519}{}{422}, 
+		\hdclindex{524}{}{427}, \hdclindex{526}{}{429}, 
+		\hdclindex{806}{}{700}, \hdclindex{833}{}{726}, 
+		\hdclindex{841}{}{734}, \hdclindex{849}{}{742}, 
+		\hdclindex{855}{}{748}, \hdclindex{866}{}{758}, 
+		\hdclindex{873}{}{765}, \hdclindex{991}{}{874}, 
+		\hdclindex{997}{}{880}, \hdclindex{1184}{}{1055}, 
+		\hdclindex{1198}{}{1069}, \hdclindex{1222}{}{1093}, 
+		\hdclindex{1371}{}{1238}, \hdclindex{1383}{}{1250}, 
+		\hdclindex{1499}{}{1361}, \hdclindex{1512}{}{1374}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&notab&\_\verb*&bool&}\pfill 
+		\hdclindex{828}{usage}{29}, \hdclindex{75}{main}{49}, 
+		\hdclindex{514}{}{417}, \hdclindex{519}{}{422}, 
+		\hdclindex{524}{}{427}, \hdclindex{526}{}{429}, 
+		\hdclindex{807}{}{701}, \hdclindex{834}{}{727}, 
+		\hdclindex{842}{}{735}, \hdclindex{850}{}{743}, 
+		\hdclindex{856}{}{749}, \hdclindex{867}{}{759}, 
+		\hdclindex{874}{}{766}, \hdclindex{992}{}{875}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&number&\_\verb*&box&}\pfill 
+		\hdclindex{108}{main}{67}, \hdclindex{1169}{}{1040}, 
+		\hdclindex{1170}{}{1041}, \hdclindex{1448}{}{1314}, 
+		\hdclindex{1449}{}{1315}, \hdclindex{1488}{}{1350}, 
+		\hdclindex{1489}{}{1351}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&number&\_\verb*&int&}\pfill 
+		\hdclindex{185}{main}{123}, \hdclindex{1004}{}{887}, 
+		\hdclindex{1011}{}{894}, \hdclindex{1018}{}{901}, 
+		\hdclindex{1029}{}{911}, \hdclindex{1168}{}{1039}, 
+		\hdclindex{1447}{}{1313}, \hdclindex{1487}{}{1349}, 
+		\hdclindex{1612}{}{1469}, \hdclindex{1675}{}{1529}, 
+		\hdclindex{1686}{}{1540}, \hdclindex{1702}{}{1556}, 
+		\hdclindex{1916}{}{1758}, \hdclindex{1917}{}{1759}, 
+		\hdclindex{1923}{}{1765}, \hdclindex{1929}{}{1771}, 
+		\hdclindex{1940}{}{1782}, \hdclindex{1941}{}{1783}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&number&\_\verb*&tag&\_\verb*&i&\_\verb*&tl&}\pfill 
+		\hdclindex{214}{main}{142}, 
+		\hdclindex{1028}{main}{911}, \hdclindex{1177}{}{1048}, 
+		\hdclindex{1453}{}{1319}, \hdclindex{1497}{}{1359}, 
+		\hdclindex{1922}{}{1764}, \hdclindex{1928}{}{1770}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&number&\_\verb*&tag&\_\verb*&tl&}\pfill 
+		\hdclindex{214}{main}{142}, 
+		\hdclindex{1028}{main}{911}, \hdclindex{1169}{}{1040}, 
+		\hdclindex{1177}{}{1048}, \hdclindex{1448}{}{1314}, 
+		\hdclindex{1453}{}{1319}, \hdclindex{1488}{}{1350}, 
+		\hdclindex{1497}{}{1359}, \hdclindex{1919}{}{1761}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&numold&\_\verb*&int&}\pfill 
+		\hdclindex{196}{main}{129}, \hdclindex{1916}{}{1758}, 
+		\hdclindex{1941}{}{1783}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&numtemp&\_\verb*&int&}\pfill 
+		\hdclindex{189}{main}{125}, \hdclindex{628}{}{529}, 
+		\hdclindex{629}{}{530}, \hdclindex{633}{}{534}, 
+		\hdclindex{646}{}{547}, \hdclindex{647}{}{548}, 
+		\hdclindex{657}{}{558}, \hdclindex{703}{}{602}, 
+		\hdclindex{707}{}{606}, \hdclindex{715}{}{614}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&numtxt&\_\verb*&skip&}\pfill 
+		\hdclindex{154}{main}{100}, \hdclindex{1171}{}{1042}, 
+		\hdclindex{1450}{}{1316}, \hdclindex{1490}{}{1352}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&option&\_\verb*&box&}\pfill 
+		\hdclindex{102}{main}{64}, \hdclindex{949}{}{833}, 
+		\hdclindex{956}{}{840}, \hdclindex{967}{}{851}, 
+		\hdclindex{971}{}{855}, \hdclindex{1234}{}{1105}, 
+		\hdclindex{1252}{}{1123}, \hdclindex{1264}{}{1135}, 
+		\hdclindex{1270}{}{1141}, \hdclindex{1288}{}{1159}, 
+		\hdclindex{1302}{}{1173}, \hdclindex{1316}{}{1187}, 
+		\hdclindex{1326}{}{1197}, \hdclindex{1511}{}{1373}, 
+		\hdclindex{1519}{}{1381}, \hdclindex{1532}{}{1394}, 
+		\hdclindex{1553}{}{1415}, \hdclindex{1557}{}{1419}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&optrand&\_\verb*&iow:n&}\pfill 
+		\hdclindex{1601}{main}{1460}, \hdclindex{1617}{}{1474}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&pic&\_\verb*&linwd&\_\verb*&dim&}\pfill 
+		\hdclindex{159}{main}{104}, \hdclindex{561}{}{464}, 
+		\hdclindex{562}{}{465}, \hdclindex{563}{}{466}, 
+		\hdclindex{564}{}{467}, \hdclindex{565}{}{468}, 
+		\hdclindex{570}{}{473}, \hdclindex{571}{}{474}, 
+		\hdclindex{572}{}{475}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&picht&\_\verb*&dim&}\pfill 
+		\hdclindex{131}{main}{84}, \hdclindex{531}{}{434}, 
+		\hdclindex{532}{}{435}, \hdclindex{534}{}{437}, 
+		\hdclindex{537}{}{440}, \hdclindex{605}{}{507}, 
+		\hdclindex{626}{}{527}, \hdclindex{702}{}{601}, 
+		\hdclindex{704}{}{603}, \hdclindex{727}{}{626}, 
+		\hdclindex{728}{}{627}, \hdclindex{2117}{}{1956}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&picmath&\_\verb*&int&}\pfill 
+		\hdclindex{191}{main}{126}, \hdclindex{604}{}{506}, 
+		\hdclindex{609}{}{511}, \hdclindex{611}{}{513}, 
+		\hdclindex{625}{}{526}, \hdclindex{628}{}{529}, 
+		\hdclindex{647}{}{548}, \hdclindex{652}{}{553}, 
+		\hdclindex{674}{}{574}, \hdclindex{676}{}{576}, 
+		\hdclindex{677}{}{577}, \hdclindex{679}{}{579}, 
+		\hdclindex{698}{}{597}, \hdclindex{706}{}{605}, 
+		\hdclindex{710}{}{609}, \hdclindex{737}{}{635}, 
+		\hdclindex{738}{}{636}, \hdclindex{740}{}{638}, 
+		\hdclindex{2116}{}{1955}, \hdclindex{2121}{}{1960}, 
+		\hdclindex{2123}{}{1962}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&picture&\_\verb*&box&}\pfill 
+		\hdclindex{98}{main}{62}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&picture&\_\verb*&tl&}\pfill 
+		\hdclindex{229}{main}{153}, \hdclindex{597}{}{500}, 
+		\hdclindex{618}{}{520}, \hdclindex{664}{}{565}, 
+		\hdclindex{689}{}{589}, \hdclindex{722}{}{621}, 
+		\hdclindex{2130}{}{1969}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&pictxt&\_\verb*&skip&}\pfill 
+		\hdclindex{154}{main}{100}, \hdclindex{1183}{}{1054}, 
+		\hdclindex{1247}{}{1118}, \hdclindex{1274}{}{1145}, 
+		\hdclindex{1319}{}{1190}, \hdclindex{1322}{}{1193}, 
+		\hdclindex{1404}{}{1271}, \hdclindex{1414}{}{1281}, 
+		\hdclindex{1425}{}{1292}, \hdclindex{1537}{}{1399}, 
+		\hdclindex{1548}{}{1410}, \hdclindex{1560}{}{1422}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&picwd&\_\verb*&dim&}\pfill 
+		\hdclindex{131}{main}{84}, \hdclindex{530}{}{433}, 
+		\hdclindex{555}{}{458}, \hdclindex{564}{}{467}, 
+		\hdclindex{605}{}{507}, \hdclindex{608}{}{510}, 
+		\hdclindex{626}{}{527}, \hdclindex{631}{}{532}, 
+		\hdclindex{650}{}{551}, \hdclindex{696}{}{595}, 
+		\hdclindex{704}{}{603}, \hdclindex{713}{}{612}, 
+		\hdclindex{2117}{}{1956}, \hdclindex{2120}{}{1959}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&picwd&\_\verb*&limit&}\pfill 
+		\hdclindex{165}{main}{107}, \hdclindex{1204}{}{1075}, 
+		\hdclindex{1205}{}{1076}, \hdclindex{1206}{}{1077}, 
+		\hdclindex{1258}{}{1129}, \hdclindex{1292}{}{1163}, 
+		\hdclindex{1391}{}{1258}, \hdclindex{1392}{}{1259}, 
+		\hdclindex{1393}{}{1260}, \hdclindex{1522}{}{1384}, 
+		\hdclindex{1523}{}{1385}, \hdclindex{1524}{}{1386}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}\pfill 
+		\hdclindex{127}{main}{81}, \hdclindex{496}{}{400}, 
+		\hdclindex{499}{}{403}, \hdclindex{506}{}{410}, 
+		\hdclindex{612}{}{514}, \hdclindex{615}{}{517}, 
+		\hdclindex{634}{}{535}, \hdclindex{637}{}{538}, 
+		\hdclindex{653}{}{554}, \hdclindex{658}{}{559}, 
+		\hdclindex{661}{}{562}, \hdclindex{680}{}{580}, 
+		\hdclindex{683}{}{583}, \hdclindex{711}{}{610}, 
+		\hdclindex{716}{}{615}, \hdclindex{719}{}{618}, 
+		\hdclindex{741}{}{639}, \hdclindex{744}{}{642}, 
+		\hdclindex{2124}{}{1963}, \hdclindex{2127}{}{1966}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}\pfill 
+		\hdclindex{127}{main}{81}, \hdclindex{497}{}{401}, 
+		\hdclindex{502}{}{406}, \hdclindex{507}{}{411}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}\pfill 
+		\hdclindex{127}{main}{81}, \hdclindex{505}{}{409}, 
+		\hdclindex{506}{}{410}, \hdclindex{507}{}{411}, 
+		\hdclindex{612}{}{514}, \hdclindex{616}{}{518}, 
+		\hdclindex{634}{}{535}, \hdclindex{638}{}{539}, 
+		\hdclindex{641}{}{542}, \hdclindex{653}{}{554}, 
+		\hdclindex{658}{}{559}, \hdclindex{662}{}{563}, 
+		\hdclindex{675}{}{575}, \hdclindex{680}{}{580}, 
+		\hdclindex{684}{}{584}, \hdclindex{700}{}{599}, 
+		\hdclindex{711}{}{610}, \hdclindex{716}{}{615}, 
+		\hdclindex{720}{}{619}, \hdclindex{737}{}{635}, 
+		\hdclindex{741}{}{639}, \hdclindex{745}{}{643}, 
+		\hdclindex{1778}{}{1629}, \hdclindex{1779}{}{1630}, 
+		\hdclindex{1780}{}{1631}, \hdclindex{1816}{}{1666}, 
+		\hdclindex{1817}{}{1667}, \hdclindex{1818}{}{1668}, 
+		\hdclindex{2124}{}{1963}, \hdclindex{2128}{}{1967}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&qitem:&}\pfill 
+		\hdclindex{1478}{main}{1342}, \hdclindex{1905}{}{1749}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&qitem&\_\verb*&int&}\pfill 
+		\hdclindex{194}{main}{128}, \hdclindex{1482}{}{1345}, 
+		\hdclindex{1493}{}{1355}, \hdclindex{1900}{}{1744}, 
+		\hdclindex{1902}{}{1746}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&quad&\_\verb*&tl&}\pfill 
+		\hdclindex{225}{main}{150}, 
+		\hdclindex{1457}{main}{1323}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&schapter:n&}\pfill 
+		\hdclindex{1682}{}{1536}, \hdclindex{1684}{}{1538}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sect:n&}\pfill 
+		\hdclindex{1693}{}{1547}, \hdclindex{1695}{}{1549}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep:n&}\pfill 
+		\hdclindex{41}{usage}{9}, \hdclindex{336}{main}{251}, 
+		\hdclindex{421}{}{329}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&graphics:p&}\pfill 
+		\hdclindex{773}{main}{668}, \hdclindex{986}{}{869}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&i:n&}\pfill 
+		\hdclindex{263}{main}{181}, \hdclindex{288}{}{204}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&ii:n&}\pfill 
+		\hdclindex{263}{main}{181}, \hdclindex{291}{}{207}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&iii:n&}\pfill 
+		\hdclindex{263}{main}{181}, \hdclindex{294}{}{210}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&isin:nn&}\pfill 
+		\hdclindex{299}{main}{215}, \hdclindex{341}{}{255}, 
+		\hdclindex{346}{}{260}, \hdclindex{351}{}{265}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&mk:n&}\pfill 
+		\hdclindex{284}{main}{201}, \hdclindex{313}{}{228}, 
+		\hdclindex{322}{}{237}, \hdclindex{330}{}{245}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&multiply&\_\verb*&i:p&}\pfill 
+		\hdclindex{863}{main}{756}, \hdclindex{980}{}{863}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&multiply&\_\verb*&ii:p&}\pfill 
+		\hdclindex{863}{main}{756}, \hdclindex{983}{}{866}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&nopic&\_\verb*&tl&}\pfill 
+		\hdclindex{752}{}{649}, \hdclindex{753}{main}{650}, 
+		\hdclindex{1005}{}{888}, \hdclindex{1012}{}{895}, 
+		\hdclindex{1019}{}{902}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&pictab&\_\verb*&tl&}\pfill 
+		\hdclindex{749}{main}{647}, \hdclindex{777}{}{671}, 
+		\hdclindex{782}{}{676}, \hdclindex{787}{}{681}, 
+		\hdclindex{792}{}{686}, \hdclindex{797}{}{691}, 
+		\hdclindex{802}{}{696}, \hdclindex{836}{}{729}, 
+		\hdclindex{844}{}{737}, \hdclindex{852}{}{745}, 
+		\hdclindex{858}{}{751}, \hdclindex{869}{}{761}, 
+		\hdclindex{876}{}{768}, \hdclindex{994}{}{877}, 
+		\hdclindex{1000}{}{883}, \hdclindex{1005}{}{888}, 
+		\hdclindex{1012}{}{895}, \hdclindex{1019}{}{902}, 
+		\hdclindex{1187}{}{1058}, \hdclindex{1246}{}{1117}, 
+		\hdclindex{1273}{}{1144}, \hdclindex{1283}{}{1154}, 
+		\hdclindex{1297}{}{1168}, \hdclindex{1311}{}{1182}, 
+		\hdclindex{1321}{}{1192}, \hdclindex{1374}{}{1241}, 
+		\hdclindex{1396}{}{1263}, \hdclindex{1413}{}{1280}, 
+		\hdclindex{1424}{}{1291}, \hdclindex{1434}{}{1301}, 
+		\hdclindex{1502}{}{1364}, \hdclindex{1527}{}{1389}, 
+		\hdclindex{1547}{}{1409}, \hdclindex{1559}{}{1421}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&pictxt:n&}\pfill 
+		\hdclindex{976}{main}{860}, \hdclindex{1174}{}{1045}, 
+		\hdclindex{1370}{}{1237}, \hdclindex{1494}{}{1356}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&pictxt&\_\verb*&i:p&}\pfill 
+		\hdclindex{779}{}{673}, \hdclindex{822}{}{716}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&pictxt&\_\verb*&iii:p&}\pfill 
+		\hdclindex{794}{}{688}, \hdclindex{825}{}{719}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&pictxt&\_\verb*&iiis:p&}\pfill 
+		\hdclindex{799}{}{693}, \hdclindex{816}{}{710}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&pictxt&\_\verb*&is:p&}\pfill 
+		\hdclindex{774}{}{668}, \hdclindex{813}{}{707}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&tikz:p&}\pfill 
+		\hdclindex{828}{main}{722}, \hdclindex{989}{}{872}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&txt&\_\verb*&tl&}\pfill 
+		\hdclindex{749}{main}{647}, \hdclindex{776}{}{670}, 
+		\hdclindex{781}{}{675}, \hdclindex{786}{}{680}, 
+		\hdclindex{791}{}{685}, \hdclindex{796}{}{690}, 
+		\hdclindex{801}{}{695}, \hdclindex{835}{}{728}, 
+		\hdclindex{843}{}{736}, \hdclindex{851}{}{744}, 
+		\hdclindex{857}{}{750}, \hdclindex{868}{}{760}, 
+		\hdclindex{875}{}{767}, \hdclindex{993}{}{876}, 
+		\hdclindex{1219}{}{1090}, \hdclindex{1232}{}{1103}, 
+		\hdclindex{1250}{}{1121}, \hdclindex{1276}{}{1147}, 
+		\hdclindex{1286}{}{1157}, \hdclindex{1300}{}{1171}, 
+		\hdclindex{1314}{}{1185}, \hdclindex{1324}{}{1195}, 
+		\hdclindex{1388}{}{1255}, \hdclindex{1399}{}{1266}, 
+		\hdclindex{1409}{}{1276}, \hdclindex{1416}{}{1283}, 
+		\hdclindex{1428}{}{1295}, \hdclindex{1437}{}{1304}, 
+		\hdclindex{1517}{}{1379}, \hdclindex{1530}{}{1392}, 
+		\hdclindex{1542}{}{1404}, \hdclindex{1551}{}{1413}, 
+		\hdclindex{1562}{}{1424}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&seped&\_\verb*&txt&\_\verb*&i:&}\pfill 
+		\hdclindex{1269}{}{1140}, \hdclindex{1276}{}{1147}, 
+		\hdclindex{1556}{}{1418}, \hdclindex{1562}{}{1424}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&septxt&\_\verb*&ii:p&}\pfill 
+		\hdclindex{789}{}{683}, \hdclindex{823}{}{717}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&septxt&\_\verb*&iis:p&}\pfill 
+		\hdclindex{784}{}{678}, \hdclindex{814}{}{708}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&add:n&}\pfill 
+		\hdclindex{45}{usage}{9}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&mk:nnn&}\pfill 
+		\hdclindex{46}{usage}{10}, \hdclindex{475}{main}{382}, 
+		\hdclindex{610}{}{512}, \hdclindex{632}{}{533}, 
+		\hdclindex{651}{}{552}, \hdclindex{656}{}{557}, 
+		\hdclindex{678}{}{578}, \hdclindex{709}{}{608}, 
+		\hdclindex{714}{}{613}, \hdclindex{739}{}{637}, 
+		\hdclindex{2122}{}{1961}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&shad&\_\verb*&add:n&}\pfill 
+		\hdclindex{469}{main}{377}, \hdclindex{481}{}{387}, 
+		\hdclindex{482}{}{388}, \hdclindex{615}{}{517}, 
+		\hdclindex{616}{}{518}, \hdclindex{637}{}{538}, 
+		\hdclindex{638}{}{539}, \hdclindex{661}{}{562}, 
+		\hdclindex{662}{}{563}, \hdclindex{683}{}{583}, 
+		\hdclindex{684}{}{584}, \hdclindex{719}{}{618}, 
+		\hdclindex{720}{}{619}, \hdclindex{744}{}{642}, 
+		\hdclindex{745}{}{643}, \hdclindex{2127}{}{1966}, 
+		\hdclindex{2128}{}{1967}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&shad&\_\verb*&set:n&}\pfill 
+		\hdclindex{47}{usage}{10}, \hdclindex{485}{main}{391}, 
+		\hdclindex{609}{}{511}, \hdclindex{629}{}{530}, 
+		\hdclindex{648}{}{549}, \hdclindex{677}{}{577}, 
+		\hdclindex{708}{}{607}, \hdclindex{738}{}{636}, 
+		\hdclindex{2121}{}{1960}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&shape&\_\verb*&tl&}\pfill 
+		\hdclindex{232}{main}{155}, \hdclindex{472}{}{379}, 
+		\hdclindex{473}{}{380}, \hdclindex{489}{}{394}, 
+		\hdclindex{490}{}{395}, \hdclindex{617}{}{519}, 
+		\hdclindex{643}{}{544}, \hdclindex{663}{}{564}, 
+		\hdclindex{685}{}{585}, \hdclindex{721}{}{620}, 
+		\hdclindex{746}{}{644}, \hdclindex{2129}{}{1968}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&ssect:n&}\pfill 
+		\hdclindex{1717}{}{1571}, \hdclindex{1719}{}{1573}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&table&\_\verb*&bool&}\pfill 
+		\hdclindex{1652}{main}{1508}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&table&\_\verb*&contents:n&}\pfill 
+		\hdclindex{1658}{}{1513}, \hdclindex{1662}{}{1517}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&totalnum&\_\verb*&int&}\pfill 
+		\hdclindex{191}{main}{126}, \hdclindex{640}{}{541}, 
+		\hdclindex{646}{}{547}, \hdclindex{648}{}{549}, 
+		\hdclindex{706}{}{605}, \hdclindex{707}{}{606}, 
+		\hdclindex{708}{}{607}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&txtht&\_\verb*&box&}\pfill 
+		\hdclindex{96}{main}{61}, \hdclindex{376}{}{288}, 
+		\hdclindex{384}{}{295}, \hdclindex{387}{}{298}, 
+		\hdclindex{388}{}{299}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&type&\_\verb*&i:nnnnnnn&}\pfill 
+		\hdclindex{50}{usage}{10}, \hdclindex{51}{usage}{10}, 
+		\hdclindex{599}{main}{502}, \hdclindex{1320}{}{1191}, 
+		\hdclindex{1412}{}{1279}, \hdclindex{1423}{}{1290}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&type&\_\verb*&ii:nnnnnnnnn&}\pfill 
+		\hdclindex{51}{usage}{10}, \hdclindex{621}{main}{523}, 
+		\hdclindex{1245}{}{1116}, \hdclindex{1546}{}{1408}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&type&\_\verb*&iii:nnnnnnn&}\pfill 
+		\hdclindex{52}{usage}{10}, \hdclindex{165}{usage}{15}, 
+		\hdclindex{667}{main}{568}, \hdclindex{1282}{}{1153}, 
+		\hdclindex{1296}{}{1167}, \hdclindex{1310}{}{1181}, 
+		\hdclindex{1395}{}{1262}, \hdclindex{1433}{}{1300}, 
+		\hdclindex{1526}{}{1388}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&type&\_\verb*&iv:nnnnnn&}\pfill 
+		\hdclindex{1257}{usage}{37}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&type&\_\verb*&iv:nnnnnnn&}\pfill 
+		\hdclindex{1390}{usage}{40}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&type&\_\verb*&iv:nnnnnnnn&}\pfill 
+		\hdclindex{53}{usage}{10}, \hdclindex{691}{main}{591}, 
+		\hdclindex{1272}{}{1143}, \hdclindex{1558}{}{1420}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&type&\_\verb*&v:nnnnn&}\pfill 
+		\hdclindex{54}{usage}{11}, \hdclindex{731}{main}{630}, 
+		\hdclindex{1229}{}{1100}, \hdclindex{1385}{}{1252}, 
+		\hdclindex{1514}{}{1376}
+  \item \pkg{cexam} internal commands:\efill 
+ \subitem {\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&sep&\_\verb*&bd&\_\verb*&bool&}\pfill 
+		\hdclindex{69}{main}{46}, \hdclindex{304}{}{219}, 
+		\hdclindex{321}{}{236}, \hdclindex{329}{}{244}, 
+		\hdclindex{358}{}{272}, \hdclindex{444}{}{352}
+    \subitem {\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&sep&\_\verb*&tl&\_\verb*&bool&}\pfill 
+		\hdclindex{71}{main}{47}, \hdclindex{310}{}{225}, 
+		\hdclindex{315}{}{230}, \hdclindex{324}{}{239}, 
+		\hdclindex{331}{}{246}, \hdclindex{357}{}{271}, 
+		\hdclindex{458}{}{366}
+  \item {\verbatim@font \verb*&cexam/option&}\pfill 
+		\hdclindex{245}{main}{164}
+  \item \pkg{change} commands:\efill 
+ \subitem {\verbatim@font \verb*&\change&\_\verb*&example:n&}\pfill 
+		\hdclindex{1910}{main}{1753}, \hdclindex{1948}{}{1789}, 
+		\hdclindex{1961}{}{1802}, \hdclindex{1973}{}{1814}, 
+		\hdclindex{1986}{}{1827}, \hdclindex{1998}{}{1839}, 
+		\hdclindex{2010}{}{1851}, \hdclindex{2022}{}{1863}, 
+		\hdclindex{2034}{}{1875}, \hdclindex{2052}{}{1892}, 
+		\hdclindex{2077}{}{1917}
+    \subitem {\verbatim@font \verb*&\change&\_\verb*&normal:n&}\pfill 
+		\hdclindex{1910}{main}{1753}, \hdclindex{1955}{}{1796}, 
+		\hdclindex{1968}{}{1809}, \hdclindex{1981}{}{1822}, 
+		\hdclindex{1993}{}{1834}, \hdclindex{2005}{}{1846}, 
+		\hdclindex{2017}{}{1858}, \hdclindex{2029}{}{1870}, 
+		\hdclindex{2041}{}{1882}, \hdclindex{2067}{}{1907}, 
+		\hdclindex{2092}{}{1932}
+  \item {\verbatim@font \verb*&\chapter&}\pfill \hdclindex{0}{usage}{1}, 
+		\hdclindex{1676}{}{1530}, \hdclindex{1687}{}{1541}, 
+		\hdclindex{1703}{}{1557}, \hdclindex{1720}{}{1574}, 
+		\hdclindex{1749}{}{1601}
+  \item \pkg{cho} commands:\efill 
+ \subitem {\verbatim@font \verb*&\cho&\_\verb*&fmt&\_\verb*&tl&}\pfill 
+		\hdclindex{212}{main}{141}, \hdclindex{903}{main}{792}, 
+		\hdclindex{908}{}{795}, \hdclindex{909}{}{796}, 
+		\hdclindex{910}{}{797}, \hdclindex{911}{}{798}, 
+		\hdclindex{916}{}{802}, \hdclindex{917}{}{803}, 
+		\hdclindex{919}{}{805}, \hdclindex{920}{}{806}, 
+		\hdclindex{925}{}{810}, \hdclindex{927}{}{812}, 
+		\hdclindex{929}{}{814}, \hdclindex{931}{}{816}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&get&\_\verb*&lmax:nn&}\pfill 
+		\hdclindex{897}{main}{787}, \hdclindex{937}{}{821}, 
+		\hdclindex{938}{}{822}, \hdclindex{940}{}{824}, 
+		\hdclindex{941}{}{825}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&hat&\_\verb*&dim&}\pfill 
+		\hdclindex{172}{main}{112}, \hdclindex{904}{}{792}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&hat&\_\verb*&ht&\_\verb*&dim&}\pfill 
+		\hdclindex{172}{main}{112}, \hdclindex{925}{}{810}, 
+		\hdclindex{927}{}{812}, \hdclindex{929}{}{814}, 
+		\hdclindex{931}{}{816}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&hat&\_\verb*&wd&\_\verb*&dim&}\pfill 
+		\hdclindex{172}{main}{112}, \hdclindex{925}{}{810}, 
+		\hdclindex{927}{}{812}, \hdclindex{929}{}{814}, 
+		\hdclindex{931}{}{816}, \hdclindex{1173}{}{1044}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&lmax&\_\verb*&dim&}\pfill 
+		\hdclindex{134}{main}{86}, \hdclindex{942}{}{826}, 
+		\hdclindex{943}{}{827}, \hdclindex{944}{}{828}, 
+		\hdclindex{948}{}{832}, \hdclindex{952}{}{836}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&lmax&\_\verb*&i&\_\verb*&dim&}\pfill 
+		\hdclindex{137}{usage}{14}, \hdclindex{137}{main}{88}, 
+		\hdclindex{936}{}{820}, \hdclindex{937}{}{821}, 
+		\hdclindex{938}{}{822}, \hdclindex{942}{}{826}, 
+		\hdclindex{959}{}{843}, \hdclindex{960}{}{844}, 
+		\hdclindex{961}{}{845}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&lmax&\_\verb*&ii&\_\verb*&dim&}\pfill 
+		\hdclindex{137}{usage}{14}, \hdclindex{137}{main}{88}, 
+		\hdclindex{939}{}{823}, \hdclindex{940}{}{824}, 
+		\hdclindex{941}{}{825}, \hdclindex{942}{}{826}, 
+		\hdclindex{959}{}{843}, \hdclindex{965}{}{849}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&opt&\_\verb*&maxed&\_\verb*&bool&}\pfill 
+		\hdclindex{79}{main}{51}, \hdclindex{946}{}{830}, 
+		\hdclindex{954}{}{838}, \hdclindex{963}{}{847}, 
+		\hdclindex{970}{}{854}, \hdclindex{1224}{}{1095}, 
+		\hdclindex{1242}{}{1113}, \hdclindex{1256}{}{1127}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&opt&\_\verb*&type&\_\verb*&i:nnnn&}\pfill 
+		\hdclindex{905}{main}{793}, \hdclindex{949}{}{833}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&opt&\_\verb*&type&\_\verb*&ii:nnnn&}\pfill 
+		\hdclindex{913}{main}{800}, \hdclindex{956}{}{840}, 
+		\hdclindex{967}{}{851}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&opt&\_\verb*&type&\_\verb*&iii:nnnn&}\pfill 
+		\hdclindex{922}{main}{808}, \hdclindex{971}{}{855}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&opta&\_\verb*&tl&}\pfill 
+		\hdclindex{238}{main}{159}, \hdclindex{1043}{}{923}, 
+		\hdclindex{1054}{}{934}, \hdclindex{1201}{}{1072}, 
+		\hdclindex{1210}{}{1081}, \hdclindex{1215}{}{1086}, 
+		\hdclindex{1241}{}{1112}, \hdclindex{1281}{}{1152}, 
+		\hdclindex{1295}{}{1166}, \hdclindex{1309}{}{1180}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&optb&\_\verb*&tl&}\pfill 
+		\hdclindex{238}{main}{159}, \hdclindex{1044}{}{924}, 
+		\hdclindex{1055}{}{935}, \hdclindex{1201}{}{1072}, 
+		\hdclindex{1210}{}{1081}, \hdclindex{1215}{}{1086}, 
+		\hdclindex{1241}{}{1112}, \hdclindex{1281}{}{1152}, 
+		\hdclindex{1295}{}{1166}, \hdclindex{1309}{}{1180}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&optc&\_\verb*&tl&}\pfill 
+		\hdclindex{238}{main}{159}, \hdclindex{1045}{}{925}, 
+		\hdclindex{1056}{}{936}, \hdclindex{1201}{}{1072}, 
+		\hdclindex{1210}{}{1081}, \hdclindex{1215}{}{1086}, 
+		\hdclindex{1241}{}{1112}, \hdclindex{1281}{}{1152}, 
+		\hdclindex{1295}{}{1166}, \hdclindex{1309}{}{1180}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&optd&\_\verb*&tl&}\pfill 
+		\hdclindex{238}{main}{159}, \hdclindex{1046}{}{926}, 
+		\hdclindex{1057}{}{937}, \hdclindex{1201}{}{1072}, 
+		\hdclindex{1210}{}{1081}, \hdclindex{1215}{}{1086}, 
+		\hdclindex{1241}{}{1112}, \hdclindex{1281}{}{1152}, 
+		\hdclindex{1295}{}{1166}, \hdclindex{1309}{}{1180}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&option&\_\verb*&box&}\pfill 
+		\hdclindex{100}{main}{63}, \hdclindex{900}{}{789}, 
+		\hdclindex{901}{}{790}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&optpic&\_\verb*&box&}\pfill 
+		\hdclindex{106}{main}{66}, \hdclindex{1187}{}{1058}, 
+		\hdclindex{1188}{}{1059}, \hdclindex{1189}{}{1060}, 
+		\hdclindex{1190}{}{1061}, \hdclindex{1374}{}{1241}, 
+		\hdclindex{1375}{}{1242}, \hdclindex{1376}{}{1243}, 
+		\hdclindex{1377}{}{1244}, \hdclindex{1502}{}{1364}, 
+		\hdclindex{1503}{}{1365}, \hdclindex{1504}{}{1366}, 
+		\hdclindex{1505}{}{1367}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&optpic&\_\verb*&ht&\_\verb*&dim&}\pfill 
+		\hdclindex{147}{main}{95}, \hdclindex{1189}{}{1060}, 
+		\hdclindex{1190}{}{1061}, \hdclindex{1195}{}{1066}, 
+		\hdclindex{1237}{}{1108}, \hdclindex{1255}{}{1126}, 
+		\hdclindex{1267}{}{1138}, \hdclindex{1305}{}{1176}, 
+		\hdclindex{1376}{}{1243}, \hdclindex{1377}{}{1244}, 
+		\hdclindex{1381}{}{1248}, \hdclindex{1410}{}{1277}, 
+		\hdclindex{1419}{}{1286}, \hdclindex{1421}{}{1288}, 
+		\hdclindex{1430}{}{1297}, \hdclindex{1504}{}{1366}, 
+		\hdclindex{1505}{}{1367}, \hdclindex{1509}{}{1371}, 
+		\hdclindex{1544}{}{1406}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&optpic&\_\verb*&hti&\_\verb*&dim&}\pfill 
+		\hdclindex{147}{main}{95}, \hdclindex{1208}{}{1079}, 
+		\hdclindex{1217}{}{1088}, \hdclindex{1237}{}{1108}, 
+		\hdclindex{1255}{}{1126}, \hdclindex{1262}{}{1133}, 
+		\hdclindex{1267}{}{1138}, \hdclindex{1407}{}{1274}, 
+		\hdclindex{1410}{}{1277}, \hdclindex{1419}{}{1286}, 
+		\hdclindex{1540}{}{1402}, \hdclindex{1544}{}{1406}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&optpic&\_\verb*&wd&\_\verb*&dim&}\pfill 
+		\hdclindex{147}{main}{95}, \hdclindex{1188}{}{1059}, 
+		\hdclindex{1206}{}{1077}, \hdclindex{1213}{}{1084}, 
+		\hdclindex{1239}{}{1110}, \hdclindex{1258}{}{1129}, 
+		\hdclindex{1271}{}{1142}, \hdclindex{1279}{}{1150}, 
+		\hdclindex{1292}{}{1163}, \hdclindex{1307}{}{1178}, 
+		\hdclindex{1319}{}{1190}, \hdclindex{1323}{}{1194}, 
+		\hdclindex{1375}{}{1242}, \hdclindex{1393}{}{1260}, 
+		\hdclindex{1405}{}{1272}, \hdclindex{1426}{}{1293}, 
+		\hdclindex{1503}{}{1365}, \hdclindex{1524}{}{1386}, 
+		\hdclindex{1538}{}{1400}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&optrand&\_\verb*&bool&}\pfill 
+		\hdclindex{85}{main}{54}, \hdclindex{258}{}{176}, 
+		\hdclindex{260}{}{178}, \hdclindex{1144}{}{1016}, 
+		\hdclindex{1616}{}{1473}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&optstar&\_\verb*&bool&}\pfill 
+		\hdclindex{87}{main}{55}, \hdclindex{1050}{}{930}, 
+		\hdclindex{1165}{}{1036}, \hdclindex{1792}{}{1643}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&optwd&\_\verb*&dim&}\pfill 
+		\hdclindex{142}{main}{92}, \hdclindex{944}{}{828}, 
+		\hdclindex{947}{}{831}, \hdclindex{952}{}{836}, 
+		\hdclindex{955}{}{839}, \hdclindex{961}{}{845}, 
+		\hdclindex{964}{}{848}, \hdclindex{1181}{}{1052}, 
+		\hdclindex{1182}{}{1053}, \hdclindex{1183}{}{1054}, 
+		\hdclindex{1213}{}{1084}, \hdclindex{1218}{}{1089}, 
+		\hdclindex{1239}{}{1110}, \hdclindex{1263}{}{1134}, 
+		\hdclindex{1271}{}{1142}, \hdclindex{1279}{}{1150}, 
+		\hdclindex{1307}{}{1178}, \hdclindex{1402}{}{1269}, 
+		\hdclindex{1403}{}{1270}, \hdclindex{1404}{}{1271}, 
+		\hdclindex{1405}{}{1272}, \hdclindex{1408}{}{1275}, 
+		\hdclindex{1535}{}{1397}, \hdclindex{1536}{}{1398}, 
+		\hdclindex{1537}{}{1399}, \hdclindex{1538}{}{1400}, 
+		\hdclindex{1541}{}{1403}
+    \subitem {\verbatim@font \verb*&\cho&\_\verb*&optwd&\_\verb*&i&\_\verb*&dim&}\pfill 
+		\hdclindex{142}{main}{92}, \hdclindex{911}{}{798}, 
+		\hdclindex{916}{}{802}, \hdclindex{919}{}{805}, 
+		\hdclindex{947}{}{831}, \hdclindex{948}{}{832}, 
+		\hdclindex{955}{}{839}, \hdclindex{964}{}{848}, 
+		\hdclindex{965}{}{849}, \hdclindex{966}{}{850}
+  \item {\verbatim@font \verb*&\choice&}\pfill \hdclindex{35}{usage}{4}, 
+		\hdclindex{1031}{main}{913}, \hdclindex{1163}{}{1034}, 
+		\hdclindex{1334}{}{1204}, \hdclindex{1336}{}{1206}, 
+		\hdclindex{1353}{}{1221}
+  \item \pkg{choice} commands:\efill 
+ \subitem {\verbatim@font \verb*&\choice&\_\verb*&ans&\_\verb*&order:n&}\pfill 
+		\hdclindex{1132}{main}{1006}, \hdclindex{1159}{}{1031}
+    \subitem {\verbatim@font \verb*&\choice&\_\verb*&ans&\_\verb*&tl&}\pfill 
+		\hdclindex{225}{main}{150}, \hdclindex{1050}{}{930}, 
+		\hdclindex{1159}{}{1031}, \hdclindex{1166}{}{1037}
+    \subitem {\verbatim@font \verb*&\choice&\_\verb*&oldopt&\_\verb*&bool&}\pfill 
+		\hdclindex{89}{main}{56}, \hdclindex{1144}{}{1016}, 
+		\hdclindex{1360}{}{1228}, \hdclindex{1783}{}{1634}
+    \subitem {\verbatim@font \verb*&\choice&\_\verb*&opta&\_\verb*&int&}\pfill 
+		\hdclindex{199}{main}{131}, \hdclindex{1063}{}{942}, 
+		\hdclindex{1065}{}{944}, \hdclindex{1068}{}{947}, 
+		\hdclindex{1075}{}{954}, \hdclindex{1087}{}{966}, 
+		\hdclindex{1116}{}{992}, \hdclindex{1147}{}{1019}
+    \subitem {\verbatim@font \verb*&\choice&\_\verb*&optabcd&\_\verb*&int&}\pfill 
+		\hdclindex{199}{main}{131}, \hdclindex{1085}{}{964}, 
+		\hdclindex{1617}{}{1474}
+    \subitem {\verbatim@font \verb*&\choice&\_\verb*&optb&\_\verb*&int&}\pfill 
+		\hdclindex{199}{main}{131}, \hdclindex{1064}{}{943}, 
+		\hdclindex{1065}{}{944}, \hdclindex{1066}{}{945}, 
+		\hdclindex{1071}{}{950}, \hdclindex{1078}{}{957}, 
+		\hdclindex{1088}{}{967}, \hdclindex{1116}{}{992}, 
+		\hdclindex{1148}{}{1020}
+    \subitem {\verbatim@font \verb*&\choice&\_\verb*&optc&\_\verb*&int&}\pfill 
+		\hdclindex{199}{main}{131}, \hdclindex{1067}{}{946}, 
+		\hdclindex{1068}{}{947}, \hdclindex{1070}{}{949}, 
+		\hdclindex{1071}{}{950}, \hdclindex{1072}{}{951}, 
+		\hdclindex{1081}{}{960}, \hdclindex{1089}{}{968}, 
+		\hdclindex{1116}{}{992}, \hdclindex{1149}{}{1021}
+    \subitem {\verbatim@font \verb*&\choice&\_\verb*&optd&\_\verb*&int&}\pfill 
+		\hdclindex{199}{main}{131}, \hdclindex{1074}{}{953}, 
+		\hdclindex{1075}{}{954}, \hdclindex{1077}{}{956}, 
+		\hdclindex{1078}{}{957}, \hdclindex{1080}{}{959}, 
+		\hdclindex{1081}{}{960}, \hdclindex{1082}{}{961}, 
+		\hdclindex{1090}{}{969}, \hdclindex{1116}{}{992}, 
+		\hdclindex{1150}{}{1022}
+    \subitem {\verbatim@font \verb*&\choice&\_\verb*&option&\_\verb*&int&}\pfill 
+		\hdclindex{206}{}{136}, \hdclindex{1339}{}{1209}, 
+		\hdclindex{1355}{}{1223}, \hdclindex{1357}{}{1225}
+    \subitem {\verbatim@font \verb*&\choice&\_\verb*&option&\_\verb*&it&}\pfill 
+		\hdclindex{205}{main}{136}
+    \subitem {\verbatim@font \verb*&\choice&\_\verb*&option&\_\verb*&set:nnnn&}\pfill 
+		\hdclindex{1141}{main}{1014}, \hdclindex{1167}{}{1038}
+    \subitem {\verbatim@font \verb*&\choice&\_\verb*&option&\_\verb*&set&\_\verb*&i:p&}\pfill 
+		\hdclindex{1037}{main}{918}, \hdclindex{1126}{}{1000}, 
+		\hdclindex{1127}{}{1001}, \hdclindex{1128}{}{1002}, 
+		\hdclindex{1129}{}{1003}, \hdclindex{1153}{}{1025}, 
+		\hdclindex{1154}{}{1026}, \hdclindex{1155}{}{1027}, 
+		\hdclindex{1156}{}{1028}
+    \subitem {\verbatim@font \verb*&\choice&\_\verb*&option&\_\verb*&set&\_\verb*&ii:p&}\pfill 
+		\hdclindex{1121}{main}{996}, \hdclindex{1147}{}{1019}, 
+		\hdclindex{1148}{}{1020}, \hdclindex{1149}{}{1021}, 
+		\hdclindex{1150}{}{1022}
+    \subitem {\verbatim@font \verb*&\choice&\_\verb*&option&\_\verb*&total:p&}\pfill 
+		\hdclindex{1333}{main}{1204}, \hdclindex{1356}{}{1224}
+    \subitem {\verbatim@font \verb*&\choice&\_\verb*&optref&\_\verb*&set:&}\pfill 
+		\hdclindex{1112}{main}{989}, \hdclindex{1158}{}{1030}
+    \subitem {\verbatim@font \verb*&\choice&\_\verb*&optref&\_\verb*&set:nn&}\pfill 
+		\hdclindex{1093}{main}{972}, \hdclindex{1107}{}{984}, 
+		\hdclindex{1108}{}{985}, \hdclindex{1109}{}{986}, 
+		\hdclindex{1110}{}{987}
+    \subitem {\verbatim@font \verb*&\choice&\_\verb*&optref&\_\verb*&set:p&}\pfill 
+		\hdclindex{1104}{main}{982}, \hdclindex{1115}{}{991}, 
+		\hdclindex{1120}{}{995}
+    \subitem {\verbatim@font \verb*&\choice&\_\verb*&randint&\_\verb*&make:&}\pfill 
+		\hdclindex{1060}{main}{940}, \hdclindex{1146}{}{1018}
+    \subitem {\verbatim@font \verb*&\choice&\_\verb*&type:p&}\pfill 
+		\hdclindex{1350}{main}{1219}, \hdclindex{1803}{}{1654}
+    \subitem {\verbatim@font \verb*&\choice&\_\verb*&type&\_\verb*&i:p&}\pfill 
+		\hdclindex{1161}{main}{1033}, \hdclindex{1361}{}{1229}
+    \subitem {\verbatim@font \verb*&\choice&\_\verb*&warning:&}\pfill 
+		\hdclindex{1343}{main}{1213}, \hdclindex{1358}{}{1226}, 
+		\hdclindex{1364}{}{1232}
+  \item {\verbatim@font \verb*&choices&}\pfill \hdclindex{35}{usage}{4}, 
+		\hdclindex{1944}{main}{1786}
+  \item \pkg{coffin} commands:\efill 
+ \subitem {\verbatim@font \verb*&\l&\_\verb*&tmpa&\_\verb*&coffin&}\pfill 
+		\hdclindex{762}{}{658}, \hdclindex{766}{}{662}
+  \item \pkg{color} commands:\efill 
+ \subitem {\verbatim@font \verb*&\color&\_\verb*&group&\_\verb*&begin:&}\pfill 
+		\hdclindex{763}{}{659}, \hdclindex{1346}{}{1215}, 
+		\hdclindex{1786}{}{1637}, \hdclindex{2110}{}{1949}
+    \subitem {\verbatim@font \verb*&\color&\_\verb*&group&\_\verb*&end:&}\pfill 
+		\hdclindex{763}{}{659}, \hdclindex{1348}{}{1217}, 
+		\hdclindex{1788}{}{1639}, \hdclindex{2112}{}{1951}
+    \subitem {\verbatim@font \verb*&\color&\_\verb*&select:n&}\pfill 
+		\hdclindex{763}{}{659}, \hdclindex{1347}{}{1216}, 
+		\hdclindex{1787}{}{1638}, \hdclindex{2111}{}{1950}
+  \item \pkg{cs} commands:\efill 
+ \subitem {\verbatim@font \verb*&\cs&\_\verb*&if&\_\verb*&exist:NTF&}\pfill 
+		\hdclindex{169}{}{109}, \hdclindex{1654}{}{1509}, 
+		\hdclindex{1669}{}{1523}, \hdclindex{1680}{}{1534}, 
+		\hdclindex{1691}{}{1545}, \hdclindex{1703}{}{1557}, 
+		\hdclindex{1715}{}{1569}, \hdclindex{1720}{}{1574}, 
+		\hdclindex{1739}{}{1591}, \hdclindex{1742}{}{1594}, 
+		\hdclindex{1746}{}{1598}, \hdclindex{1749}{}{1601}, 
+		\hdclindex{1756}{}{1608}, \hdclindex{1759}{}{1611}, 
+		\hdclindex{1920}{}{1762}, \hdclindex{1926}{}{1768}, 
+		\hdclindex{2049}{}{1889}, \hdclindex{2059}{}{1899}, 
+		\hdclindex{2074}{}{1914}, \hdclindex{2084}{}{1924}, 
+		\hdclindex{2097}{}{1937}
+    \subitem {\verbatim@font \verb*&\cs&\_\verb*&new:Nn&}\pfill 
+		\hdclindex{232}{usage}{16}, \hdclindex{1061}{}{940}, 
+		\hdclindex{1113}{}{989}, \hdclindex{1344}{}{1213}, 
+		\hdclindex{1479}{}{1342}
+    \subitem {\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}\pfill 
+		\hdclindex{264}{}{181}, \hdclindex{271}{}{188}, 
+		\hdclindex{278}{}{195}, \hdclindex{285}{}{201}, 
+		\hdclindex{300}{}{215}, \hdclindex{337}{}{251}, 
+		\hdclindex{364}{}{277}, \hdclindex{373}{}{285}, 
+		\hdclindex{381}{}{292}, \hdclindex{391}{}{301}, 
+		\hdclindex{397}{}{306}, \hdclindex{419}{}{327}, 
+		\hdclindex{470}{}{377}, \hdclindex{476}{}{382}, 
+		\hdclindex{486}{}{391}, \hdclindex{494}{}{398}, 
+		\hdclindex{510}{}{413}, \hdclindex{600}{}{502}, 
+		\hdclindex{622}{}{523}, \hdclindex{668}{}{568}, 
+		\hdclindex{692}{}{591}, \hdclindex{732}{}{630}, 
+		\hdclindex{774}{}{668}, \hdclindex{779}{}{673}, 
+		\hdclindex{784}{}{678}, \hdclindex{789}{}{683}, 
+		\hdclindex{794}{}{688}, \hdclindex{799}{}{693}, 
+		\hdclindex{804}{}{698}, \hdclindex{829}{}{722}, 
+		\hdclindex{864}{}{756}, \hdclindex{871}{}{763}, 
+		\hdclindex{879}{}{770}, \hdclindex{889}{}{779}, 
+		\hdclindex{898}{}{787}, \hdclindex{906}{}{793}, 
+		\hdclindex{914}{}{800}, \hdclindex{923}{}{808}, 
+		\hdclindex{934}{}{818}, \hdclindex{977}{}{860}, 
+		\hdclindex{1039}{}{919}, \hdclindex{1094}{}{972}, 
+		\hdclindex{1105}{}{982}, \hdclindex{1122}{}{996}, 
+		\hdclindex{1133}{}{1006}, \hdclindex{1142}{}{1014}, 
+		\hdclindex{1162}{}{1033}, \hdclindex{1334}{}{1204}, 
+		\hdclindex{1351}{}{1219}, \hdclindex{1368}{}{1235}, 
+		\hdclindex{1445}{}{1311}, \hdclindex{1458}{}{1323}, 
+		\hdclindex{1476}{}{1340}, \hdclindex{1485}{}{1347}, 
+		\hdclindex{1569}{}{1430}, \hdclindex{1583}{}{1442}, 
+		\hdclindex{1588}{}{1447}, \hdclindex{1602}{}{1460}, 
+		\hdclindex{1605}{}{1462}, \hdclindex{1643}{}{1499}, 
+		\hdclindex{1770}{}{1621}, \hdclindex{1808}{}{1658}, 
+		\hdclindex{1833}{}{1682}, \hdclindex{1849}{}{1697}, 
+		\hdclindex{1865}{}{1712}, \hdclindex{1879}{}{1725}, 
+		\hdclindex{1891}{}{1736}, \hdclindex{2102}{}{1941}
+    \subitem {\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}\pfill 
+		\hdclindex{1269}{}{1140}, \hdclindex{1556}{}{1418}
+    \subitem {\verbatim@font \verb*&\cs&\_\verb*&set:Npn&}\pfill 
+		\hdclindex{1911}{}{1753}, \hdclindex{1935}{}{1777}
+  \item \pkg{ctrl} commands:\efill 
+ \subitem {\verbatim@font \verb*&\ctrl&\_\verb*&end&\_\verb*&bool&}\pfill 
+		\hdclindex{83}{main}{53}, \hdclindex{1868}{}{1715}, 
+		\hdclindex{1869}{}{1716}, \hdclindex{1887}{}{1732}, 
+		\hdclindex{2062}{}{1902}, \hdclindex{2087}{}{1927}
+    \subitem {\verbatim@font \verb*&\ctrl&\_\verb*&end&\_\verb*&tl&}\pfill 
+		\hdclindex{234}{main}{156}, \hdclindex{1871}{}{1718}, 
+		\hdclindex{1874}{}{1721}, \hdclindex{1884}{main}{1730}
+  \item {\verbatim@font \verb*&ctrlwarning.sty&}\pfill 
+		\hdclindex{2151}{main}{1989}
+
+  \indexspace
+{\bfseries\hfil D\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&\def&}\pfill \hdclindex{2098}{}{1938}, 
+		\hdclindex{2165}{}{2002}
+  \item \pkg{dim} commands:\efill 
+ \subitem {\verbatim@font \verb*&\dim&\_\verb*&abs:n&}\pfill 
+		\hdclindex{439}{}{347}
+    \subitem {\verbatim@font \verb*&\dim&\_\verb*&add:Nn&}\pfill 
+		\hdclindex{177}{}{116}, \hdclindex{388}{}{299}, 
+		\hdclindex{499}{}{403}, \hdclindex{502}{}{406}, 
+		\hdclindex{532}{}{435}, \hdclindex{534}{}{437}, 
+		\hdclindex{556}{}{459}, \hdclindex{943}{}{827}, 
+		\hdclindex{959}{}{843}, \hdclindex{960}{}{844}, 
+		\hdclindex{1171}{}{1042}, \hdclindex{1173}{}{1044}, 
+		\hdclindex{1190}{}{1061}, \hdclindex{1195}{}{1066}, 
+		\hdclindex{1239}{}{1110}, \hdclindex{1271}{}{1142}, 
+		\hdclindex{1279}{}{1150}, \hdclindex{1307}{}{1178}, 
+		\hdclindex{1319}{}{1190}, \hdclindex{1377}{}{1244}, 
+		\hdclindex{1381}{}{1248}, \hdclindex{1450}{}{1316}, 
+		\hdclindex{1463}{}{1328}, \hdclindex{1490}{}{1352}, 
+		\hdclindex{1492}{}{1354}, \hdclindex{1505}{}{1367}, 
+		\hdclindex{1509}{}{1371}
+    \subitem {\verbatim@font \verb*&\dim&\_\verb*&compare:nNnTF&}\pfill 
+		\hdclindex{409}{}{318}, \hdclindex{428}{}{336}, 
+		\hdclindex{438}{}{346}, \hdclindex{452}{}{360}, 
+		\hdclindex{726}{}{625}, \hdclindex{944}{}{828}, 
+		\hdclindex{952}{}{836}, \hdclindex{961}{}{845}, 
+		\hdclindex{1001}{}{884}, \hdclindex{1008}{}{891}, 
+		\hdclindex{1015}{}{898}, \hdclindex{1206}{}{1077}, 
+		\hdclindex{1237}{}{1108}, \hdclindex{1258}{}{1129}, 
+		\hdclindex{1266}{}{1137}, \hdclindex{1292}{}{1163}, 
+		\hdclindex{1305}{}{1176}, \hdclindex{1393}{}{1260}, 
+		\hdclindex{1410}{}{1277}, \hdclindex{1420}{}{1287}, 
+		\hdclindex{1524}{}{1386}, \hdclindex{1543}{}{1405}
+    \subitem {\verbatim@font \verb*&\dim&\_\verb*&max:nn&}\pfill 
+		\hdclindex{897}{usage}{31}, \hdclindex{901}{}{790}, 
+		\hdclindex{942}{}{826}
+    \subitem {\verbatim@font \verb*&\dim&\_\verb*&new:N&}\pfill 
+		\hdclindex{126}{}{80}, \hdclindex{128}{}{81}, 
+		\hdclindex{129}{}{82}, \hdclindex{130}{}{83}, 
+		\hdclindex{132}{}{84}, \hdclindex{133}{}{85}, 
+		\hdclindex{135}{}{86}, \hdclindex{138}{}{88}, 
+		\hdclindex{139}{}{89}, \hdclindex{143}{}{92}, 
+		\hdclindex{144}{}{93}, \hdclindex{146}{}{94}, 
+		\hdclindex{148}{}{95}, \hdclindex{149}{}{96}, 
+		\hdclindex{150}{}{97}, \hdclindex{152}{}{98}, 
+		\hdclindex{153}{}{99}, \hdclindex{155}{}{100}, 
+		\hdclindex{157}{}{102}, \hdclindex{160}{}{104}, 
+		\hdclindex{162}{}{105}, \hdclindex{164}{}{106}, 
+		\hdclindex{166}{}{107}, \hdclindex{168}{}{108}, 
+		\hdclindex{173}{}{112}, \hdclindex{174}{}{113}, 
+		\hdclindex{178}{}{117}, \hdclindex{181}{}{119}, 
+		\hdclindex{182}{}{120}, \hdclindex{183}{}{121}, 
+		\hdclindex{184}{}{122}, \hdclindex{2135}{}{1973}, 
+		\hdclindex{2136}{}{1974}
+    \subitem {\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}\pfill 
+		\hdclindex{136}{}{87}, \hdclindex{140}{}{90}, 
+		\hdclindex{141}{}{91}, \hdclindex{156}{}{101}, 
+		\hdclindex{158}{}{103}, \hdclindex{170}{}{110}, 
+		\hdclindex{171}{}{111}, \hdclindex{175}{}{114}, 
+		\hdclindex{176}{}{115}, \hdclindex{179}{}{118}, 
+		\hdclindex{387}{}{298}, \hdclindex{400}{}{309}, 
+		\hdclindex{415}{}{324}, \hdclindex{496}{}{400}, 
+		\hdclindex{497}{}{401}, \hdclindex{505}{}{409}, 
+		\hdclindex{530}{}{433}, \hdclindex{531}{}{434}, 
+		\hdclindex{537}{}{440}, \hdclindex{539}{}{442}, 
+		\hdclindex{555}{}{458}, \hdclindex{561}{}{464}, 
+		\hdclindex{565}{}{468}, \hdclindex{570}{}{473}, 
+		\hdclindex{572}{}{475}, \hdclindex{901}{}{790}, 
+		\hdclindex{936}{}{820}, \hdclindex{939}{}{823}, 
+		\hdclindex{942}{}{826}, \hdclindex{947}{}{831}, 
+		\hdclindex{955}{}{839}, \hdclindex{964}{}{848}, 
+		\hdclindex{1170}{}{1041}, \hdclindex{1172}{}{1043}, 
+		\hdclindex{1181}{}{1052}, \hdclindex{1188}{}{1059}, 
+		\hdclindex{1189}{}{1060}, \hdclindex{1204}{}{1075}, 
+		\hdclindex{1208}{}{1079}, \hdclindex{1227}{}{1098}, 
+		\hdclindex{1244}{}{1115}, \hdclindex{1375}{}{1242}, 
+		\hdclindex{1376}{}{1243}, \hdclindex{1391}{}{1258}, 
+		\hdclindex{1402}{}{1269}, \hdclindex{1449}{}{1315}, 
+		\hdclindex{1462}{}{1327}, \hdclindex{1489}{}{1351}, 
+		\hdclindex{1491}{}{1353}, \hdclindex{1503}{}{1365}, 
+		\hdclindex{1504}{}{1366}, \hdclindex{1522}{}{1384}, 
+		\hdclindex{1535}{}{1397}, \hdclindex{1585}{}{1444}, 
+		\hdclindex{1596}{}{1455}, \hdclindex{1777}{}{1628}, 
+		\hdclindex{1778}{}{1629}, \hdclindex{1815}{}{1665}, 
+		\hdclindex{1816}{}{1666}, \hdclindex{2104}{}{1943}, 
+		\hdclindex{2105}{}{1944}, \hdclindex{2132}{}{1971}, 
+		\hdclindex{2140}{}{1978}, \hdclindex{2141}{}{1979}, 
+		\hdclindex{2143}{}{1981}, \hdclindex{2144}{}{1982}
+    \subitem {\verbatim@font \verb*&\dim&\_\verb*&sub:Nn&}\pfill 
+		\hdclindex{368}{}{281}, \hdclindex{401}{}{310}, 
+		\hdclindex{402}{}{311}, \hdclindex{403}{}{312}, 
+		\hdclindex{411}{}{320}, \hdclindex{431}{}{339}, 
+		\hdclindex{436}{}{344}, \hdclindex{506}{}{410}, 
+		\hdclindex{507}{}{411}, \hdclindex{538}{}{441}, 
+		\hdclindex{540}{}{443}, \hdclindex{562}{}{465}, 
+		\hdclindex{563}{}{466}, \hdclindex{564}{}{467}, 
+		\hdclindex{571}{}{474}, \hdclindex{573}{}{476}, 
+		\hdclindex{702}{}{601}, \hdclindex{948}{}{832}, 
+		\hdclindex{965}{}{849}, \hdclindex{966}{}{850}, 
+		\hdclindex{1182}{}{1053}, \hdclindex{1183}{}{1054}, 
+		\hdclindex{1205}{}{1076}, \hdclindex{1213}{}{1084}, 
+		\hdclindex{1255}{}{1126}, \hdclindex{1392}{}{1259}, 
+		\hdclindex{1403}{}{1270}, \hdclindex{1404}{}{1271}, 
+		\hdclindex{1405}{}{1272}, \hdclindex{1419}{}{1286}, 
+		\hdclindex{1468}{}{1333}, \hdclindex{1523}{}{1385}, 
+		\hdclindex{1536}{}{1398}, \hdclindex{1537}{}{1399}, 
+		\hdclindex{1538}{}{1400}, \hdclindex{1779}{}{1630}, 
+		\hdclindex{1817}{}{1667}
+    \subitem {\verbatim@font \verb*&\dim&\_\verb*&use:N&}\pfill 
+		\hdclindex{473}{}{380}
+    \subitem {\verbatim@font \verb*&\dim&\_\verb*&while&\_\verb*&do:nNnn&}\pfill 
+		\hdclindex{366}{}{279}, \hdclindex{432}{}{340}, 
+		\hdclindex{1465}{}{1330}
+  \item \pkg{draw} commands:\efill 
+ \subitem {\verbatim@font \verb*&\draw&\_\verb*&begin:&}\pfill 
+		\hdclindex{756}{}{652}
+    \subitem {\verbatim@font \verb*&\draw&\_\verb*&coffin&\_\verb*&use:Nnn&}\pfill 
+		\hdclindex{766}{}{662}
+    \subitem {\verbatim@font \verb*&\draw&\_\verb*&color:n&}\pfill 
+		\hdclindex{757}{}{653}
+    \subitem {\verbatim@font \verb*&\draw&\_\verb*&end:&}\pfill 
+		\hdclindex{768}{}{664}
+    \subitem {\verbatim@font \verb*&\draw&\_\verb*&linewidth:n&}\pfill 
+		\hdclindex{758}{}{654}
+    \subitem {\verbatim@font \verb*&\draw&\_\verb*&path&\_\verb*&rectangle:nn&}\pfill 
+		\hdclindex{759}{}{655}
+    \subitem {\verbatim@font \verb*&\draw&\_\verb*&path&\_\verb*&use&\_\verb*&clear:n&}\pfill 
+		\hdclindex{767}{}{663}
+    \subitem {\verbatim@font \verb*&\draw&\_\verb*&transform&\_\verb*&xshift:n&}\pfill 
+		\hdclindex{764}{}{660}
+    \subitem {\verbatim@font \verb*&\draw&\_\verb*&transform&\_\verb*&yshift:n&}\pfill 
+		\hdclindex{765}{}{661}
+
+  \indexspace
+{\bfseries\hfil E\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&\end&}\pfill \hdclindex{234}{usage}{17}, 
+		\hdclindex{1884}{usage}{49}, \hdclindex{278}{}{195}, 
+		\hdclindex{281}{}{198}, \hdclindex{349}{}{263}, 
+		\hdclindex{351}{}{265}, \hdclindex{829}{}{722}, 
+		\hdclindex{836}{}{729}, \hdclindex{844}{}{737}, 
+		\hdclindex{852}{}{745}, \hdclindex{857}{}{750}, 
+		\hdclindex{1891}{}{1736}, \hdclindex{1894}{}{1739}, 
+		\hdclindex{1895}{}{1740}, \hdclindex{1956}{}{1797}, 
+		\hdclindex{1969}{}{1810}, \hdclindex{1982}{}{1823}, 
+		\hdclindex{1994}{}{1835}, \hdclindex{2006}{}{1847}, 
+		\hdclindex{2018}{}{1859}, \hdclindex{2030}{}{1871}, 
+		\hdclindex{2042}{}{1883}, \hdclindex{2068}{}{1908}, 
+		\hdclindex{2093}{}{1933}
+  \item {\verbatim@font \verb*&\everypar&}\pfill 
+		\hdclindex{1730}{}{1583}, \hdclindex{1951}{}{1792}, 
+		\hdclindex{1964}{}{1805}, \hdclindex{1976}{}{1817}, 
+		\hdclindex{1989}{}{1830}, \hdclindex{2001}{}{1842}, 
+		\hdclindex{2013}{}{1854}, \hdclindex{2025}{}{1866}, 
+		\hdclindex{2037}{}{1878}, \hdclindex{2055}{}{1895}, 
+		\hdclindex{2061}{}{1901}, \hdclindex{2080}{}{1920}, 
+		\hdclindex{2086}{}{1926}
+  \item \pkg{everypar} commands:\efill 
+ \subitem {\verbatim@font \verb*&\everypar&\_\verb*&blank:p&}\pfill 
+		\hdclindex{1730}{}{1583}, \hdclindex{1807}{main}{1658}, 
+		\hdclindex{1976}{}{1817}, \hdclindex{1989}{}{1830}
+    \subitem {\verbatim@font \verb*&\everypar&\_\verb*&calculate:p&}\pfill 
+		\hdclindex{1848}{main}{1697}, \hdclindex{1871}{}{1718}, 
+		\hdclindex{1874}{}{1721}, \hdclindex{1875}{}{1722}, 
+		\hdclindex{1881}{}{1727}, \hdclindex{2025}{}{1866}, 
+		\hdclindex{2037}{}{1878}
+    \subitem {\verbatim@font \verb*&\everypar&\_\verb*&choice:p&}\pfill 
+		\hdclindex{1769}{main}{1621}, \hdclindex{1951}{}{1792}, 
+		\hdclindex{1964}{}{1805}
+    \subitem {\verbatim@font \verb*&\everypar&\_\verb*&judge:p&}\pfill 
+		\hdclindex{1832}{main}{1682}, \hdclindex{2001}{}{1842}, 
+		\hdclindex{2013}{}{1854}
+    \subitem {\verbatim@font \verb*&\everypar&\_\verb*&proof:p&}\pfill 
+		\hdclindex{1878}{main}{1725}
+    \subitem {\verbatim@font \verb*&\everypar&\_\verb*&proofs:p&}\pfill 
+		\hdclindex{1864}{main}{1712}, \hdclindex{2055}{}{1895}, 
+		\hdclindex{2080}{}{1920}
+  \item \pkg{example} commands:\efill 
+ \subitem {\verbatim@font \verb*&\example&\_\verb*&number&\_\verb*&int&}\pfill 
+		\hdclindex{196}{main}{129}, \hdclindex{1674}{}{1528}, 
+		\hdclindex{1685}{}{1539}, \hdclindex{1917}{}{1759}, 
+		\hdclindex{1940}{}{1782}
+  \item \pkg{exp} commands:\efill 
+ \subitem {\verbatim@font \verb*&\exp&\_\verb*&args:NNx&}\pfill 
+		\hdclindex{473}{}{380}, \hdclindex{490}{}{395}, 
+		\hdclindex{1085}{}{964}
+    \subitem {\verbatim@font \verb*&\exp&\_\verb*&args:No&}\pfill 
+		\hdclindex{421}{}{329}
+    \subitem {\verbatim@font \verb*&\exp&\_\verb*&args:Nx&}\pfill 
+		\hdclindex{1098}{}{976}, \hdclindex{1099}{}{977}, 
+		\hdclindex{1100}{}{978}, \hdclindex{1101}{}{979}, 
+		\hdclindex{1159}{}{1031}, \hdclindex{1617}{}{1474}
+    \subitem {\verbatim@font \verb*&\exp&\_\verb*&not:N&}\pfill 
+		\hdclindex{1647}{}{1503}
+
+  \indexspace
+{\bfseries\hfil F\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&\figurename&}\pfill 
+		\hdclindex{517}{}{420}, \hdclindex{525}{}{428}
+  \item \pkg{file} commands:\efill 
+ \subitem {\verbatim@font \verb*&\file&\_\verb*&if&\_\verb*&exist:nTF&}\pfill 
+		\hdclindex{1754}{}{1606}
+  \item \pkg{fmt} commands:\efill 
+ \subitem {\verbatim@font \verb*&\fmt&\_\verb*&pic&\_\verb*&hbox&}\pfill 
+		\hdclindex{112}{main}{69}
+    \subitem {\verbatim@font \verb*&\fmt&\_\verb*&pic&\_\verb*&r&\_\verb*&hbox&}\pfill 
+		\hdclindex{112}{main}{69}
+    \subitem {\verbatim@font \verb*&\fmt&\_\verb*&pic&\_\verb*&r&\_\verb*&vbox&}\pfill 
+		\hdclindex{112}{main}{69}
+    \subitem {\verbatim@font \verb*&\fmt&\_\verb*&pic&\_\verb*&t&\_\verb*&vbox&}\pfill 
+		\hdclindex{112}{main}{69}, \hdclindex{536}{}{439}, 
+		\hdclindex{540}{}{443}, \hdclindex{546}{}{449}
+    \subitem {\verbatim@font \verb*&\fmt&\_\verb*&pic&\_\verb*&t&\_\verb*&xdim&}\pfill 
+		\hdclindex{180}{main}{119}, \hdclindex{539}{}{442}, 
+		\hdclindex{540}{}{443}, \hdclindex{546}{}{449}
+    \subitem {\verbatim@font \verb*&\fmt&\_\verb*&pic&\_\verb*&t&\_\verb*&ydim&}\pfill 
+		\hdclindex{180}{main}{119}, \hdclindex{537}{}{440}, 
+		\hdclindex{538}{}{441}
+    \subitem {\verbatim@font \verb*&\fmt&\_\verb*&pic&\_\verb*&vbox&}\pfill 
+		\hdclindex{112}{main}{69}, \hdclindex{529}{}{432}, 
+		\hdclindex{530}{}{433}, \hdclindex{531}{}{434}, 
+		\hdclindex{532}{}{435}, \hdclindex{539}{}{442}, 
+		\hdclindex{545}{}{448}, \hdclindex{551}{}{454}
+    \subitem {\verbatim@font \verb*&\fmt&\_\verb*&picture&\_\verb*&box&}\pfill 
+		\hdclindex{112}{main}{69}, \hdclindex{543}{}{446}, 
+		\hdclindex{550}{}{453}, \hdclindex{573}{}{476}, 
+		\hdclindex{581}{}{484}, \hdclindex{585}{}{488}
+    \subitem {\verbatim@font \verb*&\fmt&\_\verb*&picture&\_\verb*&hbox&}\pfill 
+		\hdclindex{112}{main}{69}, \hdclindex{589}{}{492}, 
+		\hdclindex{593}{}{496}, \hdclindex{595}{}{498}, 
+		\hdclindex{597}{}{500}
+    \subitem {\verbatim@font \verb*&\fmt&\_\verb*&picture&\_\verb*&vbox&}\pfill 
+		\hdclindex{112}{main}{69}, \hdclindex{580}{}{483}, 
+		\hdclindex{584}{}{487}, \hdclindex{589}{}{492}, 
+		\hdclindex{592}{}{495}, \hdclindex{594}{}{497}
+    \subitem {\verbatim@font \verb*&\fmt&\_\verb*&picture&\_\verb*&xdim&}\pfill 
+		\hdclindex{180}{main}{119}, \hdclindex{555}{}{458}, 
+		\hdclindex{556}{}{459}, \hdclindex{565}{}{468}, 
+		\hdclindex{572}{}{475}, \hdclindex{573}{}{476}, 
+		\hdclindex{581}{}{484}, \hdclindex{585}{}{488}
+    \subitem {\verbatim@font \verb*&\fmt&\_\verb*&picture&\_\verb*&ydim&}\pfill 
+		\hdclindex{180}{main}{119}
+  \item \pkg{fontwarning} commands:\efill 
+ \subitem {\verbatim@font \verb*&\fontwarning&\_\verb*&switch&\_\verb*&bool&}\pfill 
+		\hdclindex{2152}{}{1989}, \hdclindex{2157}{}{1994}, 
+		\hdclindex{2159}{}{1996}, \hdclindex{2161}{}{1998}, 
+		\hdclindex{2164}{}{2001}
+
+  \indexspace
+{\bfseries\hfil G\hfil}\nopagebreak
+
+  \item \pkg{get} commands:\efill 
+ \subitem {\verbatim@font \verb*&\get&\_\verb*&par&\_\verb*&ht:nnn&}\pfill 
+		\hdclindex{43}{usage}{9}, \hdclindex{380}{main}{292}, 
+		\hdclindex{394}{}{304}, \hdclindex{1216}{}{1087}, 
+		\hdclindex{1261}{}{1132}, \hdclindex{1406}{}{1273}, 
+		\hdclindex{1539}{}{1401}
+    \subitem {\verbatim@font \verb*&\get&\_\verb*&par&\_\verb*&row:nnn&}\pfill 
+		\hdclindex{42}{usage}{9}, \hdclindex{372}{main}{285}, 
+		\hdclindex{393}{}{303}, \hdclindex{639}{}{540}, 
+		\hdclindex{673}{}{573}, \hdclindex{736}{}{634}
+    \subitem {\verbatim@font \verb*&\get&\_\verb*&par&\_\verb*&rowht:nnnn&}\pfill 
+		\hdclindex{44}{usage}{9}, \hdclindex{390}{main}{301}, 
+		\hdclindex{404}{}{313}, \hdclindex{423}{}{331}, 
+		\hdclindex{447}{}{355}, \hdclindex{697}{}{596}
+    \subitem {\verbatim@font \verb*&\get&\_\verb*&rec&\_\verb*&linewd&\_\verb*&dim&}\pfill 
+		\hdclindex{163}{main}{106}, \hdclindex{400}{}{309}, 
+		\hdclindex{401}{}{310}, \hdclindex{402}{}{311}, 
+		\hdclindex{403}{}{312}, \hdclindex{407}{}{316}, 
+		\hdclindex{426}{}{334}, \hdclindex{450}{}{358}
+
+  \indexspace
+{\bfseries\hfil H\hfil}\nopagebreak
+
+  \item \pkg{hbox} commands:\efill 
+ \subitem {\verbatim@font \verb*&\hbox:n&}\pfill 
+		\hdclindex{529}{}{432}, \hdclindex{536}{}{439}, 
+		\hdclindex{881}{}{772}, \hdclindex{891}{}{781}
+    \subitem {\verbatim@font \verb*&\hbox&\_\verb*&set:Nn&}\pfill 
+		\hdclindex{376}{}{288}, \hdclindex{384}{}{295}, 
+		\hdclindex{589}{}{492}, \hdclindex{593}{}{496}, 
+		\hdclindex{884}{}{775}, \hdclindex{893}{}{783}, 
+		\hdclindex{900}{}{789}, \hdclindex{949}{}{833}, 
+		\hdclindex{956}{}{840}, \hdclindex{967}{}{851}, 
+		\hdclindex{971}{}{855}, \hdclindex{1000}{}{883}, 
+		\hdclindex{1169}{}{1040}, \hdclindex{1187}{}{1058}, 
+		\hdclindex{1374}{}{1241}, \hdclindex{1448}{}{1314}, 
+		\hdclindex{1461}{}{1326}, \hdclindex{1488}{}{1350}, 
+		\hdclindex{1502}{}{1364}, \hdclindex{1511}{}{1373}
+    \subitem {\verbatim@font \verb*&\hbox&\_\verb*&unpack:N&}\pfill 
+		\hdclindex{1234}{}{1105}, \hdclindex{1252}{}{1123}, 
+		\hdclindex{1264}{}{1135}, \hdclindex{1270}{}{1141}, 
+		\hdclindex{1288}{}{1159}, \hdclindex{1302}{}{1173}, 
+		\hdclindex{1316}{}{1187}, \hdclindex{1326}{}{1197}, 
+		\hdclindex{1519}{}{1381}, \hdclindex{1532}{}{1394}, 
+		\hdclindex{1553}{}{1415}, \hdclindex{1557}{}{1419}
+  \item \pkg{hcoffin} commands:\efill 
+ \subitem {\verbatim@font \verb*&\hcoffin&\_\verb*&set:Nn&}\pfill 
+		\hdclindex{762}{}{658}
+  \item {\verbatim@font \verb*&\heiti&}\pfill \hdclindex{1579}{}{1439}, 
+		\hdclindex{1580}{}{1440}, \hdclindex{1581}{}{1441}, 
+		\hdclindex{1919}{}{1761}
+  \item {\verbatim@font \verb*&\hfill&}\pfill \hdclindex{908}{}{795}, 
+		\hdclindex{909}{}{796}, \hdclindex{910}{}{797}, 
+		\hdclindex{1179}{}{1050}, \hdclindex{1477}{}{1341}, 
+		\hdclindex{2050}{}{1890}, \hdclindex{2075}{}{1915}
+  \item {\verbatim@font \verb*&\hspace&}\pfill \hdclindex{904}{}{792}, 
+		\hdclindex{911}{}{798}, \hdclindex{1464}{}{1329}, 
+		\hdclindex{1470}{}{1335}, \hdclindex{1473}{}{1338}, 
+		\hdclindex{1576}{}{1436}, \hdclindex{1577}{}{1437}, 
+		\hdclindex{1578}{}{1438}
+
+  \indexspace
+{\bfseries\hfil I\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&\IfNoValueTF&}\pfill 
+		\hdclindex{1913}{}{1755}, \hdclindex{1937}{}{1779}, 
+		\hdclindex{2139}{}{1977}, \hdclindex{2142}{}{1980}, 
+		\hdclindex{2145}{}{1983}
+  \item {\verbatim@font \verb*&\includegraphics&}\pfill 
+		\hdclindex{774}{}{668}, \hdclindex{777}{}{671}, 
+		\hdclindex{779}{}{673}, \hdclindex{782}{}{676}, 
+		\hdclindex{784}{}{678}, \hdclindex{787}{}{681}, 
+		\hdclindex{789}{}{683}, \hdclindex{792}{}{686}, 
+		\hdclindex{794}{}{688}, \hdclindex{797}{}{691}, 
+		\hdclindex{799}{}{693}, \hdclindex{802}{}{696}, 
+		\hdclindex{808}{}{702}, \hdclindex{810}{}{704}, 
+		\hdclindex{819}{}{713}, \hdclindex{985}{}{868}
+  \item \pkg{ind} commands:\efill 
+ \subitem {\verbatim@font \verb*&\ind&\_\verb*&hat&\_\verb*&box&}\pfill 
+		\hdclindex{121}{main}{77}, \hdclindex{883}{}{774}, 
+		\hdclindex{884}{}{775}, \hdclindex{892}{}{782}, 
+		\hdclindex{893}{}{783}
+    \subitem {\verbatim@font \verb*&\ind&\_\verb*&hat&\_\verb*&hbox&}\pfill 
+		\hdclindex{121}{main}{77}, \hdclindex{884}{}{775}, 
+		\hdclindex{885}{}{776}, \hdclindex{886}{}{777}, 
+		\hdclindex{893}{}{783}, \hdclindex{894}{}{784}, 
+		\hdclindex{895}{}{785}
+    \subitem {\verbatim@font \verb*&\ind&\_\verb*&hat&\_\verb*&vbox&}\pfill 
+		\hdclindex{121}{main}{77}, \hdclindex{881}{}{772}, 
+		\hdclindex{882}{}{773}, \hdclindex{883}{}{774}, 
+		\hdclindex{891}{}{781}, \hdclindex{892}{}{782}
+  \item {\verbatim@font \verb*&\input&}\pfill \hdclindex{1763}{}{1615}
+  \item {\verbatim@font \verb*&install.sh&}\pfill 
+		\hdclindex{1}{main}{1}
+  \item \pkg{int} commands:\efill 
+ \subitem {\verbatim@font \verb*&\int&\_\verb*&add:Nn&}\pfill 
+		\hdclindex{369}{}{282}, \hdclindex{440}{}{348}, 
+		\hdclindex{441}{}{349}, \hdclindex{488}{}{393}, 
+		\hdclindex{676}{}{576}, \hdclindex{707}{}{606}, 
+		\hdclindex{1339}{}{1209}, \hdclindex{1900}{}{1744}
+    \subitem {\verbatim@font \verb*&\int&\_\verb*&case:nn&}\pfill 
+		\hdclindex{1096}{}{974}, \hdclindex{1124}{}{998}
+    \subitem {\verbatim@font \verb*&\int&\_\verb*&compare:nNnTF&}\pfill 
+		\hdclindex{1357}{}{1225}, \hdclindex{1901}{}{1745}
+    \subitem {\verbatim@font \verb*&\int&\_\verb*&do&\_\verb*&while:nNnn&}\pfill 
+		\hdclindex{1065}{}{944}, \hdclindex{1068}{}{947}, 
+		\hdclindex{1071}{}{950}, \hdclindex{1075}{}{954}, 
+		\hdclindex{1078}{}{957}, \hdclindex{1081}{}{960}
+    \subitem {\verbatim@font \verb*&\int&\_\verb*&gadd:Nn&}\pfill 
+		\hdclindex{516}{}{419}, \hdclindex{521}{}{424}, 
+		\hdclindex{1168}{}{1039}, \hdclindex{1447}{}{1313}, 
+		\hdclindex{1487}{}{1349}
+    \subitem {\verbatim@font \verb*&\int&\_\verb*&gset:Nn&}\pfill 
+		\hdclindex{377}{}{289}, \hdclindex{1916}{}{1758}, 
+		\hdclindex{1917}{}{1759}, \hdclindex{1940}{}{1782}, 
+		\hdclindex{1941}{}{1783}
+    \subitem {\verbatim@font \verb*&\int&\_\verb*&gzero:N&}\pfill 
+		\hdclindex{1674}{}{1528}, \hdclindex{1685}{}{1539}
+    \subitem {\verbatim@font \verb*&\int&\_\verb*&new:N&}\pfill 
+		\hdclindex{186}{}{123}, \hdclindex{188}{}{124}, 
+		\hdclindex{190}{}{125}, \hdclindex{192}{}{126}, 
+		\hdclindex{193}{}{127}, \hdclindex{195}{}{128}, 
+		\hdclindex{197}{}{129}, \hdclindex{198}{}{130}, 
+		\hdclindex{200}{}{131}, \hdclindex{201}{}{132}, 
+		\hdclindex{202}{}{133}, \hdclindex{203}{}{134}, 
+		\hdclindex{204}{}{135}, \hdclindex{206}{}{136}
+    \subitem {\verbatim@font \verb*&\int&\_\verb*&rand:n&}\pfill 
+		\hdclindex{1063}{}{942}, \hdclindex{1064}{}{943}, 
+		\hdclindex{1066}{}{945}, \hdclindex{1067}{}{946}, 
+		\hdclindex{1070}{}{949}, \hdclindex{1072}{}{951}, 
+		\hdclindex{1074}{}{953}, \hdclindex{1077}{}{956}, 
+		\hdclindex{1080}{}{959}, \hdclindex{1082}{}{961}
+    \subitem {\verbatim@font \verb*&\int&\_\verb*&set:Nn&}\pfill 
+		\hdclindex{375}{}{287}, \hdclindex{378}{}{290}, 
+		\hdclindex{383}{}{294}, \hdclindex{386}{}{297}, 
+		\hdclindex{628}{}{529}, \hdclindex{646}{}{547}, 
+		\hdclindex{706}{}{605}, \hdclindex{1063}{}{942}, 
+		\hdclindex{1064}{}{943}, \hdclindex{1066}{}{945}, 
+		\hdclindex{1067}{}{946}, \hdclindex{1070}{}{949}, 
+		\hdclindex{1072}{}{951}, \hdclindex{1074}{}{953}, 
+		\hdclindex{1077}{}{956}, \hdclindex{1080}{}{959}, 
+		\hdclindex{1082}{}{961}, \hdclindex{1085}{}{964}, 
+		\hdclindex{1355}{}{1223}
+    \subitem {\verbatim@font \verb*&\int&\_\verb*&sub:Nn&}\pfill 
+		\hdclindex{435}{}{343}, \hdclindex{480}{}{386}, 
+		\hdclindex{491}{}{396}, \hdclindex{647}{}{548}
+    \subitem {\verbatim@font \verb*&\int&\_\verb*&use:N&}\pfill 
+		\hdclindex{375}{}{287}, \hdclindex{377}{}{289}, 
+		\hdclindex{378}{}{290}, \hdclindex{383}{}{294}, 
+		\hdclindex{386}{}{297}, \hdclindex{490}{}{395}, 
+		\hdclindex{628}{}{529}, \hdclindex{646}{}{547}, 
+		\hdclindex{706}{}{605}, \hdclindex{707}{}{606}, 
+		\hdclindex{1004}{}{887}, \hdclindex{1011}{}{894}, 
+		\hdclindex{1018}{}{901}, \hdclindex{1029}{}{911}, 
+		\hdclindex{1087}{}{966}, \hdclindex{1088}{}{967}, 
+		\hdclindex{1089}{}{968}, \hdclindex{1090}{}{969}, 
+		\hdclindex{1482}{}{1345}, \hdclindex{1612}{}{1469}, 
+		\hdclindex{1617}{}{1474}, \hdclindex{1923}{}{1765}, 
+		\hdclindex{1929}{}{1771}
+    \subitem {\verbatim@font \verb*&\int&\_\verb*&while&\_\verb*&do:nNnn&}\pfill 
+		\hdclindex{478}{}{384}
+    \subitem {\verbatim@font \verb*&\int&\_\verb*&zero:N&}\pfill 
+		\hdclindex{1493}{}{1355}, \hdclindex{1675}{}{1529}, 
+		\hdclindex{1686}{}{1540}, \hdclindex{1702}{}{1556}, 
+		\hdclindex{1740}{}{1592}, \hdclindex{1743}{}{1595}
+  \item \pkg{iow} commands:\efill 
+ \subitem {\verbatim@font \verb*&\iow&\_\verb*&close:N&}\pfill 
+		\hdclindex{1753}{}{1605}
+    \subitem {\verbatim@font \verb*&\iow&\_\verb*&new:N&}\pfill 
+		\hdclindex{244}{}{163}
+    \subitem {\verbatim@font \verb*&\iow&\_\verb*&open:Nn&}\pfill 
+		\hdclindex{251}{}{169}
+    \subitem {\verbatim@font \verb*&\iow&\_\verb*&shipout:Nn&}\pfill 
+		\hdclindex{1603}{}{1461}, \hdclindex{1611}{}{1468}, 
+		\hdclindex{1615}{}{1472}, \hdclindex{1620}{}{1477}, 
+		\hdclindex{1621}{}{1478}, \hdclindex{1626}{}{1483}, 
+		\hdclindex{1627}{}{1484}, \hdclindex{1632}{}{1489}, 
+		\hdclindex{1633}{}{1490}, \hdclindex{1634}{}{1491}, 
+		\hdclindex{1647}{}{1503}, \hdclindex{1648}{}{1504}
+  \item {\verbatim@font \verb*&\item&}\pfill \hdclindex{38}{usage}{5}, 
+		\hdclindex{1478}{usage}{42}
+
+  \indexspace
+{\bfseries\hfil J\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&jisuan&}\pfill \hdclindex{38}{usage}{5}, 
+		\hdclindex{1944}{main}{1786}
+  \item {\verbatim@font \verb*&\jobname&}\pfill \hdclindex{0}{usage}{2}, 
+		\hdclindex{251}{}{169}, \hdclindex{1754}{}{1606}, 
+		\hdclindex{1763}{}{1615}
+  \item \pkg{judge} commands:\efill 
+ \subitem {\verbatim@font \verb*&\judge&\_\verb*&type:p&}\pfill 
+		\hdclindex{1475}{main}{1340}, \hdclindex{1844}{}{1693}
+  \item {\verbatim@font \verb*&judgements&}\pfill 
+		\hdclindex{37}{usage}{5}, \hdclindex{1944}{main}{1786}
+
+  \indexspace
+{\bfseries\hfil K\hfil}\nopagebreak
+
+  \item \pkg{keys} commands:\efill 
+ \subitem {\verbatim@font \verb*&\keys&\_\verb*&define:nn&}\pfill 
+		\hdclindex{246}{}{164}, \hdclindex{2153}{}{1990}
+
+  \indexspace
+{\bfseries\hfil L\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&l3-too-old&}\pfill 
+		\hdclindex{57}{main}{35}
+  \item {\verbatim@font \verb*&\Large&}\pfill \hdclindex{1750}{}{1602}, 
+		\hdclindex{1751}{}{1603}
+  \item \pkg{letter} commands:\efill 
+ \subitem {\verbatim@font \verb*&\letter&\_\verb*&ht&\_\verb*&dim&}\pfill 
+		\hdclindex{2135}{}{1973}, \hdclindex{2140}{}{1978}, 
+		\hdclindex{2141}{}{1979}, \hdclindex{2146}{}{1984}, 
+		\hdclindex{2147}{}{1985}
+    \subitem {\verbatim@font \verb*&\letter&\_\verb*&ltskip&\_\verb*&dim&}\pfill 
+		\hdclindex{2136}{}{1974}, \hdclindex{2143}{}{1981}, 
+		\hdclindex{2144}{}{1982}, \hdclindex{2146}{}{1984}, 
+		\hdclindex{2147}{}{1985}
+    \subitem {\verbatim@font \verb*&\letter&\_\verb*&sink:nnnnp&}\pfill 
+		\hdclindex{2101}{main}{1941}, \hdclindex{2146}{}{1984}, 
+		\hdclindex{2147}{}{1985}
+  \item {\verbatim@font \verb*&\lettersink&}\pfill 
+		\hdclindex{39}{usage}{6}, \hdclindex{40}{usage}{6}, 
+		\hdclindex{2134}{main}{1973}
+  \item {\verbatim@font \verb*&\linewidth&}\pfill 
+		\hdclindex{142}{usage}{14}, \hdclindex{400}{}{309}, 
+		\hdclindex{505}{}{409}, \hdclindex{561}{}{464}, 
+		\hdclindex{570}{}{473}, \hdclindex{1008}{}{891}, 
+		\hdclindex{1015}{}{898}, \hdclindex{1181}{}{1052}, 
+		\hdclindex{1204}{}{1075}, \hdclindex{1391}{}{1258}, 
+		\hdclindex{1402}{}{1269}, \hdclindex{1522}{}{1384}, 
+		\hdclindex{1535}{}{1397}, \hdclindex{1778}{}{1629}, 
+		\hdclindex{1816}{}{1666}
+
+  \indexspace
+{\bfseries\hfil M\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&\makeanswer&}\pfill 
+		\hdclindex{34}{usage}{3}, \hdclindex{1733}{main}{1586}
+  \item {\verbatim@font \verb*&\makebox&}\pfill \hdclindex{597}{}{500}, 
+		\hdclindex{886}{}{777}, \hdclindex{895}{}{785}, 
+		\hdclindex{916}{}{802}, \hdclindex{919}{}{805}, 
+		\hdclindex{1576}{}{1436}, \hdclindex{1577}{}{1437}, 
+		\hdclindex{1578}{}{1438}
+  \item {\verbatim@font \verb*&\mbox&}\pfill \hdclindex{1179}{}{1050}, 
+		\hdclindex{1477}{}{1341}, \hdclindex{2098}{}{1938}
+  \item \pkg{msg} commands:\efill 
+ \subitem {\verbatim@font \verb*&\msg&\_\verb*&error:nnn&}\pfill 
+		\hdclindex{66}{}{43}, \hdclindex{68}{}{45}
+    \subitem {\verbatim@font \verb*&\msg&\_\verb*&new:nnn&}\pfill 
+		\hdclindex{771}{}{666}
+    \subitem {\verbatim@font \verb*&\msg&\_\verb*&new:nnnn&}\pfill 
+		\hdclindex{58}{}{35}
+    \subitem {\verbatim@font \verb*&\msg&\_\verb*&warning:nnnn&}\pfill 
+		\hdclindex{1003}{}{886}, \hdclindex{1010}{}{893}, 
+		\hdclindex{1017}{}{900}
+
+  \indexspace
+{\bfseries\hfil N\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&\NewDocumentCommand&}\pfill 
+		\hdclindex{1032}{}{913}, \hdclindex{1033}{}{914}, 
+		\hdclindex{1034}{}{915}, \hdclindex{1035}{}{916}, 
+		\hdclindex{1036}{}{917}, \hdclindex{1120}{}{995}, 
+		\hdclindex{1734}{}{1586}, \hdclindex{1898}{}{1742}, 
+		\hdclindex{1908}{}{1751}, \hdclindex{2137}{}{1975}
+  \item {\verbatim@font \verb*&\NewDocumentEnvironment&}\pfill 
+		\hdclindex{1727}{}{1580}, \hdclindex{1945}{}{1786}, 
+		\hdclindex{1958}{}{1799}, \hdclindex{1971}{}{1812}, 
+		\hdclindex{1984}{}{1825}, \hdclindex{1996}{}{1837}, 
+		\hdclindex{2008}{}{1849}, \hdclindex{2020}{}{1861}, 
+		\hdclindex{2032}{}{1873}, \hdclindex{2045}{}{1885}, 
+		\hdclindex{2070}{}{1910}
+  \item {\verbatim@font \verb*&\newline&}\pfill \hdclindex{688}{}{588}, 
+		\hdclindex{724}{}{623}, \hdclindex{918}{}{804}, 
+		\hdclindex{926}{}{811}, \hdclindex{928}{}{813}, 
+		\hdclindex{930}{}{815}, \hdclindex{1233}{}{1104}, 
+		\hdclindex{1251}{}{1122}, \hdclindex{1287}{}{1158}, 
+		\hdclindex{1301}{}{1172}, \hdclindex{1315}{}{1186}, 
+		\hdclindex{1325}{}{1196}, \hdclindex{1518}{}{1380}, 
+		\hdclindex{1531}{}{1393}, \hdclindex{1552}{}{1414}, 
+		\hdclindex{1904}{}{1748}
+  \item {\verbatim@font \verb*&\newpage&}\pfill 
+		\hdclindex{1738}{}{1590}
+
+  \indexspace
+{\bfseries\hfil P\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&panduan&}\pfill \hdclindex{37}{usage}{5}, 
+		\hdclindex{1944}{main}{1786}
+  \item {\verbatim@font \verb*&\par&}\pfill \hdclindex{377}{}{289}, 
+		\hdclindex{1351}{}{1219}, \hdclindex{1365}{}{1233}, 
+		\hdclindex{1368}{}{1235}, \hdclindex{1442}{}{1309}, 
+		\hdclindex{1445}{}{1311}, \hdclindex{1455}{}{1321}, 
+		\hdclindex{1476}{}{1340}, \hdclindex{1477}{}{1341}, 
+		\hdclindex{1485}{}{1347}, \hdclindex{1566}{}{1428}, 
+		\hdclindex{1569}{}{1430}, \hdclindex{1572}{}{1433}, 
+		\hdclindex{1573}{}{1434}, \hdclindex{1583}{}{1442}, 
+		\hdclindex{1586}{}{1445}, \hdclindex{1588}{}{1447}, 
+		\hdclindex{1591}{}{1450}, \hdclindex{1594}{}{1453}, 
+		\hdclindex{1597}{}{1456}, \hdclindex{1770}{}{1621}, 
+		\hdclindex{1775}{}{1626}, \hdclindex{1789}{}{1640}, 
+		\hdclindex{1793}{}{1644}, \hdclindex{1794}{}{1645}, 
+		\hdclindex{1797}{}{1648}, \hdclindex{1802}{}{1653}, 
+		\hdclindex{1803}{}{1654}, \hdclindex{1808}{}{1658}, 
+		\hdclindex{1813}{}{1663}, \hdclindex{1819}{}{1669}, 
+		\hdclindex{1824}{}{1674}, \hdclindex{1827}{}{1677}, 
+		\hdclindex{1833}{}{1682}, \hdclindex{1838}{}{1687}, 
+		\hdclindex{1839}{}{1688}, \hdclindex{1843}{}{1692}, 
+		\hdclindex{1844}{}{1693}, \hdclindex{1849}{}{1697}, 
+		\hdclindex{1854}{}{1702}, \hdclindex{1855}{}{1703}, 
+		\hdclindex{1859}{}{1707}, \hdclindex{1860}{}{1708}, 
+		\hdclindex{1865}{}{1712}, \hdclindex{1871}{}{1718}, 
+		\hdclindex{1874}{}{1721}, \hdclindex{1875}{}{1722}, 
+		\hdclindex{1879}{}{1725}, \hdclindex{1881}{}{1727}, 
+		\hdclindex{1894}{}{1739}, \hdclindex{2064}{}{1904}, 
+		\hdclindex{2089}{}{1929}, \hdclindex{2102}{}{1941}, 
+		\hdclindex{2131}{}{1970}
+  \item {\verbatim@font \verb*&\parbox&}\pfill 
+		\hdclindex{96}{usage}{13}, \hdclindex{112}{usage}{14}, 
+		\hdclindex{121}{usage}{14}, \hdclindex{878}{usage}{30}, 
+		\hdclindex{377}{}{289}, \hdclindex{385}{}{296}
+  \item {\verbatim@font \verb*&\parindent&}\pfill 
+		\hdclindex{1729}{}{1582}, \hdclindex{1950}{}{1791}, 
+		\hdclindex{1963}{}{1804}, \hdclindex{1975}{}{1816}, 
+		\hdclindex{1988}{}{1829}, \hdclindex{2000}{}{1841}, 
+		\hdclindex{2012}{}{1853}, \hdclindex{2024}{}{1865}, 
+		\hdclindex{2036}{}{1877}, \hdclindex{2054}{}{1894}, 
+		\hdclindex{2079}{}{1919}, \hdclindex{2104}{}{1943}, 
+		\hdclindex{2105}{}{1944}, \hdclindex{2132}{}{1971}
+  \item {\verbatim@font \verb*&\phantomsection&}\pfill 
+		\hdclindex{1746}{}{1598}, \hdclindex{1747}{}{1599}
+  \item {\verbatim@font \verb*&picture&}\pfill 
+		\hdclindex{770}{main}{666}
+  \item {\verbatim@font \verb*&\prevgraf&}\pfill 
+		\hdclindex{0}{usage}{2}, \hdclindex{377}{}{289}
+  \item \pkg{prf} commands:\efill 
+ \subitem {\verbatim@font \verb*&\prf&\_\verb*&tag&\_\verb*&i&\_\verb*&tl&}\pfill 
+		\hdclindex{222}{main}{148}, \hdclindex{1581}{}{1441}, 
+		\hdclindex{2048}{}{1888}, \hdclindex{2073}{}{1913}
+    \subitem {\verbatim@font \verb*&\prf&\_\verb*&tag&\_\verb*&tl&}\pfill 
+		\hdclindex{222}{main}{148}, \hdclindex{1578}{}{1438}, 
+		\hdclindex{2047}{}{1887}, \hdclindex{2072}{}{1912}
+  \item {\verbatim@font \verb*&\ProcessKeysOptions&}\pfill 
+		\hdclindex{262}{}{180}, \hdclindex{2163}{}{2000}
+  \item {\verbatim@font \verb*&\proofname&}\pfill 
+		\hdclindex{2098}{}{1938}
+  \item {\verbatim@font \verb*&proofs&}\pfill \hdclindex{39}{usage}{6}, 
+		\hdclindex{2044}{main}{1885}
+  \item {\verbatim@font \verb*&\protect&}\pfill 
+		\hdclindex{1750}{}{1602}, \hdclindex{1751}{}{1603}
+
+  \indexspace
+{\bfseries\hfil Q\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&\qitem&}\pfill \hdclindex{38}{usage}{5}, 
+		\hdclindex{1897}{usage}{49}, \hdclindex{1485}{}{1347}, 
+		\hdclindex{1511}{}{1373}, \hdclindex{1571}{}{1432}, 
+		\hdclindex{1897}{main}{1742}
+  \item {\verbatim@font \verb*&\quad&}\pfill 
+		\hdclindex{1457}{usage}{41}, \hdclindex{377}{}{289}, 
+		\hdclindex{1179}{}{1050}, \hdclindex{1460}{}{1325}, 
+		\hdclindex{1471}{}{1336}, \hdclindex{1477}{}{1341}
+
+  \indexspace
+{\bfseries\hfil R\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&\raisebox&}\pfill \hdclindex{904}{}{792}, 
+		\hdclindex{1919}{}{1761}
+  \item {\verbatim@font \verb*&\RandRefabcd&}\pfill 
+		\hdclindex{1119}{main}{995}, \hdclindex{1603}{}{1461}
+  \item \pkg{rec} commands:\efill 
+ \subitem {\verbatim@font \verb*&\rec&\_\verb*&tempht&\_\verb*&dim&}\pfill 
+		\hdclindex{125}{main}{80}, \hdclindex{699}{}{598}, 
+		\hdclindex{702}{}{601}
+  \item {\verbatim@font \verb*&\refa&}\pfill 
+		\hdclindex{1031}{main}{913}
+  \item {\verbatim@font \verb*&\refb&}\pfill 
+		\hdclindex{1031}{main}{913}
+  \item {\verbatim@font \verb*&\refc&}\pfill 
+		\hdclindex{1031}{main}{913}
+  \item {\verbatim@font \verb*&\refd&}\pfill 
+		\hdclindex{1031}{main}{913}
+  \item {\verbatim@font \verb*&\RenewDocumentCommand&}\pfill 
+		\hdclindex{1098}{}{976}, \hdclindex{1099}{}{977}, 
+		\hdclindex{1100}{}{978}, \hdclindex{1101}{}{979}
+  \item {\verbatim@font \verb*&\resizebox&}\pfill 
+		\hdclindex{2109}{}{1948}
+  \item {\verbatim@font \verb*&\rule&}\pfill \hdclindex{228}{}{152}
+
+  \indexspace
+{\bfseries\hfil S\hfil}\nopagebreak
+
+  \item \pkg{scan} commands:\efill 
+ \subitem {\verbatim@font \verb*&\scan&\_\verb*&stop:&}\pfill 
+		\hdclindex{41}{usage}{9}, \hdclindex{264}{}{181}, 
+		\hdclindex{271}{}{188}, \hdclindex{278}{}{195}, 
+		\hdclindex{285}{}{201}, \hdclindex{288}{}{204}, 
+		\hdclindex{291}{}{207}, \hdclindex{294}{}{210}, 
+		\hdclindex{313}{}{228}, \hdclindex{322}{}{237}, 
+		\hdclindex{330}{}{245}, \hdclindex{337}{}{251}, 
+		\hdclindex{421}{}{329}, \hdclindex{774}{}{668}, 
+		\hdclindex{779}{}{673}, \hdclindex{784}{}{678}, 
+		\hdclindex{789}{}{683}, \hdclindex{794}{}{688}, 
+		\hdclindex{799}{}{693}, \hdclindex{804}{}{698}, 
+		\hdclindex{813}{}{707}, \hdclindex{814}{}{708}, 
+		\hdclindex{816}{}{710}, \hdclindex{822}{}{716}, 
+		\hdclindex{823}{}{717}, \hdclindex{825}{}{719}, 
+		\hdclindex{829}{}{722}, \hdclindex{864}{}{756}, 
+		\hdclindex{871}{}{763}, \hdclindex{980}{}{863}, 
+		\hdclindex{983}{}{866}, \hdclindex{986}{}{869}, 
+		\hdclindex{989}{}{872}, \hdclindex{1039}{}{919}, 
+		\hdclindex{1105}{}{982}, \hdclindex{1117}{}{993}, 
+		\hdclindex{1120}{}{995}, \hdclindex{1122}{}{996}, 
+		\hdclindex{1126}{}{1000}, \hdclindex{1127}{}{1001}, 
+		\hdclindex{1128}{}{1002}, \hdclindex{1129}{}{1003}, 
+		\hdclindex{1147}{}{1019}, \hdclindex{1148}{}{1020}, 
+		\hdclindex{1149}{}{1021}, \hdclindex{1150}{}{1022}, 
+		\hdclindex{1153}{}{1025}, \hdclindex{1154}{}{1026}, 
+		\hdclindex{1155}{}{1027}, \hdclindex{1156}{}{1028}, 
+		\hdclindex{1163}{}{1034}, \hdclindex{1334}{}{1204}, 
+		\hdclindex{1338}{}{1208}, \hdclindex{1356}{}{1224}, 
+		\hdclindex{1361}{}{1229}, \hdclindex{1605}{}{1462}, 
+		\hdclindex{1643}{}{1499}, \hdclindex{1676}{}{1530}, 
+		\hdclindex{1687}{}{1541}, \hdclindex{1697}{}{1551}, 
+		\hdclindex{1700}{}{1554}, \hdclindex{1705}{}{1559}, 
+		\hdclindex{1708}{}{1562}, \hdclindex{1721}{}{1575}, 
+		\hdclindex{1722}{}{1576}, \hdclindex{1805}{}{1656}, 
+		\hdclindex{1830}{}{1680}, \hdclindex{1846}{}{1695}, 
+		\hdclindex{1862}{}{1710}, \hdclindex{1949}{}{1790}, 
+		\hdclindex{1956}{}{1797}, \hdclindex{1962}{}{1803}, 
+		\hdclindex{1969}{}{1810}, \hdclindex{1974}{}{1815}, 
+		\hdclindex{1982}{}{1823}, \hdclindex{1987}{}{1828}, 
+		\hdclindex{1994}{}{1835}, \hdclindex{1999}{}{1840}, 
+		\hdclindex{2006}{}{1847}, \hdclindex{2011}{}{1852}, 
+		\hdclindex{2018}{}{1859}, \hdclindex{2023}{}{1864}, 
+		\hdclindex{2030}{}{1871}, \hdclindex{2035}{}{1876}, 
+		\hdclindex{2042}{}{1883}, \hdclindex{2053}{}{1893}, 
+		\hdclindex{2068}{}{1908}, \hdclindex{2078}{}{1918}, 
+		\hdclindex{2093}{}{1933}
+  \item {\verbatim@font \verb*&\section&}\pfill \hdclindex{0}{usage}{1}, 
+		\hdclindex{1705}{}{1559}, \hdclindex{1708}{}{1562}, 
+		\hdclindex{1721}{}{1575}, \hdclindex{1722}{}{1576}
+  \item \pkg{sep} commands:\efill 
+ \subitem {\verbatim@font \verb*&\sep&\_\verb*&bd&\_\verb*&tl&}\pfill 
+		\hdclindex{41}{usage}{9}, \hdclindex{207}{main}{137}, 
+		\hdclindex{267}{}{184}, \hdclindex{274}{}{191}, 
+		\hdclindex{281}{}{198}, \hdclindex{308}{}{223}, 
+		\hdclindex{355}{}{269}
+    \subitem {\verbatim@font \verb*&\sep&\_\verb*&HD&\_\verb*&ht&}\pfill 
+		\hdclindex{145}{main}{94}, \hdclindex{406}{}{315}, 
+		\hdclindex{410}{}{319}, \hdclindex{411}{}{320}, 
+		\hdclindex{425}{}{333}, \hdclindex{429}{}{337}, 
+		\hdclindex{431}{}{339}, \hdclindex{433}{}{341}, 
+		\hdclindex{436}{}{344}, \hdclindex{439}{}{347}, 
+		\hdclindex{449}{}{357}, \hdclindex{453}{}{361}
+    \subitem {\verbatim@font \verb*&\sep&\_\verb*&HD&\_\verb*&tl&}\pfill 
+		\hdclindex{211}{}{140}, \hdclindex{399}{}{308}, 
+		\hdclindex{422}{}{330}, \hdclindex{427}{}{335}, 
+		\hdclindex{446}{}{354}, \hdclindex{451}{}{359}
+    \subitem {\verbatim@font \verb*&\sep&\_\verb*&hd&\_\verb*&tl&}\pfill 
+		\hdclindex{41}{usage}{9}, \hdclindex{207}{main}{137}, 
+		\hdclindex{266}{}{183}, \hdclindex{273}{}{190}, 
+		\hdclindex{280}{}{197}, \hdclindex{307}{}{222}, 
+		\hdclindex{314}{}{229}, \hdclindex{323}{}{238}, 
+		\hdclindex{354}{}{268}, \hdclindex{422}{}{330}, 
+		\hdclindex{446}{}{354}
+    \subitem {\verbatim@font \verb*&\sep&\_\verb*&temp&\_\verb*&box&}\pfill 
+		\hdclindex{104}{main}{65}, \hdclindex{1000}{}{883}, 
+		\hdclindex{1001}{}{884}, \hdclindex{1008}{}{891}, 
+		\hdclindex{1015}{}{898}
+    \subitem {\verbatim@font \verb*&\sep&\_\verb*&tl&\_\verb*&tl&}\pfill 
+		\hdclindex{41}{usage}{9}, \hdclindex{207}{main}{137}, 
+		\hdclindex{268}{}{185}, \hdclindex{275}{}{192}, 
+		\hdclindex{282}{}{199}, \hdclindex{309}{}{224}, 
+		\hdclindex{356}{}{270}, \hdclindex{461}{}{369}
+  \item {\verbatim@font \verb*&\square&}\pfill \hdclindex{2050}{}{1890}, 
+		\hdclindex{2075}{}{1915}
+  \item \pkg{str} commands:\efill 
+ \subitem {\verbatim@font \verb*&\str&\_\verb*&case:nnTF&}\pfill 
+		\hdclindex{1041}{}{921}
+    \subitem {\verbatim@font \verb*&\str&\_\verb*&if&\_\verb*&in:nnTF&}\pfill 
+		\hdclindex{287}{}{203}, \hdclindex{290}{}{206}, 
+		\hdclindex{293}{}{209}, \hdclindex{302}{}{217}, 
+		\hdclindex{305}{}{220}, \hdclindex{319}{}{234}, 
+		\hdclindex{327}{}{242}, \hdclindex{339}{}{253}, 
+		\hdclindex{344}{}{258}, \hdclindex{349}{}{263}, 
+		\hdclindex{498}{}{402}, \hdclindex{501}{}{405}, 
+		\hdclindex{553}{}{456}, \hdclindex{559}{}{462}, 
+		\hdclindex{568}{}{471}, \hdclindex{578}{}{481}, 
+		\hdclindex{587}{}{490}, \hdclindex{808}{}{702}, 
+		\hdclindex{810}{}{704}, \hdclindex{812}{}{706}, 
+		\hdclindex{819}{}{713}, \hdclindex{821}{}{715}, 
+		\hdclindex{831}{}{724}, \hdclindex{839}{}{732}, 
+		\hdclindex{847}{}{740}, \hdclindex{979}{}{862}, 
+		\hdclindex{982}{}{865}, \hdclindex{985}{}{868}, 
+		\hdclindex{988}{}{871}, \hdclindex{1049}{}{929}, 
+		\hdclindex{1136}{}{1009}, \hdclindex{1137}{}{1010}, 
+		\hdclindex{1138}{}{1011}, \hdclindex{1139}{}{1012}, 
+		\hdclindex{1192}{}{1063}, \hdclindex{1336}{}{1206}, 
+		\hdclindex{1353}{}{1221}, \hdclindex{1379}{}{1246}, 
+		\hdclindex{1507}{}{1369}, \hdclindex{1571}{}{1432}, 
+		\hdclindex{1593}{}{1452}, \hdclindex{1609}{}{1466}, 
+		\hdclindex{1613}{}{1470}, \hdclindex{1624}{}{1481}, 
+		\hdclindex{1630}{}{1487}, \hdclindex{1696}{}{1550}, 
+		\hdclindex{1699}{}{1553}, \hdclindex{1772}{}{1623}, 
+		\hdclindex{1781}{}{1632}, \hdclindex{1801}{}{1652}, 
+		\hdclindex{1810}{}{1660}, \hdclindex{1823}{}{1673}, 
+		\hdclindex{1835}{}{1684}, \hdclindex{1842}{}{1691}, 
+		\hdclindex{1851}{}{1699}, \hdclindex{1858}{}{1706}, 
+		\hdclindex{1867}{}{1714}, \hdclindex{1870}{}{1717}, 
+		\hdclindex{1873}{}{1720}, \hdclindex{1893}{}{1738}
+  \item {\verbatim@font \verb*&\subsection&}\pfill 
+		\hdclindex{1700}{}{1554}
+  \item {\verbatim@font \verb*&\subsubsection&}\pfill 
+		\hdclindex{1697}{}{1551}
+
+  \indexspace
+{\bfseries\hfil T\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&\tablename&}\pfill 
+		\hdclindex{522}{}{425}, \hdclindex{527}{}{430}
+  \item {\verbatim@font \verb*&\tableofcontents&}\pfill 
+		\hdclindex{1652}{usage}{45}, \hdclindex{1654}{}{1509}, 
+		\hdclindex{1658}{}{1513}, \hdclindex{1659}{}{1514}
+  \item \TeX{} and \LaTeXe{} commands:\efill 
+ \subitem {\verbatim@font \verb*&\@chapter&}\pfill 
+		\hdclindex{1668}{main}{1523}
+    \subitem {\verbatim@font \verb*&\@font@warning&}\pfill 
+		\hdclindex{2165}{}{2002}
+    \subitem {\verbatim@font \verb*&\@ifpackagelater&}\pfill 
+		\hdclindex{65}{}{42}, \hdclindex{67}{}{44}
+    \subitem {\verbatim@font \verb*&\@schapter&}\pfill 
+		\hdclindex{1668}{main}{1523}
+    \subitem {\verbatim@font \verb*&\@sect&}\pfill 
+		\hdclindex{1668}{main}{1523}
+    \subitem {\verbatim@font \verb*&\@ssect&}\pfill 
+		\hdclindex{1715}{}{1569}, \hdclindex{1717}{}{1571}, 
+		\hdclindex{1718}{}{1572}
+    \subitem {\verbatim@font \verb*&\@sset&}\pfill 
+		\hdclindex{1668}{main}{1523}
+    \subitem {\verbatim@font \verb*&\c@chapter&}\pfill 
+		\hdclindex{1739}{}{1591}, \hdclindex{1740}{}{1592}, 
+		\hdclindex{1920}{}{1762}, \hdclindex{1923}{}{1765}
+    \subitem {\verbatim@font \verb*&\c@equation&}\pfill 
+		\hdclindex{375}{}{287}, \hdclindex{378}{}{290}, 
+		\hdclindex{383}{}{294}, \hdclindex{386}{}{297}
+    \subitem {\verbatim@font \verb*&\c@figure&}\pfill 
+		\hdclindex{516}{}{419}
+    \subitem {\verbatim@font \verb*&\c@section&}\pfill 
+		\hdclindex{1742}{}{1594}, \hdclindex{1743}{}{1595}, 
+		\hdclindex{1926}{}{1768}, \hdclindex{1929}{}{1771}
+    \subitem {\verbatim@font \verb*&\c@table&}\pfill 
+		\hdclindex{521}{}{424}
+  \item \pkg{tex} commands:\efill 
+ \subitem {\verbatim@font \verb*&\tex&\_\verb*&def:D&}\pfill 
+		\hdclindex{1659}{}{1514}, \hdclindex{1672}{}{1526}, 
+		\hdclindex{1683}{}{1537}, \hdclindex{1694}{}{1548}, 
+		\hdclindex{1718}{}{1572}, \hdclindex{1757}{}{1609}, 
+		\hdclindex{1760}{}{1612}
+    \subitem {\verbatim@font \verb*&\tex&\_\verb*&let:D&}\pfill 
+		\hdclindex{1658}{}{1513}, \hdclindex{1671}{}{1525}, 
+		\hdclindex{1682}{}{1536}, \hdclindex{1693}{}{1547}, 
+		\hdclindex{1717}{}{1571}
+    \subitem {\verbatim@font \verb*&\tex&\_\verb*&parshape:D&}\pfill 
+		\hdclindex{617}{}{519}, \hdclindex{643}{}{544}, 
+		\hdclindex{663}{}{564}, \hdclindex{685}{}{585}, 
+		\hdclindex{721}{}{620}, \hdclindex{746}{}{644}, 
+		\hdclindex{1780}{}{1631}, \hdclindex{1818}{}{1668}, 
+		\hdclindex{2129}{}{1968}
+  \item {\verbatim@font \verb*&\thefigure&}\pfill 
+		\hdclindex{517}{}{420}
+  \item {\verbatim@font \verb*&\theHchapter&}\pfill 
+		\hdclindex{1756}{}{1608}, \hdclindex{1757}{}{1609}
+  \item {\verbatim@font \verb*&\theHsection&}\pfill 
+		\hdclindex{1759}{}{1611}, \hdclindex{1760}{}{1612}
+  \item {\verbatim@font \verb*&\theoremstyle&}\pfill 
+		\hdclindex{2049}{}{1889}, \hdclindex{2059}{}{1899}, 
+		\hdclindex{2074}{}{1914}, \hdclindex{2084}{}{1924}, 
+		\hdclindex{2097}{}{1937}
+  \item {\verbatim@font \verb*&\thetable&}\pfill \hdclindex{522}{}{425}
+  \item {\verbatim@font \verb*&tiankong&}\pfill 
+		\hdclindex{36}{usage}{4}, \hdclindex{1944}{main}{1786}
+  \item \pkg{tl} commands:\efill 
+ \subitem {\verbatim@font \verb*&\c&\_\verb*&empty&\_\verb*&tl&}\pfill 
+		\hdclindex{455}{}{363}, \hdclindex{463}{}{371}, 
+		\hdclindex{466}{}{374}, \hdclindex{503}{}{407}, 
+		\hdclindex{535}{}{438}, \hdclindex{575}{}{478}, 
+		\hdclindex{729}{}{628}, \hdclindex{980}{}{863}, 
+		\hdclindex{983}{}{866}, \hdclindex{986}{}{869}, 
+		\hdclindex{989}{}{872}, \hdclindex{998}{}{881}, 
+		\hdclindex{1021}{}{904}, \hdclindex{1051}{}{931}, 
+		\hdclindex{1147}{}{1019}, \hdclindex{1148}{}{1020}, 
+		\hdclindex{1149}{}{1021}, \hdclindex{1150}{}{1022}, 
+		\hdclindex{1153}{}{1025}, \hdclindex{1154}{}{1026}, 
+		\hdclindex{1155}{}{1027}, \hdclindex{1156}{}{1028}, 
+		\hdclindex{1185}{}{1056}, \hdclindex{1225}{}{1096}, 
+		\hdclindex{1243}{}{1114}, \hdclindex{1259}{}{1130}, 
+		\hdclindex{1338}{}{1208}, \hdclindex{1341}{}{1211}, 
+		\hdclindex{1372}{}{1239}, \hdclindex{1500}{}{1362}, 
+		\hdclindex{1618}{}{1475}, \hdclindex{1636}{}{1493}, 
+		\hdclindex{1640}{}{1497}, \hdclindex{1650}{}{1506}, 
+		\hdclindex{1666}{}{1521}, \hdclindex{1667}{}{1522}, 
+		\hdclindex{1679}{}{1533}, \hdclindex{1690}{}{1544}, 
+		\hdclindex{1714}{}{1568}, \hdclindex{1725}{}{1579}, 
+		\hdclindex{1744}{}{1596}, \hdclindex{1748}{}{1600}, 
+		\hdclindex{1761}{}{1613}, \hdclindex{1765}{}{1617}, 
+		\hdclindex{1767}{}{1619}, \hdclindex{1889}{}{1734}, 
+		\hdclindex{1903}{}{1747}, \hdclindex{1914}{}{1756}, 
+		\hdclindex{1931}{}{1773}, \hdclindex{1938}{}{1780}, 
+		\hdclindex{2051}{}{1891}, \hdclindex{2063}{}{1903}, 
+		\hdclindex{2066}{}{1906}, \hdclindex{2076}{}{1916}, 
+		\hdclindex{2088}{}{1928}, \hdclindex{2091}{}{1931}, 
+		\hdclindex{2099}{}{1939}, \hdclindex{2166}{}{2003}
+    \subitem {\verbatim@font \verb*&\tl&\_\verb*&clear:N&}\pfill 
+		\hdclindex{1054}{}{934}, \hdclindex{1055}{}{935}, 
+		\hdclindex{1056}{}{936}, \hdclindex{1057}{}{937}, 
+		\hdclindex{1135}{}{1008}, \hdclindex{1166}{}{1037}, 
+		\hdclindex{1882}{}{1728}
+    \subitem {\verbatim@font \verb*&\tl&\_\verb*&const:Nn&}\pfill 
+		\hdclindex{228}{}{152}
+    \subitem {\verbatim@font \verb*&\tl&\_\verb*&new:N&}\pfill 
+		\hdclindex{208}{}{137}, \hdclindex{209}{}{138}, 
+		\hdclindex{210}{}{139}, \hdclindex{211}{}{140}, 
+		\hdclindex{213}{}{141}, \hdclindex{215}{}{142}, 
+		\hdclindex{216}{}{143}, \hdclindex{218}{}{144}, 
+		\hdclindex{219}{}{145}, \hdclindex{220}{}{146}, 
+		\hdclindex{221}{}{147}, \hdclindex{223}{}{148}, 
+		\hdclindex{224}{}{149}, \hdclindex{226}{}{150}, 
+		\hdclindex{227}{}{151}, \hdclindex{230}{}{153}, 
+		\hdclindex{231}{}{154}, \hdclindex{233}{}{155}, 
+		\hdclindex{235}{}{156}, \hdclindex{236}{}{157}, 
+		\hdclindex{237}{}{158}, \hdclindex{239}{}{159}, 
+		\hdclindex{240}{}{160}, \hdclindex{241}{}{161}, 
+		\hdclindex{242}{}{162}, \hdclindex{750}{}{647}, 
+		\hdclindex{751}{}{648}, \hdclindex{752}{}{649}
+    \subitem {\verbatim@font \verb*&\tl&\_\verb*&put&\_\verb*&right:Nn&}\pfill 
+		\hdclindex{422}{}{330}, \hdclindex{446}{}{354}, 
+		\hdclindex{472}{}{379}, \hdclindex{473}{}{380}, 
+		\hdclindex{490}{}{395}, \hdclindex{1050}{}{930}, 
+		\hdclindex{1136}{}{1009}, \hdclindex{1137}{}{1010}, 
+		\hdclindex{1138}{}{1011}, \hdclindex{1139}{}{1012}, 
+		\hdclindex{1460}{}{1325}, \hdclindex{1894}{}{1739}, 
+		\hdclindex{1895}{}{1740}
+    \subitem {\verbatim@font \verb*&\tl&\_\verb*&set:Nn&}\pfill 
+		\hdclindex{266}{}{183}, \hdclindex{267}{}{184}, 
+		\hdclindex{268}{}{185}, \hdclindex{273}{}{190}, 
+		\hdclindex{274}{}{191}, \hdclindex{275}{}{192}, 
+		\hdclindex{280}{}{197}, \hdclindex{281}{}{198}, 
+		\hdclindex{282}{}{199}, \hdclindex{307}{}{222}, 
+		\hdclindex{308}{}{223}, \hdclindex{309}{}{224}, 
+		\hdclindex{314}{}{229}, \hdclindex{323}{}{238}, 
+		\hdclindex{354}{}{268}, \hdclindex{355}{}{269}, 
+		\hdclindex{356}{}{270}, \hdclindex{399}{}{308}, 
+		\hdclindex{489}{}{394}, \hdclindex{517}{}{420}, 
+		\hdclindex{522}{}{425}, \hdclindex{525}{}{428}, 
+		\hdclindex{527}{}{430}, \hdclindex{597}{}{500}, 
+		\hdclindex{754}{}{650}, \hdclindex{776}{}{670}, 
+		\hdclindex{777}{}{671}, \hdclindex{781}{}{675}, 
+		\hdclindex{782}{}{676}, \hdclindex{786}{}{680}, 
+		\hdclindex{787}{}{681}, \hdclindex{791}{}{685}, 
+		\hdclindex{792}{}{686}, \hdclindex{796}{}{690}, 
+		\hdclindex{797}{}{691}, \hdclindex{801}{}{695}, 
+		\hdclindex{802}{}{696}, \hdclindex{835}{}{728}, 
+		\hdclindex{836}{}{729}, \hdclindex{843}{}{736}, 
+		\hdclindex{844}{}{737}, \hdclindex{851}{}{744}, 
+		\hdclindex{852}{}{745}, \hdclindex{857}{}{750}, 
+		\hdclindex{858}{}{751}, \hdclindex{868}{}{760}, 
+		\hdclindex{869}{}{761}, \hdclindex{875}{}{767}, 
+		\hdclindex{876}{}{768}, \hdclindex{904}{}{792}, 
+		\hdclindex{993}{}{876}, \hdclindex{994}{}{877}, 
+		\hdclindex{1005}{}{888}, \hdclindex{1012}{}{895}, 
+		\hdclindex{1019}{}{902}, \hdclindex{1029}{}{911}, 
+		\hdclindex{1030}{}{912}, \hdclindex{1043}{}{923}, 
+		\hdclindex{1044}{}{924}, \hdclindex{1045}{}{925}, 
+		\hdclindex{1046}{}{926}, \hdclindex{1576}{}{1436}, 
+		\hdclindex{1577}{}{1437}, \hdclindex{1578}{}{1438}, 
+		\hdclindex{1579}{}{1439}, \hdclindex{1580}{}{1440}, 
+		\hdclindex{1581}{}{1441}, \hdclindex{1826}{}{1676}, 
+		\hdclindex{1885}{}{1730}, \hdclindex{1919}{}{1761}, 
+		\hdclindex{1922}{}{1764}, \hdclindex{1928}{}{1770}, 
+		\hdclindex{2050}{}{1890}, \hdclindex{2075}{}{1915}
+    \subitem {\verbatim@font \verb*&\tl&\_\verb*&set&\_\verb*&eq:NN&}\pfill 
+		\hdclindex{2047}{}{1887}, \hdclindex{2048}{}{1888}, 
+		\hdclindex{2072}{}{1912}, \hdclindex{2073}{}{1913}
+    \subitem {\verbatim@font \verb*&\tl&\_\verb*&use:N&}\pfill 
+		\hdclindex{1159}{}{1031}, \hdclindex{1894}{}{1739}
+
+  \indexspace
+{\bfseries\hfil U\hfil}\nopagebreak
+
+  \item \pkg{use} commands:\efill 
+ \subitem {\verbatim@font \verb*&\use:N&}\pfill 
+		\hdclindex{1098}{}{976}, \hdclindex{1099}{}{977}, 
+		\hdclindex{1100}{}{978}, \hdclindex{1101}{}{979}
+  \item {\verbatim@font \verb*&\usepackage&}\pfill 
+		\hdclindex{34}{usage}{3}
+
+  \indexspace
+{\bfseries\hfil V\hfil}\nopagebreak
+
+  \item \pkg{vbox} commands:\efill 
+ \subitem {\verbatim@font \verb*&\vbox&\_\verb*&set:Nn&}\pfill 
+		\hdclindex{529}{}{432}, \hdclindex{536}{}{439}, 
+		\hdclindex{543}{}{446}, \hdclindex{550}{}{453}, 
+		\hdclindex{580}{}{483}, \hdclindex{584}{}{487}, 
+		\hdclindex{881}{}{772}, \hdclindex{883}{}{774}, 
+		\hdclindex{891}{}{781}, \hdclindex{892}{}{782}
+  \item {\verbatim@font \verb*&\vspace&}\pfill \hdclindex{687}{}{587}, 
+		\hdclindex{728}{}{627}, \hdclindex{1430}{}{1297}, 
+		\hdclindex{1591}{}{1450}, \hdclindex{1775}{}{1626}, 
+		\hdclindex{1813}{}{1663}, \hdclindex{1838}{}{1687}, 
+		\hdclindex{1854}{}{1702}
+
+  \indexspace
+{\bfseries\hfil X\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&xuanze&}\pfill \hdclindex{35}{usage}{4}, 
+		\hdclindex{1944}{main}{1786}
+
+  \indexspace
+{\bfseries\hfil Z\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&zhengming&}\pfill 
+		\hdclindex{39}{usage}{6}, \hdclindex{2044}{main}{1885}
+
+ \end{theindex}

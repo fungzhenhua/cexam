@@ -1,0 +1,15 @@
+
+ \begin{theglossary} 
+
+    \makeatletter\scan@allowedfalse
+
+  \item v3.0.1\efill 
+ \subitem General:\ 加入测行程序和形状生成程序,同时删除之前改写的代码\pfill 
+		\hdpindex{}{1}
+      \subsubitem 开始使用LaTeX3重构cexam.sty\pfill 
+		\hdpindex{}{1}
+      \subsubitem 缩写命名,加入缩写列表\pfill \hdpindex{}{1}
+  \item v3.0.2\efill 
+ \subitem General:\ 增加equation计数器的还原\pfill \hdclindex{132}{}{6}
+
+ \end{theglossary}

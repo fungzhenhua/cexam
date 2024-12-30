@@ -1,0 +1,58 @@
+\documentclass[a4paper,fontset = windowsnew]{ctexbook}
+\usepackage{xifthen}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{cexam}
+
+\begin{document}
+\chapter{基本排版程序}
+
+\parindent=0pt
+
+
+基本排版程序
+
+\par
+
+\ExplSyntaxOn
+
+\bool_set_true:N \cexam_fmt_bool
+%    \cexam_type_ii:nnnnnnnnn
+%    \cexam_type_i:nnnnnnn
+%    \cexam_type_iii:nnnnnnn
+    \cexam_type_iv:nnnnnnnn
+    {l}
+      {
+	\begin{tikzpicture}
+	  \draw (0,0) rectangle (3,5);
+	\end{tikzpicture}
+      }
+      {15pt}{5pt}{35pt}{0pt}%{60pt}{0pt}
+      {
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	\begin{equation}
+	  E=MC^2
+	\end{equation}
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+      }
+      {
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+      }
+
+
+
+    \end{document}

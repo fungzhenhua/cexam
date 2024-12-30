@@ -1,0 +1,27 @@
+\chapter {选择题选项排版测试（答案）}
+
+\begin {answerstd}
+
+1.{\heiti 答案}
+AD
+\RandRefabcd {2314}
+
+ee.{\heiti 解析}
+答案是\refc {}未知，\refd {}是老师。 
+
+2.{\heiti 答案}
+AC
+\RandRefabcd {4231}
+
+ee.{\heiti 解析}
+答案是\refc {}未知，\refd {}是老师。 
+
+3.{\heiti 答案}
+AB
+\RandRefabcd {3421}
+
+ee.{\heiti 解析}
+答案是\refc {}未知，\refd {}是老师。 
+
+\end {answerstd}
+

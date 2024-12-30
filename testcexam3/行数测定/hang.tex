@@ -1,0 +1,259 @@
+\documentclass[a4paper,fontset = adobe]{ctexbook}
+\usepackage{xifthen}
+\usepackage{calc}
+
+\begin{document}
+\chapter{行数统计程序}
+\makeatletter
+
+行数统计程序的latex3改写
+
+\ExplSyntaxOn
+%%boolean
+\bool_new:N \g__cexam_math_on_bool
+\bool_new:N \g__cexam_math_tail_bool
+%%
+\cs_new:Npn \cexam_separate_i:n  #1$$#2$$#3\scan_stop:
+{
+  \cs_set:Nn \hang_math_head: {#1}
+  \cs_set:Nn \hang_math_body: {}
+  \cs_set:Nn \hang_math_tail: {#3}
+}
+
+\cs_new:Npn \cexam_separate_ii:n #1\[#2\]#3\scan_stop:
+{
+  \cs_set:Nn \hang_math_head: {#1}
+  \cs_set:Nn \hang_math_body: {}
+  \cs_set:Nn \hang_math_tail: {#3}
+}
+
+\cs_new:Npn \cexam_separate_iii:n #1\begin#2\end#3#4\scan_stop:
+{
+  \cs_set:Nn \hang_math_head: {#1}
+\cs_set:Nn \hang_math_body: {\begin#2\end{#3}}
+\cs_set:Nn \hang_math_tail: {#4}
+}
+\cs_new:Npn \cexam_separate_done:n #1\scan_stop:
+{
+  \str_if_in:nnTF {#1}{$$}%$$
+  {\cexam_separate_i:n #1\scan_stop:}
+  {\str_if_in:nnTF {#1}{\[}%\]
+      {\cexam_separate_ii:n #1\scan_stop:}
+      {
+\str_if_in:nnTF {#1}{\begin}
+{\cexam_separate_iii:n #1\scan_stop:}
+{}
+      }
+
+    }
+  }
+  \cs_new:Npn \cexam_separate_isin:nn #1#2
+  {
+    \str_if_in:nnTF {*#1}{*#2}
+    {
+      \bool_set_true:N \g__cexam_math_on_bool
+      \str_if_in:nnTF {#1*}{#2*}
+      {
+\cs_set:Nn \hang_math_head: {}
+\cs_set:Nn \hang_math_body: {}
+\cs_set:Nn \hang_math_tail: {}
+\bool_set_false:N \g__cexam_math_tail_bool
+      }
+      {
+\cexam_separate_done:n *#1\scan_stop:
+\cs_set:Nn \hang_math_head: {}
+\bool_set_true:N \g__cexam_math_tail_bool
+      }
+    }
+    {
+      \str_if_in:nnTF {#1*}{#2*}
+      {
+\bool_set_true:N \g__cexam_math_on_bool
+\cexam_separate_done:n #1*\scan_stop:
+\cs_set:Nn \hang_math_tail: {}
+\bool_set_false:N \g__cexam_math_tail_bool
+      }
+      {
+\str_if_in:nnTF {#1}{#2}
+{
+  \bool_set_true:N \g__cexam_math_on_bool
+  \cexam_separate_done:n #1\scan_stop:
+  \bool_set_true:N \g__cexam_math_tail_bool
+}{}
+      }
+    }
+  }
+  \cs_new:Npn \cexam_separate:n #1 \scan_stop:
+  {
+    \str_if_in:nnTF {#1}{$$}%$$
+    {
+      \cexam_separate_isin:nn {#1}{$$}%$$
+    }
+    {
+      \str_if_in:nnTF {#1}{\[}%\]
+{
+  \cexam_separate_isin:nn {#1}{\[}%\]
+  }
+  {
+    \str_if_in:nnTF {#1}{\begin}%\end
+    {
+      \cexam_separate_isin:nn {#1}{\begin}%\end
+    }
+    {
+      \cs_set:Nn \hang_math_head: {#1}
+      \cs_set:Nn \hang_math_body: {}
+      \cs_set:Nn \hang_math_tail: {}
+      \bool_set_false:N \g__cexam_math_tail_bool
+      \bool_set_false:N \g__cexam_math_on_bool
+    }
+  }
+      }
+  }
+
+% 以下为补充命令
+\cs_new:Npn \cexam_separate:o #1\scan_stop:
+{
+  \cexam_separate:n #1\scan_stop:
+}
+
+\bool_if:NTF \g__cexam_math_on_bool 
+{The~ math~ modle~ is~ open}
+{The~ text~ model~ is~ open}
+
+
+\par
+******测行程序******
+\par
+
+%三个参数依次为:测长度,行减量,计数器
+%%\cex@mGenDone -->l3
+\cs_new:Npn \cexam_GenDone:nnn #1#2#3
+{
+  \dim_while_do:nNnn {#1}>{0pt}
+  {
+    \dim_sub:Nn #1{#2}
+    \int_incr:N #3
+  }
+}
+%%设置最大高度获得程序
+%三个参数依次为:文本,文本宽,所得总高
+\box_new:N \cexam_total_box
+\cs_new:Npn \cexam_set_totalht:onn #1#2#3
+{
+  \hbox_set:Nn \cexam_total_box 
+  {\parbox{#2}{#1}}
+  \dim_set:Nn #3 {\box_dp:N \cexam_total_box}
+  \dim_add:Nn #3 {\box_ht:N \cexam_total_box}
+}
+
+%%\cex@mGenRec -->l3
+%五个参数依次为: 单减高度,矩形宽度,矩形高度,计数器,文本
+\dim_new:N \cexam_line_wd
+\dim_new:N \cexam_Div_TH
+
+\cs_new:Npn \cexam_GenRec:nnnnn #1#2#3#4#5
+{
+  \cexam_set_totalht:onn {#5}{\cexam_line_wd - #2}{\cexam_Div_TH}
+  \dim_compare:nTF {\cexam_Div_TH > #3}
+  {\cexam_GenDone:nnn {#3}{#1}{#4}}
+  {
+    \dim_sub:Nn {#3}{\cexam_Div_TH}
+    \cexam_GenDone:nnn {\cexam_Div_TH}{#1}{#4}
+  }
+}
+%%\cex@mGenMaRc -->l3
+\int_new:N \cexam_equation
+\dim_new:N \cexam_mathhead_ht
+\dim_new:N \cexam_mathbody_ht %取代 \cex@mEnvHt
+\dim_new:N \cexam_math_minus %取代 \cex@mDivPMM
+\dim_set:Nn \cexam_math_minus{2\baselineskip}
+\dim_set:Nn \cexam_line_wd {\linewidth}
+%
+%
+\cs_new:Npn \cexam_GenMaRec:nnnnn #1#2#3#4#5
+{
+  \int_set:Nn \cexam_equation{\int_use:N \c@equation}
+  \bool_set_false:N \g__cexam_math_on_bool
+  \cexam_separate:n #5 \scan_stop:
+  \cexam_GenRec:nnnnn {#1}{#2}{#3}{#4}{\hang_math_head:}
+  \bool_if:NTF \g__cexam_math_on_bool
+  {
+    \dim_compare:nNnTF {#3} < {0.5\baselineskip}
+    {\dim_set:Nn #3{0pt}}
+    {
+      \cexam_set_totalht:onn {\hang_math_body:}{\cexam_line_wd - #2}{\cexam_mathbody_ht}
+      \dim_compare:nTF {\cexam_math_minus < \cexam_mathbody_ht}
+      {
+	\dim_compare:nTF {#3 > \cexam_mathbody_ht}
+	{
+	  \dim_sub:Nn #3 {\cexam_mathbody_ht}
+	  \dim_wile_do:nNnn {\cexam_mathhead_ht}> {\cexam_math_minus}
+	  {
+	    \dim_sub:Nn \cexam_mathhead_ht {\cexam_math_minus}
+	    \int_add:Nn #4 {3}
+	  }
+	  \dim_compare:nTF {#3 > \cexam_math_minus}
+	  {\relax}
+	  {\dim_set:Nn #3 {0pt}}
+	}
+	{
+	  \dim_while_do:nNnn {#3} > {\cexam_math_minus}
+	  {
+	    \dim_sub:Nn #3 {\cexam_math_minus}
+	    \int_add:Nn #4 {3}
+	  }
+	  \dim_set:Nn #3 {0pt}
+	}
+      }
+      {
+	\dim_compare:nTF {#3 > \cexam_math_minus}
+	{\dim_sub:Nn #3 {\cexam_math_minus}}
+	{\dim_set:Nn #3 {0pt}}
+	\int_add:Nn #4 {3}
+      }
+    }
+  }
+  {\relax}
+  \int_set:Nn \c@equation{\int_use:N \cexam_equation}
+}
+%%
+%\cex@mGenMaRecX --> \cexam_GenMaRecX:nnnnn
+\cs_new:Npn \cexam_GenMaRecX:nnnnn #1#2#3#4#5
+{
+  \bool_set_true:N \g__cexam_math_tail_bool 
+  \cexam_GenRec:nnnnn {#1}{#2}{#3}{#4}{#5}
+  \dim_while_do:nNnn {#3} > {0pt}
+  { hello
+    \bool_if:NTF \g__cexam_math_tail_bool
+    {\cexam_GenMaRec:nnnnn {#1}{#2}{#3}{#4}{\hang_math_tail:}}
+    {\dim_set:Nn #3 {0pt}}
+  }
+}
+
+\par **********************调试段开始****************************** \par
+
+\dim_new:N \ts_rec_wd
+\dim_new:N \ts_rec_ht
+\int_new:N \ts_my_int
+\dim_set:Nn \ts_rec_wd {60pt}
+\dim_set:Nn \ts_rec_ht {90pt}
+\cexam_GenMaRecX:nnnnn {\baselineskip}{\ts_rec_wd} {\ts_rec_ht}{\ts_my_int}{
+  这是测试文本
+  $$E=mc^2$$
+  这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本这是测试文本
+  $$E=mc^2$$
+}
+
+\int_use:N \ts_my_int
+
+
+\par **********************调试段结束****************************** \par
+
+
+
+
+\ExplSyntaxOff
+
+
+
+\end{document}

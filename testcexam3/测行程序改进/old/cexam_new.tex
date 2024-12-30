@@ -1,0 +1,94 @@
+\documentclass[a4paper,fontset = windowsnew]{ctexbook}
+\usepackage{xifthen}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{cexam}
+
+\begin{document}
+\chapter{行数统计程序}
+
+\parindent=0pt
+行数统计程序的latex3改写
+
+\ExplSyntaxOn
+%%boolean
+      \box_new:N \cexam_picture_box
+      \box_new:N \cexam_vpicture_box
+      \dim_new:N \cexam_picht_dim
+      \dim_new:N \cexam_picwd_dim
+      \dim_new:N \cexam_paperht_dim
+      \dim_set:Nn \cexam_paperht_dim {\textheight}
+      \int_new:N \cexam_picmath_int
+      \int_new:N \cexam_totalnum_int
+      \int_new:N \my_test_int
+%%1图片,2文本
+      \cs_new:Npn \cexam_publish_mp:nn #1#2
+      {
+          \hbox_set:Nn \cexam_picture_box {#1}
+	  \dim_set:Nn {\cexam_picwd_dim}{\box_wd:N \cexam_picture_box}
+	  \dim_set:Nn {\cexam_picht_dim}{\box_ht:N \cexam_picture_box}
+	  \dim_add:Nn {\cexam_picht_dim}{\box_dp:N \cexam_picture_box}
+	  \cexam_get_rec:nnnn {\cexam_picmath_int}{\cexam_picht_dim}{\cexam_picwd_dim}{#2}
+	  \cexam_sha_mk:nnnn {\cexam_picmath_int}{20pt}{\linewidth}{\cexam_picwd_dim}
+	  \hbox_set:Nn \cexam_picture_box {\raisebox{-\totalheight-.8\ccwd}[0pt][0pt]{\parbox[b]{\linewidth}{\hfill #1}}}
+	  \box_set_wd:Nn \cexam_picture_box {0pt}
+	  \tex_parshape:D \cexam_shad:
+	  \box_use:N \cexam_picture_box 
+	  #2
+      }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+      \dim_new:N \g__exam_test_dim
+      \int_new:N \g__exam_test_int
+      \dim_set:Nn \g__exam_test_dim {50pt}
+
+      \cexam_publish_mp:nn {
+      \begin{tikzpicture}
+	\draw (0,0) rectangle (3,3);
+      \end{tikzpicture}
+    }{
+	这head1是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	\begin{equation}
+	  e=mc^2
+	\end{equation}
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	\begin{equation}
+	  e=mc^2
+	\end{equation}
+	这是第三版的图文试题排版测试
+	这tail是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	\begin{equation}
+	  e=mc^2
+	\end{equation}
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+      }
+      \newline
+      这是附加的选项部分.
+      这是附加的选项部分.
+      这是附加的选项部分.
+      这是附加的选项部分.
+      这是附加的选项部分.
+
+
+    \end{document}

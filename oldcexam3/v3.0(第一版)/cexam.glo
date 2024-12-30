@@ -1,0 +1,4 @@
+\glossaryentry{000030000000001=v3.0.1> =General:>开始使用LaTeX3重构cexam.sty|hdpindex{}}{1}
+\glossaryentry{000030000000001=v3.0.1> =General:>加入测行程序和形状生成程序,同时删除之前改写的代码|hdpindex{}}{1}
+\glossaryentry{000030000000001=v3.0.1> =General:>缩写命名,加入缩写列表|hdpindex{}}{1}
+\glossaryentry{000030000000002=v3.0.2> =General:>增加equation计数器的还原|hdclindex{132}{}}{6}

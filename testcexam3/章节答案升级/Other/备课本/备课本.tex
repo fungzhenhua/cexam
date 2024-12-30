@@ -1,0 +1,48 @@
+\documentclass[a4paper,nowarning]{cexam}
+%\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{float}
+\usetikzlibrary{patterns}
+\usepackage[european,oldvoltagedirection]{circuitikz}
+\usepackage{graphicx}
+%\usepackage{draftwatermark}
+%\SetWatermarkText{冯老师手稿}
+\includeonly{
+%  封面,
+%  chapter-运动的描述,
+%  chapter-匀变速直线运动,
+%  推论new2,
+%  chapter-相互作用,
+%  chapter-牛顿运动定律,
+%  chapter-力学经典题目,
+%  chapter-曲线运动,
+%  chapter-能量,
+%  chapter-能量习题精讲,
+%  chapter-静电场,
+%  chapter-恒定电流,
+  chapter-磁场,
+%  电学实验,
+%  chapter-高中数学若干问题,
+}
+\begin{document}
+\setcounter{tocdepth}{1}%设置排版深度
+\newcounter{pointnum}%推论中画纸带使用的计数器
+\include{封面}
+%\tableofcontents
+\include{chapter-运动的描述}
+\include{chapter-匀变速直线运动}
+\include{推论new2}
+\include{chapter-相互作用}
+\include{chapter-牛顿运动定律}
+\include{chapter-力学经典题目}
+\include{chapter-曲线运动}
+\include{chapter-能量}
+\include{chapter-能量习题精讲}
+\include{chapter-静电场}
+\include{chapter-恒定电流}
+\include{电学实验}
+\include{chapter-磁场}
+\include{chapter-高中数学若干问题}
+\end{document}

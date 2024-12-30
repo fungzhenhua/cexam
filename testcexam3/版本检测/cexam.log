@@ -1,0 +1,304 @@
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.5.1)  1 MAY 2020 16:00
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**cexam.sty
+(./cexam.sty
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-04-06>
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-04-06 L3 programming layer (loader) 
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-xdvipdfmx.def
+File: l3backend-xdvipdfmx.def 2020-03-12 L3 backend support: xdvipdfmx
+\g__graphics_track_int=\count163
+\l__pdf_internal_box=\box45
+\g__pdf_backend_object_int=\count164
+\g__pdf_backend_annotation_int=\count165
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2020-03-06 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count166
+\g__xparse_grabber_int=\count167
+\l__xparse_m_args_int=\count168
+\l__xparse_v_nesting_int=\count169
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3experimental/l3draw/l3draw.sty
+Package: l3draw 2020-01-12 L3 Experimental core drawing support
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3experimental/l3color/l3color.st
+y
+Package: l3color 2020-01-12 L3 Experimental color support
+)
+\l__draw_tmp_box=\box46
+\g__draw_path_lastx_dim=\dimen134
+\g__draw_path_lasty_dim=\dimen135
+\g__draw_path_xmax_dim=\dimen136
+\g__draw_path_xmin_dim=\dimen137
+\g__draw_path_ymax_dim=\dimen138
+\g__draw_path_ymin_dim=\dimen139
+\l__draw_corner_xarc_dim=\dimen140
+\l__draw_corner_yarc_dim=\dimen141
+\l__draw_path_lastx_dim=\dimen142
+\l__draw_path_lasty_dim=\dimen143
+\l__draw_path_xmax_dim=\dimen144
+\l__draw_path_xmin_dim=\dimen145
+\l__draw_path_ymax_dim=\dimen146
+\l__draw_path_ymin_dim=\dimen147
+\l__draw_softpath_lastx_dim=\dimen148
+\l__draw_softpath_lasty_dim=\dimen149
+\l__draw_xvec_x_dim=\dimen150
+\l__draw_xvec_y_dim=\dimen151
+\l__draw_yvec_x_dim=\dimen152
+\l__draw_yvec_y_dim=\dimen153
+\l__draw_zvec_x_dim=\dimen154
+\l__draw_zvec_y_dim=\dimen155
+\g__draw_xmax_dim=\dimen156
+\g__draw_xmin_dim=\dimen157
+\g__draw_ymax_dim=\dimen158
+\g__draw_ymin_dim=\dimen159
+\l__draw_main_box=\box47
+\l__draw_layer_main_box=\box48
+\g__draw_id_int=\count170
+\l__draw_linewidth_dim=\dimen160
+\l__draw_xmax_dim=\dimen161
+\l__draw_xmin_dim=\dimen162
+\l__draw_ymax_dim=\dimen163
+\l__draw_ymin_dim=\dimen164
+\g__draw_softpath_lastx_dim=\dimen165
+\g__draw_softpath_lasty_dim=\dimen166
+\l__draw_softpath_corneri_dim=\dimen167
+\l__draw_softpath_cornerii_dim=\dimen168
+\g__draw_linewidth_dim=\dimen169
+\l_draw_default_linewidth_dim=\dimen170
+\l__draw_xshift_dim=\dimen171
+\l__draw_yshift_dim=\dimen172
+)
+./cexam.sty:31: Undefined control sequence.
+<recently read> \msg 
+                     
+l.31 \msg
+         _new:nnnn {cexam}{l3-too-old}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cexam.sty:31: Missing $ inserted.
+<inserted text> 
+                $
+l.31 \msg_
+          new:nnnn {cexam}{l3-too-old}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./cexam.sty:31: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31 \msg_
+          new:nnnn {cexam}{l3-too-old}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 31.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 31.
+./cexam.sty:32: You can't use `macro parameter character #' in math mode.
+<recently read> ##
+                  
+l.32 {Support~package~'#
+                        1'~too~old.}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: You have requested package `',
+               but the package provides `cexam'.
+
+Package: cexam 2020/03/28 vv3.2.6(testing) For Chinese middle school examinatio
+n
+\cexam_txtht_box=\box49
+\cexam_picture_box=\box50
+\cho_option_box=\box51
+\cexam_option_box=\box52
+\sep_temp_box=\box53
+\cho_optpic_box=\box54
+\cexam_number_box=\box55
+\blank_wd_box=\box56
+\fmt_picture_box=\box57
+\fmt_picture_vbox=\box58
+\fmt_picture_hbox=\box59
+\fmt_pic_vbox=\box60
+\fmt_pic_hbox=\box61
+\fmt_pic_r_hbox=\box62
+\fmt_pic_r_vbox=\box63
+\fmt_pic_t_vbox=\box64
+\ind_hat_vbox=\box65
+\ind_hat_hbox=\box66
+\ind_hat_box=\box67
+\rec_tempht_dim=\dimen173
+\cexam_psrin_dim=\dimen174
+\cexam_pslin_dim=\dimen175
+\cexam_pswd_dim=\dimen176
+\cexam_picht_dim=\dimen177
+\cexam_picwd_dim=\dimen178
+\cho_lmax_dim=\dimen179
+\cho_lmax_i_dim=\dimen180
+\cho_lmax_ii_dim=\dimen181
+\cho_optwd_dim=\dimen182
+\cho_optwd_i_dim=\dimen183
+\sep_HD_ht=\dimen184
+\cho_optpic_ht_dim=\dimen185
+\cho_optpic_hti_dim=\dimen186
+\cho_optpic_wd_dim=\dimen187
+\cexam_indent_dim=\dimen188
+\cexam_indent_i_dim=\dimen189
+\cexam_pictxt_skip=\dimen190
+\cexam_numtxt_skip=\dimen191
+\cexam_pic_linwd_dim=\dimen192
+\blank_wd_dim=\dimen193
+\get_rec_linewd_dim=\dimen194
+\cexam_picwd_limit=\dimen195
+\cho_hat_dim=\dimen196
+\cho_hat_wd_dim=\dimen197
+./cexam.sty:100: Undefined control sequence.
+<argument> .3\ccwd 
+                   
+l.100 \dim_set:Nn \cho_hat_dim {.3\ccwd}
+                                        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cexam.sty:100: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \__dim_eval_end: 
+l.100 \dim_set:Nn \cho_hat_dim {.3\ccwd}
+                                        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./cexam.sty:101: Undefined control sequence.
+<argument> 1.2\ccwd 
+                    
+l.101 \dim_set:Nn \cho_hat_wd_dim {1.2\ccwd}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cexam.sty:101: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \__dim_eval_end: 
+l.101 \dim_set:Nn \cho_hat_wd_dim {1.2\ccwd}
+                                            
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+\cho_hat_ht_dim=\dimen198
+./cexam.sty:104: Undefined control sequence.
+<argument> .7\ccwd 
+                   
+l.104 \dim_set:Nn \cho_hat_ht_dim {.7\ccwd}
+                                           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cexam.sty:104: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \__dim_eval_end: 
+l.104 \dim_set:Nn \cho_hat_ht_dim {.7\ccwd}
+                                           
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+\ind_hat_hdim=\dimen199
+./cexam.sty:106: Undefined control sequence.
+<argument> .8\ccwd 
+                   
+l.106 \dim_set:Nn \ind_hat_hdim {.8\ccwd}
+                                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cexam.sty:106: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \__dim_eval_end: 
+l.106 \dim_set:Nn \ind_hat_hdim {.8\ccwd}
+                                         
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+\fmt_pic_t_xdim=\dimen256
+\fmt_pic_t_ydim=\dimen257
+\fmt_picture_xdim=\dimen258
+\fmt_picture_ydim=\dimen259
+\cexam_number_int=\count171
+\cexam_equ_int=\count172
+\cexam_numtemp_int=\count173
+\cexam_picmath_int=\count174
+\cexam_totalnum_int=\count175
+\cexam_qitem_int=\count176
+\example_number_int=\count177
+\cexam_numold_int=\count178
+./cexam.sty:148: Undefined control sequence.
+l.148 \ProcessKeysOptions
+                          {cexam / option}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\letter_ht_dim=\dimen260
+\letter_ltskip_dim=\dimen261
+)
+! Emergency stop.
+<*> cexam.sty^^M
+                
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 1284 strings out of 479488
+ 32136 string characters out of 5885585
+ 270165 words of memory out of 5000000
+ 18818 multiletter control sequences out of 15000+600000
+ 532338 words of font info for 24 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 34i,3n,82p,180b,216s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.

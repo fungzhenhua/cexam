@@ -1,0 +1,73 @@
+\documentclass[a4paper,fontset = windowsnew]{ctexbook}
+\usepackage{xifthen}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{tikz}
+%\usepackage{amsmath}
+\usepackage{cexam}
+
+\begin{document}
+\chapter{精简代码后的程序}
+
+\parindent=0pt
+\ExplSyntaxOn
+
+\rule{\linewidth}{1pt}
+\par
+
+\bool_set_true:N \cexam_fmt_bool
+%    \cexam_type_i:nnnnnnn
+%    \cexam_type_ii:nnnnnnnnn
+    \cexam_type_iii:nnnnnnn
+%    \cexam_type_iv:nnnnnnnn
+    {r}
+      {
+	\begin{tikzpicture}
+	  \draw (0,0) rectangle (3,5);
+	\end{tikzpicture}
+      }
+      {20pt}{15pt}{40pt}{60pt}
+%      {60pt}{0pt}
+      {
+	这是第三版的图文试题排版测试
+	这是第三版的图文试题排版测试
+	\begin{equation}
+	  E=MC^2
+	\end{equation}
+	这是第三版的图文试题排版测试
+      }
+      \newline
+      {
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+	这是副文本这是副文本这是副文本
+      }
+%
+      \newpage
+      \rule{\linewidth}{1pt}
+      \par
+      \cexam_type_v:nnnnn
+      {20pt}{0pt}
+      {40pt}{0pt}
+      {
+	这是无图模式测试这是无图模式测试这是无图模式测试
+	这是无图模式测试这是无图模式测试这是无图模式测试
+	这是无图模式测试这是无图模式测试这是无图模式测试
+	这是无图模式测试这是无图模式测试这是无图模式测试
+	这是无图模式测试这是无图模式测试这是无图模式测试
+      }
+      \newline
+      这是选项部分这是选项部分这是选项部分这是选项部分这
+      是选项部分这是选项部分这是选项部分这是选项部分这是
+      选项部分这是选项部分这是选项部分这是选项部分
+
+\end{document}

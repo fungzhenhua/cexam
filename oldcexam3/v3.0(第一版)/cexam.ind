@@ -1,0 +1,280 @@
+
+ \begin{theindex} 
+ \makeatletter\scan@allowedfalse
+{\bfseries\hfil Symbols\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&\[&}\pfill \hdclindex{31}{}{23}, 
+		\hdclindex{34}{}{26}, \hdclindex{50}{}{41}, 
+		\hdclindex{104}{}{93}, \hdclindex{106}{}{95}
+  \item {\verbatim@font \verb*&\]&}\pfill \hdclindex{31}{}{23}, 
+		\hdclindex{34}{}{26}, \hdclindex{50}{}{41}, 
+		\hdclindex{104}{}{93}, \hdclindex{106}{}{95}
+
+  \indexspace
+{\bfseries\hfil B\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&\baselineskip&}\pfill 
+		\hdclindex{11}{}{8}, \hdclindex{12}{}{9}
+  \item {\verbatim@font \verb*&\begin&}\pfill \hdclindex{38}{}{30}, 
+		\hdclindex{41}{}{33}, \hdclindex{53}{}{44}, 
+		\hdclindex{109}{}{98}, \hdclindex{111}{}{100}
+  \item \pkg{bool} commands:\efill 
+ \subitem {\verbatim@font \verb*&\bool&\_\verb*&if:NTF&}\pfill 
+		\hdclindex{156}{}{141}, \hdclindex{162}{}{147}, 
+		\hdclindex{169}{}{154}
+    \subitem {\verbatim@font \verb*&\bool&\_\verb*&new:N&}\pfill 
+		\hdclindex{4}{}{3}, \hdclindex{5}{}{4}
+    \subitem {\verbatim@font \verb*&\bool&\_\verb*&set&\_\verb*&false:N&}\pfill 
+		\hdclindex{70}{}{60}, \hdclindex{84}{}{74}, 
+		\hdclindex{117}{}{106}, \hdclindex{118}{}{107}
+    \subitem {\verbatim@font \verb*&\bool&\_\verb*&set&\_\verb*&true:N&}\pfill 
+		\hdclindex{64}{}{54}, \hdclindex{75}{}{65}, 
+		\hdclindex{81}{}{71}, \hdclindex{89}{}{79}, 
+		\hdclindex{91}{}{81}
+  \item \pkg{box} commands:\efill 
+ \subitem {\verbatim@font \verb*&\box&\_\verb*&dp:N&}\pfill 
+		\hdclindex{139}{}{126}
+    \subitem {\verbatim@font \verb*&\box&\_\verb*&ht:N&}\pfill 
+		\hdclindex{140}{}{127}
+    \subitem {\verbatim@font \verb*&\box&\_\verb*&new:N&}\pfill 
+		\hdclindex{7}{}{5}
+
+  \indexspace
+{\bfseries\hfil C\hfil}\nopagebreak
+
+  \item \pkg{cexam} commands:\efill 
+ \subitem {\verbatim@font \verb*&\cexam&\_\verb*&equ&\_\verb*&int&}\pfill 
+		\hdclindex{21}{main}{15}, \hdclindex{135}{}{122}, 
+		\hdclindex{138}{}{125}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&get:nNnN&}\pfill 
+		\hdclindex{123}{usage}{6}, \hdclindex{124}{}{112}, 
+		\hdclindex{149}{}{135}, \hdclindex{151}{}{137}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&rec:nnnn&}\pfill 
+		\hdclindex{153}{usage}{7}, \hdclindex{154}{}{139}, 
+		\hdclindex{171}{}{156}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&rec&\_\verb*&i:nNnNnn&}\pfill 
+		\hdclindex{142}{usage}{6}, \hdclindex{143}{}{129}, 
+		\hdclindex{159}{}{144}, \hdclindex{164}{}{149}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&get&\_\verb*&txtht:nnn&}\pfill 
+		\hdclindex{6}{usage}{3}, \hdclindex{132}{usage}{6}, 
+		\hdclindex{133}{}{120}, \hdclindex{145}{}{131}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&mat&\_\verb*&sub&\_\verb*&dim&}\pfill 
+		\hdclindex{8}{main}{6}, \hdclindex{164}{}{149}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&pslin&\_\verb*&dim&}\pfill 
+		\hdclindex{15}{main}{11}, \hdclindex{184}{}{166}, 
+		\hdclindex{193}{}{175}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&psnum&\_\verb*&int&}\pfill 
+		\hdclindex{19}{main}{14}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&psrin&\_\verb*&dim&}\pfill 
+		\hdclindex{15}{main}{11}, \hdclindex{185}{}{167}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&pswd&\_\verb*&dim&}\pfill 
+		\hdclindex{15}{main}{11}, \hdclindex{186}{}{168}, 
+		\hdclindex{187}{}{169}, \hdclindex{188}{}{170}, 
+		\hdclindex{195}{}{177}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep:n&}\pfill 
+		\hdclindex{96}{usage}{5}, \hdclindex{97}{}{86}, 
+		\hdclindex{157}{}{142}, \hdclindex{158}{}{143}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&i:n&}\pfill 
+		\hdclindex{23}{usage}{4}, \hdclindex{24}{}{16}, 
+		\hdclindex{48}{}{39}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&ii:n&}\pfill 
+		\hdclindex{23}{usage}{4}, \hdclindex{31}{}{23}, 
+		\hdclindex{51}{}{42}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&iii:n&}\pfill 
+		\hdclindex{23}{usage}{4}, \hdclindex{38}{}{30}, 
+		\hdclindex{54}{}{45}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&isin:nn&}\pfill 
+		\hdclindex{59}{usage}{5}, \hdclindex{60}{}{50}, 
+		\hdclindex{101}{}{90}, \hdclindex{106}{}{95}, 
+		\hdclindex{111}{}{100}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep&\_\verb*&mk:n&}\pfill 
+		\hdclindex{44}{usage}{4}, \hdclindex{45}{}{36}, 
+		\hdclindex{73}{}{63}, \hdclindex{82}{}{72}, 
+		\hdclindex{90}{}{80}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&cape:&}\pfill 
+		\hdclindex{177}{usage}{7}, \hdclindex{178}{}{161}, 
+		\hdclindex{183}{}{165}, \hdclindex{193}{}{175}, 
+		\hdclindex{195}{}{177}, \hdclindex{198}{}{180}, 
+		\hdclindex{200}{}{182}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sha&\_\verb*&mk:nnnn&}\pfill 
+		\hdclindex{179}{usage}{7}, \hdclindex{180}{}{162}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&shad:&}\pfill 
+		\hdclindex{175}{usage}{7}, \hdclindex{176}{}{160}, 
+		\hdclindex{183}{}{165}, \hdclindex{192}{}{174}, 
+		\hdclindex{193}{}{175}, \hdclindex{194}{}{176}, 
+		\hdclindex{195}{}{177}, \hdclindex{197}{}{179}, 
+		\hdclindex{198}{}{180}, \hdclindex{199}{}{181}, 
+		\hdclindex{200}{}{182}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&txt&\_\verb*&sub&\_\verb*&dim&}\pfill 
+		\hdclindex{8}{main}{6}, \hdclindex{159}{}{144}
+    \subitem {\verbatim@font \verb*&\cexam&\_\verb*&txtht&\_\verb*&box&}\pfill 
+		\hdclindex{6}{main}{5}, \hdclindex{136}{}{123}, 
+		\hdclindex{139}{}{126}, \hdclindex{140}{}{127}
+  \item \pkg{cexam} internal commands:\efill 
+ \subitem {\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&sep&\_\verb*&by&\_\verb*&bool&}\pfill 
+		\hdclindex{3}{main}{3}, \hdclindex{64}{}{54}, 
+		\hdclindex{81}{}{71}, \hdclindex{89}{}{79}, 
+		\hdclindex{118}{}{107}, \hdclindex{162}{}{147}
+    \subitem {\verbatim@font \verb*&\g&\_\_\verb*&cexam&\_\verb*&sep&\_\verb*&tl&\_\verb*&bool&}\pfill 
+		\hdclindex{3}{main}{3}, \hdclindex{70}{}{60}, 
+		\hdclindex{75}{}{65}, \hdclindex{84}{}{74}, 
+		\hdclindex{91}{}{81}, \hdclindex{117}{}{106}, 
+		\hdclindex{156}{}{141}, \hdclindex{169}{}{154}
+  \item \pkg{cs} commands:\efill 
+ \subitem {\verbatim@font \verb*&\cs&\_\verb*&new:Nn&}\pfill 
+		\hdclindex{176}{}{160}
+    \subitem {\verbatim@font \verb*&\cs&\_\verb*&new:Npn&}\pfill 
+		\hdclindex{24}{}{16}, \hdclindex{31}{}{23}, 
+		\hdclindex{38}{}{30}, \hdclindex{45}{}{36}, 
+		\hdclindex{60}{}{50}, \hdclindex{97}{}{86}, 
+		\hdclindex{124}{}{112}, \hdclindex{133}{}{120}, 
+		\hdclindex{143}{}{129}, \hdclindex{154}{}{139}, 
+		\hdclindex{180}{}{162}
+    \subitem {\verbatim@font \verb*&\cs&\_\verb*&new&\_\verb*&protected:Nn&}\pfill 
+		\hdclindex{178}{}{161}
+    \subitem {\verbatim@font \verb*&\cs&\_\verb*&set:Nn&}\pfill 
+		\hdclindex{26}{}{18}, \hdclindex{27}{}{19}, 
+		\hdclindex{28}{}{20}, \hdclindex{33}{}{25}, 
+		\hdclindex{34}{}{26}, \hdclindex{35}{}{27}, 
+		\hdclindex{40}{}{32}, \hdclindex{41}{}{33}, 
+		\hdclindex{42}{}{34}, \hdclindex{67}{}{57}, 
+		\hdclindex{68}{}{58}, \hdclindex{69}{}{59}, 
+		\hdclindex{74}{}{64}, \hdclindex{83}{}{73}, 
+		\hdclindex{114}{}{103}, \hdclindex{115}{}{104}, 
+		\hdclindex{116}{}{105}, \hdclindex{183}{}{165}, 
+		\hdclindex{192}{}{174}, \hdclindex{194}{}{176}, 
+		\hdclindex{197}{}{179}, \hdclindex{199}{}{181}
+
+  \indexspace
+{\bfseries\hfil D\hfil}\nopagebreak
+
+  \item \pkg{dim} commands:\efill 
+ \subitem {\verbatim@font \verb*&\dim&\_\verb*&add:Nn&}\pfill 
+		\hdclindex{140}{}{127}
+    \subitem {\verbatim@font \verb*&\dim&\_\verb*&compare:nTF&}\pfill 
+		\hdclindex{146}{}{132}, \hdclindex{160}{}{145}, 
+		\hdclindex{167}{}{152}
+    \subitem {\verbatim@font \verb*&\dim&\_\verb*&new:N&}\pfill 
+		\hdclindex{9}{}{6}, \hdclindex{10}{}{7}, 
+		\hdclindex{14}{}{10}, \hdclindex{16}{}{11}, 
+		\hdclindex{17}{}{12}, \hdclindex{18}{}{13}
+    \subitem {\verbatim@font \verb*&\dim&\_\verb*&set:Nn&}\pfill 
+		\hdclindex{11}{}{8}, \hdclindex{12}{}{9}, 
+		\hdclindex{139}{}{126}, \hdclindex{184}{}{166}, 
+		\hdclindex{185}{}{167}, \hdclindex{186}{}{168}
+    \subitem {\verbatim@font \verb*&\dim&\_\verb*&sub:Nn&}\pfill 
+		\hdclindex{128}{}{116}, \hdclindex{148}{}{134}, 
+		\hdclindex{187}{}{169}, \hdclindex{188}{}{170}
+    \subitem {\verbatim@font \verb*&\dim&\_\verb*&use:N&}\pfill 
+		\hdclindex{193}{}{175}, \hdclindex{195}{}{177}, 
+		\hdclindex{200}{}{182}
+    \subitem {\verbatim@font \verb*&\dim&\_\verb*&while&\_\verb*&do:nNnn&}\pfill 
+		\hdclindex{126}{}{114}
+
+  \indexspace
+{\bfseries\hfil E\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&\end&}\pfill \hdclindex{38}{}{30}, 
+		\hdclindex{41}{}{33}, \hdclindex{109}{}{98}, 
+		\hdclindex{111}{}{100}
+  \item \pkg{exp} commands:\efill 
+ \subitem {\verbatim@font \verb*&\exp&\_\verb*&args:NNx&}\pfill 
+		\hdclindex{183}{}{165}, \hdclindex{192}{}{174}, 
+		\hdclindex{194}{}{176}, \hdclindex{197}{}{179}, 
+		\hdclindex{199}{}{181}
+    \subitem {\verbatim@font \verb*&\exp&\_\verb*&args:No&}\pfill 
+		\hdclindex{157}{}{142}
+
+  \indexspace
+{\bfseries\hfil H\hfil}\nopagebreak
+
+  \item \pkg{hbox} commands:\efill 
+ \subitem {\verbatim@font \verb*&\hbox&\_\verb*&set:Nn&}\pfill 
+		\hdclindex{136}{}{123}
+
+  \indexspace
+{\bfseries\hfil I\hfil}\nopagebreak
+
+  \item \pkg{int} commands:\efill 
+ \subitem {\verbatim@font \verb*&\int&\_\verb*&add:Nn&}\pfill 
+		\hdclindex{129}{}{117}, \hdclindex{182}{}{164}
+    \subitem {\verbatim@font \verb*&\int&\_\verb*&new:N&}\pfill 
+		\hdclindex{20}{}{14}, \hdclindex{22}{}{15}
+    \subitem {\verbatim@font \verb*&\int&\_\verb*&set:Nn&}\pfill 
+		\hdclindex{135}{}{122}, \hdclindex{138}{}{125}
+    \subitem {\verbatim@font \verb*&\int&\_\verb*&sub:Nn&}\pfill 
+		\hdclindex{191}{}{173}
+    \subitem {\verbatim@font \verb*&\int&\_\verb*&use:N&}\pfill 
+		\hdclindex{135}{}{122}, \hdclindex{138}{}{125}, 
+		\hdclindex{183}{}{165}
+    \subitem {\verbatim@font \verb*&\int&\_\verb*&while&\_\verb*&do:nNnn&}\pfill 
+		\hdclindex{189}{}{171}
+
+  \indexspace
+{\bfseries\hfil L\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&\linewidth&}\pfill 
+		\hdclindex{145}{}{131}, \hdclindex{200}{}{182}
+
+  \indexspace
+{\bfseries\hfil P\hfil}\nopagebreak
+
+  \item {\verbatim@font \verb*&\parbox&}\pfill 
+		\hdclindex{132}{usage}{6}, \hdclindex{137}{}{124}
+  \item {\verbatim@font \verb*&\pasha&}\pfill \hdclindex{177}{usage}{7}
+
+  \indexspace
+{\bfseries\hfil R\hfil}\nopagebreak
+
+  \item \pkg{rec} commands:\efill 
+ \subitem {\verbatim@font \verb*&\rec&\_\verb*&tempht&\_\verb*&dim&}\pfill 
+		\hdclindex{13}{main}{10}, \hdclindex{145}{}{131}, 
+		\hdclindex{146}{}{132}, \hdclindex{148}{}{134}, 
+		\hdclindex{149}{}{135}
+  \item {\verbatim@font \verb*&\relax&}\pfill \hdclindex{165}{}{150}, 
+		\hdclindex{166}{}{151}, \hdclindex{172}{}{157}, 
+		\hdclindex{173}{}{158}
+
+  \indexspace
+{\bfseries\hfil S\hfil}\nopagebreak
+
+  \item \pkg{scan} commands:\efill 
+ \subitem {\verbatim@font \verb*&\scan&\_\verb*&stop:&}\pfill 
+		\hdclindex{24}{}{16}, \hdclindex{31}{}{23}, 
+		\hdclindex{38}{}{30}, \hdclindex{45}{}{36}, 
+		\hdclindex{48}{}{39}, \hdclindex{51}{}{42}, 
+		\hdclindex{54}{}{45}, \hdclindex{73}{}{63}, 
+		\hdclindex{82}{}{72}, \hdclindex{90}{}{80}, 
+		\hdclindex{97}{}{86}, \hdclindex{157}{}{142}, 
+		\hdclindex{158}{}{143}
+  \item \pkg{sep} commands:\efill 
+ \subitem {\verbatim@font \verb*&\sep&\_\verb*&by&\_\verb*&dim:&}\pfill 
+		\hdclindex{27}{}{19}, \hdclindex{34}{}{26}, 
+		\hdclindex{41}{}{33}, \hdclindex{68}{}{58}, 
+		\hdclindex{115}{}{104}, \hdclindex{164}{}{149}
+    \subitem {\verbatim@font \verb*&\sep&\_\verb*&hd&\_\verb*&dim:&}\pfill 
+		\hdclindex{26}{}{18}, \hdclindex{33}{}{25}, 
+		\hdclindex{40}{}{32}, \hdclindex{67}{}{57}, 
+		\hdclindex{74}{}{64}, \hdclindex{114}{}{103}, 
+		\hdclindex{159}{}{144}
+    \subitem {\verbatim@font \verb*&\sep&\_\verb*&tl&\_\verb*&dim:&}\pfill 
+		\hdclindex{28}{}{20}, \hdclindex{35}{}{27}, 
+		\hdclindex{42}{}{34}, \hdclindex{69}{}{59}, 
+		\hdclindex{83}{}{73}, \hdclindex{116}{}{105}, 
+		\hdclindex{171}{}{156}
+  \item \pkg{str} commands:\efill 
+ \subitem {\verbatim@font \verb*&\str&\_\verb*&if&\_\verb*&in:nnTF&}\pfill 
+		\hdclindex{47}{}{38}, \hdclindex{50}{}{41}, 
+		\hdclindex{53}{}{44}, \hdclindex{62}{}{52}, 
+		\hdclindex{65}{}{55}, \hdclindex{79}{}{69}, 
+		\hdclindex{87}{}{77}, \hdclindex{99}{}{88}, 
+		\hdclindex{104}{}{93}, \hdclindex{109}{}{98}
+
+  \indexspace
+{\bfseries\hfil T\hfil}\nopagebreak
+
+  \item \TeX{} and \LaTeXe{} commands:\efill 
+ \subitem {\verbatim@font \verb*&\c@equation&}\pfill 
+		\hdclindex{135}{}{122}, \hdclindex{138}{}{125}
+
+ \end{theindex}

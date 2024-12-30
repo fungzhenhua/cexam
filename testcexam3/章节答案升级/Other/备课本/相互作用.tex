@@ -1,0 +1,172 @@
+\section{力\quad 基本相互作用}
+\subsection{定义}
+物体与物体的\CJKunderwave{相互作用}叫做力.英文中力是Force ,所以力的符号用 F 表示.
+
+基本相互作用(fundamental interaction),为物质间最基本的相互作用,常称为{\heiti 自然界四力}或{\heiti 宇宙基本力}.迄今为止观察到的所有关于物质的物理现象,在物理学中都可以借肋这四种基本相互作用的机制得到描述和解释.\footnote{引用自百度百科词条:基本相互作用}
+
+\subsubsection{万有引力}
+
+万有引力是四个基本相互作用中最弱的,但是同时又是作用范围最大的,当距离增大时,万有引力作用将会递减,假设两个质点相距$r$,其质量分别为$m_1,m_2$,则万有引力的计算公式为
+\begin{equation}
+  F=G\cfrac{m_1m_2}{r^2}
+\end{equation}
+
+\subsubsection{弱相互作用}
+
+弱相互作用又叫做弱核力,次原子粒子的放射性衰变就是由它引起的,恒星中一种叫做氢聚变的过程也是由它启动的.弱相互作用会影响所有的费米子,即所有自旋为半奇数的粒子.主要是核子产生天然放射,四种基本相互作用中,弱相互作用只比万有引力强一点.
+
+\subsubsection{电磁相互作用}
+
+世界上大部分物质都具有电磁力,而磁与电是电磁力的不同表现模式,本质上是相同的一种物质.例如:电荷异性相吸,同性相斥的特性就是其中之一,电磁力和重力一样,其作用影响范围是无限大的.
+
+\subsubsection{强相互作用}
+强相互作用又称为强核力,所有存在宇宙中的物体都是由原子构成的,而原子又是由原子核与核外电子构成的,原子核由中子和质子组成.中子没有电荷,而质子带正电,但需要牵引力把它们结合在一起,强相互作用就是这种``牵引力''.
+
+\subsection{力的性质}
+\subsubsection{矢标性}
+力是也有大小和方向,同时力的计算满足平行四边行定则,所以力是一个矢量.
+\subsubsection{单位}
+为了纪念伟大的物理学家牛顿在力学中的贡献,将力的单位定为:牛顿,简称:牛,符号:$N$
+\subsubsection{力的作用效果}
+力的作用效果有两种:一,使物体的\CJKunderwave{运动状态}发生变化;二,使物体\CJKunderwave{发生形变}.
+\subsubsection{注意事项}
+物体与物体有相互作用,不一定要直接相互接触.例如:电荷与电荷之间,磁体与磁体之间,磁体与电流之间,地球与太阳之间,都有相互作用,但是都没有直接接触.
+
+\subsection{力的示意图}
+力有三个基本要素:\CJKunderwave{大小}、\CJKunderwave{方向}、\CJKunderwave{作用点}.
+
+严格来讲，力还有作用线，它会影响到物体的力矩和转动效应，但是这一部分主要研究平动，不涉及转动，所以暂时不研究作用线.
+
+在处理问题时,有时不必把力的三个基本要素都画出来,这里只画出力的方向和作用点就可以了,这样\CJKunderwave{用一条带箭头的线段(有向线段)来表示力}的方向,叫做力的示意图.注意,此时不必标注力的大小.
+
+如图\ref{fig:shiyitu} 给出了力的示意图的一个示例,其中作用点既可以画作前头处,也可以画在前尾处.
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \draw (0,0) rectangle (1,1);
+    \draw [pattern=north west lines](-0.5,-0.2)--(-0.5,0)--(1.5,0)--(1.5,-0.2);
+    \draw [->] (0,0.5) -- (1.4,0.5) node [anchor=north west]{\small F};
+    \filldraw[black] (0,0.5) circle [radius=1pt];
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw (0,0) rectangle (1,1);
+    \draw [pattern=north west lines](-0.5,-0.2)--(-0.5,0)--(1.5,0)--(1.5,-0.2);
+    \draw [->] (-1,0.5) -- (0,0.5) node [anchor=north west]{\small F};
+    \filldraw[black] (0,0.5) circle [radius=1pt];
+  \end{tikzpicture}
+  \caption{力的示意图}
+  \label{fig:shiyitu}
+\end{figure}
+\subsubsection{力的图示}
+力的图示就是用作图的方式表示力,这就要求表示出力的大小、方向和作用点.所以作力的图示,首先要根据所画力的大小选择适当的单位长度.仍然是用一条带箭头的线段(有向线段)来表示力,线段的长度表示力的大小,作用点和方向同力的示意图.
+ 
+如图\ref{fig:tushi} 所示画出了一个$15N$ 的拉力 和 一个 $8N$ 的推力.
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \draw (-1,0.5)--(-0.5,0.5);
+    \draw (-1,0.5)--(-1,0.6);
+    \draw (-0.5,0.5)--(-0.5,0.6);
+    \draw (-0.75,0.5) node [anchor=south] {\small $5N$};
+    \draw (0,0) rectangle (1,1);
+    \draw [pattern=north west lines](-0.5,-0.2)--(-0.5,0)--(1.5,0)--(1.5,-0.2);
+    \draw [->] (0,0.5) -- (1.5,0.5) node [anchor=north west]{\small $F=15N$};
+    \draw (0,0.5)--(0,0.6);
+    \draw (0.5,0.5)--(0.5,0.6);
+    \draw (1,0.5)--(1,0.6);
+    \draw (1.5,0.5)--(1.5,0.6);
+    \filldraw[black] (0,0.5) circle [radius=1pt];
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw (-2,0.5)--(-1.5,0.5);
+    \draw (-2,0.5)--(-2,0.6);
+    \draw (-1.5,0.5)--(-1.5,0.6);
+    \draw (-1.75,0.5) node [anchor=south] {\small $4N$};
+    \draw (0,0) rectangle (1,1);
+    \draw [pattern=north west lines](-0.5,-0.2)--(-0.5,0)--(1.5,0)--(1.5,-0.2);
+    \draw (-1,0.5)--(-1,0.6);
+    \draw (-0.5,0.5)--(-0.5,0.6);
+    \draw [->] (-1,0.5) -- (0,0.5) node [anchor=north west]{\small $F=8N$};
+    \filldraw[black] (0,0.5) circle [radius=1pt];
+  \end{tikzpicture}
+  \caption{力的图示}
+  \label{fig:tushi}
+\end{figure}
+
+\subsection{例题分析}
+
+\begin{selection}
+  1.关于力的概念,下列说法中正确的是
+  A.力是使物体发生形变和运动状态发生变化的原因
+  B.一个力必定联系着两个物体,其中每个物体既是施力物体也是受力物体
+  C.只要两个力的大小相等,它们产生的效果一定相同
+  D.两个物体相互作用,其相互作用力是有先后的
+
+  a.AB
+
+  e.从力的基本概念出发作出判断.根据力的两个作用效果,可知A正确.根据力的相互性,可知B正确.根据斩的三要素,可知力的作用效果不仅与力的大小有关,还与力的方向和作用点的位置有关,所以C错误.物体间的相互作用力是同时的,没有时间上的先后关系,所以D错误.关于相互作用的性质,在牛顿运动定律一节再进行深入讨论.
+
+  2.下列说法正确的是
+  A.``风吹草动'' ,草受到了力,但是没有施力物体,说明没有施力物体的力也是存在的
+  B.运动员将球踢出,球在空中飞行是因为受到一个向前的推力
+  C.甲用力把乙推倒,只是甲对乙有力,而乙对甲没有力
+  D.两个物体发生相互作用不一定相互接触
+
+  a.D
+
+  e.力是物体对物体的作用,任何力都有施力物体和受力物体,它是一种客观实在,``风吹草动'',施力物体是空气,故A错.踢出去的球向前运动,是因为惯性,也可以认为没有找到施力物体,故而没有受到向前的推力,故B错.由力的相互性可知,甲推乙的同时,乙也推甲,故C错.物体发生相互作用并不一定相互接触,如电荷之间,磁铁之间的相互作用就不需要直接接触,D对.
+
+\end{selection}
+
+\begin{calculate}
+  3.在图甲中木箱p点,用与水平方向成$30^\circ$角斜向上方的$150N$ 的力拉木箱;在图乙中木块的Q 点,用与竖直方向成$60^\circ$  角斜向左上方的$20N$ 的力把木块抵在墙壁上,试作出甲、乙两图中所给力的图示,并作出图丙中电灯所受重力和拉力的示意图.
+  
+\end{calculate}
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \draw  (0,0) rectangle (1,1) node [anchor=north west]{\small $P$}; 
+    \draw [pattern=north west lines](-0.5,-0.2)-- (-0.5 , 0)--(1.5,0)--(1.5,-0.2);
+    \draw (0.5,-0.3) node [anchor=north]{\small 甲};
+    \filldraw[black] (1,1) circle [radius=1pt];
+    \draw (-1,0.5)--(-0.5,0.5);
+    \draw (-1,0.5)--(-1,0.6);
+    \draw (-0.5,0.5)--(-0.5,0.6);
+    \draw (-0.75,0.6) node [anchor=south]{\tiny $50N$ };
+    \draw [dotted] (1,1)--(2,1);
+    \draw [->,rotate around={30:(1,1)}] (1,1)--(2.5,1) node [anchor=west]{\tiny $F=150N$};
+    \draw [rotate around={30:(1,1)}](1.5,1)--(1.5,1.1);
+    \draw [rotate around={30:(1,1)}](2,1)--(2,1.1);
+    \draw [rotate around={30:(1,1)}](2.5,1)--(2.5,1.1);
+    \draw [rotate around={25:(1,1)}](1.5,1) node [anchor=west]{\tiny $30^\circ$};
+    \draw (1.4,1) arc (0:30:0.4);
+  \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw (0,0) rectangle (1,1) ;
+    \draw (1,0) node [anchor=west] {\small $Q$};
+    \filldraw[black] (1,0) circle [radius=1pt];
+    \draw [pattern=north west lines](-0.2,1.3)--(0,1.3)--(0,-0.3)--(-0.2,-0.3);
+    \draw (0.4,-0.3) node [anchor=north] {\small 乙};
+    \draw [->,rotate around={60:(1,0)}] (1,0)--(1,1) node [anchor=south west]{\tiny $F=20N$};
+    \draw [rotate around={60:(1,0)}] (1,0.5)--(1.1,0.5); 
+    \draw (-1,0.5) -- (-0.5,0.5);
+    \draw (-1,0.5) -- (-1,0.6);
+    \draw (-0.5,0.5) -- (-0.5,0.6);
+    \draw (-0.75,0.5) node [anchor=south] {\tiny $10N$};
+    \draw (1,0.3) arc (90:150:0.3);
+    \draw [rotate around={30:(1,0)}] (1,0.3) node [anchor=south]{\tiny $60^\circ$};
+  \end{tikzpicture}
+  \hspace{70pt}
+  \begin{tikzpicture}
+    \draw [pattern=north west lines] (-0.5,1)--(-0.5,0.8)--(0.5,0.8)--(0.5,1); 
+    \draw (0,0.8)--(0,0);
+    \draw (0,0)--(-0.4,-0.2)--(0.4,-0.2)--cycle;
+    \draw (-0.2,-0.2) arc (180:360:0.2);
+    \draw (0,-0.5) node [anchor=north] {\small 丙};
+    \draw [->](0,-0.2)--(0,-1) node [anchor=west]{\tiny $G$};
+    \draw [->](0,-0.2)--(0,0.6) node [anchor=west]{\tiny $T$};
+    \filldraw [black] (0,-0.2) circle [radius=1pt];
+  \end{tikzpicture}
+\end{figure}

@@ -1,0 +1,26 @@
+This is makeindex, version 2.15 [TeX Live 2020] (kpathsea + Thai support).
+Scanning style file /usr/local/texlive/2020/texmf-dist/makeindex/latex/gind.ist..........
+** Input style error (file = /usr/local/texlive/2020/texmf-dist/makeindex/latex/gind.ist, line = 70):
+   -- Unknown specifier lethead_prefix.
+** Input style error (file = /usr/local/texlive/2020/texmf-dist/makeindex/latex/gind.ist, line = 71):
+   -- Unknown specifier lethead_suffix.
+** Input style error (file = /usr/local/texlive/2020/texmf-dist/makeindex/latex/gind.ist, line = 72):
+   -- Unknown specifier lethead_flag.
+...done (13 attributes redefined, 3 ignored).
+Scanning input file cexam.idx......done (2569 entries accepted, 0 rejected).
+Sorting entries.........................done (32116 comparisons).
+Generating output file cexam.ind....
+## Warning (input = cexam.idx, line = 52; output = cexam.ind, line = 677):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+.
+## Warning (input = cexam.idx, line = 26; output = cexam.ind, line = 1380):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+.
+## Warning (input = cexam.idx, line = 136; output = cexam.ind, line = 1472):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = cexam.idx, line = 132; output = cexam.ind, line = 1472):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+done (1839 lines written, 4 warnings).
+Output written in cexam.ind.
+Transcript written in cexam.ilg.
