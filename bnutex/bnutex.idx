@@ -1,0 +1,6 @@
+\indexentry{chapter={\verbatim@font !\verb*&!\chapter&}|hdpindex{usage}}{MMMMI-1}
+\indexentry{section={\verbatim@font !\verb*&!\section&}|hdpindex{usage}}{MMMMI-1}
+\indexentry{jobname={\verbatim@font !\verb*&!\jobname&}|hdpindex{usage}}{MMMMI-2}
+\indexentry{baselineskip={\verbatim@font !\verb*&!\baselineskip&}|hdpindex{usage}}{MMMMI-2}
+\indexentry{prevgraf={\verbatim@font !\verb*&!\prevgraf&}|hdpindex{usage}}{MMMMI-2}
+\indexentry{install.sh={\verbatim@font !\verb*&install.sh&}|hdclindex{6}{main}}{MMMMV-1-MMMD-6-M}

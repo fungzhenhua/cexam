@@ -1,0 +1,306 @@
+% \iffalse meta-comment ^^M 此行的\iffalse 和 \end{document}后的那个\fi配对,用以在获得说明文档时越过.ins 文件
+% !TeX program  = XeLaTeX
+% !TeX encoding = UTF-8%
+%
+% bnutex.dtx
+% Copyright 2025- FengZhenhua <fengzhenhua@outlook.com>
+% 2025年01月01日, 开始撰写LaTexiii 版本的bnu论文模板
+%
+%<*internal>
+\iffalse
+%</internal>
+%
+%<*readme>
+bnutex
+=====
+"bnutex" is a LaTeX3 template designed for Beijing Normal University's undergraduate, graduate, and doctoral dissertations. It helps students format their papers according to university guidelines, ensuring consistency and compliance while simplifying the typesetting process. With "bnutex," students can focus on content creation without fretting over formatting.
+Authors and Contributors
+------------------------
+* Feng Zhenhua <fengzhenhua@outlook.com>
+Contributing
+------------
+This package was created by Feng Zhenhua.
+Copyright and Licence
+---------------------
+    Copyright (C) 2017--2020
+    FengZhenhua and any individual authors listed elsewhere in this file.
+    ----------------------------------------------------------------------
+    This work may be distributed and/or modified under the
+    conditions of the LaTeX Project Public License, either
+    version 1.3c of this license or (at your option) any later
+    version. This version of this license is in
+       http://www.latex-project.org/lppl/lppl-1-3c.txt
+    and the latest version of this license is in
+       http://www.latex-project.org/lppl.txt
+    and version 1.3 or later is part of all distributions of
+    LaTeX version 2005/12/01 or later.
+    This work has the LPPL maintenance status `maintained'.
+    The Current Maintainers of this work is Feng Zhenhua.
+    This package consists of the file bnutex.dtx
+                and the derived files bnutex.cls
+				      install.sh
+				      README.md (this file).
+  ------------------------------------------------------------------------------
+%</readme>
+%
+%<*internal>
+\fi
+%</internal>
+%
+%<*internal>
+\begingroup
+  \def\temp{LaTeX2e}
+\expandafter\endgroup\ifx\temp\fmtname\else 
+\csname fi\endcsname
+%</internal>
+%
+%<*install>
+\input ctxdocstrip
+\askforoverwritefalse
+\keepsilent
+%^^M 设置cexam.sty宏包前言
+\declarepreamble\cexampreamble 
+    Copyright (C) 2017--2020
+    Feng Zhenhua and any individual authors listed elsewhere in this file.
+    ----------------------------------------------------------------------
+    This work may be distributed and/or modified under the
+    conditions of the LaTeX Project Public License, either
+    version 1.3c of this license or (at your option) any later
+    version. This version of this license is in
+       http://www.latex-project.org/lppl/lppl-1-3c.txt
+    and the latest version of this license is in
+       http://www.latex-project.org/lppl.txt
+    and version 1.3 or later is part of all distributions of
+    LaTeX version 2005/12/01 or later.
+    This work has the LPPL maintenance status `maintained'.
+    The Current Maintainers of this work is Feng Zhenhua.
+------------------------------------------------------------------------------
+\endpreamble
+%
+%^^M 设置 install.sh脚本前言
+\declarepreamble\shpreamble 
+\endpreamble
+%
+%^^M 设置所有宏包后言
+\postamble   
+\endpostamble
+%
+% ^^M 设置生成文件放置目录
+\immediate\write18{if [ ! -e INSTALL ]; then mkdir INSTALL ; fi}
+\BaseDirectory{./}
+\DeclareDir{CexamDir}{INSTALL}
+\usedir{CexamDir}
+%
+%^^M 生成文件设置
+\generate  
+{
+   \usepreamble\cexampreamble
+   \file{bnutex.cls}	            {\from{\jobname.dtx}{package}}
+%</install>
+%<*internal>
+    \file{\jobname.ins}             {\from{\jobname.dtx}{install}}
+%</internal>
+%<*install>
+    \nopreamble\nopostamble
+    \file{README.md}                {\from{\jobname.dtx}{readme}}
+    \file{install.sh}	            {\from{\jobname.dtx}{install.sh}}
+}
+%
+\catcode32=12\space
+%
+\Msg{***************************************************************}
+\Msg{                                                               }
+\Msg{ To finish the installation you have to move the following     }
+\Msg{ file into proper directories searched by TeX:                 }
+\Msg{                                                               }
+\Msg{  bnutex.cls; bnutex.pdf ;  install.ssh                        }
+\Msg{                                                               }
+\Msg{ The recommended directory is TDS:                             }
+\Msg{                                                               }
+\Msg{/usr/local/texlive/texmf-local/tex/latex/local/bnutex.cls      }
+\Msg{/usr/local/texlive/texmf-local/doc/local/bnutex.pdf            }
+\Msg{                                                               }
+\Msg{ For convinencely you can  chmod +x  install.sh then run it.   }
+\Msg{								    }
+\Msg{ To produce the documentation run the file cexam.dtx	    }
+\Msg{ through XeLaTeX.						    }
+\Msg{								    }
+\Msg{ Happy TeXing!						    }
+\Msg{								    }
+\Msg{***************************************************************}
+%
+\endbatchfile 
+%</install>
+%<*internal>
+\fi  
+%</internal>
+%
+%<package|NeedsTeXFormat{LaTeX2e}
+%<package|RequirePackage{expl3,l3keys2e,xparse,l3draw}
+%<package>\RequirePackage{pifont}
+%<package>\GetIdInfo$Id: bnutex.dtx v3.0.0(alpha)  2025-01-01 ZhenhuaFeng  <fengzhenhua@outlook.com> $ {Beijing Normal University thesis template}
+%<package|ProvidesExplPackage{\ExplFileName}{\ExplFileDate}{\ExplFileVersion}{\ExplFileDescription}
+%
+%<*driver>
+%\PassOptionsToPackage{AutoFakeSlant = true , AutoFakeBold = true}{xeCJK} ^^M 开启宋体伪粗体，但是本文件中不打算开启，在此处仅作为拓展
+\documentclass{l3doc}
+\usepackage[fontset=windows,UTF8, punct=kaiming, heading, linespread=1.2, sub3section]{ctex}
+\usepackage{hologo}
+\usepackage[user=teacher,option=random,sourcecolor=blue]{cexam} ^^M 引入宏包,用以生成说明文档,展示排版效果
+\usepackage{tikz}
+\usepackage{amsthm} ^^M 此处宏包引入为了展示证明题的输入，当引入此宏包时加入证明结束符号，不引入则不加入证明结束符号
+\EnableCrossrefs
+\CodelineIndex
+\RecordChanges
+%\OnlyDescription
+\begin{document}
+  \DocInput{\jobname.dtx}
+  \PrintChanges
+  \PrintIndex
+\end{document}
+%</driver>
+%
+% \fi ^^M 此\fi 和第1行的\iffalse 配对
+% 
+% \changes{v3.0.0}{2019/04/09}{开始使用 \hologo{LaTeX3}{}构建bnutex.cls}
+%
+% \CheckSum{0}
+%
+% \CharacterTable
+%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%   Digits        \0\1\2\3\4\5\6\7\8\9
+%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%   Dollar        \$     Percent       \%     Ampersand     \&
+%   Acute accent  \'     Left paren    \(     Right paren   \)
+%   Asterisk      \*     Plus          \+     Comma         \,
+%   Minus         \-     Point         \.     Solidus       \/
+%   Colon         \:     Semicolon     \;     Less than     \<
+%   Equals        \=     Greater than  \>     Question mark \?
+%   Commercial at \@     Left bracket  \[     Backslash     \\
+%   Right bracket \]     Circumflex    \^     Underscore    \_
+%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%   Right brace   \}     Tilde         \~}
+%
+% \title{中文试题排版 cexam 宏包手册}
+% \author{冯振华}
+% \date{\ExplFileDate\qquad\ExplFileVersion\thanks{fengzhenhua@outlook.com}}
+% \maketitle
+%
+% 
+% \begin{abstract}
+% 我是一名高中物理教师,所以在工作中不可避免的会遇到输入数学公式的问题,同时我也希望能够将自己多年的备课及解决的疑难问题记录下来,以备学生们在复习时或者刚开始学习物理的同学作为教材的补充使用.历经各种困难,最后找到了\LaTeX{},发现了这个举世无双的神奇软件.2016年自学了一年的宏包编写，成功解决了高中的物理数学试卷的排版问题。但是之前直接写的sty文件和cls文件，实现了选择、填空、计算等题型的自动排版，同时实现批量处理各种题型、实现数学与图片的排版、自动生成beamer文档、生成答题卡、教师与学生不同模式排版。但是后来发现，功能越多代码越复杂，很难维护，同时也少了一份使用说明，所以写本文档，有两个目的：
+% 其一,方便代码的维护和升级;
+% 其二,方便参考此说明使用它排版试卷。
+%
+% 由于在2018年我成功使用\LaTeX2e{} 完成了 \file{cexam.dtx} 文件, 但是对 \pkg{doc} 和 \pkg{docstrip} 理解的不够深入所以最初写成的 \file{cexam.dtx} 文件不是很规范,同时考虑到了 CTeX{} 宏集使用 \hologo{LaTeX3}{} 进行了重写,\hologo{LaTeX3}{} 的语法更加友好,且已经很成熟了,所以我也决定对我的宏包 \pkg{cexam} 使用 \hologo{LaTeX3}{}重写以便于更好的维护和拓展功能.考虑到实践的检验,所以开始不拟实现全部功能,仅写出核心功能,经过一段时间的检验后再逐步实现各项功能。
+%
+% \noindent{\color{red} \fbox{\bf 注意}：由于在学生模式时需要输出答案，而这就需要修改\cs{chapter}和\cs{section}等章节命令以达成答案的输出。但是，如果引用\pkg{hyperref}宏包，则文档就会生成超链接，而\pkg{hyperref}比较复杂，同时其也对章节做了修改，因此在{\bf 调用\pkg{cexam}时需要将其放在\pkg{hyperref}之后}。}
+%
+% \end{abstract}
+% 
+%  \tableofcontents
+%
+% \clearpage
+% \setlength{\parskip}{0.8ex}
+%
+% \begin{documentation}
+%
+% \end{documentation}
+%
+%  \section{介绍}
+%  最初我是想找到一种快速输入数学公式的方法,通过万能的互联网,我认识到\LaTeX{}的强大.通过阅读《\LaTeX2e{}完全学习手册》\footnote{胡伟著$\cdot$ 清华大学出版社},掌握了\LaTeX{}的基本使用方法。但是对于中文的处理尤其是字体的安装使用在开始的时候很是个问题，同时我在教学工作中需要将我自己的讲义写成电子版，方便学生课下学习使用。这样就遇到了输入选择题，填空题，判断题，计算题等基本题型，这些题型都需要悬挂缩进，但是开始在\LaTeX{}下工作的时候，这个问题不好解决。经过长时间的学习，理解，深入阅读《The \TeX{} book （中文翻译版）》掌握了\TeX{}的基本原理，然后决心自己开发一个宏包，专门用来输入这些物理上常见的题型。
+% 
+% \LaTeX{}对于数学公式的处理具有先天的优势，因为它就是为了数学公式输入而生的。但是，对于图片和文字的混排处理的不是很好。虽然有一些图文绕排宏包，比如 \pkg{picinpar}等，但它们不能按照中国试题的格式给出排版，更别说自动处理选择题了。此宏包主要解决的就是这个图片和文字的混排问题，历经三次改进，最终形成了这个以\hologo{LaTeX3}{} 格式开发的版本，它更加现代，更加方便维护。第一版是边学习边写的，直接写的宏包，同时尽可能的自动实现排版试卷的各种功能，最初实现的功能有排版四种基本题型，自动写出答案到答案文件\cs{jobname}.ans ,自动生成beamer 文档，同时也写成了试卷排版文档类，实现了试卷的各种设置。但是随着功能的增加，以及开始所写的代码不是最优，同时又没有说明文档，所以开发变的非常困难。这时，我发现一些宏包基本都有说明文档，同时百度之后又发现还有文学化编程，通过研究这些网络知识，我最终学会了使用\pkg{dtx} 文件文学化编写\LaTeX{}宏包。于是，我开始准备进行将第一版整理成\pkg{dtx}文件的工作，由于理解的深入，在改写的同时也优化了一些代码，这就是第二版的来源。由于在使用中文的过程遇到了\pkg{ctexbook}等文档类，同时阅读它的说明文档时发现它的实现代码很特殊，这就是\hologo{LaTeX3}{},阅读了网络上的很多文章，同时也凭借自己的二把刀英语水平，阅读了\pkg{source3} 的部分内容，学会了这个更加现代化，且相当规范的下一代\LaTeX{}系统，所以决定使用\hologo{LaTeX3}{}重新实现之前的宏包。但是，由于理解的进一步深入，所以在实现基本的试题排版功能后，暂停一段时间的功能拓展，而进行代码的优化工作。同时，也是为了检验这支程序的可靠性。
+%
+% \pkg{cexam.sty}开发过程中的核心问题是测定行数，最初前两版是通过对比文本和图片的高度，采用循环命令逐次减去\cs{baselineskip}来实现的，这个命令在处理文字时能够得到准确的行数，但是一旦出现数学公式，并不是很理想，虽然大多数情况能够正确排版，但是偶尔还是会出现问题。在第三版的开发过程中，通过研究\cs{prevgraf}实现了行数的准确测定，这使开发工作大大加快，同时由于重写了测行程序，所以又改写了大量的基本排版程序\footnote{在v3.1.2版中进行的这个工作}。在2019年9月3日，通过一天的开发，实现四种基本题型的排版工作。同时，提供了四个题型的输入环境，同时兼顾了国人习惯，提供了对应于拼音名称的四种题型输入环境：\pkg{xuanze}\quad ,\quad \pkg{tiankong} \quad , \quad \pkg{panduan}\quad ,\quad \pkg{jisuan}。
+%
+%
+% \section{宏包的安装}
+% 
+% 由于宏包中的\pkg{解析}和\pkg{答案}是针对中文题型设计的,所以需要使用\pkg{xetex}\footnote{\pkg{xetex}是支持中文的，同时\pkg{xelatex}执行时程序名为\pkg{latex2e}，而\pkg{xetex}与之不同，于是实现了二合一的文件。}和\pkg{xelatex}编译\pkg{cexam.dtx}。
+% \begin{enumerate}
+%     \item 生成 \pkg{cexam.ins} 和  \pkg{cexam.sty}, 执行命令
+%         \begin{verbatim}
+%         $ xetex --shell-escape cexam.dtx
+%         \end{verbatim}
+%     \item 生成说明文档 \pkg{cexam.pdf}, 执行命令
+%         \begin{verbatim}
+%         $ xelatex cexam.dtx
+%         \end{verbatim}
+% \end{enumerate}
+% 
+% 
+% 考虑到每年texlive都会有一个更新，但是此宏包尚未计划进入texlive,所以不把宏包安装到对应年份目录下，而按装到默认的路径下，此宏包和说明文档安装位置分别为
+% 
+% \begin{verbatim}
+% # cp cexam.sty /usr/local/texlive/texmf-local/tex/latex/local/cexam.sty
+% # cp cexam.pdf /usr/local/texlive/texmf-local/doc/local/cexam.pdf
+% # texhash 更新包（类）数据库
+% \end{verbatim}
+% 
+% 将文件复制到对应文件夹后，由于使用的是 TexLive 所以还需要执行一下更新命令，让系统正确识别新安装的宏包和说明档，这样就可以使用 \pkg{texdoc} \pkg{cexam}来查找说明档。
+% 
+%<*install.sh> 
+% \begin{macro}[added=2020/12/29]{install.sh}
+% \changes{v3.3.3}{2020/12/29}{新增安装脚本}
+% \changes{v3.4.0}{2022/04/02}{设置texlive变量}
+% 为了提高效率，设置了安装脚本。
+%    \begin{macrocode}
+#!/bin/bash
+# 2023年12月03日星期日多云北京市
+echo "version: 1.2"
+echo "Author: Feng Zhenhua(冯振华)"
+printf "Date: "
+date
+%    \end{macrocode}
+% 检测系统版本
+%    \begin{macrocode}
+printf "System Information:"
+uname -a
+%    \end{macrocode}
+% 定义安装路径
+%    \begin{macrocode}
+LaTeX_STY="/usr/share/texmf-dist/tex/latex/cexam"
+LaTeX_DOC="/usr/share/texmf-dist/doc/latex/cexam"
+%    \end{macrocode}
+% 发出执行命令
+%    \begin{macrocode}
+if [ ! -d $LaTeX_STY ]; then
+    sudo mkdir $LaTeX_STY
+fi
+if [ ! -d $LaTeX_DOC ]; then
+    sudo mkdir $LaTeX_DOC
+fi
+echo  "cexam.sty , cexam.pdf, colornote.sty and ctrlwarning.sty is installing... ..."
+if [ -f ./cexam.sty ]; then
+    sudo cp ./cexam.sty ${LaTeX_STY}/cexam.sty
+else
+    echo  "I can't find the file cexam.sty in the directory ./"
+fi
+if [ -f ./colornote.sty ]; then
+    sudo cp ./colornote.sty ${LaTeX_STY}/colornote.sty
+else
+    echo  "I can't find the file cexam.sty in the directory ./"
+fi
+if [ -f ../cexam.pdf ]; then
+    sudo cp ../cexam.pdf ${LaTeX_DOC}/cexam.pdf
+else
+    echo  "I can't find the file cexam.pdf in the directory ../"
+fi
+if [ -f ./ctrlwarning.sty ];then
+    sudo cp ./ctrlwarning.sty  ${LaTeX_STY}/ctrlwarning.sty
+else
+    echo  "I can't find the file ctrlwarning.sty in the directory ./"
+fi
+sudo texhash
+echo  "macro package: cexam.sty , colornote.sty and ctrlwarning.sty had been installed."
+echo  "document: cexam.pdf had been installed."
+%    \end{macrocode}
+% \end{macro}
+%</install.sh> 
+% 
+%
+% \Finale
+%
+% \endinput
