@@ -3066,17 +3066,54 @@
 \indexentry{end={\verbatim@font !\verb*&!\end&}|hdclindex{2418}{}}{MMMMV-2179-MMMD-2418-M}
 \indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmt_pic:n={\verbatim@font !\verb*&!\cexam&!\_!\verb*&fmt&!\_!\verb*&pic:n&}|hdpindex{usage}}{MMMMI-72}
 \indexentry{cexam commands:=\pkg{cexam} commands:>cexam_stand_dim:n={\verbatim@font !\verb*&!\cexam&!\_!\verb*&stand&!\_!\verb*&dim:n&}|hdpindex{usage}}{MMMMI-72}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmtwd_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&fmtwd&!\_!\verb*&dim&}|hdpindex{usage}}{MMMMI-72}
-\indexentry{sep commands:=\pkg{sep} commands:>sep_hd_old:={\verbatim@font !\verb*&!\sep&!\_!\verb*&hd&!\_!\verb*&old:&}|hdpindex{usage}}{MMMMI-72}
-\indexentry{sp commands:=\pkg{sp} commands:>sp_hd_old_add:n={\verbatim@font !\verb*&!\sp&!\_!\verb*&hd&!\_!\verb*&old&!\_!\verb*&add:n&}|hdpindex{usage}}{MMMMI-72}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pic_det:n={\verbatim@font !\verb*&!\cexam&!\_!\verb*&pic&!\_!\verb*&det:n&}|hdpindex{usage}}{MMMMI-72}
-\indexentry{parbox={\verbatim@font !\verb*&!\parbox&}|hdpindex{usage}}{MMMMI-72}
-\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdpindex{usage}}{MMMMI-72}
-\indexentry{relax={\verbatim@font !\verb*&!\relax&}|hdpindex{usage}}{MMMMI-72}
-\indexentry{ind commands:=\pkg{ind} commands:>ind_hat_hdim={\verbatim@font !\verb*&!\ind&!\_!\verb*&hat&!\_!\verb*&hdim&}|hdpindex{usage}}{MMMMI-72}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_end_add:np={\verbatim@font !\verb*&!\cexam&!\_!\verb*&end&!\_!\verb*&add:np&}|hdpindex{usage}}{MMMMI-72}
-\indexentry{ctrl commands:=\pkg{ctrl} commands:>ctrl_end_det:p={\verbatim@font !\verb*&!\ctrl&!\_!\verb*&end&!\_!\verb*&det:p&}|hdpindex{usage}}{MMMMI-72}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_everypar_do:nnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&everypar&!\_!\verb*&do:nnn&}|hdpindex{usage}}{MMMMI-72}
-\indexentry{par={\verbatim@font !\verb*&!\par&}|hdpindex{usage}}{MMMMI-72}
-\indexentry{option={\verbatim@font !\verb*&!\option&}|hdpindex{usage}}{MMMMI-72}
-\indexentry{choice={\verbatim@font !\verb*&!\choice&}|hdpindex{usage}}{MMMMI-72}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_mk_i:nnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&sha&!\_!\verb*&mk&!\_!\verb*&i:nnnn&}|hdpindex{usage}}{MMMMI-73}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_mk_ii:nnnnnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&sha&!\_!\verb*&mk&!\_!\verb*&ii:nnnnnnn&}|hdpindex{usage}}{MMMMI-73}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmtwd_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&fmtwd&!\_!\verb*&dim&}|hdpindex{usage}}{MMMMI-73}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmt_pic:nnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&fmt&!\_!\verb*&pic:nnn&}|hdpindex{usage}}{MMMMI-73}
+\indexentry{int commands:=\pkg{int} commands:>int_zero:N={\verbatim@font !\verb*&!\int&!\_!\verb*&zero:N&}|hdpindex{usage}}{MMMMI-74}
+\indexentry{int commands:=\pkg{int} commands:>int_zero:N={\verbatim@font !\verb*&!\int&!\_!\verb*&zero:N&}|hdpindex{usage}}{MMMMI-74}
+\indexentry{str commands:=\pkg{str} commands:>str_if_in:nnTF={\verbatim@font !\verb*&!\str&!\_!\verb*&if&!\_!\verb*&in:nnTF&}|hdpindex{usage}}{MMMMI-74}
+\indexentry{IfNoValueTF={\verbatim@font !\verb*&!\IfNoValueTF&}|hdpindex{usage}}{MMMMI-74}
+\indexentry{cho commands:=\pkg{cho} commands:>cho_lmax_i_dim={\verbatim@font !\verb*&!\cho&!\_!\verb*&lmax&!\_!\verb*&i&!\_!\verb*&dim&}|hdpindex{usage}}{MMMMI-74}
+\indexentry{str commands:=\pkg{str} commands:>str_if_in:nnTF={\verbatim@font !\verb*&!\str&!\_!\verb*&if&!\_!\verb*&in:nnTF&}|hdpindex{usage}}{MMMMI-74}
+\indexentry{IfNoValueTF={\verbatim@font !\verb*&!\IfNoValueTF&}|hdpindex{usage}}{MMMMI-74}
+\indexentry{int commands:=\pkg{int} commands:>int_zero:N={\verbatim@font !\verb*&!\int&!\_!\verb*&zero:N&}|hdpindex{usage}}{MMMMI-74}
+\indexentry{cho commands:=\pkg{cho} commands:>cho_get_lmax:n={\verbatim@font !\verb*&!\cho&!\_!\verb*&get&!\_!\verb*&lmax:n&}|hdpindex{usage}}{MMMMI-74}
+\indexentry{cho commands:=\pkg{cho} commands:>cho_get_lmax:nn={\verbatim@font !\verb*&!\cho&!\_!\verb*&get&!\_!\verb*&lmax:nn&}|hdpindex{usage}}{MMMMI-74}
+\indexentry{cho commands:=\pkg{cho} commands:>cho_lmax_ii_dim={\verbatim@font !\verb*&!\cho&!\_!\verb*&lmax&!\_!\verb*&ii&!\_!\verb*&dim&}|hdpindex{usage}}{MMMMI-74}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_hd_old:={\verbatim@font !\verb*&!\sep&!\_!\verb*&hd&!\_!\verb*&old:&}|hdpindex{usage}}{MMMMI-74}
+\indexentry{sp commands:=\pkg{sp} commands:>sp_hd_old_add:n={\verbatim@font !\verb*&!\sp&!\_!\verb*&hd&!\_!\verb*&old&!\_!\verb*&add:n&}|hdpindex{usage}}{MMMMI-74}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_hd_old:={\verbatim@font !\verb*&!\sep&!\_!\verb*&hd&!\_!\verb*&old:&}|hdpindex{usage}}{MMMMI-74}
+\indexentry{cho commands:=\pkg{cho} commands:>cho_fmt_tl={\verbatim@font !\verb*&!\cho&!\_!\verb*&fmt&!\_!\verb*&tl&}|hdpindex{usage}}{MMMMI-74}
+\indexentry{phantomsection={\verbatim@font !\verb*&!\phantomsection&}|hdpindex{usage}}{MMMMI-74}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep_pictxt_i:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&sep&!\_!\verb*&pictxt&!\_!\verb*&i:p&}|hdpindex{usage}}{MMMMI-74}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pic_det:n={\verbatim@font !\verb*&!\cexam&!\_!\verb*&pic&!\_!\verb*&det:n&}|hdpindex{usage}}{MMMMI-74}
+\indexentry{parbox={\verbatim@font !\verb*&!\parbox&}|hdpindex{usage}}{MMMMI-74}
+\indexentry{parbox={\verbatim@font !\verb*&!\parbox&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_ind_hat:nnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&ind&!\_!\verb*&hat:nnnn&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{parbox={\verbatim@font !\verb*&!\parbox&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{cho commands:=\pkg{cho} commands:>cho_hat_ht_dim={\verbatim@font !\verb*&!\cho&!\_!\verb*&hat&!\_!\verb*&ht&!\_!\verb*&dim&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_ind_hat:nnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&ind&!\_!\verb*&hat:nnnn&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{relax={\verbatim@font !\verb*&!\relax&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_cape:={\verbatim@font !\verb*&!\cexam&!\_!\verb*&sha&!\_!\verb*&cape:&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad:={\verbatim@font !\verb*&!\cexam&!\_!\verb*&shad:&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_ccwd_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&ccwd&!\_!\verb*&dim&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{ind commands:=\pkg{ind} commands:>ind_hat_hdim={\verbatim@font !\verb*&!\ind&!\_!\verb*&hat&!\_!\verb*&hdim&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_end_add:np={\verbatim@font !\verb*&!\cexam&!\_!\verb*&end&!\_!\verb*&add:np&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{ctrl commands:=\pkg{ctrl} commands:>ctrl_end_det:p={\verbatim@font !\verb*&!\ctrl&!\_!\verb*&end&!\_!\verb*&det:p&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_everypar_do:nnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&everypar&!\_!\verb*&do:nnn&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{par={\verbatim@font !\verb*&!\par&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{par={\verbatim@font !\verb*&!\par&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{prf commands:=\pkg{prf} commands:>prf_end_tl={\verbatim@font !\verb*&!\prf&!\_!\verb*&end&!\_!\verb*&tl&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>@sect={\verbatim@font !\verb*&!\@sect&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_blank_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&blank&!\_!\verb*&tl&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_anspub_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&anspub&!\_!\verb*&tl&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{choice commands:=\pkg{choice} commands:>choice_ans_tl={\verbatim@font !\verb*&!\choice&!\_!\verb*&ans&!\_!\verb*&tl&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{option={\verbatim@font !\verb*&!\option&}|hdpindex{usage}}{MMMMI-75}
+\indexentry{option={\verbatim@font !\verb*&!\option&}|hdpindex{usage}}{MMMMI-76}
+\indexentry{choice={\verbatim@font !\verb*&!\choice&}|hdpindex{usage}}{MMMMI-76}
+\indexentry{qitem={\verbatim@font !\verb*&!\qitem&}|hdpindex{usage}}{MMMMI-76}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_add_par:np={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&add&!\_!\verb*&par:np&}|hdpindex{usage}}{MMMMI-76}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_add_par:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&add&!\_!\verb*&par:p&}|hdpindex{usage}}{MMMMI-76}
+\indexentry{par={\verbatim@font !\verb*&!\par&}|hdpindex{usage}}{MMMMI-76}

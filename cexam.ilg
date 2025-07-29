@@ -1,4 +1,4 @@
-This is makeindex, version 2.17 [TeX Live 2024] (kpathsea + Thai support).
+This is makeindex, version 2.17 [TeX Live 2026/dev] (kpathsea + Thai support).
 Scanning style file /usr/share/texmf-dist/makeindex/latex/gglo.ist........
 ** Input style error (file = /usr/share/texmf-dist/makeindex/latex/gglo.ist, line = 71):
    -- Unknown specifier lethead_prefix.
@@ -7,8 +7,11 @@ Scanning style file /usr/share/texmf-dist/makeindex/latex/gglo.ist........
 ** Input style error (file = /usr/share/texmf-dist/makeindex/latex/gglo.ist, line = 73):
    -- Unknown specifier lethead_flag.
 ......done (14 attributes redefined, 3 ignored).
-Scanning input file cexam.glo....done (35 entries accepted, 0 rejected).
-Sorting entries....done (159 comparisons).
-Generating output file cexam.gls....done (83 lines written, 0 warnings).
+Scanning input file cexam.glo....
+!! Input index error (file = cexam.glo, line = 163):
+   -- Extra `>' at position 60 of first argument.
+done (314 entries accepted, 1 rejected).
+Sorting entries......done (3049 comparisons).
+Generating output file cexam.gls....done (436 lines written, 0 warnings).
 Output written in cexam.gls.
 Transcript written in cexam.ilg.

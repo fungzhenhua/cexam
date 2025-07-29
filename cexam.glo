@@ -33,6 +33,7 @@
 \glossaryentry{v3.3.5>!!=General:>选择题选项定界符号由\cs {option}修改为\cs {choice}|hdpindex{}}{1}
 \glossaryentry{v3.3.6>!!=General:>修复cexam.dtx 对ctxdoc.cls 引用时字体报警问题，默认使用founder 字体|hdpindex{}}{1}
 \glossaryentry{v3.3.7>!!=General:>由于l3kernel强制要求引擎支持 primitive, 导致原ctxdoc.cls 出现问题，同时将注释符由A改为M, 简化了几个小节标题，可以正常编译|hdpindex{}}{1}
+\glossaryentry{v3.4.1>!!=General:>将ctxdoc文档类修改为标准l3doc,同时根据ctxdoc.sty完成标题翻译.|hdpindex{}}{1}
 \glossaryentry{v3.3.3>install.sh=\verb!*&install.sh&:>新增安装脚本|hdpindex{}}{4}
 \glossaryentry{v3.4.0>install.sh=\verb!*&install.sh&:>设置texlive变量|hdpindex{}}{4}
 \glossaryentry{v3.2.6>l3-too-old=\verb!*&l3-too-old&:>新增版本检测|hdpindex{}}{14}

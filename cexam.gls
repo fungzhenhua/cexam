@@ -1,0 +1,436 @@
+
+ \begin{theglossary} 
+
+    \makeatletter\scan@allowedfalse
+
+  \item v1.1\efill 
+ \subitem \verb*&colornote.sty&:\ 增加colornote.sty\pfill \hdpindex{}{70}
+  \item v3.0.0\efill 
+ \subitem General:\ 开始使用 \hologoRobust {LaTeX3}{}重构cexam.sty\pfill 
+		\hdpindex{}{1}
+  \item v3.0.1\efill 
+ \subitem General:\ 加入测行程序和形状生成程序,同时删除之前改写的代码\pfill 
+		\hdpindex{}{1}
+      \subsubitem 缩写命名,加入缩写列表\pfill \hdpindex{}{1}
+  \item v3.0.3\efill 
+ \subitem \verb*&\cexam_get_rec_i:nnnnnn&:\ 修改为7参量,增加左缩进和右缩进\pfill \hdpindex{}{26}
+  \item v3.0.4\efill 
+ \subitem \verb*&\cexam_get_rec:nnnnnn&:\ 修改为六参量函数\pfill \hdpindex{}{26}
+  \item v3.0.6\efill 
+ \subitem \verb*&\cexam_type_i:nnnnnnn&:\ 创建二级缩排程序\pfill \hdpindex{}{31}
+    \subitem \verb*&\cexam_type_ii:nnnnnnnnn&:\ 增加三级缩排程序\pfill \hdpindex{}{32}
+  \item v3.0.7\efill 
+ \subitem General:\ 删除命令\cs {cexam_fmt_pic:n}\pfill \hdpindex{}{1}
+      \subsubitem 删除命令\cs {cexam_stand_dim:n}\pfill 
+		\hdpindex{}{1}
+    \subitem \verb*&\cexam_fmt_pic:nnnn&:\ 支持图片带编号和左右排版\pfill \hdpindex{}{29}
+    \subitem \verb*&\cexam_get_rec:nnnnnn&:\ 改进数学结尾时测行\pfill \hdpindex{}{26}
+    \subitem \verb*&\cexam_type_i:nnnnnnn&:\ 修改为七参量函数,增加图片位置格式控制\pfill 
+		\hdpindex{}{31}
+    \subitem \verb*&\cexam_type_ii:nnnnnnnnn&:\ 增加图片左右位置控制\pfill \hdpindex{}{32}
+      \subsubitem 整理三级缩进代码\pfill \hdpindex{}{32}
+  \item v3.0.9\efill 
+ \subitem \verb*&\cexam_fmt_pic:nnnn&:\ 图片格式化增加编号增长命令\pfill \hdpindex{}{29}
+      \subsubitem 增加图片居中排版格式\pfill \hdpindex{}{29}
+    \subitem \verb*&\cexam_type_iii:nnnnnnn&:\ 增加图片居中排版程序\pfill \hdpindex{}{33}
+    \subitem \verb*&\cexam_type_v:nnnnn&:\ 增加无图排版模式\pfill \hdpindex{}{35}
+    \subitem \verb*&\cho_get_lmax:nn&:\ 增加选择题选项最大长度获得程序\pfill \hdpindex{}{39}
+    \subitem \verb*&\cho_lmax_dim&:\ 选择题最大选项长度\pfill \hdpindex{}{17}
+    \subitem \verb*&\cho_option_box&:\ 新增选择题选项最大长度获取盒子\pfill \hdpindex{}{16}
+  \item v3.1.0\efill 
+ \subitem General:\ 引入宏包xcolor\pfill \hdpindex{}{1}
+    \subitem \verb*&\cexam_fmt_opt_cho:nnnn&:\ 增加选择题选项格式化程序\pfill \hdpindex{}{40}
+    \subitem \verb*&\cexam_get_rec:nnnnnn&:\ 精简了三行代码\pfill \hdpindex{}{26}
+    \subitem \verb*&\cexam_ind_hat:nnnn&:\ 增加前缀设置程序\pfill \hdpindex{}{39}
+    \subitem \verb*&\cexam_option_box&:\ 新增选项格式化盒子\pfill \hdpindex{}{16}
+    \subitem \verb*&\cexam_type_ii:nnnnnnnnn&:\ 由于精简了测行程序,所以此程序也精简掉了一行代码\pfill 
+		\hdpindex{}{32}
+    \subitem \verb*&\cho_opt_type_i:nnnn&:\ 增加选择题短选项一行排版\pfill \hdpindex{}{40}
+    \subitem \verb*&\cho_opt_type_ii:nnnn&:\ 增加选择题中选项二行排版\pfill \hdpindex{}{40}
+    \subitem \verb*&\cho_opt_type_iii:nnnn&:\ 增加选择题长选项多行排版\pfill \hdpindex{}{40}
+    \subitem \verb*&\cho_optwd_i_dim&:\ 选择题选项的行宽\pfill \hdpindex{}{18}
+    \subitem \verb*&picture&:\ 增加图片与文本初级分离程序\pfill \hdpindex{}{36}
+    \subitem \verb*&\sep_temp_box&:\ 新增图片分离临时盒子\pfill \hdpindex{}{16}
+  \item v3.1.1\efill 
+ \subitem \verb*&\cexam_type_ii:nnnnnnnnn&:\ 去除了若尾部为空,多一行的bug\pfill \hdpindex{}{32}
+    \subitem \verb*&\cexam_type_iv:nnnnnnnn&:\ 新增图文排版,取代原纯文本排版\pfill \hdpindex{}{34}
+    \subitem \verb*&\cexam_type_v:nnnnn&:\ 排版号由iv增加一个,变为v\pfill \hdpindex{}{35}
+  \item v3.1.2\efill 
+ \subitem General:\ 删除了一些旧的代码\pfill \hdpindex{}{1}
+      \subsubitem 重新改写测行程序\pfill \hdpindex{}{1}
+    \subitem \verb*&\cexam_fmt_bool&:\ 增加图片格式化判断布尔值\pfill \hdpindex{}{15}
+    \subitem \verb*&\cexam_fmt_opt_cho:nnnn&:\ 去除选项排版不对齐bug\pfill \hdpindex{}{40}
+    \subitem \verb*&\cexam_fmt_pic:nnnn&:\ 修改星标控制格式化为布尔值控制\pfill \hdpindex{}{29}
+      \subsubitem 改为并列结构格式化图片\pfill 
+		\hdpindex{}{29}
+    \subitem \verb*&\cexam_get:nNnN&:\ 排版中已经不再使用该程序累加行数,保留备用\pfill 
+		\hdpindex{}{25}
+    \subitem \verb*&\cexam_get_rec:nnnnnn&:\ 全新改写\pfill \hdpindex{}{26}
+    \subitem \verb*&\cexam_get_rec_i:nnnnnn&:\ 修复逻辑错误\pfill \hdpindex{}{26}
+      \subsubitem 全新改写,并减少为六个参量\pfill 
+		\hdpindex{}{26}
+    \subitem \verb*&\cexam_indent_i_dim&:\ 新增长度\pfill \hdpindex{}{18}
+    \subitem \verb*&\cexam_number_box&:\ 新增题号格式尺寸获得盒子\pfill \hdpindex{}{16}
+    \subitem \verb*&\cexam_number_int&:\ 新增题号计数器\pfill \hdpindex{}{19}
+    \subitem \verb*&\cexam_numtxt_skip&:\ 新增长度\pfill \hdpindex{}{18}
+    \subitem \verb*&\cexam_sep_pictxt:n&:\ 新增图片与文字分离程序\pfill \hdpindex{}{41}
+    \subitem \verb*&\cexam_type_ii:nnnnnnnnn&:\ 全新改写\pfill \hdpindex{}{32}
+      \subsubitem 基于新的测行程序去除微小bug\pfill 
+		\hdpindex{}{32}
+    \subitem \verb*&\cexam_type_iii:nnnnnnn&:\ 使用新的测行程序改写\pfill \hdpindex{}{33}
+    \subitem \verb*&\cexam_type_iv:nnnnnnnn&:\ 使用新的测行程序重新设计了代码\pfill \hdpindex{}{34}
+      \subsubitem 去除二级缩进的代码置0\pfill \hdpindex{}{34}
+    \subitem \verb*&\cexam_type_v:nnnnn&:\ 使用新的测行程序重新设计了代码\pfill \hdpindex{}{35}
+      \subsubitem 精简两行代码\pfill \hdpindex{}{35}
+    \subitem \verb*&\cho_opt_maxed_bool&:\ 增加长选项判断布尔值\pfill \hdpindex{}{15}
+    \subitem \verb*&\cho_opt_type_i:nnnn&:\ 改写了排版选项,以解决水平盒子偶然过宽问题\pfill 
+		\hdpindex{}{40}
+      \subsubitem 追加了每个选项的排版宽度\pfill 
+		\hdpindex{}{40}
+    \subitem \verb*&\cho_opt_type_ii:nnnn&:\ 改写了排版选项,以解决水平盒子偶然过宽问题\pfill 
+		\hdpindex{}{40}
+      \subsubitem 追加了每个选项的排版宽度\pfill 
+		\hdpindex{}{40}
+    \subitem \verb*&\cho_optpic_box&:\ 新增判定选项排版格式盒子\pfill \hdpindex{}{16}
+    \subitem \verb*&\cho_optpic_hti_dim&:\ 新增长度\pfill \hdpindex{}{18}
+    \subitem \verb*&\choice_type_i:p&:\ 新增选择题排版程序\pfill \hdpindex{}{45}
+    \subitem \verb*&\get_par_ht:nnn&:\ 新增程序\pfill \hdpindex{}{25}
+    \subitem \verb*&\get_par_row:nnn&:\ 新增程序\pfill \hdpindex{}{25}
+    \subitem \verb*&\get_par_rowht:nnnn&:\ 新增程序\pfill \hdpindex{}{26}
+    \subitem \verb*&picture&:\ 修改无图时的提醒格式\pfill \hdpindex{}{36}
+    \subitem \verb*&\sep_HD_ht&:\ 新增长度\pfill \hdpindex{}{18}
+  \item v3.1.3\efill 
+ \subitem General:\ selection更名为choice\pfill \hdpindex{}{1}
+      \subsubitem 对cexam.dtx文件,修改了版权信息\pfill 
+		\hdpindex{}{1}
+    \subitem \verb*&\ana_tag_i_tl&:\ 新增命令\pfill \hdpindex{}{55}
+    \subitem \verb*&\analysis_type:p&:\ 新增命令\pfill \hdpindex{}{55}
+    \subitem \verb*&\blank&:\ 新增命令\pfill \hdpindex{}{65}
+    \subitem \verb*&\blank_type:p&:\ 新增命令\pfill \hdpindex{}{52}
+    \subitem \verb*&\blank_type_i:p&:\ 新增命令\pfill \hdpindex{}{50}
+    \subitem \verb*&\blank_wd_box&:\ 新增填空题空白长度测量盒子\pfill \hdpindex{}{17}
+    \subitem \verb*&\blank_wd_dim&:\ 新增长度\pfill \hdpindex{}{18}
+    \subitem \verb*&\calculate_type:p&:\ 新增命令\pfill \hdpindex{}{55}
+    \subitem \verb*&\calculate_type_i:p&:\ 新增命令\pfill \hdpindex{}{53}
+    \subitem \verb*&\cexam_fmt_pic:nnnn&:\ 修改为三参量及排版模式\pfill \hdpindex{}{29}
+    \subitem \verb*&\cexam_pic_linwd_dim&:\ 新增长度\pfill \hdpindex{}{18}
+    \subitem \verb*&\cexam_qitem:&:\ 新增命令\pfill \hdpindex{}{53}
+    \subitem \verb*&\cexam_qitem_int&:\ 新增计算题小问计数器\pfill \hdpindex{}{20}
+    \subitem \verb*&\cexam_type_i:nnnnnnn&:\ 修改图片放置命令\pfill \hdpindex{}{31}
+    \subitem \verb*&\choice_type:p&:\ 重新定义选择题排版程序\pfill \hdpindex{}{50}
+    \subitem \verb*&\choice_type_i:p&:\ 更名\pfill \hdpindex{}{45}
+    \subitem \verb*&\choice_warning:&:\ 新增命令\pfill \hdpindex{}{49}
+    \subitem \verb*&\everypar_blank:p&:\ 新增命令\pfill \hdpindex{}{60}
+    \subitem \verb*&\everypar_calculate:p&:\ 新增命令\pfill \hdpindex{}{61}
+    \subitem \verb*&\everypar_choice:p&:\ 新增命令\pfill \hdpindex{}{59}
+    \subitem \verb*&\everypar_judge:p&:\ 新增命令\pfill \hdpindex{}{61}
+    \subitem \verb*&\everypar_proof:p&:\ 新增命令\pfill \hdpindex{}{62}
+    \subitem \verb*&\everypar_proofs:p&:\ 新增命令\pfill \hdpindex{}{61}
+    \subitem \verb*&\get_rec_linewd_dim&:\ 新增长度\pfill \hdpindex{}{19}
+    \subitem \verb*&jisuan&:\ 新增环境\pfill \hdpindex{}{66}
+    \subitem \verb*&\judge_type:p&:\ 新增命令\pfill \hdpindex{}{53}
+    \subitem \verb*&\letter_sink:nnnnp&:\ 新增首字下沉命令\pfill \hdpindex{}{68}
+    \subitem \verb*&\lettersink&:\ 新增首字下沉命令的用户接口命令\pfill \hdpindex{}{69}
+    \subitem \verb*&\qitem&:\ 新增命令\pfill \hdpindex{}{63}
+  \item v3.1.4\efill 
+ \subitem General:\ 删除\cs {cexam_sha_mk_i:nnnn}\pfill \hdpindex{}{28}
+      \subsubitem 删除\cs {cexam_sha_mk_ii:nnnnnnn}\pfill 
+		\hdpindex{}{28}
+      \subsubitem 删除了长度命令\cs {cexam_fmtwd_dim}\pfill 
+		\hdpindex{}{1}
+      \subsubitem 进行了程序精简,更加稳定\pfill 
+		\hdpindex{}{1}
+    \subitem \verb*&\blank_type_i:p&:\ 修复环境排题时图片下标格式错误\pfill \hdpindex{}{50}
+    \subitem \verb*&\calculate_type_i:p&:\ 修复环境排版时图片下标格式错误\pfill \hdpindex{}{53}
+    \subitem \verb*&\cexam_fmt_pic:nnnn&:\ 修复图片下标在题目环境中的错误\pfill \hdpindex{}{29}
+      \subsubitem 修改为四参量及排版模式\pfill 
+		\hdpindex{}{29}
+      \subsubitem 删除\cs {cexam_fmt_pic:nnn}\pfill \hdpindex{}{29}
+    \subitem \verb*&\cexam_get_rec:nnnnnn&:\ 以专用行宽代之前的通用行宽\pfill \hdpindex{}{26}
+    \subitem \verb*&\cexam_get_rec_i:nnnnnn&:\ 精简代码\pfill \hdpindex{}{26}
+    \subitem \verb*&\cexam_shad_add:n&:\ 新增程序\pfill \hdpindex{}{28}
+    \subitem \verb*&\cexam_type_i:nnnnnnn&:\ 精简长度付值重构程序\pfill \hdpindex{}{31}
+    \subitem \verb*&\cexam_type_ii:nnnnnnnnn&:\ 精简和重构程序\pfill \hdpindex{}{32}
+    \subitem \verb*&\cexam_type_iii:nnnnnnn&:\ 精简代码,重构部分程序\pfill \hdpindex{}{33}
+    \subitem \verb*&\cexam_type_iv:nnnnnnnn&:\ 精简并重构部分代码\pfill \hdpindex{}{34}
+    \subitem \verb*&\cexam_type_v:nnnnn&:\ 精简并重构部分代码\pfill \hdpindex{}{35}
+    \subitem \verb*&\choice_type_i:p&:\ 修复环境排题时图片下标格式错误\pfill \hdpindex{}{45}
+      \subsubitem 加入选择题空白括号\pfill \hdpindex{}{45}
+    \subitem \verb*&\letter_sink:nnnnp&:\ 精简并重构部分代码\pfill \hdpindex{}{68}
+  \item v3.1.5\efill 
+ \subitem \verb*&\cexam_fmt_opt_cho:nnnn&:\ 去除多题排版时,上一题选项最长对下一题的影响\pfill 
+		\hdpindex{}{40}
+      \subsubitem 恢复二行选项排版时,每项宽为半个行宽.\pfill 
+		\hdpindex{}{40}
+    \subitem \verb*&picture&:\ 加入message 提示图片太大和太小\pfill \hdpindex{}{36}
+      \subsubitem 增加对图片尺寸的探测，并限制大图\pfill 
+		\hdpindex{}{36}
+  \item v3.1.6\efill 
+ \subitem General:\ 修改了文档中的一些输入文本错误\pfill \hdpindex{}{1}
+      \subsubitem 加入答案写出功能\pfill \hdpindex{}{1}
+      \subsubitem 答案支持超链接\pfill \hdpindex{}{1}
+    \subitem \verb*&\@sset&:\ 新增命令\pfill \hdpindex{}{57}
+    \subitem \verb*&\ana_tag_i_tl&:\ 新增答案文件中的标签命令\pfill \hdpindex{}{55}
+    \subitem \verb*&\answer_student_bool&:\ 增加学生模式答案写出布尔值\pfill \hdpindex{}{15}
+    \subitem \verb*&\answer_write&:\ 新增答案写出\pfill \hdpindex{}{22}
+    \subitem \verb*&cexam/option&:\ 新增宏包选项\pfill \hdpindex{}{22}
+    \subitem \verb*&\cexam_answer_add:p&:\ 新增命令\pfill \hdpindex{}{57}
+    \subitem \verb*&\cexam_answer_iow:p&:\ 新增命令\pfill \hdpindex{}{56}
+    \subitem \verb*&daan&:\ 新增命令\pfill \hdpindex{}{58}
+    \subitem \verb*&\makeanswer&:\ 新增命令\pfill \hdpindex{}{59}
+  \item v3.1.7\efill 
+ \subitem General:\ 增加例题模式\pfill \hdpindex{}{1}
+      \subsubitem 引入宏包tikz\pfill \hdpindex{}{1}
+    \subitem \verb*&\@sset&:\ 加入例题计数器随章计数器置零\pfill \hdpindex{}{57}
+    \subitem \verb*&\cexam_ind_hat:nnnn&:\ 由原来的二参量改为三参量\pfill \hdpindex{}{39}
+    \subitem \verb*&\cexam_number_tag_i_tl&:\ 新增程序\pfill \hdpindex{}{42}
+    \subitem \verb*&\cexam_numold_int&:\ 新增存储题号计数器和例题环境题号计数器\pfill 
+		\hdpindex{}{20}
+    \subitem \verb*&\cexam_type_iv:nnnnnnnn&:\ 修复二级缩进错误\pfill \hdpindex{}{34}
+    \subitem \verb*&\change_normal:n&:\ 新增命令\pfill \hdpindex{}{65}
+    \subitem \verb*&\choice_type_i:p&:\ 增强题号功能,配合生成例题模式\pfill \hdpindex{}{45}
+    \subitem \verb*&\everypar_blank:p&:\ 修复填空题排版答案置零错误\pfill \hdpindex{}{60}
+    \subitem \verb*&jisuan&:\ 增加例题选项模式\pfill \hdpindex{}{66}
+    \subitem \verb*&\makeanswer&:\ 新打开一页后再排版答案\pfill \hdpindex{}{59}
+  \item v3.1.8\efill 
+ \subitem General:\ 增加源文档中的一些命令解释和题目输入举例\pfill 
+		\hdpindex{}{1}
+    \subitem \verb*&\@sset&:\ 追加重定义章节命令时的检测,适应不同文档类\pfill 
+		\hdpindex{}{57}
+    \subitem \verb*&\cexam_type_iv:nnnnnnnn&:\ 修复二级缩进错误\pfill \hdpindex{}{34}
+    \subitem \verb*&\change_normal:n&:\ 增加对章节号的检测,存在才重定义例题标签\pfill 
+		\hdpindex{}{65}
+    \subitem \verb*&\makeanswer&:\ 追加超链接增加答案前对章节命令的检测\pfill 
+		\hdpindex{}{59}
+  \item v3.1.9\efill 
+ \subitem General:\ 优化了说明档，增加题型排版展示和安装说明\pfill 
+		\hdpindex{}{1}
+    \subitem \verb*&\@sset&:\ 置零计数器改用标准的\cs {int_zero:N}\pfill \hdpindex{}{57}
+    \subitem \verb*&\blank_type_i:p&:\ 增加宽图排版\pfill \hdpindex{}{50}
+    \subitem \verb*&\calculate_type_i:p&:\ 增加图宽大于半个行宽的排版\pfill \hdpindex{}{53}
+      \subsubitem 置零计数器改为标准的\cs {int_zero:N}\pfill 
+		\hdpindex{}{53}
+    \subitem \verb*&\cexam_fmt_opt_cho:nnnn&:\ 优化选项双行排版\pfill \hdpindex{}{40}
+    \subitem \verb*&\cexam_get_rec:nnnnnn&:\ 修复生成行后,图片高度规零\pfill \hdpindex{}{26}
+    \subitem \verb*&\cexam_picwd_limit&:\ 新增长度\pfill \hdpindex{}{19}
+    \subitem \verb*&\cexam_table_bool&:\ 新增布尔值，修复目录错误\pfill \hdpindex{}{57}
+    \subitem \verb*&\cexam_type_iv:nnnnnnnn&:\ 修复题高小于图高时的自动填充空白\pfill \hdpindex{}{34}
+    \subitem \verb*&\change_normal:n&:\ 修改\cs {str_if_in:nnTF}为\cs {IfNoValueTF}\pfill \hdpindex{}{65}
+    \subitem \verb*&\cho_lmax_ii_dim&:\ 新增\cs {cho_lmax_i_dim}\pfill \hdpindex{}{18}
+    \subitem \verb*&\choice_type_i:p&:\ 增加图片超半个行宽时的排版\pfill \hdpindex{}{45}
+    \subitem \verb*&\lettersink&:\ 修改\cs {str_if_in:nnTF}为\cs {IfNoValueTF}\pfill \hdpindex{}{69}
+    \subitem \verb*&\makeanswer&:\ 去除答案生成时引用答案文件的错误\pfill \hdpindex{}{59}
+      \subsubitem 增加目录中参考答案提示\pfill 
+		\hdpindex{}{59}
+      \subsubitem 置零计数器改用标准的\cs {int_zero:N}\pfill 
+		\hdpindex{}{59}
+    \subitem \verb*&picture&:\ 允许通过较宽的图片,限制图高为半个行宽\pfill 
+		\hdpindex{}{36}
+  \item v3.2.0\efill 
+ \subitem \verb*&\cexam_fmt_opt_cho:nnnn&:\ 优化选项单行排版\pfill \hdpindex{}{40}
+      \subsubitem 再次优化选项双行排版\pfill \hdpindex{}{40}
+    \subitem \verb*&\cho_get_lmax:nn&:\ 删除\cs {cho_get_lmax:n}\pfill \hdpindex{}{39}
+      \subsubitem 新增\cs {cho_get_lmax:nn}\pfill \hdpindex{}{39}
+    \subitem \verb*&\cho_lmax_ii_dim&:\ 新增\cs {cho_lmax_ii_dim}\pfill \hdpindex{}{18}
+    \subitem \verb*&\cho_opt_type_i:nnnn&:\ 优化了单行排版\pfill \hdpindex{}{40}
+  \item v3.2.1\efill 
+ \subitem \verb*&\cho_fmt_tl&:\ 新增命令\pfill \hdpindex{}{40}
+    \subitem \verb*&\cho_hat_ht_dim&:\ 新增长度\pfill \hdpindex{}{19}
+    \subitem \verb*&\cho_opt_type_i:nnnn&:\ 规范了选项间隔\pfill \hdpindex{}{40}
+    \subitem \verb*&\cho_opt_type_ii:nnnn&:\ 规范了选项间隔\pfill \hdpindex{}{40}
+    \subitem \verb*&\cho_opt_type_iii:nnnn&:\ 规范了选项间隔\pfill \hdpindex{}{40}
+    \subitem \verb*&\choice_type_i:p&:\ 规范了选项间隔\pfill \hdpindex{}{45}
+  \item v3.2.2\efill 
+ \subitem General:\ 删除\cs {sep_hd_old:},\cs {sp_hd_old_add:n}\pfill \hdpindex{}{1}
+      \subsubitem 此版主要的工作是规范了\hologoRobust {LaTeX3}{}格式，替换原来的一些命令为字符串变量\pfill 
+		\hdpindex{}{1}
+    \subitem \verb*&\@sset&:\ 修复题号不置零错误\pfill \hdpindex{}{57}
+    \subitem \verb*&\ana_tag_i_tl&:\ 修改命令为tokenlist\pfill \hdpindex{}{55}
+    \subitem \verb*&\ans_tag_i_tl&:\ 新增字符串变量\pfill \hdpindex{}{21}
+    \subitem \verb*&\cexam_answer_iow:p&:\ 修改答案写出填空题命令\pfill \hdpindex{}{56}
+    \subitem \verb*&\cexam_blan:n&:\ 规范填空题命令，修改为字符串命令\pfill \hdpindex{}{52}
+    \subitem \verb*&\cexam_get_rec_i:nnnnnn&:\ 去除\cs {sep_hd_old:}\pfill \hdpindex{}{26}
+    \subitem \verb*&\cexam_ind_hat:nnnn&:\ 修改下沉量为0.01\pfill \hdpindex{}{39}
+    \subitem \verb*&\cexam_number_tag_i_tl&:\ 修改命令为tokenlist\pfill \hdpindex{}{42}
+      \subsubitem 新增字符串变量\pfill \hdpindex{}{21}
+    \subitem \verb*&\cexam_sep:n&:\ 用\hologoRobust {LaTeX3}{}中的数据格式tokenlist 重写了数据分析结构\pfill 
+		\hdpindex{}{24}
+    \subitem \verb*&\cexam_sep_iii:n&:\ 用\hologoRobust {LaTeX3}{}中的数据格式tokenlist 重写了数据分析结构\pfill 
+		\hdpindex{}{23}
+    \subitem \verb*&\cexam_sep_isin:nn&:\ 用\hologoRobust {LaTeX3}{}中的数据格式tokenlist 重写了数据分析结构\pfill 
+		\hdpindex{}{24}
+    \subitem \verb*&\cho_fmt_tl&:\ 修改为\cs {cho_fmt_tl}\pfill \hdpindex{}{40}
+      \subsubitem 新增字符串变量\pfill \hdpindex{}{20}
+    \subitem \verb*&\choice_ans_tl&:\ 新增字符串变量\pfill \hdpindex{}{21}
+    \subitem \verb*&\everypar_blank:p&:\ 填空题答案输出改为字符串\pfill \hdpindex{}{60}
+    \subitem \verb*&\makeanswer&:\ 修复\cs {phantomsection}不引用hypter宏包时错误\pfill 
+		\hdpindex{}{59}
+    \subitem \verb*&\sep_tl_tl&:\ 新增字符串变量\pfill \hdpindex{}{20}
+  \item v3.2.3\efill 
+ \subitem General:\ 去除宏包\pkg  {xcolor},\pkg  {tikz}\pfill \hdpindex{}{1}
+    \subitem \verb*&\cexam_fmt_pic:nnnn&:\ 增加表格格式化\pfill \hdpindex{}{29}
+    \subitem \verb*&\cexam_sep_pictxt:n&:\ 完全改写此命令\pfill \hdpindex{}{41}
+    \subitem \verb*&\cexam_sep_txt_tl&:\ 将原来的控制序列修改为字符串格式\pfill \hdpindex{}{36}
+    \subitem \verb*&picture&:\ 删除命令\cs {cexam_sep_pictxt_i:p},同时删除定界符\pfill 
+		\hdpindex{}{36}
+  \item v3.2.4\efill 
+ \subitem General:\ 删除\cs {cexam_pic_det:n},去除宏包\pkg  {calc}\pfill 
+		\hdpindex{}{1}
+    \subitem \verb*&\cexam_fmt_pic:nnnn&:\ 使用\pkg  {l3box}重构，不再使用\pkg  {parbox}\pfill 
+		\hdpindex{}{29}
+    \subitem \verb*&\fmt_pic_t_vbox&:\ 新增前缀盒子\pfill \hdpindex{}{17}
+    \subitem \verb*&\fmt_picture_ydim&:\ 新增长度用来在格式化图片时定位图片位置\pfill 
+		\hdpindex{}{19}
+    \subitem \verb*&\letter_sink:nnnnp&:\ 由于重构了图片模式模块，对其作出修改,参数调整为6个\pfill 
+		\hdpindex{}{68}
+  \item v3.2.5\efill 
+ \subitem General:\ 删除测行程序之外的\cs {parbox}命令\pfill \hdpindex{}{1}
+    \subitem \verb*&\cexam_ind_hat:nnnn&:\ 修改为四个参量，加入高度参量，重写代码，去除\cs {parbox}\pfill 
+		\hdpindex{}{39}
+    \subitem \verb*&\cexam_qitem:&:\ 使用\cs {cexam_ind_hat:nnnn}改写，删除了原来的\cs {parbox}\pfill 
+		\hdpindex{}{53}
+    \subitem \verb*&\cho_hat_ht_dim&:\ 新增长度\cs {cho_hat_ht_dim}\pfill \hdpindex{}{19}
+    \subitem \verb*&\cho_opt_type_iii:nnnn&:\ 由于修改了\cs {cexam_ind_hat:nnnn}，所以此处也对应做了修改\pfill 
+		\hdpindex{}{40}
+    \subitem \verb*&\ind_hat_box&:\ 新增前缀盒子\pfill \hdpindex{}{17}
+    \subitem \verb*&\letter_sink:nnnnp&:\ 使用\pkg  {l3color}重写颜色部分\pfill \hdpindex{}{68}
+      \subsubitem 恢复原来的5参量结构\pfill \hdpindex{}{68}
+  \item v3.2.6\efill 
+ \subitem General:\ 以\cs {c_empty_tl}取代\cs {relax}\pfill \hdpindex{}{1}
+      \subsubitem 修改宏包的安装路径为默认路径\pfill 
+		\hdpindex{}{1}
+      \subsubitem 删除\cs {cexam_sha_cape:}\pfill \hdpindex{}{28}
+      \subsubitem 删除\cs {cexam_shad:}\pfill \hdpindex{}{28}
+    \subitem \verb*&\cexam_ccwd_dim&:\ 新增长度\cs {cexam_ccwd_dim},取消对\pkg  {ctex}的依赖\pfill 
+		\hdpindex{}{19}
+    \subitem \verb*&\cexam_shad_add:n&:\ 重写此程序\pfill \hdpindex{}{28}
+    \subitem \verb*&\cexam_shad_set:n&:\ 重写此程序\pfill \hdpindex{}{28}
+    \subitem \verb*&l3-too-old&:\ 新增版本检测\pfill \hdpindex{}{14}
+  \item v3.2.7\efill 
+ \subitem General:\ 删除\cs {ind_hat_hdim}\pfill \hdpindex{}{1}
+    \subitem \verb*&\blank_type:p&:\ 修改了题号命令为三个参量\pfill \hdpindex{}{52}
+    \subitem \verb*&\calculate_type_i:p&:\ 修改了题号命令为三个参量\pfill \hdpindex{}{53}
+    \subitem \verb*&\cexam_ind_hat:nnn&:\ 新增命令\pfill \hdpindex{}{39}
+    \subitem \verb*&\cexam_qitem:&:\ 修改了题号命令为三个参量\pfill \hdpindex{}{53}
+    \subitem \verb*&\choice_type_i:p&:\ 修改了题号命令为三个参量\pfill \hdpindex{}{45}
+  \item v3.2.8\efill 
+ \subitem General:\ 增加证明题环境，但是在一般文档中启用学生模式会出现错误，在下一版中修复\pfill 
+		\hdpindex{}{1}
+    \subitem \verb*&\ana_tag_i_tl&:\ 增加证明题标签\pfill \hdpindex{}{55}
+    \subitem \verb*&daan&:\ 末段不必追加一个空行\pfill \hdpindex{}{58}
+    \subitem \verb*&\everypar_proofs:p&:\ 新增证明题命令\pfill \hdpindex{}{61}
+    \subitem \verb*&jisuan&:\ 习题环境末段可以不必须加入一个空行\pfill 
+		\hdpindex{}{66}
+    \subitem \verb*&\prf_tag_i_tl&:\ 新增证明题标签\pfill \hdpindex{}{21}
+    \subitem \verb*&zhengming&:\ 增加证明题环境\pfill \hdpindex{}{67}
+  \item v3.2.9\efill 
+ \subitem \verb*&\cexam_fmt_pic:nnnn&:\ 修复格式化图片后高度的错误\pfill \hdpindex{}{29}
+    \subitem \verb*&\everypar_proofs:p&:\ 简化证明题命令\pfill \hdpindex{}{61}
+  \item v3.3.0\efill 
+ \subitem General:\ 去除命令\cs {cexam_end_add:np},\cs {ctrl_end_det:p},\cs {cexam_everypar_do:nnn},优化了末段加入\cs {par}功能\pfill 
+		\hdpindex{}{1}
+      \subsubitem 规范各题型处理题型的参数规范\pfill 
+		\hdpindex{}{1}
+    \subitem \verb*&\cexam_sep_tikz:p&:\ 修复无图时布尔值设置的错误\pfill \hdpindex{}{38}
+    \subitem \verb*&daan&:\ 优化末段不必追加一行功能\pfill \hdpindex{}{58}
+    \subitem \verb*&\everypar_calculate:p&:\ 优化末段不必追加一行功能\pfill \hdpindex{}{61}
+    \subitem \verb*&jisuan&:\ 优化末段加\cs {par}功能\pfill \hdpindex{}{66}
+    \subitem \verb*&\prf_tag_i_tl&:\ 删除\cs {prf_end_tl}\pfill \hdpindex{}{21}
+    \subitem \verb*&zhengming&:\ 兼容amsthm.sty的proofs环境，但增强其排版能力符合中文多题目排版格式\pfill 
+		\hdpindex{}{67}
+  \item v3.3.1\efill 
+ \subitem \verb*&\cexam_sep_multiply_ii:p&:\ 加入多图多表并排的处理\pfill \hdpindex{}{38}
+    \subitem \verb*&\cexam_sep_pictxt:n&:\ 加入多图或多表模式\pfill \hdpindex{}{41}
+  \item v3.3.2\efill 
+ \subitem \verb*&\blank_type_i:p&:\ 修复题干高于图高时排版时调用排版模式的错误\pfill 
+		\hdpindex{}{50}
+  \item v3.3.3\efill 
+ \subitem General:\ 因新浪邮箱限制客户端登录问题，同时也考虑到国际化问题，将邮箱修改为outlook邮箱。\pfill 
+		\hdpindex{}{1}
+    \subitem \verb*&\@sset&:\ 初步解决\cs {@sect}的修改导致与hyperref宏包的冲突\pfill 
+		\hdpindex{}{57}
+    \subitem \verb*&ctrlwarning.sty&:\ 增加ctrlwarning.sty(v1.0)宏包\pfill \hdpindex{}{69}
+    \subitem \verb*&install.sh&:\ 新增安装脚本\pfill \hdpindex{}{4}
+  \item v3.3.4\efill 
+ \subitem \verb*&cexam/option&:\ 规范化选项设置，增加选择题随机选项控制选项option\pfill 
+		\hdpindex{}{22}
+    \subitem \verb*&\cexam_judgement_bool&:\ 新增命令\pfill \hdpindex{}{15}
+    \subitem \verb*&\cexam_optrand_iow:n&:\ 新增命令\pfill \hdpindex{}{56}
+    \subitem \verb*&\cho_optrand_bool&:\ 新增命令\pfill \hdpindex{}{15}
+    \subitem \verb*&\cho_optstar_bool&:\ 新增命令\pfill \hdpindex{}{15}
+    \subitem \verb*&\choice_ans_order:n&:\ 新增命令\pfill \hdpindex{}{45}
+    \subitem \verb*&\choice_ans_tl&:\ 修改\cs {cexam_blank_tl}为\cs {cexam_anspub_tl},选择题和填空题共用\pfill 
+		\hdpindex{}{21}
+      \subsubitem 增加选择题专用答案存储字符串\cs {choice_ans_tl}\pfill 
+		\hdpindex{}{21}
+    \subitem \verb*&\choice_oldopt_bool&:\ 新增命令\pfill \hdpindex{}{15}
+    \subitem \verb*&\choice_optabcd_int&:\ 新增命令\pfill \hdpindex{}{20}
+    \subitem \verb*&\choice_option_set:nnnn&:\ 使用布尔表达式优化实现过程\pfill \hdpindex{}{45}
+      \subsubitem 新增命令\pfill \hdpindex{}{45}
+    \subitem \verb*&\choice_option_set_i:p&:\ 新增命令\pfill \hdpindex{}{43}
+    \subitem \verb*&\choice_option_set_ii:p&:\ 新增命令\pfill \hdpindex{}{44}
+    \subitem \verb*&\choice_randint_make:&:\ 新增命令\pfill \hdpindex{}{43}
+    \subitem \verb*&\choice_type:p&:\ 加入了随机选项排列功能，同时兼容之前的选项输入格式\pfill 
+		\hdpindex{}{50}
+    \subitem \verb*&\choice_type_i:p&:\ 修改选项间隔符号为\cs {option}及选项处理\pfill 
+		\hdpindex{}{45}
+    \subitem \verb*&ctrlwarning.sty&:\ 规范化ctrlwarning.sty选项\pfill \hdpindex{}{69}
+    \subitem \verb*&\everypar_choice:p&:\ 选择题加入了随机选项排列功能，同时兼容之前的选项输入格式\pfill 
+		\hdpindex{}{59}
+    \subitem \verb*&\refd&:\ 新增命令\pfill \hdpindex{}{42}
+      \subsubitem 新增随机模式下选项引用命令\pfill 
+		\hdpindex{}{42}
+  \item v3.3.5\efill 
+ \subitem General:\ 删除一些不需要的代码，不再支持选择题选项的旧输入方式\pfill 
+		\hdpindex{}{1}
+      \subsubitem 选择题选项定界符号由\cs {option}修改为\cs {choice}\pfill 
+		\hdpindex{}{1}
+    \subitem \verb*&\cexam_fmt_pic:nnnn&:\ 使用正则表达式改写部分代码\pfill \hdpindex{}{29}
+    \subitem \verb*&\choice_option_it&:\ 新增命令\pfill \hdpindex{}{20}
+    \subitem \verb*&\choice_option_total:p&:\ 新增命令\pfill \hdpindex{}{49}
+    \subitem \verb*&\choice_type:p&:\ 去除了对旧输入格式的兼容\pfill \hdpindex{}{50}
+    \subitem \verb*&\choice_warning:&:\ 修改了提示内容\pfill \hdpindex{}{49}
+  \item v3.3.6\efill 
+ \subitem General:\ 修复cexam.dtx 对ctxdoc.cls 引用时字体报警问题，默认使用founder 字体\pfill 
+		\hdpindex{}{1}
+    \subitem \verb*&\calculate_type_i:p&:\ 由于重定义了\cs {qitem},所以修改了参数变量为三个\pfill 
+		\hdpindex{}{53}
+    \subitem \verb*&cexam/option&:\ 增加单独控制星级和年份开关\pfill \hdpindex{}{22}
+      \subsubitem 增加题源显示及其颜色设置\pfill 
+		\hdpindex{}{22}
+    \subitem \verb*&\qitem&:\ 增加了可选参数，以配合选项引用\pfill \hdpindex{}{63}
+    \subitem \verb*&\refitem&:\ 新增命令，以便作者在编写解析时引用小问题号\pfill 
+		\hdpindex{}{64}
+    \subitem \verb*&\source&:\ 优化命令，加入星级和年份开关\pfill \hdpindex{}{64}
+      \subsubitem 新增命令，以便输入题源\pfill 
+		\hdpindex{}{64}
+    \subitem \verb*&\source_color_tl&:\ 新增命令,题源颜色\pfill \hdpindex{}{22}
+    \subitem \verb*&\source_star_int&:\ 新增命令,显示题目星级\pfill \hdpindex{}{20}
+    \subitem \verb*&\source_year_bool&:\ 新增命令,控制题源显示\pfill \hdpindex{}{16}
+  \item v3.3.7\efill 
+ \subitem General:\ 由于l3kernel强制要求引擎支持 primitive, 导致原ctxdoc.cls 出现问题，同时将注释符由A改为M, 简化了几个小节标题，可以正常编译\pfill 
+		\hdpindex{}{1}
+    \subitem \verb*&\choice_type:p&:\ 增加了选项为图片时的排版\pfill \hdpindex{}{50}
+    \subitem \verb*&\everypar_choice:p&:\ 配合选择题选项为图片时的排版，增加以s开头时按原始格式排版\pfill 
+		\hdpindex{}{59}
+  \item v3.3.8\efill 
+ \subitem \verb*&\cexam_env_end_tl&:\ 删除\cs {cexam_env_add_par:np},定义命令\cs {cexam_env_add_par:p}，以方便避免题目忘记最后一行留下空行的bug\pfill 
+		\hdpindex{}{62}
+    \subitem \verb*&jisuan&:\ 使用clist来改写各环境定义，可以实现多名称的定义\pfill 
+		\hdpindex{}{66}
+    \subitem \verb*&zhengming&:\ 使用clist来改写证明环境定义，可以实现多名称的定义\pfill 
+		\hdpindex{}{67}
+  \item v3.3.9\efill 
+ \subitem \verb*&\cexam_env_add_bool&:\ 新增命令,控制各题型环境判断\pfill \hdpindex{}{16}
+    \subitem \verb*&\cexam_env_end_tl&:\ 修复改进环境定义后带来的尾行加\cs {par}时的bug\pfill 
+		\hdpindex{}{62}
+  \item v3.4.0\efill 
+ \subitem \verb*&\cexam_env_end_tl&:\ 增加和answerstd对应的daan环境判断\pfill \hdpindex{}{62}
+    \subitem \verb*&daan&:\ 增加标准答案环境对应的汉语拼音名称daan\pfill 
+		\hdpindex{}{58}
+    \subitem \verb*&install.sh&:\ 设置texlive变量\pfill \hdpindex{}{4}
+  \item v3.4.1\efill 
+ \subitem General:\ 将ctxdoc文档类修改为标准l3doc,同时根据ctxdoc.sty完成标题翻译.\pfill 
+		\hdpindex{}{1}
+
+ \end{theglossary}

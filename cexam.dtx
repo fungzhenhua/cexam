@@ -17,12 +17,14 @@
 %
 % 2020年3月21日去除图片（表格）与文本分隔符“<< ” 和“ >> ”，实现图片（表格）的自动判断。
 %
-% 2020年 03月 28日 星期六 14:46:13 CST 修改完成大部分使用\LaTeXiii{}命令改写的代码，版本号v3.2.6。在生成文档时，确定版本的\cs{GetIdInfo}是在宏包中确定的，所以在生成宏包后用新的宏包编译才可以生成对应的文档。
+% 2020年 03月 28日 星期六 14:46:13 CST 修改完成大部分使用\hologo{LaTeX3}{}命令改写的代码，版本号v3.2.6。在生成文档时，确定版本的\cs{GetIdInfo}是在宏包中确定的，所以在生成宏包后用新的宏包编译才可以生成对应的文档。
 % 
 % 2020年 12月 29日 星期二 23:15:08 CST 在使用ctexbook 文档类排版电动势的符号时需要调用amsmathrsfs.sty ,但是在输出文档时出现了字体警告问题。其原因为ctex宏集为了适配中文而对默认字体作了调整，所以在调用数学类宏包时由于其是根据英文文档类设置的离散型字号，所以这就导致了问题的产生。如此需要对字号作一个设置，目前没有解决这一方面问题时我暂时写了一个简单的宏包来消除警告，只是粗爆的将font@warning 命令重新定义为空，如此则不会再出现警告了，待以后ctex 文档类解决了这些问题后，此宏包考虑删除 ctrlwarning.sty。
 %
 % 2020年 12月 30日 星期三 11:08:07 CST 通过研究docstrip 文件获得将生成的宏包指定到具体目录下的设置方法。同时由于经过实验此方法不能直接指定到安装目录，而只能在编译目录下设置新目录接收生成的宏包。所以作为方便的方法建立了安装脚本一并生成到INSTALL 文件夹，安装时只需要将install.sh脚本添加执行权限，运行安装脚本就好了。
-% 
+%
+% 2025年07月29日, 将ctxdoc文档类修改为标准l3doc文档类，并将change history 和indenx 按ctxdoc.sty翻译成中文。此设置可以保持标准格式生成文档，以方便维护。
+%
 %
 %<*internal>
 \iffalse
@@ -168,26 +170,57 @@ Copyright and Licence
 %
 %<*driver>
 %\PassOptionsToPackage{AutoFakeSlant = true , AutoFakeBold = true}{xeCJK} ^^M 开启宋体伪粗体，但是本文件中不打算开启，在此处仅作为拓展
-\PassOptionsToPackage{fontset = windows}{ctex} ^^M 提前将字体设定传输给ctex宏包，这样可以不必再单独修改ctxdoc文档类了
-\documentclass{ctxdoc}
+\documentclass{l3doc}
+\usepackage[fontset=windows,UTF8, punct=kaiming, heading, linespread=1.2, sub3section]{ctex}
+\usepackage[toc]{multitoc}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{threeparttable}
+\usepackage{siunitx}
+\usepackage{unicode-math}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{fancyvrb-ex}
+\usepackage{zref-base}
+\usepackage{hologo}
 \usepackage[user=teacher,option=random,sourcecolor=blue]{cexam} ^^M 引入宏包,用以生成说明文档,展示排版效果
 \usepackage{tikz}
 \usepackage{amsthm} ^^M 此处宏包引入为了展示证明题的输入，当引入此宏包时加入证明结束符号，不引入则不加入证明结束符号
+\ctexset{
+  abstractname   = 简介,
+  indexname      = 代码索引,
+  section/format = \Large\bfseries\raggedright,
+  section/name   = {第,节},
+}
+\def\glossaryname{版本历史}
+\GlossaryPrologue{\section{\glossaryname}}
+\IndexPrologue{%
+  \section{\indexname}
+  \textit{意大利体的数字表示描述对应索引项的页码；
+  带下划线的数字表示定义对应索引项的代码行号；
+  罗马字体的数字表示使用对应索引项的代码行号。}}
+\geometry{includemp, hmargin={0mm,15mm}, vmargin={25mm,15mm}, footskip=7mm}
+\hypersetup{pdfstartview=FitH, bookmarksdepth=subparagraph}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{2}
 \EnableCrossrefs
 \CodelineIndex
 \RecordChanges
 %\OnlyDescription
 \begin{document}
   \DocInput{\jobname.dtx}
-  \IndexLayout
+  % \IndexLayout
+  \newpage
   \PrintChanges
+  \newpage
   \PrintIndex
 \end{document}
 %</driver>
 %
 % \fi ^^M 此\fi 和第1行的\iffalse 配对
 % 
-% \changes{v3.0.0}{2019/04/09}{开始使用 \LaTeXiii{}重构cexam.sty}
+% \changes{v3.0.0}{2019/04/09}{开始使用 \hologo{LaTeX3}{}重构cexam.sty}
 % \changes{v3.0.1}{2019/07/31}{加入测行程序和形状生成程序,同时删除之前改写的代码}
 % \changes{v3.0.1}{2019/07/31}{缩写命名,加入缩写列表}
 % \changes{v3.0.7}{2019/08/15}{删除命令\cs{cexam_stand_dim:n}}
@@ -206,7 +239,7 @@ Copyright and Licence
 % \changes{v3.1.7}{2019/09/21}{引入宏包tikz}
 % \changes{v3.1.8}{2019/09/22}{增加源文档中的一些命令解释和题目输入举例}
 % \changes{v3.1.9}{2019/09/29}{优化了说明档，增加题型排版展示和安装说明}
-% \changes{v3.2.2}{2019/02/16}{此版主要的工作是规范了\LaTeXiii{}格式，替换原来的一些命令为字符串变量}
+% \changes{v3.2.2}{2019/02/16}{此版主要的工作是规范了\hologo{LaTeX3}{}格式，替换原来的一些命令为字符串变量}
 % \changes{v3.2.2}{2019/02/16}{删除\cs{sep_hd_old:},\cs{sp_hd_old_add:n}}
 % \changes{v3.2.3}{2020/03/21}{去除宏包\pkg{xcolor},\pkg{tikz}}
 % \changes{v3.2.4}{2020/03/22}{删除\cs{cexam_pic_det:n},去除宏包\pkg{calc}}
@@ -222,6 +255,7 @@ Copyright and Licence
 % \changes{v3.3.5}{2021/02/06}{选择题选项定界符号由\cs{option}修改为\cs{choice}}
 % \changes{v3.3.6}{2021/05/14}{修复cexam.dtx 对ctxdoc.cls 引用时字体报警问题，默认使用founder 字体}
 % \changes{v3.3.7}{2023/11/12}{由于l3kernel强制要求引擎支持 primitive, 导致原ctxdoc.cls 出现问题，同时将注释符由A改为M, 简化了几个小节标题，可以正常编译}
+% \changes{v3.4.1}{2025/07/29}{将ctxdoc文档类修改为标准l3doc,同时根据ctxdoc.sty完成标题翻译.}
 %
 %
 % \CheckSum{0}
@@ -253,7 +287,7 @@ Copyright and Licence
 % 其一,方便代码的维护和升级;
 % 其二,方便参考此说明使用它排版试卷。
 %
-% 由于在2018年我成功使用\LaTeX2e{} 完成了 \file{cexam.dtx} 文件, 但是对 \pkg{doc} 和 \pkg{docstrip} 理解的不够深入所以最初写成的 \file{cexam.dtx} 文件不是很规范,同时考虑到了 \CTeX{} 宏集使用 \LaTeXiii{} 进行了重写,\LaTeXiii{} 的语法更加友好,且已经很成熟了,所以我也决定对我的宏包 \pkg{cexam} 使用 \LaTeXiii{}重写以便于更好的维护和拓展功能.考虑到实践的检验,所以开始不拟实现全部功能,仅写出核心功能,经过一段时间的检验后再逐步实现各项功能。
+% 由于在2018年我成功使用\LaTeX2e{} 完成了 \file{cexam.dtx} 文件, 但是对 \pkg{doc} 和 \pkg{docstrip} 理解的不够深入所以最初写成的 \file{cexam.dtx} 文件不是很规范,同时考虑到了 CTeX{} 宏集使用 \hologo{LaTeX3}{} 进行了重写,\hologo{LaTeX3}{} 的语法更加友好,且已经很成熟了,所以我也决定对我的宏包 \pkg{cexam} 使用 \hologo{LaTeX3}{}重写以便于更好的维护和拓展功能.考虑到实践的检验,所以开始不拟实现全部功能,仅写出核心功能,经过一段时间的检验后再逐步实现各项功能。
 %
 % \noindent{\color{red} \fbox{\bf 注意}：由于在学生模式时需要输出答案，而这就需要修改\cs{chapter}和\cs{section}等章节命令以达成答案的输出。但是，如果引用\pkg{hyperref}宏包，则文档就会生成超链接，而\pkg{hyperref}比较复杂，同时其也对章节做了修改，因此在{\bf 调用\pkg{cexam}时需要将其放在\pkg{hyperref}之后}。}
 %
@@ -271,7 +305,7 @@ Copyright and Licence
 %  \section{介绍}
 %  最初我是想找到一种快速输入数学公式的方法,通过万能的互联网,我认识到\LaTeX{}的强大.通过阅读《\LaTeX2e{}完全学习手册》\footnote{胡伟著$\cdot$ 清华大学出版社},掌握了\LaTeX{}的基本使用方法。但是对于中文的处理尤其是字体的安装使用在开始的时候很是个问题，同时我在教学工作中需要将我自己的讲义写成电子版，方便学生课下学习使用。这样就遇到了输入选择题，填空题，判断题，计算题等基本题型，这些题型都需要悬挂缩进，但是开始在\LaTeX{}下工作的时候，这个问题不好解决。经过长时间的学习，理解，深入阅读《The \TeX{} book （中文翻译版）》掌握了\TeX{}的基本原理，然后决心自己开发一个宏包，专门用来输入这些物理上常见的题型。
 % 
-% \LaTeX{}对于数学公式的处理具有先天的优势，因为它就是为了数学公式输入而生的。但是，对于图片和文字的混排处理的不是很好。虽然有一些图文绕排宏包，比如 \pkg{picinpar}等，但它们不能按照中国试题的格式给出排版，更别说自动处理选择题了。此宏包主要解决的就是这个图片和文字的混排问题，历经三次改进，最终形成了这个以\LaTeXiii{} 格式开发的版本，它更加现代，更加方便维护。第一版是边学习边写的，直接写的宏包，同时尽可能的自动实现排版试卷的各种功能，最初实现的功能有排版四种基本题型，自动写出答案到答案文件\cs{jobname}.ans ,自动生成beamer 文档，同时也写成了试卷排版文档类，实现了试卷的各种设置。但是随着功能的增加，以及开始所写的代码不是最优，同时又没有说明文档，所以开发变的非常困难。这时，我发现一些宏包基本都有说明文档，同时百度之后又发现还有文学化编程，通过研究这些网络知识，我最终学会了使用\pkg{dtx} 文件文学化编写\LaTeX{}宏包。于是，我开始准备进行将第一版整理成\pkg{dtx}文件的工作，由于理解的深入，在改写的同时也优化了一些代码，这就是第二版的来源。由于在使用中文的过程遇到了\pkg{ctexbook}等文档类，同时阅读它的说明文档时发现它的实现代码很特殊，这就是\LaTeXiii{},阅读了网络上的很多文章，同时也凭借自己的二把刀英语水平，阅读了\pkg{source3} 的部分内容，学会了这个更加现代化，且相当规范的下一代\LaTeX{}系统，所以决定使用\LaTeXiii{}重新实现之前的宏包。但是，由于理解的进一步深入，所以在实现基本的试题排版功能后，暂停一段时间的功能拓展，而进行代码的优化工作。同时，也是为了检验这支程序的可靠性。
+% \LaTeX{}对于数学公式的处理具有先天的优势，因为它就是为了数学公式输入而生的。但是，对于图片和文字的混排处理的不是很好。虽然有一些图文绕排宏包，比如 \pkg{picinpar}等，但它们不能按照中国试题的格式给出排版，更别说自动处理选择题了。此宏包主要解决的就是这个图片和文字的混排问题，历经三次改进，最终形成了这个以\hologo{LaTeX3}{} 格式开发的版本，它更加现代，更加方便维护。第一版是边学习边写的，直接写的宏包，同时尽可能的自动实现排版试卷的各种功能，最初实现的功能有排版四种基本题型，自动写出答案到答案文件\cs{jobname}.ans ,自动生成beamer 文档，同时也写成了试卷排版文档类，实现了试卷的各种设置。但是随着功能的增加，以及开始所写的代码不是最优，同时又没有说明文档，所以开发变的非常困难。这时，我发现一些宏包基本都有说明文档，同时百度之后又发现还有文学化编程，通过研究这些网络知识，我最终学会了使用\pkg{dtx} 文件文学化编写\LaTeX{}宏包。于是，我开始准备进行将第一版整理成\pkg{dtx}文件的工作，由于理解的深入，在改写的同时也优化了一些代码，这就是第二版的来源。由于在使用中文的过程遇到了\pkg{ctexbook}等文档类，同时阅读它的说明文档时发现它的实现代码很特殊，这就是\hologo{LaTeX3}{},阅读了网络上的很多文章，同时也凭借自己的二把刀英语水平，阅读了\pkg{source3} 的部分内容，学会了这个更加现代化，且相当规范的下一代\LaTeX{}系统，所以决定使用\hologo{LaTeX3}{}重新实现之前的宏包。但是，由于理解的进一步深入，所以在实现基本的试题排版功能后，暂停一段时间的功能拓展，而进行代码的优化工作。同时，也是为了检验这支程序的可靠性。
 %
 % \pkg{cexam.sty}开发过程中的核心问题是测定行数，最初前两版是通过对比文本和图片的高度，采用循环命令逐次减去\cs{baselineskip}来实现的，这个命令在处理文字时能够得到准确的行数，但是一旦出现数学公式，并不是很理想，虽然大多数情况能够正确排版，但是偶尔还是会出现问题。在第三版的开发过程中，通过研究\cs{prevgraf}实现了行数的准确测定，这使开发工作大大加快，同时由于重写了测行程序，所以又改写了大量的基本排版程序\footnote{在v3.1.2版中进行的这个工作}。在2019年9月3日，通过一天的开发，实现四种基本题型的排版工作。同时，提供了四个题型的输入环境，同时兼顾了国人习惯，提供了对应于拼音名称的四种题型输入环境：\pkg{xuanze}\quad ,\quad \pkg{tiankong} \quad , \quad \pkg{panduan}\quad ,\quad \pkg{jisuan}。
 %
@@ -403,8 +437,8 @@ echo  "document: cexam.pdf had been installed."
 %    那么为了配合随机模式，请使用这里列出的选项引用方式.
 % 
 %  ee.如果解析中有多幅图片,则需要按图片分开来写解析,这一部分是补充,所以没有解析标志.
-% 
-%  2.\source[4]{2020}{陕西省商洛市模拟} 行驶中的汽车遇到红灯刹车后做匀减速直线运动直到停
+%
+%  2. \source[4]{2020}{陕西省商洛市模拟} 行驶中的汽车遇到红灯刹车后做匀减速直线运动直到停
 %    止，等到绿灯亮时又重新启动开始做匀加速直线运动直到恢复原来的速度继续匀速行驶，则从刹
 %    车到继续匀速行驶这段过程，位移随速度变化的关系图像描述正确的是
 %    \choice[P] \includegraphics{1.png}
@@ -607,6 +641,7 @@ echo  "document: cexam.pdf had been installed."
 %  a.*
 % 
 %  e.建立理想模型是物理中的重要的研究方法,对于复杂问题的研究有重大意义,\refa{}错误;一个物体能否看成质点不以轻重而论,\refc{}错误;物体能否看成质点取决于其大小和形状对所研究的问题是否属于无关或次要因素,若是就可以看成质点,\refd{}正确.
+%
 %   2.\source[4]{2020}{陕西省商洛市模拟} 行驶中的汽车遇到红灯刹车后做匀减速直线运动直到停止，等到绿灯亮时又重新启动开始做匀加速直线运动直到恢复原来的速度继续匀速行驶，则从刹车到继续匀速行驶这段过程，位移随速度变化的关系图像描述正确的是
 %   \choice[P] \includegraphics{1.png}
 %   a.C
@@ -1581,7 +1616,7 @@ echo  "document: cexam.pdf had been installed."
 % \begin{macro}[added=2019-05-10]{\cexam_sep_i:n , \cexam_sep_ii:n, \cexam_sep_iii:n}
 %
 % 三个基本数学模式分离,数学模式符号不处于字符串两端的处理
-% \changes{v3.2.2}{2019/02/16}{用\LaTeXiii{}中的数据格式tokenlist 重写了数据分析结构}
+% \changes{v3.2.2}{2019/02/16}{用\hologo{LaTeX3}{}中的数据格式tokenlist 重写了数据分析结构}
 %
 %    \begin{macrocode}
 \cs_new:Npn \cexam_sep_i:n  #1$$#2$$#3\scan_stop:
@@ -1628,7 +1663,7 @@ echo  "document: cexam.pdf had been installed."
 % \end{macro}
 % \begin{macro}[added=2019-05-10]{\cexam_sep_isin:nn}
 % 加入三个数学模式符号处于字符串两端的处理
-% \changes{v3.2.2}{2019/02/16}{用\LaTeXiii{}中的数据格式tokenlist 重写了数据分析结构}
+% \changes{v3.2.2}{2019/02/16}{用\hologo{LaTeX3}{}中的数据格式tokenlist 重写了数据分析结构}
 %    \begin{macrocode}
   \cs_new:Npn \cexam_sep_isin:nn #1#2
   {
@@ -1670,7 +1705,7 @@ echo  "document: cexam.pdf had been installed."
 % \end{macro}
 % \begin{macro}[added=2019-05-10]{\cexam_sep:n}
 % 加入数学和纯文本模式混合时的分离功能,自动判断是否存在数学模式,尾部是否为空
-% \changes{v3.2.2}{2019/02/16}{用\LaTeXiii{}中的数据格式tokenlist 重写了数据分析结构}
+% \changes{v3.2.2}{2019/02/16}{用\hologo{LaTeX3}{}中的数据格式tokenlist 重写了数据分析结构}
 %    \begin{macrocode}
   \cs_new:Npn \cexam_sep:n #1 \scan_stop:
   {
@@ -1992,7 +2027,7 @@ echo  "document: cexam.pdf had been installed."
 % \changes{v3.3.5}{2021/02/06}{使用正则表达式改写部分代码}
 %
 %
-% 此程序用来格式化图片,获得图片的宽,高,生成参与排版的零宽度盒子.最初的设计是使用盒子生成图片,虽然在\LaTeXiii{} 中能够正确运行,但是定义到用户接口的环境后,并不能正确运行,它总是产生段落开始的一大段空白.而在\LaTeX2e{} 中使用零宽度盒子能很好的解决问题,同时考虑到题目的题号宽度是动态,所以加入了一个文本左缩进量,以解决此问题.\footnote{2019年9月3日经过努力思考得到此方法.}
+% 此程序用来格式化图片,获得图片的宽,高,生成参与排版的零宽度盒子.最初的设计是使用盒子生成图片,虽然在\hologo{LaTeX3}{} 中能够正确运行,但是定义到用户接口的环境后,并不能正确运行,它总是产生段落开始的一大段空白.而在\LaTeX2e{} 中使用零宽度盒子能很好的解决问题,同时考虑到题目的题号宽度是动态,所以加入了一个文本左缩进量,以解决此问题.\footnote{2019年9月3日经过努力思考得到此方法.}
 % 
 %    \begin{macrocode}
  \cs_new:Npn \cexam_fmt_pic:nnnn #1#2#3#4
@@ -2678,7 +2713,7 @@ echo  "document: cexam.pdf had been installed."
 % \changes{v3.2.0}{2019/10/13}{删除\cs{cho_get_lmax:n}}
 % \changes{v3.2.0}{2019/10/13}{新增\cs{cho_get_lmax:nn}}
 %
-% 此程序并不复杂,在\LaTeX2e{}版本中,我曾单独写出了这支程序,但是在\LaTeXiii{} 中给出了一个标准的取得最大长度的程序\cs{dim_max:nn},所以在此版本中,我选择了这个标准的程序来获得最大选项长度.
+% 此程序并不复杂,在\LaTeX2e{}版本中,我曾单独写出了这支程序,但是在\hologo{LaTeX3}{} 中给出了一个标准的取得最大长度的程序\cs{dim_max:nn},所以在此版本中,我选择了这个标准的程序来获得最大选项长度.
 % 
 % 在2019年10月13日，考虑优化选择题选项排版时，由于二行排版选项时需要对比AB的最大长度和CD的最大长度，所以此处决定升级为双参量函数。
 % 
