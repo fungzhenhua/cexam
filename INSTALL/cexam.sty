@@ -670,12 +670,12 @@
 \tl_new:N \cexam_sep_pictab_tl
 \tl_new:N \cexam_sep_txt_tl
 \tl_new:N \cexam_sep_nopic_tl
+\cs_if_exist:NTF \draw_set_linewidth:n
+{\cs_set_eq:NN \draw_linewidth:n \draw_set_linewidth:n}{}
+\cs_if_exist:NTF \color_select:n
+{\cs_set_eq:NN \draw_color:n \color_select:n}{}
 \tl_set:Nn \cexam_sep_nopic_tl
 {
-   \@ifpackagelater{l3draw}{2025/06/30}{
-       \cs_set_eq:NN \draw_linewidth:n \draw_set_linewidth:n
-       \cs_set_eq:NN \draw_color:n \color_select:n
-   }{}
    \draw_begin:
    \draw_color:n {blue}
    \draw_linewidth:n {2pt}

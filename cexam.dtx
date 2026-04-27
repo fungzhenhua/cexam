@@ -2507,12 +2507,12 @@ echo  "document: cexam.pdf had been installed."
 % \begin{macro}[added=2019-09-11]{\cexam_sep_nopic_tl}
 % 当图片过小或者过大时，所设置的默认方框，用以参与排版。同时messgae 在终端给出提示。
 %    \begin{macrocode}
+\cs_if_exist:NTF \draw_set_linewidth:n
+{\cs_set_eq:NN \draw_linewidth:n \draw_set_linewidth:n}{}
+\cs_if_exist:NTF \color_select:n
+{\cs_set_eq:NN \draw_color:n \color_select:n}{}
 \tl_set:Nn \cexam_sep_nopic_tl
 {
-   \@ifpackagelater{l3draw}{2025/06/30}{
-       \cs_set_eq:NN \draw_linewidth:n \draw_set_linewidth:n
-       \cs_set_eq:NN \draw_color:n \color_select:n
-   }{}
    \draw_begin:
    \draw_color:n {blue}
    \draw_linewidth:n {2pt}
