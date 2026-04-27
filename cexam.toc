@@ -45,7 +45,7 @@
 \contentsline {subsection}{\numberline {11.22}学生模式答案写出}{56}{subsection.0.11.22}%
 \contentsline {subsection}{\numberline {11.23}目录的设置}{57}{subsection.0.11.23}%
 \contentsline {subsection}{\numberline {11.24}章节命令加入答案写出}{57}{subsection.0.11.24}%
-\contentsline {subsection}{\numberline {11.25}各题型与答案和解析的自动选择}{59}{subsection.0.11.25}%
+\contentsline {subsection}{\numberline {11.25}各题型与答案和解析的自动选择}{60}{subsection.0.11.25}%
 \contentsline {subsection}{\numberline {11.26}用户接口的各题型输入}{63}{subsection.0.11.26}%
 \contentsline {subsection}{\numberline {11.27}派生排版命令}{68}{subsection.0.11.27}%
 \contentsline {section}{\numberline {第12节}ctrlwarning.sty代码实现}{69}{section.0.12}%
