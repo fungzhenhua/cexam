@@ -6,7 +6,7 @@
   \item v1.1\efill 
  \subitem \verb*&colornote.sty&:\ 增加colornote.sty\pfill \hdpindex{}{70}
   \item v3.0.0\efill 
- \subitem General:\ 开始使用 \hologoRobust {LaTeX3}{}重构cexam.sty\pfill 
+ \subitem General:\ 开始使用 \NoCaseChange {\HoLogo@tag@actualtext {first}{LaTeX3}{\hologoRobust {LaTeX3}}}{}重构cexam.sty\pfill 
 		\hdpindex{}{1}
   \item v3.0.1\efill 
  \subitem General:\ 加入测行程序和形状生成程序,同时删除之前改写的代码\pfill 
@@ -119,7 +119,7 @@
     \subitem \verb*&\cexam_type_i:nnnnnnn&:\ 修改图片放置命令\pfill \hdpindex{}{31}
     \subitem \verb*&\choice_type:p&:\ 重新定义选择题排版程序\pfill \hdpindex{}{50}
     \subitem \verb*&\choice_type_i:p&:\ 更名\pfill \hdpindex{}{45}
-    \subitem \verb*&\choice_warning:&:\ 新增命令\pfill \hdpindex{}{49}
+    \subitem \verb*&\choice_warning:&:\ 新增命令\pfill \hdpindex{}{50}
     \subitem \verb*&\everypar_blank:p&:\ 新增命令\pfill \hdpindex{}{60}
     \subitem \verb*&\everypar_calculate:p&:\ 新增命令\pfill \hdpindex{}{61}
     \subitem \verb*&\everypar_choice:p&:\ 新增命令\pfill \hdpindex{}{59}
@@ -242,7 +242,7 @@
     \subitem \verb*&\choice_type_i:p&:\ 规范了选项间隔\pfill \hdpindex{}{45}
   \item v3.2.2\efill 
  \subitem General:\ 删除\cs {sep_hd_old:},\cs {sp_hd_old_add:n}\pfill \hdpindex{}{1}
-      \subsubitem 此版主要的工作是规范了\hologoRobust {LaTeX3}{}格式，替换原来的一些命令为字符串变量\pfill 
+      \subsubitem 此版主要的工作是规范了\NoCaseChange {\HoLogo@tag@actualtext {first}{LaTeX3}{\hologoRobust {LaTeX3}}}{}格式，替换原来的一些命令为字符串变量\pfill 
 		\hdpindex{}{1}
     \subitem \verb*&\@sset&:\ 修复题号不置零错误\pfill \hdpindex{}{57}
     \subitem \verb*&\ana_tag_i_tl&:\ 修改命令为tokenlist\pfill \hdpindex{}{55}
@@ -253,11 +253,11 @@
     \subitem \verb*&\cexam_ind_hat:nnnn&:\ 修改下沉量为0.01\pfill \hdpindex{}{39}
     \subitem \verb*&\cexam_number_tag_i_tl&:\ 修改命令为tokenlist\pfill \hdpindex{}{42}
       \subsubitem 新增字符串变量\pfill \hdpindex{}{21}
-    \subitem \verb*&\cexam_sep:n&:\ 用\hologoRobust {LaTeX3}{}中的数据格式tokenlist 重写了数据分析结构\pfill 
+    \subitem \verb*&\cexam_sep:n&:\ 用\NoCaseChange {\HoLogo@tag@actualtext {first}{LaTeX3}{\hologoRobust {LaTeX3}}}{}中的数据格式tokenlist 重写了数据分析结构\pfill 
 		\hdpindex{}{24}
-    \subitem \verb*&\cexam_sep_iii:n&:\ 用\hologoRobust {LaTeX3}{}中的数据格式tokenlist 重写了数据分析结构\pfill 
+    \subitem \verb*&\cexam_sep_iii:n&:\ 用\NoCaseChange {\HoLogo@tag@actualtext {first}{LaTeX3}{\hologoRobust {LaTeX3}}}{}中的数据格式tokenlist 重写了数据分析结构\pfill 
 		\hdpindex{}{23}
-    \subitem \verb*&\cexam_sep_isin:nn&:\ 用\hologoRobust {LaTeX3}{}中的数据格式tokenlist 重写了数据分析结构\pfill 
+    \subitem \verb*&\cexam_sep_isin:nn&:\ 用\NoCaseChange {\HoLogo@tag@actualtext {first}{LaTeX3}{\hologoRobust {LaTeX3}}}{}中的数据格式tokenlist 重写了数据分析结构\pfill 
 		\hdpindex{}{24}
     \subitem \verb*&\cho_fmt_tl&:\ 修改为\cs {cho_fmt_tl}\pfill \hdpindex{}{40}
       \subsubitem 新增字符串变量\pfill \hdpindex{}{20}
@@ -368,7 +368,7 @@
     \subitem \verb*&\choice_option_set:nnnn&:\ 使用布尔表达式优化实现过程\pfill \hdpindex{}{45}
       \subsubitem 新增命令\pfill \hdpindex{}{45}
     \subitem \verb*&\choice_option_set_i:p&:\ 新增命令\pfill \hdpindex{}{43}
-    \subitem \verb*&\choice_option_set_ii:p&:\ 新增命令\pfill \hdpindex{}{44}
+    \subitem \verb*&\choice_option_set_ii:p&:\ 新增命令\pfill \hdpindex{}{45}
     \subitem \verb*&\choice_randint_make:&:\ 新增命令\pfill \hdpindex{}{43}
     \subitem \verb*&\choice_type:p&:\ 加入了随机选项排列功能，同时兼容之前的选项输入格式\pfill 
 		\hdpindex{}{50}
@@ -389,7 +389,7 @@
     \subitem \verb*&\choice_option_it&:\ 新增命令\pfill \hdpindex{}{20}
     \subitem \verb*&\choice_option_total:p&:\ 新增命令\pfill \hdpindex{}{49}
     \subitem \verb*&\choice_type:p&:\ 去除了对旧输入格式的兼容\pfill \hdpindex{}{50}
-    \subitem \verb*&\choice_warning:&:\ 修改了提示内容\pfill \hdpindex{}{49}
+    \subitem \verb*&\choice_warning:&:\ 修改了提示内容\pfill \hdpindex{}{50}
   \item v3.3.6\efill 
  \subitem General:\ 修复cexam.dtx 对ctxdoc.cls 引用时字体报警问题，默认使用founder 字体\pfill 
 		\hdpindex{}{1}
@@ -431,6 +431,9 @@
     \subitem \verb*&install.sh&:\ 设置texlive变量\pfill \hdpindex{}{4}
   \item v3.4.1\efill 
  \subitem General:\ 将ctxdoc文档类修改为标准l3doc,同时根据ctxdoc.sty完成标题翻译.\pfill 
+		\hdpindex{}{1}
+  \item v3.4.2\efill 
+ \subitem General:\ 修复l3draw中命令\cs {draw_linewidth:n}升级为\cs {draw_set_linewidth}及\cs {draw_color:n}升级为\cs {color_select:n}造成的编译问题，同时采用了兼容模式，可以兼容旧版本l3draw。\pfill 
 		\hdpindex{}{1}
 
  \end{theglossary}

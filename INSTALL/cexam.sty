@@ -5,7 +5,7 @@
 %% The original source files were:
 %%
 %% cexam.dtx  (with options: `package')
-%%     Copyright (C) 2017--2020
+%%     Copyright (C) 2017--2026
 %%     Feng Zhenhua and any individual authors listed elsewhere in this file.
 %%     ----------------------------------------------------------------------
 %%     This work may be distributed and/or modified under the
@@ -23,7 +23,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \RequirePackage{expl3,l3keys2e,xparse,l3draw}
 \RequirePackage{pifont}
-\GetIdInfo$Id: cexam.dtx v3.4.0(alpha)  2022-04-02 ZhenhuaFeng  <fengzhenhua@outlook.com> $ {For Chinese middle school examination}
+\GetIdInfo$Id: cexam.dtx v3.4.2(alpha)  2026-04-27 Zhenhua-Feng  <fengzhenhua@outlook.com> $ {For Chinese middle school examination}
 \ProvidesExplPackage{\ExplFileName}{\ExplFileDate}{\ExplFileVersion}{\ExplFileDescription}
 \msg_new:nnnn {cexam}{l3-too-old}
 {Support~package~#1~too~old.}
@@ -672,6 +672,10 @@
 \tl_new:N \cexam_sep_nopic_tl
 \tl_set:Nn \cexam_sep_nopic_tl
 {
+   \@ifpackagelater{l3draw}{2025/06/30}{
+       \cs_set_eq:NN \draw_linewidth:n \draw_set_linewidth:n
+       \cs_set_eq:NN \draw_color:n \color_select:n
+   }{}
    \draw_begin:
    \draw_color:n {blue}
    \draw_linewidth:n {2pt}

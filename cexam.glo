@@ -1,4 +1,4 @@
-\glossaryentry{v3.0.0>!!=General:>开始使用 \hologoRobust {LaTeX3}{}重构cexam.sty|hdpindex{}}{1}
+\glossaryentry{v3.0.0>!!=General:>开始使用 \NoCaseChange {\HoLogo@tag@actualtext {first}{LaTeX3}{\hologoRobust {LaTeX3}}}{}重构cexam.sty|hdpindex{}}{1}
 \glossaryentry{v3.0.1>!!=General:>加入测行程序和形状生成程序,同时删除之前改写的代码|hdpindex{}}{1}
 \glossaryentry{v3.0.1>!!=General:>缩写命名,加入缩写列表|hdpindex{}}{1}
 \glossaryentry{v3.0.7>!!=General:>删除命令\cs {cexam_stand_dim:n}|hdpindex{}}{1}
@@ -17,7 +17,7 @@
 \glossaryentry{v3.1.7>!!=General:>引入宏包tikz|hdpindex{}}{1}
 \glossaryentry{v3.1.8>!!=General:>增加源文档中的一些命令解释和题目输入举例|hdpindex{}}{1}
 \glossaryentry{v3.1.9>!!=General:>优化了说明档，增加题型排版展示和安装说明|hdpindex{}}{1}
-\glossaryentry{v3.2.2>!!=General:>此版主要的工作是规范了\hologoRobust {LaTeX3}{}格式，替换原来的一些命令为字符串变量|hdpindex{}}{1}
+\glossaryentry{v3.2.2>!!=General:>此版主要的工作是规范了\NoCaseChange {\HoLogo@tag@actualtext {first}{LaTeX3}{\hologoRobust {LaTeX3}}}{}格式，替换原来的一些命令为字符串变量|hdpindex{}}{1}
 \glossaryentry{v3.2.2>!!=General:>删除\cs {sep_hd_old:},\cs {sp_hd_old_add:n}|hdpindex{}}{1}
 \glossaryentry{v3.2.3>!!=General:>去除宏包\pkg  {xcolor},\pkg  {tikz}|hdpindex{}}{1}
 \glossaryentry{v3.2.4>!!=General:>删除\cs {cexam_pic_det:n},去除宏包\pkg  {calc}|hdpindex{}}{1}
@@ -34,6 +34,7 @@
 \glossaryentry{v3.3.6>!!=General:>修复cexam.dtx 对ctxdoc.cls 引用时字体报警问题，默认使用founder 字体|hdpindex{}}{1}
 \glossaryentry{v3.3.7>!!=General:>由于l3kernel强制要求引擎支持 primitive, 导致原ctxdoc.cls 出现问题，同时将注释符由A改为M, 简化了几个小节标题，可以正常编译|hdpindex{}}{1}
 \glossaryentry{v3.4.1>!!=General:>将ctxdoc文档类修改为标准l3doc,同时根据ctxdoc.sty完成标题翻译.|hdpindex{}}{1}
+\glossaryentry{v3.4.2>!!=General:>修复l3draw中命令\cs {draw_linewidth:n}升级为\cs {draw_set_linewidth}及\cs {draw_color:n}升级为\cs {color_select:n}造成的编译问题，同时采用了兼容模式，可以兼容旧版本l3draw。|hdpindex{}}{1}
 \glossaryentry{v3.3.3>install.sh=\verb!*&install.sh&:>新增安装脚本|hdpindex{}}{4}
 \glossaryentry{v3.4.0>install.sh=\verb!*&install.sh&:>设置texlive变量|hdpindex{}}{4}
 \glossaryentry{v3.2.6>l3-too-old=\verb!*&l3-too-old&:>新增版本检测|hdpindex{}}{14}
@@ -92,9 +93,9 @@
 \glossaryentry{v3.3.4>cexam/option=\verb!*&cexam/option&:>规范化选项设置，增加选择题随机选项控制选项option|hdpindex{}}{22}
 \glossaryentry{v3.3.6>cexam/option=\verb!*&cexam/option&:>增加题源显示及其颜色设置|hdpindex{}}{22}
 \glossaryentry{v3.3.6>cexam/option=\verb!*&cexam/option&:>增加单独控制星级和年份开关|hdpindex{}}{22}
-\glossaryentry{v3.2.2>cexam_sep_iii:n=\verb!*&\cexam_sep_iii:n&:>用\hologoRobust {LaTeX3}{}中的数据格式tokenlist 重写了数据分析结构|hdpindex{}}{23}
-\glossaryentry{v3.2.2>cexam_sep_isin:nn=\verb!*&\cexam_sep_isin:nn&:>用\hologoRobust {LaTeX3}{}中的数据格式tokenlist 重写了数据分析结构|hdpindex{}}{24}
-\glossaryentry{v3.2.2>cexam_sep:n=\verb!*&\cexam_sep:n&:>用\hologoRobust {LaTeX3}{}中的数据格式tokenlist 重写了数据分析结构|hdpindex{}}{24}
+\glossaryentry{v3.2.2>cexam_sep_iii:n=\verb!*&\cexam_sep_iii:n&:>用\NoCaseChange {\HoLogo@tag@actualtext {first}{LaTeX3}{\hologoRobust {LaTeX3}}}{}中的数据格式tokenlist 重写了数据分析结构|hdpindex{}}{23}
+\glossaryentry{v3.2.2>cexam_sep_isin:nn=\verb!*&\cexam_sep_isin:nn&:>用\NoCaseChange {\HoLogo@tag@actualtext {first}{LaTeX3}{\hologoRobust {LaTeX3}}}{}中的数据格式tokenlist 重写了数据分析结构|hdpindex{}}{24}
+\glossaryentry{v3.2.2>cexam_sep:n=\verb!*&\cexam_sep:n&:>用\NoCaseChange {\HoLogo@tag@actualtext {first}{LaTeX3}{\hologoRobust {LaTeX3}}}{}中的数据格式tokenlist 重写了数据分析结构|hdpindex{}}{24}
 \glossaryentry{v3.1.2>cexam_get:nNnN=\verb!*&\cexam_get:nNnN&:>排版中已经不再使用该程序累加行数,保留备用|hdpindex{}}{25}
 \glossaryentry{v3.1.2>get_par_row:nnn=\verb!*&\get_par_row:nnn&:>新增程序|hdpindex{}}{25}
 \glossaryentry{v3.1.2>get_par_ht:nnn=\verb!*&\get_par_ht:nnn&:>新增程序|hdpindex{}}{25}
@@ -205,7 +206,7 @@
 \glossaryentry{v3.3.4>refd=\verb!*&\refd&:>新增随机模式下选项引用命令|hdpindex{}}{42}
 \glossaryentry{v3.3.4>choice_option_set_i:p=\verb!*&\choice_option_set_i:p&:>新增命令|hdpindex{}}{43}
 \glossaryentry{v3.3.4>choice_randint_make:=\verb!*&\choice_randint_make:&:>新增命令|hdpindex{}}{43}
-\glossaryentry{v3.3.4>choice_option_set_ii:p=\verb!*&\choice_option_set_ii:p&:>新增命令|hdpindex{}}{44}
+\glossaryentry{v3.3.4>choice_option_set_ii:p=\verb!*&\choice_option_set_ii:p&:>新增命令|hdpindex{}}{45}
 \glossaryentry{v3.3.4>choice_ans_order:n=\verb!*&\choice_ans_order:n&:>新增命令|hdpindex{}}{45}
 \glossaryentry{v3.3.4>choice_option_set:nnnn=\verb!*&\choice_option_set:nnnn&:>新增命令|hdpindex{}}{45}
 \glossaryentry{v3.3.4>choice_option_set:nnnn=\verb!*&\choice_option_set:nnnn&:>使用布尔表达式优化实现过程|hdpindex{}}{45}
@@ -219,8 +220,8 @@
 \glossaryentry{v3.2.7>choice_type_i:p=\verb!*&\choice_type_i:p&:>修改了题号命令为三个参量|hdpindex{}}{45}
 \glossaryentry{v3.3.4>choice_type_i:p=\verb!*&\choice_type_i:p&:>修改选项间隔符号为\cs {option}及选项处理|hdpindex{}}{45}
 \glossaryentry{v3.3.5>choice_option_total:p=\verb!*&\choice_option_total:p&:>新增命令|hdpindex{}}{49}
-\glossaryentry{v3.1.3>choice_warning:=\verb!*&\choice_warning:&:>新增命令|hdpindex{}}{49}
-\glossaryentry{v3.3.5>choice_warning:=\verb!*&\choice_warning:&:>修改了提示内容|hdpindex{}}{49}
+\glossaryentry{v3.1.3>choice_warning:=\verb!*&\choice_warning:&:>新增命令|hdpindex{}}{50}
+\glossaryentry{v3.3.5>choice_warning:=\verb!*&\choice_warning:&:>修改了提示内容|hdpindex{}}{50}
 \glossaryentry{v3.1.3>choice_type:p=\verb!*&\choice_type:p&:>重新定义选择题排版程序|hdpindex{}}{50}
 \glossaryentry{v3.3.4>choice_type:p=\verb!*&\choice_type:p&:>加入了随机选项排列功能，同时兼容之前的选项输入格式|hdpindex{}}{50}
 \glossaryentry{v3.3.5>choice_type:p=\verb!*&\choice_type:p&:>去除了对旧输入格式的兼容|hdpindex{}}{50}

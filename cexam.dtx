@@ -80,8 +80,8 @@ Copyright and Licence
 \askforoverwritefalse
 \keepsilent
 %^^M 设置cexam.sty宏包前言
-\declarepreamble\cexampreamble 
-    Copyright (C) 2017--2020
+\declarepreamble\cexampreamble
+    Copyright (C) 2017--2026
     Feng Zhenhua and any individual authors listed elsewhere in this file.
     ----------------------------------------------------------------------
     This work may be distributed and/or modified under the
@@ -99,7 +99,7 @@ Copyright and Licence
 \endpreamble
 %
 %^^M 设置 install.sh脚本前言
-\declarepreamble\shpreamble 
+\declarepreamble\shpreamble
 \endpreamble
 %
 %^^M 设置所有宏包后言
@@ -163,7 +163,7 @@ Copyright and Licence
 %<package|ctrlwarning|colornote>\RequirePackage{expl3,l3keys2e,xparse,l3draw}
 %<colornote>\RequirePackage{tcolorbox}
 %<package>\RequirePackage{pifont}
-%<package>\GetIdInfo$Id: cexam.dtx v3.4.0(alpha)  2022-04-02 ZhenhuaFeng  <fengzhenhua@outlook.com> $ {For Chinese middle school examination}
+%<package>\GetIdInfo$Id: cexam.dtx v3.4.2(alpha)  2026-04-27 Zhenhua-Feng  <fengzhenhua@outlook.com> $ {For Chinese middle school examination}
 %<ctrlwarning>\GetIdInfo$Id: ctrlwarning.sty  v1.1  2021-02-05  ZhenhuaFeng  <fengzhenhua@outlook.com> $ {countrl fontwarning}
 %<colornote>\GetIdInfo$Id: colornote.sty  v1.1  2021-02-05  ZhenhuaFeng  <fengzhenhua@outlook.com> $ {clone the note environment of hexo Next theme}
 %<package|ctrlwarning|colornote>\ProvidesExplPackage{\ExplFileName}{\ExplFileDate}{\ExplFileVersion}{\ExplFileDescription}
@@ -256,6 +256,7 @@ Copyright and Licence
 % \changes{v3.3.6}{2021/05/14}{修复cexam.dtx 对ctxdoc.cls 引用时字体报警问题，默认使用founder 字体}
 % \changes{v3.3.7}{2023/11/12}{由于l3kernel强制要求引擎支持 primitive, 导致原ctxdoc.cls 出现问题，同时将注释符由A改为M, 简化了几个小节标题，可以正常编译}
 % \changes{v3.4.1}{2025/07/29}{将ctxdoc文档类修改为标准l3doc,同时根据ctxdoc.sty完成标题翻译.}
+% \changes{v3.4.2}{2026/04/27}{修复l3draw中命令\cs{draw_linewidth:n}升级为\cs{draw_set_linewidth}及\cs{draw_color:n}升级为\cs{color_select:n}造成的编译问题，同时采用了兼容模式，可以兼容旧版本l3draw。}
 %
 %
 % \CheckSum{0}
@@ -2508,6 +2509,10 @@ echo  "document: cexam.pdf had been installed."
 %    \begin{macrocode}
 \tl_set:Nn \cexam_sep_nopic_tl
 {
+   \@ifpackagelater{l3draw}{2025/06/30}{
+       \cs_set_eq:NN \draw_linewidth:n \draw_set_linewidth:n
+       \cs_set_eq:NN \draw_color:n \color_select:n
+   }{}
    \draw_begin:
    \draw_color:n {blue}
    \draw_linewidth:n {2pt}
