@@ -11,12 +11,12 @@
 \indexentry{cexam / option={\verbatim@font !\verb*&cexam / option&}|hdpindex{usage}}{MMMMI-5}
 \indexentry{choices={\verbatim@font !\verb*&choices&}|hdpindex{usage}}{MMMMI-5}
 \indexentry{xuanze={\verbatim@font !\verb*&xuanze&}|hdpindex{usage}}{MMMMI-5}
-\indexentry{choice={\verbatim@font !\verb*&!\choice&}|hdpindex{usage}}{MMMMI-5}
+\indexentry{choice={\verbatim@font !\verb*&!\choice&}|hdpindex{usage}}{MMMMI-6}
 \indexentry{blank={\verbatim@font !\verb*&!\blank&}|hdpindex{usage}}{MMMMI-6}
 \indexentry{blanks={\verbatim@font !\verb*&blanks&}|hdpindex{usage}}{MMMMI-6}
 \indexentry{tiankong={\verbatim@font !\verb*&tiankong&}|hdpindex{usage}}{MMMMI-6}
-\indexentry{judgements={\verbatim@font !\verb*&judgements&}|hdpindex{usage}}{MMMMI-6}
-\indexentry{panduan={\verbatim@font !\verb*&panduan&}|hdpindex{usage}}{MMMMI-6}
+\indexentry{judgements={\verbatim@font !\verb*&judgements&}|hdpindex{usage}}{MMMMI-7}
+\indexentry{panduan={\verbatim@font !\verb*&panduan&}|hdpindex{usage}}{MMMMI-7}
 \indexentry{item={\verbatim@font !\verb*&!\item&}|hdpindex{usage}}{MMMMI-7}
 \indexentry{qitem={\verbatim@font !\verb*&!\qitem&}|hdpindex{usage}}{MMMMI-7}
 \indexentry{calculations={\verbatim@font !\verb*&calculations&}|hdpindex{usage}}{MMMMI-7}
@@ -25,12 +25,12 @@
 \indexentry{zhengming={\verbatim@font !\verb*&zhengming&}|hdpindex{usage}}{MMMMI-8}
 \indexentry{lettersink={\verbatim@font !\verb*&!\lettersink&}|hdpindex{usage}}{MMMMI-8}
 \indexentry{lettersink={\verbatim@font !\verb*&!\lettersink&}|hdpindex{usage}}{MMMMI-8}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep:n={\verbatim@font !\verb*&!\cexam&!\_!\verb*&sep:n&}|hdpindex{usage}}{MMMMI-11}
-\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdpindex{usage}}{MMMMI-11}
-\indexentry{sep commands:=\pkg{sep} commands:>sep_hd_tl={\verbatim@font !\verb*&!\sep&!\_!\verb*&hd&!\_!\verb*&tl&}|hdpindex{usage}}{MMMMI-11}
-\indexentry{sep commands:=\pkg{sep} commands:>sep_bd_tl={\verbatim@font !\verb*&!\sep&!\_!\verb*&bd&!\_!\verb*&tl&}|hdpindex{usage}}{MMMMI-11}
-\indexentry{sep commands:=\pkg{sep} commands:>sep_tl_tl={\verbatim@font !\verb*&!\sep&!\_!\verb*&tl&!\_!\verb*&tl&}|hdpindex{usage}}{MMMMI-11}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep:n={\verbatim@font !\verb*&!\cexam&!\_!\verb*&sep:n&}|hdpindex{usage}}{MMMMI-11}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep:n={\verbatim@font !\verb*&!\cexam&!\_!\verb*&sep:n&}|hdpindex{usage}}{MMMMI-12}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdpindex{usage}}{MMMMI-12}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_hd_tl={\verbatim@font !\verb*&!\sep&!\_!\verb*&hd&!\_!\verb*&tl&}|hdpindex{usage}}{MMMMI-12}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_bd_tl={\verbatim@font !\verb*&!\sep&!\_!\verb*&bd&!\_!\verb*&tl&}|hdpindex{usage}}{MMMMI-12}
+\indexentry{sep commands:=\pkg{sep} commands:>sep_tl_tl={\verbatim@font !\verb*&!\sep&!\_!\verb*&tl&!\_!\verb*&tl&}|hdpindex{usage}}{MMMMI-12}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sep:n={\verbatim@font !\verb*&!\cexam&!\_!\verb*&sep:n&}|hdpindex{usage}}{MMMMI-12}
 \indexentry{get commands:=\pkg{get} commands:>get_par_row:nnn={\verbatim@font !\verb*&!\get&!\_!\verb*&par&!\_!\verb*&row:nnn&}|hdpindex{usage}}{MMMMI-12}
 \indexentry{get commands:=\pkg{get} commands:>get_par_row:nnn={\verbatim@font !\verb*&!\get&!\_!\verb*&par&!\_!\verb*&row:nnn&}|hdpindex{usage}}{MMMMI-12}
 \indexentry{get commands:=\pkg{get} commands:>get_par_ht:nnn={\verbatim@font !\verb*&!\get&!\_!\verb*&par&!\_!\verb*&ht:nnn&}|hdpindex{usage}}{MMMMI-12}
@@ -47,8 +47,8 @@
 \indexentry{cexam commands:=\pkg{cexam} commands:>cexam_lwr_set:nnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&lwr&!\_!\verb*&set:nnnn&}|hdpindex{usage}}{MMMMI-12}
 \indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmt_pic:nnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&fmt&!\_!\verb*&pic:nnnn&}|hdpindex{usage}}{MMMMI-12}
 \indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmt_pic:nnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&fmt&!\_!\verb*&pic:nnnn&}|hdpindex{usage}}{MMMMI-12}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_type_i:nnnnnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&type&!\_!\verb*&i:nnnnnnn&}|hdpindex{usage}}{MMMMI-12}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_type_i:nnnnnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&type&!\_!\verb*&i:nnnnnnn&}|hdpindex{usage}}{MMMMI-12}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_type_i:nnnnnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&type&!\_!\verb*&i:nnnnnnn&}|hdpindex{usage}}{MMMMI-13}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_type_i:nnnnnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&type&!\_!\verb*&i:nnnnnnn&}|hdpindex{usage}}{MMMMI-13}
 \indexentry{cexam commands:=\pkg{cexam} commands:>cexam_type_ii:nnnnnnnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&type&!\_!\verb*&ii:nnnnnnnnn&}|hdpindex{usage}}{MMMMI-13}
 \indexentry{cexam commands:=\pkg{cexam} commands:>cexam_type_i:nnnnnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&type&!\_!\verb*&i:nnnnnnn&}|hdpindex{usage}}{MMMMI-13}
 \indexentry{cexam commands:=\pkg{cexam} commands:>cexam_type_ii:nnnnnnnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&type&!\_!\verb*&ii:nnnnnnnnn&}|hdpindex{usage}}{MMMMI-13}
@@ -2688,398 +2688,398 @@
 \indexentry{par={\verbatim@font !\verb*&!\par&}|hdpindex{usage}}{MMMMI-62}
 \indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_add_par:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&add&!\_!\verb*&par:p&}|hdpindex{usage}}{MMMMI-62}
 \indexentry{clist commands:=\pkg{clist} commands:>clist_map_variable:nNn={\verbatim@font !\verb*&!\clist&!\_!\verb*&map&!\_!\verb*&variable:nNn&}|hdpindex{usage}}{MMMMI-62}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_add_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&add&!\_!\verb*&tl&}|hdclindex{2036}{}}{MMMMV-1809-MMMD-2036-M}
-\indexentry{tl commands:=\pkg{tl} commands:>tl_if_eq:NnTF={\verbatim@font !\verb*&!\tl&!\_!\verb*&if&!\_!\verb*&eq:NnTF&}|hdclindex{2038}{}}{MMMMV-1811-MMMD-2038-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_add_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&add&!\_!\verb*&tl&}|hdclindex{2038}{}}{MMMMV-1811-MMMD-2038-M}
-\indexentry{bool commands:=\pkg{bool} commands:>bool_set_true:N={\verbatim@font !\verb*&!\bool&!\_!\verb*&set&!\_!\verb*&true:N&}|hdclindex{2039}{}}{MMMMV-1812-MMMD-2039-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_add_bool={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&add&!\_!\verb*&bool&}|hdclindex{2039}{}}{MMMMV-1812-MMMD-2039-M}
-\indexentry{bool commands:=\pkg{bool} commands:>bool_if:NTF={\verbatim@font !\verb*&!\bool&!\_!\verb*&if:NTF&}|hdclindex{2042}{}}{MMMMV-1815-MMMD-2042-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_add_bool={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&add&!\_!\verb*&bool&}|hdclindex{2042}{}}{MMMMV-1815-MMMD-2042-M}
-\indexentry{tl commands:=\pkg{tl} commands:>tl_put_right:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&put&!\_!\verb*&right:Nn&}|hdclindex{2043}{}}{MMMMV-1816-MMMD-2043-M}
-\indexentry{par={\verbatim@font !\verb*&!\par&}|hdclindex{2043}{}}{MMMMV-1816-MMMD-2043-M}
-\indexentry{end={\verbatim@font !\verb*&!\end&}|hdclindex{2043}{}}{MMMMV-1816-MMMD-2043-M}
-\indexentry{tl commands:=\pkg{tl} commands:>tl_use:N={\verbatim@font !\verb*&!\tl&!\_!\verb*&use:N&}|hdclindex{2043}{}}{MMMMV-1816-MMMD-2043-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_add_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&add&!\_!\verb*&tl&}|hdclindex{2037}{}}{MMMMV-1810-MMMD-2037-M}
+\indexentry{tl commands:=\pkg{tl} commands:>tl_if_eq:NnTF={\verbatim@font !\verb*&!\tl&!\_!\verb*&if&!\_!\verb*&eq:NnTF&}|hdclindex{2039}{}}{MMMMV-1812-MMMD-2039-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_add_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&add&!\_!\verb*&tl&}|hdclindex{2039}{}}{MMMMV-1812-MMMD-2039-M}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_set_true:N={\verbatim@font !\verb*&!\bool&!\_!\verb*&set&!\_!\verb*&true:N&}|hdclindex{2040}{}}{MMMMV-1813-MMMD-2040-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_add_bool={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&add&!\_!\verb*&bool&}|hdclindex{2040}{}}{MMMMV-1813-MMMD-2040-M}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_if:NTF={\verbatim@font !\verb*&!\bool&!\_!\verb*&if:NTF&}|hdclindex{2043}{}}{MMMMV-1816-MMMD-2043-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_add_bool={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&add&!\_!\verb*&bool&}|hdclindex{2043}{}}{MMMMV-1816-MMMD-2043-M}
 \indexentry{tl commands:=\pkg{tl} commands:>tl_put_right:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&put&!\_!\verb*&right:Nn&}|hdclindex{2044}{}}{MMMMV-1817-MMMD-2044-M}
+\indexentry{par={\verbatim@font !\verb*&!\par&}|hdclindex{2044}{}}{MMMMV-1817-MMMD-2044-M}
 \indexentry{end={\verbatim@font !\verb*&!\end&}|hdclindex{2044}{}}{MMMMV-1817-MMMD-2044-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_add_par:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&add&!\_!\verb*&par:p&}|hdclindex{2044}{}}{MMMMV-1817-MMMD-2044-M}
-\indexentry{qitem={\verbatim@font !\verb*&!\qitem&}|hdclindex{2046}{main}}{MMMMV-1819-MMMD-2046-M}
-\indexentry{NewDocumentCommand={\verbatim@font !\verb*&!\NewDocumentCommand&}|hdclindex{2048}{}}{MMMMV-1819-MMMD-2048-M}
-\indexentry{int commands:=\pkg{int} commands:>int_add:Nn={\verbatim@font !\verb*&!\int&!\_!\verb*&add:Nn&}|hdclindex{2050}{}}{MMMMV-1821-MMMD-2050-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_qitem_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&qitem&!\_!\verb*&int&}|hdclindex{2050}{}}{MMMMV-1821-MMMD-2050-M}
-\indexentry{int commands:=\pkg{int} commands:>int_compare:nNnTF={\verbatim@font !\verb*&!\int&!\_!\verb*&compare:nNnTF&}|hdclindex{2051}{}}{MMMMV-1822-MMMD-2051-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_qitem_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&qitem&!\_!\verb*&int&}|hdclindex{2052}{}}{MMMMV-1823-MMMD-2052-M}
-\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2053}{}}{MMMMV-1824-MMMD-2053-M}
-\indexentry{newline={\verbatim@font !\verb*&!\newline&}|hdclindex{2054}{}}{MMMMV-1825-MMMD-2054-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_qitem:={\verbatim@font !\verb*&!\cexam&!\_!\verb*&qitem:&}|hdclindex{2055}{}}{MMMMV-1826-MMMD-2055-M}
-\indexentry{cs commands:=\pkg{cs} commands:>cs_if_exist:NTF={\verbatim@font !\verb*&!\cs&!\_!\verb*&if&!\_!\verb*&exist:NTF&}|hdclindex{2056}{}}{MMMMV-1827-MMMD-2056-M}
-\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@chapter={\verbatim@font !\verb*&!\c@chapter&}|hdclindex{2056}{}}{MMMMV-1827-MMMD-2056-M}
-\indexentry{IfNoValueTF={\verbatim@font !\verb*&!\IfNoValueTF&}|hdclindex{2058}{}}{MMMMV-1829-MMMD-2058-M}
-\indexentry{cs commands:=\pkg{cs} commands:>cs_gset:Nn={\verbatim@font !\verb*&!\cs&!\_!\verb*&gset:Nn&}|hdclindex{2060}{}}{MMMMV-1831-MMMD-2060-M}
-\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2063}{}}{MMMMV-1834-MMMD-2063-M}
-\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@chapter={\verbatim@font !\verb*&!\c@chapter&}|hdclindex{2063}{}}{MMMMV-1834-MMMD-2063-M}
+\indexentry{tl commands:=\pkg{tl} commands:>tl_use:N={\verbatim@font !\verb*&!\tl&!\_!\verb*&use:N&}|hdclindex{2044}{}}{MMMMV-1817-MMMD-2044-M}
+\indexentry{tl commands:=\pkg{tl} commands:>tl_put_right:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&put&!\_!\verb*&right:Nn&}|hdclindex{2045}{}}{MMMMV-1818-MMMD-2045-M}
+\indexentry{end={\verbatim@font !\verb*&!\end&}|hdclindex{2045}{}}{MMMMV-1818-MMMD-2045-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_add_par:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&add&!\_!\verb*&par:p&}|hdclindex{2045}{}}{MMMMV-1818-MMMD-2045-M}
+\indexentry{qitem={\verbatim@font !\verb*&!\qitem&}|hdclindex{2047}{main}}{MMMMV-1820-MMMD-2047-M}
+\indexentry{NewDocumentCommand={\verbatim@font !\verb*&!\NewDocumentCommand&}|hdclindex{2049}{}}{MMMMV-1820-MMMD-2049-M}
+\indexentry{int commands:=\pkg{int} commands:>int_add:Nn={\verbatim@font !\verb*&!\int&!\_!\verb*&add:Nn&}|hdclindex{2051}{}}{MMMMV-1822-MMMD-2051-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_qitem_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&qitem&!\_!\verb*&int&}|hdclindex{2051}{}}{MMMMV-1822-MMMD-2051-M}
+\indexentry{int commands:=\pkg{int} commands:>int_compare:nNnTF={\verbatim@font !\verb*&!\int&!\_!\verb*&compare:nNnTF&}|hdclindex{2052}{}}{MMMMV-1823-MMMD-2052-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_qitem_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&qitem&!\_!\verb*&int&}|hdclindex{2053}{}}{MMMMV-1824-MMMD-2053-M}
+\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2054}{}}{MMMMV-1825-MMMD-2054-M}
+\indexentry{newline={\verbatim@font !\verb*&!\newline&}|hdclindex{2055}{}}{MMMMV-1826-MMMD-2055-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_qitem:={\verbatim@font !\verb*&!\cexam&!\_!\verb*&qitem:&}|hdclindex{2056}{}}{MMMMV-1827-MMMD-2056-M}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_if_exist:NTF={\verbatim@font !\verb*&!\cs&!\_!\verb*&if&!\_!\verb*&exist:NTF&}|hdclindex{2057}{}}{MMMMV-1828-MMMD-2057-M}
+\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@chapter={\verbatim@font !\verb*&!\c@chapter&}|hdclindex{2057}{}}{MMMMV-1828-MMMD-2057-M}
+\indexentry{IfNoValueTF={\verbatim@font !\verb*&!\IfNoValueTF&}|hdclindex{2059}{}}{MMMMV-1830-MMMD-2059-M}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_gset:Nn={\verbatim@font !\verb*&!\cs&!\_!\verb*&gset:Nn&}|hdclindex{2061}{}}{MMMMV-1832-MMMD-2061-M}
 \indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2064}{}}{MMMMV-1835-MMMD-2064-M}
-\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@section={\verbatim@font !\verb*&!\c@section&}|hdclindex{2064}{}}{MMMMV-1835-MMMD-2064-M}
+\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@chapter={\verbatim@font !\verb*&!\c@chapter&}|hdclindex{2064}{}}{MMMMV-1835-MMMD-2064-M}
 \indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2065}{}}{MMMMV-1836-MMMD-2065-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2065}{}}{MMMMV-1836-MMMD-2065-M}
+\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@section={\verbatim@font !\verb*&!\c@section&}|hdclindex{2065}{}}{MMMMV-1836-MMMD-2065-M}
 \indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2066}{}}{MMMMV-1837-MMMD-2066-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_qitem_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&qitem&!\_!\verb*&int&}|hdclindex{2066}{}}{MMMMV-1837-MMMD-2066-M}
-\indexentry{cs commands:=\pkg{cs} commands:>cs_gset:Nn={\verbatim@font !\verb*&!\cs&!\_!\verb*&gset:Nn&}|hdclindex{2071}{}}{MMMMV-1842-MMMD-2071-M}
-\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2074}{}}{MMMMV-1845-MMMD-2074-M}
-\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@chapter={\verbatim@font !\verb*&!\c@chapter&}|hdclindex{2074}{}}{MMMMV-1845-MMMD-2074-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2066}{}}{MMMMV-1837-MMMD-2066-M}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2067}{}}{MMMMV-1838-MMMD-2067-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_qitem_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&qitem&!\_!\verb*&int&}|hdclindex{2067}{}}{MMMMV-1838-MMMD-2067-M}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_gset:Nn={\verbatim@font !\verb*&!\cs&!\_!\verb*&gset:Nn&}|hdclindex{2072}{}}{MMMMV-1843-MMMD-2072-M}
 \indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2075}{}}{MMMMV-1846-MMMD-2075-M}
-\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@section={\verbatim@font !\verb*&!\c@section&}|hdclindex{2075}{}}{MMMMV-1846-MMMD-2075-M}
+\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@chapter={\verbatim@font !\verb*&!\c@chapter&}|hdclindex{2075}{}}{MMMMV-1846-MMMD-2075-M}
 \indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2076}{}}{MMMMV-1847-MMMD-2076-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2076}{}}{MMMMV-1847-MMMD-2076-M}
-\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2079}{}}{MMMMV-1850-MMMD-2079-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_qitem_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&qitem&!\_!\verb*&int&}|hdclindex{2079}{}}{MMMMV-1850-MMMD-2079-M}
+\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@section={\verbatim@font !\verb*&!\c@section&}|hdclindex{2076}{}}{MMMMV-1847-MMMD-2076-M}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2077}{}}{MMMMV-1848-MMMD-2077-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2077}{}}{MMMMV-1848-MMMD-2077-M}
 \indexentry{qitem={\verbatim@font !\verb*&!\qitem&}|hdpindex{usage}}{MMMMI-63}
-\indexentry{IfNoValueTF={\verbatim@font !\verb*&!\IfNoValueTF&}|hdclindex{2083}{}}{MMMMV-1854-MMMD-2083-M}
-\indexentry{cs commands:=\pkg{cs} commands:>cs_gset:Nn={\verbatim@font !\verb*&!\cs&!\_!\verb*&gset:Nn&}|hdclindex{2085}{}}{MMMMV-1856-MMMD-2085-M}
-\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2088}{}}{MMMMV-1859-MMMD-2088-M}
-\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@section={\verbatim@font !\verb*&!\c@section&}|hdclindex{2088}{}}{MMMMV-1859-MMMD-2088-M}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2080}{}}{MMMMV-1851-MMMD-2080-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_qitem_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&qitem&!\_!\verb*&int&}|hdclindex{2080}{}}{MMMMV-1851-MMMD-2080-M}
+\indexentry{IfNoValueTF={\verbatim@font !\verb*&!\IfNoValueTF&}|hdclindex{2084}{}}{MMMMV-1855-MMMD-2084-M}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_gset:Nn={\verbatim@font !\verb*&!\cs&!\_!\verb*&gset:Nn&}|hdclindex{2086}{}}{MMMMV-1857-MMMD-2086-M}
 \indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2089}{}}{MMMMV-1860-MMMD-2089-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2089}{}}{MMMMV-1860-MMMD-2089-M}
+\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@section={\verbatim@font !\verb*&!\c@section&}|hdclindex{2089}{}}{MMMMV-1860-MMMD-2089-M}
 \indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2090}{}}{MMMMV-1861-MMMD-2090-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_qitem_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&qitem&!\_!\verb*&int&}|hdclindex{2090}{}}{MMMMV-1861-MMMD-2090-M}
-\indexentry{cs commands:=\pkg{cs} commands:>cs_gset:Nn={\verbatim@font !\verb*&!\cs&!\_!\verb*&gset:Nn&}|hdclindex{2095}{}}{MMMMV-1866-MMMD-2095-M}
-\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2098}{}}{MMMMV-1869-MMMD-2098-M}
-\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@section={\verbatim@font !\verb*&!\c@section&}|hdclindex{2098}{}}{MMMMV-1869-MMMD-2098-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2090}{}}{MMMMV-1861-MMMD-2090-M}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2091}{}}{MMMMV-1862-MMMD-2091-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_qitem_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&qitem&!\_!\verb*&int&}|hdclindex{2091}{}}{MMMMV-1862-MMMD-2091-M}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_gset:Nn={\verbatim@font !\verb*&!\cs&!\_!\verb*&gset:Nn&}|hdclindex{2096}{}}{MMMMV-1867-MMMD-2096-M}
 \indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2099}{}}{MMMMV-1870-MMMD-2099-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2099}{}}{MMMMV-1870-MMMD-2099-M}
-\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2102}{}}{MMMMV-1873-MMMD-2102-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_qitem_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&qitem&!\_!\verb*&int&}|hdclindex{2102}{}}{MMMMV-1873-MMMD-2102-M}
-\indexentry{refitem={\verbatim@font !\verb*&!\refitem&}|hdclindex{2106}{main}}{MMMMV-1877-MMMD-2106-M}
-\indexentry{NewDocumentCommand={\verbatim@font !\verb*&!\NewDocumentCommand&}|hdclindex{2107}{}}{MMMMV-1877-MMMD-2107-M}
-\indexentry{cs commands:=\pkg{cs} commands:>cs_if_exist:NTF={\verbatim@font !\verb*&!\cs&!\_!\verb*&if&!\_!\verb*&exist:NTF&}|hdclindex{2109}{}}{MMMMV-1879-MMMD-2109-M}
-\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@chapter={\verbatim@font !\verb*&!\c@chapter&}|hdclindex{2109}{}}{MMMMV-1879-MMMD-2109-M}
-\indexentry{use commands:=\pkg{use} commands:>use:N={\verbatim@font !\verb*&!\use:N&}|hdclindex{2111}{}}{MMMMV-1881-MMMD-2111-M}
-\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2114}{}}{MMMMV-1884-MMMD-2114-M}
-\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@chapter={\verbatim@font !\verb*&!\c@chapter&}|hdclindex{2114}{}}{MMMMV-1884-MMMD-2114-M}
+\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@section={\verbatim@font !\verb*&!\c@section&}|hdclindex{2099}{}}{MMMMV-1870-MMMD-2099-M}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2100}{}}{MMMMV-1871-MMMD-2100-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2100}{}}{MMMMV-1871-MMMD-2100-M}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2103}{}}{MMMMV-1874-MMMD-2103-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_qitem_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&qitem&!\_!\verb*&int&}|hdclindex{2103}{}}{MMMMV-1874-MMMD-2103-M}
+\indexentry{refitem={\verbatim@font !\verb*&!\refitem&}|hdclindex{2107}{main}}{MMMMV-1878-MMMD-2107-M}
+\indexentry{NewDocumentCommand={\verbatim@font !\verb*&!\NewDocumentCommand&}|hdclindex{2108}{}}{MMMMV-1878-MMMD-2108-M}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_if_exist:NTF={\verbatim@font !\verb*&!\cs&!\_!\verb*&if&!\_!\verb*&exist:NTF&}|hdclindex{2110}{}}{MMMMV-1880-MMMD-2110-M}
+\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@chapter={\verbatim@font !\verb*&!\c@chapter&}|hdclindex{2110}{}}{MMMMV-1880-MMMD-2110-M}
+\indexentry{use commands:=\pkg{use} commands:>use:N={\verbatim@font !\verb*&!\use:N&}|hdclindex{2112}{}}{MMMMV-1882-MMMD-2112-M}
 \indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2115}{}}{MMMMV-1885-MMMD-2115-M}
-\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@section={\verbatim@font !\verb*&!\c@section&}|hdclindex{2115}{}}{MMMMV-1885-MMMD-2115-M}
+\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@chapter={\verbatim@font !\verb*&!\c@chapter&}|hdclindex{2115}{}}{MMMMV-1885-MMMD-2115-M}
 \indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2116}{}}{MMMMV-1886-MMMD-2116-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2116}{}}{MMMMV-1886-MMMD-2116-M}
-\indexentry{use commands:=\pkg{use} commands:>use:N={\verbatim@font !\verb*&!\use:N&}|hdclindex{2121}{}}{MMMMV-1891-MMMD-2121-M}
-\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2124}{}}{MMMMV-1894-MMMD-2124-M}
-\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@section={\verbatim@font !\verb*&!\c@section&}|hdclindex{2124}{}}{MMMMV-1894-MMMD-2124-M}
+\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@section={\verbatim@font !\verb*&!\c@section&}|hdclindex{2116}{}}{MMMMV-1886-MMMD-2116-M}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2117}{}}{MMMMV-1887-MMMD-2117-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2117}{}}{MMMMV-1887-MMMD-2117-M}
+\indexentry{use commands:=\pkg{use} commands:>use:N={\verbatim@font !\verb*&!\use:N&}|hdclindex{2122}{}}{MMMMV-1892-MMMD-2122-M}
 \indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2125}{}}{MMMMV-1895-MMMD-2125-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2125}{}}{MMMMV-1895-MMMD-2125-M}
-\indexentry{source={\verbatim@font !\verb*&!\source&}|hdclindex{2130}{main}}{MMMMV-1900-MMMD-2130-M}
-\indexentry{NewDocumentCommand={\verbatim@font !\verb*&!\NewDocumentCommand&}|hdclindex{2131}{}}{MMMMV-1900-MMMD-2131-M}
-\indexentry{tl commands:=\pkg{tl} commands:>tl_set:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&set:Nn&}|hdclindex{2133}{}}{MMMMV-1902-MMMD-2133-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_source_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&source&!\_!\verb*&tl&}|hdclindex{2133}{}}{MMMMV-1902-MMMD-2133-M}
-\indexentry{bool commands:=\pkg{bool} commands:>bool_if:nTF={\verbatim@font !\verb*&!\bool&!\_!\verb*&if:nTF&}|hdclindex{2134}{}}{MMMMV-1903-MMMD-2134-M}
-\indexentry{source commands:=\pkg{source} commands:>source_display_bool={\verbatim@font !\verb*&!\source&!\_!\verb*&display&!\_!\verb*&bool&}|hdclindex{2134}{}}{MMMMV-1903-MMMD-2134-M}
-\indexentry{source commands:=\pkg{source} commands:>source_year_bool={\verbatim@font !\verb*&!\source&!\_!\verb*&year&!\_!\verb*&bool&}|hdclindex{2134}{}}{MMMMV-1903-MMMD-2134-M}
-\indexentry{tl commands:=\pkg{tl} commands:>tl_put_left:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&put&!\_!\verb*&left:Nn&}|hdclindex{2135}{}}{MMMMV-1904-MMMD-2135-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_source_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&source&!\_!\verb*&tl&}|hdclindex{2135}{}}{MMMMV-1904-MMMD-2135-M}
-\indexentry{textperiodcentered={\verbatim@font !\verb*&!\textperiodcentered&}|hdclindex{2135}{}}{MMMMV-1904-MMMD-2135-M}
-\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2136}{}}{MMMMV-1905-MMMD-2136-M}
-\indexentry{bool commands:=\pkg{bool} commands:>bool_if:nTF={\verbatim@font !\verb*&!\bool&!\_!\verb*&if:nTF&}|hdclindex{2137}{}}{MMMMV-1906-MMMD-2137-M}
-\indexentry{source commands:=\pkg{source} commands:>source_display_bool={\verbatim@font !\verb*&!\source&!\_!\verb*&display&!\_!\verb*&bool&}|hdclindex{2137}{}}{MMMMV-1906-MMMD-2137-M}
-\indexentry{source commands:=\pkg{source} commands:>source_star_bool={\verbatim@font !\verb*&!\source&!\_!\verb*&star&!\_!\verb*&bool&}|hdclindex{2137}{}}{MMMMV-1906-MMMD-2137-M}
-\indexentry{IfNoValueTF={\verbatim@font !\verb*&!\IfNoValueTF&}|hdclindex{2139}{}}{MMMMV-1908-MMMD-2139-M}
-\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2140}{}}{MMMMV-1909-MMMD-2140-M}
-\indexentry{tl commands:=\pkg{tl} commands:>tl_put_left:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&put&!\_!\verb*&left:Nn&}|hdclindex{2142}{}}{MMMMV-1911-MMMD-2142-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_source_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&source&!\_!\verb*&tl&}|hdclindex{2142}{}}{MMMMV-1911-MMMD-2142-M}
-\indexentry{textperiodcentered={\verbatim@font !\verb*&!\textperiodcentered&}|hdclindex{2142}{}}{MMMMV-1911-MMMD-2142-M}
-\indexentry{int commands:=\pkg{int} commands:>int_zero:N={\verbatim@font !\verb*&!\int&!\_!\verb*&zero:N&}|hdclindex{2143}{}}{MMMMV-1912-MMMD-2143-M}
-\indexentry{source commands:=\pkg{source} commands:>source_star_int={\verbatim@font !\verb*&!\source&!\_!\verb*&star&!\_!\verb*&int&}|hdclindex{2143}{}}{MMMMV-1912-MMMD-2143-M}
-\indexentry{int commands:=\pkg{int} commands:>int_while_do:nNnn={\verbatim@font !\verb*&!\int&!\_!\verb*&while&!\_!\verb*&do:nNnn&}|hdclindex{2144}{}}{MMMMV-1913-MMMD-2144-M}
+\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@section={\verbatim@font !\verb*&!\c@section&}|hdclindex{2125}{}}{MMMMV-1895-MMMD-2125-M}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2126}{}}{MMMMV-1896-MMMD-2126-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2126}{}}{MMMMV-1896-MMMD-2126-M}
+\indexentry{source={\verbatim@font !\verb*&!\source&}|hdclindex{2131}{main}}{MMMMV-1901-MMMD-2131-M}
+\indexentry{NewDocumentCommand={\verbatim@font !\verb*&!\NewDocumentCommand&}|hdclindex{2132}{}}{MMMMV-1901-MMMD-2132-M}
+\indexentry{tl commands:=\pkg{tl} commands:>tl_set:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&set:Nn&}|hdclindex{2134}{}}{MMMMV-1903-MMMD-2134-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_source_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&source&!\_!\verb*&tl&}|hdclindex{2134}{}}{MMMMV-1903-MMMD-2134-M}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_if:nTF={\verbatim@font !\verb*&!\bool&!\_!\verb*&if:nTF&}|hdclindex{2135}{}}{MMMMV-1904-MMMD-2135-M}
+\indexentry{source commands:=\pkg{source} commands:>source_display_bool={\verbatim@font !\verb*&!\source&!\_!\verb*&display&!\_!\verb*&bool&}|hdclindex{2135}{}}{MMMMV-1904-MMMD-2135-M}
+\indexentry{source commands:=\pkg{source} commands:>source_year_bool={\verbatim@font !\verb*&!\source&!\_!\verb*&year&!\_!\verb*&bool&}|hdclindex{2135}{}}{MMMMV-1904-MMMD-2135-M}
+\indexentry{tl commands:=\pkg{tl} commands:>tl_put_left:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&put&!\_!\verb*&left:Nn&}|hdclindex{2136}{}}{MMMMV-1905-MMMD-2136-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_source_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&source&!\_!\verb*&tl&}|hdclindex{2136}{}}{MMMMV-1905-MMMD-2136-M}
+\indexentry{textperiodcentered={\verbatim@font !\verb*&!\textperiodcentered&}|hdclindex{2136}{}}{MMMMV-1905-MMMD-2136-M}
+\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2137}{}}{MMMMV-1906-MMMD-2137-M}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_if:nTF={\verbatim@font !\verb*&!\bool&!\_!\verb*&if:nTF&}|hdclindex{2138}{}}{MMMMV-1907-MMMD-2138-M}
+\indexentry{source commands:=\pkg{source} commands:>source_display_bool={\verbatim@font !\verb*&!\source&!\_!\verb*&display&!\_!\verb*&bool&}|hdclindex{2138}{}}{MMMMV-1907-MMMD-2138-M}
+\indexentry{source commands:=\pkg{source} commands:>source_star_bool={\verbatim@font !\verb*&!\source&!\_!\verb*&star&!\_!\verb*&bool&}|hdclindex{2138}{}}{MMMMV-1907-MMMD-2138-M}
+\indexentry{IfNoValueTF={\verbatim@font !\verb*&!\IfNoValueTF&}|hdclindex{2140}{}}{MMMMV-1909-MMMD-2140-M}
+\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2141}{}}{MMMMV-1910-MMMD-2141-M}
+\indexentry{tl commands:=\pkg{tl} commands:>tl_put_left:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&put&!\_!\verb*&left:Nn&}|hdclindex{2143}{}}{MMMMV-1912-MMMD-2143-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_source_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&source&!\_!\verb*&tl&}|hdclindex{2143}{}}{MMMMV-1912-MMMD-2143-M}
+\indexentry{textperiodcentered={\verbatim@font !\verb*&!\textperiodcentered&}|hdclindex{2143}{}}{MMMMV-1912-MMMD-2143-M}
+\indexentry{int commands:=\pkg{int} commands:>int_zero:N={\verbatim@font !\verb*&!\int&!\_!\verb*&zero:N&}|hdclindex{2144}{}}{MMMMV-1913-MMMD-2144-M}
 \indexentry{source commands:=\pkg{source} commands:>source_star_int={\verbatim@font !\verb*&!\source&!\_!\verb*&star&!\_!\verb*&int&}|hdclindex{2144}{}}{MMMMV-1913-MMMD-2144-M}
-\indexentry{tl commands:=\pkg{tl} commands:>tl_put_left:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&put&!\_!\verb*&left:Nn&}|hdclindex{2146}{}}{MMMMV-1915-MMMD-2146-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_source_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&source&!\_!\verb*&tl&}|hdclindex{2146}{}}{MMMMV-1915-MMMD-2146-M}
-\indexentry{ding={\verbatim@font !\verb*&!\ding&}|hdclindex{2146}{}}{MMMMV-1915-MMMD-2146-M}
-\indexentry{int commands:=\pkg{int} commands:>int_incr:N={\verbatim@font !\verb*&!\int&!\_!\verb*&incr:N&}|hdclindex{2147}{}}{MMMMV-1916-MMMD-2147-M}
-\indexentry{source commands:=\pkg{source} commands:>source_star_int={\verbatim@font !\verb*&!\source&!\_!\verb*&star&!\_!\verb*&int&}|hdclindex{2147}{}}{MMMMV-1916-MMMD-2147-M}
-\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2151}{}}{MMMMV-1920-MMMD-2151-M}
-\indexentry{bool commands:=\pkg{bool} commands:>bool_if:nTF={\verbatim@font !\verb*&!\bool&!\_!\verb*&if:nTF&}|hdclindex{2152}{}}{MMMMV-1921-MMMD-2152-M}
-\indexentry{source commands:=\pkg{source} commands:>source_display_bool={\verbatim@font !\verb*&!\source&!\_!\verb*&display&!\_!\verb*&bool&}|hdclindex{2152}{}}{MMMMV-1921-MMMD-2152-M}
-\indexentry{tl commands:=\pkg{tl} commands:>tl_put_left:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&put&!\_!\verb*&left:Nn&}|hdclindex{2154}{}}{MMMMV-1923-MMMD-2154-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_source_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&source&!\_!\verb*&tl&}|hdclindex{2154}{}}{MMMMV-1923-MMMD-2154-M}
-\indexentry{color commands:=\pkg{color} commands:>color_group_begin:={\verbatim@font !\verb*&!\color&!\_!\verb*&group&!\_!\verb*&begin:&}|hdclindex{2156}{}}{MMMMV-1925-MMMD-2156-M}
-\indexentry{exp commands:=\pkg{exp} commands:>exp_args:Nx={\verbatim@font !\verb*&!\exp&!\_!\verb*&args:Nx&}|hdclindex{2157}{}}{MMMMV-1926-MMMD-2157-M}
-\indexentry{color commands:=\pkg{color} commands:>color_select:n={\verbatim@font !\verb*&!\color&!\_!\verb*&select:n&}|hdclindex{2157}{}}{MMMMV-1926-MMMD-2157-M}
-\indexentry{tl commands:=\pkg{tl} commands:>tl_use:N={\verbatim@font !\verb*&!\tl&!\_!\verb*&use:N&}|hdclindex{2157}{}}{MMMMV-1926-MMMD-2157-M}
-\indexentry{source commands:=\pkg{source} commands:>source_color_tl={\verbatim@font !\verb*&!\source&!\_!\verb*&color&!\_!\verb*&tl&}|hdclindex{2157}{}}{MMMMV-1926-MMMD-2157-M}
-\indexentry{tl commands:=\pkg{tl} commands:>tl_put_right:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&put&!\_!\verb*&right:Nn&}|hdclindex{2159}{}}{MMMMV-1928-MMMD-2159-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_source_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&source&!\_!\verb*&tl&}|hdclindex{2159}{}}{MMMMV-1928-MMMD-2159-M}
-\indexentry{color commands:=\pkg{color} commands:>color_group_end:={\verbatim@font !\verb*&!\color&!\_!\verb*&group&!\_!\verb*&end:&}|hdclindex{2160}{}}{MMMMV-1929-MMMD-2160-M}
-\indexentry{bf={\verbatim@font !\verb*&!\bf&}|hdclindex{2161}{}}{MMMMV-1930-MMMD-2161-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_source_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&source&!\_!\verb*&tl&}|hdclindex{2161}{}}{MMMMV-1930-MMMD-2161-M}
-\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2163}{}}{MMMMV-1932-MMMD-2163-M}
-\indexentry{blank={\verbatim@font !\verb*&!\blank&}|hdclindex{2165}{main}}{MMMMV-1934-MMMD-2165-M}
-\indexentry{NewDocumentCommand={\verbatim@font !\verb*&!\NewDocumentCommand&}|hdclindex{2166}{}}{MMMMV-1934-MMMD-2166-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_blank:n={\verbatim@font !\verb*&!\cexam&!\_!\verb*&blank:n&}|hdclindex{2167}{}}{MMMMV-1935-MMMD-2167-M}
-\indexentry{change commands:=\pkg{change} commands:>change_example:n={\verbatim@font !\verb*&!\change&!\_!\verb*&example:n&}|hdclindex{2168}{main}}{MMMMV-1936-MMMD-2168-M}
-\indexentry{change commands:=\pkg{change} commands:>change_normal:n={\verbatim@font !\verb*&!\change&!\_!\verb*&normal:n&}|hdclindex{2168}{main}}{MMMMV-1936-MMMD-2168-M}
-\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Npn={\verbatim@font !\verb*&!\cs&!\_!\verb*&set:Npn&}|hdclindex{2169}{}}{MMMMV-1936-MMMD-2169-M}
-\indexentry{change commands:=\pkg{change} commands:>change_example:n={\verbatim@font !\verb*&!\change&!\_!\verb*&example:n&}|hdclindex{2169}{}}{MMMMV-1936-MMMD-2169-M}
-\indexentry{IfNoValueTF={\verbatim@font !\verb*&!\IfNoValueTF&}|hdclindex{2171}{}}{MMMMV-1938-MMMD-2171-M}
-\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2172}{}}{MMMMV-1939-MMMD-2172-M}
-\indexentry{int commands:=\pkg{int} commands:>int_gset:Nn={\verbatim@font !\verb*&!\int&!\_!\verb*&gset:Nn&}|hdclindex{2174}{}}{MMMMV-1941-MMMD-2174-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numold_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&numold&!\_!\verb*&int&}|hdclindex{2174}{}}{MMMMV-1941-MMMD-2174-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2174}{}}{MMMMV-1941-MMMD-2174-M}
+\indexentry{int commands:=\pkg{int} commands:>int_while_do:nNnn={\verbatim@font !\verb*&!\int&!\_!\verb*&while&!\_!\verb*&do:nNnn&}|hdclindex{2145}{}}{MMMMV-1914-MMMD-2145-M}
+\indexentry{source commands:=\pkg{source} commands:>source_star_int={\verbatim@font !\verb*&!\source&!\_!\verb*&star&!\_!\verb*&int&}|hdclindex{2145}{}}{MMMMV-1914-MMMD-2145-M}
+\indexentry{tl commands:=\pkg{tl} commands:>tl_put_left:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&put&!\_!\verb*&left:Nn&}|hdclindex{2147}{}}{MMMMV-1916-MMMD-2147-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_source_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&source&!\_!\verb*&tl&}|hdclindex{2147}{}}{MMMMV-1916-MMMD-2147-M}
+\indexentry{ding={\verbatim@font !\verb*&!\ding&}|hdclindex{2147}{}}{MMMMV-1916-MMMD-2147-M}
+\indexentry{int commands:=\pkg{int} commands:>int_incr:N={\verbatim@font !\verb*&!\int&!\_!\verb*&incr:N&}|hdclindex{2148}{}}{MMMMV-1917-MMMD-2148-M}
+\indexentry{source commands:=\pkg{source} commands:>source_star_int={\verbatim@font !\verb*&!\source&!\_!\verb*&star&!\_!\verb*&int&}|hdclindex{2148}{}}{MMMMV-1917-MMMD-2148-M}
+\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2152}{}}{MMMMV-1921-MMMD-2152-M}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_if:nTF={\verbatim@font !\verb*&!\bool&!\_!\verb*&if:nTF&}|hdclindex{2153}{}}{MMMMV-1922-MMMD-2153-M}
+\indexentry{source commands:=\pkg{source} commands:>source_display_bool={\verbatim@font !\verb*&!\source&!\_!\verb*&display&!\_!\verb*&bool&}|hdclindex{2153}{}}{MMMMV-1922-MMMD-2153-M}
+\indexentry{tl commands:=\pkg{tl} commands:>tl_put_left:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&put&!\_!\verb*&left:Nn&}|hdclindex{2155}{}}{MMMMV-1924-MMMD-2155-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_source_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&source&!\_!\verb*&tl&}|hdclindex{2155}{}}{MMMMV-1924-MMMD-2155-M}
+\indexentry{color commands:=\pkg{color} commands:>color_group_begin:={\verbatim@font !\verb*&!\color&!\_!\verb*&group&!\_!\verb*&begin:&}|hdclindex{2157}{}}{MMMMV-1926-MMMD-2157-M}
+\indexentry{exp commands:=\pkg{exp} commands:>exp_args:Nx={\verbatim@font !\verb*&!\exp&!\_!\verb*&args:Nx&}|hdclindex{2158}{}}{MMMMV-1927-MMMD-2158-M}
+\indexentry{color commands:=\pkg{color} commands:>color_select:n={\verbatim@font !\verb*&!\color&!\_!\verb*&select:n&}|hdclindex{2158}{}}{MMMMV-1927-MMMD-2158-M}
+\indexentry{tl commands:=\pkg{tl} commands:>tl_use:N={\verbatim@font !\verb*&!\tl&!\_!\verb*&use:N&}|hdclindex{2158}{}}{MMMMV-1927-MMMD-2158-M}
+\indexentry{source commands:=\pkg{source} commands:>source_color_tl={\verbatim@font !\verb*&!\source&!\_!\verb*&color&!\_!\verb*&tl&}|hdclindex{2158}{}}{MMMMV-1927-MMMD-2158-M}
+\indexentry{tl commands:=\pkg{tl} commands:>tl_put_right:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&put&!\_!\verb*&right:Nn&}|hdclindex{2160}{}}{MMMMV-1929-MMMD-2160-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_source_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&source&!\_!\verb*&tl&}|hdclindex{2160}{}}{MMMMV-1929-MMMD-2160-M}
+\indexentry{color commands:=\pkg{color} commands:>color_group_end:={\verbatim@font !\verb*&!\color&!\_!\verb*&group&!\_!\verb*&end:&}|hdclindex{2161}{}}{MMMMV-1930-MMMD-2161-M}
+\indexentry{bf={\verbatim@font !\verb*&!\bf&}|hdclindex{2162}{}}{MMMMV-1931-MMMD-2162-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_source_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&source&!\_!\verb*&tl&}|hdclindex{2162}{}}{MMMMV-1931-MMMD-2162-M}
+\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2164}{}}{MMMMV-1933-MMMD-2164-M}
+\indexentry{blank={\verbatim@font !\verb*&!\blank&}|hdclindex{2166}{main}}{MMMMV-1935-MMMD-2166-M}
+\indexentry{NewDocumentCommand={\verbatim@font !\verb*&!\NewDocumentCommand&}|hdclindex{2167}{}}{MMMMV-1935-MMMD-2167-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_blank:n={\verbatim@font !\verb*&!\cexam&!\_!\verb*&blank:n&}|hdclindex{2168}{}}{MMMMV-1936-MMMD-2168-M}
+\indexentry{change commands:=\pkg{change} commands:>change_example:n={\verbatim@font !\verb*&!\change&!\_!\verb*&example:n&}|hdclindex{2169}{main}}{MMMMV-1937-MMMD-2169-M}
+\indexentry{change commands:=\pkg{change} commands:>change_normal:n={\verbatim@font !\verb*&!\change&!\_!\verb*&normal:n&}|hdclindex{2169}{main}}{MMMMV-1937-MMMD-2169-M}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Npn={\verbatim@font !\verb*&!\cs&!\_!\verb*&set:Npn&}|hdclindex{2170}{}}{MMMMV-1937-MMMD-2170-M}
+\indexentry{change commands:=\pkg{change} commands:>change_example:n={\verbatim@font !\verb*&!\change&!\_!\verb*&example:n&}|hdclindex{2170}{}}{MMMMV-1937-MMMD-2170-M}
+\indexentry{IfNoValueTF={\verbatim@font !\verb*&!\IfNoValueTF&}|hdclindex{2172}{}}{MMMMV-1939-MMMD-2172-M}
+\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2173}{}}{MMMMV-1940-MMMD-2173-M}
 \indexentry{int commands:=\pkg{int} commands:>int_gset:Nn={\verbatim@font !\verb*&!\int&!\_!\verb*&gset:Nn&}|hdclindex{2175}{}}{MMMMV-1942-MMMD-2175-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numold_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&numold&!\_!\verb*&int&}|hdclindex{2175}{}}{MMMMV-1942-MMMD-2175-M}
 \indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2175}{}}{MMMMV-1942-MMMD-2175-M}
-\indexentry{example commands:=\pkg{example} commands:>example_number_int={\verbatim@font !\verb*&!\example&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2175}{}}{MMMMV-1942-MMMD-2175-M}
-\indexentry{bool commands:=\pkg{bool} commands:>bool_set_false:N={\verbatim@font !\verb*&!\bool&!\_!\verb*&set&!\_!\verb*&false:N&}|hdclindex{2176}{}}{MMMMV-1943-MMMD-2176-M}
-\indexentry{answer commands:=\pkg{answer} commands:>answer_student_bool={\verbatim@font !\verb*&!\answer&!\_!\verb*&student&!\_!\verb*&bool&}|hdclindex{2176}{}}{MMMMV-1943-MMMD-2176-M}
-\indexentry{tl commands:=\pkg{tl} commands:>tl_set:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&set:Nn&}|hdclindex{2177}{}}{MMMMV-1944-MMMD-2177-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_tag_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&tag&!\_!\verb*&tl&}|hdclindex{2177}{}}{MMMMV-1944-MMMD-2177-M}
-\indexentry{heiti={\verbatim@font !\verb*&!\heiti&}|hdclindex{2177}{}}{MMMMV-1944-MMMD-2177-M}
-\indexentry{raisebox={\verbatim@font !\verb*&!\raisebox&}|hdclindex{2177}{}}{MMMMV-1944-MMMD-2177-M}
-\indexentry{cs commands:=\pkg{cs} commands:>cs_if_exist:NTF={\verbatim@font !\verb*&!\cs&!\_!\verb*&if&!\_!\verb*&exist:NTF&}|hdclindex{2178}{}}{MMMMV-1945-MMMD-2178-M}
-\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@chapter={\verbatim@font !\verb*&!\c@chapter&}|hdclindex{2178}{}}{MMMMV-1945-MMMD-2178-M}
-\indexentry{tl commands:=\pkg{tl} commands:>tl_set:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&set:Nn&}|hdclindex{2180}{}}{MMMMV-1947-MMMD-2180-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_tag_i_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&tag&!\_!\verb*&i&!\_!\verb*&tl&}|hdclindex{2180}{}}{MMMMV-1947-MMMD-2180-M}
-\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2181}{}}{MMMMV-1948-MMMD-2181-M}
-\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@chapter={\verbatim@font !\verb*&!\c@chapter&}|hdclindex{2181}{}}{MMMMV-1948-MMMD-2181-M}
-\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2181}{}}{MMMMV-1948-MMMD-2181-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2181}{}}{MMMMV-1948-MMMD-2181-M}
-\indexentry{cs commands:=\pkg{cs} commands:>cs_if_exist:NTF={\verbatim@font !\verb*&!\cs&!\_!\verb*&if&!\_!\verb*&exist:NTF&}|hdclindex{2184}{}}{MMMMV-1951-MMMD-2184-M}
-\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@section={\verbatim@font !\verb*&!\c@section&}|hdclindex{2184}{}}{MMMMV-1951-MMMD-2184-M}
-\indexentry{tl commands:=\pkg{tl} commands:>tl_set:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&set:Nn&}|hdclindex{2186}{}}{MMMMV-1953-MMMD-2186-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_tag_i_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&tag&!\_!\verb*&i&!\_!\verb*&tl&}|hdclindex{2186}{}}{MMMMV-1953-MMMD-2186-M}
-\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2187}{}}{MMMMV-1954-MMMD-2187-M}
-\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@section={\verbatim@font !\verb*&!\c@section&}|hdclindex{2187}{}}{MMMMV-1954-MMMD-2187-M}
-\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2187}{}}{MMMMV-1954-MMMD-2187-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2187}{}}{MMMMV-1954-MMMD-2187-M}
-\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2189}{}}{MMMMV-1956-MMMD-2189-M}
-\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Npn={\verbatim@font !\verb*&!\cs&!\_!\verb*&set:Npn&}|hdclindex{2193}{}}{MMMMV-1960-MMMD-2193-M}
-\indexentry{change commands:=\pkg{change} commands:>change_normal:n={\verbatim@font !\verb*&!\change&!\_!\verb*&normal:n&}|hdclindex{2193}{}}{MMMMV-1960-MMMD-2193-M}
-\indexentry{IfNoValueTF={\verbatim@font !\verb*&!\IfNoValueTF&}|hdclindex{2195}{}}{MMMMV-1962-MMMD-2195-M}
-\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2196}{}}{MMMMV-1963-MMMD-2196-M}
-\indexentry{int commands:=\pkg{int} commands:>int_gset:Nn={\verbatim@font !\verb*&!\int&!\_!\verb*&gset:Nn&}|hdclindex{2198}{}}{MMMMV-1965-MMMD-2198-M}
-\indexentry{example commands:=\pkg{example} commands:>example_number_int={\verbatim@font !\verb*&!\example&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2198}{}}{MMMMV-1965-MMMD-2198-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2198}{}}{MMMMV-1965-MMMD-2198-M}
+\indexentry{int commands:=\pkg{int} commands:>int_gset:Nn={\verbatim@font !\verb*&!\int&!\_!\verb*&gset:Nn&}|hdclindex{2176}{}}{MMMMV-1943-MMMD-2176-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2176}{}}{MMMMV-1943-MMMD-2176-M}
+\indexentry{example commands:=\pkg{example} commands:>example_number_int={\verbatim@font !\verb*&!\example&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2176}{}}{MMMMV-1943-MMMD-2176-M}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_set_false:N={\verbatim@font !\verb*&!\bool&!\_!\verb*&set&!\_!\verb*&false:N&}|hdclindex{2177}{}}{MMMMV-1944-MMMD-2177-M}
+\indexentry{answer commands:=\pkg{answer} commands:>answer_student_bool={\verbatim@font !\verb*&!\answer&!\_!\verb*&student&!\_!\verb*&bool&}|hdclindex{2177}{}}{MMMMV-1944-MMMD-2177-M}
+\indexentry{tl commands:=\pkg{tl} commands:>tl_set:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&set:Nn&}|hdclindex{2178}{}}{MMMMV-1945-MMMD-2178-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_tag_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&tag&!\_!\verb*&tl&}|hdclindex{2178}{}}{MMMMV-1945-MMMD-2178-M}
+\indexentry{heiti={\verbatim@font !\verb*&!\heiti&}|hdclindex{2178}{}}{MMMMV-1945-MMMD-2178-M}
+\indexentry{raisebox={\verbatim@font !\verb*&!\raisebox&}|hdclindex{2178}{}}{MMMMV-1945-MMMD-2178-M}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_if_exist:NTF={\verbatim@font !\verb*&!\cs&!\_!\verb*&if&!\_!\verb*&exist:NTF&}|hdclindex{2179}{}}{MMMMV-1946-MMMD-2179-M}
+\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@chapter={\verbatim@font !\verb*&!\c@chapter&}|hdclindex{2179}{}}{MMMMV-1946-MMMD-2179-M}
+\indexentry{tl commands:=\pkg{tl} commands:>tl_set:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&set:Nn&}|hdclindex{2181}{}}{MMMMV-1948-MMMD-2181-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_tag_i_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&tag&!\_!\verb*&i&!\_!\verb*&tl&}|hdclindex{2181}{}}{MMMMV-1948-MMMD-2181-M}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2182}{}}{MMMMV-1949-MMMD-2182-M}
+\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@chapter={\verbatim@font !\verb*&!\c@chapter&}|hdclindex{2182}{}}{MMMMV-1949-MMMD-2182-M}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2182}{}}{MMMMV-1949-MMMD-2182-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2182}{}}{MMMMV-1949-MMMD-2182-M}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_if_exist:NTF={\verbatim@font !\verb*&!\cs&!\_!\verb*&if&!\_!\verb*&exist:NTF&}|hdclindex{2185}{}}{MMMMV-1952-MMMD-2185-M}
+\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@section={\verbatim@font !\verb*&!\c@section&}|hdclindex{2185}{}}{MMMMV-1952-MMMD-2185-M}
+\indexentry{tl commands:=\pkg{tl} commands:>tl_set:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&set:Nn&}|hdclindex{2187}{}}{MMMMV-1954-MMMD-2187-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_tag_i_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&tag&!\_!\verb*&i&!\_!\verb*&tl&}|hdclindex{2187}{}}{MMMMV-1954-MMMD-2187-M}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2188}{}}{MMMMV-1955-MMMD-2188-M}
+\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>c@section={\verbatim@font !\verb*&!\c@section&}|hdclindex{2188}{}}{MMMMV-1955-MMMD-2188-M}
+\indexentry{int commands:=\pkg{int} commands:>int_use:N={\verbatim@font !\verb*&!\int&!\_!\verb*&use:N&}|hdclindex{2188}{}}{MMMMV-1955-MMMD-2188-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2188}{}}{MMMMV-1955-MMMD-2188-M}
+\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2190}{}}{MMMMV-1957-MMMD-2190-M}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_set:Npn={\verbatim@font !\verb*&!\cs&!\_!\verb*&set:Npn&}|hdclindex{2194}{}}{MMMMV-1961-MMMD-2194-M}
+\indexentry{change commands:=\pkg{change} commands:>change_normal:n={\verbatim@font !\verb*&!\change&!\_!\verb*&normal:n&}|hdclindex{2194}{}}{MMMMV-1961-MMMD-2194-M}
+\indexentry{IfNoValueTF={\verbatim@font !\verb*&!\IfNoValueTF&}|hdclindex{2196}{}}{MMMMV-1963-MMMD-2196-M}
+\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2197}{}}{MMMMV-1964-MMMD-2197-M}
 \indexentry{int commands:=\pkg{int} commands:>int_gset:Nn={\verbatim@font !\verb*&!\int&!\_!\verb*&gset:Nn&}|hdclindex{2199}{}}{MMMMV-1966-MMMD-2199-M}
+\indexentry{example commands:=\pkg{example} commands:>example_number_int={\verbatim@font !\verb*&!\example&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2199}{}}{MMMMV-1966-MMMD-2199-M}
 \indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2199}{}}{MMMMV-1966-MMMD-2199-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numold_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&numold&!\_!\verb*&int&}|hdclindex{2199}{}}{MMMMV-1966-MMMD-2199-M}
-\indexentry{choices={\verbatim@font !\verb*&choices&}|hdclindex{2202}{main}}{MMMMV-1969-MMMD-2202-M}
-\indexentry{xuanze={\verbatim@font !\verb*&xuanze&}|hdclindex{2202}{main}}{MMMMV-1969-MMMD-2202-M}
-\indexentry{blanks={\verbatim@font !\verb*&blanks&}|hdclindex{2202}{main}}{MMMMV-1969-MMMD-2202-M}
-\indexentry{tiankong={\verbatim@font !\verb*&tiankong&}|hdclindex{2202}{main}}{MMMMV-1969-MMMD-2202-M}
-\indexentry{judgements={\verbatim@font !\verb*&judgements&}|hdclindex{2202}{main}}{MMMMV-1969-MMMD-2202-M}
-\indexentry{panduan={\verbatim@font !\verb*&panduan&}|hdclindex{2202}{main}}{MMMMV-1969-MMMD-2202-M}
-\indexentry{calculations={\verbatim@font !\verb*&calculations&}|hdclindex{2202}{main}}{MMMMV-1969-MMMD-2202-M}
-\indexentry{jisuan={\verbatim@font !\verb*&jisuan&}|hdclindex{2202}{main}}{MMMMV-1969-MMMD-2202-M}
-\indexentry{clist commands:=\pkg{clist} commands:>clist_map_variable:nNn={\verbatim@font !\verb*&!\clist&!\_!\verb*&map&!\_!\verb*&variable:nNn&}|hdclindex{2203}{}}{MMMMV-1969-MMMD-2203-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&tl&}|hdclindex{2203}{}}{MMMMV-1969-MMMD-2203-M}
-\indexentry{exp commands:=\pkg{exp} commands:>exp_args:Nx={\verbatim@font !\verb*&!\exp&!\_!\verb*&args:Nx&}|hdclindex{2205}{}}{MMMMV-1971-MMMD-2205-M}
-\indexentry{NewDocumentEnvironment={\verbatim@font !\verb*&!\NewDocumentEnvironment&}|hdclindex{2205}{}}{MMMMV-1971-MMMD-2205-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&tl&}|hdclindex{2205}{}}{MMMMV-1971-MMMD-2205-M}
-\indexentry{bool commands:=\pkg{bool} commands:>bool_set_true:N={\verbatim@font !\verb*&!\bool&!\_!\verb*&set&!\_!\verb*&true:N&}|hdclindex{2207}{}}{MMMMV-1973-MMMD-2207-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_choice_bool={\verbatim@font !\verb*&!\cexam&!\_!\verb*&choice&!\_!\verb*&bool&}|hdclindex{2207}{}}{MMMMV-1973-MMMD-2207-M}
-\indexentry{change commands:=\pkg{change} commands:>change_example:n={\verbatim@font !\verb*&!\change&!\_!\verb*&example:n&}|hdclindex{2208}{}}{MMMMV-1974-MMMD-2208-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_answer_add:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&answer&!\_!\verb*&add:p&}|hdclindex{2209}{}}{MMMMV-1975-MMMD-2209-M}
-\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2209}{}}{MMMMV-1975-MMMD-2209-M}
-\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdclindex{2209}{}}{MMMMV-1975-MMMD-2209-M}
-\indexentry{parindent={\verbatim@font !\verb*&!\parindent&}|hdclindex{2210}{}}{MMMMV-1976-MMMD-2210-M}
-\indexentry{everypar={\verbatim@font !\verb*&!\everypar&}|hdclindex{2211}{}}{MMMMV-1977-MMMD-2211-M}
-\indexentry{everypar commands:=\pkg{everypar} commands:>everypar_choice:p={\verbatim@font !\verb*&!\everypar&!\_!\verb*&choice:p&}|hdclindex{2211}{}}{MMMMV-1977-MMMD-2211-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_add_par:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&add&!\_!\verb*&par:p&}|hdclindex{2212}{}}{MMMMV-1978-MMMD-2212-M}
-\indexentry{change commands:=\pkg{change} commands:>change_normal:n={\verbatim@font !\verb*&!\change&!\_!\verb*&normal:n&}|hdclindex{2215}{}}{MMMMV-1981-MMMD-2215-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_answer_add:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&answer&!\_!\verb*&add:p&}|hdclindex{2216}{}}{MMMMV-1982-MMMD-2216-M}
-\indexentry{end={\verbatim@font !\verb*&!\end&}|hdclindex{2216}{}}{MMMMV-1982-MMMD-2216-M}
-\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdclindex{2216}{}}{MMMMV-1982-MMMD-2216-M}
-\indexentry{clist commands:=\pkg{clist} commands:>clist_map_variable:nNn={\verbatim@font !\verb*&!\clist&!\_!\verb*&map&!\_!\verb*&variable:nNn&}|hdclindex{2219}{}}{MMMMV-1985-MMMD-2219-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&tl&}|hdclindex{2219}{}}{MMMMV-1985-MMMD-2219-M}
-\indexentry{NewDocumentEnvironment={\verbatim@font !\verb*&!\NewDocumentEnvironment&}|hdclindex{2221}{}}{MMMMV-1987-MMMD-2221-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&tl&}|hdclindex{2221}{}}{MMMMV-1987-MMMD-2221-M}
-\indexentry{change commands:=\pkg{change} commands:>change_example:n={\verbatim@font !\verb*&!\change&!\_!\verb*&example:n&}|hdclindex{2223}{}}{MMMMV-1989-MMMD-2223-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_answer_add:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&answer&!\_!\verb*&add:p&}|hdclindex{2224}{}}{MMMMV-1990-MMMD-2224-M}
-\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2224}{}}{MMMMV-1990-MMMD-2224-M}
-\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdclindex{2224}{}}{MMMMV-1990-MMMD-2224-M}
-\indexentry{parindent={\verbatim@font !\verb*&!\parindent&}|hdclindex{2225}{}}{MMMMV-1991-MMMD-2225-M}
-\indexentry{everypar={\verbatim@font !\verb*&!\everypar&}|hdclindex{2226}{}}{MMMMV-1992-MMMD-2226-M}
-\indexentry{everypar commands:=\pkg{everypar} commands:>everypar_blank:p={\verbatim@font !\verb*&!\everypar&!\_!\verb*&blank:p&}|hdclindex{2226}{}}{MMMMV-1992-MMMD-2226-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_add_par:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&add&!\_!\verb*&par:p&}|hdclindex{2227}{}}{MMMMV-1993-MMMD-2227-M}
-\indexentry{change commands:=\pkg{change} commands:>change_normal:n={\verbatim@font !\verb*&!\change&!\_!\verb*&normal:n&}|hdclindex{2230}{}}{MMMMV-1996-MMMD-2230-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_answer_add:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&answer&!\_!\verb*&add:p&}|hdclindex{2231}{}}{MMMMV-1997-MMMD-2231-M}
-\indexentry{end={\verbatim@font !\verb*&!\end&}|hdclindex{2231}{}}{MMMMV-1997-MMMD-2231-M}
-\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdclindex{2231}{}}{MMMMV-1997-MMMD-2231-M}
-\indexentry{clist commands:=\pkg{clist} commands:>clist_map_variable:nNn={\verbatim@font !\verb*&!\clist&!\_!\verb*&map&!\_!\verb*&variable:nNn&}|hdclindex{2234}{}}{MMMMV-2000-MMMD-2234-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&tl&}|hdclindex{2234}{}}{MMMMV-2000-MMMD-2234-M}
-\indexentry{NewDocumentEnvironment={\verbatim@font !\verb*&!\NewDocumentEnvironment&}|hdclindex{2236}{}}{MMMMV-2002-MMMD-2236-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&tl&}|hdclindex{2236}{}}{MMMMV-2002-MMMD-2236-M}
-\indexentry{change commands:=\pkg{change} commands:>change_example:n={\verbatim@font !\verb*&!\change&!\_!\verb*&example:n&}|hdclindex{2238}{}}{MMMMV-2004-MMMD-2238-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_answer_add:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&answer&!\_!\verb*&add:p&}|hdclindex{2239}{}}{MMMMV-2005-MMMD-2239-M}
-\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2239}{}}{MMMMV-2005-MMMD-2239-M}
-\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdclindex{2239}{}}{MMMMV-2005-MMMD-2239-M}
-\indexentry{parindent={\verbatim@font !\verb*&!\parindent&}|hdclindex{2240}{}}{MMMMV-2006-MMMD-2240-M}
-\indexentry{everypar={\verbatim@font !\verb*&!\everypar&}|hdclindex{2241}{}}{MMMMV-2007-MMMD-2241-M}
-\indexentry{everypar commands:=\pkg{everypar} commands:>everypar_judge:p={\verbatim@font !\verb*&!\everypar&!\_!\verb*&judge:p&}|hdclindex{2241}{}}{MMMMV-2007-MMMD-2241-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_add_par:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&add&!\_!\verb*&par:p&}|hdclindex{2242}{}}{MMMMV-2008-MMMD-2242-M}
-\indexentry{change commands:=\pkg{change} commands:>change_normal:n={\verbatim@font !\verb*&!\change&!\_!\verb*&normal:n&}|hdclindex{2245}{}}{MMMMV-2011-MMMD-2245-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_answer_add:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&answer&!\_!\verb*&add:p&}|hdclindex{2246}{}}{MMMMV-2012-MMMD-2246-M}
-\indexentry{end={\verbatim@font !\verb*&!\end&}|hdclindex{2246}{}}{MMMMV-2012-MMMD-2246-M}
-\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdclindex{2246}{}}{MMMMV-2012-MMMD-2246-M}
-\indexentry{clist commands:=\pkg{clist} commands:>clist_map_variable:nNn={\verbatim@font !\verb*&!\clist&!\_!\verb*&map&!\_!\verb*&variable:nNn&}|hdclindex{2249}{}}{MMMMV-2015-MMMD-2249-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&tl&}|hdclindex{2249}{}}{MMMMV-2015-MMMD-2249-M}
-\indexentry{NewDocumentEnvironment={\verbatim@font !\verb*&!\NewDocumentEnvironment&}|hdclindex{2251}{}}{MMMMV-2017-MMMD-2251-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&tl&}|hdclindex{2251}{}}{MMMMV-2017-MMMD-2251-M}
-\indexentry{change commands:=\pkg{change} commands:>change_example:n={\verbatim@font !\verb*&!\change&!\_!\verb*&example:n&}|hdclindex{2253}{}}{MMMMV-2019-MMMD-2253-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_answer_add:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&answer&!\_!\verb*&add:p&}|hdclindex{2254}{}}{MMMMV-2020-MMMD-2254-M}
-\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2254}{}}{MMMMV-2020-MMMD-2254-M}
-\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdclindex{2254}{}}{MMMMV-2020-MMMD-2254-M}
-\indexentry{parindent={\verbatim@font !\verb*&!\parindent&}|hdclindex{2255}{}}{MMMMV-2021-MMMD-2255-M}
-\indexentry{everypar={\verbatim@font !\verb*&!\everypar&}|hdclindex{2256}{}}{MMMMV-2022-MMMD-2256-M}
-\indexentry{everypar commands:=\pkg{everypar} commands:>everypar_calculate:p={\verbatim@font !\verb*&!\everypar&!\_!\verb*&calculate:p&}|hdclindex{2256}{}}{MMMMV-2022-MMMD-2256-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_add_par:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&add&!\_!\verb*&par:p&}|hdclindex{2257}{}}{MMMMV-2023-MMMD-2257-M}
-\indexentry{change commands:=\pkg{change} commands:>change_normal:n={\verbatim@font !\verb*&!\change&!\_!\verb*&normal:n&}|hdclindex{2260}{}}{MMMMV-2026-MMMD-2260-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_answer_add:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&answer&!\_!\verb*&add:p&}|hdclindex{2261}{}}{MMMMV-2027-MMMD-2261-M}
-\indexentry{end={\verbatim@font !\verb*&!\end&}|hdclindex{2261}{}}{MMMMV-2027-MMMD-2261-M}
-\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdclindex{2261}{}}{MMMMV-2027-MMMD-2261-M}
-\indexentry{proofs={\verbatim@font !\verb*&proofs&}|hdclindex{2264}{main}}{MMMMV-2030-MMMD-2264-M}
-\indexentry{zhengming={\verbatim@font !\verb*&zhengming&}|hdclindex{2264}{main}}{MMMMV-2030-MMMD-2264-M}
-\indexentry{clist commands:=\pkg{clist} commands:>clist_map_variable:nNn={\verbatim@font !\verb*&!\clist&!\_!\verb*&map&!\_!\verb*&variable:nNn&}|hdclindex{2265}{}}{MMMMV-2030-MMMD-2265-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&tl&}|hdclindex{2265}{}}{MMMMV-2030-MMMD-2265-M}
-\indexentry{NewDocumentEnvironment={\verbatim@font !\verb*&!\NewDocumentEnvironment&}|hdclindex{2267}{}}{MMMMV-2032-MMMD-2267-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&tl&}|hdclindex{2267}{}}{MMMMV-2032-MMMD-2267-M}
-\indexentry{tl commands:=\pkg{tl} commands:>tl_set_eq:NN={\verbatim@font !\verb*&!\tl&!\_!\verb*&set&!\_!\verb*&eq:NN&}|hdclindex{2269}{}}{MMMMV-2034-MMMD-2269-M}
-\indexentry{ana commands:=\pkg{ana} commands:>ana_tag_tl={\verbatim@font !\verb*&!\ana&!\_!\verb*&tag&!\_!\verb*&tl&}|hdclindex{2269}{}}{MMMMV-2034-MMMD-2269-M}
-\indexentry{prf commands:=\pkg{prf} commands:>prf_tag_tl={\verbatim@font !\verb*&!\prf&!\_!\verb*&tag&!\_!\verb*&tl&}|hdclindex{2269}{}}{MMMMV-2034-MMMD-2269-M}
+\indexentry{int commands:=\pkg{int} commands:>int_gset:Nn={\verbatim@font !\verb*&!\int&!\_!\verb*&gset:Nn&}|hdclindex{2200}{}}{MMMMV-1967-MMMD-2200-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_number_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&number&!\_!\verb*&int&}|hdclindex{2200}{}}{MMMMV-1967-MMMD-2200-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_numold_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&numold&!\_!\verb*&int&}|hdclindex{2200}{}}{MMMMV-1967-MMMD-2200-M}
+\indexentry{choices={\verbatim@font !\verb*&choices&}|hdclindex{2203}{main}}{MMMMV-1970-MMMD-2203-M}
+\indexentry{xuanze={\verbatim@font !\verb*&xuanze&}|hdclindex{2203}{main}}{MMMMV-1970-MMMD-2203-M}
+\indexentry{blanks={\verbatim@font !\verb*&blanks&}|hdclindex{2203}{main}}{MMMMV-1970-MMMD-2203-M}
+\indexentry{tiankong={\verbatim@font !\verb*&tiankong&}|hdclindex{2203}{main}}{MMMMV-1970-MMMD-2203-M}
+\indexentry{judgements={\verbatim@font !\verb*&judgements&}|hdclindex{2203}{main}}{MMMMV-1970-MMMD-2203-M}
+\indexentry{panduan={\verbatim@font !\verb*&panduan&}|hdclindex{2203}{main}}{MMMMV-1970-MMMD-2203-M}
+\indexentry{calculations={\verbatim@font !\verb*&calculations&}|hdclindex{2203}{main}}{MMMMV-1970-MMMD-2203-M}
+\indexentry{jisuan={\verbatim@font !\verb*&jisuan&}|hdclindex{2203}{main}}{MMMMV-1970-MMMD-2203-M}
+\indexentry{clist commands:=\pkg{clist} commands:>clist_map_variable:nNn={\verbatim@font !\verb*&!\clist&!\_!\verb*&map&!\_!\verb*&variable:nNn&}|hdclindex{2204}{}}{MMMMV-1970-MMMD-2204-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&tl&}|hdclindex{2204}{}}{MMMMV-1970-MMMD-2204-M}
+\indexentry{exp commands:=\pkg{exp} commands:>exp_args:Nx={\verbatim@font !\verb*&!\exp&!\_!\verb*&args:Nx&}|hdclindex{2206}{}}{MMMMV-1972-MMMD-2206-M}
+\indexentry{NewDocumentEnvironment={\verbatim@font !\verb*&!\NewDocumentEnvironment&}|hdclindex{2206}{}}{MMMMV-1972-MMMD-2206-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&tl&}|hdclindex{2206}{}}{MMMMV-1972-MMMD-2206-M}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_set_true:N={\verbatim@font !\verb*&!\bool&!\_!\verb*&set&!\_!\verb*&true:N&}|hdclindex{2208}{}}{MMMMV-1974-MMMD-2208-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_choice_bool={\verbatim@font !\verb*&!\cexam&!\_!\verb*&choice&!\_!\verb*&bool&}|hdclindex{2208}{}}{MMMMV-1974-MMMD-2208-M}
+\indexentry{change commands:=\pkg{change} commands:>change_example:n={\verbatim@font !\verb*&!\change&!\_!\verb*&example:n&}|hdclindex{2209}{}}{MMMMV-1975-MMMD-2209-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_answer_add:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&answer&!\_!\verb*&add:p&}|hdclindex{2210}{}}{MMMMV-1976-MMMD-2210-M}
+\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2210}{}}{MMMMV-1976-MMMD-2210-M}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdclindex{2210}{}}{MMMMV-1976-MMMD-2210-M}
+\indexentry{parindent={\verbatim@font !\verb*&!\parindent&}|hdclindex{2211}{}}{MMMMV-1977-MMMD-2211-M}
+\indexentry{everypar={\verbatim@font !\verb*&!\everypar&}|hdclindex{2212}{}}{MMMMV-1978-MMMD-2212-M}
+\indexentry{everypar commands:=\pkg{everypar} commands:>everypar_choice:p={\verbatim@font !\verb*&!\everypar&!\_!\verb*&choice:p&}|hdclindex{2212}{}}{MMMMV-1978-MMMD-2212-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_add_par:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&add&!\_!\verb*&par:p&}|hdclindex{2213}{}}{MMMMV-1979-MMMD-2213-M}
+\indexentry{change commands:=\pkg{change} commands:>change_normal:n={\verbatim@font !\verb*&!\change&!\_!\verb*&normal:n&}|hdclindex{2216}{}}{MMMMV-1982-MMMD-2216-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_answer_add:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&answer&!\_!\verb*&add:p&}|hdclindex{2217}{}}{MMMMV-1983-MMMD-2217-M}
+\indexentry{end={\verbatim@font !\verb*&!\end&}|hdclindex{2217}{}}{MMMMV-1983-MMMD-2217-M}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdclindex{2217}{}}{MMMMV-1983-MMMD-2217-M}
+\indexentry{clist commands:=\pkg{clist} commands:>clist_map_variable:nNn={\verbatim@font !\verb*&!\clist&!\_!\verb*&map&!\_!\verb*&variable:nNn&}|hdclindex{2220}{}}{MMMMV-1986-MMMD-2220-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&tl&}|hdclindex{2220}{}}{MMMMV-1986-MMMD-2220-M}
+\indexentry{NewDocumentEnvironment={\verbatim@font !\verb*&!\NewDocumentEnvironment&}|hdclindex{2222}{}}{MMMMV-1988-MMMD-2222-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&tl&}|hdclindex{2222}{}}{MMMMV-1988-MMMD-2222-M}
+\indexentry{change commands:=\pkg{change} commands:>change_example:n={\verbatim@font !\verb*&!\change&!\_!\verb*&example:n&}|hdclindex{2224}{}}{MMMMV-1990-MMMD-2224-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_answer_add:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&answer&!\_!\verb*&add:p&}|hdclindex{2225}{}}{MMMMV-1991-MMMD-2225-M}
+\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2225}{}}{MMMMV-1991-MMMD-2225-M}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdclindex{2225}{}}{MMMMV-1991-MMMD-2225-M}
+\indexentry{parindent={\verbatim@font !\verb*&!\parindent&}|hdclindex{2226}{}}{MMMMV-1992-MMMD-2226-M}
+\indexentry{everypar={\verbatim@font !\verb*&!\everypar&}|hdclindex{2227}{}}{MMMMV-1993-MMMD-2227-M}
+\indexentry{everypar commands:=\pkg{everypar} commands:>everypar_blank:p={\verbatim@font !\verb*&!\everypar&!\_!\verb*&blank:p&}|hdclindex{2227}{}}{MMMMV-1993-MMMD-2227-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_add_par:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&add&!\_!\verb*&par:p&}|hdclindex{2228}{}}{MMMMV-1994-MMMD-2228-M}
+\indexentry{change commands:=\pkg{change} commands:>change_normal:n={\verbatim@font !\verb*&!\change&!\_!\verb*&normal:n&}|hdclindex{2231}{}}{MMMMV-1997-MMMD-2231-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_answer_add:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&answer&!\_!\verb*&add:p&}|hdclindex{2232}{}}{MMMMV-1998-MMMD-2232-M}
+\indexentry{end={\verbatim@font !\verb*&!\end&}|hdclindex{2232}{}}{MMMMV-1998-MMMD-2232-M}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdclindex{2232}{}}{MMMMV-1998-MMMD-2232-M}
+\indexentry{clist commands:=\pkg{clist} commands:>clist_map_variable:nNn={\verbatim@font !\verb*&!\clist&!\_!\verb*&map&!\_!\verb*&variable:nNn&}|hdclindex{2235}{}}{MMMMV-2001-MMMD-2235-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&tl&}|hdclindex{2235}{}}{MMMMV-2001-MMMD-2235-M}
+\indexentry{NewDocumentEnvironment={\verbatim@font !\verb*&!\NewDocumentEnvironment&}|hdclindex{2237}{}}{MMMMV-2003-MMMD-2237-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&tl&}|hdclindex{2237}{}}{MMMMV-2003-MMMD-2237-M}
+\indexentry{change commands:=\pkg{change} commands:>change_example:n={\verbatim@font !\verb*&!\change&!\_!\verb*&example:n&}|hdclindex{2239}{}}{MMMMV-2005-MMMD-2239-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_answer_add:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&answer&!\_!\verb*&add:p&}|hdclindex{2240}{}}{MMMMV-2006-MMMD-2240-M}
+\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2240}{}}{MMMMV-2006-MMMD-2240-M}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdclindex{2240}{}}{MMMMV-2006-MMMD-2240-M}
+\indexentry{parindent={\verbatim@font !\verb*&!\parindent&}|hdclindex{2241}{}}{MMMMV-2007-MMMD-2241-M}
+\indexentry{everypar={\verbatim@font !\verb*&!\everypar&}|hdclindex{2242}{}}{MMMMV-2008-MMMD-2242-M}
+\indexentry{everypar commands:=\pkg{everypar} commands:>everypar_judge:p={\verbatim@font !\verb*&!\everypar&!\_!\verb*&judge:p&}|hdclindex{2242}{}}{MMMMV-2008-MMMD-2242-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_add_par:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&add&!\_!\verb*&par:p&}|hdclindex{2243}{}}{MMMMV-2009-MMMD-2243-M}
+\indexentry{change commands:=\pkg{change} commands:>change_normal:n={\verbatim@font !\verb*&!\change&!\_!\verb*&normal:n&}|hdclindex{2246}{}}{MMMMV-2012-MMMD-2246-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_answer_add:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&answer&!\_!\verb*&add:p&}|hdclindex{2247}{}}{MMMMV-2013-MMMD-2247-M}
+\indexentry{end={\verbatim@font !\verb*&!\end&}|hdclindex{2247}{}}{MMMMV-2013-MMMD-2247-M}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdclindex{2247}{}}{MMMMV-2013-MMMD-2247-M}
+\indexentry{clist commands:=\pkg{clist} commands:>clist_map_variable:nNn={\verbatim@font !\verb*&!\clist&!\_!\verb*&map&!\_!\verb*&variable:nNn&}|hdclindex{2250}{}}{MMMMV-2016-MMMD-2250-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&tl&}|hdclindex{2250}{}}{MMMMV-2016-MMMD-2250-M}
+\indexentry{NewDocumentEnvironment={\verbatim@font !\verb*&!\NewDocumentEnvironment&}|hdclindex{2252}{}}{MMMMV-2018-MMMD-2252-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&tl&}|hdclindex{2252}{}}{MMMMV-2018-MMMD-2252-M}
+\indexentry{change commands:=\pkg{change} commands:>change_example:n={\verbatim@font !\verb*&!\change&!\_!\verb*&example:n&}|hdclindex{2254}{}}{MMMMV-2020-MMMD-2254-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_answer_add:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&answer&!\_!\verb*&add:p&}|hdclindex{2255}{}}{MMMMV-2021-MMMD-2255-M}
+\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2255}{}}{MMMMV-2021-MMMD-2255-M}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdclindex{2255}{}}{MMMMV-2021-MMMD-2255-M}
+\indexentry{parindent={\verbatim@font !\verb*&!\parindent&}|hdclindex{2256}{}}{MMMMV-2022-MMMD-2256-M}
+\indexentry{everypar={\verbatim@font !\verb*&!\everypar&}|hdclindex{2257}{}}{MMMMV-2023-MMMD-2257-M}
+\indexentry{everypar commands:=\pkg{everypar} commands:>everypar_calculate:p={\verbatim@font !\verb*&!\everypar&!\_!\verb*&calculate:p&}|hdclindex{2257}{}}{MMMMV-2023-MMMD-2257-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_add_par:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&add&!\_!\verb*&par:p&}|hdclindex{2258}{}}{MMMMV-2024-MMMD-2258-M}
+\indexentry{change commands:=\pkg{change} commands:>change_normal:n={\verbatim@font !\verb*&!\change&!\_!\verb*&normal:n&}|hdclindex{2261}{}}{MMMMV-2027-MMMD-2261-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_answer_add:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&answer&!\_!\verb*&add:p&}|hdclindex{2262}{}}{MMMMV-2028-MMMD-2262-M}
+\indexentry{end={\verbatim@font !\verb*&!\end&}|hdclindex{2262}{}}{MMMMV-2028-MMMD-2262-M}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdclindex{2262}{}}{MMMMV-2028-MMMD-2262-M}
+\indexentry{proofs={\verbatim@font !\verb*&proofs&}|hdclindex{2265}{main}}{MMMMV-2031-MMMD-2265-M}
+\indexentry{zhengming={\verbatim@font !\verb*&zhengming&}|hdclindex{2265}{main}}{MMMMV-2031-MMMD-2265-M}
+\indexentry{clist commands:=\pkg{clist} commands:>clist_map_variable:nNn={\verbatim@font !\verb*&!\clist&!\_!\verb*&map&!\_!\verb*&variable:nNn&}|hdclindex{2266}{}}{MMMMV-2031-MMMD-2266-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&tl&}|hdclindex{2266}{}}{MMMMV-2031-MMMD-2266-M}
+\indexentry{NewDocumentEnvironment={\verbatim@font !\verb*&!\NewDocumentEnvironment&}|hdclindex{2268}{}}{MMMMV-2033-MMMD-2268-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&tl&}|hdclindex{2268}{}}{MMMMV-2033-MMMD-2268-M}
 \indexentry{tl commands:=\pkg{tl} commands:>tl_set_eq:NN={\verbatim@font !\verb*&!\tl&!\_!\verb*&set&!\_!\verb*&eq:NN&}|hdclindex{2270}{}}{MMMMV-2035-MMMD-2270-M}
-\indexentry{ana commands:=\pkg{ana} commands:>ana_tag_i_tl={\verbatim@font !\verb*&!\ana&!\_!\verb*&tag&!\_!\verb*&i&!\_!\verb*&tl&}|hdclindex{2270}{}}{MMMMV-2035-MMMD-2270-M}
-\indexentry{prf commands:=\pkg{prf} commands:>prf_tag_i_tl={\verbatim@font !\verb*&!\prf&!\_!\verb*&tag&!\_!\verb*&i&!\_!\verb*&tl&}|hdclindex{2270}{}}{MMMMV-2035-MMMD-2270-M}
-\indexentry{cs commands:=\pkg{cs} commands:>cs_if_exist:NTF={\verbatim@font !\verb*&!\cs&!\_!\verb*&if&!\_!\verb*&exist:NTF&}|hdclindex{2271}{}}{MMMMV-2036-MMMD-2271-M}
-\indexentry{theoremstyle={\verbatim@font !\verb*&!\theoremstyle&}|hdclindex{2271}{}}{MMMMV-2036-MMMD-2271-M}
-\indexentry{tl commands:=\pkg{tl} commands:>tl_set:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&set:Nn&}|hdclindex{2272}{}}{MMMMV-2037-MMMD-2272-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_end_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&end&!\_!\verb*&tl&}|hdclindex{2272}{}}{MMMMV-2037-MMMD-2272-M}
-\indexentry{hfill={\verbatim@font !\verb*&!\hfill&}|hdclindex{2272}{}}{MMMMV-2037-MMMD-2272-M}
-\indexentry{square={\verbatim@font !\verb*&!\square&}|hdclindex{2272}{}}{MMMMV-2037-MMMD-2272-M}
-\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2273}{}}{MMMMV-2038-MMMD-2273-M}
-\indexentry{change commands:=\pkg{change} commands:>change_example:n={\verbatim@font !\verb*&!\change&!\_!\verb*&example:n&}|hdclindex{2274}{}}{MMMMV-2039-MMMD-2274-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_answer_add:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&answer&!\_!\verb*&add:p&}|hdclindex{2275}{}}{MMMMV-2040-MMMD-2275-M}
-\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2275}{}}{MMMMV-2040-MMMD-2275-M}
-\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdclindex{2275}{}}{MMMMV-2040-MMMD-2275-M}
-\indexentry{parindent={\verbatim@font !\verb*&!\parindent&}|hdclindex{2276}{}}{MMMMV-2041-MMMD-2276-M}
-\indexentry{everypar={\verbatim@font !\verb*&!\everypar&}|hdclindex{2277}{}}{MMMMV-2042-MMMD-2277-M}
-\indexentry{everypar commands:=\pkg{everypar} commands:>everypar_proofs:p={\verbatim@font !\verb*&!\everypar&!\_!\verb*&proofs:p&}|hdclindex{2277}{}}{MMMMV-2042-MMMD-2277-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_add_par:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&add&!\_!\verb*&par:p&}|hdclindex{2278}{}}{MMMMV-2043-MMMD-2278-M}
-\indexentry{cs commands:=\pkg{cs} commands:>cs_if_exist:NTF={\verbatim@font !\verb*&!\cs&!\_!\verb*&if&!\_!\verb*&exist:NTF&}|hdclindex{2281}{}}{MMMMV-2046-MMMD-2281-M}
-\indexentry{theoremstyle={\verbatim@font !\verb*&!\theoremstyle&}|hdclindex{2281}{}}{MMMMV-2046-MMMD-2281-M}
-\indexentry{everypar={\verbatim@font !\verb*&!\everypar&}|hdclindex{2283}{}}{MMMMV-2048-MMMD-2283-M}
-\indexentry{bool commands:=\pkg{bool} commands:>bool_if:NTF={\verbatim@font !\verb*&!\bool&!\_!\verb*&if:NTF&}|hdclindex{2284}{}}{MMMMV-2049-MMMD-2284-M}
-\indexentry{ctrl commands:=\pkg{ctrl} commands:>ctrl_end_bool={\verbatim@font !\verb*&!\ctrl&!\_!\verb*&end&!\_!\verb*&bool&}|hdclindex{2284}{}}{MMMMV-2049-MMMD-2284-M}
-\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2285}{}}{MMMMV-2050-MMMD-2285-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_end_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&end&!\_!\verb*&tl&}|hdclindex{2286}{}}{MMMMV-2051-MMMD-2286-M}
-\indexentry{par={\verbatim@font !\verb*&!\par&}|hdclindex{2286}{}}{MMMMV-2051-MMMD-2286-M}
-\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2288}{}}{MMMMV-2053-MMMD-2288-M}
-\indexentry{change commands:=\pkg{change} commands:>change_normal:n={\verbatim@font !\verb*&!\change&!\_!\verb*&normal:n&}|hdclindex{2289}{}}{MMMMV-2054-MMMD-2289-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_answer_add:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&answer&!\_!\verb*&add:p&}|hdclindex{2290}{}}{MMMMV-2055-MMMD-2290-M}
-\indexentry{end={\verbatim@font !\verb*&!\end&}|hdclindex{2290}{}}{MMMMV-2055-MMMD-2290-M}
-\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdclindex{2290}{}}{MMMMV-2055-MMMD-2290-M}
-\indexentry{AtBeginDocument={\verbatim@font !\verb*&!\AtBeginDocument&}|hdclindex{2293}{}}{MMMMV-2058-MMMD-2293-M}
-\indexentry{cs commands:=\pkg{cs} commands:>cs_if_exist:NTF={\verbatim@font !\verb*&!\cs&!\_!\verb*&if&!\_!\verb*&exist:NTF&}|hdclindex{2295}{}}{MMMMV-2060-MMMD-2295-M}
-\indexentry{theoremstyle={\verbatim@font !\verb*&!\theoremstyle&}|hdclindex{2295}{}}{MMMMV-2060-MMMD-2295-M}
-\indexentry{def={\verbatim@font !\verb*&!\def&}|hdclindex{2296}{}}{MMMMV-2061-MMMD-2296-M}
-\indexentry{proofname={\verbatim@font !\verb*&!\proofname&}|hdclindex{2296}{}}{MMMMV-2061-MMMD-2296-M}
-\indexentry{mbox={\verbatim@font !\verb*&!\mbox&}|hdclindex{2296}{}}{MMMMV-2061-MMMD-2296-M}
-\indexentry{bf={\verbatim@font !\verb*&!\bf&}|hdclindex{2296}{}}{MMMMV-2061-MMMD-2296-M}
-\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2297}{}}{MMMMV-2062-MMMD-2297-M}
-\indexentry{letter commands:=\pkg{letter} commands:>letter_sink:nnnnp={\verbatim@font !\verb*&!\letter&!\_!\verb*&sink:nnnnp&}|hdclindex{2299}{main}}{MMMMV-2064-MMMD-2299-M}
-\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font !\verb*&!\cs&!\_!\verb*&new:Npn&}|hdclindex{2300}{}}{MMMMV-2064-MMMD-2300-M}
-\indexentry{letter commands:=\pkg{letter} commands:>letter_sink:nnnnp={\verbatim@font !\verb*&!\letter&!\_!\verb*&sink:nnnnp&}|hdclindex{2300}{}}{MMMMV-2064-MMMD-2300-M}
-\indexentry{par={\verbatim@font !\verb*&!\par&}|hdclindex{2300}{}}{MMMMV-2064-MMMD-2300-M}
-\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font !\verb*&!\dim&!\_!\verb*&set:Nn&}|hdclindex{2302}{}}{MMMMV-2066-MMMD-2302-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_indent_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&indent&!\_!\verb*&dim&}|hdclindex{2302}{}}{MMMMV-2066-MMMD-2302-M}
-\indexentry{parindent={\verbatim@font !\verb*&!\parindent&}|hdclindex{2302}{}}{MMMMV-2066-MMMD-2302-M}
+\indexentry{ana commands:=\pkg{ana} commands:>ana_tag_tl={\verbatim@font !\verb*&!\ana&!\_!\verb*&tag&!\_!\verb*&tl&}|hdclindex{2270}{}}{MMMMV-2035-MMMD-2270-M}
+\indexentry{prf commands:=\pkg{prf} commands:>prf_tag_tl={\verbatim@font !\verb*&!\prf&!\_!\verb*&tag&!\_!\verb*&tl&}|hdclindex{2270}{}}{MMMMV-2035-MMMD-2270-M}
+\indexentry{tl commands:=\pkg{tl} commands:>tl_set_eq:NN={\verbatim@font !\verb*&!\tl&!\_!\verb*&set&!\_!\verb*&eq:NN&}|hdclindex{2271}{}}{MMMMV-2036-MMMD-2271-M}
+\indexentry{ana commands:=\pkg{ana} commands:>ana_tag_i_tl={\verbatim@font !\verb*&!\ana&!\_!\verb*&tag&!\_!\verb*&i&!\_!\verb*&tl&}|hdclindex{2271}{}}{MMMMV-2036-MMMD-2271-M}
+\indexentry{prf commands:=\pkg{prf} commands:>prf_tag_i_tl={\verbatim@font !\verb*&!\prf&!\_!\verb*&tag&!\_!\verb*&i&!\_!\verb*&tl&}|hdclindex{2271}{}}{MMMMV-2036-MMMD-2271-M}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_if_exist:NTF={\verbatim@font !\verb*&!\cs&!\_!\verb*&if&!\_!\verb*&exist:NTF&}|hdclindex{2272}{}}{MMMMV-2037-MMMD-2272-M}
+\indexentry{theoremstyle={\verbatim@font !\verb*&!\theoremstyle&}|hdclindex{2272}{}}{MMMMV-2037-MMMD-2272-M}
+\indexentry{tl commands:=\pkg{tl} commands:>tl_set:Nn={\verbatim@font !\verb*&!\tl&!\_!\verb*&set:Nn&}|hdclindex{2273}{}}{MMMMV-2038-MMMD-2273-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_end_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&end&!\_!\verb*&tl&}|hdclindex{2273}{}}{MMMMV-2038-MMMD-2273-M}
+\indexentry{hfill={\verbatim@font !\verb*&!\hfill&}|hdclindex{2273}{}}{MMMMV-2038-MMMD-2273-M}
+\indexentry{square={\verbatim@font !\verb*&!\square&}|hdclindex{2273}{}}{MMMMV-2038-MMMD-2273-M}
+\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2274}{}}{MMMMV-2039-MMMD-2274-M}
+\indexentry{change commands:=\pkg{change} commands:>change_example:n={\verbatim@font !\verb*&!\change&!\_!\verb*&example:n&}|hdclindex{2275}{}}{MMMMV-2040-MMMD-2275-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_answer_add:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&answer&!\_!\verb*&add:p&}|hdclindex{2276}{}}{MMMMV-2041-MMMD-2276-M}
+\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2276}{}}{MMMMV-2041-MMMD-2276-M}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdclindex{2276}{}}{MMMMV-2041-MMMD-2276-M}
+\indexentry{parindent={\verbatim@font !\verb*&!\parindent&}|hdclindex{2277}{}}{MMMMV-2042-MMMD-2277-M}
+\indexentry{everypar={\verbatim@font !\verb*&!\everypar&}|hdclindex{2278}{}}{MMMMV-2043-MMMD-2278-M}
+\indexentry{everypar commands:=\pkg{everypar} commands:>everypar_proofs:p={\verbatim@font !\verb*&!\everypar&!\_!\verb*&proofs:p&}|hdclindex{2278}{}}{MMMMV-2043-MMMD-2278-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_add_par:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&add&!\_!\verb*&par:p&}|hdclindex{2279}{}}{MMMMV-2044-MMMD-2279-M}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_if_exist:NTF={\verbatim@font !\verb*&!\cs&!\_!\verb*&if&!\_!\verb*&exist:NTF&}|hdclindex{2282}{}}{MMMMV-2047-MMMD-2282-M}
+\indexentry{theoremstyle={\verbatim@font !\verb*&!\theoremstyle&}|hdclindex{2282}{}}{MMMMV-2047-MMMD-2282-M}
+\indexentry{everypar={\verbatim@font !\verb*&!\everypar&}|hdclindex{2284}{}}{MMMMV-2049-MMMD-2284-M}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_if:NTF={\verbatim@font !\verb*&!\bool&!\_!\verb*&if:NTF&}|hdclindex{2285}{}}{MMMMV-2050-MMMD-2285-M}
+\indexentry{ctrl commands:=\pkg{ctrl} commands:>ctrl_end_bool={\verbatim@font !\verb*&!\ctrl&!\_!\verb*&end&!\_!\verb*&bool&}|hdclindex{2285}{}}{MMMMV-2050-MMMD-2285-M}
+\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2286}{}}{MMMMV-2051-MMMD-2286-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_end_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&end&!\_!\verb*&tl&}|hdclindex{2287}{}}{MMMMV-2052-MMMD-2287-M}
+\indexentry{par={\verbatim@font !\verb*&!\par&}|hdclindex{2287}{}}{MMMMV-2052-MMMD-2287-M}
+\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2289}{}}{MMMMV-2054-MMMD-2289-M}
+\indexentry{change commands:=\pkg{change} commands:>change_normal:n={\verbatim@font !\verb*&!\change&!\_!\verb*&normal:n&}|hdclindex{2290}{}}{MMMMV-2055-MMMD-2290-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_answer_add:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&answer&!\_!\verb*&add:p&}|hdclindex{2291}{}}{MMMMV-2056-MMMD-2291-M}
+\indexentry{end={\verbatim@font !\verb*&!\end&}|hdclindex{2291}{}}{MMMMV-2056-MMMD-2291-M}
+\indexentry{scan commands:=\pkg{scan} commands:>scan_stop:={\verbatim@font !\verb*&!\scan&!\_!\verb*&stop:&}|hdclindex{2291}{}}{MMMMV-2056-MMMD-2291-M}
+\indexentry{AtBeginDocument={\verbatim@font !\verb*&!\AtBeginDocument&}|hdclindex{2294}{}}{MMMMV-2059-MMMD-2294-M}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_if_exist:NTF={\verbatim@font !\verb*&!\cs&!\_!\verb*&if&!\_!\verb*&exist:NTF&}|hdclindex{2296}{}}{MMMMV-2061-MMMD-2296-M}
+\indexentry{theoremstyle={\verbatim@font !\verb*&!\theoremstyle&}|hdclindex{2296}{}}{MMMMV-2061-MMMD-2296-M}
+\indexentry{def={\verbatim@font !\verb*&!\def&}|hdclindex{2297}{}}{MMMMV-2062-MMMD-2297-M}
+\indexentry{proofname={\verbatim@font !\verb*&!\proofname&}|hdclindex{2297}{}}{MMMMV-2062-MMMD-2297-M}
+\indexentry{mbox={\verbatim@font !\verb*&!\mbox&}|hdclindex{2297}{}}{MMMMV-2062-MMMD-2297-M}
+\indexentry{bf={\verbatim@font !\verb*&!\bf&}|hdclindex{2297}{}}{MMMMV-2062-MMMD-2297-M}
+\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2298}{}}{MMMMV-2063-MMMD-2298-M}
+\indexentry{letter commands:=\pkg{letter} commands:>letter_sink:nnnnp={\verbatim@font !\verb*&!\letter&!\_!\verb*&sink:nnnnp&}|hdclindex{2300}{main}}{MMMMV-2065-MMMD-2300-M}
+\indexentry{cs commands:=\pkg{cs} commands:>cs_new:Npn={\verbatim@font !\verb*&!\cs&!\_!\verb*&new:Npn&}|hdclindex{2301}{}}{MMMMV-2065-MMMD-2301-M}
+\indexentry{letter commands:=\pkg{letter} commands:>letter_sink:nnnnp={\verbatim@font !\verb*&!\letter&!\_!\verb*&sink:nnnnp&}|hdclindex{2301}{}}{MMMMV-2065-MMMD-2301-M}
+\indexentry{par={\verbatim@font !\verb*&!\par&}|hdclindex{2301}{}}{MMMMV-2065-MMMD-2301-M}
 \indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font !\verb*&!\dim&!\_!\verb*&set:Nn&}|hdclindex{2303}{}}{MMMMV-2067-MMMD-2303-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_indent_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&indent&!\_!\verb*&dim&}|hdclindex{2303}{}}{MMMMV-2067-MMMD-2303-M}
 \indexentry{parindent={\verbatim@font !\verb*&!\parindent&}|hdclindex{2303}{}}{MMMMV-2067-MMMD-2303-M}
-\indexentry{bool commands:=\pkg{bool} commands:>bool_set_false:N={\verbatim@font !\verb*&!\bool&!\_!\verb*&set&!\_!\verb*&false:N&}|hdclindex{2304}{}}{MMMMV-2068-MMMD-2304-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmt_bool={\verbatim@font !\verb*&!\cexam&!\_!\verb*&fmt&!\_!\verb*&bool&}|hdclindex{2304}{}}{MMMMV-2068-MMMD-2304-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmt_pic:nnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&fmt&!\_!\verb*&pic:nnnn&}|hdclindex{2305}{}}{MMMMV-2069-MMMD-2305-M}
-\indexentry{resizebox={\verbatim@font !\verb*&!\resizebox&}|hdclindex{2307}{}}{MMMMV-2071-MMMD-2307-M}
-\indexentry{color commands:=\pkg{color} commands:>color_group_begin:={\verbatim@font !\verb*&!\color&!\_!\verb*&group&!\_!\verb*&begin:&}|hdclindex{2308}{}}{MMMMV-2072-MMMD-2308-M}
-\indexentry{color commands:=\pkg{color} commands:>color_select:n={\verbatim@font !\verb*&!\color&!\_!\verb*&select:n&}|hdclindex{2309}{}}{MMMMV-2073-MMMD-2309-M}
-\indexentry{color commands:=\pkg{color} commands:>color_group_end:={\verbatim@font !\verb*&!\color&!\_!\verb*&group&!\_!\verb*&end:&}|hdclindex{2310}{}}{MMMMV-2074-MMMD-2310-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get_rec:nnnnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&get&!\_!\verb*&rec:nnnnnn&}|hdclindex{2313}{}}{MMMMV-2077-MMMD-2313-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&picmath&!\_!\verb*&int&}|hdclindex{2314}{}}{MMMMV-2078-MMMD-2314-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picht_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&picht&!\_!\verb*&dim&}|hdclindex{2315}{}}{MMMMV-2079-MMMD-2315-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picwd_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&picwd&!\_!\verb*&dim&}|hdclindex{2315}{}}{MMMMV-2079-MMMD-2315-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_lwr_set:nnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&lwr&!\_!\verb*&set:nnnn&}|hdclindex{2317}{}}{MMMMV-2081-MMMD-2317-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picwd_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&picwd&!\_!\verb*&dim&}|hdclindex{2318}{}}{MMMMV-2082-MMMD-2318-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad_set:n={\verbatim@font !\verb*&!\cexam&!\_!\verb*&shad&!\_!\verb*&set:n&}|hdclindex{2319}{}}{MMMMV-2083-MMMD-2319-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&picmath&!\_!\verb*&int&}|hdclindex{2319}{}}{MMMMV-2083-MMMD-2319-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_mk:nnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&sha&!\_!\verb*&mk:nnn&}|hdclindex{2320}{}}{MMMMV-2084-MMMD-2320-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&picmath&!\_!\verb*&int&}|hdclindex{2321}{}}{MMMMV-2085-MMMD-2321-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&pslin&!\_!\verb*&dim&}|hdclindex{2322}{}}{MMMMV-2086-MMMD-2322-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&pswd&!\_!\verb*&dim&}|hdclindex{2322}{}}{MMMMV-2086-MMMD-2322-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_lwr_set:nnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&lwr&!\_!\verb*&set:nnnn&}|hdclindex{2323}{}}{MMMMV-2087-MMMD-2323-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad_add:n={\verbatim@font !\verb*&!\cexam&!\_!\verb*&shad&!\_!\verb*&add:n&}|hdclindex{2325}{}}{MMMMV-2089-MMMD-2325-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&pslin&!\_!\verb*&dim&}|hdclindex{2325}{}}{MMMMV-2089-MMMD-2325-M}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font !\verb*&!\dim&!\_!\verb*&set:Nn&}|hdclindex{2304}{}}{MMMMV-2068-MMMD-2304-M}
+\indexentry{parindent={\verbatim@font !\verb*&!\parindent&}|hdclindex{2304}{}}{MMMMV-2068-MMMD-2304-M}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_set_false:N={\verbatim@font !\verb*&!\bool&!\_!\verb*&set&!\_!\verb*&false:N&}|hdclindex{2305}{}}{MMMMV-2069-MMMD-2305-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmt_bool={\verbatim@font !\verb*&!\cexam&!\_!\verb*&fmt&!\_!\verb*&bool&}|hdclindex{2305}{}}{MMMMV-2069-MMMD-2305-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmt_pic:nnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&fmt&!\_!\verb*&pic:nnnn&}|hdclindex{2306}{}}{MMMMV-2070-MMMD-2306-M}
+\indexentry{resizebox={\verbatim@font !\verb*&!\resizebox&}|hdclindex{2308}{}}{MMMMV-2072-MMMD-2308-M}
+\indexentry{color commands:=\pkg{color} commands:>color_group_begin:={\verbatim@font !\verb*&!\color&!\_!\verb*&group&!\_!\verb*&begin:&}|hdclindex{2309}{}}{MMMMV-2073-MMMD-2309-M}
+\indexentry{color commands:=\pkg{color} commands:>color_select:n={\verbatim@font !\verb*&!\color&!\_!\verb*&select:n&}|hdclindex{2310}{}}{MMMMV-2074-MMMD-2310-M}
+\indexentry{color commands:=\pkg{color} commands:>color_group_end:={\verbatim@font !\verb*&!\color&!\_!\verb*&group&!\_!\verb*&end:&}|hdclindex{2311}{}}{MMMMV-2075-MMMD-2311-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_get_rec:nnnnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&get&!\_!\verb*&rec:nnnnnn&}|hdclindex{2314}{}}{MMMMV-2078-MMMD-2314-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&picmath&!\_!\verb*&int&}|hdclindex{2315}{}}{MMMMV-2079-MMMD-2315-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picht_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&picht&!\_!\verb*&dim&}|hdclindex{2316}{}}{MMMMV-2080-MMMD-2316-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picwd_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&picwd&!\_!\verb*&dim&}|hdclindex{2316}{}}{MMMMV-2080-MMMD-2316-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_lwr_set:nnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&lwr&!\_!\verb*&set:nnnn&}|hdclindex{2318}{}}{MMMMV-2082-MMMD-2318-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picwd_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&picwd&!\_!\verb*&dim&}|hdclindex{2319}{}}{MMMMV-2083-MMMD-2319-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad_set:n={\verbatim@font !\verb*&!\cexam&!\_!\verb*&shad&!\_!\verb*&set:n&}|hdclindex{2320}{}}{MMMMV-2084-MMMD-2320-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&picmath&!\_!\verb*&int&}|hdclindex{2320}{}}{MMMMV-2084-MMMD-2320-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_mk:nnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&sha&!\_!\verb*&mk:nnn&}|hdclindex{2321}{}}{MMMMV-2085-MMMD-2321-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picmath_int={\verbatim@font !\verb*&!\cexam&!\_!\verb*&picmath&!\_!\verb*&int&}|hdclindex{2322}{}}{MMMMV-2086-MMMD-2322-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&pslin&!\_!\verb*&dim&}|hdclindex{2323}{}}{MMMMV-2087-MMMD-2323-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&pswd&!\_!\verb*&dim&}|hdclindex{2323}{}}{MMMMV-2087-MMMD-2323-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_lwr_set:nnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&lwr&!\_!\verb*&set:nnnn&}|hdclindex{2324}{}}{MMMMV-2088-MMMD-2324-M}
 \indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad_add:n={\verbatim@font !\verb*&!\cexam&!\_!\verb*&shad&!\_!\verb*&add:n&}|hdclindex{2326}{}}{MMMMV-2090-MMMD-2326-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&pswd&!\_!\verb*&dim&}|hdclindex{2326}{}}{MMMMV-2090-MMMD-2326-M}
-\indexentry{tex commands:=\pkg{tex} commands:>tex_parshape:D={\verbatim@font !\verb*&!\tex&!\_!\verb*&parshape:D&}|hdclindex{2327}{}}{MMMMV-2091-MMMD-2327-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shape_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&shape&!\_!\verb*&tl&}|hdclindex{2327}{}}{MMMMV-2091-MMMD-2327-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picture_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&picture&!\_!\verb*&tl&}|hdclindex{2328}{}}{MMMMV-2092-MMMD-2328-M}
-\indexentry{par={\verbatim@font !\verb*&!\par&}|hdclindex{2329}{}}{MMMMV-2093-MMMD-2329-M}
-\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font !\verb*&!\dim&!\_!\verb*&set:Nn&}|hdclindex{2330}{}}{MMMMV-2094-MMMD-2330-M}
-\indexentry{parindent={\verbatim@font !\verb*&!\parindent&}|hdclindex{2330}{}}{MMMMV-2094-MMMD-2330-M}
-\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_indent_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&indent&!\_!\verb*&dim&}|hdclindex{2330}{}}{MMMMV-2094-MMMD-2330-M}
-\indexentry{lettersink={\verbatim@font !\verb*&!\lettersink&}|hdclindex{2332}{main}}{MMMMV-2096-MMMD-2332-M}
-\indexentry{dim commands:=\pkg{dim} commands:>dim_new:N={\verbatim@font !\verb*&!\dim&!\_!\verb*&new:N&}|hdclindex{2333}{}}{MMMMV-2096-MMMD-2333-M}
-\indexentry{letter commands:=\pkg{letter} commands:>letter_ht_dim={\verbatim@font !\verb*&!\letter&!\_!\verb*&ht&!\_!\verb*&dim&}|hdclindex{2333}{}}{MMMMV-2096-MMMD-2333-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pslin_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&pslin&!\_!\verb*&dim&}|hdclindex{2326}{}}{MMMMV-2090-MMMD-2326-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shad_add:n={\verbatim@font !\verb*&!\cexam&!\_!\verb*&shad&!\_!\verb*&add:n&}|hdclindex{2327}{}}{MMMMV-2091-MMMD-2327-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_pswd_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&pswd&!\_!\verb*&dim&}|hdclindex{2327}{}}{MMMMV-2091-MMMD-2327-M}
+\indexentry{tex commands:=\pkg{tex} commands:>tex_parshape:D={\verbatim@font !\verb*&!\tex&!\_!\verb*&parshape:D&}|hdclindex{2328}{}}{MMMMV-2092-MMMD-2328-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_shape_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&shape&!\_!\verb*&tl&}|hdclindex{2328}{}}{MMMMV-2092-MMMD-2328-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_picture_tl={\verbatim@font !\verb*&!\cexam&!\_!\verb*&picture&!\_!\verb*&tl&}|hdclindex{2329}{}}{MMMMV-2093-MMMD-2329-M}
+\indexentry{par={\verbatim@font !\verb*&!\par&}|hdclindex{2330}{}}{MMMMV-2094-MMMD-2330-M}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font !\verb*&!\dim&!\_!\verb*&set:Nn&}|hdclindex{2331}{}}{MMMMV-2095-MMMD-2331-M}
+\indexentry{parindent={\verbatim@font !\verb*&!\parindent&}|hdclindex{2331}{}}{MMMMV-2095-MMMD-2331-M}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_indent_dim={\verbatim@font !\verb*&!\cexam&!\_!\verb*&indent&!\_!\verb*&dim&}|hdclindex{2331}{}}{MMMMV-2095-MMMD-2331-M}
+\indexentry{lettersink={\verbatim@font !\verb*&!\lettersink&}|hdclindex{2333}{main}}{MMMMV-2097-MMMD-2333-M}
 \indexentry{dim commands:=\pkg{dim} commands:>dim_new:N={\verbatim@font !\verb*&!\dim&!\_!\verb*&new:N&}|hdclindex{2334}{}}{MMMMV-2097-MMMD-2334-M}
-\indexentry{letter commands:=\pkg{letter} commands:>letter_ltskip_dim={\verbatim@font !\verb*&!\letter&!\_!\verb*&ltskip&!\_!\verb*&dim&}|hdclindex{2334}{}}{MMMMV-2097-MMMD-2334-M}
-\indexentry{NewDocumentCommand={\verbatim@font !\verb*&!\NewDocumentCommand&}|hdclindex{2335}{}}{MMMMV-2098-MMMD-2335-M}
-\indexentry{IfNoValueTF={\verbatim@font !\verb*&!\IfNoValueTF&}|hdclindex{2337}{}}{MMMMV-2100-MMMD-2337-M}
-\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font !\verb*&!\dim&!\_!\verb*&set:Nn&}|hdclindex{2338}{}}{MMMMV-2101-MMMD-2338-M}
-\indexentry{letter commands:=\pkg{letter} commands:>letter_ht_dim={\verbatim@font !\verb*&!\letter&!\_!\verb*&ht&!\_!\verb*&dim&}|hdclindex{2338}{}}{MMMMV-2101-MMMD-2338-M}
+\indexentry{letter commands:=\pkg{letter} commands:>letter_ht_dim={\verbatim@font !\verb*&!\letter&!\_!\verb*&ht&!\_!\verb*&dim&}|hdclindex{2334}{}}{MMMMV-2097-MMMD-2334-M}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_new:N={\verbatim@font !\verb*&!\dim&!\_!\verb*&new:N&}|hdclindex{2335}{}}{MMMMV-2098-MMMD-2335-M}
+\indexentry{letter commands:=\pkg{letter} commands:>letter_ltskip_dim={\verbatim@font !\verb*&!\letter&!\_!\verb*&ltskip&!\_!\verb*&dim&}|hdclindex{2335}{}}{MMMMV-2098-MMMD-2335-M}
+\indexentry{NewDocumentCommand={\verbatim@font !\verb*&!\NewDocumentCommand&}|hdclindex{2336}{}}{MMMMV-2099-MMMD-2336-M}
+\indexentry{IfNoValueTF={\verbatim@font !\verb*&!\IfNoValueTF&}|hdclindex{2338}{}}{MMMMV-2101-MMMD-2338-M}
 \indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font !\verb*&!\dim&!\_!\verb*&set:Nn&}|hdclindex{2339}{}}{MMMMV-2102-MMMD-2339-M}
 \indexentry{letter commands:=\pkg{letter} commands:>letter_ht_dim={\verbatim@font !\verb*&!\letter&!\_!\verb*&ht&!\_!\verb*&dim&}|hdclindex{2339}{}}{MMMMV-2102-MMMD-2339-M}
-\indexentry{IfNoValueTF={\verbatim@font !\verb*&!\IfNoValueTF&}|hdclindex{2340}{}}{MMMMV-2103-MMMD-2340-M}
-\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font !\verb*&!\dim&!\_!\verb*&set:Nn&}|hdclindex{2341}{}}{MMMMV-2104-MMMD-2341-M}
-\indexentry{letter commands:=\pkg{letter} commands:>letter_ltskip_dim={\verbatim@font !\verb*&!\letter&!\_!\verb*&ltskip&!\_!\verb*&dim&}|hdclindex{2341}{}}{MMMMV-2104-MMMD-2341-M}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font !\verb*&!\dim&!\_!\verb*&set:Nn&}|hdclindex{2340}{}}{MMMMV-2103-MMMD-2340-M}
+\indexentry{letter commands:=\pkg{letter} commands:>letter_ht_dim={\verbatim@font !\verb*&!\letter&!\_!\verb*&ht&!\_!\verb*&dim&}|hdclindex{2340}{}}{MMMMV-2103-MMMD-2340-M}
+\indexentry{IfNoValueTF={\verbatim@font !\verb*&!\IfNoValueTF&}|hdclindex{2341}{}}{MMMMV-2104-MMMD-2341-M}
 \indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font !\verb*&!\dim&!\_!\verb*&set:Nn&}|hdclindex{2342}{}}{MMMMV-2105-MMMD-2342-M}
 \indexentry{letter commands:=\pkg{letter} commands:>letter_ltskip_dim={\verbatim@font !\verb*&!\letter&!\_!\verb*&ltskip&!\_!\verb*&dim&}|hdclindex{2342}{}}{MMMMV-2105-MMMD-2342-M}
-\indexentry{IfNoValueTF={\verbatim@font !\verb*&!\IfNoValueTF&}|hdclindex{2343}{}}{MMMMV-2106-MMMD-2343-M}
-\indexentry{letter commands:=\pkg{letter} commands:>letter_sink:nnnnp={\verbatim@font !\verb*&!\letter&!\_!\verb*&sink:nnnnp&}|hdclindex{2344}{}}{MMMMV-2107-MMMD-2344-M}
-\indexentry{letter commands:=\pkg{letter} commands:>letter_ht_dim={\verbatim@font !\verb*&!\letter&!\_!\verb*&ht&!\_!\verb*&dim&}|hdclindex{2344}{}}{MMMMV-2107-MMMD-2344-M}
-\indexentry{letter commands:=\pkg{letter} commands:>letter_ltskip_dim={\verbatim@font !\verb*&!\letter&!\_!\verb*&ltskip&!\_!\verb*&dim&}|hdclindex{2344}{}}{MMMMV-2107-MMMD-2344-M}
+\indexentry{dim commands:=\pkg{dim} commands:>dim_set:Nn={\verbatim@font !\verb*&!\dim&!\_!\verb*&set:Nn&}|hdclindex{2343}{}}{MMMMV-2106-MMMD-2343-M}
+\indexentry{letter commands:=\pkg{letter} commands:>letter_ltskip_dim={\verbatim@font !\verb*&!\letter&!\_!\verb*&ltskip&!\_!\verb*&dim&}|hdclindex{2343}{}}{MMMMV-2106-MMMD-2343-M}
+\indexentry{IfNoValueTF={\verbatim@font !\verb*&!\IfNoValueTF&}|hdclindex{2344}{}}{MMMMV-2107-MMMD-2344-M}
 \indexentry{letter commands:=\pkg{letter} commands:>letter_sink:nnnnp={\verbatim@font !\verb*&!\letter&!\_!\verb*&sink:nnnnp&}|hdclindex{2345}{}}{MMMMV-2108-MMMD-2345-M}
 \indexentry{letter commands:=\pkg{letter} commands:>letter_ht_dim={\verbatim@font !\verb*&!\letter&!\_!\verb*&ht&!\_!\verb*&dim&}|hdclindex{2345}{}}{MMMMV-2108-MMMD-2345-M}
 \indexentry{letter commands:=\pkg{letter} commands:>letter_ltskip_dim={\verbatim@font !\verb*&!\letter&!\_!\verb*&ltskip&!\_!\verb*&dim&}|hdclindex{2345}{}}{MMMMV-2108-MMMD-2345-M}
-\indexentry{ctrlwarning.sty={\verbatim@font !\verb*&ctrlwarning.sty&}|hdclindex{2349}{main}}{MMMMV-2112-MMMD-2349-M}
-\indexentry{bool commands:=\pkg{bool} commands:>bool_new:N={\verbatim@font !\verb*&!\bool&!\_!\verb*&new:N&}|hdclindex{2350}{}}{MMMMV-2112-MMMD-2350-M}
-\indexentry{fontwarning commands:=\pkg{fontwarning} commands:>fontwarning_switch_bool={\verbatim@font !\verb*&!\fontwarning&!\_!\verb*&switch&!\_!\verb*&bool&}|hdclindex{2350}{}}{MMMMV-2112-MMMD-2350-M}
-\indexentry{keys commands:=\pkg{keys} commands:>keys_define:nn={\verbatim@font !\verb*&!\keys&!\_!\verb*&define:nn&}|hdclindex{2351}{}}{MMMMV-2113-MMMD-2351-M}
-\indexentry{bool commands:=\pkg{bool} commands:>bool_set_true:N={\verbatim@font !\verb*&!\bool&!\_!\verb*&set&!\_!\verb*&true:N&}|hdclindex{2355}{}}{MMMMV-2117-MMMD-2355-M}
-\indexentry{fontwarning commands:=\pkg{fontwarning} commands:>fontwarning_switch_bool={\verbatim@font !\verb*&!\fontwarning&!\_!\verb*&switch&!\_!\verb*&bool&}|hdclindex{2355}{}}{MMMMV-2117-MMMD-2355-M}
-\indexentry{bool commands:=\pkg{bool} commands:>bool_set_false:N={\verbatim@font !\verb*&!\bool&!\_!\verb*&set&!\_!\verb*&false:N&}|hdclindex{2357}{}}{MMMMV-2119-MMMD-2357-M}
-\indexentry{fontwarning commands:=\pkg{fontwarning} commands:>fontwarning_switch_bool={\verbatim@font !\verb*&!\fontwarning&!\_!\verb*&switch&!\_!\verb*&bool&}|hdclindex{2357}{}}{MMMMV-2119-MMMD-2357-M}
-\indexentry{bool commands:=\pkg{bool} commands:>bool_set_false:N={\verbatim@font !\verb*&!\bool&!\_!\verb*&set&!\_!\verb*&false:N&}|hdclindex{2359}{}}{MMMMV-2121-MMMD-2359-M}
-\indexentry{fontwarning commands:=\pkg{fontwarning} commands:>fontwarning_switch_bool={\verbatim@font !\verb*&!\fontwarning&!\_!\verb*&switch&!\_!\verb*&bool&}|hdclindex{2359}{}}{MMMMV-2121-MMMD-2359-M}
-\indexentry{ProcessKeysOptions={\verbatim@font !\verb*&!\ProcessKeysOptions&}|hdclindex{2361}{}}{MMMMV-2123-MMMD-2361-M}
-\indexentry{bool commands:=\pkg{bool} commands:>bool_if:NTF={\verbatim@font !\verb*&!\bool&!\_!\verb*&if:NTF&}|hdclindex{2362}{}}{MMMMV-2124-MMMD-2362-M}
-\indexentry{fontwarning commands:=\pkg{fontwarning} commands:>fontwarning_switch_bool={\verbatim@font !\verb*&!\fontwarning&!\_!\verb*&switch&!\_!\verb*&bool&}|hdclindex{2362}{}}{MMMMV-2124-MMMD-2362-M}
-\indexentry{def={\verbatim@font !\verb*&!\def&}|hdclindex{2363}{}}{MMMMV-2125-MMMD-2363-M}
-\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>@font@warning={\verbatim@font !\verb*&!\@font@warning&}|hdclindex{2363}{}}{MMMMV-2125-MMMD-2363-M}
-\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2364}{}}{MMMMV-2126-MMMD-2364-M}
-\indexentry{colornote.sty={\verbatim@font !\verb*&colornote.sty&}|hdclindex{2367}{main}}{MMMMV-2129-MMMD-2367-M}
-\indexentry{NewDocumentEnvironment={\verbatim@font !\verb*&!\NewDocumentEnvironment&}|hdclindex{2368}{}}{MMMMV-2129-MMMD-2368-M}
-\indexentry{noindent={\verbatim@font !\verb*&!\noindent&}|hdclindex{2370}{}}{MMMMV-2131-MMMD-2370-M}
-\indexentry{IfNoValueTF={\verbatim@font !\verb*&!\IfNoValueTF&}|hdclindex{2371}{}}{MMMMV-2132-MMMD-2371-M}
-\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2373}{}}{MMMMV-2134-MMMD-2373-M}
-\indexentry{color={\verbatim@font !\verb*&!\color&}|hdclindex{2375}{}}{MMMMV-2136-MMMD-2375-M}
-\indexentry{str commands:=\pkg{str} commands:>str_case:nn={\verbatim@font !\verb*&!\str&!\_!\verb*&case:nn&}|hdclindex{2378}{}}{MMMMV-2139-MMMD-2378-M}
-\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2382}{}}{MMMMV-2143-MMMD-2382-M}
-\indexentry{color={\verbatim@font !\verb*&!\color&}|hdclindex{2384}{}}{MMMMV-2145-MMMD-2384-M}
-\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2388}{}}{MMMMV-2149-MMMD-2388-M}
-\indexentry{color={\verbatim@font !\verb*&!\color&}|hdclindex{2390}{}}{MMMMV-2151-MMMD-2390-M}
-\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2394}{}}{MMMMV-2155-MMMD-2394-M}
-\indexentry{color={\verbatim@font !\verb*&!\color&}|hdclindex{2396}{}}{MMMMV-2157-MMMD-2396-M}
-\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2400}{}}{MMMMV-2161-MMMD-2400-M}
-\indexentry{color={\verbatim@font !\verb*&!\color&}|hdclindex{2402}{}}{MMMMV-2163-MMMD-2402-M}
-\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2406}{}}{MMMMV-2167-MMMD-2406-M}
-\indexentry{color={\verbatim@font !\verb*&!\color&}|hdclindex{2408}{}}{MMMMV-2169-MMMD-2408-M}
-\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2412}{}}{MMMMV-2173-MMMD-2412-M}
-\indexentry{color={\verbatim@font !\verb*&!\color&}|hdclindex{2414}{}}{MMMMV-2175-MMMD-2414-M}
-\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2418}{}}{MMMMV-2179-MMMD-2418-M}
-\indexentry{color={\verbatim@font !\verb*&!\color&}|hdclindex{2420}{}}{MMMMV-2181-MMMD-2420-M}
-\indexentry{end={\verbatim@font !\verb*&!\end&}|hdclindex{2424}{}}{MMMMV-2185-MMMD-2424-M}
+\indexentry{letter commands:=\pkg{letter} commands:>letter_sink:nnnnp={\verbatim@font !\verb*&!\letter&!\_!\verb*&sink:nnnnp&}|hdclindex{2346}{}}{MMMMV-2109-MMMD-2346-M}
+\indexentry{letter commands:=\pkg{letter} commands:>letter_ht_dim={\verbatim@font !\verb*&!\letter&!\_!\verb*&ht&!\_!\verb*&dim&}|hdclindex{2346}{}}{MMMMV-2109-MMMD-2346-M}
+\indexentry{letter commands:=\pkg{letter} commands:>letter_ltskip_dim={\verbatim@font !\verb*&!\letter&!\_!\verb*&ltskip&!\_!\verb*&dim&}|hdclindex{2346}{}}{MMMMV-2109-MMMD-2346-M}
+\indexentry{ctrlwarning.sty={\verbatim@font !\verb*&ctrlwarning.sty&}|hdclindex{2350}{main}}{MMMMV-2113-MMMD-2350-M}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_new:N={\verbatim@font !\verb*&!\bool&!\_!\verb*&new:N&}|hdclindex{2351}{}}{MMMMV-2113-MMMD-2351-M}
+\indexentry{fontwarning commands:=\pkg{fontwarning} commands:>fontwarning_switch_bool={\verbatim@font !\verb*&!\fontwarning&!\_!\verb*&switch&!\_!\verb*&bool&}|hdclindex{2351}{}}{MMMMV-2113-MMMD-2351-M}
+\indexentry{keys commands:=\pkg{keys} commands:>keys_define:nn={\verbatim@font !\verb*&!\keys&!\_!\verb*&define:nn&}|hdclindex{2352}{}}{MMMMV-2114-MMMD-2352-M}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_set_true:N={\verbatim@font !\verb*&!\bool&!\_!\verb*&set&!\_!\verb*&true:N&}|hdclindex{2356}{}}{MMMMV-2118-MMMD-2356-M}
+\indexentry{fontwarning commands:=\pkg{fontwarning} commands:>fontwarning_switch_bool={\verbatim@font !\verb*&!\fontwarning&!\_!\verb*&switch&!\_!\verb*&bool&}|hdclindex{2356}{}}{MMMMV-2118-MMMD-2356-M}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_set_false:N={\verbatim@font !\verb*&!\bool&!\_!\verb*&set&!\_!\verb*&false:N&}|hdclindex{2358}{}}{MMMMV-2120-MMMD-2358-M}
+\indexentry{fontwarning commands:=\pkg{fontwarning} commands:>fontwarning_switch_bool={\verbatim@font !\verb*&!\fontwarning&!\_!\verb*&switch&!\_!\verb*&bool&}|hdclindex{2358}{}}{MMMMV-2120-MMMD-2358-M}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_set_false:N={\verbatim@font !\verb*&!\bool&!\_!\verb*&set&!\_!\verb*&false:N&}|hdclindex{2360}{}}{MMMMV-2122-MMMD-2360-M}
+\indexentry{fontwarning commands:=\pkg{fontwarning} commands:>fontwarning_switch_bool={\verbatim@font !\verb*&!\fontwarning&!\_!\verb*&switch&!\_!\verb*&bool&}|hdclindex{2360}{}}{MMMMV-2122-MMMD-2360-M}
+\indexentry{ProcessKeysOptions={\verbatim@font !\verb*&!\ProcessKeysOptions&}|hdclindex{2362}{}}{MMMMV-2124-MMMD-2362-M}
+\indexentry{bool commands:=\pkg{bool} commands:>bool_if:NTF={\verbatim@font !\verb*&!\bool&!\_!\verb*&if:NTF&}|hdclindex{2363}{}}{MMMMV-2125-MMMD-2363-M}
+\indexentry{fontwarning commands:=\pkg{fontwarning} commands:>fontwarning_switch_bool={\verbatim@font !\verb*&!\fontwarning&!\_!\verb*&switch&!\_!\verb*&bool&}|hdclindex{2363}{}}{MMMMV-2125-MMMD-2363-M}
+\indexentry{def={\verbatim@font !\verb*&!\def&}|hdclindex{2364}{}}{MMMMV-2126-MMMD-2364-M}
+\indexentry{TeX and LaTeX2e commands:=\TeX{} and \LaTeXe{} commands:>@font@warning={\verbatim@font !\verb*&!\@font@warning&}|hdclindex{2364}{}}{MMMMV-2126-MMMD-2364-M}
+\indexentry{tl commands:=\pkg{tl} commands:>empty_tl={\verbatim@font !\verb*&!\c&!\_!\verb*&empty&!\_!\verb*&tl&}|hdclindex{2365}{}}{MMMMV-2127-MMMD-2365-M}
+\indexentry{colornote.sty={\verbatim@font !\verb*&colornote.sty&}|hdclindex{2368}{main}}{MMMMV-2130-MMMD-2368-M}
+\indexentry{NewDocumentEnvironment={\verbatim@font !\verb*&!\NewDocumentEnvironment&}|hdclindex{2369}{}}{MMMMV-2130-MMMD-2369-M}
+\indexentry{noindent={\verbatim@font !\verb*&!\noindent&}|hdclindex{2371}{}}{MMMMV-2132-MMMD-2371-M}
+\indexentry{IfNoValueTF={\verbatim@font !\verb*&!\IfNoValueTF&}|hdclindex{2372}{}}{MMMMV-2133-MMMD-2372-M}
+\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2374}{}}{MMMMV-2135-MMMD-2374-M}
+\indexentry{color={\verbatim@font !\verb*&!\color&}|hdclindex{2376}{}}{MMMMV-2137-MMMD-2376-M}
+\indexentry{str commands:=\pkg{str} commands:>str_case:nn={\verbatim@font !\verb*&!\str&!\_!\verb*&case:nn&}|hdclindex{2379}{}}{MMMMV-2140-MMMD-2379-M}
+\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2383}{}}{MMMMV-2144-MMMD-2383-M}
+\indexentry{color={\verbatim@font !\verb*&!\color&}|hdclindex{2385}{}}{MMMMV-2146-MMMD-2385-M}
+\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2389}{}}{MMMMV-2150-MMMD-2389-M}
+\indexentry{color={\verbatim@font !\verb*&!\color&}|hdclindex{2391}{}}{MMMMV-2152-MMMD-2391-M}
+\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2395}{}}{MMMMV-2156-MMMD-2395-M}
+\indexentry{color={\verbatim@font !\verb*&!\color&}|hdclindex{2397}{}}{MMMMV-2158-MMMD-2397-M}
+\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2401}{}}{MMMMV-2162-MMMD-2401-M}
+\indexentry{color={\verbatim@font !\verb*&!\color&}|hdclindex{2403}{}}{MMMMV-2164-MMMD-2403-M}
+\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2407}{}}{MMMMV-2168-MMMD-2407-M}
+\indexentry{color={\verbatim@font !\verb*&!\color&}|hdclindex{2409}{}}{MMMMV-2170-MMMD-2409-M}
+\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2413}{}}{MMMMV-2174-MMMD-2413-M}
+\indexentry{color={\verbatim@font !\verb*&!\color&}|hdclindex{2415}{}}{MMMMV-2176-MMMD-2415-M}
+\indexentry{begin={\verbatim@font !\verb*&!\begin&}|hdclindex{2419}{}}{MMMMV-2180-MMMD-2419-M}
+\indexentry{color={\verbatim@font !\verb*&!\color&}|hdclindex{2421}{}}{MMMMV-2182-MMMD-2421-M}
+\indexentry{end={\verbatim@font !\verb*&!\end&}|hdclindex{2425}{}}{MMMMV-2186-MMMD-2425-M}
 \indexentry{cexam commands:=\pkg{cexam} commands:>cexam_fmt_pic:n={\verbatim@font !\verb*&!\cexam&!\_!\verb*&fmt&!\_!\verb*&pic:n&}|hdpindex{usage}}{MMMMI-72}
 \indexentry{cexam commands:=\pkg{cexam} commands:>cexam_stand_dim:n={\verbatim@font !\verb*&!\cexam&!\_!\verb*&stand&!\_!\verb*&dim:n&}|hdpindex{usage}}{MMMMI-72}
 \indexentry{cexam commands:=\pkg{cexam} commands:>cexam_sha_mk_i:nnnn={\verbatim@font !\verb*&!\cexam&!\_!\verb*&sha&!\_!\verb*&mk&!\_!\verb*&i:nnnn&}|hdpindex{usage}}{MMMMI-73}
@@ -3137,3 +3137,4 @@
 \indexentry{draw commands:=\pkg{draw} commands:>draw_set_linewidth={\verbatim@font !\verb*&!\draw&!\_!\verb*&set&!\_!\verb*&linewidth&}|hdpindex{usage}}{MMMMI-76}
 \indexentry{draw commands:=\pkg{draw} commands:>draw_color:n={\verbatim@font !\verb*&!\draw&!\_!\verb*&color:n&}|hdpindex{usage}}{MMMMI-76}
 \indexentry{color commands:=\pkg{color} commands:>color_select:n={\verbatim@font !\verb*&!\color&!\_!\verb*&select:n&}|hdpindex{usage}}{MMMMI-76}
+\indexentry{cexam commands:=\pkg{cexam} commands:>cexam_env_add_par:p={\verbatim@font !\verb*&!\cexam&!\_!\verb*&env&!\_!\verb*&add&!\_!\verb*&par:p&}|hdpindex{usage}}{MMMMI-76}

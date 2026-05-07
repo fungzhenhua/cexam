@@ -23,7 +23,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \RequirePackage{expl3,l3keys2e,xparse,l3draw}
 \RequirePackage{pifont}
-\GetIdInfo$Id: cexam.dtx v3.4.2(alpha)  2026-04-27 Zhenhua-Feng  <fengzhenhua@outlook.com> $ {For Chinese middle school examination}
+\GetIdInfo$Id: cexam.dtx v3.4.3(alpha)  2026-05-07 Zhenhua-Feng  <fengzhenhua@outlook.com> $ {For Chinese middle school examination}
 \ProvidesExplPackage{\ExplFileName}{\ExplFileDate}{\ExplFileVersion}{\ExplFileDescription}
 \msg_new:nnnn {cexam}{l3-too-old}
 {Support~package~#1~too~old.}
@@ -1783,6 +1783,7 @@
    \clist_map_variable:nNn
    {
       choices,xuanze,
+      blanks,tiankong,
       judgements,panduan,
       calculations,jisuan,
       proofs,zhengming,

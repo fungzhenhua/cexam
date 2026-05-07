@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026/Arch Linux) (preloaded format=xelatex 2026.4.27)  28 APR 2026 00:42
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026/Arch Linux) (preloaded format=xelatex 2026.4.27)  7 MAY 2026 09:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1117,7 +1117,8 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 Package zref Info: New property list: main on input line 767.
 Package zref Info: New property: default on input line 768.
 Package zref Info: New property: page on input line 769.
-) (./cexam.sty
+)
+(/usr/share/texmf-dist/tex/latex/cexam/cexam.sty
 (/usr/share/texmf-dist/tex/latex/l3experimental/l3draw/l3draw.sty
 Package: l3draw 2025-10-09 L3 Experimental core drawing support
 \l__draw_tmp_box=\box125
@@ -1165,7 +1166,7 @@ Package: l3draw 2025-10-09 L3 Experimental core drawing support
 \l__draw_xshift_dim=\dimen348
 \l__draw_yshift_dim=\dimen349
 )
-Package: cexam 2026/04/27 vv3.4.2(alpha) For Chinese middle school examination
+Package: cexam 2026/05/07 vv3.4.3(alpha) For Chinese middle school examination
 \cexam_txtht_box=\box128
 \cexam_picture_box=\box129
 \cho_option_box=\box130
@@ -1784,40 +1785,40 @@ Package caption Info: End \AtBeginDocument code.
 * Character table correct *
 ***************************
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.04628pt on input line 284.
+(Font)              scaled to size 12.04628pt on input line 285.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00085pt on input line 284.
+(Font)              scaled to size 8.00085pt on input line 285.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 284.
+(Font)              scaled to size 6.00064pt on input line 285.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 12.0437pt on input line 284.
+(Font)              scaled to size 12.0437pt on input line 285.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 284.
+(Font)              scaled to size 7.99915pt on input line 285.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 284.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 284
+(Font)              scaled to size 5.99936pt on input line 285.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 285
 .
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 284
+LaTeX Font Info:    Trying to load font information for U+msb on input line 285
 .
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.52892pt on input line 284.
+(Font)              scaled to size 7.52892pt on input line 285.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 284.
+(Font)              scaled to size 5.00053pt on input line 285.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.52731pt on input line 284.
+(Font)              scaled to size 7.52731pt on input line 285.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 284.
+(Font)              scaled to size 4.99947pt on input line 285.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 9.0347pt on input line 287.
+(Font)              scaled to size 9.0347pt on input line 288.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.03276pt on input line 287.
+(Font)              scaled to size 9.03276pt on input line 288.
 
 Package fontspec Info: 
 (fontspec)             Could not resolve font "FangSong/BI" (it probably
@@ -1897,18 +1898,18 @@ Package multicol Warning: I moved some lines to the next page.
 LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <10.53937> not avail
 able
 (Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 
-299.
+300.
  [2] [3
 
 ] [4]
-Overfull \hbox (10.89119pt too wide) in paragraph at lines 394--394
+Overfull \hbox (10.89119pt too wide) in paragraph at lines 406--406
  [][]\TU/lmtt/m/n/9.03374 echo  "macro package: cexam.sty , colornote.sty and c
 trlwarning.sty had been installed." 
  []
 
 
 LaTeX Warning: Reference `doc/function//install.sh' on page 5 undefined on inpu
-t line 395.
+t line 407.
 
 [5] [6] [7]
 
@@ -1937,10 +1938,10 @@ Package fontspec Info:
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->"SimHei/OT:script=hani;language=dflt;"
 
- [8]
+ [8] [9]
 File: 1.png Graphic file (type bmp)
 <1.png>
- [9] [10]
+ [10]
 File: ./9.png Graphic file (type bmp)
 <./9.png>
 File: ./9.png Graphic file (type bmp)
@@ -1950,566 +1951,566 @@ File: ./9.png Graphic file (type bmp)
  [11] [12] [13]
 
 LaTeX Warning: Reference `doc/function//l3-too-old' on page 14 undefined on inp
-ut line 960.
+ut line 972.
 
 
 LaTeX Warning: Reference `doc/function//cexam/nopic/bool' on page 14 undefined 
-on input line 981.
+on input line 993.
 
 [14
 
 ]
 
 LaTeX Warning: Reference `doc/function//cexam/notab/bool' on page 15 undefined 
-on input line 988.
+on input line 1000.
 
 
 LaTeX Warning: Reference `doc/function//cexam/fmt/bool' on page 15 undefined on
- input line 997.
+ input line 1009.
 
 
 LaTeX Warning: Reference `doc/function//cho/opt/maxed/bool' on page 15 undefine
-d on input line 1006.
+d on input line 1018.
 
 
 LaTeX Warning: Reference `doc/function//answer/student/bool' on page 15 undefin
-ed on input line 1015.
+ed on input line 1027.
 
 
 LaTeX Warning: Reference `doc/function//ctrl/end/bool' on page 15 undefined on 
-input line 1024.
+input line 1036.
 
 
 LaTeX Warning: Reference `doc/function//cho/optrand/bool' on page 15 undefined 
-on input line 1033.
+on input line 1045.
 
 
 LaTeX Warning: Reference `doc/function//cho/optstar/bool' on page 15 undefined 
-on input line 1042.
+on input line 1054.
 
 
 LaTeX Warning: Reference `doc/function//choice/oldopt/bool' on page 15 undefine
-d on input line 1051.
+d on input line 1063.
 
 
 LaTeX Warning: Reference `doc/function//cexam/choice/bool' on page 15 undefined
- on input line 1063.
+ on input line 1075.
 
 [15]
 
 LaTeX Warning: Reference `doc/function//source/display/bool' on page 16 undefin
-ed on input line 1075.
+ed on input line 1087.
 
 
 LaTeX Warning: Reference `doc/function//cexam/env/add/bool' on page 16 undefine
-d on input line 1083.
+d on input line 1095.
 
 
 LaTeX Warning: Reference `doc/function//cexam/txtht/box' on page 16 undefined o
-n input line 1091.
+n input line 1103.
 
 
 LaTeX Warning: Reference `doc/function//cexam/picture/box' on page 16 undefined
- on input line 1098.
+ on input line 1110.
 
 
 LaTeX Warning: Reference `doc/function//cho/option/box' on page 16 undefined on
- input line 1106.
+ input line 1118.
 
 
 LaTeX Warning: Reference `doc/function//cexam/option/box' on page 16 undefined 
-on input line 1114.
+on input line 1126.
 
 
 LaTeX Warning: Reference `doc/function//sep/temp/box' on page 16 undefined on i
-nput line 1122.
+nput line 1134.
 
 
 LaTeX Warning: Reference `doc/function//cho/optpic/box' on page 16 undefined on
- input line 1131.
+ input line 1143.
 
 
 LaTeX Warning: Reference `doc/function//cexam/number/box' on page 16 undefined 
-on input line 1139.
+on input line 1151.
 
 
 LaTeX Warning: Reference `doc/function//blank/wd/box' on page 16 undefined on i
-nput line 1147.
+nput line 1159.
 
 [16]
 
 LaTeX Warning: Reference `doc/function//fmt/picture/box' on page 17 undefined o
-n input line 1164.
+n input line 1176.
 
 
 LaTeX Warning: Reference `doc/function//ind/hat/vbox' on page 17 undefined on i
-nput line 1175.
+nput line 1187.
 
 
 LaTeX Warning: Reference `doc/function//rec/tempht/dim' on page 17 undefined on
- input line 1184.
+ input line 1196.
 
 
 LaTeX Warning: Reference `doc/function//cexam/psrin/dim' on page 17 undefined o
-n input line 1193.
+n input line 1205.
 
 
 LaTeX Warning: Reference `doc/function//cexam/picht/dim' on page 17 undefined o
-n input line 1201.
+n input line 1213.
 
 
 LaTeX Warning: Reference `doc/function//cho/lmax/dim' on page 17 undefined on i
-nput line 1210.
+nput line 1222.
 
 [17]
 
 LaTeX Warning: Reference `doc/function//cho/lmax/i/dim' on page 18 undefined on
- input line 1224.
+ input line 1236.
 
 
 LaTeX Warning: Reference `doc/function//cho/optwd/dim' on page 18 undefined on 
-input line 1235.
+input line 1247.
 
 
 LaTeX Warning: Reference `doc/function//sep/HD/ht' on page 18 undefined on inpu
-t line 1243.
+t line 1255.
 
 
 LaTeX Warning: Reference `doc/function//cho/optpic/wd/dim' on page 18 undefined
- on input line 1253.
+ on input line 1265.
 
 
 LaTeX Warning: Reference `doc/function//cexam/indent/dim' on page 18 undefined 
-on input line 1262.
+on input line 1274.
 
 
 LaTeX Warning: Reference `doc/function//cexam/pictxt/skip' on page 18 undefined
- on input line 1273.
+ on input line 1285.
 
 
 LaTeX Warning: Reference `doc/function//cexam/pic/linwd/dim' on page 18 undefin
-ed on input line 1282.
+ed on input line 1294.
 
 
 LaTeX Warning: Reference `doc/function//blank/wd/dim' on page 18 undefined on i
-nput line 1291.
+nput line 1303.
 
 [18]
 
 LaTeX Warning: Reference `doc/function//get/rec/linewd/dim' on page 19 undefine
-d on input line 1300.
+d on input line 1312.
 
 
 LaTeX Warning: Reference `doc/function//cexam/picwd/limit' on page 19 undefined
- on input line 1309.
+ on input line 1321.
 
 
 LaTeX Warning: Reference `doc/function//cexam/ccwd/dim' on page 19 undefined on
- input line 1320.
+ input line 1332.
 
 
 LaTeX Warning: Reference `doc/function//cho/hat/dim' on page 19 undefined on in
-put line 1336.
+put line 1348.
 
 
 LaTeX Warning: Reference `doc/function//fmt/pic/t/xdim' on page 19 undefined on
- input line 1347.
+ input line 1359.
 
 
 LaTeX Warning: Reference `doc/function//cexam/number/int' on page 19 undefined 
-on input line 1357.
+on input line 1369.
 
 
 LaTeX Warning: Reference `doc/function//cexam/equ/int' on page 19 undefined on 
-input line 1365.
+input line 1377.
 
 
 LaTeX Warning: Reference `doc/function//cexam/numtemp/int' on page 19 undefined
- on input line 1373.
+ on input line 1385.
 
 [19]
 
 LaTeX Warning: Reference `doc/function//cexam/picmath/int' on page 20 undefined
- on input line 1382.
+ on input line 1394.
 
 
 LaTeX Warning: Reference `doc/function//cexam/qitem/int' on page 20 undefined o
-n input line 1390.
+n input line 1402.
 
 
 LaTeX Warning: Reference `doc/function//example/number/int' on page 20 undefine
-d on input line 1399.
+d on input line 1411.
 
 
 LaTeX Warning: Reference `doc/function//choice/opta/int' on page 20 undefined o
-n input line 1412.
+n input line 1424.
 
 
 LaTeX Warning: Reference `doc/function//choice/option/it' on page 20 undefined 
-on input line 1421.
+on input line 1433.
 
 
 LaTeX Warning: Reference `doc/function//source/star/int' on page 20 undefined o
-n input line 1430.
+n input line 1442.
 
 
 LaTeX Warning: Reference `doc/function//sep/hd/tl' on page 20 undefined on inpu
-t line 1444.
+t line 1456.
 
 
 LaTeX Warning: Reference `doc/function//cho/fmt/tl' on page 20 undefined on inp
-ut line 1453.
+ut line 1465.
 
 [20]
 
 LaTeX Warning: Reference `doc/function//cexam/number/tag/tl' on page 21 undefin
-ed on input line 1463.
+ed on input line 1475.
 
 
 LaTeX Warning: Reference `doc/function//ans/tag/tl' on page 21 undefined on inp
-ut line 1476.
+ut line 1488.
 
 
 LaTeX Warning: Reference `doc/function//prf/tag/tl' on page 21 undefined on inp
-ut line 1487.
+ut line 1499.
 
 
 LaTeX Warning: Reference `doc/function//cexam/anspub/tl' on page 21 undefined o
-n input line 1499.
+n input line 1511.
 
 
 LaTeX Warning: Reference `doc/function//cexam/fmt/tag/tl' on page 21 undefined 
-on input line 1508.
+on input line 1520.
 
 
 LaTeX Warning: Reference `doc/function//cexam/shape/tl' on page 21 undefined on
- input line 1516.
+ input line 1528.
 
 
 LaTeX Warning: Reference `doc/function//cexam/end/tl' on page 21 undefined on i
-nput line 1527.
+nput line 1539.
 
 [21]
 
 LaTeX Warning: Reference `doc/function//cho/opta/tl' on page 22 undefined on in
-put line 1539.
+put line 1551.
 
 
 LaTeX Warning: Reference `doc/function//source/color/tl' on page 22 undefined o
-n input line 1550.
+n input line 1562.
 
 
 LaTeX Warning: Reference `doc/function//answer/write' on page 22 undefined on i
-nput line 1561.
+nput line 1573.
 
 [22]
 
 LaTeX Warning: Reference `doc/function//cexam/option' on page 23 undefined on i
-nput line 1613.
+nput line 1625.
 
 
 LaTeX Warning: Reference `doc/function//cexam/sep/i:n' on page 23 undefined on 
-input line 1644.
+input line 1656.
 
 [23]
 
 LaTeX Warning: Reference `doc/function//cexam/sep/mk:n' on page 24 undefined on
- input line 1664.
+ input line 1676.
 
 
 LaTeX Warning: Reference `doc/function//cexam/sep/isin:nn' on page 24 undefined
- on input line 1706.
+ on input line 1718.
 
 [24]
 
 LaTeX Warning: Reference `doc/function//cexam/get:nNnN' on page 25 undefined on
- input line 1757.
+ input line 1769.
 
 [25]
 
 LaTeX Warning: Reference `doc/function//cexam/get/rec:nnnnnn' on page 26 undefi
-ned on input line 1851.
+ned on input line 1863.
 
 [26] [27]
 
 LaTeX Warning: Reference `doc/function//cexam/get/rec/i:nnnnnn' on page 28 unde
-fined on input line 1938.
+fined on input line 1950.
 
 
 LaTeX Warning: Reference `doc/function//cexam/shad/add:n' on page 28 undefined 
-on input line 1956.
+on input line 1968.
 
 [28] [29] [30] [31] [32] [33] [34] [35]
 
 LaTeX Warning: Reference `doc/function//cexam/sep/pictab/tl' on page 36 undefin
-ed on input line 2505.
+ed on input line 2517.
 
 
 LaTeX Warning: Reference `doc/function//cexam/sep/nopic/tl' on page 36 undefine
-d on input line 2533.
+d on input line 2545.
 
 
 LaTeX Warning: Reference `doc/function//picture' on page 36 undefined on input 
-line 2552.
+line 2564.
 
 [36] [37]
 
 LaTeX Warning: Reference `doc/function//cexam/sep/graphics:p' on page 38 undefi
-ned on input line 2612.
+ned on input line 2624.
 
 
 LaTeX Warning: Reference `doc/function//cexam/sep/tikz:p' on page 38 undefined 
-on input line 2654.
+on input line 2666.
 
 [38]
 
 LaTeX Warning: Reference `doc/function//cexam/sep/multiply/i:p' on page 39 unde
-fined on input line 2675.
+fined on input line 2687.
 
 
 LaTeX Warning: Reference `doc/function//cexam/ind/hat:nnnn' on page 39 undefine
-d on input line 2698.
+d on input line 2710.
 
 
 LaTeX Warning: Reference `doc/function//cexam/ind/hat:nnn' on page 39 undefined
- on input line 2714.
+ on input line 2726.
 
 [39]
 
 LaTeX Warning: Reference `doc/function//cho/get/lmax:nn' on page 40 undefined o
-n input line 2734.
+n input line 2746.
 
 
 LaTeX Warning: Reference `doc/function//cho/fmt/tl' on page 40 undefined on inp
-ut line 2744.
+ut line 2756.
 
 
 LaTeX Warning: Reference `doc/function//cho/opt/type/i:nnnn' on page 40 undefin
-ed on input line 2762.
+ed on input line 2774.
 
 
 LaTeX Warning: Reference `doc/function//cho/opt/type/ii:nnnn' on page 40 undefi
-ned on input line 2780.
+ned on input line 2792.
 
 
 LaTeX Warning: Reference `doc/function//cho/opt/type/iii:nnnn' on page 40 undef
-ined on input line 2799.
+ined on input line 2811.
 
 [40]
 
 LaTeX Warning: Reference `doc/function//cexam/fmt/opt/cho:nnnn' on page 41 unde
-fined on input line 2862.
+fined on input line 2874.
 
 [41]
 
 LaTeX Warning: Reference `doc/function//cexam/sep/pictxt:n' on page 42 undefine
-d on input line 2922.
+d on input line 2934.
 
 
 LaTeX Warning: Reference `doc/function//cexam/number/tag/tl' on page 42 undefin
-ed on input line 2932.
+ed on input line 2944.
 
 [42]
 
 LaTeX Warning: Reference `doc/function//choice' on page 43 undefined on input l
-ine 2946.
+ine 2958.
 
 
 LaTeX Warning: Reference `doc/function//choice/option/set/i:p' on page 43 undef
-ined on input line 2976.
+ined on input line 2988.
 
 [43]
 
 LaTeX Warning: Reference `doc/function//choice/randint/make:' on page 44 undefi
-ned on input line 3017.
+ned on input line 3029.
 
 
 LaTeX Warning: Reference `doc/function//choice/optref/set:nn' on page 44 undefi
-ned on input line 3034.
+ned on input line 3046.
 
 
 LaTeX Warning: Reference `doc/function//choice/optref/set:p' on page 44 undefin
-ed on input line 3048.
+ed on input line 3060.
 
 
 LaTeX Warning: Reference `doc/function//choice/optref/set:' on page 44 undefine
-d on input line 3061.
+d on input line 3073.
 
 
 LaTeX Warning: Reference `doc/function//RandRefabcd' on page 44 undefined on in
-put line 3070.
+put line 3082.
 
 [44]
 
 LaTeX Warning: Reference `doc/function//choice/option/set/ii:p' on page 45 unde
-fined on input line 3089.
+fined on input line 3101.
 
 
 LaTeX Warning: Reference `doc/function//choice/ans/order:n' on page 45 undefine
-d on input line 3106.
+d on input line 3118.
 
 
 LaTeX Warning: Reference `doc/function//choice/option/set:nnnn' on page 45 unde
-fined on input line 3135.
+fined on input line 3147.
 
 [45] [46] [47] [48]
 
 LaTeX Warning: Reference `doc/function//choice/type/i:p' on page 49 undefined o
-n input line 3378.
+n input line 3390.
 
 
 LaTeX Warning: Reference `doc/function//choice/option/total:p' on page 49 undef
-ined on input line 3396.
+ined on input line 3408.
 
 [49]
 
 LaTeX Warning: Reference `doc/function//choice/warning:' on page 50 undefined o
-n input line 3411.
+n input line 3423.
 
 
 LaTeX Warning: Reference `doc/function//choice/type:p' on page 50 undefined on 
-input line 3447.
+input line 3459.
 
 [50] [51]
 
 LaTeX Warning: Reference `doc/function//blank/type/i:p' on page 52 undefined on
- input line 3560.
+ input line 3572.
 
 
 LaTeX Warning: Reference `doc/function//blank/type:p' on page 52 undefined on i
-nput line 3581.
+nput line 3593.
 
 [52]
 
 LaTeX Warning: Reference `doc/function//cexam/anspub/tl' on page 53 undefined o
-n input line 3607.
+n input line 3619.
 
 
 LaTeX Warning: Reference `doc/function//judge/type:p' on page 53 undefined on i
-nput line 3618.
+nput line 3630.
 
 
 LaTeX Warning: Reference `doc/function//cexam/qitem:' on page 53 undefined on i
-nput line 3634.
+nput line 3646.
 
 [53] [54]
 
 LaTeX Warning: Reference `doc/function//calculate/type/i:p' on page 55 undefine
-d on input line 3746.
+d on input line 3758.
 
 
 LaTeX Warning: Reference `doc/function//calculate/type:p' on page 55 undefined 
-on input line 3761.
+on input line 3773.
 
 
 LaTeX Warning: Reference `doc/function//ans/tag/tl' on page 55 undefined on inp
-ut line 3779.
+ut line 3791.
 
 [55]
 
 LaTeX Warning: Reference `doc/function//answer/type:p' on page 56 undefined on 
-input line 3805.
+input line 3817.
 
 
 LaTeX Warning: Reference `doc/function//cexam/optrand/iow:n' on page 56 undefin
-ed on input line 3817.
+ed on input line 3829.
 
 [56]
 
 LaTeX Warning: Reference `doc/function//cexam/answer/iow:p' on page 57 undefine
-d on input line 3862.
+d on input line 3874.
 
 
 LaTeX Warning: Reference `doc/function//cexam/answer/add:p' on page 57 undefine
-d on input line 3880.
+d on input line 3892.
 
 
 LaTeX Warning: Reference `doc/function//cexam/table/bool' on page 57 undefined 
-on input line 3908.
+on input line 3920.
 
 [57]
 
 LaTeX Warning: Reference `doc/function//@chapter' on page 58 undefined on input
- line 3980.
+ line 3992.
 
 [58]
 
 LaTeX Warning: Reference `doc/function//answerstd' on page 59 undefined on inpu
-t line 4002.
+t line 4014.
 
 
 LaTeX Warning: Reference `doc/function//makeanswer' on page 59 undefined on inp
-ut line 4052.
+ut line 4064.
 
 [59]
 
 LaTeX Warning: Reference `doc/function//everypar/choice:p' on page 60 undefined
- on input line 4104.
+ on input line 4116.
 
 [60]
 
 LaTeX Warning: Reference `doc/function//everypar/blank:p' on page 61 undefined 
-on input line 4137.
+on input line 4149.
 
 
 LaTeX Warning: Reference `doc/function//everypar/judge:p' on page 61 undefined 
-on input line 4159.
+on input line 4171.
 
 
 LaTeX Warning: Reference `doc/function//everypar/calculate:p' on page 61 undefi
-ned on input line 4182.
+ned on input line 4194.
 
 [61]
 
 LaTeX Warning: Reference `doc/function//everypar/proofs:p' on page 62 undefined
- on input line 4204.
+ on input line 4216.
 
 
 LaTeX Warning: Reference `doc/function//everypar/proof:p' on page 62 undefined 
-on input line 4216.
+on input line 4228.
 
 [62]
 
 LaTeX Warning: Reference `doc/function//ctrl/end/tl' on page 63 undefined on in
-put line 4256.
+put line 4269.
 
 [63]
 
 LaTeX Warning: Reference `doc/function//qitem' on page 64 undefined on input li
-ne 4325.
+ne 4338.
 
 
 LaTeX Warning: Reference `doc/function//refitem' on page 64 undefined on input 
-line 4355.
+line 4368.
 
 [64]
 
 LaTeX Warning: Reference `doc/function//source' on page 65 undefined on input l
-ine 4397.
+ine 4410.
 
 
 LaTeX Warning: Reference `doc/function//blank' on page 65 undefined on input li
-ne 4407.
+ne 4420.
 
 [65]
 
 LaTeX Warning: Reference `doc/function//change/example:n' on page 66 undefined 
-on input line 4451.
+on input line 4464.
 
 [66] [67] [68]
 
 LaTeX Warning: Reference `doc/function//letter/sink:nnnnp' on page 69 undefined
- on input line 4622.
+ on input line 4635.
 
 [69]
 
 LaTeX Warning: Reference `doc/function//ctrlwarning.sty' on page 70 undefined o
-n input line 4681.
+n input line 4694.
 
 [70]
 
 LaTeX Warning: Reference `doc/function//colornote.sty' on page 71 undefined on 
-input line 4753.
+input line 4766.
 
 **********************************
 * This macro file has no checksum!
@@ -2532,7 +2533,7 @@ Package l3doc Info: Generate the index by executing
  [84] (./cexam.aux)
  ***********
 LaTeX2e <2025-11-01>
-L3 programming layer <2026/04/27>
+L3 programming layer <2026/05/07>
  ***********
 
 
@@ -2541,13 +2542,13 @@ LaTeX Warning: There were undefined references.
 Package rerunfilecheck Info: File `cexam.out' has not changed.
 (rerunfilecheck)             Checksum: CDEE4812FA282F7C00E77227B8972BA0;9134.
 Package rerunfilecheck Info: File `cexam.hd' has not changed.
-(rerunfilecheck)             Checksum: 58D8AD426A61F3E0FFE3BF15A9072247;16585.
+(rerunfilecheck)             Checksum: 8A3E315528717CF8A059D8F784832B35;16676.
  ) 
 Here is how much of TeX's memory you used:
- 42632 strings out of 470180
- 908996 string characters out of 5479198
- 1463685 words of memory out of 5000000
- 70511 multiletter control sequences out of 15000+600000
+ 42639 strings out of 470180
+ 909148 string characters out of 5479198
+ 1465630 words of memory out of 5000000
+ 70517 multiletter control sequences out of 15000+600000
  640692 words of font info for 177 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  102i,14n,124p,887b,1565s stack positions out of 10000i,1000n,20000p,200000b,200000s

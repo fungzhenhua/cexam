@@ -4,22 +4,22 @@
 \contentsline {section}{\numberline {第4节}各题型输入格式}{5}{section.0.4}%
 \contentsline {subsection}{\numberline {4.1}选择题环境choices}{5}{subsection.0.4.1}%
 \contentsline {subsection}{\numberline {4.2}填空题环境blanks}{6}{subsection.0.4.2}%
-\contentsline {subsection}{\numberline {4.3}判断题环境judgements}{6}{subsection.0.4.3}%
+\contentsline {subsection}{\numberline {4.3}判断题环境judgements}{7}{subsection.0.4.3}%
 \contentsline {subsection}{\numberline {4.4}计算题环境calculations}{7}{subsection.0.4.4}%
 \contentsline {subsection}{\numberline {4.5}证明题环境proofs}{8}{subsection.0.4.5}%
 \contentsline {subsection}{\numberline {4.6}首字母下沉命令\cs {lettersink}}{8}{subsection.0.4.6}%
-\contentsline {section}{\numberline {第5节}各题型排版效果展示}{8}{section.0.5}%
-\contentsline {subsection}{\numberline {5.1}选择题展示}{8}{subsection.0.5.1}%
+\contentsline {section}{\numberline {第5节}各题型排版效果展示}{9}{section.0.5}%
+\contentsline {subsection}{\numberline {5.1}选择题展示}{9}{subsection.0.5.1}%
 \contentsline {subsection}{\numberline {5.2}填空题展示}{10}{subsection.0.5.2}%
 \contentsline {subsection}{\numberline {5.3}判断题展示}{10}{subsection.0.5.3}%
 \contentsline {subsection}{\numberline {5.4}计算题展示}{10}{subsection.0.5.4}%
 \contentsline {subsection}{\numberline {5.5}证明题展示}{11}{subsection.0.5.5}%
 \contentsline {subsection}{\numberline {5.6}首字母下沉展示}{11}{subsection.0.5.6}%
-\contentsline {section}{\numberline {第6节}纯文本和数学文本分离}{11}{section.0.6}%
+\contentsline {section}{\numberline {第6节}纯文本和数学文本分离}{12}{section.0.6}%
 \contentsline {section}{\numberline {第7节}获得指定宽度文本行数和高度}{12}{section.0.7}%
 \contentsline {section}{\numberline {第8节}段落形状生成}{12}{section.0.8}%
 \contentsline {section}{\numberline {第9节}图片格式化}{12}{section.0.9}%
-\contentsline {section}{\numberline {第10节}基本排版程序}{12}{section.0.10}%
+\contentsline {section}{\numberline {第10节}基本排版程序}{13}{section.0.10}%
 \contentsline {section}{\numberline {第11节}cexam.sty代码实现}{14}{section.0.11}%
 \contentsline {subsection}{\numberline {11.1}缩写列表}{14}{subsection.0.11.1}%
 \contentsline {subsection}{\numberline {11.2}布尔值设置}{14}{subsection.0.11.2}%
