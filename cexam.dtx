@@ -187,6 +187,8 @@ Copyright and Licence
 \usepackage[user=teacher,option=random,sourcecolor=blue]{cexam} ^^M 引入宏包,用以生成说明文档,展示排版效果
 \usepackage{tikz}
 \usepackage{amsthm} ^^M 此处宏包引入为了展示证明题的输入，当引入此宏包时加入证明结束符号，不引入则不加入证明结束符号
+\usepackage{silence}
+\WarningFilter{latex}{Reference `doc/function//}
 \ctexset{
   abstractname   = 简介,
   indexname      = 代码索引,
@@ -401,8 +403,8 @@ else
     echo  "I can't find the file ctrlwarning.sty in the directory ./"
 fi
 sudo texhash
-echo  "macro package: cexam.sty , colornote.sty and ctrlwarning.sty had been installed."
-echo  "document: cexam.pdf had been installed."
+echo "macro package:cexam.sty, colornote.sty, ctrlwarning.sty had been installed."
+echo "document: cexam.pdf had been installed."
 %    \end{macrocode}
 % \end{macro}
 %</install.sh> 

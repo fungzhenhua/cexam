@@ -36,5 +36,5 @@ else
     echo  "I can't find the file ctrlwarning.sty in the directory ./"
 fi
 sudo texhash
-echo  "macro package: cexam.sty , colornote.sty and ctrlwarning.sty had been installed."
-echo  "document: cexam.pdf had been installed."
+echo "macro package:cexam.sty, colornote.sty, ctrlwarning.sty had been installed."
+echo "document: cexam.pdf had been installed."

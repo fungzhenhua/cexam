@@ -1031,7 +1031,7 @@
 		\hdclindex{1811}{}{MMMMV-1602-MMMD-1811-M}, 
 		\hdclindex{1813}{}{MMMMV-1604-MMMD-1813-M}
     \subitem {\verbatim@font \verb*&\cexam&\_\verb*&sep:n&}\pfill 
-		\hdpindex{usage}{MMMMI-11}, 
+		\hdpindex{usage}{MMMMI-12}, 
 		\hdclindex{426}{main}{MMMMV-291-MMMD-426-M}, 
 		\hdclindex{427}{}{MMMMV-291-MMMD-427-M}, 
 		\hdclindex{511}{}{MMMMV-369-MMMD-511-M}
@@ -1280,7 +1280,7 @@
 		\hdclindex{477}{}{MMMMV-338-MMMD-477-M}, 
 		\hdclindex{478}{}{MMMMV-339-MMMD-478-M}
     \subitem {\verbatim@font \verb*&\cexam&\_\verb*&type&\_\verb*&i:nnnnnnn&}\pfill 
-		\hdpindex{usage}{MMMMI-12, MMMMI-13}, 
+		\hdpindex{usage}{MMMMI-13}, 
 		\hdclindex{689}{main}{MMMMV-542-MMMD-689-M}, 
 		\hdclindex{690}{}{MMMMV-542-MMMD-690-M}, 
 		\hdclindex{1424}{}{MMMMV-1237-MMMD-1424-M}, 
@@ -1627,7 +1627,7 @@
 		\hdclindex{1066}{}{MMMMV-895-MMMD-1066-M}, 
 		\hdclindex{1067}{}{MMMMV-896-MMMD-1067-M}
   \item {\verbatim@font \verb*&\choice&}\pfill 
-		\hdpindex{usage}{MMMMI-5}, \hdpindex{usage}{MMMMI-76}, 
+		\hdpindex{usage}{MMMMI-6}, \hdpindex{usage}{MMMMI-76}, 
 		\hdclindex{1132}{main}{MMMMV-959-MMMD-1132-M}, 
 		\hdclindex{1264}{}{MMMMV-1080-MMMD-1264-M}, 
 		\hdclindex{1438}{}{MMMMV-1250-MMMD-1438-M}, 
@@ -2712,7 +2712,7 @@
 		\hdclindex{1591}{}{MMMMV-1395-MMMD-1591-M}, 
 		\hdclindex{1969}{}{MMMMV-1755-MMMD-1969-M}
   \item {\verbatim@font \verb*&judgements&}\pfill 
-		\hdpindex{usage}{MMMMI-6}, 
+		\hdpindex{usage}{MMMMI-7}, 
 		\hdclindex{2203}{main}{MMMMV-1970-MMMD-2203-M}
 
   \indexspace
@@ -2858,7 +2858,7 @@
 {\bfseries\hfil P\hfil}\nopagebreak
 
   \item {\verbatim@font \verb*&panduan&}\pfill 
-		\hdpindex{usage}{MMMMI-6}, 
+		\hdpindex{usage}{MMMMI-7}, 
 		\hdclindex{2203}{main}{MMMMV-1970-MMMD-2203-M}
   \item {\verbatim@font \verb*&\par&}\pfill \hdpindex{usage}{MMMMI-62}, 
 		\hdpindex{usage}{MMMMI-75, MMMMI-76}, 
@@ -3023,7 +3023,7 @@
 
   \item \pkg{scan} commands:\efill 
  \subitem {\verbatim@font \verb*&\scan&\_\verb*&stop:&}\pfill 
-		\hdpindex{usage}{MMMMI-11}, 
+		\hdpindex{usage}{MMMMI-12}, 
 		\hdclindex{354}{}{MMMMV-221-MMMD-354-M}, 
 		\hdclindex{361}{}{MMMMV-228-MMMD-361-M}, 
 		\hdclindex{368}{}{MMMMV-235-MMMD-368-M}, 
@@ -3112,7 +3112,7 @@
 		\hdclindex{1840}{}{MMMMV-1631-MMMD-1840-M}
   \item \pkg{sep} commands:\efill 
  \subitem {\verbatim@font \verb*&\sep&\_\verb*&bd&\_\verb*&tl&}\pfill 
-		\hdpindex{usage}{MMMMI-11}, 
+		\hdpindex{usage}{MMMMI-12}, 
 		\hdclindex{265}{main}{MMMMV-150-MMMD-265-M}, 
 		\hdclindex{357}{}{MMMMV-224-MMMD-357-M}, 
 		\hdclindex{364}{}{MMMMV-231-MMMD-364-M}, 
@@ -3142,7 +3142,7 @@
 		\hdclindex{536}{}{MMMMV-394-MMMD-536-M}, 
 		\hdclindex{541}{}{MMMMV-399-MMMD-541-M}
     \subitem {\verbatim@font \verb*&\sep&\_\verb*&hd&\_\verb*&tl&}\pfill 
-		\hdpindex{usage}{MMMMI-11}, 
+		\hdpindex{usage}{MMMMI-12}, 
 		\hdclindex{265}{main}{MMMMV-150-MMMD-265-M}, 
 		\hdclindex{356}{}{MMMMV-223-MMMD-356-M}, 
 		\hdclindex{363}{}{MMMMV-230-MMMD-363-M}, 
@@ -3160,7 +3160,7 @@
 		\hdclindex{1109}{}{MMMMV-937-MMMD-1109-M}, 
 		\hdclindex{1116}{}{MMMMV-944-MMMD-1116-M}
     \subitem {\verbatim@font \verb*&\sep&\_\verb*&tl&\_\verb*&tl&}\pfill 
-		\hdpindex{usage}{MMMMI-11}, 
+		\hdpindex{usage}{MMMMI-12}, 
 		\hdclindex{265}{main}{MMMMV-150-MMMD-265-M}, 
 		\hdclindex{358}{}{MMMMV-225-MMMD-358-M}, 
 		\hdclindex{365}{}{MMMMV-232-MMMD-365-M}, 
